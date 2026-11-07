@@ -56,7 +56,7 @@ async function proxy(request, response, url) {
   response.end(data);
 }
 
-createServer(async (request, response) => {
+const server = createServer(async (request, response) => {
   const url = new URL(request.url, 'http://localhost');
   try {
     if (url.pathname.startsWith('/api/v1/')) {
@@ -75,6 +75,7 @@ createServer(async (request, response) => {
   } catch {
     json(response, 503, 'RESEARCH_UNAVAILABLE', 'TraceGraph could not load this resource.', true);
   }
-}).listen(port, '127.0.0.1', () => {
-  console.log('TraceGraph fixture demo at http://127.0.0.1:' + port + '/?demo=1');
+});
+server.listen(port, '127.0.0.1', () => {
+  console.log('TraceGraph fixture demo at http://127.0.0.1:' + server.address().port + '/?demo=1');
 });

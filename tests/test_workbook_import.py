@@ -41,8 +41,8 @@ class WorkbookEvaluationTests(TestCase):
 
 
 @skipUnless(
-    find_spec("openpyxl") and find_spec("psycopg") and environ.get("TRACEGRAPH_TEST_DSN"),
-    "Set TRACEGRAPH_TEST_DSN to a PostgreSQL test database with pgvector.",
+    find_spec("openpyxl") and find_spec("psycopg") and environ.get("TEST_DATABASE_URL"),
+    "Set TEST_DATABASE_URL to a PostgreSQL test database with pgvector.",
 )
 class WorkbookPostgresTests(TestCase):
     def test_import_is_atomic_and_idempotent_with_real_workbook(self):
@@ -50,7 +50,7 @@ class WorkbookPostgresTests(TestCase):
         from psycopg import sql
 
         schema = sql.Identifier("workbook_test_" + uuid4().hex)
-        with psycopg.connect(environ["TRACEGRAPH_TEST_DSN"], autocommit=True) as connection:
+        with psycopg.connect(environ["TEST_DATABASE_URL"], autocommit=True) as connection:
             connection.execute("CREATE EXTENSION IF NOT EXISTS vector WITH SCHEMA public")
             connection.execute(sql.SQL("CREATE SCHEMA {}").format(schema))
             try:

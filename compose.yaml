@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_DB: tracegraph
+      POSTGRES_USER: tracegraph
+      POSTGRES_PASSWORD: tracegraph
+    ports:
+      - "127.0.0.1:55432:5432"
+    volumes:
+      - tracegraph-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tracegraph -d tracegraph"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  tracegraph-data:

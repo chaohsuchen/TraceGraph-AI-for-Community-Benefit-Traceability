@@ -1,0 +1,10 @@
+{
+  "name": "tracegraph-mvp",
+  "private": true,
+  "devDependencies": {
+    "playwright": "1.62.1"
+  },
+  "scripts": {
+    "test": "node --test frontend/api.test.mjs"
+  }
+}
