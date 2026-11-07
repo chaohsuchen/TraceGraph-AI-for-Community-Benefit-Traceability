@@ -1,6 +1,7 @@
 """Dependency-free HTTP bindings for TraceGraph's MVP contract."""
 
 from argparse import ArgumentParser
+from contextlib import nullcontext
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from json import JSONDecodeError, dumps, loads
 from logging import getLogger
@@ -125,7 +126,9 @@ class Application:
         if claim is None:
             return False
         try:
-            self.agent.execute(claim)
+            keep_alive = getattr(self.store, 'keep_claim_alive', nullcontext)
+            with keep_alive(claim):
+                self.agent.execute(claim)
         except StaleClaim:
             LOG.info("The job is no longer assigned to this worker.")
         except Exception:
