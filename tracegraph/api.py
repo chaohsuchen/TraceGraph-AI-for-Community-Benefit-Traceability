@@ -68,14 +68,15 @@ class Application:
     def _lookup(self, headers, body):
         key = self._key(headers)
         if not key:
-            return self._invalid("Idempotency-Key is required.")
+            return self._invalid("Idempotency-Key must contain 1 to 128 characters.")
         try:
             request = loads(body)
         except (JSONDecodeError, UnicodeDecodeError):
             return self._invalid("Submit a JSON object with a query.")
         if (not isinstance(request, dict) or set(request) != {"query"}
-                or not isinstance(request["query"], str) or not request["query"].strip()):
-            return self._invalid("Submit a JSON object with a nonempty query.")
+                or not isinstance(request["query"], str) or not request["query"].strip()
+                or len(request["query"]) > 4000):
+            return self._invalid("Submit a JSON object with a nonempty query of at most 4000 characters.")
         query = request["query"].strip()
         return self.store.submit("lookup", key, {"query": query}, lambda: self._resolve(query))
 
@@ -93,7 +94,7 @@ class Application:
     def _refresh(self, cid, headers, body):
         key = self._key(headers)
         if not key:
-            return self._invalid("Idempotency-Key is required.")
+            return self._invalid("Idempotency-Key must contain 1 to 128 characters.")
         if body:
             return self._invalid("Refresh accepts no request body.")
         if self.store.load_commitment(cid) is None:
@@ -104,8 +105,9 @@ class Application:
 
     @staticmethod
     def _key(headers):
-        return next((value.strip() for key, value in headers.items()
-                     if key.lower() == "idempotency-key"), "")
+        key = next((value for name, value in headers.items()
+                    if name.lower() == "idempotency-key"), "")
+        return key.strip() if len(key) <= 128 else ""
 
     @staticmethod
     def _invalid(message):
@@ -135,10 +137,6 @@ class Application:
         return True
 
 
-class DemoResolutionError(RuntimeError):
-    """An intentional resolution failure in the fixture catalog."""
-
-
 class FixtureAgent:
     def __init__(self, store, lookup_examples):
         self.store = store
@@ -148,8 +146,8 @@ class FixtureAgent:
         response = self.lookup_examples.get(query)
         if response and response["status"] == 200:
             return response["body"]
-        if response and response["status"] == 503:
-            raise DemoResolutionError
+        if "renewable electricity" in query.casefold():
+            return {"outcome": "MATCH", "commitment_id": "TG-GOLD-H010"}
         return {"outcome": "START_DISCOVERY", "query": query}
 
     def execute(self, claim):
@@ -190,10 +188,10 @@ def demo_application():
             graphs.append(response["body"])
         elif path.startswith(f"{PREFIX}/organizations/"):
             groups.append(response["body"])
-        elif path == f"{PREFIX}/lookup":
+        elif path == f"{PREFIX}/lookup" and response["status"] < 400:
             lookups[request["body"]["query"]] = response
     store = MemoryStore(graphs, groups)
-    return Application(store, FixtureAgent(store, lookups), (DemoResolutionError,))
+    return Application(store, FixtureAgent(store, lookups))
 
 
 def make_handler(app, allowed_origin):

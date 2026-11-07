@@ -5,7 +5,7 @@ from json import dumps, loads
 from threading import Thread
 from unittest import TestCase
 
-from tracegraph.api import PREFIX, demo_application, make_handler
+from tracegraph.api import PREFIX, Application, demo_application, make_handler
 from tracegraph.data import StaleClaim
 
 
@@ -41,6 +41,34 @@ class ApiTests(TestCase):
         status, _, body = self.post(f"{PREFIX}/lookup", "reuse", query="two")
         self.assertEqual((status, body["error"]["code"]), (409, "IDEMPOTENCY_CONFLICT"))
         self.assertEqual(self.post(f"{PREFIX}/lookup", "blank", query="  ")[0], 400)
+
+    def test_demo_renewable_query_matches_h010(self):
+        result = self.post(f"{PREFIX}/lookup", "renewable", query="What did Bally’s say about renewable electricity?")
+        self.assertEqual(result, (200, {}, {"outcome": "MATCH", "commitment_id": "TG-GOLD-H010"}))
+
+    def test_invalid_resolver_id_reports_unavailable(self):
+        class ResolutionUnavailable(RuntimeError):
+            pass
+
+        class BrokenAgent:
+            def lookup(self, _query):
+                raise ResolutionUnavailable("Resolver selected a commitment outside its candidate list.")
+
+        self.app = Application(self.app.store, BrokenAgent(), (ResolutionUnavailable,))
+        status, _, body = self.post(f"{PREFIX}/lookup", "invalid-id", query="Query with an invalid result")
+        self.assertEqual(status, 503)
+        self.assertEqual(body["error"]["code"], "RESOLUTION_UNAVAILABLE")
+        self.assertFalse(self.app.process_one_job())
+
+    def test_rejects_overlong_query_and_idempotency_keys(self):
+        lookup = f"{PREFIX}/lookup"
+        refresh = self.h008 + "/research-runs"
+        self.assertEqual(self.post(lookup, "valid-key", query="x" * 4001)[0], 400)
+        self.assertEqual(self.post(lookup, "x" * 129, query="valid query")[0], 400)
+        self.assertEqual(self.post(refresh, "x" * 129)[0], 400)
+        self.assertFalse(self.app.process_one_job())
+        self.assertEqual(self.post(lookup, "x" * 128, query="x" * 4000)[0], 202)
+        self.assertEqual(self.post(refresh, "x" * 128)[0], 202)
 
     def test_refresh_replay_and_history(self):
         target = self.h008 + "/research-runs"
