@@ -230,6 +230,52 @@ class ClaudeIdentityJudge:
         )
 
 
+_REFRESH_FIELDS = (
+    "title", "description", "obligation_type", "amount_value", "term_periodicity",
+    "geographic_scope", "condition_contingency", "milestone",
+)
+_REFRESH_SOURCE_FIELDS = ("title", "url", "citation", "publisher", "published_on")
+
+
+def _public_text_fields(record, fields):
+    return {
+        field: record[field] for field in fields
+        if isinstance(record.get(field), str) and record[field].strip()
+    }
+
+
+def _refresh_target(context):
+    """Send only public identity and provenance fields to the provider."""
+    commitment = context["commitment"]
+    target = _public_text_fields(commitment, _REFRESH_FIELDS)
+    organization = _public_text_fields(context.get("organization") or {}, ("name",))
+    organization_name = organization.get("name") or commitment.get("responsible_entity_raw")
+    if isinstance(organization_name, str) and organization_name.strip():
+        target["organization_name"] = organization_name
+
+    beneficiary = _public_text_fields(commitment.get("beneficiary") or {}, ("category", "name"))
+    if beneficiary:
+        target["beneficiary"] = beneficiary
+
+    promise = commitment.get("original_promise") or {}
+    provenance = _public_text_fields(promise, ("locator",))
+    source = _public_text_fields(promise.get("source") or {}, _REFRESH_SOURCE_FIELDS)
+    source_url = source.pop("url", None)
+    if source_url:
+        try:
+            parsed = urlsplit(source_url)
+        except ValueError:
+            parsed = None
+        if parsed and parsed.scheme in ("https", "http") and parsed.hostname and parsed.username is None:
+            source["url"] = source_url
+            target.update(_public_text_fields(commitment, ("original_text",)))
+    if source:
+        provenance["source"] = source
+    if provenance:
+        target["original_promise"] = provenance
+    return target
+
+
 class ClaudeWebResearcher:
     def __init__(self, client, *, clock=None):
         self._client = client
@@ -240,7 +286,7 @@ class ClaudeWebResearcher:
         if kind == "DISCOVER":
             target = job["query"]
         elif kind == "REFRESH":
-            target = context
+            target = _refresh_target(context)
         else:
             raise ProviderError("Unknown research task")
 
