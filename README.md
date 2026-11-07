@@ -49,3 +49,7 @@ Point TEST_DATABASE_URL at the local test PostgreSQL database. Database tests cr
 The browser suite launches the real frontend, backend, worker and PostgreSQL adapter. It imports the workbook into a temporary schema and uses fixed model and web responses. Run the live Claude lookup and web refresh separately with a key authorized for sending the test commitment data to Anthropic.
 
     python -B -m tests.e2e_runner --live --anthropic-key-file ./claude_api.txt
+
+For live verification without sending any workbook records, run the public-only variant. It starts with an empty database catalog and uses a public NASA commitment to exercise discovery, matching, and refresh.
+
+    python -B -m tests.e2e_runner --public-live --anthropic-key-file ./claude_api.txt
