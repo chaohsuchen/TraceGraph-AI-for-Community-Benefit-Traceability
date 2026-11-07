@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TraceGraph · Public commitments</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.mjs"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="TraceGraph home">
+      <svg width="29" height="29" viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M7 16h9m0 0 9-8m-9 8 9 8" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="7" cy="16" r="3" fill="currentColor"/>
+        <circle cx="16" cy="16" r="3" fill="currentColor"/>
+        <circle cx="25" cy="8" r="3" fill="currentColor"/>
+        <circle cx="25" cy="24" r="3" fill="currentColor"/>
+      </svg>
+      TraceGraph
+    </a>
+    <span class="environment" id="environment" hidden>Fixture demo</span>
+  </header>
+  <main>
+    <section class="search-area" aria-labelledby="search-title">
+      <p class="eyebrow">Public commitments</p>
+      <h1 id="search-title">Trace a public promise</h1>
+      <p class="intro">Describe a commitment to find who made it, what the sources say, and whether delivery has been verified.</p>
+      <form id="search-form">
+        <label class="visually-hidden" for="query">Describe a public commitment</label>
+        <input id="query" name="query" type="search" placeholder="What did Bally’s promise for Bronx public safety?" maxlength="4000" required>
+        <button class="primary" type="submit">Search</button>
+      </form>
+      <div class="examples" aria-label="Example searches">
+        <button type="button" data-query="What did Bally’s promise to fund for a Bronx police substation and annual public safety?">Public safety funding</button>
+        <button type="button" data-query="What was Bally’s 70% Bronx hiring promise?">Bronx hiring</button>
+        <button type="button" data-query="What did Bally’s say about renewable electricity?">Renewable electricity</button>
+      </div>
+      <div class="notice" id="notice" role="status" aria-live="polite" hidden>
+        <span id="notice-text"></span>
+        <button class="quiet" id="retry" type="button" hidden>Retry</button>
+      </div>
+    </section>
+    <section class="workspace" id="workspace" aria-labelledby="workspace-title" hidden>
+      <div class="workspace-head">
+        <div>
+          <p class="eyebrow">Source relationships</p>
+          <h2 id="workspace-title">Commitment graph</h2>
+        </div>
+        <button class="quiet" id="refresh" type="button">Research again</button>
+      </div>
+      <div class="verdict-strip" id="verdict"></div>
+      <div class="workspace-body">
+        <div class="graph" id="graph" aria-label="Company, commitment and sources"></div>
+        <aside class="inspector" id="inspector" aria-label="Selected graph item"></aside>
+      </div>
+    </section>
+    <section class="empty-state" id="empty">
+      <p class="eyebrow">Evidence view</p>
+      <p>Search for a commitment to see its company, sources and latest verification.</p>
+    </section>
+  </main>
+</body>
+</html>
