@@ -1,0 +1,481 @@
+[
+  {
+    "name": "lookup_known_h008",
+    "request": {
+      "method": "POST",
+      "path": "/api/v1/lookup",
+      "headers": {"Idempotency-Key":"fixture-lookup-h008"},
+      "body": {"query":"What did Bally’s promise to fund for a Bronx police substation and annual public safety?"}
+    },
+    "response": {"status":200,"body":{"outcome":"MATCH","commitment_id":"TG-GOLD-H008"}}
+  },
+  {
+    "name": "lookup_bronx_jobs_ambiguous",
+    "request": {
+      "method": "POST",
+      "path": "/api/v1/lookup",
+      "headers": {"Idempotency-Key":"fixture-lookup-jobs"},
+      "body": {"query":"What was Bally’s 70% Bronx hiring promise?"}
+    },
+    "response": {
+      "status": 200,
+      "body": {
+        "outcome": "AMBIGUOUS",
+        "question": "Do you mean the permanent operations workforce, or the pledge covering both construction and facility jobs?"
+      }
+    }
+  },
+  {
+    "name": "lookup_no_match",
+    "request": {
+      "method": "POST",
+      "path": "/api/v1/lookup",
+      "headers": {"Idempotency-Key":"fixture-lookup-miss"},
+      "body": {"query":"Did Example Transit Authority promise a 2028 overnight electric shuttle pilot?"}
+    },
+    "response": {
+      "status": 202,
+      "headers": {"Location":"/api/v1/research-jobs/fixture-job-discover"},
+      "body": {"job_id":"fixture-job-discover"}
+    }
+  },
+  {
+    "name": "lookup_invalid_resolver_id",
+    "request": {
+      "method": "POST",
+      "path": "/api/v1/lookup",
+      "headers": {"Idempotency-Key":"fixture-lookup-invalid-id"},
+      "body": {"query":"What did Bally’s say about renewable electricity?"}
+    },
+    "response": {
+      "status": 503,
+      "body": {
+        "error": {"code":"RESOLUTION_UNAVAILABLE","message":"The identity check could not be completed.","retryable":true}
+      }
+    }
+  },
+  {
+    "name": "graph_h008_latest_after_failed_refresh",
+    "request": {"method":"GET","path":"/api/v1/commitments/TG-GOLD-H008"},
+    "response": {
+      "status": 200,
+      "body": {
+        "organization": {"id":"fixture-org-ballys","name":"Bally’s Corporation"},
+        "commitment": {
+          "id": "TG-GOLD-H008",
+          "title": "Up to $10 million for a new NYPD substation and $5 million annually for public safety support",
+          "description": "Bally's committed up to $10 million for a new police substation and $5 million per year in public safety support.",
+          "original_text": "Bally’s committed to mitigate these impacts through a capital investment of up to $10 million for a new police substation and $5 million in annual public safety support.",
+          "beneficiary": {"category":"public safety","name":"new police substation"},
+          "obligation_type": "Contractual commitment",
+          "amount_value": "up to $10 million (capital); $5 million annual",
+          "term_periodicity": "one-time capital; annual support",
+          "geographic_scope": "Bronx",
+          "notes": "Annual amount increased from $3M to $5M during the CAC process.",
+          "original_promise": {
+            "document_id": "GFLB-SEL-2025-12-01",
+            "source": {
+              "id": "fixture-source-gflb-selection",
+              "title": "GFLB Selection Report",
+              "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+              "citation": "Dec. 1, 2025",
+              "publisher": "Gaming Facility Location Board",
+              "source_type": null,
+              "published_on": "2025-12-01"
+            },
+            "locator": "pdf p.13; Bally’s Bronx: Local Impact Siting",
+            "char_start": 29737,
+            "char_end": 29906
+          },
+          "responsible_entity_raw": "Bally’s Corporation",
+          "condition_contingency": null,
+          "milestone": null
+        },
+        "latest_completed_run": {
+          "id": "fixture-run-h008-import",
+          "verification_date": null,
+          "verdict": "Commitment confirmed. Delivery unverified.",
+          "reasoning": "Verify the capital contribution through expenditure and acceptance records, and annual support through dated payments or agency receipts."
+        },
+        "earlier_completed_runs": [],
+        "viewed_run_id": "fixture-run-h008-import",
+        "source_edges": [
+          {
+            "source": {
+              "id": "fixture-source-gflb-selection",
+              "title": "GFLB Selection Report",
+              "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+              "citation": "Dec. 1, 2025",
+              "publisher": "Gaming Facility Location Board",
+              "source_type": null,
+              "published_on": "2025-12-01"
+            },
+            "evidence": [
+              {
+                "id": "fixture-evidence-h008-board",
+                "status": "Commitment documented",
+                "summary": "The Board records up to $10 million in capital funding and $5 million in annual support.",
+                "locator": "PDF p. 13",
+                "explanation": "The commitment contains separate capital and annual obligations.",
+                "excerpt": null,
+                "retrieved_at": null
+              }
+            ]
+          },
+          {
+            "source": {
+              "id": "fixture-source-ballys-cac",
+              "title": "Final Draft CAC Proposal and Amendments",
+              "url": null,
+              "citation": "Sept. 19, 2025, Public Safety",
+              "publisher": "Bally’s Corporation",
+              "source_type": null,
+              "published_on": "2025-09-19"
+            },
+            "evidence": [
+              {
+                "id": "fixture-evidence-h008-applicant",
+                "status": "Direct applicant confirmation",
+                "summary": "Bally’s identifies the 45th Precinct and confirms the funding amounts.",
+                "locator": "Public Safety",
+                "explanation": "The capital amount is a cap.",
+                "excerpt": null,
+                "retrieved_at": null
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "graph_h008_historical_run",
+    "request": {"method":"GET","path":"/api/v1/commitments/TG-GOLD-H008","query":{"run_id":"fixture-run-h008-import"}},
+    "response": {
+      "status": 200,
+      "body": {
+        "organization": {"id":"fixture-org-ballys","name":"Bally’s Corporation"},
+        "commitment": {
+          "id": "TG-GOLD-H008",
+          "title": "Up to $10 million for a new NYPD substation and $5 million annually for public safety support",
+          "description": "Bally's committed up to $10 million for a new police substation and $5 million per year in public safety support.",
+          "original_text": "Bally’s committed to mitigate these impacts through a capital investment of up to $10 million for a new police substation and $5 million in annual public safety support.",
+          "beneficiary": {"category":"public safety","name":"new police substation"},
+          "obligation_type": "Contractual commitment",
+          "amount_value": "up to $10 million (capital); $5 million annual",
+          "term_periodicity": "one-time capital; annual support",
+          "geographic_scope": "Bronx",
+          "notes": "Annual amount increased from $3M to $5M during the CAC process.",
+          "original_promise": {
+            "document_id": "GFLB-SEL-2025-12-01",
+            "source": {
+              "id": "fixture-source-gflb-selection",
+              "title": "GFLB Selection Report",
+              "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+              "citation": "Dec. 1, 2025",
+              "publisher": "Gaming Facility Location Board",
+              "source_type": null,
+              "published_on": "2025-12-01"
+            },
+            "locator": "pdf p.13; Bally’s Bronx: Local Impact Siting",
+            "char_start": 29737,
+            "char_end": 29906
+          },
+          "responsible_entity_raw": "Bally’s Corporation",
+          "condition_contingency": null,
+          "milestone": null
+        },
+        "latest_completed_run": {
+          "id": "fixture-run-h008-refresh",
+          "verification_date": "2026-11-07",
+          "verdict": "Delivery remains unverified.",
+          "reasoning": "Simulated refresh result for contract testing."
+        },
+        "earlier_completed_runs": [
+          {
+            "id": "fixture-run-h008-import",
+            "verification_date": null,
+            "verdict": "Commitment confirmed. Delivery unverified.",
+            "reasoning": "Verify the capital contribution through expenditure and acceptance records, and annual support through dated payments or agency receipts."
+          }
+        ],
+        "viewed_run_id": "fixture-run-h008-import",
+        "source_edges": [
+          {
+            "source": {
+              "id": "fixture-source-gflb-selection",
+              "title": "GFLB Selection Report",
+              "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+              "citation": "Dec. 1, 2025",
+              "publisher": "Gaming Facility Location Board",
+              "source_type": null,
+              "published_on": "2025-12-01"
+            },
+            "evidence": [
+              {
+                "id": "fixture-evidence-h008-board",
+                "status": "Commitment documented",
+                "summary": "The Board records up to $10 million in capital funding and $5 million in annual support.",
+                "locator": "PDF p. 13",
+                "explanation": "The commitment contains separate capital and annual obligations.",
+                "excerpt": null,
+                "retrieved_at": null
+              }
+            ]
+          },
+          {
+            "source": {
+              "id": "fixture-source-ballys-cac",
+              "title": "Final Draft CAC Proposal and Amendments",
+              "url": null,
+              "citation": "Sept. 19, 2025, Public Safety",
+              "publisher": "Bally’s Corporation",
+              "source_type": null,
+              "published_on": "2025-09-19"
+            },
+            "evidence": [
+              {
+                "id": "fixture-evidence-h008-applicant",
+                "status": "Direct applicant confirmation",
+                "summary": "Bally’s identifies the 45th Precinct and confirms the funding amounts.",
+                "locator": "Public Safety",
+                "explanation": "The capital amount is a cap.",
+                "excerpt": null,
+                "retrieved_at": null
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "graph_h010_same_source_different_evidence",
+    "request": {"method":"GET","path":"/api/v1/commitments/TG-GOLD-H010"},
+    "response": {
+      "status": 200,
+      "body": {
+        "organization": {"id":"fixture-org-ballys","name":"Bally’s Corporation"},
+        "commitment": {
+          "id": "TG-GOLD-H010",
+          "title": "Exceed 10% renewable electricity through on-site solar and NYSERDA-qualified procurement",
+          "description": "Bally's plans to exceed the 10 percent renewable energy requirement through on-site solar and NYSERDA-qualified off-site procurement.",
+          "original_text": "proposing a credible plan to surpass the 10 percent renewable energy requirement through on-site solar photovoltaics and off-site procurement of New York State Energy Research and Development Authority-qualified renewable energy.",
+          "beneficiary": {"category":"environment / sustainability","name":null},
+          "obligation_type": "Target / goal",
+          "amount_value": "more than 10 percent renewable energy",
+          "term_periodicity": "operations",
+          "geographic_scope": "Bronx",
+          "notes": null,
+          "original_promise": {
+            "document_id": "GFLB-SEL-2025-12-01",
+            "source": {
+              "id": "fixture-source-gflb-selection",
+              "title": "GFLB Selection Report",
+              "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+              "citation": "Dec. 1, 2025",
+              "publisher": "Gaming Facility Location Board",
+              "source_type": null,
+              "published_on": "2025-12-01"
+            },
+            "locator": "pdf p.14; Bally’s Bronx: Workforce Enhancement",
+            "char_start": 31375,
+            "char_end": 31604
+          },
+          "responsible_entity_raw": "Bally’s Corporation",
+          "condition_contingency": null,
+          "milestone": null
+        },
+        "latest_completed_run": {
+          "id": "fixture-run-h010-import",
+          "verification_date": null,
+          "verdict": "Target documented. Operating result unverified.",
+          "reasoning": "Compare metered on-site solar plus eligible off-site procurement with total facility electricity consumption for the same operating year."
+        },
+        "earlier_completed_runs": [],
+        "viewed_run_id": "fixture-run-h010-import",
+        "source_edges": [
+          {
+            "source": {
+              "id": "fixture-source-gflb-selection",
+              "title": "GFLB Selection Report",
+              "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+              "citation": "Dec. 1, 2025",
+              "publisher": "Gaming Facility Location Board",
+              "source_type": null,
+              "published_on": "2025-12-01"
+            },
+            "evidence": [
+              {
+                "id": "fixture-evidence-h010-board",
+                "status": "Target documented",
+                "summary": "The Board describes a plan to surpass 10% through on-site solar and qualified off-site procurement.",
+                "locator": "PDF p. 14",
+                "explanation": "The report documents a plan, while the operating result remains unverified.",
+                "excerpt": null,
+                "retrieved_at": null
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "graph_h001_without_completed_run",
+    "request": {"method":"GET","path":"/api/v1/commitments/TG-GOLD-H001"},
+    "response": {
+      "status": 200,
+      "body": {
+        "organization": {"id":"fixture-org-ballys","name":"Bally’s Corporation"},
+        "commitment": {
+          "id": "TG-GOLD-H001",
+          "title": null,
+          "description": "Bally's commits to a diverse 3,503-FTE permanent workforce, 70 percent from the Bronx, reflecting Bronx demographics.",
+          "original_text": "For its permanent operations, Bally’s commits to building a diverse workforce of 3,503 full-time equivalent employees, with 70 percent of those workers coming from the Bronx, and reflecting the demographics of the Bronx.",
+          "beneficiary": {"category":"workforce/jobs; local residents","name":null},
+          "obligation_type": "Unresolved / ambiguous",
+          "amount_value": "3,503 FTE; 70 percent Bronx residents",
+          "term_periodicity": "permanent operations",
+          "geographic_scope": "Bronx",
+          "notes": null,
+          "original_promise": {
+            "document_id": "GFLB-SEL-2025-12-01",
+            "source": {
+              "id": "fixture-source-gflb-selection",
+              "title": "GFLB Selection Report",
+              "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+              "citation": "Dec. 1, 2025",
+              "publisher": "Gaming Facility Location Board",
+              "source_type": null,
+              "published_on": "2025-12-01"
+            },
+            "locator": "pdf p.12; Bally’s Bronx: Board Evaluation",
+            "char_start": 24235,
+            "char_end": 24455
+          },
+          "responsible_entity_raw": "Bally’s Corporation",
+          "condition_contingency": null,
+          "milestone": null
+        },
+        "latest_completed_run": null,
+        "earlier_completed_runs": [],
+        "viewed_run_id": null,
+        "source_edges": []
+      }
+    }
+  },
+  {
+    "name": "expand_ballys",
+    "request": {"method":"GET","path":"/api/v1/organizations/fixture-org-ballys/commitments"},
+    "response": {
+      "status": 200,
+      "body": {
+        "organization": {"id":"fixture-org-ballys","name":"Bally’s Corporation"},
+        "commitments": [
+          {
+            "id": "TG-GOLD-H001",
+            "title": null,
+            "description": "Bally's commits to a diverse 3,503-FTE permanent workforce, 70 percent from the Bronx, reflecting Bronx demographics."
+          },
+          {
+            "id": "TG-GOLD-H008",
+            "title": "Up to $10 million for a new NYPD substation and $5 million annually for public safety support",
+            "description": "Bally's committed up to $10 million for a new police substation and $5 million per year in public safety support."
+          },
+          {
+            "id": "TG-GOLD-H009",
+            "title": "70% of construction and facility jobs for Bronx residents",
+            "description": "Bally's committed that 70 percent of construction and facility jobs go to Bronx residents."
+          },
+          {
+            "id": "TG-GOLD-H010",
+            "title": "Exceed 10% renewable electricity through on-site solar and NYSERDA-qualified procurement",
+            "description": "Bally's plans to exceed the 10 percent renewable energy requirement through on-site solar and NYSERDA-qualified off-site procurement."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "refresh_h008",
+    "request": {
+      "method": "POST",
+      "path": "/api/v1/commitments/TG-GOLD-H008/research-runs",
+      "headers": {"Idempotency-Key":"fixture-refresh-h008"}
+    },
+    "response": {
+      "status": 202,
+      "headers": {"Location":"/api/v1/research-jobs/fixture-job-refresh-h008"},
+      "body": {"job_id":"fixture-job-refresh-h008"}
+    }
+  },
+  {
+    "name": "poll_discovery_running",
+    "request": {"method":"GET","path":"/api/v1/research-jobs/fixture-job-discover"},
+    "response": {"status":200,"body":{"job_id":"fixture-job-discover","status":"RUNNING"}}
+  },
+  {
+    "name": "poll_discovery_created",
+    "request": {"method":"GET","path":"/api/v1/research-jobs/fixture-job-discover"},
+    "response": {
+      "status": 200,
+      "body": {
+        "job_id": "fixture-job-discover",
+        "status": "COMPLETED",
+        "result": {"outcome":"RESOLVED","commitment_id":"fixture-commitment-new","run_id":"fixture-run-new"}
+      }
+    }
+  },
+  {
+    "name": "poll_discovery_reuses_existing",
+    "request": {"method":"GET","path":"/api/v1/research-jobs/fixture-job-duplicate"},
+    "response": {
+      "status": 200,
+      "body": {
+        "job_id": "fixture-job-duplicate",
+        "status": "COMPLETED",
+        "result": {"outcome":"RESOLVED","commitment_id":"TG-GOLD-H008","run_id":null}
+      }
+    }
+  },
+  {
+    "name": "poll_discovery_no_documented_promise",
+    "request": {"method":"GET","path":"/api/v1/research-jobs/fixture-job-no-promise"},
+    "response": {
+      "status": 200,
+      "body": {
+        "job_id": "fixture-job-no-promise",
+        "status": "COMPLETED",
+        "result": {
+          "outcome": "NO_PUBLIC_PROMISE",
+          "message": "No public source documenting the original promise was located."
+        }
+      }
+    }
+  },
+  {
+    "name": "poll_refresh_completed_same_commitment",
+    "request": {"method":"GET","path":"/api/v1/research-jobs/fixture-job-refresh-h008"},
+    "response": {
+      "status": 200,
+      "body": {
+        "job_id": "fixture-job-refresh-h008",
+        "status": "COMPLETED",
+        "result": {"outcome":"RESOLVED","commitment_id":"TG-GOLD-H008","run_id":"fixture-run-h008-refresh"}
+      }
+    }
+  },
+  {
+    "name": "poll_refresh_failed",
+    "request": {"method":"GET","path":"/api/v1/research-jobs/fixture-job-failed-refresh-h008"},
+    "response": {
+      "status": 200,
+      "body": {
+        "job_id": "fixture-job-failed-refresh-h008",
+        "status": "FAILED",
+        "error": {"code":"RESEARCH_UNAVAILABLE","message":"The evidence provider was unavailable.","retryable":true}
+      }
+    }
+  }
+]

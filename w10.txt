@@ -1,0 +1,42 @@
+﻿Nov. 7
+MVP:
+1. Json format (how we calculate or how we do the search)
+   1. commitment id:
+      1. commitment name:
+      2. commitment description:
+      3. promised organization:
+      4. commitment beneficiary:
+      5. etc. (other fields on excel)
+      6. <commitment description vector>
+      7. <Date of last info extract>
+      8. <verdict>
+      9. evidence
+         1. document 1
+            1. fields on excel
+         2. document 2
+         3. document 3
+
+
+2. Search (UI + Backend Logic):
+   1. user is searching a commitment:
+      1. Vectorized user prompt, perform (vector search + BM25) retrieve top-k, combine ranks,
+      2. pass user prompt and top-k retrieved commitments (i.e. their json info) to LLM -> LLM decides if commitment has been cached, and if so, what is its commitment ID
+      3. If not cached in our vector db:
+         1. Do deep research for the user and add new commitment to the json file 
+         2. Store this result back to vector DB.
+                        Return the commitment 
+User decide whether to to further deep research
+
+
+
+
+3. Graph (Nodes and Edges) Tree -> Chain
+   1. Each organization forms an organization node
+   2. Each organization node points to multiple commitment nodes
+   3. Each commitment node (include normalized description of commitment with “info as of date XXX”) points to multiple document source nodes
+      1. date XXX (update trigger point)
+   4. Each document source node points to an evidence status node (plus explanation)
+   5.  Aggregated node (verdict)
+
+
+4. Optional: RAG (we expect user to provide docs)

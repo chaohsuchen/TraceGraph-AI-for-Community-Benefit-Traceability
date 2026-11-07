@@ -1,0 +1,368 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "TraceGraph MVP API",
+    "version": "1.0.0",
+    "description": "浏览器使用的共享 HTTP 契约。内部模块接口和行为见同目录 README.md。"
+  },
+  "servers": [{"url":"/api/v1"}],
+  "paths": {
+    "/lookup": {
+      "post": {
+        "operationId": "lookupCommitment",
+        "summary": "识别自然语言描述的承诺",
+        "parameters": [{"$ref":"#/components/parameters/IdempotencyKey"}],
+        "requestBody": {"required":true,"content":{"application/json":{"schema":{"$ref":"#/components/schemas/LookupRequest"}}}},
+        "responses": {
+          "200": {
+            "description": "已匹配，或需要用户澄清。",
+            "content": {"application/json":{"schema":{"$ref":"#/components/schemas/LookupResult"}}}
+          },
+          "202": {
+            "description": "已受理。通过 Location 查询任务。",
+            "content": {"application/json":{"schema":{"$ref":"#/components/schemas/ResearchAccepted"}}},
+            "headers": {"Location":{"required":true,"schema":{"type":"string","format":"uri-reference"}}}
+          },
+          "400": {"$ref":"#/components/responses/Error"},
+          "409": {"$ref":"#/components/responses/Error"},
+          "503": {"$ref":"#/components/responses/Error"},
+          "default": {"$ref":"#/components/responses/Error"}
+        }
+      }
+    },
+    "/commitments/{commitment_id}": {
+      "get": {
+        "operationId": "getCommitmentGraph",
+        "summary": "读取承诺和某轮研究对应的来源图",
+        "parameters": [
+          {"name":"commitment_id","in":"path","required":true,"schema":{"$ref":"#/components/schemas/Id"}},
+          {
+            "name": "run_id",
+            "in": "query",
+            "schema": {"$ref":"#/components/schemas/Id"},
+            "description": "缺省时查看最新完成轮次。指定的轮次须属于该承诺。"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "承诺图和已完成研究历史。",
+            "content": {"application/json":{"schema":{"$ref":"#/components/schemas/CommitmentGraph"}}}
+          },
+          "404": {"$ref":"#/components/responses/Error"},
+          "default": {"$ref":"#/components/responses/Error"}
+        }
+      }
+    },
+    "/organizations/{organization_id}/commitments": {
+      "get": {
+        "operationId": "listOrganizationCommitments",
+        "summary": "按组织 ID 展开其承诺",
+        "parameters": [{"name":"organization_id","in":"path","required":true,"schema":{"$ref":"#/components/schemas/Id"}}],
+        "responses": {
+          "200": {
+            "description": "组织及其承诺摘要。",
+            "content": {"application/json":{"schema":{"$ref":"#/components/schemas/OrganizationCommitments"}}}
+          },
+          "404": {"$ref":"#/components/responses/Error"},
+          "default": {"$ref":"#/components/responses/Error"}
+        }
+      }
+    },
+    "/commitments/{commitment_id}/research-runs": {
+      "post": {
+        "operationId": "refreshCommitment",
+        "summary": "对现有承诺追加一轮研究",
+        "parameters": [
+          {"name":"commitment_id","in":"path","required":true,"schema":{"$ref":"#/components/schemas/Id"}},
+          {"$ref":"#/components/parameters/IdempotencyKey"}
+        ],
+        "responses": {
+          "202": {
+            "description": "已受理。通过 Location 查询任务。",
+            "content": {"application/json":{"schema":{"$ref":"#/components/schemas/ResearchAccepted"}}},
+            "headers": {"Location":{"required":true,"schema":{"type":"string","format":"uri-reference"}}}
+          },
+          "400": {"$ref":"#/components/responses/Error"},
+          "404": {"$ref":"#/components/responses/Error"},
+          "409": {"$ref":"#/components/responses/Error"},
+          "503": {"$ref":"#/components/responses/Error"},
+          "default": {"$ref":"#/components/responses/Error"}
+        }
+      }
+    },
+    "/research-jobs/{job_id}": {
+      "get": {
+        "operationId": "getResearchJob",
+        "summary": "查询首次研究或刷新任务",
+        "parameters": [{"name":"job_id","in":"path","required":true,"schema":{"$ref":"#/components/schemas/Id"}}],
+        "responses": {
+          "200": {"description":"任务进度或终态。","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Job"}}}},
+          "404": {"$ref":"#/components/responses/Error"},
+          "default": {"$ref":"#/components/responses/Error"}
+        }
+      }
+    }
+  },
+  "components": {
+    "parameters": {
+      "IdempotencyKey": {
+        "name": "Idempotency-Key",
+        "in": "header",
+        "required": true,
+        "description": "同一次提交重试时复用。重新提问或再次刷新时使用新键。",
+        "schema": {"type":"string","minLength":1,"maxLength":128}
+      }
+    },
+    "responses": {
+      "Error": {
+        "description": "请求或服务错误。HTTP 状态码和错误代码见 README.md。",
+        "content": {"application/json":{"schema":{"$ref":"#/components/schemas/ErrorResponse"}}}
+      }
+    },
+    "schemas": {
+      "Id": {"type":"string","minLength":1,"description":"不透明标识。承诺沿用现有 Excel ID。"},
+      "LookupRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["query"],
+        "properties": {"query":{"type":"string","minLength":1,"maxLength":4000,"pattern":"\\S"}}
+      },
+      "LookupResult": {"oneOf":[{"$ref":"#/components/schemas/Match"},{"$ref":"#/components/schemas/Ambiguous"}]},
+      "Match": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["outcome","commitment_id"],
+        "properties": {"outcome":{"const":"MATCH"},"commitment_id":{"$ref":"#/components/schemas/Id"}}
+      },
+      "Ambiguous": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["outcome","question"],
+        "properties": {"outcome":{"const":"AMBIGUOUS"},"question":{"type":"string","minLength":1}}
+      },
+      "ResearchAccepted": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["job_id"],
+        "properties": {"job_id":{"$ref":"#/components/schemas/Id"}}
+      },
+      "Job": {
+        "oneOf": [
+          {"$ref":"#/components/schemas/PendingJob"},
+          {"$ref":"#/components/schemas/CompletedJob"},
+          {"$ref":"#/components/schemas/FailedJob"}
+        ]
+      },
+      "PendingJob": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["job_id","status"],
+        "properties": {"job_id":{"$ref":"#/components/schemas/Id"},"status":{"enum":["QUEUED","RUNNING"]}}
+      },
+      "CompletedJob": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["job_id","status","result"],
+        "properties": {
+          "job_id": {"$ref":"#/components/schemas/Id"},
+          "status": {"const":"COMPLETED"},
+          "result": {
+            "oneOf": [
+              {"$ref":"#/components/schemas/Resolved"},
+              {"$ref":"#/components/schemas/Ambiguous"},
+              {"$ref":"#/components/schemas/NoPublicPromise"}
+            ]
+          }
+        }
+      },
+      "FailedJob": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["job_id","status","error"],
+        "properties": {
+          "job_id": {"$ref":"#/components/schemas/Id"},
+          "status": {"const":"FAILED"},
+          "error": {"$ref":"#/components/schemas/ErrorDetail"}
+        }
+      },
+      "Resolved": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["outcome","commitment_id","run_id"],
+        "properties": {
+          "outcome": {"const":"RESOLVED"},
+          "commitment_id": {"$ref":"#/components/schemas/Id"},
+          "run_id": {"anyOf":[{"$ref":"#/components/schemas/Id"},{"type":"null"}]}
+        }
+      },
+      "NoPublicPromise": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["outcome","message"],
+        "properties": {"outcome":{"const":"NO_PUBLIC_PROMISE"},"message":{"type":"string","minLength":1}}
+      },
+      "CommitmentGraph": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "organization",
+          "commitment",
+          "latest_completed_run",
+          "earlier_completed_runs",
+          "viewed_run_id",
+          "source_edges"
+        ],
+        "properties": {
+          "organization": {"anyOf":[{"$ref":"#/components/schemas/Organization"},{"type":"null"}]},
+          "commitment": {"$ref":"#/components/schemas/Commitment"},
+          "latest_completed_run": {"anyOf":[{"$ref":"#/components/schemas/Run"},{"type":"null"}]},
+          "earlier_completed_runs": {"type":"array","items":{"$ref":"#/components/schemas/Run"}},
+          "viewed_run_id": {"anyOf":[{"$ref":"#/components/schemas/Id"},{"type":"null"}]},
+          "source_edges": {"type":"array","items":{"$ref":"#/components/schemas/SourceEdge"}}
+        }
+      },
+      "Organization": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id","name"],
+        "properties": {"id":{"$ref":"#/components/schemas/Id"},"name":{"type":"string","minLength":1}}
+      },
+      "OrganizationCommitments": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["organization","commitments"],
+        "properties": {
+          "organization": {"$ref":"#/components/schemas/Organization"},
+          "commitments": {"type":"array","items":{"$ref":"#/components/schemas/CommitmentSummary"}}
+        }
+      },
+      "CommitmentSummary": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id","title","description"],
+        "properties": {
+          "id": {"$ref":"#/components/schemas/Id"},
+          "title": {"type":["string","null"]},
+          "description": {"type":"string","minLength":1}
+        }
+      },
+      "Commitment": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "description",
+          "original_text",
+          "responsible_entity_raw",
+          "beneficiary",
+          "obligation_type",
+          "amount_value",
+          "term_periodicity",
+          "geographic_scope",
+          "condition_contingency",
+          "milestone",
+          "notes",
+          "original_promise"
+        ],
+        "properties": {
+          "id": {"$ref":"#/components/schemas/Id"},
+          "title": {"type":["string","null"]},
+          "description": {"type":"string","minLength":1},
+          "original_text": {"type":["string","null"]},
+          "responsible_entity_raw": {"type":["string","null"]},
+          "beneficiary": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["category","name"],
+            "properties": {"category":{"type":["string","null"]},"name":{"type":["string","null"]}}
+          },
+          "obligation_type": {"type":["string","null"]},
+          "amount_value": {"type":["string","null"]},
+          "term_periodicity": {"type":["string","null"]},
+          "geographic_scope": {"type":["string","null"]},
+          "condition_contingency": {"type":["string","null"]},
+          "milestone": {"type":["string","null"]},
+          "notes": {"type":["string","null"]},
+          "original_promise": {"anyOf":[{"$ref":"#/components/schemas/OriginalPromise"},{"type":"null"}]}
+        }
+      },
+      "OriginalPromise": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["document_id","source","locator","char_start","char_end"],
+        "properties": {
+          "document_id": {"type":["string","null"]},
+          "source": {"anyOf":[{"$ref":"#/components/schemas/Source"},{"type":"null"}]},
+          "locator": {"type":["string","null"]},
+          "char_start": {"type":["integer","null"],"minimum":0},
+          "char_end": {"type":["integer","null"],"minimum":0}
+        }
+      },
+      "Run": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id","verification_date","verdict","reasoning"],
+        "properties": {
+          "id": {"$ref":"#/components/schemas/Id"},
+          "verification_date": {"type":["string","null"],"format":"date"},
+          "verdict": {"type":"string","minLength":1},
+          "reasoning": {"type":"string","minLength":1}
+        }
+      },
+      "Source": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id","title","url","citation","publisher","source_type","published_on"],
+        "properties": {
+          "id": {"$ref":"#/components/schemas/Id"},
+          "title": {"type":"string","minLength":1},
+          "url": {"type":["string","null"],"format":"uri"},
+          "citation": {"type":["string","null"]},
+          "publisher": {"type":["string","null"]},
+          "source_type": {"type":["string","null"]},
+          "published_on": {"type":["string","null"],"format":"date"}
+        }
+      },
+      "SourceEdge": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["source","evidence"],
+        "properties": {
+          "source": {"$ref":"#/components/schemas/Source"},
+          "evidence": {"type":"array","items":{"$ref":"#/components/schemas/Evidence"},"minItems":1}
+        }
+      },
+      "Evidence": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id","status","explanation","excerpt","summary","locator","retrieved_at"],
+        "properties": {
+          "id": {"$ref":"#/components/schemas/Id"},
+          "status": {"type":["string","null"]},
+          "explanation": {"type":["string","null"]},
+          "excerpt": {"type":["string","null"]},
+          "summary": {"type":["string","null"]},
+          "locator": {"type":["string","null"]},
+          "retrieved_at": {"type":["string","null"],"format":"date-time"}
+        }
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["error"],
+        "properties": {"error":{"$ref":"#/components/schemas/ErrorDetail"}}
+      },
+      "ErrorDetail": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["code","message","retryable"],
+        "properties": {
+          "code": {"type":"string","minLength":1},
+          "message": {"type":"string","minLength":1},
+          "retryable": {"type":"boolean"}
+        }
+      }
+    }
+  }
+}
