@@ -183,6 +183,70 @@ class ProviderTests(unittest.TestCase):
         self.assertNotIn("draft", response)
         self.assertEqual(response["result"]["evidence"][0]["source"]["url"], _PROGRESS_URL)
 
+    def test_refresh_only_sends_public_identity_and_provenance(self):
+        client = Mock()
+        client.create.side_effect = [_search_message(), _extracted(None)]
+        commitment = {
+            "id": "internal-commitment-id",
+            "description": "Run five overnight shuttle routes",
+            "original_text": _ORIGINAL_TEXT,
+            "geographic_scope": "Greater Transit District",
+            "term_periodicity": "Overnight",
+            "notes": "private workbook annotation",
+            "eval_labels": ["internal evaluation"],
+            "beneficiary": {"category": "riders", "annotator": "annotator handle"},
+            "original_promise": {
+                "document_id": "internal-document-id",
+                "locator": "Section 3",
+                "char_start": 41,
+                "source": {"id": "internal-source-id", "url": _ORIGINAL_URL,
+                           "title": "Board Decision", "citation": "Board agenda item 8",
+                           "publisher": "Transit Authority", "published_on": "2025-01-08",
+                           "notes": "internal source notes"},
+            },
+        }
+        context = {
+            "commitment": commitment,
+            "organization": {"id": "internal-organization-id", "name": "Transit Authority"},
+            "previous_runs": [{"reasoning": "internal run details"}],
+        }
+        ClaudeWebResearcher(client)({"kind": "REFRESH", "claim_token": "internal worker token"}, context)
+
+        expected_target = {
+            "description": "Run five overnight shuttle routes",
+            "original_text": _ORIGINAL_TEXT,
+            "geographic_scope": "Greater Transit District",
+            "term_periodicity": "Overnight",
+            "organization_name": "Transit Authority",
+            "beneficiary": {"category": "riders"},
+            "original_promise": {
+                "locator": "Section 3",
+                "source": {"url": _ORIGINAL_URL, "title": "Board Decision",
+                           "citation": "Board agenda item 8", "publisher": "Transit Authority",
+                           "published_on": "2025-01-08"},
+            },
+        }
+        for call in client.create.call_args_list:
+            body = json.loads(call.kwargs["messages"][0]["content"])
+            self.assertEqual(body["target"], expected_target)
+            self.assertNotIn("claim_token", body)
+
+    def test_refresh_omits_original_text_without_public_url(self):
+        client = Mock()
+        client.create.return_value = _message(_search_blocks([]))
+        context = {"commitment": {
+            "description": "Run five overnight shuttle routes",
+            "original_text": "unlinked draft excerpt",
+            "responsible_entity_raw": "Transit Authority",
+            "original_promise": {"source": {"title": "Unlinked document"}},
+        }}
+        with self.assertRaisesRegex(ProviderError, "no cited evidence"):
+            ClaudeWebResearcher(client)({"kind": "REFRESH"}, context)
+        body = json.loads(client.create.call_args.kwargs["messages"][0]["content"])
+        self.assertNotIn("original_text", body["target"])
+        self.assertEqual(body["target"]["organization_name"], "Transit Authority")
+
+
     def test_clean_empty_discovery_is_distinct_from_tool_error(self):
         client = Mock()
         client.create.return_value = _message(_search_blocks([]))
