@@ -103,6 +103,12 @@ class EvidenceStore(PostgresStore):
             raise ValueError("A live assessment requires a verification date.")
         aliases, known_ids = self._merge_findings(connection, commitment_id, result["findings"])
         self._merge_relations(connection, commitment_id, result["relations"], aliases, known_ids)
+        for first, second in result.get("dismissed_conflicts", ()):
+            connection.execute("""
+                DELETE FROM evidence_relation
+                WHERE commitment_id = %s AND kind = 'CONFLICT'
+                    AND from_id = %s AND to_id = %s
+            """, (commitment_id, first, second))
         connection.execute("""
             INSERT INTO commitment_assessment (commitment_id, revision, label, verdict, reasoning, verification_date)
             VALUES (%s, %s, %s, %s, %s, %s)

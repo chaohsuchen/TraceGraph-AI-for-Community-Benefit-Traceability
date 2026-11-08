@@ -155,8 +155,11 @@ def create_application(dsn, mode, *, key_file=None, model=None):
         client = AnthropicClient(api_key=read_credential(key_file), model=model)
         judge, researcher = ClaudeIdentityJudge(client), ClaudeWebResearcher(client)
         reconciliation_judge = ClaudeReconciliationJudge(client)
-        reconciler = EvidenceReconciler(reconciliation_judge, followup=researcher.review_conflicts,
-                                       assessor=reconciliation_judge.assess)
+        reconciler = EvidenceReconciler(
+            reconciliation_judge, followup=researcher.review_conflicts, assessor=reconciliation_judge.assess,
+            verify_conflicts=reconciliation_judge.verify_conflicts,
+            verify_refutation=reconciliation_judge.verify_refutation,
+        )
     store = EvidenceStore(dsn)
     agent = Agent(Retrieval(store, embed, judge), store, researcher, reconciler=reconciler)
     return Application(store, agent, (ResolutionUnavailable,))
@@ -251,6 +254,7 @@ def main(argv=None):
                                model=args.anthropic_model)
             args.output.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         else:
+            logging.basicConfig(level=logging.INFO)
             dsn = scoped_database(args.database_url, args.schema)
             app = create_application(
                 dsn, args.mode, key_file=args.anthropic_key_file, model=args.anthropic_model,

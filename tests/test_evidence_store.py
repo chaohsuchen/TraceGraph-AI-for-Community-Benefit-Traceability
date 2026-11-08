@@ -135,6 +135,23 @@ class EvidenceStoreTests(TestCase):
             """, (original["id"],)).fetchone()
             self.assertTrue(times["updated"])
 
+    def test_dismissing_a_conflict_keeps_its_findings_and_other_relations(self):
+        first = result(0, [
+            finding("promise", "The original promise.", support("promise")),
+            finding("test", "The test flight crew.", support("test")),
+            finding("landing", "The landing plan.", support("landing")),
+        ], [
+            relation("CONFLICT", "test", "promise", "RESOLVED", "test"),
+            relation("PROGRESS", "test", "landing"),
+        ])
+        self.store.finish_refresh(self._claim(), first)
+        before = self.store.research_snapshot(CID)
+        updated = {**result(1), "dismissed_conflicts": [("test", "promise")]}
+        self.store.finish_refresh(self._claim(), updated)
+        graph = self.store.graph(CID)
+        self.assertEqual(graph["findings"], before["findings"])
+        self.assertEqual(graph["relations"], [relation("PROGRESS", "test", "landing")])
+
     def test_stale_concurrent_refresh_rechecks_before_writing(self):
         claims = (self._claim(), self._claim())
         pending = [

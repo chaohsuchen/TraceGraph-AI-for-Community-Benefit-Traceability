@@ -142,7 +142,13 @@ class ReconciliationTests(unittest.TestCase):
 
         followup = Mock(return_value=[corroboration])
         assessor = Mock(return_value=_ASSESSMENT)
-        reconciler = EvidenceReconciler(judge, followup=followup, assessor=assessor)
+        verify_conflicts = Mock(return_value=[{
+            "id": "c1", "contradicts": True, "left_quote": "We operated three routes November 1.",
+            "right_quote": "All routes had suspended service on November 1.",
+        }])
+        reconciler = EvidenceReconciler(
+            judge, followup=followup, assessor=assessor, verify_conflicts=verify_conflicts,
+        )
         cache = {}
         first = reconciler.reconcile(_CONTEXT, prior, _research(contradiction), followup_cache=cache)
         second = reconciler.reconcile(
@@ -156,6 +162,7 @@ class ReconciliationTests(unittest.TestCase):
         self.assertEqual(edge["preferred_id"], "f-1")
         self.assertIn("https://transit.example/audit", edge["reasoning"])
         followup.assert_called_once()
+        self.assertEqual(verify_conflicts.call_count, 2)
         self.assertEqual(assessor.call_args.args[1]["relations"], second["relations"])
 
     def test_no_new_review_evidence_keeps_conflict_unresolved(self):
@@ -223,6 +230,87 @@ class ReconciliationTests(unittest.TestCase):
         with self.assertRaisesRegex(ReconciliationError, "unknown or assigned more than once"):
             reconciler.reconcile(_CONTEXT, _snapshot(), result)
 
+    def test_artemis_orbital_test_does_not_refute_a_lunar_landing_promise(self):
+        context = {"commitment": {
+            "description": "NASA pledged to land the first woman and first person of color on the Moon through Artemis.",
+        }}
+        test_quote = "The mission will undertake a series of challenging tests in Earth orbit in 2027"
+        announcement = _support("artemis-iii", test_quote)
+        wording = _support("nasa-statement", "the change in language does not indicate a change in crew assignments")
+        prior_edge = _link("CONFLICT", "wording", "test", status="RESOLVED", preferred_id="test")
+        findings = [
+            {"id": "wording", "claim": "NASA said that the wording change did not indicate a crew change.", "supports": [wording]},
+            {"id": "test", "claim": "NASA announced the Artemis III crew for a test in Earth orbit.", "supports": [announcement]},
+        ]
+        verdict = {
+            "label": "REFUTED", "verdict": "NASA abandoned the landing promise.",
+            "reasoning": "The Artemis III crew was announced for the orbital test.",
+            "refutation": {"basis": "DIRECT_DISPROOF", "finding_id": "test", "quote": test_quote},
+        }
+        for existing in (False, True):
+            with self.subTest(existing=existing):
+                candidate = _link("CONFLICT", "wording", "test", status="UNRESOLVED")
+                judge = Mock(return_value=_plan(relations=[] if existing else [candidate]))
+                compare = Mock(return_value=[{"id": "c1", "contradicts": False,
+                                             "left_quote": "", "right_quote": ""}])
+                verify_refutation = Mock(return_value=False)
+                followup = Mock()
+                assess = Mock(return_value=verdict)
+                reconciler = EvidenceReconciler(
+                    judge, followup=followup, assessor=assess,
+                    verify_conflicts=compare, verify_refutation=verify_refutation,
+                )
+                graph = reconciler.reconcile(
+                    context, _snapshot(*findings, relations=[prior_edge] if existing else []), _research(),
+                )
+                self.assertEqual(graph["label"], "UNVERIFIED")
+                self.assertEqual(graph["findings"], findings)
+                self.assertEqual(graph["relations"], [])
+                self.assertEqual(graph["dismissed_conflicts"], [("wording", "test")] if existing else [])
+                self.assertEqual(judge.call_args.args[1]["relations"], [])
+                self.assertEqual(assess.call_args.args[1]["relations"], [])
+                followup.assert_not_called()
+                verify_refutation.assert_called_once_with(context, announcement, "DIRECT_DISPROOF", test_quote)
+
+    def test_fabricated_conflict_quote_does_not_trigger_research_or_conflicting_verdict(self):
+        first = {"id": "one", "claim": "One route ran.", "supports": [_support("report", "One route ran.")]}
+        second = {"id": "two", "claim": "Two routes ran.", "supports": [_support("audit", "Two routes ran.")]}
+        assessment = {"label": "CONFLICTING", "verdict": "Disputed.", "reasoning": "The reports differ."}
+        judge = Mock(return_value=_plan(
+            relations=[_link("CONFLICT", "one", "two", status="UNRESOLVED")], assessment=assessment,
+        ))
+        compare = Mock(return_value=[{
+            "id": "c1", "contradicts": True, "left_quote": "One route ran.", "right_quote": "An invented quote.",
+        }])
+        followup = Mock()
+        graph = EvidenceReconciler(judge, verify_conflicts=compare, followup=followup).reconcile(
+            _CONTEXT, _snapshot(first, second), _research(),
+        )
+        self.assertEqual(graph["label"], "UNVERIFIED")
+        self.assertEqual(graph["relations"], [])
+        followup.assert_not_called()
+
+    def test_refutation_requires_a_real_quote_and_preserves_verified_direct_evidence(self):
+        quote = "The authority has withdrawn its commitment to provide five overnight shuttle routes."
+        notice = _support("withdrawal", quote)
+        finding = {"id": "withdrawal", "claim": "The authority withdrew its commitment.", "supports": [notice]}
+        assess = Mock()
+        verify = Mock(return_value=True)
+        reconciler = EvidenceReconciler(Mock(return_value=_plan()), assessor=assess, verify_refutation=verify)
+        verdict = {"label": "REFUTED", "verdict": "The pledge was withdrawn.", "reasoning": "The authority withdrew it."}
+        for proof in ({}, {"basis": "OFFICIAL_WITHDRAWAL", "finding_id": "withdrawal", "quote": "Invented."}):
+            assess.return_value = {**verdict, "refutation": proof}
+            self.assertEqual(reconciler.reconcile(_CONTEXT, _snapshot(finding), _research())["label"], "UNVERIFIED")
+        verify.assert_not_called()
+        assess.return_value = {
+            **verdict, "refutation": {"basis": "OFFICIAL_WITHDRAWAL", "finding_id": "withdrawal", "quote": quote},
+        }
+        graph = reconciler.reconcile(_CONTEXT, _snapshot(finding), _research())
+        verify.assert_called_once_with(_CONTEXT, notice, "OFFICIAL_WITHDRAWAL", quote)
+        self.assertEqual(graph["label"], "REFUTED")
+        self.assertIn(quote, graph["reasoning"])
+        self.assertIn(notice["source"]["url"], graph["reasoning"])
+
 
 class ClaudeReconciliationTests(unittest.TestCase):
     def test_claude_relation_schema_uses_strings_and_restores_nulls_for_storage(self):
@@ -246,7 +334,7 @@ class ClaudeReconciliationTests(unittest.TestCase):
         client = Mock()
         client.create.side_effect = [
             _json_message(_plan([_assignment("o1", "new:1", "Three routes opened.")])),
-            _json_message(_ASSESSMENT),
+            _json_message({**_ASSESSMENT, "refutation": {"basis": "", "finding_id": "", "quote": ""}}),
         ]
         judge = ClaudeReconciliationJudge(client)
         evidence = _support("board", "Three routes opened.")
@@ -266,6 +354,56 @@ class ClaudeReconciliationTests(unittest.TestCase):
             self.assertNotIn("private annotator", serialized)
             self.assertNotIn("org-private-id", serialized)
         self.assertNotIn("observations", assessor)
+
+    def test_assessor_anchors_scope_in_the_original_passage_instead_of_old_interpretation(self):
+        client = Mock()
+        client.create.return_value = _json_message({
+            **_ASSESSMENT, "refutation": {"basis": "", "finding_id": "", "quote": ""},
+        })
+        original = _support("original", "The authority promises five overnight routes.")
+        context = {"commitment": {
+            "description": "The pledge was formally abandoned.",
+            "milestone": "A separate pilot was delayed.",
+            "original_promise": {"source": original["source"], "excerpt": original["excerpt"]},
+        }}
+        ClaudeReconciliationJudge(client).assess(context, _snapshot())
+        target = json.loads(client.create.call_args.kwargs["messages"][0]["content"])["target"]
+        self.assertEqual(target["original_text"], original["excerpt"])
+        self.assertNotIn("description", target)
+        self.assertNotIn("milestone", target)
+
+    def test_verifiers_receive_source_passages_without_generated_evidence_explanations(self):
+        first = _support("test-flight", "The mission is a test in Earth orbit.")
+        first["explanation"] = "Model-generated interpretation."
+        second = _support("landing", "The lunar landing is planned for a separate mission.")
+        comparisons = [{"id": "c1", "contradicts": False, "left_quote": "", "right_quote": ""}]
+        client = Mock()
+        client.create.side_effect = [_json_message({"comparisons": comparisons}),
+                                     _json_message({"basis": ""})]
+        judge = ClaudeReconciliationJudge(client)
+        self.assertEqual(judge.verify_conflicts(_CONTEXT, [{
+            "id": "c1", "left": {"claim": "Orbital test", "supports": [first]},
+            "right": {"claim": "Lunar landing", "supports": [second]},
+        }]), comparisons)
+        self.assertFalse(judge.verify_refutation(_CONTEXT, first, "DIRECT_DISPROOF", first["excerpt"]))
+        self.assertEqual(client.create.call_count, 2)
+        classification = json.loads(client.create.call_args.kwargs["messages"][0]["content"])
+        self.assertNotIn("target", classification)
+        self.assertNotIn("basis", classification)
+        for call in client.create.call_args_list:
+            payload = call.kwargs["messages"][0]["content"]
+            self.assertIn(first["excerpt"], payload)
+            self.assertNotIn(first["explanation"], payload)
+            self.assertNotIn("private workbook note", payload)
+
+    def test_explicit_withdrawal_still_reaches_scope_verification(self):
+        quote = "The authority withdraws its promise to run five overnight routes."
+        client = Mock()
+        client.create.side_effect = [_json_message({"basis": "OFFICIAL_WITHDRAWAL"}),
+                                     _json_message({"directly_refutes": True})]
+        judge = ClaudeReconciliationJudge(client)
+        self.assertTrue(judge.verify_refutation(_CONTEXT, _support("withdrawal", quote), "OFFICIAL_WITHDRAWAL", quote))
+        self.assertEqual(client.create.call_count, 2)
 
     def test_conflict_review_uses_targeted_search_and_verified_citations(self):
         client = Mock()
