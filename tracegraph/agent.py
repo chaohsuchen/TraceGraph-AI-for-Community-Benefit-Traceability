@@ -1,6 +1,7 @@
 """Lookup and research orchestration for the TraceGraph API and worker."""
 
 from datetime import date, datetime
+from logging import getLogger
 from urllib.parse import urlsplit
 
 
@@ -19,6 +20,7 @@ _DISCOVERED_FIELDS = (
     "original_promise",
 )
 _MAX_RESEARCH_WRITE_ATTEMPTS = 3
+LOG = getLogger(__name__)
 
 
 class ResolutionUnavailable(RuntimeError):
@@ -62,6 +64,7 @@ class Agent:
         except ResolutionUnavailable:
             error = _error("RESOLUTION_UNAVAILABLE", "The identity check could not be completed.")
         except ResearchUnavailable:
+            LOG.info("Research task could not complete", exc_info=True)
             error = _error("RESEARCH_UNAVAILABLE", "The research could not be completed.")
         except Exception:
             error = _error("INTERNAL_ERROR", "The research job could not be saved or executed.", retryable=False)

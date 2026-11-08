@@ -28,13 +28,11 @@
       <p class="intro">Describe a commitment to find who made it, what the sources say, and whether delivery has been verified.</p>
       <form id="search-form">
         <label class="visually-hidden" for="query">Describe a public commitment</label>
-        <input id="query" name="query" type="search" placeholder="What did Bally’s promise for Bronx public safety?" maxlength="4000" required>
+        <input id="query" name="query" type="search" placeholder="What public promise would you like to trace?" maxlength="4000" required>
         <button class="primary" type="submit">Search</button>
       </form>
       <div class="examples" aria-label="Example searches">
-        <button type="button" data-query="What did Bally’s promise to fund for a Bronx police substation and annual public safety?">Public safety funding</button>
-        <button type="button" data-query="What was Bally’s 70% Bronx hiring promise?">Bronx hiring</button>
-        <button type="button" data-query="What did Bally’s say about renewable electricity?">Renewable electricity</button>
+        <button type="button" data-query="What did NASA publicly promise about the first woman and first person of color on the Moon through Artemis?">Artemis program</button>
       </div>
       <div class="notice" id="notice" role="status" aria-live="polite" hidden>
         <span id="notice-text"></span>
@@ -44,14 +42,14 @@
     <section class="workspace" id="workspace" aria-labelledby="workspace-title" hidden>
       <div class="workspace-head">
         <div>
-          <p class="eyebrow">Source relationships</p>
+          <p class="eyebrow">Evidence relationships</p>
           <h2 id="workspace-title">Commitment graph</h2>
         </div>
         <button class="quiet" id="refresh" type="button">Research again</button>
       </div>
       <div class="verdict-strip" id="verdict"></div>
       <div class="workspace-body">
-        <div class="graph" id="graph" aria-label="Company, commitment and sources"></div>
+        <div class="graph" id="graph" aria-label="Organization, commitment, evidence and relations"></div>
         <aside class="inspector" id="inspector" aria-label="Selected graph item"></aside>
       </div>
     </section>

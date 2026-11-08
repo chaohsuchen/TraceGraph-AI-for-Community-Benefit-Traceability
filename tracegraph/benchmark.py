@@ -9,6 +9,10 @@ from .workbook_import import _reviewed_rows, gold_groups
 from .workbook_stage import extract_rows
 
 
+class EvaluationCaseFailed(RuntimeError):
+    """The system did not produce a scorable research outcome."""
+
+
 def evaluate_workbook(workbook, research, *, commitment_ids=None, reviewed_matches=None):
     """Call research(query) once per selected commitment and score its evidence.
 
@@ -28,14 +32,22 @@ def evaluate_workbook(workbook, research, *, commitment_ids=None, reviewed_match
 
     cases = []
     totals = Counter()
+    failed = 0
     for commitment_id in selected:
         query, references = reference_cases[commitment_id]
-        returned = _returned_evidence(research(query))
+        try:
+            returned = _returned_evidence(research(query))
+        except EvaluationCaseFailed as exc:
+            failed += 1
+            cases.append({"commitment_id": commitment_id, "status": "FAILED", "error": str(exc),
+                          "reference_count": len(references), "recall": None})
+            continue
         score = _score(references, returned, reviewed.get(commitment_id, []))
         totals.update(score["counts"])
-        cases.append({"commitment_id": commitment_id, **score})
+        cases.append({"commitment_id": commitment_id, "status": "SCORED", **score})
 
-    return {"cases": cases, "counts": dict(totals), "recall": totals["matched"] / totals["reference"]}
+    return {"cases": cases, "counts": dict(totals), "failed_cases": failed,
+            "recall": totals["matched"] / totals["reference"] if totals["reference"] else None}
 
 
 def _reference_cases(workbook):

@@ -8,7 +8,8 @@ const assets = new Map([
   ['/app.mjs', ['./app.mjs', 'text/javascript; charset=utf-8']],
   ['/api.mjs', ['./api.mjs', 'text/javascript; charset=utf-8']],
   ['/demo.mjs', ['./demo.mjs', 'text/javascript; charset=utf-8']],
-  ['/contracts/examples.json', ['../contracts/examples.json', 'application/json; charset=utf-8']],
+  ['/evidence-graph.mjs', ['./evidence-graph.mjs', 'text/javascript; charset=utf-8']],
+  ['/vendor/cytoscape.mjs', ['../node_modules/cytoscape/dist/cytoscape.esm.min.mjs', 'text/javascript; charset=utf-8']],
 ]);
 const backend = process.env.TRACEGRAPH_BACKEND;
 const port = Number(process.env.PORT ?? 4173);

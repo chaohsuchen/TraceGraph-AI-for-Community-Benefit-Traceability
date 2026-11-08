@@ -1,40 +1,29 @@
-"""Exercise the assembled backend with the actual workbook and pgvector."""
+"""Exercise the assembled evidence graph in a clean PostgreSQL catalog."""
 
 import json
 import os
 from unittest import TestCase, skipUnless
 
 from tests.db_support import isolated_database
-from tracegraph.runtime import WORKBOOK, apply_migrations, create_application
+from tracegraph.runtime import create_application, prepare_catalog
+from tracegraph.runtime_fixtures import ANNOUNCEMENT, AUDIT, BUDGET, FIXTURE_QUERY, ORIGINAL
 
 
 @skipUnless(os.getenv("TEST_DATABASE_URL"), "Set TEST_DATABASE_URL to a disposable PostgreSQL instance")
 class FullIntegrationTest(TestCase):
-    def test_workbook_to_lookup_discovery_refresh_and_history(self):
+    def test_empty_catalog_to_consolidated_evidence_graph(self):
         import psycopg
 
-        from tracegraph.evaluation import export_golden
-        from tracegraph.postgres import PostgresStore
-        from tracegraph.providers import LocalEmbedding
-        from tracegraph.workbook_import import import_workbook
+        from tracegraph.evidence_store import EvidenceStore
 
         with isolated_database(os.environ["TEST_DATABASE_URL"]) as dsn:
-            apply_migrations(dsn)
-            apply_migrations(dsn)
-            embed = LocalEmbedding()
+            self.assertEqual(prepare_catalog(dsn)["commitments"], 0)
+            self.assertEqual(prepare_catalog(dsn)["commitments"], 0)
             with psycopg.connect(dsn) as connection:
-                first = import_workbook(
-                    connection, WORKBOOK, embed, embedding_model=embed.profile, embedding_dimensions=embed.dimensions,
-                )
-                again = import_workbook(
-                    connection, WORKBOOK, embed, embedding_model=embed.profile, embedding_dimensions=embed.dimensions,
-                )
-            self.assertEqual(first["inserted_commitments"], 100)
-            self.assertEqual(first["inserted_historical_runs"], 6)
-            self.assertEqual(again["inserted_commitments"], 0)
-            self.assertEqual(again["inserted_historical_runs"], 0)
+                self.assertEqual(connection.execute("SELECT count(*) FROM workbook_annotation").fetchone()[0], 0)
 
             app = create_application(dsn, "fixture")
+
             def call(method, path, key=None, body=None):
                 return app.respond(
                     method, "/api/v1" + path, {"Idempotency-Key": key} if key else {},
@@ -46,51 +35,74 @@ class FullIntegrationTest(TestCase):
 
             def finish(accepted):
                 self.assertEqual(accepted[0], 202, accepted)
+                job_path = accepted[1]["Location"].removeprefix("/api/v1")
+                self.assertEqual(call("GET", job_path)[2]["status"], "QUEUED")
                 self.assertTrue(app.process_one_job())
-                return call("GET", accepted[1]["Location"].removeprefix("/api/v1"))[2]
+                status, _, job = call("GET", job_path)
+                self.assertEqual(status, 200)
+                self.assertEqual(job["status"], "COMPLETED", job)
+                return job["result"]
 
-            funding = "/commitments/TG-GOLD-H008"
-            energy = "/commitments/TG-GOLD-H010"
-            status, _, matched = lookup("What did Bally’s promise for the Bronx police substation and public safety?", "funding")
-            self.assertEqual((status, matched["commitment_id"]), (200, "TG-GOLD-H008"))
-            self.assertEqual(lookup("What was Bally’s 70% Bronx hiring promise?", "jobs")[2]["outcome"], "AMBIGUOUS")
+            def graph(path):
+                status, _, data = call("GET", path)
+                self.assertEqual(status, 200, data)
+                return data
 
-            original = call("GET", funding)[2]
-            renewable = call("GET", energy)[2]
-            self.assertIsNone(original["latest_completed_run"]["verification_date"])
-            common_sources = {edge["source"]["id"]: edge for edge in original["source_edges"]}
-            shared = [(edge, common_sources[edge["source"]["id"]]) for edge in renewable["source_edges"] if edge["source"]["id"] in common_sources]
-            self.assertTrue(shared)
-            self.assertTrue(any(a["evidence"][0]["status"] != b["evidence"][0]["status"] for a, b in shared))
-            org_id = original["organization"]["id"]
+            started = lookup(FIXTURE_QUERY, "new")
+            self.assertEqual(lookup(FIXTURE_QUERY, "new"), started)
+            created = finish(started)
+            cid = created["commitment_id"]
+            self.assertEqual(created, {"outcome": "RESOLVED", "commitment_id": cid, "run_id": None})
+            path = f"/commitments/{cid}"
+            first = graph(path)
+            self.assertEqual(set(first), {"commitment", "organization", "assessment", "findings", "relations"})
+            self.assertEqual(first["assessment"]["label"], "UNVERIFIED")
+            first_findings = {item["claim"]: item for item in first["findings"]}
+            self.assertEqual(set(first_findings), {ORIGINAL, BUDGET})
+            self.assertEqual(first["commitment"]["original_promise"]["source"],
+                             first_findings[ORIGINAL]["supports"][0]["source"])
+            self.assertEqual(lookup(FIXTURE_QUERY, "known")[2], {"outcome": "MATCH", "commitment_id": cid})
+
+            org_id = first["organization"]["id"]
             expanded = call("GET", f"/organizations/{org_id}/commitments")[2]
-            self.assertIn("TG-GOLD-H010", {item["id"] for item in expanded["commitments"]})
+            self.assertEqual([item["id"] for item in expanded["commitments"]], [cid])
 
-            research_query = "Did Example Transit Authority promise a 2028 overnight electric shuttle pilot?"
-            created = finish(lookup(research_query, "new"))
-            self.assertEqual(created["status"], "COMPLETED", created)
-            new_id = created["result"]["commitment_id"]
-            graph = call("GET", f"/commitments/{new_id}")[2]
-            self.assertEqual(graph["viewed_run_id"], created["result"]["run_id"])
-            self.assertTrue(graph["commitment"]["original_promise"]["source"]["url"])
-            self.assertEqual(lookup(research_query, "existing")[2]["commitment_id"], new_id)
-            rejected = finish(lookup("An unrelated pledge with no public record", "unknown"))
-            self.assertEqual(rejected["result"]["outcome"], "NO_PUBLIC_PROMISE")
+            refresh_path = path + "/research-runs"
+            accepted = call("POST", refresh_path, "refresh-1")
+            self.assertEqual(call("POST", refresh_path, "refresh-1"), accepted)
+            self.assertEqual(finish(accepted), created)
+            self.assertEqual(call("POST", refresh_path, "refresh-1"), accepted)
+            self.assertFalse(app.process_one_job())
 
-            accepted = call("POST", funding + "/research-runs", "refresh")
-            self.assertEqual(call("POST", funding + "/research-runs", "refresh"), accepted)
-            new_run = finish(accepted)
-            self.assertEqual(new_run["status"], "COMPLETED", new_run)
-            self.assertEqual(new_run["result"]["commitment_id"], "TG-GOLD-H008")
-            self.assertEqual(call("GET", funding)[2]["viewed_run_id"], new_run["result"]["run_id"])
-            previous = call("GET", funding + "?run_id=" + original["viewed_run_id"])[2]
-            self.assertEqual(previous["source_edges"], original["source_edges"])
+            updated = graph(path)
+            self.assertEqual(updated["assessment"]["label"], "PARTIALLY_CORROBORATED")
+            findings = {item["claim"]: item for item in updated["findings"]}
+            self.assertEqual(set(findings), {ORIGINAL, BUDGET, ANNOUNCEMENT, AUDIT})
+            self.assertEqual(findings[ORIGINAL], first_findings[ORIGINAL])
+            self.assertEqual(findings[BUDGET], first_findings[BUDGET])
+            self.assertEqual({item["source"]["title"] for item in findings[AUDIT]["supports"]},
+                             {"Independent audit", "Vehicle deployment register"})
+            conflicts = [item for item in updated["relations"] if item["kind"] == "CONFLICT"]
+            self.assertEqual(len(conflicts), 1)
+            conflict = conflicts[0]
+            self.assertEqual({conflict["from_id"], conflict["to_id"]},
+                             {findings[AUDIT]["id"], findings[ANNOUNCEMENT]["id"]})
+            self.assertEqual((conflict["status"], conflict["preferred_id"]),
+                             ("RESOLVED", findings[AUDIT]["id"]))
+            self.assertIn("vehicle register", conflict["reasoning"])
+            self.assertEqual(sum(item["kind"] == "PROGRESS" for item in updated["relations"]), 3)
 
-            failed = finish(call("POST", energy + "/research-runs", "fail-refresh"))
-            self.assertEqual(failed["status"], "FAILED")
-            self.assertEqual(call("GET", energy)[2]["viewed_run_id"], renewable["viewed_run_id"])
-
-            restarted = PostgresStore(dsn)
-            self.assertEqual(restarted.graph("TG-GOLD-H008")["viewed_run_id"], new_run["result"]["run_id"])
-            report = export_golden(restarted, WORKBOOK)
-            self.assertIn("TG-GOLD-A019", json.dumps(report))
+            repeated = call("POST", refresh_path, "refresh-2")
+            self.assertNotEqual(repeated[2]["job_id"], accepted[2]["job_id"])
+            self.assertEqual(finish(repeated), created)
+            final = graph(path)
+            self.assertEqual(final["findings"], updated["findings"])
+            self.assertEqual(final["relations"], updated["relations"])
+            self.assertEqual(final["assessment"]["label"], "PARTIALLY_CORROBORATED")
+            self.assertEqual(EvidenceStore(dsn).graph(cid), final)
+            self.assertEqual(finish(lookup("An unrelated pledge with no public record", "unknown"))["outcome"],
+                             "NO_PUBLIC_PROMISE")
+            with psycopg.connect(dsn) as connection:
+                self.assertEqual(connection.execute("SELECT count(*) FROM commitment").fetchone()[0], 1)
+                self.assertEqual(connection.execute("SELECT count(*) FROM research_run").fetchone()[0], 0)
+                self.assertEqual(connection.execute("SELECT count(*) FROM workbook_annotation").fetchone()[0], 0)

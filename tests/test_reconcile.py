@@ -164,6 +164,7 @@ class ReconciliationTests(unittest.TestCase):
             [_assignment("o1", "new:1", "Three routes were active on November 1."),
              _assignment("o2", "new:2", "No routes were active on November 1.")],
             [_link("CONFLICT", "new:1", "new:2", status="UNRESOLVED")],
+            {"label": "CONFLICTING", "verdict": "Service status conflicts.", "reasoning": "The two accounts disagree."},
         ))
         followup = Mock(return_value=[support])
         result = EvidenceReconciler(judge, followup=followup).reconcile(
@@ -173,6 +174,19 @@ class ReconciliationTests(unittest.TestCase):
         self.assertEqual(result["relations"][0]["status"], "UNRESOLVED")
         self.assertIsNone(result["relations"][0]["preferred_id"])
         judge.assert_called_once()
+
+    def test_count_conflict_can_coexist_with_supported_partial_delivery(self):
+        assessment = {"label": "PARTIALLY_CORROBORATED", "verdict": "Some service is confirmed.",
+                      "reasoning": "Both sources report at least two routes. The exact count is disputed."}
+        judge = Mock(return_value=_plan(
+            [_assignment("o1", "new:1", "Three routes operated."), _assignment("o2", "new:2", "Two routes operated.")],
+            [_link("CONFLICT", "new:1", "new:2", status="UNRESOLVED")], assessment,
+        ))
+        result = EvidenceReconciler(judge).reconcile(_CONTEXT, _snapshot(), _research(
+            _support("notice", "Three routes operated."), _support("audit", "Two routes operated."),
+        ))
+        self.assertEqual(result["label"], "PARTIALLY_CORROBORATED")
+        self.assertEqual(result["relations"][0]["status"], "UNRESOLVED")
 
     def test_cannot_resolve_conflict_without_targeted_evidence_for_preferred_side(self):
         first = _support("operator", "Three were running November 1.")

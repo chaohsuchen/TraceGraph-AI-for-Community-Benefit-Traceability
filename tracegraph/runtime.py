@@ -1,6 +1,7 @@
-"""Run the PostgreSQL-backed TraceGraph API and workbook commands."""
+"""Run TraceGraph and isolated evidence benchmarks."""
 
 import argparse
+from contextlib import contextmanager
 import hashlib
 import json
 import logging
@@ -9,6 +10,7 @@ import re
 from http.server import ThreadingHTTPServer
 from pathlib import Path
 from threading import Event, Thread
+from uuid import uuid4
 
 from tracegraph.agent import Agent, ResolutionUnavailable
 from tracegraph.api import Application, make_handler
@@ -18,6 +20,7 @@ from tracegraph.retrieval import Retrieval
 ROOT = Path(__file__).resolve().parents[1]
 WORKBOOK = ROOT / "Golden Dataset (5).xlsx"
 LOCAL_DSN = "postgresql://tracegraph:tracegraph@127.0.0.1:55432/tracegraph"
+LIVE_SCHEMA = "tracegraph_live"
 LOG = logging.getLogger(__name__)
 
 
@@ -50,6 +53,62 @@ def apply_migrations(dsn, directory=ROOT / "db"):
             )
 
 
+def scoped_database(dsn, schema, *, create=False):
+    import psycopg
+    from psycopg import sql
+    from psycopg.conninfo import conninfo_to_dict, make_conninfo
+
+    if not schema:
+        return dsn
+    if not re.fullmatch(r"[a-z_][a-z0-9_]{0,62}", schema):
+        raise ValueError("Use a lowercase PostgreSQL schema name.")
+    with psycopg.connect(dsn, autocommit=True) as connection:
+        if create:
+            connection.execute("CREATE EXTENSION IF NOT EXISTS vector WITH SCHEMA public")
+            connection.execute(sql.SQL("CREATE SCHEMA IF NOT EXISTS {}").format(sql.Identifier(schema)))
+        elif not connection.execute("SELECT to_regnamespace(%s)", (schema,)).fetchone()[0]:
+            raise ValueError("The application schema does not exist. Run prepare first.")
+    options = conninfo_to_dict(dsn).get("options", "")
+    return make_conninfo(dsn, options=f"{options} -c search_path={schema},public".strip())
+
+
+def _require_system_catalog(connection):
+    if connection.execute("SELECT EXISTS (SELECT 1 FROM workbook_annotation)").fetchone()[0]:
+        raise ValueError("This schema contains imported workbook data. Use a clean application schema.")
+
+
+def prepare_catalog(dsn):
+    import psycopg
+    from tracegraph.providers import LocalEmbedding
+
+    apply_migrations(dsn)
+    embed = LocalEmbedding()
+    with psycopg.connect(dsn) as connection:
+        _require_system_catalog(connection)
+        connection.execute("""
+            UPDATE tracegraph_catalog SET embedding_model = %s, embedding_dimensions = %s
+            WHERE singleton AND embedding_model IS NULL
+        """, (embed.profile, embed.dimensions))
+        count = connection.execute("SELECT count(*) FROM commitment").fetchone()[0]
+    check_embedding_profile(dsn, embed)
+    return {"commitments": count, "embedding_profile": embed.profile}
+
+
+@contextmanager
+def evaluation_catalog(dsn):
+    import psycopg
+    from psycopg import sql
+
+    schema = "tracegraph_eval_" + uuid4().hex
+    scoped = scoped_database(dsn, schema, create=True)
+    try:
+        prepare_catalog(scoped)
+        yield scoped
+    finally:
+        with psycopg.connect(dsn, autocommit=True) as connection:
+            connection.execute(sql.SQL("DROP SCHEMA {} CASCADE").format(sql.Identifier(schema)))
+
+
 def read_credential(path=None):
     if path is None:
         key = os.getenv("ANTHROPIC_API_KEY", "").strip()
@@ -70,6 +129,7 @@ def check_embedding_profile(dsn, embed):
     import psycopg
 
     with psycopg.connect(dsn) as connection:
+        _require_system_catalog(connection)
         row = connection.execute(
             "SELECT embedding_model, embedding_dimensions FROM tracegraph_catalog WHERE singleton"
         ).fetchone()
@@ -78,22 +138,51 @@ def check_embedding_profile(dsn, embed):
 
 
 def create_application(dsn, mode, *, key_file=None, model=None):
-    from tracegraph.postgres import PostgresStore
+    from tracegraph.evidence_store import EvidenceStore
     from tracegraph.providers import LocalEmbedding
+    from tracegraph.reconcile import EvidenceReconciler
 
     embed = LocalEmbedding()
     check_embedding_profile(dsn, embed)
     if mode == "fixture":
-        from tracegraph.runtime_fixtures import fixture_judge, fixture_research
+        from tracegraph.runtime_fixtures import fixture_judge, fixture_reconcile, fixture_research, fixture_review
 
         judge, researcher = fixture_judge, fixture_research
+        reconciler = EvidenceReconciler(fixture_reconcile, followup=fixture_review)
     else:
-        from tracegraph.providers import AnthropicClient, ClaudeIdentityJudge, ClaudeWebResearcher
+        from tracegraph.providers import AnthropicClient, ClaudeIdentityJudge, ClaudeReconciliationJudge, ClaudeWebResearcher
 
         client = AnthropicClient(api_key=read_credential(key_file), model=model)
         judge, researcher = ClaudeIdentityJudge(client), ClaudeWebResearcher(client)
-    store = PostgresStore(dsn)
-    return Application(store, Agent(Retrieval(store, embed, judge), store, researcher), (ResolutionUnavailable,))
+        reconciliation_judge = ClaudeReconciliationJudge(client)
+        reconciler = EvidenceReconciler(reconciliation_judge, followup=researcher.review_conflicts,
+                                       assessor=reconciliation_judge.assess)
+    store = EvidenceStore(dsn)
+    agent = Agent(Retrieval(store, embed, judge), store, researcher, reconciler=reconciler)
+    return Application(store, agent, (ResolutionUnavailable,))
+
+
+def evaluate(dsn, workbook, *, commitment_ids=None, reviewed_matches=None, mode="live", key_file=None, model=None):
+    from tracegraph.benchmark import EvaluationCaseFailed, evaluate_workbook
+
+    def research(query):
+        with evaluation_catalog(dsn) as scoped:
+            app = create_application(scoped, mode, key_file=key_file, model=model)
+            status, _, body = app.respond("POST", "/api/v1/lookup", {"Idempotency-Key": "evaluation"},
+                                          json.dumps({"query": query}).encode())
+            if status != 202 or not app.process_one_job():
+                raise EvaluationCaseFailed("The isolated evidence search did not start.")
+            job = app.store.get_job(body["job_id"])
+            if job["status"] != "COMPLETED":
+                raise EvaluationCaseFailed("Evidence search failed: " + job.get("error", {}).get("code", "UNKNOWN"))
+            result = job["result"]
+            if result["outcome"] == "NO_PUBLIC_PROMISE":
+                return {"draft": None}
+            if result["outcome"] != "RESOLVED":
+                raise EvaluationCaseFailed("Evidence search did not resolve the commitment.")
+            return app.store.graph(result["commitment_id"])
+
+    return evaluate_workbook(workbook, research, commitment_ids=commitment_ids, reviewed_matches=reviewed_matches)
 
 
 def serve(app, host, port, cors_origin):
@@ -124,13 +213,18 @@ def serve(app, host, port, cors_origin):
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--database-url", default=os.environ.get("TRACEGRAPH_DATABASE_URL", LOCAL_DSN))
+    parser.add_argument("--schema", default=os.environ.get("TRACEGRAPH_SCHEMA", LIVE_SCHEMA))
     actions = parser.add_subparsers(dest="action", required=True)
     actions.add_parser("migrate")
-    prepare = actions.add_parser("prepare")
-    prepare.add_argument("--workbook", type=Path, default=WORKBOOK)
-    export = actions.add_parser("export-golden")
-    export.add_argument("--workbook", type=Path, default=WORKBOOK)
-    export.add_argument("--output", type=Path, required=True)
+    actions.add_parser("prepare")
+    benchmark = actions.add_parser("evaluate")
+    benchmark.add_argument("--workbook", type=Path, default=WORKBOOK)
+    benchmark.add_argument("--output", type=Path, required=True)
+    benchmark.add_argument("--commitment-id", action="append")
+    benchmark.add_argument("--reviewed-matches", type=Path)
+    benchmark.add_argument("--mode", choices=("live", "fixture"), default="live")
+    benchmark.add_argument("--anthropic-key-file", type=Path)
+    benchmark.add_argument("--anthropic-model")
     server = actions.add_parser("serve")
     server.add_argument("--mode", choices=("live", "fixture"), default="live")
     server.add_argument("--host", default="127.0.0.1")
@@ -141,33 +235,25 @@ def main(argv=None):
     args = parser.parse_args(argv)
 
     try:
-        if args.action == "migrate":
-            apply_migrations(args.database_url)
-        elif args.action == "prepare":
-            import psycopg
-
-            from tracegraph.providers import LocalEmbedding
-            from tracegraph.workbook_import import import_workbook
-
-            apply_migrations(args.database_url)
-            embed = LocalEmbedding()
-            with psycopg.connect(args.database_url) as connection:
-                result = import_workbook(
-                    connection, args.workbook, embed,
-                    embedding_model=embed.profile, embedding_dimensions=embed.dimensions,
-                )
-            print(json.dumps(result, ensure_ascii=False))
-        elif args.action == "export-golden":
-            from tracegraph.evaluation import export_golden
-            from tracegraph.postgres import PostgresStore
-
+        if args.action in {"migrate", "prepare"}:
+            dsn = scoped_database(args.database_url, args.schema, create=True)
+            if args.action == "migrate":
+                apply_migrations(dsn)
+            else:
+                print(json.dumps(prepare_catalog(dsn), ensure_ascii=False))
+        elif args.action == "evaluate":
+            logging.basicConfig(level=logging.INFO)
             if args.output.resolve() == args.workbook.resolve():
                 raise ValueError("Choose an output path different from the workbook.")
-            payload = export_golden(PostgresStore(args.database_url), args.workbook)
+            reviews = json.loads(args.reviewed_matches.read_text(encoding="utf-8")) if args.reviewed_matches else None
+            payload = evaluate(args.database_url, args.workbook, commitment_ids=args.commitment_id,
+                               reviewed_matches=reviews, mode=args.mode, key_file=args.anthropic_key_file,
+                               model=args.anthropic_model)
             args.output.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         else:
+            dsn = scoped_database(args.database_url, args.schema)
             app = create_application(
-                args.database_url, args.mode, key_file=args.anthropic_key_file, model=args.anthropic_model,
+                dsn, args.mode, key_file=args.anthropic_key_file, model=args.anthropic_model,
             )
             serve(app, args.host, args.port, args.cors_origin)
     except ValueError as exc:

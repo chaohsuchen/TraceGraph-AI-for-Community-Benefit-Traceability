@@ -2,7 +2,7 @@ from pathlib import Path
 import unittest
 from unittest.mock import Mock
 
-from tracegraph.benchmark import _reference_cases, evaluate_workbook
+from tracegraph.benchmark import EvaluationCaseFailed, _reference_cases, evaluate_workbook
 
 
 WORKBOOK = Path(__file__).resolve().parents[1] / "Golden Dataset (5).xlsx"
@@ -88,3 +88,15 @@ class BenchmarkTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             evaluate_workbook(WORKBOOK, researcher, commitment_ids=["TG-GOLD-A019"])
         researcher.assert_not_called()
+
+    def test_provider_failure_is_reported_separately_from_recall(self):
+        researcher = Mock(side_effect=[
+            EvaluationCaseFailed("Research service unavailable"),
+            {"evidence": [self.reference_cases[H009][1][5]]},
+        ])
+        report = evaluate_workbook(WORKBOOK, researcher, commitment_ids=[H008, H009])
+        self.assertEqual(report["failed_cases"], 1)
+        self.assertEqual(report["cases"][0]["status"], "FAILED")
+        self.assertIsNone(report["cases"][0]["recall"])
+        self.assertEqual(report["counts"]["reference"], 4)
+        self.assertEqual(report["recall"], 0.25)

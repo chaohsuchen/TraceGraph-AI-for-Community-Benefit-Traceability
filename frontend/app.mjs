@@ -1,10 +1,12 @@
 import { createHttpApi, waitForJob } from './api.mjs';
-import { createDemoApi } from './demo.mjs';
+import { createDemoApi, DEMO_COMMITMENT_ID } from './demo.mjs';
+import { createEvidenceGraph, findingNodeId, relationEdgeId } from './evidence-graph.mjs';
 
 const $ = id => document.getElementById(id);
 const demo = new URLSearchParams(location.search);
 const state = { graph: null, organization: null, organizationExpanded: false, selected: null, request: null };
 let api;
+let evidenceView;
 
 function element(tag, content, className) {
   const node = document.createElement(tag);
@@ -51,15 +53,15 @@ async function action(task, message, retryAction) {
   }
 }
 
-async function loadGraph(id, runId, signal) {
-  const next = await api.graph(id, runId, signal);
+async function loadGraph(id, signal) {
+  const next = await api.graph(id, null, signal);
   signal?.throwIfAborted();
   if (state.graph?.organization?.id !== next.organization?.id) {
     state.organization = null;
     state.organizationExpanded = false;
   }
+  if (state.graph?.commitment.id !== id) state.selected = null;
   state.graph = next;
-  state.selected = null;
   render();
 }
 
@@ -75,8 +77,8 @@ async function followJob(id, signal, isRefresh, retry) {
     return;
   }
   if (job.result.outcome === 'RESOLVED') {
-    await loadGraph(job.result.commitment_id, null, signal);
-    notice(isRefresh ? 'Research updated. Earlier results are available in the run selector.' : '');
+    await loadGraph(job.result.commitment_id, signal);
+    notice(isRefresh ? 'Evidence graph updated.' : '');
   } else if (job.result.outcome === 'AMBIGUOUS') {
     notice(job.result.question, 'clarify');
     $('query').focus();
@@ -90,7 +92,7 @@ function lookup(query, key = crypto.randomUUID()) {
     const result = await api.lookup(query, key, signal);
     signal.throwIfAborted();
     if (result.outcome === 'MATCH') {
-      await loadGraph(result.commitment_id, null, signal);
+      await loadGraph(result.commitment_id, signal);
       notice();
     } else if (result.outcome === 'AMBIGUOUS') {
       notice(result.question, 'clarify');
@@ -108,14 +110,14 @@ function refresh(id, key = crypto.randomUUID()) {
     const accepted = await api.refresh(id, key, signal);
     signal.throwIfAborted();
     await followJob(accepted.job_id, signal, true, () => refresh(id));
-  }, 'Starting a new research run…', () => refresh(id, key));
+  }, 'Checking for new evidence…', () => refresh(id, key));
 }
 
-function openGraph(id, runId = null) {
+function openGraph(id) {
   return action(async signal => {
-    await loadGraph(id, runId, signal);
+    await loadGraph(id, signal);
     notice();
-  }, 'Loading the evidence graph…', () => openGraph(id, runId));
+  }, 'Loading the evidence graph…', () => openGraph(id));
 }
 
 function toggleOrganization() {
@@ -134,57 +136,69 @@ function toggleOrganization() {
   }, 'Loading commitments for this organization…', toggleOrganization);
 }
 
-function graphNode(kind, title, click) {
-  const node = click ? button('', click, 'node') : element('div', '', 'node');
-  node.append(element('span', kind, 'eyebrow'), element('strong', title));
-  return node;
-}
-
 function renderGraph(graph) {
-  const company = element('div', '', 'company-column');
-  const organization = graphNode(
-    'Company',
-    graph.organization?.name ?? graph.commitment.responsible_entity_raw ?? 'Organization unresolved',
-    graph.organization ? toggleOrganization : null,
-  );
-  if (graph.organization) {
-    organization.setAttribute('aria-expanded', String(state.organizationExpanded));
-    organization.append(element('span', state.organizationExpanded ? 'Collapse commitments' : 'Expand commitments', 'node-hint'));
+  const id = graph.commitment.id;
+  if (evidenceView?.id !== id) {
+    evidenceView?.renderer.destroy();
+    const canvas = element('div', '', 'evidence-canvas');
+    canvas.setAttribute('role', 'img');
+    canvas.setAttribute('aria-label', 'Interactive evidence graph. Evidence and relations can also be selected below.');
+    const controls = element('div', '', 'evidence-controls');
+    const count = element('span', '', 'evidence-count');
+    count.dataset.testid = 'evidence-count';
+    const zoomIn = button('+', () => evidenceView.renderer.zoom(1.25));
+    const zoomOut = button('−', () => evidenceView.renderer.zoom(0.8));
+    zoomIn.setAttribute('aria-label', 'Zoom in');
+    zoomOut.setAttribute('aria-label', 'Zoom out');
+    controls.append(count, zoomOut, zoomIn, button('Fit view', () => evidenceView.renderer.fit()));
+    const details = element('details', '', 'evidence-picker');
+    const items = element('ul', '', 'evidence-list');
+    details.append(element('summary', 'Evidence and relations'), items);
+    const legend = element('div', '', 'graph-legend');
+    legend.append(element('span', '— Related'), element('span', '→ Progress', 'legend-progress'),
+      element('span', '┄ Conflict', 'legend-conflict'));
+    $('graph').replaceChildren(controls, canvas, legend, details);
+    evidenceView = { id, renderer: createEvidenceGraph(canvas, selectGraphItem), items, count };
   }
-  company.append(organization);
-  if (state.organizationExpanded) {
-    const siblings = element('ul', '', 'commitment-list');
-    for (const item of state.organization.commitments) {
-      const row = element('li');
-      const link = button(item.title ?? item.description, () => openGraph(item.id));
-      if (item.id === graph.commitment.id) link.setAttribute('aria-current', 'true');
-      row.append(link);
-      siblings.append(row);
-    }
-    company.append(siblings);
-  }
-  const commitment = graphNode('Commitment', graph.commitment.title ?? graph.commitment.description, () => select(null));
-  commitment.classList.add('commitment-node');
-  commitment.append(element('span', graph.commitment.id, 'node-hint'));
-  commitment.setAttribute('aria-pressed', String(state.selected === null));
-  const sources = element('div', '', 'sources-column');
-  if (!graph.source_edges.length) {
-    sources.append(element('p', 'No sources for this research view.', 'source-empty'));
-  }
-  for (const edge of graph.source_edges) {
-    const row = element('div', '', 'source-edge');
-    const status = element('span', edge.evidence[0]?.status ?? 'Evidence', 'edge-status');
-    const source = graphNode('Source', edge.source.title, () => select(edge));
-    source.setAttribute('aria-pressed', String(state.selected?.source.id === edge.source.id));
-    row.append(status, source);
-    sources.append(row);
-  }
-  $('graph').replaceChildren(company, commitment, sources);
+
+  evidenceView.renderer.update(graph);
+  const findings = graph.findings.length;
+  const conflicts = graph.relations.filter(edge => edge.kind === 'CONFLICT');
+  evidenceView.count.textContent = findings + (findings === 1 ? ' finding' : ' findings') +
+    (conflicts.length ? ' · ' + conflicts.length + (conflicts.length === 1 ? ' conflict' : ' conflicts') : '');
+  const options = [
+    { id: 'commitment:' + id, kind: 'commitment', label: 'Current commitment' },
+    ...(graph.organization ? [{ id: 'organization:' + graph.organization.id, kind: 'organization',
+      label: graph.organization.name }] : []),
+    ...graph.findings.map(finding => ({
+      id: findingNodeId(finding.id), kind: 'finding', key: finding.id, label: finding.claim,
+    })),
+    ...graph.relations.map(edge => ({
+      id: relationEdgeId(edge), kind: 'relation', key: relationEdgeId(edge),
+      label: edge.kind === 'CONFLICT' ? 'Conflict · ' + (edge.status === 'RESOLVED' ? 'resolved' : 'unresolved') : 'Progress relation',
+    })),
+  ];
+  evidenceView.items.replaceChildren(...options.map(option => {
+    const row = element('li');
+    const control = button(option.label, () => selectGraphItem(option));
+    control.dataset.graphItem = option.id;
+    row.append(control);
+    return row;
+  }));
+  focusGraphItem();
 }
 
-function select(edge) {
-  state.selected = edge;
-  renderGraph(state.graph);
+function focusGraphItem() {
+  const id = state.selected?.id ?? 'commitment:' + state.graph.commitment.id;
+  evidenceView.renderer.focus(id);
+  for (const control of evidenceView.items.querySelectorAll('button')) {
+    control.setAttribute('aria-pressed', String(control.dataset.graphItem === id));
+  }
+}
+
+function selectGraphItem(item) {
+  state.selected = item;
+  focusGraphItem();
   renderInspector(state.graph);
 }
 
@@ -205,37 +219,65 @@ function sourceLink(source) {
 
 function renderInspector(graph) {
   const aside = $('inspector');
-  if (state.selected) {
-    const { source, evidence } = state.selected;
-    aside.replaceChildren(element('p', 'Source evidence', 'eyebrow'), element('h3', source.title));
-    if (source.publisher) aside.append(element('p', source.publisher, 'muted'));
-    if (source.published_on) aside.append(element('p', 'Published ' + source.published_on, 'muted'));
-    else if (source.citation) aside.append(element('p', source.citation, 'muted'));
-    const link = sourceLink(source);
-    if (link) aside.append(link);
-    for (const item of evidence) {
-      const block = element('section', '', 'evidence');
-      block.append(element('h4', item.status ?? 'Evidence'));
-      if (item.locator) block.append(element('p', item.locator, 'muted'));
-      if (item.excerpt) block.append(element('blockquote', item.excerpt));
-      if (item.summary) block.append(element('p', item.summary));
-      if (item.explanation) block.append(element('p', item.explanation));
-      if (item.retrieved_at) block.append(element('p', 'Retrieved ' + item.retrieved_at.slice(0, 10), 'muted'));
-      aside.append(block);
+  const selected = state.selected;
+  if (selected?.kind === 'organization' && graph.organization) {
+    aside.replaceChildren(element('p', 'Organization', 'eyebrow'), element('h3', graph.organization.name),
+      button(state.organizationExpanded ? 'Collapse commitments' : 'Expand commitments', toggleOrganization));
+    if (state.organizationExpanded) {
+      const siblings = element('ul', '', 'commitment-list');
+      for (const item of state.organization.commitments) {
+        const row = element('li');
+        const link = button(item.title ?? item.description, () => openGraph(item.id));
+        if (item.id === graph.commitment.id) link.setAttribute('aria-current', 'true');
+        row.append(link);
+        siblings.append(row);
+      }
+      aside.append(siblings);
     }
     return;
   }
-  const allRuns = [graph.latest_completed_run, ...graph.earlier_completed_runs].filter(Boolean);
-  const viewed = allRuns.find(run => run.id === graph.viewed_run_id);
-  aside.replaceChildren(element('p', 'Commitment detail', 'eyebrow'), element('h3', graph.commitment.description));
-  if (viewed) aside.append(element('h4', viewed.verdict), element('p', viewed.reasoning));
-  else aside.append(element('p', 'This commitment has no completed research run.'));
+  if (selected?.kind === 'finding') {
+    const finding = graph.findings.find(item => item.id === selected.key);
+    if (finding) {
+      aside.replaceChildren(element('p', 'Evidence finding', 'eyebrow'), element('h3', finding.claim));
+      for (const support of finding.supports) aside.append(citation(support));
+      return;
+    }
+  }
+  if (selected?.kind === 'relation') {
+    const relation = graph.relations.find(edge => relationEdgeId(edge) === selected.key);
+    if (relation) {
+      const conflict = relation.kind === 'CONFLICT';
+      aside.replaceChildren(element('p', conflict ? relation.status ?? 'Conflict' : 'Progress', 'eyebrow'),
+        element('h3', conflict ? 'Conflicting evidence' : 'Progress in the commitment'),
+        element('p', relation.reasoning));
+      for (const id of [relation.from_id, relation.to_id]) {
+        const finding = graph.findings.find(item => item.id === id);
+        if (!finding) continue;
+        const block = element('section', '', 'evidence');
+        block.append(element('h4', relation.preferred_id === id ? 'Preferred after review' : 'Finding'),
+          element('p', finding.claim), button('Inspect finding', () => selectGraphItem({
+            id: findingNodeId(id), kind: 'finding', key: id,
+          })));
+        for (const support of finding.supports) {
+          const link = sourceLink(support.source);
+          if (link) block.append(link);
+        }
+        aside.append(block);
+      }
+      return;
+    }
+  }
+  aside.replaceChildren(element('p', 'Commitment detail', 'eyebrow'), element('h3', graph.commitment.description),
+    element('p', graph.commitment.id, 'muted'));
+  if (graph.assessment) aside.append(element('h4', graph.assessment.verdict), element('p', graph.assessment.reasoning));
+  else aside.append(element('p', 'This commitment has no completed assessment.'));
   const facts = element('dl');
   for (const [label, value] of [
     ['Amount', graph.commitment.amount_value],
     ['Timing', graph.commitment.term_periodicity],
     ['Scope', graph.commitment.geographic_scope],
-    ['Beneficiary', graph.commitment.beneficiary.name ?? graph.commitment.beneficiary.category],
+    ['Beneficiary', graph.commitment.beneficiary?.name ?? graph.commitment.beneficiary?.category],
   ]) {
     if (value) facts.append(element('dt', label), element('dd', value));
   }
@@ -249,29 +291,34 @@ function renderInspector(graph) {
   }
 }
 
+function citation(support) {
+  const block = element('section', '', 'evidence');
+  block.append(element('h4', support.source.title));
+  if (support.status) block.append(element('p', support.status));
+  if (support.locator) block.append(element('p', support.locator, 'muted'));
+  if (support.excerpt) block.append(element('blockquote', support.excerpt));
+  if (support.summary && support.summary !== support.excerpt) block.append(element('p', support.summary));
+  if (support.explanation && ![support.excerpt, support.summary].includes(support.explanation)) {
+    block.append(element('p', support.explanation));
+  }
+  if (support.retrieved_at) block.append(element('p', 'Retrieved ' + support.retrieved_at.slice(0, 10), 'muted'));
+  const link = sourceLink(support.source);
+  if (link) block.append(link);
+  return block;
+}
+
 function render() {
   const graph = state.graph;
   $('workspace').hidden = !graph;
   $('empty').hidden = Boolean(graph);
   if (!graph) return;
-  const latest = graph.latest_completed_run;
-  const badge = element('span', latest?.verdict ?? 'No completed research', 'verdict');
+  const latest = graph.assessment;
+  const badge = element('span', latest?.verdict ?? 'No completed assessment', 'verdict');
   const date = element('span', latest?.verification_date ? 'Verified ' + latest.verification_date : 'Verification date unavailable', 'muted');
-  const runs = [latest, ...graph.earlier_completed_runs].filter(Boolean);
   $('verdict').replaceChildren(badge, date);
-  if (runs.length > 1) {
-    const label = element('label', 'View run ', 'run-picker');
-    const options = document.createElement('select');
-    runs.forEach((run, index) => {
-      const name = index === 0 ? 'Latest' : 'Earlier run ' + index;
-      const option = element('option', run.verification_date ? name + ' · ' + run.verification_date : name);
-      option.value = run.id;
-      options.append(option);
-    });
-    options.value = graph.viewed_run_id;
-    options.addEventListener('change', () => openGraph(graph.commitment.id, options.value));
-    label.append(options);
-    $('verdict').append(label);
+  if (latest?.label) {
+    const label = latest.label.toLowerCase().replaceAll('_', ' ');
+    $('verdict').prepend(element('span', label[0].toUpperCase() + label.slice(1), 'assessment-label'));
   }
   renderGraph(graph);
   renderInspector(graph);
@@ -281,15 +328,8 @@ async function init() {
   api = createHttpApi();
   if (demo.has('demo')) {
     $('environment').hidden = false;
-    try {
-      const response = await fetch('/contracts/examples.json');
-      if (!response.ok) throw new Error('Could not load demo fixtures.');
-      api = createDemoApi(await response.json(), { failRefresh: demo.has('fail-refresh') });
-      await openGraph('TG-GOLD-H008');
-    } catch (error) {
-      notice(error.message, 'error');
-      return;
-    }
+    api = createDemoApi({ failRefresh: demo.has('fail-refresh') });
+    await openGraph(DEMO_COMMITMENT_ID);
   }
   $('search-form').addEventListener('submit', event => {
     event.preventDefault();

@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "TraceGraph MVP API",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "description": "浏览器使用的共享 HTTP 契约。内部模块接口和行为见同目录 README.md。"
   },
   "servers": [{"url":"/api/v1"}],
@@ -33,19 +33,11 @@
     "/commitments/{commitment_id}": {
       "get": {
         "operationId": "getCommitmentGraph",
-        "summary": "读取承诺和某轮研究对应的来源图",
-        "parameters": [
-          {"name":"commitment_id","in":"path","required":true,"schema":{"$ref":"#/components/schemas/Id"}},
-          {
-            "name": "run_id",
-            "in": "query",
-            "schema": {"$ref":"#/components/schemas/Id"},
-            "description": "缺省时查看最新完成轮次。指定的轮次须属于该承诺。"
-          }
-        ],
+        "summary": "读取承诺的当前评估与累积证据图",
+        "parameters": [{"name":"commitment_id","in":"path","required":true,"schema":{"$ref":"#/components/schemas/Id"}}],
         "responses": {
           "200": {
-            "description": "承诺图和已完成研究历史。",
+            "description": "承诺、当前评估、去重证据及其关系。",
             "content": {"application/json":{"schema":{"$ref":"#/components/schemas/CommitmentGraph"}}}
           },
           "404": {"$ref":"#/components/responses/Error"},
@@ -71,7 +63,7 @@
     "/commitments/{commitment_id}/research-runs": {
       "post": {
         "operationId": "refreshCommitment",
-        "summary": "对现有承诺追加一轮研究",
+        "summary": "对现有承诺发起研究并更新累积证据",
         "parameters": [
           {"name":"commitment_id","in":"path","required":true,"schema":{"$ref":"#/components/schemas/Id"}},
           {"$ref":"#/components/parameters/IdempotencyKey"}
@@ -192,7 +184,7 @@
         "properties": {
           "outcome": {"const":"RESOLVED"},
           "commitment_id": {"$ref":"#/components/schemas/Id"},
-          "run_id": {"anyOf":[{"$ref":"#/components/schemas/Id"},{"type":"null"}]}
+          "run_id": {"type":"null","description":"保留兼容字段。累积证据图不生成研究轮次。"}
         }
       },
       "NoPublicPromise": {
@@ -204,21 +196,62 @@
       "CommitmentGraph": {
         "type": "object",
         "additionalProperties": false,
-        "required": [
-          "organization",
-          "commitment",
-          "latest_completed_run",
-          "earlier_completed_runs",
-          "viewed_run_id",
-          "source_edges"
-        ],
+        "required": ["organization","commitment","assessment","findings","relations"],
         "properties": {
           "organization": {"anyOf":[{"$ref":"#/components/schemas/Organization"},{"type":"null"}]},
           "commitment": {"$ref":"#/components/schemas/Commitment"},
-          "latest_completed_run": {"anyOf":[{"$ref":"#/components/schemas/Run"},{"type":"null"}]},
-          "earlier_completed_runs": {"type":"array","items":{"$ref":"#/components/schemas/Run"}},
-          "viewed_run_id": {"anyOf":[{"$ref":"#/components/schemas/Id"},{"type":"null"}]},
-          "source_edges": {"type":"array","items":{"$ref":"#/components/schemas/SourceEdge"}}
+          "assessment": {"anyOf":[{"$ref":"#/components/schemas/Assessment"},{"type":"null"}]},
+          "findings": {"type":"array","items":{"$ref":"#/components/schemas/Finding"}},
+          "relations": {"type":"array","items":{"$ref":"#/components/schemas/EvidenceRelation"}}
+        }
+      },
+      "Assessment": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["label","verdict","reasoning","verification_date"],
+        "properties": {
+          "label": {"enum":["CORROBORATED","PARTIALLY_CORROBORATED","UNVERIFIED","NOT_YET_DUE","CONFLICTING","REFUTED"]},
+          "verdict": {"type":"string","minLength":1},
+          "reasoning": {"type":"string","minLength":1},
+          "verification_date": {"type":"string","format":"date"}
+        }
+      },
+      "Finding": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id","claim","supports"],
+        "properties": {
+          "id": {"$ref":"#/components/schemas/Id"},
+          "claim": {"type":"string","minLength":1},
+          "supports": {"type":"array","items":{"$ref":"#/components/schemas/CitationSupport"}}
+        }
+      },
+      "CitationSupport": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id","source","status","explanation","excerpt","summary","locator","retrieved_at"],
+        "properties": {
+          "id": {"$ref":"#/components/schemas/Id"},
+          "source": {"$ref":"#/components/schemas/Source"},
+          "status": {"type":["string","null"]},
+          "explanation": {"type":["string","null"]},
+          "excerpt": {"type":["string","null"]},
+          "summary": {"type":["string","null"]},
+          "locator": {"type":["string","null"]},
+          "retrieved_at": {"type":"string","format":"date-time"}
+        }
+      },
+      "EvidenceRelation": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["kind","from_id","to_id","reasoning","status","preferred_id"],
+        "properties": {
+          "kind": {"enum":["PROGRESS","CONFLICT"]},
+          "from_id": {"$ref":"#/components/schemas/Id"},
+          "to_id": {"$ref":"#/components/schemas/Id"},
+          "reasoning": {"type":"string","minLength":1},
+          "status": {"enum":["UNRESOLVED","RESOLVED",null]},
+          "preferred_id": {"anyOf":[{"$ref":"#/components/schemas/Id"},{"type":"null"}]}
         }
       },
       "Organization": {
@@ -299,17 +332,6 @@
           "char_end": {"type":["integer","null"],"minimum":0}
         }
       },
-      "Run": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": ["id","verification_date","verdict","reasoning"],
-        "properties": {
-          "id": {"$ref":"#/components/schemas/Id"},
-          "verification_date": {"type":["string","null"],"format":"date"},
-          "verdict": {"type":"string","minLength":1},
-          "reasoning": {"type":"string","minLength":1}
-        }
-      },
       "Source": {
         "type": "object",
         "additionalProperties": false,
@@ -322,29 +344,6 @@
           "publisher": {"type":["string","null"]},
           "source_type": {"type":["string","null"]},
           "published_on": {"type":["string","null"],"format":"date"}
-        }
-      },
-      "SourceEdge": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": ["source","evidence"],
-        "properties": {
-          "source": {"$ref":"#/components/schemas/Source"},
-          "evidence": {"type":"array","items":{"$ref":"#/components/schemas/Evidence"},"minItems":1}
-        }
-      },
-      "Evidence": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": ["id","status","explanation","excerpt","summary","locator","retrieved_at"],
-        "properties": {
-          "id": {"$ref":"#/components/schemas/Id"},
-          "status": {"type":["string","null"]},
-          "explanation": {"type":["string","null"]},
-          "excerpt": {"type":["string","null"]},
-          "summary": {"type":["string","null"]},
-          "locator": {"type":["string","null"]},
-          "retrieved_at": {"type":["string","null"],"format":"date-time"}
         }
       },
       "ErrorResponse": {

@@ -11,7 +11,7 @@ import sys
 from threading import Thread
 
 from tests.db_support import isolated_database
-from tracegraph.runtime import LOCAL_DSN, ROOT, apply_migrations
+from tracegraph.runtime import LOCAL_DSN, ROOT, prepare_catalog
 
 
 @contextmanager
@@ -57,32 +57,20 @@ def local_server(command, env, readiness):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    live = parser.add_mutually_exclusive_group()
-    live.add_argument("--live", action="store_true", help="Use the imported workbook for live Claude E2E.")
-    live.add_argument("--public-live", action="store_true", help="Use a public-only query and an empty catalog for live Claude E2E.")
+    parser.add_argument("--public-live", action="store_true", help="Use a public-only query and an empty catalog for live Claude E2E.")
     parser.add_argument("--anthropic-key-file", type=Path)
     parser.add_argument("--anthropic-model")
     parser.add_argument("--database-url", default=os.getenv("TEST_DATABASE_URL", LOCAL_DSN))
     args = parser.parse_args()
-    mode = "public-live" if args.public_live else ("live" if args.live else "fixture")
+    mode = "public-live" if args.public_live else "fixture"
     backend_mode = "fixture" if mode == "fixture" else "live"
     url = re.compile(r"http://127\.0\.0\.1:[1-9]\d*")
     command = [sys.executable, "-B", "-m", "tracegraph.runtime"]
     with isolated_database(args.database_url) as dsn:
-        env = {**os.environ, "TRACEGRAPH_DATABASE_URL": dsn, "TRACEGRAPH_E2E_MODE": mode}
-        if args.public_live:
-            import psycopg
-            from tracegraph.providers import LocalEmbedding
-
-            apply_migrations(dsn)
-            embed = LocalEmbedding()
-            with psycopg.connect(dsn) as connection:
-                connection.execute(
-                    "UPDATE tracegraph_catalog SET embedding_model = %s, embedding_dimensions = %s WHERE singleton",
-                    (embed.profile, embed.dimensions),
-                )
-        else:
-            subprocess.run([*command, "prepare"], cwd=ROOT, env=env, check=True)
+        prepare_catalog(dsn)
+        env = {
+            **os.environ, "TRACEGRAPH_DATABASE_URL": dsn, "TRACEGRAPH_SCHEMA": "", "TRACEGRAPH_E2E_MODE": mode,
+        }
         backend = [*command, "serve", "--mode", backend_mode, "--port", "0"]
         if args.anthropic_key_file:
             backend.extend(("--anthropic-key-file", str(args.anthropic_key_file.resolve())))

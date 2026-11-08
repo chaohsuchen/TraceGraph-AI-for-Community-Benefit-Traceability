@@ -276,12 +276,6 @@ def _assessment(value, relations):
         raise ReconciliationError("Expected a valid aggregate assessment label")
     verdict, reasoning = _text(value.get("verdict")), _text(value.get("reasoning"))
     has_unresolved = any(_unresolved(edge) for edge in relations)
-    if has_unresolved and value["label"] != "CONFLICTING":
-        return {
-            "label": "CONFLICTING",
-            "verdict": "Conflicting evidence remains unresolved.",
-            "reasoning": " ".join(edge["reasoning"] for edge in relations if _unresolved(edge)),
-        }
     if not has_unresolved and value["label"] == "CONFLICTING":
         raise ReconciliationError("A conflicting assessment requires an unresolved conflict link")
     return {"label": value["label"], "verdict": verdict, "reasoning": reasoning}

@@ -6,5 +6,8 @@
   },
   "scripts": {
     "test": "node --test frontend/api.test.mjs"
+  },
+  "dependencies": {
+    "cytoscape": "3.34.4"
   }
 }
