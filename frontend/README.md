@@ -1,13 +1,16 @@
 # TraceGraph frontend
 
-Run the dependency-free development server with Node.js 20 or newer.
+Use Node.js 20 or newer.
 
+    npm ci
     node frontend/dev.mjs
 
-Open [the fixture demo](http://127.0.0.1:4173/?demo=1) to try search, clarification, organization expansion, evidence, refresh, and run history. [The failed refresh demo](http://127.0.0.1:4173/?demo=1&fail-refresh=1) preserves the previous graph after a simulated provider failure.
+Open [the synthetic demo](http://127.0.0.1:4173/?demo=1). It starts with a renewable electricity commitment for the fictional Harbor Works. The graph includes quarterly progress and an unresolved disagreement between two reports. Select a finding to inspect its source and passage. Expand Harbor Works to see its other commitments, or search for “Harbor Works local jobs” to try clarification.
 
-Set TRACEGRAPH_BACKEND to the Data/API server origin, then open [the live API view](http://127.0.0.1:4173/). The development server forwards API requests to that origin. The fixture demo remains available separately.
+Use **Research again** to simulate rechecking the same findings and updating the assessment. The evidence and links keep their IDs. [The failed refresh demo](http://127.0.0.1:4173/?demo=1&fail-refresh=1) keeps the prior assessment and graph when the simulated provider fails.
 
-Run the HTTP client and fixture flow tests.
+Set TRACEGRAPH_BACKEND to the Data/API server origin, then open [the live API view](http://127.0.0.1:4173/). The development server forwards API requests to that origin.
+
+Run the HTTP client and demo tests.
 
     node --test frontend/api.test.mjs
