@@ -18,7 +18,7 @@ _DISCOVERED_FIELDS = (
     "milestone",
     "original_promise",
 )
-_MAX_DISCOVERY_ATTEMPTS = 3
+_MAX_RESEARCH_WRITE_ATTEMPTS = 3
 
 
 class ResolutionUnavailable(RuntimeError):
@@ -32,10 +32,11 @@ class ResearchUnavailable(RuntimeError):
 class Agent:
     """Use injected retrieval, persistence, and evidence provider adapters."""
 
-    def __init__(self, retrieval, research_store, researcher):
+    def __init__(self, retrieval, research_store, researcher, reconciler=None):
         self._retrieval = retrieval
         self._store = research_store
         self._researcher = researcher
+        self._reconciler = reconciler
 
     def lookup(self, query):
         """Decide lookup routing. The API owns idempotency and task admission."""
@@ -115,7 +116,7 @@ class Agent:
 
         identity = {field: draft.get(field) for field in _DISCOVERED_FIELDS}
         new_commitment = None
-        for _ in range(_MAX_DISCOVERY_ATTEMPTS):
+        for _ in range(_MAX_RESEARCH_WRITE_ATTEMPTS):
             decision = self._resolve({"discovered": identity})
             match decision["outcome"]:
                 case "MATCH":
@@ -131,6 +132,13 @@ class Agent:
 
             if new_commitment is None:
                 result = _validate_result(response.get("result"))
+                if self._reconciler is not None:
+                    context = {
+                        "commitment": {**identity, "title": draft["title"]},
+                        "organization": None,
+                    }
+                    snapshot = {"revision": 0, "findings": [], "relations": [], "assessment": None}
+                    result = self._reconcile(context, snapshot, result, {})
                 try:
                     embedding = self._retrieval.embed_commitment(identity["description"])
                 except Exception as exc:
@@ -154,11 +162,37 @@ class Agent:
         raise ResearchUnavailable("The catalog changed during each discovery write attempt")
 
     def _refresh(self, claim, claimed_job):
-        context = self._store.load_commitment(claimed_job["commitment_id"])
+        commitment_id = claimed_job["commitment_id"]
+        context = self._store.load_commitment(commitment_id)
         if context is None:
             raise ValueError("The refresh target no longer exists")
         response = self._research(claimed_job, context)
-        self._store.finish_refresh(claim, _validate_result(response.get("result")))
+        result = _validate_result(response.get("result"))
+        if self._reconciler is None:
+            self._store.finish_refresh(claim, result)
+            return
+
+        followup_cache = {}
+        for _ in range(_MAX_RESEARCH_WRITE_ATTEMPTS):
+            snapshot = self._store.research_snapshot(commitment_id)
+            if snapshot is None:
+                raise ValueError("The refresh target no longer exists")
+            enriched = self._reconcile(context, snapshot, result, followup_cache)
+            saved = self._store.finish_refresh(claim, enriched)
+            if saved["outcome"] == "COMMITTED":
+                return
+            if saved["outcome"] != "RECHECK_REQUIRED":
+                raise ValueError("Unexpected refresh completion outcome")
+        raise ResearchUnavailable("The evidence graph changed during each refresh write attempt")
+
+    def _reconcile(self, context, snapshot, result, followup_cache):
+        try:
+            updates = self._reconciler.reconcile(
+                context, snapshot, result, followup_cache=followup_cache
+            )
+            return {**result, **updates, "expected_revision": snapshot["revision"]}
+        except Exception as exc:
+            raise ResearchUnavailable("Evidence reconciliation failed") from exc
 
 
 def _error(code, message, *, retryable=True):
