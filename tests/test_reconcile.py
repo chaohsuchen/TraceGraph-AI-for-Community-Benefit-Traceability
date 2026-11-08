@@ -211,6 +211,23 @@ class ReconciliationTests(unittest.TestCase):
 
 
 class ClaudeReconciliationTests(unittest.TestCase):
+    def test_claude_relation_schema_uses_strings_and_restores_nulls_for_storage(self):
+        client = Mock()
+        client.create.return_value = _json_message(_plan(relations=[
+            _link("PROGRESS", "earlier", "later", status="", preferred_id=""),
+            _link("CONFLICT", "earlier", "other", status="UNRESOLVED", preferred_id=""),
+            _link("CONFLICT", "later", "other", status="RESOLVED", preferred_id="later"),
+        ]))
+        plan = ClaudeReconciliationJudge(client)(_CONTEXT, _snapshot(), [], [])
+        schema = client.create.call_args.kwargs["output_config"]["format"]["schema"]
+        fields = schema["properties"]["relations"]["items"]["properties"]
+        self.assertEqual(fields["status"], {"type": "string", "enum": ["", "UNRESOLVED", "RESOLVED"]})
+        self.assertEqual(fields["preferred_id"], {"type": "string"})
+        self.assertEqual(
+            [(edge["status"], edge["preferred_id"]) for edge in plan["relations"]],
+            [(None, None), ("UNRESOLVED", None), ("RESOLVED", "later")],
+        )
+
     def test_assessor_receives_only_the_normalized_evidence_and_public_context(self):
         client = Mock()
         client.create.side_effect = [
