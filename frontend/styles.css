@@ -137,6 +137,9 @@ h2 { font-size: clamp(1.55rem, 3vw, 2.25rem); line-height: 1.15; }
 .inspector dl { display: grid; grid-template-columns: auto 1fr; gap: .24rem .65rem; margin-block: .7rem; font-size: .87rem; }
 .inspector dt { color: var(--muted); }
 .inspector dd { margin: 0; }
+.inspector-disclosure { margin-top: .75rem; border-top: 1px solid var(--line); padding-top: .65rem; }
+.inspector-disclosure summary { color: var(--green); cursor: pointer; font-weight: 650; }
+.inspector-disclosure p { margin-top: .5rem; white-space: pre-line; }
 .evidence { border-top: 1px solid var(--line); margin-top: .85rem; }
 .evidence a { display: inline-block; margin: .35rem .5rem 0 0; }
 blockquote { margin: .55rem 0; padding-left: .6rem; border-left: 2px solid #7d9986; }

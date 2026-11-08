@@ -268,27 +268,37 @@ function renderInspector(graph) {
       return;
     }
   }
-  aside.replaceChildren(element('p', 'Commitment detail', 'eyebrow'), element('h3', graph.commitment.description),
-    element('p', graph.commitment.id, 'muted'));
-  if (graph.assessment) aside.append(element('h4', graph.assessment.verdict), element('p', graph.assessment.reasoning));
-  else aside.append(element('p', 'This commitment has no completed assessment.'));
+  const { commitment, assessment } = graph;
+  const title = commitment.title || commitment.description;
+  aside.replaceChildren(element('p', 'Commitment detail', 'eyebrow'), element('h3', title));
   const facts = element('dl');
   for (const [label, value] of [
-    ['Amount', graph.commitment.amount_value],
-    ['Timing', graph.commitment.term_periodicity],
-    ['Scope', graph.commitment.geographic_scope],
-    ['Beneficiary', graph.commitment.beneficiary?.name ?? graph.commitment.beneficiary?.category],
+    ['Amount', commitment.amount_value],
+    ['Timing', commitment.term_periodicity],
+    ['Scope', commitment.geographic_scope],
+    ['Beneficiary', commitment.beneficiary?.name ?? commitment.beneficiary?.category],
   ]) {
     if (value) facts.append(element('dt', label), element('dd', value));
   }
   if (facts.children.length) aside.append(facts);
-  const original = graph.commitment.original_promise;
+  const original = commitment.original_promise;
   if (original) {
     aside.append(element('h4', 'Original promise'));
     if (original.locator) aside.append(element('p', original.locator, 'muted'));
     const link = sourceLink(original.source);
     if (link) aside.append(link);
   }
+  if (assessment) {
+    const details = element('details', '', 'inspector-disclosure');
+    details.append(element('summary', 'Assessment details'), element('p', assessment.verdict, 'verdict'),
+      element('p', assessment.reasoning));
+    aside.append(details);
+  }
+  const record = element('details', '', 'inspector-disclosure');
+  record.append(element('summary', 'Full commitment record'));
+  if (commitment.description !== title) record.append(element('p', commitment.description));
+  record.append(element('p', commitment.id, 'muted'));
+  aside.append(record);
 }
 
 function citation(support) {
@@ -313,13 +323,11 @@ function render() {
   $('empty').hidden = Boolean(graph);
   if (!graph) return;
   const latest = graph.assessment;
-  const badge = element('span', latest?.verdict ?? 'No completed assessment', 'verdict');
+  const label = latest?.label?.toLowerCase().replaceAll('_', ' ');
+  const status = label ? label[0].toUpperCase() + label.slice(1) :
+    latest ? 'Assessment available' : 'No completed assessment';
   const date = element('span', latest?.verification_date ? 'Verified ' + latest.verification_date : 'Verification date unavailable', 'muted');
-  $('verdict').replaceChildren(badge, date);
-  if (latest?.label) {
-    const label = latest.label.toLowerCase().replaceAll('_', ' ');
-    $('verdict').prepend(element('span', label[0].toUpperCase() + label.slice(1), 'assessment-label'));
-  }
+  $('verdict').replaceChildren(element('span', status, 'assessment-label'), date);
   renderGraph(graph);
   renderInspector(graph);
 }

@@ -65,6 +65,20 @@ test(publicLive ? 'browser with public-only Claude research and pgvector' : 'bro
     assert.ok(first.assessment?.label);
     await page.locator('#graph canvas').first().waitFor();
     const id = first.commitment.id;
+    const inspector = page.locator('#inspector');
+    await inspector.getByRole('heading', { name: first.commitment.title, exact: true }).waitFor();
+    const assessment = inspector.locator('details').filter({ hasText: 'Assessment details' });
+    const reasoning = assessment.locator('p').last();
+    assert.equal(await reasoning.isVisible(), false);
+    assert.ok(!(await page.locator('#verdict').textContent()).includes(first.assessment.verdict));
+    await assessment.locator('summary').click();
+    await reasoning.waitFor({ state: 'visible' });
+    assert.equal(await reasoning.textContent(), first.assessment.reasoning);
+    const recordToggle = inspector.getByText('Full commitment record', { exact: true });
+    const recordId = inspector.getByText(id, { exact: true });
+    assert.equal(await recordId.isVisible(), false);
+    await recordToggle.click();
+    await recordId.waitFor({ state: 'visible' });
 
     if (publicLive) {
       const updated = await refresh(page);
@@ -88,7 +102,6 @@ test(publicLive ? 'browser with public-only Claude research and pgvector' : 'bro
       await summary.waitFor();
       if (!await summary.evaluate(element => element.parentElement.open)) await summary.click();
       await page.getByRole('button', { name: 'Conflict · resolved', exact: true }).click();
-      const inspector = page.locator('#inspector');
       await inspector.getByRole('heading', { name: 'Conflicting evidence', exact: true }).waitFor();
       await inspector.getByText(/vehicle register corroborates the audit/i).waitFor();
       if (process.env.TRACEGRAPH_E2E_SCREENSHOT) {
