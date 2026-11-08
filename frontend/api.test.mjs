@@ -1,10 +1,7 @@
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
 import { test } from 'node:test';
 import { ApiError, createHttpApi, waitForJob } from './api.mjs';
-import { createDemoApi } from './demo.mjs';
-
-const fixtures = JSON.parse(await readFile(new URL('../contracts/examples.json', import.meta.url), 'utf8'));
+import { DEMO_COMMITMENT_ID, createDemoApi } from './demo.mjs';
 
 test('lookup and refresh preserve the caller’s idempotency keys and contract bodies', async () => {
   const calls = [];
@@ -13,12 +10,12 @@ test('lookup and refresh preserve the caller’s idempotency keys and contract b
     return Response.json({ job_id: 'fixture-job' }, { status: 202 });
   });
   await api.lookup('Known commitment', 'lookup-key');
-  await api.refresh('TG-GOLD-H008', 'refresh-key');
+  await api.refresh(DEMO_COMMITMENT_ID, 'refresh-key');
   assert.equal(calls[0].url, '/api/v1/lookup');
   assert.equal(calls[0].method, 'POST');
   assert.equal(calls[0].headers['Idempotency-Key'], 'lookup-key');
   assert.deepEqual(JSON.parse(calls[0].body), { query: 'Known commitment' });
-  assert.equal(calls[1].url, '/api/v1/commitments/TG-GOLD-H008/research-runs');
+  assert.equal(calls[1].url, '/api/v1/commitments/' + DEMO_COMMITMENT_ID + '/research-runs');
   assert.equal(calls[1].headers['Idempotency-Key'], 'refresh-key');
   assert.equal(calls[1].body, undefined);
 });
@@ -31,36 +28,71 @@ test('HTTP errors expose the backend’s message and retry flag', async () => {
     error instanceof ApiError && error.code === 'RESOLUTION_UNAVAILABLE' && error.retryable);
 });
 
-test('H008 and H010 share a source while showing commitment-specific evidence', () => {
-  const api = createDemoApi(fixtures);
-  const funding = api.graph('TG-GOLD-H008');
-  const renewable = api.graph('TG-GOLD-H010');
-  assert.equal(funding.source_edges[0].source.id, renewable.source_edges[0].source.id);
-  assert.notEqual(funding.source_edges[0].evidence[0].status, renewable.source_edges[0].evidence[0].status);
-  assert.equal(api.lookup('Bally’s Bronx hiring promise', 'key').outcome, 'AMBIGUOUS');
-  assert.equal(api.lookup('Bally’s Bronx construction jobs', 'key').commitment_id, 'TG-GOLD-H009');
+test('the standalone demo opens with cumulative findings, progress and conflict', () => {
+  const api = createDemoApi();
+  const graph = api.graph(DEMO_COMMITMENT_ID);
+  assert.equal(graph.assessment.label, 'CONFLICTING');
+  assert.equal(graph.findings.length, 5);
+  assert.deepEqual(graph.relations.map(edge => edge.kind), ['PROGRESS', 'CONFLICT']);
+  const findings = new Map(graph.findings.map(finding => [finding.id, finding]));
+  for (const { from_id, to_id } of graph.relations) {
+    assert.ok(findings.has(from_id));
+    assert.ok(findings.has(to_id));
+  }
+  const progress = graph.relations[0];
+  assert.equal(
+    findings.get(progress.from_id).supports[0].source.id,
+    findings.get(progress.to_id).supports[0].source.id,
+  );
+  assert.equal(graph.relations[1].status, 'UNRESOLVED');
+  assert.ok(graph.findings.every(finding => typeof finding.claim === 'string' && finding.supports[0].source.url === null));
 });
 
-test('refresh is idempotent and leaves earlier research accessible', async () => {
-  const api = createDemoApi(fixtures);
-  const id = 'TG-GOLD-H008';
-  const previous = api.graph(id).viewed_run_id;
-  const { job_id: jobId } = api.refresh(id, 'refresh-key');
-  assert.equal(api.refresh(id, 'refresh-key').job_id, jobId);
+test('the demo supports clarification and organization expansion', () => {
+  const api = createDemoApi();
+  assert.equal(api.lookup('Harbor Works renewable electricity', 'key1').commitment_id, DEMO_COMMITMENT_ID);
+  assert.equal(api.lookup('Harbor Works local hiring', 'key2').outcome, 'AMBIGUOUS');
+  assert.throws(() => api.lookup('Harbor Works construction jobs', 'key2'), { status: 409 });
+  const clarified = api.lookup('Harbor Works construction jobs', 'key3');
+  assert.equal(clarified.outcome, 'MATCH');
+  const organizationId = api.graph(clarified.commitment_id).organization.id;
+  const expansion = api.organization(organizationId);
+  assert.equal(expansion.organization.id, organizationId);
+  assert.ok(expansion.commitments.some(commitment => commitment.id === DEMO_COMMITMENT_ID));
+  assert.ok(expansion.commitments.some(commitment => commitment.id === clarified.commitment_id));
+});
+
+test('refresh reuses finding, support and source IDs and updates the assessment', async () => {
+  const api = createDemoApi();
+  const original = api.graph(DEMO_COMMITMENT_ID);
+  const { job_id: jobId } = api.refresh(DEMO_COMMITMENT_ID, 'refresh-key');
+  assert.equal(api.refresh(DEMO_COMMITMENT_ID, 'refresh-key').job_id, jobId);
   const seen = [];
   const job = await waitForJob(api, jobId, { interval: 1, onProgress: status => seen.push(status) });
   assert.deepEqual(seen, ['RUNNING', 'RUNNING']);
-  assert.equal(job.result.commitment_id, id);
-  assert.equal(api.graph(id).viewed_run_id, job.result.run_id);
-  assert.equal(api.graph(id, previous).viewed_run_id, previous);
-  assert.equal(api.graph(id, previous).latest_completed_run.id, job.result.run_id);
+  assert.equal(job.result.commitment_id, DEMO_COMMITMENT_ID);
+  const refreshed = api.graph(DEMO_COMMITMENT_ID);
+  assert.deepEqual(refreshed.findings, original.findings);
+  assert.deepEqual(refreshed.relations, original.relations);
+  assert.equal(refreshed.assessment.label, 'CONFLICTING');
+  assert.notEqual(refreshed.assessment.verification_date, original.assessment.verification_date);
+  assert.deepEqual(api.job(jobId), job);
 });
 
-test('failed refresh preserves the prior verdict', async () => {
-  const api = createDemoApi(fixtures, { failRefresh: true });
-  const id = 'TG-GOLD-H008';
-  const original = api.graph(id);
-  const { job_id: jobId } = api.refresh(id, 'refresh-key');
-  assert.equal((await waitForJob(api, jobId, { interval: 1 })).status, 'FAILED');
-  assert.equal(api.graph(id), original);
+test('failed refresh preserves the prior assessment and graph', async () => {
+  const api = createDemoApi({ failRefresh: true });
+  const original = api.graph(DEMO_COMMITMENT_ID);
+  const { job_id: jobId } = api.refresh(DEMO_COMMITMENT_ID, 'refresh-key');
+  const job = await waitForJob(api, jobId, { interval: 1 });
+  assert.equal(job.status, 'FAILED');
+  assert.equal(job.error.code, 'RESEARCH_UNAVAILABLE');
+  assert.deepEqual(api.graph(DEMO_COMMITMENT_ID), original);
+});
+
+test('an unknown demo lookup completes without creating a commitment', async () => {
+  const api = createDemoApi();
+  const { job_id: jobId } = api.lookup('A new ferry pier', 'unknown-key');
+  assert.equal(api.lookup('A new ferry pier', 'unknown-key').job_id, jobId);
+  const job = await waitForJob(api, jobId, { interval: 1 });
+  assert.equal(job.result.outcome, 'NO_PUBLIC_PROMISE');
 });
