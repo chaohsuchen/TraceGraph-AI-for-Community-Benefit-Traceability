@@ -543,10 +543,10 @@ Reuse the alias for observations supporting that claim. Include the material
 amount, scope, and dates. Keep distinct events distinct.
 
 Return new links or adjudications only. PROGRESS points from the earlier factual
-milestone to the later compatible milestone and has null status and preferred_id.
+milestone to the later compatible milestone. Use empty strings for its status and preferred_id.
 Different time periods, scope, or stages can be progress instead of disagreement.
 CONFLICT connects claims that genuinely disagree about the same fact, period,
-and scope. Start with UNRESOLVED, null preferred_id, and an empty support_ids list.
+and scope. Start with UNRESOLVED, an empty preferred_id string, and an empty support_ids list.
 You may return RESOLVED only for a pair in reviewed_pairs that already has an
 UNRESOLVED link and only when new observations from_review provide direct
 evidence favoring one side. Use that side as preferred_id and list the supporting
@@ -584,8 +584,8 @@ _RECONCILE_SCHEMA = _object({
     "relations": {"type": "array", "items": _object({
         "kind": {"type": "string", "enum": ["PROGRESS", "CONFLICT"]},
         "from_id": _TEXT, "to_id": _TEXT, "reasoning": _TEXT,
-        "status": {"type": ["string", "null"], "enum": [None, "UNRESOLVED", "RESOLVED"]},
-        "preferred_id": {"type": ["string", "null"]},
+        "status": {"type": "string", "enum": ["", "UNRESOLVED", "RESOLVED"]},
+        "preferred_id": _TEXT,
         "support_ids": {"type": "array", "items": _TEXT},
     })},
     "assessment": _ASSESSMENT_SCHEMA,
@@ -631,7 +631,12 @@ class ClaudeReconciliationJudge:
                 for pair in reviewed_pairs
             ],
         }
-        return _structured(self._client, _RECONCILE_SYSTEM, data, _RECONCILE_SCHEMA, 4096)
+        plan = _structured(self._client, _RECONCILE_SYSTEM, data, _RECONCILE_SCHEMA, 4096)
+        for relation in plan["relations"]:
+            for field in ("status", "preferred_id"):
+                if relation[field] == "":
+                    relation[field] = None
+        return plan
 
     def assess(self, context, snapshot):
         data = {"target": _refresh_target(context), **_evidence_graph(snapshot)}
