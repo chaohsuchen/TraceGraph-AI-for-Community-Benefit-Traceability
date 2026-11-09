@@ -1,15 +1,14 @@
-from pathlib import Path
-from unittest import TestCase, skipUnless
 from importlib.util import find_spec
+from unittest import TestCase, skipUnless
 
+from tracegraph.runtime import WORKBOOK
 from tracegraph.workbook_stage import extract_rows, issues
 
 
 @skipUnless(find_spec("openpyxl"), "Workbook staging requires openpyxl")
 class WorkbookStageTests(TestCase):
     def test_real_workbook_preserves_conflicts_and_links(self):
-        workbook = Path(__file__).resolve().parents[1] / "Golden Dataset (5).xlsx"
-        rows = list(extract_rows(workbook))
+        rows = list(extract_rows(WORKBOOK))
         report = issues(rows)
         self.assertEqual((report["gold_rows"], report["unique_gold_ids"]), (101, 100))
         self.assertEqual(report["research_without_gold_row"], ["TG-GOLD-A015"])

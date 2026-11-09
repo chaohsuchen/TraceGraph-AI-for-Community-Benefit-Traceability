@@ -1,11 +1,10 @@
-from pathlib import Path
 import unittest
 from unittest.mock import Mock
 
 from tracegraph.benchmark import EvaluationCaseFailed, _reference_cases, evaluate_workbook
+from tracegraph.runtime import WORKBOOK
 
 
-WORKBOOK = Path(__file__).resolve().parents[1] / "Golden Dataset (5).xlsx"
 H008 = "TG-GOLD-H008"
 H009 = "TG-GOLD-H009"
 H012 = "TG-GOLD-H012"

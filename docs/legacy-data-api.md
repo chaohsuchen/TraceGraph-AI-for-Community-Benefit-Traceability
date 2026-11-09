@@ -1,6 +1,6 @@
 # TraceGraph legacy Data/API fixtures
 
-These commands document the snapshot-based v1 regression tools. Use the [current runtime instructions](./README.md) to run the cumulative evidence graph with an empty system catalog.
+These commands document the snapshot-based v1 regression tools. Use the [current runtime instructions](../README.md) to run the cumulative evidence graph with an empty system catalog. Run the commands below from the repository root.
 
 The local fixture API requires Python 3.12 and uses the standard library. Start it from the repository root.
 
@@ -9,7 +9,7 @@ python -m tracegraph.api --port 8000 --cors-origin http://localhost:5173
 python -B -m unittest discover -s tests -p test_data_api.py -v
 ```
 
-Try a lookup query from the [legacy examples](./contracts/examples.json) against this API. H008 and H010 share a source and present different evidence. Refresh H008 to get a new run and open the original run by ID. H001 has no completed result. The fixture worker returns `NO_PUBLIC_PROMISE` for misses and uses synthetic verification data for refreshes. The fixture API resets on restart.
+Try a lookup query from the [legacy examples](../contracts/examples.json) against this API. H008 and H010 share a source and present different evidence. Refresh H008 to get a new run and open the original run by ID. H001 has no completed result. The fixture worker returns `NO_PUBLIC_PROMISE` for misses and uses synthetic verification data for refreshes. The fixture API resets on restart.
 
 For assembly with Retrieval and Agent, use `Application(store, agent, (ResolutionUnavailable,))`. The store supplies the snapshot methods and ResearchStore ports from the contract. `MemoryStore` can accept seeded graph and group fixtures and a mapping of commitment IDs to matching embeddings. The fixture server injects its own Agent. A real Agent, embedding model, and evidence provider are supplied during integration.
 
@@ -27,7 +27,7 @@ Configure the singleton `tracegraph_catalog` row with the selected embedding mod
 To inspect the workbook and generate data for staging, install `openpyxl` in the Python environment, then run:
 
 ```powershell
-python -m tracegraph.workbook_stage "Golden Dataset (5).xlsx" workbook-stage.csv
+python -m tracegraph.workbook_stage "evaluation/Golden Dataset (5).xlsx" workbook-stage.csv
 ```
 
 The command emits an issue report and an Excel row-preserving CSV. Use psql in the same directory as the CSV to stage it idempotently:

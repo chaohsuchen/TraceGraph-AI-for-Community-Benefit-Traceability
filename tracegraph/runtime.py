@@ -19,7 +19,7 @@ from tracegraph.retrieval import Retrieval
 
 
 ROOT = Path(__file__).resolve().parents[1]
-WORKBOOK = ROOT / "Golden Dataset (5).xlsx"
+WORKBOOK = ROOT / "evaluation" / "Golden Dataset (5).xlsx"
 LOCAL_DSN = "postgresql://tracegraph:tracegraph@127.0.0.1:55432/tracegraph"
 LIVE_SCHEMA = "tracegraph_live"
 LOG = logging.getLogger(__name__)

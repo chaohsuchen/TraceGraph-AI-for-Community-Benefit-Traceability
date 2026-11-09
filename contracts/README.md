@@ -7,7 +7,7 @@
 | Worktree | 负责内容 |
 |---|---|
 | feat/data-api | PostgreSQL 目录、研究任务、证据去重持久化、图谱投影 |
-| feat/retrieval | 混合检索、承诺身份判定、Claude 证据归并和综合评估 |
+| feat/retrieval | 混合检索、承诺身份判定、LLM 证据归并和综合评估 |
 | feat/research-agent | 首次研究、刷新编排、冲突补查、独立 Golden 评估 |
 | feat/frontend | 球形证据图、证据和关系详情、缩放和键盘选择 |
 

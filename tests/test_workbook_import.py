@@ -6,11 +6,11 @@ from unittest import TestCase, skipUnless
 from uuid import uuid4
 
 from tracegraph.evaluation import export_golden
+from tracegraph.runtime import WORKBOOK
 from tracegraph.workbook_import import import_workbook
 
 
 ROOT = Path(__file__).resolve().parents[1]
-WORKBOOK = ROOT / "Golden Dataset (5).xlsx"
 H008 = "TG-GOLD-H008"
 H010 = "TG-GOLD-H010"
 A019 = "TG-GOLD-A019"
