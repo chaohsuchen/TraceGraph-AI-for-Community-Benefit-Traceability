@@ -605,12 +605,21 @@ for one public commitment. Assign every observation exactly once. Reuse a findin
 ID for the same factual claim even if it is paraphrased. If the observation is
 a distinct factual claim, choose an alias from new_finding_ids and write a concise
 canonical claim. Use the same alias and exact claim for each observation
-supporting that claim. Include the material
-amount, scope, and dates. Keep distinct events distinct.
+supporting that claim. Include the material amount, scope, and dates. Keep
+distinct events distinct. If there are no observations, return no assignments.
 
-Return new links or adjudications only. PROGRESS points from the earlier factual
-milestone to the later compatible milestone. Use empty strings for its status and preferred_id.
-Different time periods, scope, or stages can be progress instead of disagreement.
+Return new links between supplied findings or new findings, or adjudications only.
+Propose a directed PROGRESS link from A to B only when the cited passages establish
+the order and show how B directly implements, revises, or follows up on the specific
+promise or milestone in A. Explain what changed and which evidence supports that
+direction. Distinguish the date of an event from a planned target date.
+An announced delay or revised target is a follow-up to the original promise
+when it explicitly updates the schedule for that promise. Keep its planned
+status clear even if the revised date has already passed.
+Shared scope, compatibility, or appearance in the same report is insufficient.
+Leave parallel developments unlinked to each other. Link each to a shared original
+promise when its own evidence supports that connection. If the connection or order
+is unclear, omit the link. Use empty strings for PROGRESS status and preferred_id.
 CONFLICT connects claims that genuinely disagree about the same fact, period,
 and scope. A later change to a plan can coexist with a correct account of the
 earlier plan. A test or flyby crew does not contradict a landing crew commitment.
