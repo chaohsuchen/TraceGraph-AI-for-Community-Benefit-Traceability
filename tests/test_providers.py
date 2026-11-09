@@ -89,6 +89,12 @@ def _draft(citation_id="c1"):
 
 
 class ProviderTests(unittest.TestCase):
+    def test_empty_candidate_list_needs_no_model_identity_check(self):
+        client = Mock()
+        identity = {"discovered": {"description": "Public pledge"}}
+        self.assertEqual(ClaudeIdentityJudge(client)(identity, []), {"outcome": "NO_MATCH"})
+        client.create.assert_not_called()
+
     def test_messages_headers_and_configured_model(self):
         opener = Mock(return_value=io.BytesIO(json.dumps(_json_message({})).encode()))
         with patch.dict(os.environ, {"ANTHROPIC_API_KEY": "placeholder-for-test",
@@ -160,7 +166,7 @@ class ProviderTests(unittest.TestCase):
         client = Mock()
         client.create.return_value = _message([{"type": "text", "text": "Refusal"}], "refusal")
         with self.assertRaises(ProviderError):
-            ClaudeIdentityJudge(client)({"query": "run buses"}, [])
+            ClaudeIdentityJudge(client)({"query": "run buses"}, [{"commitment_id": "candidate"}])
 
     def test_discovery_persists_only_verified_source_urls_and_literal_excerpts(self):
         client = Mock()

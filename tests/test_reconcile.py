@@ -346,6 +346,11 @@ class ClaudeReconciliationTests(unittest.TestCase):
         planner, assessor = [json.loads(call.kwargs["messages"][0]["content"])
                              for call in client.create.call_args_list]
         self.assertEqual(len(planner["observations"]), 1)
+        self.assertEqual(planner["new_finding_ids"], ["new:1"])
+        schema = client.create.call_args_list[0].kwargs["output_config"]["format"]["schema"]
+        assignment = schema["properties"]["assignments"]["items"]["properties"]
+        self.assertEqual(assignment["observation_id"]["enum"], ["o1"])
+        self.assertEqual(assignment["finding_id"]["enum"], ["new:1"])
         self.assertEqual(assessor["findings"][0]["claim"], "Three routes opened.")
         self.assertEqual(len(assessor["findings"][0]["supports"]), 1)
         for body in (planner, assessor):

@@ -6,3 +6,4 @@ node_modules/
 .env.*
 claude_api.txt
 anthropic_api_key.txt
+openai-api-key.txt

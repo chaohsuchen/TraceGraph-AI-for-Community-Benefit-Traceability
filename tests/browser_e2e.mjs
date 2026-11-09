@@ -45,7 +45,7 @@ function refresh(page) {
   return clickForGraph(page, 'Research again');
 }
 
-test(publicLive ? 'browser with public-only Claude research and pgvector' : 'browser with PostgreSQL fixture evidence', {
+test(publicLive ? 'browser with public-only live research and pgvector' : 'browser with PostgreSQL fixture evidence', {
   timeout: publicLive ? 510_000 : 45_000,
 }, async () => {
   assert.ok(base, 'Run the test with python -m tests.e2e_runner');

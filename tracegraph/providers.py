@@ -286,6 +286,8 @@ class ClaudeIdentityJudge:
         self._client = client
 
     def __call__(self, identity, candidates):
+        if not candidates:
+            return {"outcome": "NO_MATCH"}
         return _structured(
             self._client, _IDENTITY_SYSTEM,
             {"identity": identity, "candidates": candidates},
@@ -601,8 +603,9 @@ _RECONCILE_SYSTEM = """
 Reconcile fresh, source-backed observations with the canonical evidence findings
 for one public commitment. Assign every observation exactly once. Reuse a finding
 ID for the same factual claim even if it is paraphrased. If the observation is
-a distinct factual claim, use a new:N alias and a concise canonical claim.
-Reuse the alias for observations supporting that claim. Include the material
+a distinct factual claim, choose an alias from new_finding_ids and write a concise
+canonical claim. Use the same alias and exact claim for each observation
+supporting that claim. Include the material
 amount, scope, and dates. Keep distinct events distinct.
 
 Return new links or adjudications only. PROGRESS points from the earlier factual
@@ -755,9 +758,13 @@ class ClaudeReconciliationJudge:
         self._client = client
 
     def __call__(self, context, snapshot, observations, reviewed_pairs):
+        observation_ids = [observation["id"] for observation in observations]
+        new_finding_ids = [f"new:{number}" for number in range(1, len(observation_ids) + 1)]
+        finding_ids = [finding["id"] for finding in snapshot["findings"]] + new_finding_ids
         data = {
             "target": _assessment_target(context),
             **_evidence_graph(snapshot),
+            "new_finding_ids": new_finding_ids,
             "observations": [
                 {"id": observation["id"], "from_review": observation["from_review"],
                  "support": _public_support(observation["support"])}
@@ -768,7 +775,18 @@ class ClaudeReconciliationJudge:
                 for pair in reviewed_pairs
             ],
         }
-        plan = _structured(self._client, _RECONCILE_SYSTEM, data, _RECONCILE_SCHEMA, 4096)
+        schema = _RECONCILE_SCHEMA
+        if observation_ids and len(finding_ids) <= 250:
+            assignment = _object({
+                "observation_id": {"type": "string", "enum": observation_ids},
+                "finding_id": {"type": "string", "enum": finding_ids},
+                "claim": _TEXT,
+            })
+            schema = _object({
+                **schema["properties"],
+                "assignments": {"type": "array", "items": assignment},
+            })
+        plan = _structured(self._client, _RECONCILE_SYSTEM, data, schema, 4096)
         for relation in plan["relations"]:
             for field in ("status", "preferred_id"):
                 if relation[field] == "":

@@ -17,6 +17,10 @@ Start the API with ANTHROPIC_API_KEY or a local credential file.
 
     python -m tracegraph.runtime serve --anthropic-key-file ./claude_api.txt
 
+For OpenAI, pass the local key file. If you already set `OPENAI_API_KEY`, use `serve --provider openai`. The OpenAI path uses `gpt-5.4-mini` by default and checks proposed excerpts against the cited public documents.
+
+    python -m tracegraph.runtime serve --openai-key-file ./openai-api-key.txt
+
 Run the frontend in another PowerShell window.
 
     $env:TRACEGRAPH_BACKEND = 'http://127.0.0.1:8000'
@@ -30,7 +34,7 @@ Live discovery uses the Prompt-only policy. Claude breaks the original promise i
 
 A refresh reuses the commitment ID. The agent merges repeated factual findings, retains distinct source excerpts, adds directed progress edges and keeps both sides of a conflict. A newly identified conflict may trigger one targeted follow-up search. Adjudication requires cited evidence and keeps a reason for preferring one side. The current assessment uses all consolidated findings. Refresh jobs are tracked for retries and failures. A completed refresh does not create a new research snapshot in the v2 application schema.
 
-Live model calls send the user query or public commitment context and, for reconciliation, the system's cited findings to Anthropic. The app never reads Golden evidence or verdicts.
+Live model calls send the user query or public commitment context and, for reconciliation, the system's cited findings to the selected model provider. The app never reads Golden evidence or verdicts.
 
 ## Small evaluation
 

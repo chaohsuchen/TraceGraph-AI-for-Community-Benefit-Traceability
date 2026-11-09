@@ -110,19 +110,27 @@ def evaluation_catalog(dsn):
             connection.execute(sql.SQL("DROP SCHEMA {} CASCADE").format(sql.Identifier(schema)))
 
 
-def read_credential(path=None):
+def read_credential(path=None, *, provider="anthropic"):
+    if provider == "openai":
+        name, environment, flag = "OpenAI", "OPENAI_API_KEY", "--openai-key-file"
+        prefix = r"sk-(?!ant-)"
+    elif provider == "anthropic":
+        name, environment, flag = "Anthropic", "ANTHROPIC_API_KEY", "--anthropic-key-file"
+        prefix = r"sk-ant-"
+    else:
+        raise ValueError(f"Unknown live provider: {provider}.")
     if path is None:
-        key = os.getenv("ANTHROPIC_API_KEY", "").strip()
+        key = os.getenv(environment, "").strip()
         if not key:
-            raise ValueError("Set ANTHROPIC_API_KEY or pass --anthropic-key-file.")
+            raise ValueError(f"Set {environment} or pass {flag}.")
         return key
     try:
         raw = Path(path).read_text(encoding="utf-8-sig")
     except (OSError, UnicodeError):
-        raise ValueError("Could not read the Anthropic credential file.") from None
-    keys = set(re.findall(r"(?<![\w-])sk-ant-[A-Za-z0-9_-]{24,}(?![\w-])", raw))
+        raise ValueError(f"Could not read the {name} credential file.") from None
+    keys = set(re.findall(rf"(?<![\w-]){prefix}[A-Za-z0-9_-]{{24,}}(?![\w-])", raw))
     if len(keys) != 1:
-        raise ValueError("The Anthropic credential file must contain exactly one key.")
+        raise ValueError(f"The {name} credential file must contain exactly one key.")
     return keys.pop()
 
 
@@ -140,7 +148,7 @@ def check_embedding_profile(dsn, embed):
 
 def create_application(
     dsn, mode, *, key_file=None, model=None, search_strategy=prompt_discovery_search, emit=None,
-    deadline=None, enable_conflict_review=True, allow_web_search=True,
+    deadline=None, enable_conflict_review=True, allow_web_search=True, provider="anthropic",
 ):
     from tracegraph.evidence_store import EvidenceStore
     from tracegraph.providers import LocalEmbedding
@@ -156,12 +164,18 @@ def create_application(
     else:
         from tracegraph.providers import AnthropicClient, ClaudeIdentityJudge, ClaudeReconciliationJudge, ClaudeWebResearcher
 
-        client = AnthropicClient(
-            api_key=read_credential(key_file), model=model, emit=emit, deadline=deadline,
+        if provider == "openai":
+            from tracegraph.openai_provider import OpenAIClient, OpenAIWebResearcher
+
+            client_type, researcher_type = OpenAIClient, OpenAIWebResearcher
+        else:
+            client_type, researcher_type = AnthropicClient, ClaudeWebResearcher
+        client = client_type(
+            api_key=read_credential(key_file, provider=provider), model=model, emit=emit, deadline=deadline,
             allow_web_search=allow_web_search,
         )
         judge = ClaudeIdentityJudge(client)
-        researcher = ClaudeWebResearcher(client, search_strategy=search_strategy, emit=emit)
+        researcher = researcher_type(client, search_strategy=search_strategy, emit=emit)
         reconciliation_judge = ClaudeReconciliationJudge(client)
         reconciler = EvidenceReconciler(
             reconciliation_judge, assessor=reconciliation_judge.assess,
@@ -174,12 +188,13 @@ def create_application(
     return Application(store, agent, (ResolutionUnavailable,))
 
 
-def evaluate(dsn, workbook, *, commitment_ids=None, reviewed_matches=None, mode="live", key_file=None, model=None):
+def evaluate(dsn, workbook, *, commitment_ids=None, reviewed_matches=None, mode="live",
+             key_file=None, model=None, provider="anthropic"):
     from tracegraph.benchmark import EvaluationCaseFailed, evaluate_workbook
 
     def research(query):
         with evaluation_catalog(dsn) as scoped:
-            app = create_application(scoped, mode, key_file=key_file, model=model)
+            app = create_application(scoped, mode, key_file=key_file, model=model, provider=provider)
             status, _, body = app.respond("POST", "/api/v1/lookup", {"Idempotency-Key": "evaluation"},
                                           json.dumps({"query": query}).encode())
             if status != 202 or not app.process_one_job():
@@ -222,6 +237,24 @@ def serve(app, host, port, cors_origin):
             worker.join(timeout=3)
 
 
+def _add_provider_arguments(parser):
+    parser.add_argument("--provider", choices=("anthropic", "openai"))
+    parser.add_argument("--anthropic-key-file", type=Path)
+    parser.add_argument("--anthropic-model")
+    parser.add_argument("--openai-key-file", type=Path)
+    parser.add_argument("--openai-model")
+
+
+def _provider_configuration(args):
+    openai = (args.openai_key_file, args.openai_model)
+    anthropic = (args.anthropic_key_file, args.anthropic_model)
+    provider = args.provider or ("openai" if any(openai) else "anthropic")
+    selected, other = (openai, anthropic) if provider == "openai" else (anthropic, openai)
+    if any(other):
+        raise ValueError("Use options for one live provider at a time.")
+    return {"provider": provider, "key_file": selected[0], "model": selected[1]}
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--database-url", default=os.environ.get("TRACEGRAPH_DATABASE_URL", LOCAL_DSN))
@@ -235,15 +268,13 @@ def main(argv=None):
     benchmark.add_argument("--commitment-id", action="append")
     benchmark.add_argument("--reviewed-matches", type=Path)
     benchmark.add_argument("--mode", choices=("live", "fixture"), default="live")
-    benchmark.add_argument("--anthropic-key-file", type=Path)
-    benchmark.add_argument("--anthropic-model")
+    _add_provider_arguments(benchmark)
     server = actions.add_parser("serve")
     server.add_argument("--mode", choices=("live", "fixture"), default="live")
     server.add_argument("--host", default="127.0.0.1")
     server.add_argument("--port", type=int, default=8000)
     server.add_argument("--cors-origin")
-    server.add_argument("--anthropic-key-file", type=Path)
-    server.add_argument("--anthropic-model")
+    _add_provider_arguments(server)
     args = parser.parse_args(argv)
 
     try:
@@ -259,15 +290,12 @@ def main(argv=None):
                 raise ValueError("Choose an output path different from the workbook.")
             reviews = json.loads(args.reviewed_matches.read_text(encoding="utf-8")) if args.reviewed_matches else None
             payload = evaluate(args.database_url, args.workbook, commitment_ids=args.commitment_id,
-                               reviewed_matches=reviews, mode=args.mode, key_file=args.anthropic_key_file,
-                               model=args.anthropic_model)
+                               reviewed_matches=reviews, mode=args.mode, **_provider_configuration(args))
             args.output.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         else:
             logging.basicConfig(level=logging.INFO)
             dsn = scoped_database(args.database_url, args.schema)
-            app = create_application(
-                dsn, args.mode, key_file=args.anthropic_key_file, model=args.anthropic_model,
-            )
+            app = create_application(dsn, args.mode, **_provider_configuration(args))
             serve(app, args.host, args.port, args.cors_origin)
     except ValueError as exc:
         parser.exit(2, f"{exc}\n")

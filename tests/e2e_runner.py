@@ -57,9 +57,11 @@ def local_server(command, env, readiness):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--public-live", action="store_true", help="Use a public-only query and an empty catalog for live Claude E2E.")
+    parser.add_argument("--public-live", action="store_true", help="Use a public-only query and an empty catalog for live E2E.")
     parser.add_argument("--anthropic-key-file", type=Path)
     parser.add_argument("--anthropic-model")
+    parser.add_argument("--openai-key-file", type=Path)
+    parser.add_argument("--openai-model")
     parser.add_argument("--database-url", default=os.getenv("TEST_DATABASE_URL", LOCAL_DSN))
     args = parser.parse_args()
     mode = "public-live" if args.public_live else "fixture"
@@ -76,7 +78,12 @@ def main():
             backend.extend(("--anthropic-key-file", str(args.anthropic_key_file.resolve())))
         if args.anthropic_model:
             backend.extend(("--anthropic-model", args.anthropic_model))
-        front_env = {key: value for key, value in env.items() if key != "ANTHROPIC_API_KEY"}
+        if args.openai_key_file:
+            backend.extend(("--openai-key-file", str(args.openai_key_file.resolve())))
+        if args.openai_model:
+            backend.extend(("--openai-model", args.openai_model))
+        front_env = {key: value for key, value in env.items()
+                     if key not in {"ANTHROPIC_API_KEY", "OPENAI_API_KEY"}}
         with local_server(backend, env, url) as api:
             with local_server(["node", "frontend/dev.mjs"], {**front_env, "TRACEGRAPH_BACKEND": api, "PORT": "0"}, url) as front:
                 subprocess.run(
