@@ -73,6 +73,17 @@ def _cited_support(finding, quote):
     return None
 
 
+def _source_excerpt_keys(finding):
+    keys = set()
+    for support in finding["supports"]:
+        source = support["source"]
+        reference = source.get("url") or source.get("citation")
+        excerpt = _quote_key(support.get("excerpt"))
+        if reference and excerpt:
+            keys.add((reference, excerpt))
+    return keys
+
+
 def _assert_acyclic(findings, relations):
     edges = defaultdict(list)
     indegree = dict.fromkeys(findings, 0)
@@ -108,10 +119,6 @@ class EvidenceReconciler:
         revision = snapshot["revision"]
         if type(revision) is not int or revision < 0:
             raise ReconciliationError("Expected a nonnegative evidence revision")
-        existing_conflicts = {
-            _relation_key(edge["kind"], edge["from_id"], edge["to_id"])
-            for edge in snapshot["relations"] if edge["kind"] == "CONFLICT"
-        }
         state = dict(snapshot)
         self._check_conflicts(context, state, cache)
         state = self._apply(context, state, result["evidence"], [], cache)
@@ -119,21 +126,21 @@ class EvidenceReconciler:
         pending = [
             edge for edge in state["relations"] if _unresolved(edge)
         ]
-        if self._followup is not None and "reviewed_pairs" not in cache:
-            pairs = self._pairs(state, pending, existing_conflicts)
-            if pairs:
-                cache["reviewed_pairs"] = pairs
-                cache["review_supports"] = self._followup(context, deepcopy(pairs))
-                if not isinstance(cache["review_supports"], list):
-                    raise ReconciliationError("Conflict review did not return an evidence list")
-        if cache.get("review_supports"):
-            pending_keys = {_relation_key("CONFLICT", edge["from_id"], edge["to_id"]) for edge in pending}
+        pairs = self._pairs(state, pending, snapshot) if self._followup is not None else []
+        if pairs and "reviewed_pairs" not in cache:
+            cache["reviewed_pairs"] = pairs
+            cache["review_supports"] = self._followup(context, deepcopy(pairs))
+            if not isinstance(cache["review_supports"], list):
+                raise ReconciliationError("Conflict review did not return an evidence list")
+        if pairs and cache.get("review_supports"):
+            eligible = {_relation_key("CONFLICT", pair["from_id"], pair["to_id"]) for pair in pairs}
             reviewed = [
                 pair for pair in cache["reviewed_pairs"]
-                if _relation_key("CONFLICT", pair["from_id"], pair["to_id"]) in pending_keys
+                if _relation_key("CONFLICT", pair["from_id"], pair["to_id"]) in eligible
             ]
-            state = self._apply(context, state, cache["review_supports"], reviewed, cache, from_review=True)
-            self._check_conflicts(context, state, cache)
+            if reviewed:
+                state = self._apply(context, state, cache["review_supports"], reviewed, cache, from_review=True)
+                self._check_conflicts(context, state, cache)
 
         assessment = self._assessor(context, deepcopy(state)) if self._assessor else state["assessment"]
         assessment = self._check_assessment(context, state, assessment)
@@ -193,22 +200,36 @@ class EvidenceReconciler:
         assessment = _assessment(value, state["relations"], checked_conflicts=self._verify_conflicts is not None)
         if assessment["label"] != "REFUTED":
             return assessment
-        proof = value.get("refutation")
-        if not isinstance(proof, dict):
-            proof = {}
-        basis, quote = proof.get("basis"), proof.get("quote")
-        finding = next((item for item in state["findings"] if item["id"] == proof.get("finding_id")), None)
-        support = _cited_support(finding, quote) if finding else None
-        if (basis not in REFUTATION_BASES or support is None or self._verify_refutation is None
-                or self._verify_refutation(context, support, basis, quote) is not True):
-            return _unverified("The available evidence does not directly establish withdrawal or disproof of this commitment.")
-        source = support["source"]
-        reference = source.get("url") or source["citation"]
-        assessment["reasoning"] += f'\n\nDirect evidence from {reference}. “{quote.strip()}”'
-        return assessment
+        proofs = value.get("refutation")
+        if isinstance(proofs, dict):
+            proofs = [proofs]
+        if isinstance(proofs, list) and self._verify_refutation is not None:
+            findings = {finding["id"]: finding for finding in state["findings"]}
+            for proof in proofs[:2]:
+                if not isinstance(proof, dict) or proof.get("basis") not in REFUTATION_BASES:
+                    continue
+                quote = proof.get("quote")
+                finding = findings.get(proof.get("finding_id"))
+                support = _cited_support(finding, quote) if finding else None
+                if support is None or self._verify_refutation(context, support, proof["basis"], quote) is not True:
+                    continue
+                source = support["source"]
+                reference = source.get("url") or source["citation"]
+                assessment["reasoning"] += f'\n\nDirect evidence from {reference}. “{quote.strip()}”'
+                return assessment
+        return _unverified("The available evidence does not directly establish withdrawal or disproof of this commitment.")
 
     @staticmethod
-    def _pairs(state, pending, existing_conflicts):
+    def _pairs(state, pending, snapshot):
+        existing_conflicts = {
+            _relation_key(edge["kind"], edge["from_id"], edge["to_id"])
+            for edge in snapshot["relations"] if edge["kind"] == "CONFLICT"
+        }
+        old_excerpts = {finding["id"]: _source_excerpt_keys(finding) for finding in snapshot["findings"]}
+        refreshed = {
+            finding["id"] for finding in state["findings"]
+            if _source_excerpt_keys(finding) - old_excerpts.get(finding["id"], set())
+        }
         claims = {finding["id"]: finding["claim"] for finding in state["findings"]}
         return [
             {
@@ -217,7 +238,8 @@ class EvidenceReconciler:
                 "reasoning": edge["reasoning"],
             }
             for edge in pending
-            if _relation_key("CONFLICT", edge["from_id"], edge["to_id"]) not in existing_conflicts
+            if (_relation_key("CONFLICT", edge["from_id"], edge["to_id"]) not in existing_conflicts
+                or edge["from_id"] in refreshed or edge["to_id"] in refreshed)
         ]
 
     def _apply(self, context, snapshot, supports, reviewed, cache, *, from_review=False):
@@ -364,6 +386,12 @@ def _assessment(value, relations, *, checked_conflicts=False):
         raise ReconciliationError("Expected a valid aggregate assessment label")
     verdict, reasoning = _text(value.get("verdict")), _text(value.get("reasoning"))
     has_unresolved = any(_unresolved(edge) for edge in relations)
+    if checked_conflicts and has_unresolved and value["label"] in ("CORROBORATED", "REFUTED"):
+        return {
+            "label": "CONFLICTING",
+            "verdict": "Verified sources disagree.",
+            "reasoning": "The verified contradiction remains unresolved, leaving the outcome uncertain.",
+        }
     if not has_unresolved and value["label"] == "CONFLICTING":
         if checked_conflicts:
             return _unverified("No unresolved contradiction about the same claim, scope, and period was verified.")

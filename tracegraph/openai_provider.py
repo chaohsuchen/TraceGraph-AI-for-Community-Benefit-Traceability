@@ -29,7 +29,10 @@ Return only the requested JSON instead of a prose brief. In passages, propose at
 results and a contiguous quote from that page, under 700 characters. Use the source's
 own words, including the relevant terms, scope, or date. Do not paraphrase, combine
 separate spans, insert ellipses, or include a citation inside the quote. Include the
-original promise where available. Leave passages empty if there are no usable results.
+original promise where available. Also include separate literal excerpts for any
+reported outcome, completion date, or cancellation found in the search.
+Prefer a short sentence from the body of the source over a search-result summary.
+Leave passages empty if there are no usable results.
 Put the requested STOP_REASON value in stop_reason, or use an empty string if the
 research instructions do not request it.
 """.strip()

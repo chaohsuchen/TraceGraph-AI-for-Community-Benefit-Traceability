@@ -1,7 +1,10 @@
+import json
 import unittest
 from unittest.mock import Mock
 
 from tracegraph.agent import Agent, ResolutionUnavailable
+from tracegraph.providers import ClaudeReconciliationJudge
+from tracegraph.reconcile import EvidenceReconciler
 
 
 DISCOVERY = {
@@ -248,6 +251,40 @@ class AgentTest(unittest.TestCase):
         self.store.finish_discovery.assert_not_called()
         self.store.fail.assert_not_called()
         self.retrieval.resolve.assert_not_called()
+
+    def test_refresh_assessor_retains_scope_beyond_the_original_excerpt(self):
+        fixture = research_fixture()
+        commitment = fixture["draft"]
+        commitment["original_text"] = "Up to $10 million for a new substation."
+        commitment["original_promise"]["excerpt"] = commitment["original_text"]
+        commitment["milestone"] = "$5 million annually for public safety."
+        self.store.load_commitment.return_value = {"commitment": commitment, "organization": None}
+        self.store.research_snapshot.return_value = {"revision": 1, "findings": [], "relations": []}
+        self.store.finish_refresh.return_value = {"outcome": "COMMITTED"}
+        client = Mock()
+        client.create.return_value = {"stop_reason": "end_turn", "content": [{"type": "text", "text": json.dumps({
+            "label": "UNVERIFIED", "verdict": "Delivery remains uncertain.", "reasoning": "The annual amounts remain open.",
+            "criteria": [{"criterion": "Provide annual public safety support", "scope_criteria": ["s1"],
+                          "promise_citation_ids": [], "delivery_citation_ids": [], "delivery_status": "UNVERIFIED",
+                          "timing_requirement": "",
+                          "explanation": "The available excerpts do not establish payment.", "gap": "A payment record."}],
+            "refutation": [], "not_yet_due": [],
+        })}]}
+        plan = {"assignments": [{"observation_id": "o1", "finding_id": "new:1", "claim": "Funding was pledged."}],
+                "relations": []}
+        assessor = ClaudeReconciliationJudge(client).assess
+        reconciler = EvidenceReconciler(Mock(return_value=plan), assessor=assessor)
+        Agent(self.retrieval, self.store, self.researcher, reconciler).execute(REFRESH)
+
+        payload = json.loads(client.create.call_args.kwargs["messages"][0]["content"])
+        target = payload["target"]
+        self.assertEqual(target["original_text"], commitment["original_text"])
+        self.assertEqual(target["scope_hint"], {"description": commitment["description"], "milestone": commitment["milestone"]})
+        self.assertNotIn("description", target)
+        self.assertNotIn("milestone", target)
+        self.assertEqual(payload["requested_criteria"], {"s1": commitment["original_text"]})
+        self.store.finish_refresh.assert_called_once()
+        self.store.fail.assert_not_called()
 
     def test_refresh_provider_failure_leaves_existing_runs_alone(self):
         self.store.load_commitment.return_value = {"commitment": {"id": "TG-GOLD-H008"}}

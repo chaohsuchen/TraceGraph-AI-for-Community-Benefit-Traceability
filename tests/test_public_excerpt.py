@@ -1,8 +1,12 @@
 from email.message import Message
+from io import BytesIO
 import socket
 from time import monotonic
 from unittest import TestCase
 from unittest.mock import patch
+
+from pypdf import PdfWriter
+from pypdf.generic import DecodedStreamObject, DictionaryObject, NameObject
 
 from tracegraph.public_excerpt import (
     _PublicHTTPSConnection,
@@ -32,6 +36,29 @@ class PublicExcerptTests(TestCase):
             "https://example.org/start", "https://example.org/promise",
         ])
         self.assertEqual(request.call_args_list[0].args[1], request.call_args_list[1].args[1])
+
+    def test_publicly_readable_encrypted_pdf_and_password_required_pdf(self):
+        headers = Message()
+        headers["Content-Type"] = "application/pdf"
+        for password, expected in (("", "The promised homes opened."), ("private", "")):
+            with self.subTest(password_required=bool(password)):
+                writer = PdfWriter()
+                page = writer.add_blank_page(width=150, height=100)
+                page[NameObject("/Resources")] = DictionaryObject({
+                    NameObject("/Font"): DictionaryObject({NameObject("/F1"): DictionaryObject({
+                        NameObject("/Subtype"): NameObject("/Type1"),
+                        NameObject("/BaseFont"): NameObject("/Helvetica"),
+                    })}),
+                })
+                contents = DecodedStreamObject()
+                contents.set_data(b"BT /F1 10 Tf 10 10 Td (The promised homes opened.) Tj ET")
+                page[NameObject("/Contents")] = contents
+                writer.encrypt(password, owner_password="owner-only", algorithm="RC4-128")
+                pdf = BytesIO()
+                writer.write(pdf)
+
+                with patch("tracegraph.public_excerpt._request", return_value=(None, headers, pdf.getvalue())):
+                    self.assertEqual(load_public_text("https://example.org/report.pdf"), expected)
 
     def test_invalid_url_rejected_without_resolution(self):
         urls = (

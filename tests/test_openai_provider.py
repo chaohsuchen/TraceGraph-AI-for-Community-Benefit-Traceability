@@ -1,8 +1,11 @@
+from email.message import Message
 import io
 import json
 import unittest
-from unittest.mock import Mock
+from unittest.mock import Mock, patch
 from urllib.error import HTTPError
+
+from pypdf.errors import DependencyError
 
 from tests.test_providers import _coverage_row, _draft, _JOB, _ORIGINAL_TEXT, _ORIGINAL_URL, _PROGRESS_TEXT, _PROGRESS_URL
 from tracegraph.experimental_prompt import search
@@ -98,7 +101,7 @@ class OpenAIProviderTests(unittest.TestCase):
                       annotations=[_annotation(_ORIGINAL_URL, "Board Decision")]),
             _response(_extracted(_draft(), "c2")),
             _response({"checks": [{"criterion_id": "1", "explanation": "Checked the Board Decision.",
-                                   "documented": True}]}),
+                                   "original_citation_ids": ["c1"], "missing_original_terms": []}]}),
         ])
         source = Mock(side_effect={_ORIGINAL_URL: _ORIGINAL_TEXT, _PROGRESS_URL: _PROGRESS_TEXT}.get)
         events = []
@@ -148,6 +151,30 @@ class OpenAIProviderTests(unittest.TestCase):
         self.assertEqual(result["result"]["evidence"][0]["source"]["url"], _PROGRESS_URL)
         payload = json.loads(opener.call_args_list[0].args[0].data)
         self.assertEqual(json.loads(payload["input"][0]["content"])["kind"], "REFRESH")
+
+    def test_unreadable_pdf_does_not_discard_other_verified_sources(self):
+        pdf_headers = Message()
+        pdf_headers["Content-Type"] = "application/pdf"
+        text_headers = Message()
+        text_headers["Content-Type"] = "text/plain; charset=utf-8"
+        client = Mock()
+        client._timeout_for.return_value = 8
+        client.search.return_value = (
+            _proposed((_ORIGINAL_URL, _ORIGINAL_TEXT), (_PROGRESS_URL, _PROGRESS_TEXT))["passages"],
+            "", {_ORIGINAL_URL: "Encrypted PDF", _PROGRESS_URL: "Verified text"},
+        )
+        with (
+            patch("tracegraph.public_excerpt._request", side_effect=[
+                (None, pdf_headers, b"%PDF-encrypted"),
+                (None, text_headers, _PROGRESS_TEXT.encode()),
+            ]),
+            patch("pypdf.PdfReader", side_effect=DependencyError("AES support is unavailable")),
+        ):
+            _, citations = OpenAIWebResearcher(client)._search({"kind": "DISCOVER"})
+
+        self.assertEqual([(item["url"], item["excerpt"]) for item in citations.values()], [
+            (_PROGRESS_URL, _PROGRESS_TEXT),
+        ])
 
     def test_verified_scope_gap_blocks_a_narrower_draft_despite_search_stopping(self):
         false_quote = "The Authority promised to add three bus stops."

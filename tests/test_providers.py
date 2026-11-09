@@ -90,7 +90,8 @@ def _extracted(draft, *, coverage=None):
 
 def _scope_review(documented=True):
     return _json_message({"checks": [{"criterion_id": "1", "explanation": "Checked the Board Decision.",
-                                      "documented": documented}]})
+                                      "original_citation_ids": ["c1"] if documented else [],
+                                      "missing_original_terms": [] if documented else ["Weekday service"]}]})
 
 
 def _draft(citation_id="c1"):
@@ -218,7 +219,8 @@ class ProviderTests(unittest.TestCase):
         self.assertNotIn("tools", extract)
         self.assertNotIn(_JOB["claim_token"], search["messages"][0]["content"])
         self.assertNotIn("opaque-payload", extract["messages"][0]["content"])
-        self.assertEqual(set(json.loads(review["messages"][0]["content"])), {"criteria", "citations"})
+        self.assertEqual(set(json.loads(review["messages"][0]["content"])),
+                         {"organization_name", "criteria", "citations"})
 
     def test_pause_continuation_echoes_tool_blocks_and_resolves_prior_result(self):
         client = Mock()
@@ -388,9 +390,20 @@ class ProviderTests(unittest.TestCase):
         ]
         client.create.side_effect = [_search_message(), _extracted(_draft(), coverage=coverage), _scope_review()]
         result = ClaudeWebResearcher(client)(_JOB, None)
-        self.assertEqual(result["criteria"], [coverage[0]["criterion"]])
+        self.assertEqual(result["criteria"], [row["criterion"] for row in coverage])
         scope_review = json.loads(client.create.call_args.kwargs["messages"][0]["content"])
         self.assertEqual(scope_review["criteria"], {"1": coverage[0]["criterion"]})
+
+    def test_documented_original_terms_get_one_draft_repair(self):
+        client = Mock()
+        client.create.side_effect = [
+            _search_message(), _extracted(None, coverage=[_coverage_row()]),
+            _extracted(_draft()), _scope_review(),
+        ]
+        result = ClaudeWebResearcher(client)(_JOB, None)
+        self.assertEqual(result["draft"]["original_text"], _ORIGINAL_TEXT)
+        self.assertIn("documented all original terms", client.create.call_args_list[2].kwargs["system"])
+        self.assertEqual(client.create.call_count, 4)
 
     def test_independent_scope_review_can_reject_an_extractor_false_positive(self):
         client = Mock()

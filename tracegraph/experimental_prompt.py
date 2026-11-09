@@ -42,6 +42,13 @@ _SEARCH_SYSTEM = """
 Research the target public commitment using web_search. First locate and cite
 the original promise. Search for primary sources on the material criteria, such
 as official statements, agreements, records of delivery, and oversight reports.
+When the first source is forward-looking and the user asks what happened, make
+an outcome-focused search before stopping. Search for retrospective wording such
+as completed, met the target, implemented, or terminated, and for records dated
+after the milestone. Prefer an official result or cancellation over another copy
+of the announcement. Capture the actual outcome separately from the original terms.
+For a question about the current policy or deadline, look for the most recent
+official update and distinguish it from earlier reversals and announcements.
 Use native web citations with excerpts that directly support the adjacent claim.
 After assessing the evidence, search again only for a concrete gap likely to
 change the verdict. Stop on sufficient evidence, no actionable lead, no material

@@ -50,37 +50,53 @@ def _plan(assignments=(), relations=(), assessment=None):
             "assessment": assessment or dict(_ASSESSMENT)}
 
 
+def _provider_plan(assignments=(), relations=(), *, new_claims=None):
+    return _json_message({
+        **_plan(relations=relations), "new_claims": new_claims or {},
+        "assignments": {row["observation_id"]: row["finding_id"] for row in assignments},
+    })
+
+
 def _criterion(name="Operate five overnight routes", *, status="UNVERIFIED", scope=(), promise=(), delivery=(),
-               gap=None):
+               gap=None, timing=""):
     if gap is None:
         gap = "" if status == "DELIVERED" else "Obtain the completed service records."
     return {
         "criterion": name, "scope_criteria": list(scope), "promise_citation_ids": list(promise),
         "delivery_citation_ids": list(delivery),
         "delivery_status": status, "explanation": "Only use outcomes supported by the source passages.",
-        "gap": gap,
+        "gap": gap, "timing_requirement": timing,
     }
 
 
-def _final_assessment(*criteria, label="UNVERIFIED"):
+def _final_assessment(*criteria, label="UNVERIFIED", not_yet_due=()):
     return {**_ASSESSMENT, "label": label, "criteria": list(criteria),
-            "refutation": {"basis": "", "finding_id": "", "quote": ""}}
+            "not_yet_due": list(not_yet_due),
+            "refutation": []}
 
 
-def _delivery_check(criterion, explanation, *, support=(), gap=""):
+def _delivery_check(criterion, explanation, *, support=(), gap="", fulfilled_part=None, timing="", timing_support=()):
+    if fulfilled_part is None:
+        fulfilled_part = explanation if support else ""
     return {"criterion": criterion, "explanation": explanation, "gap": gap,
+            "fulfilled_part": fulfilled_part, "timing_requirement": timing,
+            "timing_support_ids": list(timing_support),
             "delivery_support": [{"citation_id": citation_id, "quote": quote} for citation_id, quote in support]}
 
 
-def _observed_outcomes(*quotes, planned_terms=()):
+def _observed_outcomes(*quotes, planned_terms=(), timing=()):
     return _json_message({
         "observed_outcomes": [{"citation_id": citation_id, "quote": quote} for citation_id, quote in quotes],
         "planned_terms": [{"citation_id": citation_id, "quote": quote} for citation_id, quote in planned_terms],
+        "observed_timing": [{"citation_id": citation_id, "quote": quote} for citation_id, quote in timing],
     })
 
 
 def _delivery_review(*checks, scope_gap=""):
-    return _json_message({"checks": list(checks), "scope_gap": scope_gap})
+    return _json_message({"scope_gap": scope_gap, "checks": {
+        f"v{index}": {key: value for key, value in check.items() if key != "criterion"}
+        for index, check in enumerate(checks, 1)
+    }})
 
 
 class ReconciliationTests(unittest.TestCase):
@@ -215,6 +231,95 @@ class ReconciliationTests(unittest.TestCase):
         self.assertIsNone(result["relations"][0]["preferred_id"])
         judge.assert_called_once()
 
+    def test_refresh_can_resolve_an_existing_conflict_after_a_new_endpoint_excerpt(self):
+        first = _support("operator", "Three routes ran on November 1.")
+        second = _support("notice", "No routes ran on November 1.")
+        findings = [{"id": name, "claim": support["excerpt"], "supports": [support]}
+                    for name, support in (("left", first), ("right", second))]
+        edge = _link("CONFLICT", "left", "right", status="UNRESOLVED")
+        prior = _snapshot(*findings, relations=[edge])
+
+        for preferred in ("left", "right"):
+            with self.subTest(preferred=preferred):
+                count = "three" if preferred == "left" else "no"
+                refreshed = _support("dispatch", f"The dispatch report records {count} routes operating on November 1.")
+                review = _support("audit", f"Independent vehicle logs confirm {count} routes operated on November 1.")
+
+                def judge(context, snapshot, observations, pairs):
+                    assignments = [_assignment("o1", preferred)] if observations else []
+                    if not pairs:
+                        return _plan(assignments)
+                    self.assertEqual([(pair["from_id"], pair["to_id"]) for pair in pairs], [("left", "right")])
+                    self.assertEqual([item["support"] for item in observations], [review])
+                    return _plan(assignments, [_link("CONFLICT", "left", "right", status="RESOLVED",
+                                                     preferred_id=preferred, support_ids=["o1"])])
+
+                verify = Mock(return_value=[{"id": "c1", "contradicts": True, "left_quote": first["excerpt"],
+                                             "right_quote": second["excerpt"]}])
+                followup = Mock(return_value=[review])
+                reconciler = EvidenceReconciler(judge, followup=followup, verify_conflicts=verify)
+                cache = {}
+                result = reconciler.reconcile(_CONTEXT, prior, _research(refreshed), followup_cache=cache)
+                self.assertEqual(result["relations"][0]["status"], "RESOLVED")
+                self.assertEqual(result["relations"][0]["preferred_id"], preferred)
+
+                concurrent = [{**finding, "supports": [*finding["supports"], refreshed]}
+                              if finding["id"] == preferred else finding for finding in findings]
+                retry = reconciler.reconcile(_CONTEXT, _snapshot(*concurrent, relations=[edge], revision=5),
+                                             _research(refreshed), followup_cache=cache)
+                followup.assert_called_once()
+                self.assertEqual(retry["relations"][0]["status"], "UNRESOLVED")
+                self.assertEqual(retry["findings"], concurrent)
+
+    def test_refresh_leaves_conflict_review_idle_without_a_new_endpoint_excerpt(self):
+        first = _support("operator", "Three routes ran on November 1.")
+        second = _support("notice", "No routes ran on November 1.")
+        cases = (
+            ("exact duplicate", "UNRESOLVED", first, []),
+            ("quote variant", "UNRESOLVED", {**first, "excerpt": "THREE routes  ran on November 1.",
+                                              "locator": "Page 2"}, [_assignment("o1", "left")]),
+            ("summary only", "UNRESOLVED", {**first, "excerpt": None, "summary": "A separate abstract."},
+             [_assignment("o1", "left")]),
+            ("unrelated finding", "UNRESOLVED", _support("second-report", "Two routes had new buses."),
+             [_assignment("o1", "new:1", "Two routes had new buses.")]),
+            ("already resolved", "RESOLVED", _support("audit", "Vehicle logs confirm three routes."),
+             [_assignment("o1", "left")]),
+        )
+        for case, status, support, assignments in cases:
+            with self.subTest(case=case):
+                prior = _snapshot({"id": "left", "claim": first["excerpt"], "supports": [first]},
+                                  {"id": "right", "claim": second["excerpt"], "supports": [second]},
+                                  relations=[_link("CONFLICT", "left", "right", status=status,
+                                                   preferred_id="left" if status == "RESOLVED" else None)])
+                followup = Mock()
+                judge = Mock(return_value=_plan(assignments))
+                result = EvidenceReconciler(judge, followup=followup).reconcile(_CONTEXT, prior, _research(support))
+                followup.assert_not_called()
+                self.assertEqual(result["relations"][0]["status"], status)
+
+    def test_verified_unresolved_conflict_blocks_full_corroboration(self):
+        delivered = "All five routes operated on November 1."
+        disputed = "No routes operated on November 1."
+        assessment = {"label": "CORROBORATED", "verdict": "All five routes ran.",
+                      "reasoning": "The operator reports full delivery."}
+        judge = Mock(return_value=_plan(
+            [_assignment("o1", "new:1", delivered), _assignment("o2", "new:2", disputed)],
+            [_link("CONFLICT", "new:1", "new:2", status="UNRESOLVED")], assessment,
+        ))
+        check = {"id": "c1", "contradicts": True, "left_quote": delivered, "right_quote": disputed}
+        evidence = _research(_support("operator", delivered), _support("audit", disputed))
+
+        for verifier, expected in ((Mock(return_value=[check]), "CONFLICTING"), (None, "CORROBORATED")):
+            with self.subTest(expected=expected):
+                result = EvidenceReconciler(judge, verify_conflicts=verifier).reconcile(
+                    _CONTEXT, _snapshot(), evidence,
+                )
+                self.assertEqual(result["label"], expected)
+                self.assertEqual(result["relations"][0]["status"], "UNRESOLVED")
+                if verifier is not None:
+                    self.assertEqual(result["verdict"], "Verified sources disagree.")
+                    self.assertIn("unresolved", result["reasoning"])
+
     def test_count_conflict_can_coexist_with_supported_partial_delivery(self):
         assessment = {"label": "PARTIALLY_CORROBORATED", "verdict": "Some service is confirmed.",
                       "reasoning": "Both sources report at least two routes. The exact count is disputed."}
@@ -222,7 +327,9 @@ class ReconciliationTests(unittest.TestCase):
             [_assignment("o1", "new:1", "Three routes operated."), _assignment("o2", "new:2", "Two routes operated.")],
             [_link("CONFLICT", "new:1", "new:2", status="UNRESOLVED")], assessment,
         ))
-        result = EvidenceReconciler(judge).reconcile(_CONTEXT, _snapshot(), _research(
+        verifier = Mock(return_value=[{"id": "c1", "contradicts": True, "left_quote": "Three routes operated.",
+                                       "right_quote": "Two routes operated."}])
+        result = EvidenceReconciler(judge, verify_conflicts=verifier).reconcile(_CONTEXT, _snapshot(), _research(
             _support("notice", "Three routes operated."), _support("audit", "Two routes operated."),
         ))
         self.assertEqual(result["label"], "PARTIALLY_CORROBORATED")
@@ -344,16 +451,37 @@ class ReconciliationTests(unittest.TestCase):
         self.assertIn(quote, graph["reasoning"])
         self.assertIn(notice["source"]["url"], graph["reasoning"])
 
+    def test_refutation_can_use_a_second_stronger_quoted_passage(self):
+        first = _support("update", "The authority considered changing its service plan.")
+        second = _support("withdrawal", "The authority has withdrawn its promise to run five overnight routes.")
+        snapshot = _snapshot(
+            {"id": "update", "claim": first["excerpt"], "supports": [first]},
+            {"id": "withdrawal", "claim": second["excerpt"], "supports": [second]},
+        )
+        value = {"label": "REFUTED", "verdict": "The pledge was withdrawn.", "reasoning": "An official notice.",
+                 "refutation": [{"basis": "OFFICIAL_WITHDRAWAL", "finding_id": id_, "quote": support["excerpt"]}
+                                 for id_, support in (("update", first), ("withdrawal", second))]}
+        verify = Mock(side_effect=[False, True])
+        result = EvidenceReconciler(Mock(return_value=_plan()), assessor=Mock(return_value=value),
+                                    verify_refutation=verify).reconcile(
+            _CONTEXT, snapshot, _research(),
+        )
+        self.assertEqual(result["label"], "REFUTED")
+        self.assertIn(second["excerpt"], result["reasoning"])
+        self.assertEqual(verify.call_count, 2)
+
 
 class ClaudeReconciliationTests(unittest.TestCase):
     def test_claude_relation_schema_uses_strings_and_restores_nulls_for_storage(self):
         client = Mock()
-        client.create.return_value = _json_message(_plan(relations=[
+        client.create.return_value = _provider_plan(relations=[
             _link("PROGRESS", "earlier", "later", status="", preferred_id=""),
             _link("CONFLICT", "earlier", "other", status="UNRESOLVED", preferred_id=""),
             _link("CONFLICT", "later", "other", status="RESOLVED", preferred_id="later"),
-        ]))
-        plan = ClaudeReconciliationJudge(client)(_CONTEXT, _snapshot(), [], [])
+        ])
+        snapshot = _snapshot(*({"id": id_, "claim": id_, "supports": []}
+                               for id_ in ("earlier", "later", "other")))
+        plan = ClaudeReconciliationJudge(client)(_CONTEXT, snapshot, [], [])
         schema = client.create.call_args.kwargs["output_config"]["format"]["schema"]
         fields = schema["properties"]["relations"]["items"]["properties"]
         self.assertEqual(fields["status"], {"type": "string", "enum": ["", "UNRESOLVED", "RESOLVED"]})
@@ -369,7 +497,8 @@ class ClaudeReconciliationTests(unittest.TestCase):
         def respond(**request):
             data = json.loads(request["messages"][0]["content"])
             if "observations" in data:
-                return _json_message(_plan([_assignment("o1", "new:1", "Three routes opened.")]))
+                return _provider_plan([{"observation_id": "o1", "finding_id": "new:1"}],
+                                      new_claims={"new:1": "Three routes opened."})
             if "excerpts" in data:
                 return _observed_outcomes(("c1", "Three routes opened."))
             if "check_conditions" in data:
@@ -394,14 +523,15 @@ class ClaudeReconciliationTests(unittest.TestCase):
         self.assertEqual(len(planner["observations"]), 1)
         self.assertEqual(planner["new_finding_ids"], ["new:1"])
         schema = client.create.call_args_list[0].kwargs["output_config"]["format"]["schema"]
-        assignment = schema["properties"]["assignments"]["items"]["properties"]
-        self.assertEqual(assignment["observation_id"]["enum"], ["o1"])
-        self.assertEqual(assignment["finding_id"]["enum"], ["new:1"])
+        assignment = schema["properties"]["assignments"]
+        self.assertEqual(assignment["required"], ["o1"])
+        self.assertEqual(assignment["properties"]["o1"]["enum"], ["new:1"])
         self.assertEqual(list(assessor["citations"]), ["c1"])
         self.assertEqual(assessor["citations"]["c1"]["excerpt"], "Three routes opened.")
         self.assertEqual(assessor["citations"], verifier["citations"])
         self.assertEqual(classifier, {"excerpts": {"c1": "Three routes opened."}})
         self.assertEqual(verifier["observed_outcomes"], [{"citation_id": "c1", "quote": "Three routes opened."}])
+        self.assertEqual(verifier["observed_timing"], {})
         self.assertNotIn("explanation", assessor["citations"]["c1"])
         for body in (planner, assessor, classifier, verifier):
             serialized = json.dumps(body)
@@ -415,7 +545,7 @@ class ClaudeReconciliationTests(unittest.TestCase):
 
     def test_assessor_anchors_scope_in_the_original_passage_instead_of_old_interpretation(self):
         client = Mock()
-        client.create.return_value = _json_message(_final_assessment(_criterion()))
+        client.create.return_value = _json_message(_final_assessment(_criterion(scope=("s1",))))
         original = _support("original", "The authority promises five overnight routes.")
         context = {"commitment": {
             "description": "The pledge was formally abandoned.",
@@ -423,15 +553,55 @@ class ClaudeReconciliationTests(unittest.TestCase):
             "original_promise": {"source": original["source"], "excerpt": original["excerpt"]},
         }}
         ClaudeReconciliationJudge(client).assess(context, _snapshot())
-        target = json.loads(client.create.call_args.kwargs["messages"][0]["content"])["target"]
+        payload = json.loads(client.create.call_args.kwargs["messages"][0]["content"])
+        target = payload["target"]
         self.assertEqual(target["original_text"], original["excerpt"])
+        self.assertEqual(payload["requested_criteria"], {"s1": original["excerpt"]})
         self.assertNotIn("description", target)
         self.assertNotIn("milestone", target)
+
+    def test_assessor_ignores_scope_ids_when_a_refresh_supplies_no_anchors(self):
+        client = Mock()
+        client.create.return_value = _json_message(_final_assessment(_criterion(scope=("invented",))))
+        result = ClaudeReconciliationJudge(client).assess(_CONTEXT, _snapshot())
+        self.assertEqual(result["criteria"][0]["scope_criteria"], [])
+        self.assertEqual(client.create.call_count, 1)
+
+    def test_assessor_retries_malformed_structured_output_once(self):
+        client = Mock()
+        client.create.side_effect = [
+            {"stop_reason": "end_turn", "content": [{"type": "text", "text": "{"}]},
+            _json_message(_final_assessment(_criterion())),
+        ]
+        self.assertEqual(ClaudeReconciliationJudge(client).assess(_CONTEXT, _snapshot())["label"], "UNVERIFIED")
+        self.assertEqual(client.create.call_count, 2)
+
+    def test_reconciliation_assignments_share_one_claim_definition_per_new_alias(self):
+        first = _support("opening", "Three routes began operating.")
+        second = _support("audit", "The board opened three routes.")
+        observations = [{"id": id_, "from_review": False, "support": support}
+                        for id_, support in (("o1", first), ("o2", second))]
+        client = Mock()
+        client.create.return_value = _provider_plan(
+            [{"observation_id": id_, "finding_id": "new:1"} for id_ in ("o1", "o2")],
+            new_claims={"new:1": "Three routes are open.", "new:2": ""},
+            relations=[
+                _link("PROGRESS", "earlier", "new:1", status="", preferred_id=""),
+                _link("PROGRESS", "new:1", "new:2", status="", preferred_id=""),
+            ],
+        )
+        snapshot = _snapshot({"id": "earlier", "claim": "Routes were announced.", "supports": []})
+        plan = ClaudeReconciliationJudge(client)(_CONTEXT, snapshot, observations, [])
+        self.assertEqual([row["claim"] for row in plan["assignments"]], ["Three routes are open."] * 2)
+        self.assertEqual([(edge["from_id"], edge["to_id"]) for edge in plan["relations"]],
+                         [("earlier", "new:1")])
+        schema = client.create.call_args.kwargs["output_config"]["format"]["schema"]
+        self.assertEqual(schema["properties"]["new_claims"]["required"], ["new:1", "new:2"])
 
     def test_assessor_derives_the_label_when_delivery_is_unverified(self):
         client = Mock()
         seed = "Operate five overnight routes"
-        item = _criterion(scope=(seed,), promise=("c1",))
+        item = _criterion(scope=("s1",), promise=("c1",))
         client.create.return_value = _json_message(_final_assessment(item, label="CORROBORATED"))
         snapshot = _snapshot({"id": "original", "claim": "Five routes were promised.", "supports": [
             _support("board", "We promise five overnight shuttle routes."),
@@ -443,16 +613,16 @@ class ClaudeReconciliationTests(unittest.TestCase):
         client.create.assert_called_once()
         data = json.loads(client.create.call_args.kwargs["messages"][0]["content"])
         self.assertEqual(data["requested_query"], context["requested_query"])
-        self.assertEqual(data["requested_criteria"], context["requested_criteria"])
+        self.assertEqual(data["requested_criteria"], {"s1": seed})
 
     def test_assessor_rejects_missing_requested_scope_or_an_unknown_citation_after_one_retry(self):
         routes = "Operate five overnight routes"
         stops = "Add accessible stops"
         context = {**_CONTEXT, "requested_criteria": [routes, stops]}
         for reason, item in [
-            ("unmapped scope", _final_assessment(_criterion(scope=(routes,)))),
-            ("unknown citation", _final_assessment(_criterion(scope=(routes,), delivery=("unknown",)),
-                                                   _criterion(stops, scope=(stops,)))),
+            ("unmapped scope", _final_assessment(_criterion(scope=("s1",)))),
+            ("unknown citation", _final_assessment(_criterion(scope=("s1",), delivery=("unknown",)),
+                                                   _criterion(stops, scope=("s2",)))),
         ]:
             with self.subTest(reason=reason):
                 client = Mock()
@@ -474,24 +644,25 @@ class ClaudeReconciliationTests(unittest.TestCase):
             "requested_criteria": seeds,
         }
         initial = _final_assessment(*[
-            _criterion(name, status="DELIVERED", scope=(seed,), promise=("c1",), delivery=("c2",))
-            for name, seed in zip(conditions, seeds)
+            _criterion(name, status="DELIVERED", scope=(f"s{number}",), promise=("c1",), delivery=("c2",))
+            for number, name in enumerate(conditions, 1)
         ], label="CORROBORATED")
         misclassified = [_delivery_check(name, "The bid announced the rates.",
                                          support=[("c2", report["excerpt"])]) for name in conditions]
         opening = _support("opening", "Resorts World opened its gaming floor to customers.")
         opening_finding = {"id": "opening", "claim": "Resorts World opened.", "supports": [opening]}
+        pledge = ("c1", bid["excerpt"])
         proposal = ("c2", report["excerpt"])
         proposed_rate = ("c2", "56 percent tax on slot machine games and 30 percent on table games")
         actual = ("c3", opening["excerpt"])
         for scenario, outcomes in (
             ("proposal only", ()),
             ("unrelated actual outcome", (actual,)),
-            ("pledge and proposal misclassified as outcomes", (("c1", bid["excerpt"]), proposed_rate, actual)),
+            ("pledge and proposal misclassified as outcomes", (pledge, proposed_rate, actual)),
         ):
             with self.subTest(scenario=scenario):
                 client = Mock()
-                responses = [_json_message(initial), _observed_outcomes(*outcomes, planned_terms=(proposal,))]
+                responses = [_json_message(initial), _observed_outcomes(*outcomes, planned_terms=(pledge, proposal))]
                 if outcomes:
                     snapshot = _snapshot(bid_finding, opening_finding)
                     responses.append(_delivery_review(*misclassified))
@@ -509,8 +680,32 @@ class ClaudeReconciliationTests(unittest.TestCase):
                 self.assertEqual(client.create.call_count, 3 if outcomes else 2)
                 if outcomes:
                     verifier = json.loads(client.create.call_args.kwargs["messages"][0]["content"])
-                    self.assertEqual(verifier["check_conditions"], conditions)
+                    self.assertEqual(verifier["check_conditions"], {
+                        f"v{index}": {"criterion": name, "timing_requirement": ""}
+                        for index, name in enumerate(conditions, 1)
+                    })
                     self.assertEqual(verifier["observed_outcomes"], [{"citation_id": "c3", "quote": opening["excerpt"]}])
+
+    def test_already_formed_partnership_can_document_both_original_terms_and_delivery(self):
+        name = "Form a workforce housing partnership with Cirrus."
+        excerpt = "The authority and Cirrus formed a workforce housing partnership on 1 November 2025."
+        support = _support("partnership-agreement", excerpt)
+        snapshot = _snapshot({"id": "partnership", "claim": excerpt, "supports": [support]})
+        context = {"commitment": {"original_text": excerpt, "original_promise": {
+            "source": support["source"], "excerpt": excerpt,
+        }}}
+        initial = _final_assessment(_criterion(name, status="DELIVERED", scope=("s1",),
+                                               promise=("c1",), delivery=("c1",)),
+                                    label="CORROBORATED")
+        client = Mock()
+        client.create.side_effect = [_json_message(initial), _observed_outcomes(("c1", excerpt)),
+                                     _delivery_review(_delivery_check(name, excerpt, support=[("c1", excerpt)]))]
+
+        result = ClaudeReconciliationJudge(client).assess(context, snapshot)
+
+        self.assertEqual(result["label"], "CORROBORATED")
+        self.assertEqual(result["criteria"][0]["promise_citation_ids"], ["c1"])
+        self.assertEqual(result["criteria"][0]["delivery_citation_ids"], ["c1"])
 
     def test_a060_confirmed_payment_does_not_verify_the_payment_deadline(self):
         license_ = _support("license", "Resorts World New York City shall pay, on or before December 31, 2025, "
@@ -535,8 +730,8 @@ class ClaudeReconciliationTests(unittest.TestCase):
         amount = "Pay the $500 million fee"
         deadline = "Pay on or before December 31, 2025"
         initial = _final_assessment(*[
-            _criterion(name, status="DELIVERED", scope=(seed,), promise=("c1",), delivery=("c2",))
-            for name in (amount, deadline)
+            _criterion(name, status="DELIVERED", scope=("s1",), promise=("c1",), delivery=("c2",), timing=timing)
+            for name, timing in ((amount, ""), (deadline, deadline))
         ], label="CORROBORATED")
         gap = "Obtain a dated receipt confirming payment on or before December 31, 2025."
         payment = _delivery_check(amount, "The Commission confirms payment.", support=[("c2", paid)])
@@ -560,6 +755,26 @@ class ClaudeReconciliationTests(unittest.TestCase):
                     payload = call.kwargs["messages"][0]["content"]
                     self.assertNotIn(edge["reasoning"], payload)
                     self.assertNotIn(snapshot["findings"][1]["claim"], payload)
+
+        for event, approved_timing, proposed_timing, expected in (
+            (paid, (), (), "PARTIALLY_CORROBORATED"),
+            (paid, (), ("t1",), "PARTIALLY_CORROBORATED"),
+            (paid + " on December 30, 2025", (("c2", "on December 30, 2025"),),
+             ("t1",), "CORROBORATED"),
+        ):
+            with self.subTest(event=event, approved_timing=approved_timing, proposed_timing=proposed_timing):
+                transcript["excerpt"] = event
+                outcome = _delivery_check(amount, "Payment was reported.", support=[("c2", event)])
+                timing = _delivery_check(deadline, "Payment was made on time.", support=[("c2", event)],
+                                         timing_support=proposed_timing)
+                client = Mock()
+                client.create.side_effect = [_json_message(initial), _observed_outcomes(("c2", event), timing=approved_timing),
+                                             _delivery_review(outcome, timing)]
+                result = ClaudeReconciliationJudge(client).assess(context, snapshot)
+                self.assertEqual(result["label"], expected)
+                if not approved_timing:
+                    self.assertNotIn("Payment was made on time", result["reasoning"])
+                    self.assertIn("does not establish that delivery met this timing requirement", result["reasoning"])
 
     def test_verified_delivery_requires_complete_scope_for_full_corroboration(self):
         name = "Operate five overnight routes"
@@ -593,14 +808,99 @@ class ClaudeReconciliationTests(unittest.TestCase):
         client.create.side_effect = [_json_message(initial), _observed_outcomes(("c1", support["excerpt"])),
                                      _delivery_review(fabricated)]
 
-        with self.assertRaisesRegex(ProviderError, "exact passage"):
-            ClaudeReconciliationJudge(client).assess(_CONTEXT, snapshot)
+        result = ClaudeReconciliationJudge(client).assess(_CONTEXT, snapshot)
+        self.assertEqual(result["label"], "UNVERIFIED")
+        self.assertEqual(result["criteria"][0]["delivery_citation_ids"], [])
+        self.assertNotIn("Five routes opened", result["reasoning"])
+
+    def test_unverifiable_classifier_quote_does_not_discard_the_research_result(self):
+        name = "Operate five overnight routes"
+        excerpt = "The authority began operating five overnight routes."
+        snapshot = _snapshot({"id": "opening", "claim": name, "supports": [_support("audit", excerpt)]})
+        initial = _json_message(_final_assessment(_criterion(name, status="DELIVERED", delivery=("c1",))))
+        incorrect = _observed_outcomes(("c1", "The authority started operating five overnight routes."))
+        client = Mock()
+        for corrected, expected in ((False, "UNVERIFIED"), (True, "CORROBORATED")):
+            with self.subTest(corrected=corrected):
+                if corrected:
+                    retry = [_observed_outcomes(("c1", excerpt)),
+                             _delivery_review(_delivery_check(name, excerpt, support=[("c1", excerpt)]))]
+                else:
+                    retry = [incorrect]
+                client.create.side_effect = [initial, incorrect, *retry]
+                result = ClaudeReconciliationJudge(client).assess(_CONTEXT, snapshot)
+                self.assertEqual(result["label"], expected)
+
+    def test_preparatory_action_does_not_partially_deliver_a_future_cutoff(self):
+        name = "End sales of new petrol cars"
+        deadline = "We will end new petrol car sales on 1 January 2099."
+        consultation = "The agency started a consultation on the proposed sales cutoff."
+        snapshot = _snapshot(
+            {"id": "promise", "claim": name, "supports": [_support("policy", deadline)]},
+            {"id": "consultation", "claim": "Consultation began.", "supports": [_support("news", consultation)]},
+        )
+        proof = {"criterion": name, "due_on": "2099-01-01", "citation_id": "c1", "quote": deadline}
+        criterion = _criterion(name, status="PARTIAL", promise=("c1",), delivery=("c2",))
+        review = _delivery_check(name, "The cutoff has not occurred.", support=[("c2", consultation)],
+                                 gap="An actual sales cutoff remains undocumented.", fulfilled_part="")
+        client = Mock()
+        client.create.side_effect = [
+            _json_message(_final_assessment(criterion, label="PARTIALLY_CORROBORATED", not_yet_due=[proof])),
+            _observed_outcomes(("c2", consultation), planned_terms=(("c1", deadline),)), _delivery_review(review),
+        ]
+        result = ClaudeReconciliationJudge(client).assess(_CONTEXT, snapshot)
+        self.assertEqual(result["label"], "NOT_YET_DUE")
+        self.assertEqual(result["criteria"][0]["delivery_citation_ids"], [])
+
+    def test_not_yet_due_requires_a_future_deadline_cited_in_the_original_terms(self):
+        name = "End sales of new petrol cars"
+        excerpt = "We will end new petrol car sales on 1 January 2000."
+        snapshot = _snapshot({"id": "promise", "claim": name, "supports": [_support("policy", excerpt)]})
+        criterion = _criterion(name, status="NOT_YET_DUE", promise=("c1",))
+        proof = {"criterion": name, "due_on": "2000-01-01", "citation_id": "c1", "quote": excerpt}
+        for proofs in ([], [proof], [{**proof, "due_on": "2099-01-01"}]):
+            with self.subTest(proofs=proofs):
+                client = Mock()
+                client.create.return_value = _json_message(_final_assessment(
+                    criterion, label="NOT_YET_DUE", not_yet_due=proofs,
+                ))
+                self.assertEqual(ClaudeReconciliationJudge(client).assess(_CONTEXT, snapshot)["label"], "UNVERIFIED")
+
+    def test_unverified_future_year_is_checked_against_original_quote(self):
+        name = "End sales of new petrol cars"
+        excerpt = "We will end new petrol car sales by 2099."
+        snapshot = _snapshot({"id": "promise", "claim": name, "supports": [_support("policy", excerpt)]})
+        criterion = _criterion(name, promise=("c1",))
+        proof = {"criterion": name, "due_on": "2099-01-01", "citation_id": "c1", "quote": excerpt}
+        client = Mock()
+        client.create.side_effect = [_json_message(_final_assessment(criterion)),
+                                     _json_message({"not_yet_due": [proof]})]
+        result = ClaudeReconciliationJudge(client).assess(_CONTEXT, snapshot)
+        self.assertEqual(result["label"], "NOT_YET_DUE")
+        self.assertEqual(result["criteria"][0]["due_on"], "2099-01-01")
+
+    def test_nonpreferred_finding_cannot_supply_delivery_proof(self):
+        name = "Operate five overnight routes"
+        excerpt = "All five routes started service."
+        snapshot = _snapshot(
+            {"id": "claim", "claim": name, "supports": [_support("claim", excerpt)]},
+            {"id": "audit", "claim": "No route started.", "supports": [_support("audit", "No route started.")]},
+            relations=(_link("CONFLICT", "claim", "audit", status="RESOLVED", preferred_id="audit"),),
+        )
+        client = Mock()
+        client.create.side_effect = [
+            _json_message(_final_assessment(_criterion(name, status="DELIVERED", delivery=("c1",)),
+                                            label="CORROBORATED")),
+            _observed_outcomes(("c1", excerpt)),
+        ]
+        self.assertEqual(ClaudeReconciliationJudge(client).assess(_CONTEXT, snapshot)["label"], "UNVERIFIED")
 
     def test_verifiers_receive_source_passages_without_generated_evidence_explanations(self):
         first = _support("test-flight", "The mission is a test in Earth orbit.")
         first["explanation"] = "Model-generated interpretation."
         second = _support("landing", "The lunar landing is planned for a separate mission.")
-        comparisons = [{"id": "c1", "contradicts": False, "left_quote": "", "right_quote": ""}]
+        comparisons = [{"id": "c1", "contradicts": False, "left_quote": "", "right_quote": "",
+                        "left_kind": "OTHER", "right_kind": "PLAN"}]
         client = Mock()
         client.create.side_effect = [_json_message({"comparisons": comparisons}),
                                      _json_message({"basis": ""})]
@@ -618,7 +918,27 @@ class ClaudeReconciliationTests(unittest.TestCase):
             payload = call.kwargs["messages"][0]["content"]
             self.assertIn(first["excerpt"], payload)
             self.assertNotIn(first["explanation"], payload)
+            self.assertNotIn("Orbital test", payload)
             self.assertNotIn("private workbook note", payload)
+
+    def test_conflict_verifier_distinguishes_a_plan_revision_from_competing_outcomes(self):
+        plan = _support("plan", "The rate will be removed next April.")
+        revision = _support("revision", "We are no longer proceeding with removal of the rate.")
+        removed = _support("removed", "The rate was removed on April 6.")
+        retained = _support("retained", "The same rate remained in force on April 6.")
+        client = Mock()
+        judge = ClaudeReconciliationJudge(client)
+        for first, second, left_kind, right_kind, expected in (
+            (plan, revision, "PLAN", "REVISION", False), (removed, retained, "OUTCOME", "OUTCOME", True),
+        ):
+            with self.subTest(left_kind=left_kind, right_kind=right_kind):
+                client.create.return_value = _json_message({"comparisons": [{
+                    "id": "c1", "contradicts": True, "left_quote": first["excerpt"], "right_quote": second["excerpt"],
+                    "left_kind": left_kind, "right_kind": right_kind,
+                }]})
+                pair = {"id": "c1", "left": {"supports": [first]}, "right": {"supports": [second]}}
+                result = judge.verify_conflicts(_CONTEXT, [pair])
+                self.assertIs(result[0]["contradicts"], expected)
 
     def test_explicit_withdrawal_still_reaches_scope_verification(self):
         quote = "The authority withdraws its promise to run five overnight routes."
@@ -626,7 +946,9 @@ class ClaudeReconciliationTests(unittest.TestCase):
         client.create.side_effect = [_json_message({"basis": "OFFICIAL_WITHDRAWAL"}),
                                      _json_message({"directly_refutes": True})]
         judge = ClaudeReconciliationJudge(client)
-        self.assertTrue(judge.verify_refutation(_CONTEXT, _support("withdrawal", quote), "OFFICIAL_WITHDRAWAL", quote))
+        self.assertTrue(judge.verify_refutation(_CONTEXT, _support("withdrawal", quote), "DIRECT_DISPROOF", quote))
+        verification = json.loads(client.create.call_args.kwargs["messages"][0]["content"])
+        self.assertEqual(verification["basis"], "OFFICIAL_WITHDRAWAL")
         self.assertEqual(client.create.call_count, 2)
 
     def test_conflict_review_uses_targeted_search_and_verified_citations(self):

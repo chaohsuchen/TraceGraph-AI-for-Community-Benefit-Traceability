@@ -15,6 +15,7 @@ from urllib.parse import quote, urljoin, urlsplit
 
 
 _MAX_BYTES = 5 * 1024 * 1024
+_MAX_PDF_BYTES = 20 * 1024 * 1024
 _MAX_PDF_PAGES = 40
 _MAX_REDIRECTS = 3
 _REDIRECTS = {301, 302, 303, 307, 308}
@@ -150,8 +151,9 @@ def _request(url, deadline):
                 encoding = response.getheader("Content-Encoding", "identity").strip().lower()
                 if response.status != 200 or encoding != "identity":
                     return None, None, None
-                body = response.read(_MAX_BYTES + 1)
-                if len(body) > _MAX_BYTES:
+                byte_limit = _MAX_PDF_BYTES if response.headers.get_content_type() == "application/pdf" else _MAX_BYTES
+                body = response.read(byte_limit + 1)
+                if len(body) > byte_limit:
                     raise ValueError("Public source exceeds the body limit")
                 return None, response.headers, body
     except HTTPException as error:
@@ -187,18 +189,18 @@ class _VisibleText(HTMLParser):
 def _pdf_text(body, deadline):
     try:
         from pypdf import PdfReader
-        from pypdf.errors import PyPdfError
+        from pypdf.errors import DependencyError, FileNotDecryptedError, PyPdfError
     except ImportError:
         return ""
     try:
         reader = PdfReader(BytesIO(body))
-        if reader.is_encrypted:
-            return ""
         parts = []
         for page in reader.pages[:_MAX_PDF_PAGES]:
             _remaining(deadline)
             parts.append(page.extract_text())
-    except PyPdfError as error:
+    except FileNotDecryptedError:
+        return ""
+    except (DependencyError, NotImplementedError, PyPdfError) as error:
         raise ValueError("Public source PDF could not be read") from error
     return " ".join(parts)
 
