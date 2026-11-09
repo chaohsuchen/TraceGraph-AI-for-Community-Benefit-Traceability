@@ -26,6 +26,8 @@ Open [TraceGraph locally](http://127.0.0.1:4173/) or [the synthetic graph demo](
 
 ## Research and refresh
 
+Live discovery uses the Prompt-only policy. Claude breaks the original promise into verifiable criteria, checks each criterion against cited evidence, and pursues concrete gaps within a six-search budget.
+
 A refresh reuses the commitment ID. The agent merges repeated factual findings, retains distinct source excerpts, adds directed progress edges and keeps both sides of a conflict. A newly identified conflict may trigger one targeted follow-up search. Adjudication requires cited evidence and keeps a reason for preferring one side. The current assessment uses all consolidated findings. Refresh jobs are tracked for retries and failures. A completed refresh does not create a new research snapshot in the v2 application schema.
 
 Live model calls send the user query or public commitment context and, for reconciliation, the system's cited findings to Anthropic. The app never reads Golden evidence or verdicts.

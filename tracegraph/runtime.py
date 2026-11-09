@@ -14,6 +14,7 @@ from uuid import uuid4
 
 from tracegraph.agent import Agent, ResolutionUnavailable
 from tracegraph.api import Application, make_handler
+from tracegraph.experimental_prompt import search as prompt_discovery_search
 from tracegraph.retrieval import Retrieval
 
 
@@ -138,7 +139,7 @@ def check_embedding_profile(dsn, embed):
 
 
 def create_application(
-    dsn, mode, *, key_file=None, model=None, search_strategy=None, emit=None,
+    dsn, mode, *, key_file=None, model=None, search_strategy=prompt_discovery_search, emit=None,
     deadline=None, enable_conflict_review=True, allow_web_search=True,
 ):
     from tracegraph.evidence_store import EvidenceStore
