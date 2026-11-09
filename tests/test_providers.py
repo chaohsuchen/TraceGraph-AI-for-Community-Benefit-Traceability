@@ -71,9 +71,9 @@ def _structured_finding(citation_id="c2"):
 
 
 def _coverage_row(criterion="Run five overnight shuttle routes", promise=("c1",), delivery=("c2",),
-                  promise_gap=""):
-    return {"criterion": criterion, "promise_citation_ids": list(promise),
-            "delivery_citation_ids": list(delivery), "promise_gap": promise_gap, "delivery_gap": ""}
+                  promise_gap="", *, kind="PROMISE", delivery_gap=""):
+    return {"kind": kind, "criterion": criterion, "promise_citation_ids": list(promise),
+            "delivery_citation_ids": list(delivery), "promise_gap": promise_gap, "delivery_gap": delivery_gap}
 
 
 def _extracted(draft, *, coverage=None):
@@ -378,6 +378,19 @@ class ProviderTests(unittest.TestCase):
         self.assertEqual(ClaudeWebResearcher(client)(_JOB, None), {
             "draft": None, "missing_scope": ["Run five overnight routes every weekday"],
         })
+
+    def test_missing_delivery_proof_does_not_block_a_documented_promise(self):
+        client = Mock()
+        coverage = [
+            _coverage_row(delivery=()),
+            _coverage_row("Whether all five routes opened", promise=(), kind="OUTCOME",
+                          delivery_gap="Evidence covers only three routes."),
+        ]
+        client.create.side_effect = [_search_message(), _extracted(_draft(), coverage=coverage), _scope_review()]
+        result = ClaudeWebResearcher(client)(_JOB, None)
+        self.assertEqual(result["criteria"], [coverage[0]["criterion"]])
+        scope_review = json.loads(client.create.call_args.kwargs["messages"][0]["content"])
+        self.assertEqual(scope_review["criteria"], {"1": coverage[0]["criterion"]})
 
     def test_independent_scope_review_can_reject_an_extractor_false_positive(self):
         client = Mock()

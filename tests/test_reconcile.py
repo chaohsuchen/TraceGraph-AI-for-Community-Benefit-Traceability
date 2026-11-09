@@ -50,17 +50,37 @@ def _plan(assignments=(), relations=(), assessment=None):
             "assessment": assessment or dict(_ASSESSMENT)}
 
 
-def _criterion(name="Operate five overnight routes", *, status="UNVERIFIED", promise=(), delivery=()):
+def _criterion(name="Operate five overnight routes", *, status="UNVERIFIED", scope=(), promise=(), delivery=(),
+               gap=None):
+    if gap is None:
+        gap = "" if status == "DELIVERED" else "Obtain the completed service records."
     return {
-        "criterion": name, "promise_finding_ids": list(promise), "delivery_finding_ids": list(delivery),
+        "criterion": name, "scope_criteria": list(scope), "promise_citation_ids": list(promise),
+        "delivery_citation_ids": list(delivery),
         "delivery_status": status, "explanation": "Only use outcomes supported by the source passages.",
-        "gap": "Obtain the completed service records.",
+        "gap": gap,
     }
 
 
 def _final_assessment(*criteria, label="UNVERIFIED"):
     return {**_ASSESSMENT, "label": label, "criteria": list(criteria),
             "refutation": {"basis": "", "finding_id": "", "quote": ""}}
+
+
+def _delivery_check(criterion, explanation, *, support=(), gap=""):
+    return {"criterion": criterion, "explanation": explanation, "gap": gap,
+            "delivery_support": [{"citation_id": citation_id, "quote": quote} for citation_id, quote in support]}
+
+
+def _observed_outcomes(*quotes, planned_terms=()):
+    return _json_message({
+        "observed_outcomes": [{"citation_id": citation_id, "quote": quote} for citation_id, quote in quotes],
+        "planned_terms": [{"citation_id": citation_id, "quote": quote} for citation_id, quote in planned_terms],
+    })
+
+
+def _delivery_review(*checks, scope_gap=""):
+    return _json_message({"checks": list(checks), "scope_gap": scope_gap})
 
 
 class ReconciliationTests(unittest.TestCase):
@@ -345,13 +365,20 @@ class ClaudeReconciliationTests(unittest.TestCase):
 
     def test_assessor_receives_only_the_normalized_evidence_and_public_context(self):
         client = Mock()
+
         def respond(**request):
             data = json.loads(request["messages"][0]["content"])
             if "observations" in data:
                 return _json_message(_plan([_assignment("o1", "new:1", "Three routes opened.")]))
-            finding_id = data["findings"][0]["id"]
+            if "excerpts" in data:
+                return _observed_outcomes(("c1", "Three routes opened."))
+            if "check_conditions" in data:
+                check = _delivery_check("Operate five overnight routes", "Three routes opened.",
+                                        support=[("c1", "Three routes opened.")],
+                                        gap="Delivery of two routes remains unverified.")
+                return _delivery_review(check)
             return _json_message(_final_assessment(
-                _criterion(status="PARTIAL", delivery=(finding_id,)), label="PARTIALLY_CORROBORATED",
+                _criterion(status="PARTIAL", delivery=("c1",)), label="PARTIALLY_CORROBORATED",
             ))
 
         client.create.side_effect = respond
@@ -362,23 +389,29 @@ class ClaudeReconciliationTests(unittest.TestCase):
             _CONTEXT, _snapshot(), _research(evidence)
         )
         self.assertEqual(result["label"], _ASSESSMENT["label"])
-        planner, assessor = [json.loads(call.kwargs["messages"][0]["content"])
-                             for call in client.create.call_args_list]
+        planner, assessor, classifier, verifier = [json.loads(call.kwargs["messages"][0]["content"])
+                                                   for call in client.create.call_args_list]
         self.assertEqual(len(planner["observations"]), 1)
         self.assertEqual(planner["new_finding_ids"], ["new:1"])
         schema = client.create.call_args_list[0].kwargs["output_config"]["format"]["schema"]
         assignment = schema["properties"]["assignments"]["items"]["properties"]
         self.assertEqual(assignment["observation_id"]["enum"], ["o1"])
         self.assertEqual(assignment["finding_id"]["enum"], ["new:1"])
-        self.assertEqual(assessor["findings"][0]["claim"], "Three routes opened.")
-        self.assertEqual(len(assessor["findings"][0]["supports"]), 1)
-        self.assertNotIn("explanation", assessor["findings"][0]["supports"][0])
-        for body in (planner, assessor):
+        self.assertEqual(list(assessor["citations"]), ["c1"])
+        self.assertEqual(assessor["citations"]["c1"]["excerpt"], "Three routes opened.")
+        self.assertEqual(assessor["citations"], verifier["citations"])
+        self.assertEqual(classifier, {"excerpts": {"c1": "Three routes opened."}})
+        self.assertEqual(verifier["observed_outcomes"], [{"citation_id": "c1", "quote": "Three routes opened."}])
+        self.assertNotIn("explanation", assessor["citations"]["c1"])
+        for body in (planner, assessor, classifier, verifier):
             serialized = json.dumps(body)
             self.assertNotIn("private workbook note", serialized)
             self.assertNotIn("private annotator", serialized)
             self.assertNotIn("org-private-id", serialized)
-        self.assertNotIn("observations", assessor)
+        for body in (assessor, verifier):
+            self.assertNotIn("observations", body)
+            self.assertNotIn("findings", body)
+            self.assertNotIn("relations", body)
 
     def test_assessor_anchors_scope_in_the_original_passage_instead_of_old_interpretation(self):
         client = Mock()
@@ -395,41 +428,173 @@ class ClaudeReconciliationTests(unittest.TestCase):
         self.assertNotIn("description", target)
         self.assertNotIn("milestone", target)
 
-    def test_assessor_repairs_a_positive_label_when_delivery_is_unverified(self):
+    def test_assessor_derives_the_label_when_delivery_is_unverified(self):
         client = Mock()
-        item = _criterion(promise=("original",))
-        client.create.side_effect = [
-            _json_message(_final_assessment(item, label="CORROBORATED")),
-            _json_message(_final_assessment(item)),
-        ]
+        seed = "Operate five overnight routes"
+        item = _criterion(scope=(seed,), promise=("c1",))
+        client.create.return_value = _json_message(_final_assessment(item, label="CORROBORATED"))
         snapshot = _snapshot({"id": "original", "claim": "Five routes were promised.", "supports": [
             _support("board", "We promise five overnight shuttle routes."),
         ]})
         context = {**_CONTEXT, "requested_query": "Were all five routes delivered?",
-                   "requested_criteria": [item["criterion"]]}
+                   "requested_criteria": [seed]}
         result = ClaudeReconciliationJudge(client).assess(context, snapshot)
         self.assertEqual(result["label"], "UNVERIFIED")
-        self.assertEqual(client.create.call_count, 2)
-        first, retry = [call.kwargs for call in client.create.call_args_list]
-        self.assertIn("CORROBORATED requires every criterion to be DELIVERED", retry["system"])
-        self.assertEqual(first["messages"], retry["messages"])
-        data = json.loads(first["messages"][0]["content"])
+        client.create.assert_called_once()
+        data = json.loads(client.create.call_args.kwargs["messages"][0]["content"])
         self.assertEqual(data["requested_query"], context["requested_query"])
         self.assertEqual(data["requested_criteria"], context["requested_criteria"])
 
-    def test_assessor_rejects_missing_requested_scope_or_an_unknown_finding_after_one_retry(self):
-        context = {**_CONTEXT, "requested_criteria": ["Operate five overnight routes", "Add accessible stops"]}
-        for item, message in [
-            (_final_assessment(_criterion()), "Assess every supplied requested criterion"),
-            (_final_assessment(_criterion(delivery=("unknown",)), _criterion("Add accessible stops")),
-             "Use only exact IDs"),
+    def test_assessor_rejects_missing_requested_scope_or_an_unknown_citation_after_one_retry(self):
+        routes = "Operate five overnight routes"
+        stops = "Add accessible stops"
+        context = {**_CONTEXT, "requested_criteria": [routes, stops]}
+        for reason, item in [
+            ("unmapped scope", _final_assessment(_criterion(scope=(routes,)))),
+            ("unknown citation", _final_assessment(_criterion(scope=(routes,), delivery=("unknown",)),
+                                                   _criterion(stops, scope=(stops,)))),
         ]:
-            with self.subTest(message=message):
+            with self.subTest(reason=reason):
                 client = Mock()
                 client.create.return_value = _json_message(item)
-                with self.assertRaisesRegex(ProviderError, message):
+                with self.assertRaises(ProviderError):
                     ClaudeReconciliationJudge(client).assess(context, _snapshot())
                 self.assertEqual(client.create.call_count, 2)
+
+    def test_a021_bid_rates_are_not_evidence_of_rates_actually_applied(self):
+        bid = _support("bid", "RWNYC offers a tax rate of 56 percent for slots and 30 percent for table games.")
+        report = _support("report", "Resorts World New York City proposed a 56 percent tax on slot machine "
+                          "games and 30 percent on table games and other gaming sources.")
+        bid_finding = {"id": "bid", "claim": "Resorts World offered the rates.", "supports": [bid, report]}
+        seeds = ["Slot machine tax rate", "Table game tax rate"]
+        conditions = ["Apply the 56 percent slot tax rate", "Apply the 30 percent table game tax rate"]
+        context = {
+            "commitment": {"original_promise": {"source": bid["source"], "excerpt": bid["excerpt"]}},
+            "requested_query": "What rates were offered, and how do they compare with the rates required?",
+            "requested_criteria": seeds,
+        }
+        initial = _final_assessment(*[
+            _criterion(name, status="DELIVERED", scope=(seed,), promise=("c1",), delivery=("c2",))
+            for name, seed in zip(conditions, seeds)
+        ], label="CORROBORATED")
+        misclassified = [_delivery_check(name, "The bid announced the rates.",
+                                         support=[("c2", report["excerpt"])]) for name in conditions]
+        opening = _support("opening", "Resorts World opened its gaming floor to customers.")
+        opening_finding = {"id": "opening", "claim": "Resorts World opened.", "supports": [opening]}
+        proposal = ("c2", report["excerpt"])
+        proposed_rate = ("c2", "56 percent tax on slot machine games and 30 percent on table games")
+        actual = ("c3", opening["excerpt"])
+        for scenario, outcomes in (
+            ("proposal only", ()),
+            ("unrelated actual outcome", (actual,)),
+            ("pledge and proposal misclassified as outcomes", (("c1", bid["excerpt"]), proposed_rate, actual)),
+        ):
+            with self.subTest(scenario=scenario):
+                client = Mock()
+                responses = [_json_message(initial), _observed_outcomes(*outcomes, planned_terms=(proposal,))]
+                if outcomes:
+                    snapshot = _snapshot(bid_finding, opening_finding)
+                    responses.append(_delivery_review(*misclassified))
+                else:
+                    snapshot = _snapshot(bid_finding)
+                client.create.side_effect = responses
+
+                result = ClaudeReconciliationJudge(client).assess(context, snapshot)
+
+                self.assertEqual(result["label"], "UNVERIFIED")
+                for row in result["criteria"]:
+                    self.assertEqual(row["delivery_status"], "UNVERIFIED")
+                    self.assertEqual(row["delivery_citation_ids"], [])
+                    self.assertTrue(row["gap"])
+                self.assertEqual(client.create.call_count, 3 if outcomes else 2)
+                if outcomes:
+                    verifier = json.loads(client.create.call_args.kwargs["messages"][0]["content"])
+                    self.assertEqual(verifier["check_conditions"], conditions)
+                    self.assertEqual(verifier["observed_outcomes"], [{"citation_id": "c3", "quote": opening["excerpt"]}])
+
+    def test_a060_confirmed_payment_does_not_verify_the_payment_deadline(self):
+        license_ = _support("license", "Resorts World New York City shall pay, on or before December 31, 2025, "
+                            "a $500,000,000 gaming facility license fee.")
+        paid = "all three licensees have remitted their $500M license fee"
+        transcript = _support("february-transcript", f"First, {paid}, which has, consistent with state law, in turn "
+                              "been remitted to the Metropolitan Transit Authority.")
+        transcript["source"]["published_on"] = "2026-02-03"
+        edge = _link("PROGRESS", "license", "remittance")
+        edge["reasoning"] = "Generated statement claiming payment was made on time."
+        snapshot = _snapshot(
+            {"id": "license", "claim": "A payment deadline was established.", "supports": [license_]},
+            {"id": "remittance", "claim": "Generated claim of payment on time.", "supports": [transcript]},
+            relations=(edge,),
+        )
+        seed = "Pay the $500 million casino license fee by the stated deadline"
+        context = {
+            "commitment": {"original_promise": {"source": license_["source"], "excerpt": license_["excerpt"]}},
+            "requested_query": "Did Resorts World New York City pay its license fee by December 31, 2025?",
+            "requested_criteria": [seed],
+        }
+        amount = "Pay the $500 million fee"
+        deadline = "Pay on or before December 31, 2025"
+        initial = _final_assessment(*[
+            _criterion(name, status="DELIVERED", scope=(seed,), promise=("c1",), delivery=("c2",))
+            for name in (amount, deadline)
+        ], label="CORROBORATED")
+        gap = "Obtain a dated receipt confirming payment on or before December 31, 2025."
+        payment = _delivery_check(amount, "The Commission confirms payment.", support=[("c2", paid)])
+        for timing_support, status in (([], "UNVERIFIED"), ([("c2", paid)], "PARTIAL")):
+            with self.subTest(timing_support=timing_support):
+                timing = _delivery_check(deadline, "The transcript gives no payment date.",
+                                         support=timing_support, gap=gap)
+                client = Mock()
+                client.create.side_effect = [_json_message(initial), _observed_outcomes(("c2", paid)),
+                                             _delivery_review(payment, timing)]
+
+                result = ClaudeReconciliationJudge(client).assess(context, snapshot)
+
+                self.assertEqual(result["label"], "PARTIALLY_CORROBORATED")
+                by_condition = {row["criterion"]: row for row in result["criteria"]}
+                self.assertEqual(by_condition[amount]["delivery_citation_ids"], ["c2"])
+                self.assertEqual(by_condition[deadline]["delivery_status"], status)
+                self.assertEqual(by_condition[deadline]["delivery_citation_ids"], ["c2"] if timing_support else [])
+                self.assertEqual(by_condition[deadline]["gap"], gap)
+                for call in client.create.call_args_list:
+                    payload = call.kwargs["messages"][0]["content"]
+                    self.assertNotIn(edge["reasoning"], payload)
+                    self.assertNotIn(snapshot["findings"][1]["claim"], payload)
+
+    def test_verified_delivery_requires_complete_scope_for_full_corroboration(self):
+        name = "Operate five overnight routes"
+        pledge = "The authority pledged to operate five overnight routes."
+        excerpt = "All five overnight routes began operating."
+        snapshot = _snapshot({"id": "opening", "claim": excerpt, "supports": [_support("audit", f"{pledge} {excerpt}")]})
+        initial = _final_assessment(_criterion(name, status="DELIVERED", delivery=("c1",)), label="CORROBORATED")
+        check = _delivery_check(name, excerpt, support=[("c1", excerpt)])
+        for scope_gap, expected in (
+            ("", "CORROBORATED"),
+            ("The query also asked whether the service covers every requested neighborhood.", "PARTIALLY_CORROBORATED"),
+        ):
+            with self.subTest(scope_gap=scope_gap):
+                client = Mock()
+                client.create.side_effect = [_json_message(initial),
+                                             _observed_outcomes(("c1", excerpt), planned_terms=(("c1", pledge),)),
+                                             _delivery_review(check, scope_gap=scope_gap)]
+                result = ClaudeReconciliationJudge(client).assess(_CONTEXT, snapshot)
+                self.assertEqual(result["label"], expected)
+                self.assertEqual(result["scope_gap"], scope_gap)
+                self.assertEqual(result["criteria"][0]["delivery_citation_ids"], ["c1"])
+
+    def test_delivery_review_cannot_invent_a_quote_for_an_existing_citation(self):
+        name = "Operate five overnight routes"
+        support = _support("audit", "The authority began operating three overnight routes.")
+        snapshot = _snapshot({"id": "opening", "claim": support["excerpt"], "supports": [support]})
+        initial = _final_assessment(_criterion(name, status="DELIVERED", delivery=("c1",)), label="CORROBORATED")
+        fabricated = _delivery_check(name, "Five routes opened.",
+                                     support=[("c1", "The authority began operating five overnight routes.")])
+        client = Mock()
+        client.create.side_effect = [_json_message(initial), _observed_outcomes(("c1", support["excerpt"])),
+                                     _delivery_review(fabricated)]
+
+        with self.assertRaisesRegex(ProviderError, "exact passage"):
+            ClaudeReconciliationJudge(client).assess(_CONTEXT, snapshot)
 
     def test_verifiers_receive_source_passages_without_generated_evidence_explanations(self):
         first = _support("test-flight", "The mission is a test in Earth orbit.")
