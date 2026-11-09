@@ -4,7 +4,7 @@ import unittest
 from unittest.mock import Mock
 from urllib.error import HTTPError
 
-from tests.test_providers import _draft, _JOB, _ORIGINAL_TEXT, _ORIGINAL_URL, _PROGRESS_TEXT, _PROGRESS_URL
+from tests.test_providers import _coverage_row, _draft, _JOB, _ORIGINAL_TEXT, _ORIGINAL_URL, _PROGRESS_TEXT, _PROGRESS_URL
 from tracegraph.experimental_prompt import search
 from tracegraph.openai_provider import OpenAIClient, OpenAIWebResearcher
 from tracegraph.providers import ClaudeIdentityJudge, ProviderError
@@ -39,12 +39,15 @@ def _proposed(*pairs, stop=""):
     return {"passages": [{"url": url, "quote": quote} for url, quote in pairs], "stop_reason": stop}
 
 
-def _extracted(draft, citation_id):
-    return {
+def _extracted(draft, citation_id, *, coverage=None):
+    result = {
         "draft": draft, "verdict": "Partial implementation", "reasoning": "Three routes opened.",
         "findings": [{"citation_id": citation_id, "status": "Partial implementation",
                       "explanation": "Three routes opened.", "summary": "", "locator": ""}],
     }
+    if draft is not None or coverage is not None:
+        result["criteria"] = coverage if coverage is not None else [_coverage_row()]
+    return result
 
 
 class OpenAIProviderTests(unittest.TestCase):
@@ -82,7 +85,7 @@ class OpenAIProviderTests(unittest.TestCase):
             with self.subTest(expected=expected), self.assertRaisesRegex(ProviderError, expected):
                 judge({"query": "Public query"}, _CANDIDATES)
 
-    def test_discovery_only_forwards_source_verified_quotes_and_preserves_stop_marker(self):
+    def test_discovery_forwards_verified_quotes_and_records_stop_marker_separately(self):
         false_quote = "All six shuttle routes began two months early."
         forged_url = "https://transit.example/forged"
         proposals = _proposed(
@@ -94,6 +97,8 @@ class OpenAIProviderTests(unittest.TestCase):
             _response(proposals, tools=[_tool([_PROGRESS_URL])],
                       annotations=[_annotation(_ORIGINAL_URL, "Board Decision")]),
             _response(_extracted(_draft(), "c2")),
+            _response({"checks": [{"criterion_id": "1", "explanation": "Checked the Board Decision.",
+                                   "documented": True}]}),
         ])
         source = Mock(side_effect={_ORIGINAL_URL: _ORIGINAL_TEXT, _PROGRESS_URL: _PROGRESS_TEXT}.get)
         events = []
@@ -109,7 +114,9 @@ class OpenAIProviderTests(unittest.TestCase):
         self.assertEqual([item["excerpt"] for item in result["result"]["evidence"]],
                          [_ORIGINAL_TEXT, _PROGRESS_TEXT])
         self.assertEqual([call.args for call in source.call_args_list], [(_ORIGINAL_URL,), (_PROGRESS_URL,)])
-        search_payload, extraction_payload = [json.loads(call.args[0].data) for call in opener.call_args_list]
+        search_payload, extraction_payload, scope_payload = [
+            json.loads(call.args[0].data) for call in opener.call_args_list
+        ]
         self.assertEqual(search_payload["tools"], [{"type": "web_search"}])
         self.assertEqual(search_payload["tool_choice"], "required")
         self.assertEqual(search_payload["max_tool_calls"], 6)
@@ -118,7 +125,8 @@ class OpenAIProviderTests(unittest.TestCase):
         self.assertNotIn("tools", extraction_payload)
         self.assertNotIn(false_quote, json.dumps(extraction_payload))
         self.assertNotIn(forged_url, json.dumps(extraction_payload))
-        self.assertIn("STOP_REASON=BUDGET", json.dumps(extraction_payload))
+        self.assertNotIn("STOP_REASON=BUDGET", json.dumps(extraction_payload))
+        self.assertNotIn("tools", scope_payload)
         self.assertTrue(any(event.get("stop_reason") == "BUDGET" for event in events))
         self.assertTrue(any(event.get("web_search_ids") == ["ws_test"] for event in events))
 
@@ -140,6 +148,30 @@ class OpenAIProviderTests(unittest.TestCase):
         self.assertEqual(result["result"]["evidence"][0]["source"]["url"], _PROGRESS_URL)
         payload = json.loads(opener.call_args_list[0].args[0].data)
         self.assertEqual(json.loads(payload["input"][0]["content"])["kind"], "REFRESH")
+
+    def test_verified_scope_gap_blocks_a_narrower_draft_despite_search_stopping(self):
+        false_quote = "The Authority promised to add three bus stops."
+        opener = Mock(side_effect=[
+            _response(_proposed((_ORIGINAL_URL, _ORIGINAL_TEXT), (_PROGRESS_URL, false_quote),
+                                stop="SUFFICIENT"), tools=[_tool([_ORIGINAL_URL, _PROGRESS_URL])]),
+            _response(_extracted(_draft(), "c1", coverage=[
+                _coverage_row(delivery=()),
+                _coverage_row("Add three bus stops", promise=(), delivery=()),
+            ])),
+        ])
+        events = []
+        researcher = OpenAIWebResearcher(
+            OpenAIClient("test-key", opener=opener),
+            source_loader=lambda url, **_: {_ORIGINAL_URL: _ORIGINAL_TEXT, _PROGRESS_URL: _PROGRESS_TEXT}[url],
+            search_strategy=search, emit=events.append,
+        )
+
+        job = {**_JOB, "query": "What did the authority promise about overnight shuttle routes and new bus stops?"}
+        self.assertEqual(researcher(job, None), {"draft": None, "missing_scope": ["Add three bus stops"]})
+        self.assertTrue(any(event.get("stop_reason") == "SUFFICIENT" for event in events))
+        extraction_payload = json.loads(opener.call_args_list[1].args[0].data)
+        self.assertNotIn(false_quote, json.dumps(extraction_payload))
+        self.assertNotIn("STOP_REASON", json.dumps(extraction_payload))
 
     def test_explicit_empty_results_are_distinct_from_failed_or_unverifiable_search(self):
         bad_quote = "Model-written words without a source match."

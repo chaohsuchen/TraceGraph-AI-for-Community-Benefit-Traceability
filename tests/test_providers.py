@@ -70,13 +70,27 @@ def _structured_finding(citation_id="c2"):
             "locator": "Page 99"}
 
 
-def _extracted(draft):
-    return _json_message({
+def _coverage_row(criterion="Run five overnight shuttle routes", promise=("c1",), delivery=("c2",),
+                  promise_gap=""):
+    return {"criterion": criterion, "promise_citation_ids": list(promise),
+            "delivery_citation_ids": list(delivery), "promise_gap": promise_gap, "delivery_gap": ""}
+
+
+def _extracted(draft, *, coverage=None):
+    result = {
         "draft": draft,
         "verdict": "Partially implemented",
         "reasoning": "The service bulletin records three routes compared with the five-route commitment.",
         "findings": [_structured_finding()],
-    })
+    }
+    if draft is not None or coverage is not None:
+        result["criteria"] = coverage if coverage is not None else [_coverage_row()]
+    return _json_message(result)
+
+
+def _scope_review(documented=True):
+    return _json_message({"checks": [{"criterion_id": "1", "explanation": "Checked the Board Decision.",
+                                      "documented": documented}]})
 
 
 def _draft(citation_id="c1"):
@@ -170,7 +184,7 @@ class ProviderTests(unittest.TestCase):
 
     def test_discovery_persists_only_verified_source_urls_and_literal_excerpts(self):
         client = Mock()
-        client.create.side_effect = [_search_message(), _extracted(_draft())]
+        client.create.side_effect = [_search_message(), _extracted(_draft()), _scope_review()]
         clock = Mock(side_effect=[
             datetime(2026, 11, 7, 23, 59, tzinfo=timezone.utc),
             datetime(2026, 11, 8, 0, 0, tzinfo=timezone.utc),
@@ -185,6 +199,7 @@ class ProviderTests(unittest.TestCase):
         self.assertEqual(original["locator"], "Section 3")
         self.assertEqual(draft["original_text"], _ORIGINAL_TEXT)
         self.assertEqual(draft["beneficiary"], {"category": "riders", "name": None})
+        self.assertEqual(response["criteria"], ["Run five overnight shuttle routes"])
 
         result = response["result"]
         self.assertEqual(result["verification_date"], "2026-11-08")
@@ -196,13 +211,14 @@ class ProviderTests(unittest.TestCase):
         self.assertEqual(progress["excerpt"], _PROGRESS_TEXT)
         self.assertEqual(progress["retrieved_at"], "2026-11-07T23:59:00+00:00")
         self.assertEqual(progress["locator"], "Cited passage")
-        search, extract = [call.kwargs for call in client.create.call_args_list]
+        search, extract, review = [call.kwargs for call in client.create.call_args_list]
         self.assertEqual(search["tools"][0]["type"], "web_search_20250305")
         self.assertNotIn("output_config", search)
         self.assertIn("output_config", extract)
         self.assertNotIn("tools", extract)
         self.assertNotIn(_JOB["claim_token"], search["messages"][0]["content"])
         self.assertNotIn("opaque-payload", extract["messages"][0]["content"])
+        self.assertEqual(set(json.loads(review["messages"][0]["content"])), {"criteria", "citations"})
 
     def test_pause_continuation_echoes_tool_blocks_and_resolves_prior_result(self):
         client = Mock()
@@ -218,7 +234,9 @@ class ProviderTests(unittest.TestCase):
 
     def test_experiment_strategy_wraps_only_discovery_and_keeps_extraction(self):
         client = Mock()
-        client.create.side_effect = [_extracted(_draft()), _search_message(), _extracted(None)]
+        client.create.side_effect = [
+            _extracted(_draft()), _scope_review(), _search_message(), _extracted(None),
+        ]
         citations = {
             "c1": {"url": _ORIGINAL_URL, "title": "Board Decision", "excerpt": _ORIGINAL_TEXT, "context": ""},
             "c2": {"url": _PROGRESS_URL, "title": "Service Bulletin", "excerpt": _PROGRESS_TEXT, "context": ""},
@@ -231,11 +249,11 @@ class ProviderTests(unittest.TestCase):
                                          emit=events.append)
         self.assertEqual(response["draft"]["original_text"], _ORIGINAL_TEXT)
         self.assertEqual([event["type"] for event in events],
-                         ["research_start", "research_capture", "research_extracted"])
+                         ["research_start", "research_capture", "research_scope_review", "research_extracted"])
         self.assertEqual(events[1]["citations"], citations)
         researcher({"kind": "REFRESH"}, {"commitment": {"description": "Run five routes."}})
         strategy.assert_called_once()
-        self.assertIn("tools", client.create.call_args_list[1].kwargs)
+        self.assertIn("tools", client.create.call_args_list[2].kwargs)
 
     def test_refresh_only_sends_public_identity_and_provenance(self):
         client = Mock()
@@ -338,12 +356,36 @@ class ProviderTests(unittest.TestCase):
 
     def test_research_extraction_failure_does_not_turn_into_no_public_promise(self):
         client = Mock()
-        extraction = _extracted(None)
+        extraction = _extracted(None, coverage=[_coverage_row()])
         answer = json.loads(extraction["content"][0]["text"])
         answer["findings"][0]["citation_id"] = "c999"
         client.create.side_effect = [_search_message(), _json_message(answer)]
         with self.assertRaisesRegex(ProviderError, "unknown citation ID"):
             ClaudeWebResearcher(client)(_JOB, None)
+
+    def test_coverage_citations_must_be_retained_in_discovery(self):
+        client = Mock()
+        answer = json.loads(_extracted(_draft())["content"][0]["text"])
+        answer["findings"] = [_structured_finding("c1")]
+        client.create.side_effect = [_search_message(), _json_message(answer)]
+        with self.assertRaisesRegex(ProviderError, "omitted an excerpt used for scope coverage"):
+            ClaudeWebResearcher(client)(_JOB, None)
+
+    def test_partial_promise_documentation_cannot_create_a_narrower_draft(self):
+        client = Mock()
+        coverage = [_coverage_row("Run five overnight routes every weekday", promise_gap="Days are unstated.")]
+        client.create.side_effect = [_search_message(), _extracted(_draft(), coverage=coverage)]
+        self.assertEqual(ClaudeWebResearcher(client)(_JOB, None), {
+            "draft": None, "missing_scope": ["Run five overnight routes every weekday"],
+        })
+
+    def test_independent_scope_review_can_reject_an_extractor_false_positive(self):
+        client = Mock()
+        coverage = [_coverage_row("weekday operation")]
+        client.create.side_effect = [_search_message(), _extracted(_draft(), coverage=coverage), _scope_review(False)]
+        self.assertEqual(ClaudeWebResearcher(client)(_JOB, None), {
+            "draft": None, "missing_scope": ["weekday operation"],
+        })
 
     def test_empty_refresh_cannot_replace_previous_verdict(self):
         client = Mock()

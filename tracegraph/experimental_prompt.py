@@ -10,8 +10,10 @@ organization or an official record directly documenting that promise. If no
 excerpt establishes it, say so explicitly and keep the obligation and outcome
 uncertain. The target is a research lead, never proof of the promise.
 
-Split the original promise into material, verifiable criteria. Preserve its
-actor, action, scope, beneficiaries, amount, conditions, and dates as applicable.
+Identify every material obligation the user asks about before checking sources.
+Split the original promise into material, verifiable criteria. Keep unresolved
+requested components visible when an original source documents only a subset.
+Preserve its actor, action, scope, beneficiaries, amount, conditions, and dates.
 Use the original timetable as the baseline. Record later plans and revised dates
 separately. A newer timetable alone does not establish delivery, failure to meet
 an earlier date, or a replacement for the original baseline.

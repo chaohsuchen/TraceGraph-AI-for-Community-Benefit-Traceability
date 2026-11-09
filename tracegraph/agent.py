@@ -107,16 +107,25 @@ class Agent:
         draft = response["draft"]
         if draft is not None and not isinstance(draft, dict):
             raise ResearchUnavailable("The discovery response contains an invalid draft")
-        if draft is None or not _has_original_promise(draft.get("original_promise")):
+        missing_scope = _scope_parts(response, "missing_scope")
+        if missing_scope or draft is None or not _has_original_promise(draft.get("original_promise")):
+            message = "No publicly documented original promise could be located."
+            if missing_scope:
+                components = ", ".join(part.rstrip(".") for part in missing_scope)
+                message = (
+                    "The verified sources did not document the full requested promise. "
+                    f"Missing parts include {components}."
+                )
             self._store.finish_without_run(claim, {
                 "outcome": "NO_PUBLIC_PROMISE",
-                "message": "No publicly documented original promise could be located.",
+                "message": message,
             })
             return
 
         if not all(_has_text(draft.get(field)) for field in ("description", "title", "original_text")):
             raise ResearchUnavailable("The discovery draft is missing commitment details")
 
+        criteria = _scope_parts(response, "criteria")
         identity = {field: draft.get(field) for field in _DISCOVERED_FIELDS}
         new_commitment = None
         for _ in range(_MAX_RESEARCH_WRITE_ATTEMPTS):
@@ -140,6 +149,9 @@ class Agent:
                         "commitment": {**identity, "title": draft["title"]},
                         "organization": None,
                     }
+                    if criteria:
+                        context["requested_query"] = claimed_job["query"]
+                        context["requested_criteria"] = criteria
                     snapshot = {"revision": 0, "findings": [], "relations": [], "assessment": None}
                     result = self._reconcile(context, snapshot, result, {})
                 try:
@@ -204,6 +216,13 @@ def _error(code, message, *, retryable=True):
 
 def _has_text(value):
     return isinstance(value, str) and bool(value.strip())
+
+
+def _scope_parts(response, field):
+    parts = response.get(field, [])
+    if not isinstance(parts, list) or not all(_has_text(part) for part in parts):
+        raise ResearchUnavailable("The discovery response contains invalid scope details")
+    return [part.strip() for part in parts]
 
 
 def _has_source_reference(source):

@@ -117,6 +117,42 @@ class AgentTest(unittest.TestCase):
         self.store.finish_discovery.assert_not_called()
         self.store.fail.assert_not_called()
 
+    def test_discovery_reports_missing_scope_without_saving_a_narrower_record(self):
+        missing = ["ferry shuttle expansion", "new bus stops"]
+        for draft in (None, research_fixture()["draft"]):
+            with self.subTest(has_draft=draft is not None):
+                self.researcher.return_value = {"draft": draft, "missing_scope": missing}
+                self.agent.execute(DISCOVERY)
+                claim, result = self.store.finish_without_run.call_args.args
+                self.assertEqual(claim, DISCOVERY_CLAIM)
+                self.assertEqual(result["outcome"], "NO_PUBLIC_PROMISE")
+                for component in missing:
+                    self.assertIn(component, result["message"])
+        self.retrieval.resolve.assert_not_called()
+        self.store.finish_discovery.assert_not_called()
+        self.store.fail.assert_not_called()
+
+    def test_discovery_passes_requested_scope_to_reconciliation_only(self):
+        criteria = ["Funding for the police substation", "Annual public safety support"]
+        self.researcher.return_value["criteria"] = criteria
+        self.retrieval.resolve.return_value = no_match("rev-1")
+        self.retrieval.embed_commitment.return_value = [0.25, 0.75]
+        self.store.finish_discovery.return_value = {"outcome": "COMMITTED"}
+        reconciler = Mock()
+        reconciler.reconcile.return_value = {}
+
+        Agent(self.retrieval, self.store, self.researcher, reconciler).execute(DISCOVERY)
+
+        context = reconciler.reconcile.call_args.args[0]
+        self.assertEqual(context["requested_query"], DISCOVERY["query"])
+        self.assertEqual(context["requested_criteria"], criteria)
+        identity = self.retrieval.resolve.call_args.args[0]["discovered"]
+        _, _, draft, result = self.store.finish_discovery.call_args.args
+        for data in (identity, draft, result):
+            self.assertNotIn("requested_query", data)
+            self.assertNotIn("requested_criteria", data)
+        self.store.fail.assert_not_called()
+
     def test_discovery_commits_with_revision_and_embedding(self):
         self.retrieval.resolve.return_value = no_match("rev-1")
         self.retrieval.embed_commitment.return_value = [0.25, 0.75]

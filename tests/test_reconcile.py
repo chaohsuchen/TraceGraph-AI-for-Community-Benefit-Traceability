@@ -2,7 +2,7 @@ import json
 import unittest
 from unittest.mock import Mock
 
-from tracegraph.providers import ClaudeReconciliationJudge, ClaudeWebResearcher
+from tracegraph.providers import ClaudeReconciliationJudge, ClaudeWebResearcher, ProviderError
 from tracegraph.reconcile import EvidenceReconciler, ReconciliationError
 from tests.test_providers import _json_message, _search_message, _structured_finding
 
@@ -48,6 +48,19 @@ def _link(kind, from_id, to_id, *, status=None, preferred_id=None, support_ids=(
 def _plan(assignments=(), relations=(), assessment=None):
     return {"assignments": list(assignments), "relations": list(relations),
             "assessment": assessment or dict(_ASSESSMENT)}
+
+
+def _criterion(name="Operate five overnight routes", *, status="UNVERIFIED", promise=(), delivery=()):
+    return {
+        "criterion": name, "promise_finding_ids": list(promise), "delivery_finding_ids": list(delivery),
+        "delivery_status": status, "explanation": "Only use outcomes supported by the source passages.",
+        "gap": "Obtain the completed service records.",
+    }
+
+
+def _final_assessment(*criteria, label="UNVERIFIED"):
+    return {**_ASSESSMENT, "label": label, "criteria": list(criteria),
+            "refutation": {"basis": "", "finding_id": "", "quote": ""}}
 
 
 class ReconciliationTests(unittest.TestCase):
@@ -332,10 +345,16 @@ class ClaudeReconciliationTests(unittest.TestCase):
 
     def test_assessor_receives_only_the_normalized_evidence_and_public_context(self):
         client = Mock()
-        client.create.side_effect = [
-            _json_message(_plan([_assignment("o1", "new:1", "Three routes opened.")])),
-            _json_message({**_ASSESSMENT, "refutation": {"basis": "", "finding_id": "", "quote": ""}}),
-        ]
+        def respond(**request):
+            data = json.loads(request["messages"][0]["content"])
+            if "observations" in data:
+                return _json_message(_plan([_assignment("o1", "new:1", "Three routes opened.")]))
+            finding_id = data["findings"][0]["id"]
+            return _json_message(_final_assessment(
+                _criterion(status="PARTIAL", delivery=(finding_id,)), label="PARTIALLY_CORROBORATED",
+            ))
+
+        client.create.side_effect = respond
         judge = ClaudeReconciliationJudge(client)
         evidence = _support("board", "Three routes opened.")
         evidence["source"]["annotator"] = "private annotator"
@@ -353,6 +372,7 @@ class ClaudeReconciliationTests(unittest.TestCase):
         self.assertEqual(assignment["finding_id"]["enum"], ["new:1"])
         self.assertEqual(assessor["findings"][0]["claim"], "Three routes opened.")
         self.assertEqual(len(assessor["findings"][0]["supports"]), 1)
+        self.assertNotIn("explanation", assessor["findings"][0]["supports"][0])
         for body in (planner, assessor):
             serialized = json.dumps(body)
             self.assertNotIn("private workbook note", serialized)
@@ -362,9 +382,7 @@ class ClaudeReconciliationTests(unittest.TestCase):
 
     def test_assessor_anchors_scope_in_the_original_passage_instead_of_old_interpretation(self):
         client = Mock()
-        client.create.return_value = _json_message({
-            **_ASSESSMENT, "refutation": {"basis": "", "finding_id": "", "quote": ""},
-        })
+        client.create.return_value = _json_message(_final_assessment(_criterion()))
         original = _support("original", "The authority promises five overnight routes.")
         context = {"commitment": {
             "description": "The pledge was formally abandoned.",
@@ -376,6 +394,42 @@ class ClaudeReconciliationTests(unittest.TestCase):
         self.assertEqual(target["original_text"], original["excerpt"])
         self.assertNotIn("description", target)
         self.assertNotIn("milestone", target)
+
+    def test_assessor_repairs_a_positive_label_when_delivery_is_unverified(self):
+        client = Mock()
+        item = _criterion(promise=("original",))
+        client.create.side_effect = [
+            _json_message(_final_assessment(item, label="CORROBORATED")),
+            _json_message(_final_assessment(item)),
+        ]
+        snapshot = _snapshot({"id": "original", "claim": "Five routes were promised.", "supports": [
+            _support("board", "We promise five overnight shuttle routes."),
+        ]})
+        context = {**_CONTEXT, "requested_query": "Were all five routes delivered?",
+                   "requested_criteria": [item["criterion"]]}
+        result = ClaudeReconciliationJudge(client).assess(context, snapshot)
+        self.assertEqual(result["label"], "UNVERIFIED")
+        self.assertEqual(client.create.call_count, 2)
+        first, retry = [call.kwargs for call in client.create.call_args_list]
+        self.assertIn("CORROBORATED requires every criterion to be DELIVERED", retry["system"])
+        self.assertEqual(first["messages"], retry["messages"])
+        data = json.loads(first["messages"][0]["content"])
+        self.assertEqual(data["requested_query"], context["requested_query"])
+        self.assertEqual(data["requested_criteria"], context["requested_criteria"])
+
+    def test_assessor_rejects_missing_requested_scope_or_an_unknown_finding_after_one_retry(self):
+        context = {**_CONTEXT, "requested_criteria": ["Operate five overnight routes", "Add accessible stops"]}
+        for item, message in [
+            (_final_assessment(_criterion()), "Assess every supplied requested criterion"),
+            (_final_assessment(_criterion(delivery=("unknown",)), _criterion("Add accessible stops")),
+             "Use only exact IDs"),
+        ]:
+            with self.subTest(message=message):
+                client = Mock()
+                client.create.return_value = _json_message(item)
+                with self.assertRaisesRegex(ProviderError, message):
+                    ClaudeReconciliationJudge(client).assess(context, _snapshot())
+                self.assertEqual(client.create.call_count, 2)
 
     def test_verifiers_receive_source_passages_without_generated_evidence_explanations(self):
         first = _support("test-flight", "The mission is a test in Earth orbit.")
