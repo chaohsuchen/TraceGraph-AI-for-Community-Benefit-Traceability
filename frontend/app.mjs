@@ -1,10 +1,13 @@
 import { createHttpApi, waitForJob } from './api.mjs';
 import { createDemoApi, DEMO_COMMITMENT_ID } from './demo.mjs';
-import { createEvidenceGraph, findingNodeId, relationEdgeId } from './evidence-graph.mjs';
+import { createEvidenceGraph, evidenceBranch, findingNodeId, relationEdgeId } from './evidence-graph.mjs';
 
 const $ = id => document.getElementById(id);
 const demo = new URLSearchParams(location.search);
-const state = { graph: null, organization: null, organizationExpanded: false, selected: null, request: null };
+const state = {
+  graph: null, organization: null, organizationExpanded: false, selected: null, request: null,
+  branchRoot: null, branchHistory: [],
+};
 let api;
 let evidenceView;
 
@@ -60,9 +63,19 @@ async function loadGraph(id, signal) {
     state.organization = null;
     state.organizationExpanded = false;
   }
-  if (state.graph?.commitment.id !== id) state.selected = null;
+  let previous;
+  if (state.graph?.commitment.id !== id) {
+    state.selected = null;
+    state.branchRoot = null;
+    state.branchHistory = [];
+  } else if (state.branchRoot && !canRootBranch(next, state.branchRoot)) {
+    previous = popGraphView(next);
+    state.branchRoot = previous?.root ?? null;
+    state.selected = previous?.selected ?? null;
+  }
   state.graph = next;
   render();
+  if (previous) evidenceView.renderer.restore(previous.viewport);
 }
 
 async function followJob(id, signal, isRefresh, retry) {
@@ -136,13 +149,79 @@ function toggleOrganization() {
   }, 'Loading commitments for this organization…', toggleOrganization);
 }
 
+function commitmentItem(graph) {
+  return { id: 'commitment:' + graph.commitment.id, kind: 'commitment', label: 'Current commitment' };
+}
+
+function organizationItem(graph) {
+  return {
+    id: 'organization:' + (graph.organization?.id ?? 'unresolved'), kind: 'organization',
+    label: graph.organization?.name ?? graph.commitment.responsible_entity_raw ?? 'Organization unresolved',
+  };
+}
+
+function canRootBranch(graph, item) {
+  if (item.kind === 'finding') return graph.findings.some(finding => finding.id === item.key);
+  if (item.kind === 'commitment') return item.id === commitmentItem(graph).id;
+  return item.kind === 'organization' && item.id === organizationItem(graph).id;
+}
+
+function showGraphView(root, selected, viewport) {
+  state.branchRoot = root;
+  state.selected = selected;
+  renderGraph(state.graph);
+  renderInspector(state.graph);
+  if (viewport) evidenceView.renderer.restore(viewport);
+}
+
+function focusBranch(item) {
+  if (item.id === state.branchRoot?.id || !canRootBranch(state.graph, item)) return;
+  state.branchHistory.push({
+    root: state.branchRoot, selected: state.selected, viewport: evidenceView.renderer.snapshot(),
+  });
+  showGraphView(item, item);
+}
+
+function focusInspectorHeading() {
+  const heading = $('inspector').querySelector('h3');
+  heading.tabIndex = -1;
+  heading.focus({ preventScroll: true });
+}
+
+function popGraphView(graph) {
+  let previous = state.branchHistory.pop();
+  while (previous?.root && !canRootBranch(graph, previous.root)) previous = state.branchHistory.pop();
+  return previous;
+}
+
+function backToPreviousView() {
+  const previous = popGraphView(state.graph);
+  if (!previous) return;
+  showGraphView(previous.root, previous.selected, previous.viewport);
+  if (!previous.root) focusInspectorHeading();
+}
+
+function openFullGraphConflict(edge) {
+  const overview = state.branchHistory[0];
+  state.branchHistory = [];
+  const id = relationEdgeId(edge);
+  showGraphView(null, { id, kind: 'relation', key: id }, overview?.viewport);
+  focusInspectorHeading();
+}
+
 function renderGraph(graph) {
   const id = graph.commitment.id;
   if (evidenceView?.id !== id) {
     evidenceView?.renderer.destroy();
     const canvas = element('div', '', 'evidence-canvas');
     canvas.setAttribute('role', 'img');
-    canvas.setAttribute('aria-label', 'Interactive evidence graph. Evidence and relations can also be selected below.');
+    canvas.setAttribute('aria-label', 'Interactive evidence graph. Double-click a node to focus its branch. Evidence and relations can also be selected below.');
+    const navigation = element('div', '', 'branch-navigation');
+    const branchTitle = element('span', '', 'branch-title');
+    branchTitle.setAttribute('aria-live', 'polite');
+    const context = element('div', '', 'branch-context');
+    context.append(element('span', 'Focused branch', 'branch-kicker'), branchTitle);
+    navigation.append(button('Back', backToPreviousView), context);
     const controls = element('div', '', 'evidence-controls');
     const count = element('span', '', 'evidence-count');
     count.dataset.testid = 'evidence-count';
@@ -156,28 +235,39 @@ function renderGraph(graph) {
     details.append(element('summary', 'Evidence and relations'), items);
     const legend = element('div', '', 'graph-legend');
     legend.append(element('span', '— Related'), element('span', '→ Progress', 'legend-progress'),
-      element('span', '┄ Conflict', 'legend-conflict'));
-    $('graph').replaceChildren(controls, canvas, legend, details);
-    evidenceView = { id, renderer: createEvidenceGraph(canvas, selectGraphItem), items, count };
+      element('span', '┄ Conflict', 'legend-conflict'), element('span', 'Double-click a node to focus'));
+    $('graph').replaceChildren(navigation, controls, canvas, legend, details);
+    evidenceView = {
+      id, renderer: createEvidenceGraph(canvas, selectGraphItem, focusBranch),
+      items, count, navigation, branchTitle,
+    };
   }
 
-  evidenceView.renderer.update(graph);
-  const findings = graph.findings.length;
-  const conflicts = graph.relations.filter(edge => edge.kind === 'CONFLICT');
+  const root = state.branchRoot;
+  const branch = evidenceBranch(graph, root);
+  evidenceView.renderer.update(branch, root);
+  evidenceView.visibleFindingIds = new Set(branch.findings.map(finding => finding.id));
+  const findings = branch.findings.length;
+  const conflicts = branch.relations.filter(edge => edge.kind === 'CONFLICT');
   evidenceView.count.textContent = findings + (findings === 1 ? ' finding' : ' findings') +
     (conflicts.length ? ' · ' + conflicts.length + (conflicts.length === 1 ? ' conflict' : ' conflicts') : '');
   const options = [
-    { id: 'commitment:' + id, kind: 'commitment', label: 'Current commitment' },
-    ...(graph.organization ? [{ id: 'organization:' + graph.organization.id, kind: 'organization',
-      label: graph.organization.name }] : []),
-    ...graph.findings.map(finding => ({
+    ...(root?.kind !== 'finding' ? [commitmentItem(graph)] : []),
+    ...(!root || root.kind === 'organization' ? [organizationItem(graph)] : []),
+    ...branch.findings.map(finding => ({
       id: findingNodeId(finding.id), kind: 'finding', key: finding.id, label: finding.claim,
     })),
-    ...graph.relations.map(edge => ({
+    ...branch.relations.map(edge => ({
       id: relationEdgeId(edge), kind: 'relation', key: relationEdgeId(edge),
       label: edge.kind === 'CONFLICT' ? 'Conflict · ' + (edge.status === 'RESOLVED' ? 'resolved' : 'unresolved') : 'Progress relation',
     })),
   ];
+  const rootOption = options.find(option => option.id === root?.id);
+  evidenceView.navigation.hidden = !root;
+  evidenceView.branchTitle.textContent = root?.kind === 'commitment'
+    ? graph.commitment.title ?? graph.commitment.description
+    : rootOption?.label ?? '';
+  if (state.selected && !options.some(option => option.id === state.selected.id)) state.selected = root;
   evidenceView.items.replaceChildren(...options.map(option => {
     const row = element('li');
     const control = button(option.label, () => selectGraphItem(option));
@@ -189,7 +279,7 @@ function renderGraph(graph) {
 }
 
 function focusGraphItem() {
-  const id = state.selected?.id ?? 'commitment:' + state.graph.commitment.id;
+  const id = state.selected?.id ?? state.branchRoot?.id ?? commitmentItem(state.graph).id;
   evidenceView.renderer.focus(id);
   for (const control of evidenceView.items.querySelectorAll('button')) {
     control.setAttribute('aria-pressed', String(control.dataset.graphItem === id));
@@ -200,6 +290,36 @@ function selectGraphItem(item) {
   state.selected = item;
   focusGraphItem();
   renderInspector(state.graph);
+}
+
+function appendFocusButton(aside, item) {
+  if (item.id === state.branchRoot?.id) return;
+  aside.append(button('Focus branch', () => {
+    focusBranch(item);
+    focusInspectorHeading();
+  }));
+}
+
+function appendOutsideConflicts(aside, graph, finding) {
+  const root = state.branchRoot;
+  if (root?.kind !== 'finding') return;
+  const visible = evidenceView.visibleFindingIds;
+  const conflicts = graph.relations.filter(edge => edge.kind === 'CONFLICT' &&
+    visible.has(edge.from_id) !== visible.has(edge.to_id) &&
+    (finding.id === root.key || finding.id === edge.from_id || finding.id === edge.to_id));
+  if (!conflicts.length) return;
+  const section = element('section', '', 'branch-conflicts');
+  section.append(element('h4', conflicts.length === 1
+    ? 'Conflict outside this branch' : 'Conflicts outside this branch'));
+  for (const edge of conflicts) {
+    const side = visible.has(edge.from_id) ? edge.from_id : edge.to_id;
+    const claim = graph.findings.find(item => item.id === side)?.claim;
+    const row = element('div', '', 'branch-conflict');
+    if (claim && side !== finding.id) row.append(element('p', claim));
+    row.append(button('View in full graph', () => openFullGraphConflict(edge)));
+    section.append(row);
+  }
+  aside.append(section);
 }
 
 function sourceLink(source) {
@@ -220,9 +340,12 @@ function sourceLink(source) {
 function renderInspector(graph) {
   const aside = $('inspector');
   const selected = state.selected;
-  if (selected?.kind === 'organization' && graph.organization) {
-    aside.replaceChildren(element('p', 'Organization', 'eyebrow'), element('h3', graph.organization.name),
-      button(state.organizationExpanded ? 'Collapse commitments' : 'Expand commitments', toggleOrganization));
+  if (selected?.kind === 'organization') {
+    const organization = organizationItem(graph);
+    aside.replaceChildren(element('p', 'Organization', 'eyebrow'), element('h3', organization.label));
+    appendFocusButton(aside, organization);
+    if (!graph.organization) return;
+    aside.append(button(state.organizationExpanded ? 'Collapse commitments' : 'Expand commitments', toggleOrganization));
     if (state.organizationExpanded) {
       const siblings = element('ul', '', 'commitment-list');
       for (const item of state.organization.commitments) {
@@ -240,6 +363,8 @@ function renderInspector(graph) {
     const finding = graph.findings.find(item => item.id === selected.key);
     if (finding) {
       aside.replaceChildren(element('p', 'Evidence finding', 'eyebrow'), element('h3', finding.claim));
+      appendFocusButton(aside, { id: findingNodeId(finding.id), kind: 'finding', key: finding.id });
+      appendOutsideConflicts(aside, graph, finding);
       for (const support of finding.supports) aside.append(citation(support));
       return;
     }
@@ -271,6 +396,7 @@ function renderInspector(graph) {
   const { commitment, assessment } = graph;
   const title = commitment.title || commitment.description;
   aside.replaceChildren(element('p', 'Commitment detail', 'eyebrow'), element('h3', title));
+  appendFocusButton(aside, commitmentItem(graph));
   const facts = element('dl');
   for (const [label, value] of [
     ['Amount', commitment.amount_value],

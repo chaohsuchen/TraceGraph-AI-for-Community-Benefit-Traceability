@@ -1,5 +1,7 @@
 import cytoscape from '/vendor/cytoscape.mjs';
 
+export { evidenceBranch } from './graph-view.mjs';
+
 const styles = [
   {
     selector: 'node',
@@ -20,6 +22,14 @@ const styles = [
   {
     selector: 'node.organization',
     style: { width: 55, height: 55, 'background-gradient-stop-colors': '#f0ebcd #b2b88d' },
+  },
+  {
+    selector: 'node.branch-root',
+    style: { 'font-weight': 700, 'text-max-width': 145 },
+  },
+  {
+    selector: 'node.finding.branch-root',
+    style: { width: 64, height: 64, 'background-gradient-stop-colors': '#b4d7b8 #548361' },
   },
   {
     selector: 'edge',
@@ -46,9 +56,15 @@ function shortLabel(text) {
   return text.length > 41 ? text.slice(0, 39).trimEnd() + '…' : text;
 }
 
-function model(graph) {
+function model(graph, root) {
   const commitmentId = 'commitment:' + graph.commitment.id;
   const organizationId = 'organization:' + (graph.organization?.id ?? 'unresolved');
+  const organizationRoot = root?.kind === 'organization';
+  const findingRoot = root?.kind === 'finding' ? root.key : null;
+  const showOrganization = !root || organizationRoot;
+  const showCommitment = root?.kind !== 'finding';
+  const commitmentY = organizationRoot ? 142 : 0;
+  const findingsY = showCommitment ? commitmentY + 142 : 0;
   const title = graph.commitment.title ?? graph.commitment.description;
   const organization = graph.organization?.name ?? graph.commitment.responsible_entity_raw ?? 'Organization unresolved';
   const progress = graph.relations.filter(edge => edge.kind === 'PROGRESS');
@@ -59,7 +75,7 @@ function model(graph) {
   for (let pass = 0; pass < findings.length; pass++) {
     let changed = false;
     for (const edge of progress) {
-      if (!known.has(edge.from_id) || !known.has(edge.to_id)) continue;
+      if (edge.to_id === findingRoot || !known.has(edge.from_id) || !known.has(edge.to_id)) continue;
       const next = levels.get(edge.from_id) + 1;
       if (levels.get(edge.to_id) < next) {
         levels.set(edge.to_id, next);
@@ -74,27 +90,34 @@ function model(graph) {
     if (!groups.has(level)) groups.set(level, []);
     groups.get(level).push(finding);
   }
-  const nodes = [
-    { data: { id: organizationId, label: shortLabel(organization), kind: 'organization' },
-      classes: 'organization', position: { x: -175, y: 0 } },
-    { data: { id: commitmentId, label: shortLabel(title), kind: 'commitment' },
-      classes: 'commitment', position: { x: 0, y: 0 } },
-  ];
+  const nodes = [];
+  const edges = [];
+  if (showOrganization) {
+    nodes.push({
+      data: { id: organizationId, label: shortLabel(organization), kind: 'organization' },
+      classes: 'organization', position: { x: organizationRoot ? 0 : -175, y: 0 },
+    });
+    edges.push({ data: { id: 'belongs:' + commitmentId, source: organizationId, target: commitmentId } });
+  }
+  if (showCommitment) {
+    nodes.push({
+      data: { id: commitmentId, label: shortLabel(title), kind: 'commitment' },
+      classes: 'commitment', position: { x: 0, y: commitmentY },
+    });
+    for (const finding of findings) {
+      if (parents.has(finding.id)) continue;
+      edges.push({ data: { id: 'about:' + finding.id, source: commitmentId, target: findingNodeId(finding.id) } });
+    }
+  }
   for (const [level, group] of groups) {
     group.forEach((finding, index) => {
       nodes.push({
         data: { id: findingNodeId(finding.id), label: shortLabel(finding.claim), kind: 'finding', key: finding.id },
         classes: 'finding',
-        position: { x: (index - (group.length - 1) / 2) * 166, y: 142 + level * 126 },
+        position: { x: (index - (group.length - 1) / 2) * 166, y: findingsY + level * 126 },
       });
     });
   }
-  const edges = [
-    { data: { id: 'belongs:' + commitmentId, source: organizationId, target: commitmentId } },
-    ...findings.filter(finding => !parents.has(finding.id)).map(finding => ({
-      data: { id: 'about:' + finding.id, source: commitmentId, target: findingNodeId(finding.id) },
-    })),
-  ];
   for (const edge of graph.relations) {
     if (!known.has(edge.from_id) || !known.has(edge.to_id)) continue;
     const kind = edge.kind === 'CONFLICT' ? 'conflict' : 'progress';
@@ -116,32 +139,51 @@ function freePosition(wanted, occupied) {
   return { x: wanted.x + offset, y: wanted.y };
 }
 
-export function createEvidenceGraph(container, onSelect) {
+export function createEvidenceGraph(container, onSelect, onDrillDown) {
   const cy = cytoscape({
     container, style: styles, elements: [], layout: { name: 'preset' }, minZoom: 0.28, maxZoom: 2.3,
     wheelSensitivity: 0.7, boxSelectionEnabled: false, autounselectify: true,
   });
   let initialized = false;
+  let currentRootId = null;
+  let previousTapId = null;
+  let lastTapId = null;
+  cy.on('tap', event => {
+    previousTapId = lastTapId;
+    lastTapId = event.target !== cy && event.target.isNode() ? event.target.id() : null;
+  });
   cy.on('tap', 'node, edge.relation', event => onSelect(event.target.data()));
-  const observer = new ResizeObserver(() => cy.resize());
+  cy.on('dbltap', 'node', event => {
+    // Cytoscape also emits dbltap for two fast taps on different targets.
+    if (event.target.id() === previousTapId) onDrillDown?.(event.target.data());
+  });
+  const resize = () => cy.resize();
+  // A notice or the branch header can move the canvas without resizing it.
+  // Refresh hit-test coordinates before Cytoscape handles the pointer event.
+  container.addEventListener('pointerdown', resize, true);
+  const observer = new ResizeObserver(resize);
   observer.observe(container);
   return {
-    update(graph) {
-      const { nodes, edges } = model(graph);
+    update(graph, root = null) {
+      const rootId = root?.id ?? null;
+      const newLayout = !initialized || currentRootId !== rootId;
+      const { nodes, edges } = model(graph, root);
       const ids = new Set([...nodes, ...edges].map(item => item.data.id));
       const addedNodes = nodes.some(node => !cy.getElementById(node.data.id).length);
       cy.batch(() => {
         cy.elements().filter(item => !ids.has(item.id())).remove();
         const occupied = cy.nodes().map(node => node.position());
         for (const node of nodes) {
-          const existing = cy.getElementById(node.data.id);
+          let existing = cy.getElementById(node.data.id);
           if (existing.length) {
             existing.data(node.data);
+            if (newLayout) existing.position(node.position);
           } else {
-            if (initialized) node.position = freePosition(node.position, occupied);
-            cy.add(node);
-            occupied.push(node.position);
+            const position = newLayout ? node.position : freePosition(node.position, occupied);
+            existing = cy.add({ ...node, position });
+            occupied.push(position);
           }
+          existing.toggleClass('branch-root', node.data.id === rootId);
         }
         for (const edge of edges) {
           const existing = cy.getElementById(edge.data.id);
@@ -153,11 +195,42 @@ export function createEvidenceGraph(container, onSelect) {
       // would otherwise appear beyond the visible canvas.
       const visible = cy.extent();
       const bounds = cy.elements().boundingBox();
-      if (!initialized || (addedNodes && (bounds.x1 < visible.x1 || bounds.y1 < visible.y1 ||
+      if (newLayout || (addedNodes && (bounds.x1 < visible.x1 || bounds.y1 < visible.y1 ||
           bounds.x2 > visible.x2 || bounds.y2 > visible.y2))) {
         cy.fit(undefined, 35);
       }
       initialized = true;
+      currentRootId = rootId;
+      if (newLayout) previousTapId = lastTapId = null;
+    },
+    snapshot() {
+      return {
+        zoom: cy.zoom(),
+        pan: { ...cy.pan() },
+        positions: new Map(cy.nodes().map(node => [node.id(), { ...node.position() }])),
+      };
+    },
+    restore(snapshot) {
+      if (!snapshot) return;
+      cy.batch(() => {
+        const occupied = [];
+        const newNodes = [];
+        for (const node of cy.nodes()) {
+          const position = snapshot.positions.get(node.id());
+          if (position) {
+            node.position(position);
+            occupied.push(position);
+          } else {
+            newNodes.push(node);
+          }
+        }
+        for (const node of newNodes) {
+          const position = freePosition(node.position(), occupied);
+          node.position(position);
+          occupied.push(position);
+        }
+        cy.viewport({ zoom: snapshot.zoom, pan: snapshot.pan });
+      });
     },
     focus(id) {
       cy.elements().removeClass('focused');
@@ -167,6 +240,10 @@ export function createEvidenceGraph(container, onSelect) {
       cy.zoom({ level: cy.zoom() * multiplier, renderedPosition: { x: cy.width() / 2, y: cy.height() / 2 } });
     },
     fit() { cy.fit(undefined, 35); },
-    destroy() { observer.disconnect(); cy.destroy(); },
+    destroy() {
+      observer.disconnect();
+      container.removeEventListener('pointerdown', resize, true);
+      cy.destroy();
+    },
   };
 }

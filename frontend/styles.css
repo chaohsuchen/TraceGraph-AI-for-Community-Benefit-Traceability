@@ -114,6 +114,11 @@ h2 { font-size: clamp(1.55rem, 3vw, 2.25rem); line-height: 1.15; }
   background-image: radial-gradient(#dce3d8 1px, transparent 1px);
   background-size: 16px 16px;
 }
+.branch-navigation { display: flex; align-items: center; gap: .7rem; padding: .65rem .85rem; background: #f0f5ed; border-bottom: 1px solid var(--line); }
+.branch-navigation .quiet { padding: .3rem .65rem; font-size: .82rem; }
+.branch-context { display: grid; gap: .1rem; min-width: 0; }
+.branch-kicker { color: var(--muted); font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.branch-title { color: var(--green); font-size: .9rem; font-weight: 650; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .evidence-controls { display: flex; align-items: center; flex-wrap: wrap; gap: .35rem; padding: .65rem .85rem 0; }
 .evidence-controls .quiet { min-width: 2rem; padding: .25rem .5rem; font-size: .8rem; }
 .evidence-count { margin-right: auto; font-size: .85rem; color: var(--green); font-weight: 650; }
@@ -134,12 +139,17 @@ h2 { font-size: clamp(1.55rem, 3vw, 2.25rem); line-height: 1.15; }
 .inspector h3 { font-size: 1.03rem; line-height: 1.38; margin-bottom: .55rem; }
 .inspector h4 { margin: .7rem 0 .25rem; color: var(--green); }
 .inspector p { margin-bottom: .4rem; }
+.inspector > .quiet + .quiet { margin-inline-start: .35rem; }
 .inspector dl { display: grid; grid-template-columns: auto 1fr; gap: .24rem .65rem; margin-block: .7rem; font-size: .87rem; }
 .inspector dt { color: var(--muted); }
 .inspector dd { margin: 0; }
 .inspector-disclosure { margin-top: .75rem; border-top: 1px solid var(--line); padding-top: .65rem; }
 .inspector-disclosure summary { color: var(--green); cursor: pointer; font-weight: 650; }
 .inspector-disclosure p { margin-top: .5rem; white-space: pre-line; }
+.branch-conflicts { margin-top: .8rem; padding: .6rem .7rem; border: 1px solid #e6d0c8; border-radius: 8px; background: #f9f1ed; }
+.branch-conflicts h4 { margin-top: 0; color: #963e32; font-size: .87rem; }
+.branch-conflict + .branch-conflict { margin-top: .45rem; }
+.branch-conflict .quiet { font-size: .8rem; padding: .25rem .5rem; }
 .evidence { border-top: 1px solid var(--line); margin-top: .85rem; }
 .evidence a { display: inline-block; margin: .35rem .5rem 0 0; }
 blockquote { margin: .55rem 0; padding-left: .6rem; border-left: 2px solid #7d9986; }
