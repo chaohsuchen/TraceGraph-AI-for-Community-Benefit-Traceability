@@ -137,7 +137,10 @@ def check_embedding_profile(dsn, embed):
         raise ValueError("Database embedding profile is missing or incompatible. Prepare the database first.")
 
 
-def create_application(dsn, mode, *, key_file=None, model=None):
+def create_application(
+    dsn, mode, *, key_file=None, model=None, search_strategy=None, emit=None,
+    deadline=None, enable_conflict_review=True, allow_web_search=True,
+):
     from tracegraph.evidence_store import EvidenceStore
     from tracegraph.providers import LocalEmbedding
     from tracegraph.reconcile import EvidenceReconciler
@@ -152,11 +155,16 @@ def create_application(dsn, mode, *, key_file=None, model=None):
     else:
         from tracegraph.providers import AnthropicClient, ClaudeIdentityJudge, ClaudeReconciliationJudge, ClaudeWebResearcher
 
-        client = AnthropicClient(api_key=read_credential(key_file), model=model)
-        judge, researcher = ClaudeIdentityJudge(client), ClaudeWebResearcher(client)
+        client = AnthropicClient(
+            api_key=read_credential(key_file), model=model, emit=emit, deadline=deadline,
+            allow_web_search=allow_web_search,
+        )
+        judge = ClaudeIdentityJudge(client)
+        researcher = ClaudeWebResearcher(client, search_strategy=search_strategy, emit=emit)
         reconciliation_judge = ClaudeReconciliationJudge(client)
         reconciler = EvidenceReconciler(
-            reconciliation_judge, followup=researcher.review_conflicts, assessor=reconciliation_judge.assess,
+            reconciliation_judge, assessor=reconciliation_judge.assess,
+            followup=researcher.review_conflicts if enable_conflict_review else None,
             verify_conflicts=reconciliation_judge.verify_conflicts,
             verify_refutation=reconciliation_judge.verify_refutation,
         )

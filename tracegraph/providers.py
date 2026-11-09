@@ -7,6 +7,7 @@ import os
 import re
 import unicodedata
 from datetime import date, datetime, timezone
+from time import monotonic
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlsplit
 from urllib.request import HTTPRedirectHandler, Request, build_opener
@@ -101,15 +102,23 @@ class _NoRedirect(HTTPRedirectHandler):
 class AnthropicClient:
     """Minimal injectable client for the Claude Messages API."""
 
-    def __init__(self, api_key=None, model=None, *, timeout=120, opener=None):
+    def __init__(
+        self, api_key=None, model=None, *, timeout=120, opener=None, emit=None, deadline=None,
+        allow_web_search=True,
+    ):
         self._api_key = api_key if api_key is not None else os.environ.get("ANTHROPIC_API_KEY")
         if not isinstance(self._api_key, str) or not self._api_key.strip():
             raise ProviderError("ANTHROPIC_API_KEY is required for Claude")
         self.model = model or os.environ.get("ANTHROPIC_MODEL") or _DEFAULT_MODEL
         self._timeout = timeout
         self._open = opener or build_opener(_NoRedirect()).open
+        self._emit = emit
+        self._deadline = deadline
+        self._allow_web_search = allow_web_search
 
     def create(self, *, system, messages, max_tokens, **options):
+        if not self._allow_web_search and options.get("tools"):
+            raise ProviderError("Provider tools are disabled during fixed-evidence replay")
         payload = {
             "model": self.model,
             "system": system,
@@ -127,18 +136,48 @@ class AnthropicClient:
             },
             method="POST",
         )
+        started = monotonic()
+        timeout = self._timeout if self._deadline is None else min(self._timeout, self._deadline - started)
+        if timeout <= 0:
+            raise ProviderError("The research job reached its deadline")
+        document = None
+        request_id = None
+        status = "invalid_response"
         try:
-            with self._open(request, timeout=self._timeout) as response:
+            with self._open(request, timeout=timeout) as response:
+                headers = getattr(response, "headers", None)
+                request_id = headers.get("request-id") if headers is not None else None
                 body = response.read(_MAX_RESPONSE_BYTES + 1)
             if len(body) > _MAX_RESPONSE_BYTES:
                 raise ProviderError("Claude Messages response exceeded its size limit")
             document = json.loads(body)
+            if not isinstance(document, dict) or document.get("type") != "message":
+                raise ProviderError("Claude Messages returned an invalid message")
+            status = "ok"
         except HTTPError as error:
+            status = f"http_{error.code}"
+            request_id = error.headers.get("request-id") if error.headers is not None else None
             raise ProviderError(f"Claude Messages returned HTTP {error.code}") from None
-        except (URLError, OSError, ValueError):
+        except (URLError, OSError):
+            status = "transport_error"
             raise ProviderError("Claude Messages request or response failed") from None
-        if not isinstance(document, dict) or document.get("type") != "message":
-            raise ProviderError("Claude Messages returned an invalid message")
+        except ValueError:
+            raise ProviderError("Claude Messages request or response failed") from None
+        finally:
+            if self._emit is not None:
+                data = document if isinstance(document, dict) else {}
+                content = data.get("content")
+                search_ids = [
+                    block["id"] for block in content
+                    if isinstance(block, dict) and block.get("type") == "server_tool_use"
+                    and block.get("name") == "web_search" and isinstance(block.get("id"), str)
+                ] if isinstance(content, list) else []
+                self._emit({
+                    "type": "provider_call", "status": status, "seconds": monotonic() - started,
+                    "request_id": request_id or data.get("id"), "usage": data.get("usage"),
+                    "search_enabled": bool(options.get("tools")), "web_search_ids": search_ids,
+                    "stop_reason": data.get("stop_reason"),
+                })
         return document
 
 
@@ -322,9 +361,11 @@ def _assessment_target(context):
 
 
 class ClaudeWebResearcher:
-    def __init__(self, client, *, clock=None):
+    def __init__(self, client, *, clock=None, search_strategy=None, emit=None):
         self._client = client
         self._clock = clock or (lambda: datetime.now(timezone.utc))
+        self._search_strategy = search_strategy
+        self._emit = emit or (lambda _event: None)
 
     def __call__(self, job, context):
         kind = job["kind"]
@@ -336,7 +377,12 @@ class ClaudeWebResearcher:
             raise ProviderError("Unknown research task")
 
         request = {"kind": kind, "target": target}
-        brief, citations = self._search(request)
+        self._emit({"type": "research_start"})
+        if kind == "DISCOVER" and self._search_strategy is not None:
+            brief, citations = self._search_strategy(self, request, emit=self._emit)
+        else:
+            brief, citations = self._search(request)
+        self._emit({"type": "research_capture", "brief": brief, "citations": citations})
         retrieved_at = self._clock().isoformat()
         if not citations:
             if kind == "DISCOVER":
@@ -355,6 +401,7 @@ class ClaudeWebResearcher:
             raise ProviderError("Claude returned invalid evidence findings")
         evidence = [_finding(item, citations, retrieved_at) for item in extracted["findings"]]
         if kind == "DISCOVER" and draft is None:
+            self._emit({"type": "research_extracted", "draft": None, "evidence": evidence})
             return {"draft": None}
         if kind == "REFRESH" and draft is not None:
             raise ProviderError("Claude returned a new draft for a refresh")
@@ -373,6 +420,7 @@ class ClaudeWebResearcher:
             "reasoning": reasoning,
             "evidence": evidence,
         }
+        self._emit({"type": "research_extracted", "draft": draft, "result": result})
         return {"draft": draft, "result": result} if kind == "DISCOVER" else {"result": result}
 
     def review_conflicts(self, context, pairs):

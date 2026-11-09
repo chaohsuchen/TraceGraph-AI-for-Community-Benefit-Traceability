@@ -110,6 +110,33 @@ class ProviderTests(unittest.TestCase):
         with self.assertRaisesRegex(ProviderError, "^Claude Messages returned HTTP 401$"):
             client.create(system="System", messages=[], max_tokens=128)
 
+    def test_experiment_records_usage_and_missing_usage_without_provider_content(self):
+        message = {**_search_message(), "id": "msg-demo",
+                   "usage": {"input_tokens": 41, "output_tokens": 9, "server_tool_use": {"web_search_requests": 1}}}
+        error = HTTPError("https://api.anthropic.com/v1/messages", 429, "test", {"request-id": "req-rate-limit"}, None)
+        opener = Mock(side_effect=[io.BytesIO(json.dumps(message).encode()), error])
+        events = []
+        client = AnthropicClient("placeholder-for-test", opener=opener, emit=events.append)
+        client.create(system="System", messages=[], max_tokens=128, tools=[{"type": "web_search_20250305"}])
+        with self.assertRaisesRegex(ProviderError, "HTTP 429"):
+            client.create(system="System", messages=[], max_tokens=128)
+        self.assertEqual(events[0]["usage"], message["usage"])
+        self.assertEqual(events[0]["web_search_ids"], ["srvtoolu_1"])
+        self.assertEqual(events[0]["request_id"], "msg-demo")
+        self.assertEqual(events[1]["status"], "http_429")
+        self.assertIsNone(events[1]["usage"])
+        self.assertNotIn("opaque-payload", json.dumps(events))
+
+    def test_experiment_blocks_tools_in_replay_and_calls_past_deadline(self):
+        opener = Mock()
+        replay = AnthropicClient("placeholder-for-test", opener=opener, allow_web_search=False)
+        with self.assertRaisesRegex(ProviderError, "disabled during fixed-evidence replay"):
+            replay.create(system="System", messages=[], max_tokens=128, tools=[{"name": "web_search"}])
+        expired = AnthropicClient("placeholder-for-test", opener=opener, deadline=0)
+        with self.assertRaisesRegex(ProviderError, "reached its deadline"):
+            expired.create(system="System", messages=[], max_tokens=128)
+        opener.assert_not_called()
+
     def test_identity_uses_structured_output_and_retrieval_rejects_forged_id(self):
         client = Mock()
         client.create.return_value = _json_message({
@@ -182,6 +209,27 @@ class ProviderTests(unittest.TestCase):
                          {"role": "assistant", "content": initial})
         self.assertNotIn("draft", response)
         self.assertEqual(response["result"]["evidence"][0]["source"]["url"], _PROGRESS_URL)
+
+    def test_experiment_strategy_wraps_only_discovery_and_keeps_extraction(self):
+        client = Mock()
+        client.create.side_effect = [_extracted(_draft()), _search_message(), _extracted(None)]
+        citations = {
+            "c1": {"url": _ORIGINAL_URL, "title": "Board Decision", "excerpt": _ORIGINAL_TEXT, "context": ""},
+            "c2": {"url": _PROGRESS_URL, "title": "Service Bulletin", "excerpt": _PROGRESS_TEXT, "context": ""},
+        }
+        strategy = Mock(return_value=("Cited fixture brief", citations))
+        events = []
+        researcher = ClaudeWebResearcher(client, search_strategy=strategy, emit=events.append)
+        response = researcher(_JOB, None)
+        strategy.assert_called_once_with(researcher, {"kind": "DISCOVER", "target": _JOB["query"]},
+                                         emit=events.append)
+        self.assertEqual(response["draft"]["original_text"], _ORIGINAL_TEXT)
+        self.assertEqual([event["type"] for event in events],
+                         ["research_start", "research_capture", "research_extracted"])
+        self.assertEqual(events[1]["citations"], citations)
+        researcher({"kind": "REFRESH"}, {"commitment": {"description": "Run five routes."}})
+        strategy.assert_called_once()
+        self.assertIn("tools", client.create.call_args_list[1].kwargs)
 
     def test_refresh_only_sends_public_identity_and_provenance(self):
         client = Mock()
