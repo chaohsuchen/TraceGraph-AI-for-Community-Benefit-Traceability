@@ -142,7 +142,12 @@ function routeLookup(query) {
   if (/jobs?|workforce|recruit|hiring/.test(text)) {
     if (text.includes('construction')) return { outcome: 'MATCH', commitment_id: CONSTRUCTION_ID };
     if (/operations|permanent/.test(text)) return { outcome: 'MATCH', commitment_id: OPERATIONS_ID };
-    return { outcome: 'AMBIGUOUS', question: 'Do you mean construction jobs or permanent terminal jobs?' };
+    return {
+      outcome: 'AMBIGUOUS', question: 'Do you mean construction jobs or permanent terminal jobs?',
+      suggestions: COMMITMENTS.filter(item => [CONSTRUCTION_ID, OPERATIONS_ID].includes(item.id)).map(item => ({
+        kind: 'SAVED_COMMITMENT', commitment_id: item.id, title: item.title, description: item.description,
+      })),
+    };
   }
   return null;
 }

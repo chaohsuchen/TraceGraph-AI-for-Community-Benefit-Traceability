@@ -102,12 +102,18 @@ class RetrievalTests(unittest.TestCase):
                 {candidate["term_periodicity"] for candidate in candidates},
                 {"permanent operations", "construction and facility jobs"},
             )
-            return {"outcome": "AMBIGUOUS", "question": question}
+            return {"outcome": "AMBIGUOUS", "question": question,
+                    "related_ids": ["TG-GOLD-H009", "TG-GOLD-H008", "TG-GOLD-H009", "TG-GOLD-H001"]}
 
         retrieval = Retrieval(catalog, lambda _: [1], judge, top_k=2)
         self.assertEqual(
             retrieval.resolve({"query": "What was Bally’s 70% Bronx hiring promise?"}),
-            {"outcome": "AMBIGUOUS", "question": question},
+            {"outcome": "AMBIGUOUS", "question": question, "suggestions": [
+                {"kind": "SAVED_COMMITMENT", "commitment_id": record["commitment_id"],
+                 "title": record["description"], "description": record["description"],
+                 "organization_name": record["organization_name"]}
+                for record in (H009, H001)
+            ]},
         )
 
     def test_rrf_uses_ranks_and_preserves_single_retriever_candidates(self):

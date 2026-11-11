@@ -38,6 +38,24 @@
         <span id="notice-text"></span>
         <button class="quiet" id="retry" type="button" hidden>Retry</button>
       </div>
+      <section class="conversation" id="conversation" aria-labelledby="conversation-title" hidden>
+        <header class="conversation-head">
+          <h2 id="conversation-title">Commitment search</h2>
+          <button class="quiet" id="conversation-quit" type="button">Quit</button>
+        </header>
+        <div class="conversation-log" id="conversation-log" role="log" aria-label="Search conversation"></div>
+        <div id="conversation-options" hidden>
+          <h3 id="conversation-options-title">Related options</h3>
+          <ul class="conversation-choices" id="conversation-choices" aria-labelledby="conversation-options-title"></ul>
+        </div>
+        <form id="conversation-form">
+          <label for="conversation-input">Add a detail or source</label>
+          <div class="conversation-composer">
+            <input id="conversation-input" type="text" placeholder="For example, the date, scope, or source link" maxlength="1000" required>
+            <button class="primary" id="conversation-submit" type="submit">Search again</button>
+          </div>
+        </form>
+      </section>
     </section>
     <section class="workspace" id="workspace" aria-labelledby="workspace-title" hidden>
       <div class="workspace-head">

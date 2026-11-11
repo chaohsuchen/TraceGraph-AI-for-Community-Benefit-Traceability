@@ -6,7 +6,7 @@ const $ = id => document.getElementById(id);
 const demo = new URLSearchParams(location.search);
 const state = {
   graph: null, organization: null, organizationExpanded: false, selected: null, request: null,
-  branchRoot: null, branchHistory: [],
+  branchRoot: null, branchHistory: [], conversation: null,
 };
 let api;
 let evidenceView;
@@ -35,13 +35,15 @@ function notice(message = '', kind = 'info', retry) {
 
 function updateBusy() {
   $('refresh').disabled = state.request !== null;
+  $('conversation-submit').disabled = state.request !== null;
   $('workspace').setAttribute('aria-busy', String(state.request !== null));
 }
 
-async function action(task, message, retryAction) {
+async function action(task, message, retryAction, conversation = null) {
   state.request?.abort();
   const request = new AbortController();
   state.request = request;
+  if (conversation) conversation.request = request;
   notice(message);
   updateBusy();
   try {
@@ -78,7 +80,109 @@ async function loadGraph(id, signal) {
   if (previous) evidenceView.renderer.restore(previous.viewport);
 }
 
-async function followJob(id, signal, isRefresh, retry) {
+function addConversationMessage(author, text) {
+  const message = element('div', '', 'conversation-message');
+  message.dataset.author = author;
+  message.append(element('strong', author === 'user' ? 'You' : 'TraceGraph', 'conversation-author'), element('p', text));
+  const log = $('conversation-log');
+  log.append(message);
+  log.scrollTop = log.scrollHeight;
+}
+
+function showRelatedOptions(suggestions) {
+  const choices = $('conversation-choices');
+  choices.replaceChildren();
+  const seen = new Set();
+  for (const suggestion of suggestions) {
+    const saved = suggestion.kind === 'SAVED_COMMITMENT';
+    const id = saved ? suggestion.commitment_id : suggestion.source_url;
+    if (!id || seen.has(id)) continue;
+    seen.add(id);
+    const option = element('li');
+    const category = saved ? ['Saved commitment', suggestion.organization_name].filter(Boolean).join(' · ') : 'Web research lead';
+    option.append(element('span', category, 'muted'), element('strong', suggestion.title));
+    if (suggestion.description && suggestion.description !== suggestion.title) {
+      option.append(element('p', suggestion.description));
+    }
+    if (!saved) {
+      const link = sourceLink({ url: suggestion.source_url });
+      if (link) option.append(link);
+    }
+    const label = saved ? 'Use this commitment' : 'Research this lead';
+    const choose = button(label, () => chooseSuggestion(suggestion));
+    choose.setAttribute('aria-label', `${label} ${suggestion.title}`);
+    option.append(choose);
+    choices.append(option);
+  }
+  $('conversation-options').hidden = !choices.children.length;
+}
+
+function continueConversation(query, message, suggestions = []) {
+  if (!state.conversation) {
+    state.conversation = { query, request: null };
+    $('conversation').hidden = false;
+    $('conversation-log').after($('notice'));
+    addConversationMessage('user', query);
+  }
+  notice();
+  addConversationMessage('system', message);
+  showRelatedOptions(suggestions);
+  $('conversation-input').focus();
+}
+
+function quitConversation() {
+  if (state.conversation?.request && state.conversation.request === state.request) {
+    state.request.abort();
+    state.request = null;
+    updateBusy();
+  }
+  state.conversation = null;
+  $('conversation').before($('notice'));
+  $('conversation').hidden = true;
+  $('conversation-log').replaceChildren();
+  showRelatedOptions([]);
+  $('conversation-input').value = '';
+  if (!state.request) notice();
+  $('query').focus();
+}
+
+function announceGraph(conversation) {
+  notice();
+  if (!conversation) return;
+  const commitment = state.graph.commitment;
+  addConversationMessage('system', `Opened ${commitment.title || commitment.description}.`);
+  $('conversation-input').focus();
+}
+
+function chooseSuggestion(suggestion) {
+  const conversation = state.conversation;
+  if (!conversation || state.request) return;
+  showRelatedOptions([]);
+  if (suggestion.kind === 'SAVED_COMMITMENT') {
+    addConversationMessage('user', `Use ${suggestion.title}.`);
+    const select = () => action(async signal => {
+      await loadGraph(suggestion.commitment_id, signal);
+      conversation.query = state.graph.commitment.description || suggestion.title;
+      announceGraph(conversation);
+    }, 'Loading the selected commitment…', select, conversation);
+    select();
+  } else {
+    addConversationMessage('user', `Research this lead: ${suggestion.title}`);
+    conversation.query = `Research the public commitment described in this lead.\n${suggestion.description}\nSource: ${suggestion.source_url}`;
+    lookup(conversation.query);
+  }
+}
+
+function submitSearch(query) {
+  if (state.conversation) {
+    state.conversation.query = query;
+    addConversationMessage('user', query);
+    showRelatedOptions([]);
+  }
+  lookup(query);
+}
+
+async function followJob(id, signal, { query, suggestions = [], retry, isRefresh = false }) {
   const job = await waitForJob(api, id, {
     signal,
     interval: demo.has('demo') ? 450 : 1000,
@@ -91,38 +195,40 @@ async function followJob(id, signal, isRefresh, retry) {
   }
   if (job.result.outcome === 'RESOLVED') {
     await loadGraph(job.result.commitment_id, signal);
-    notice(isRefresh ? 'Evidence graph updated.' : '');
-  } else if (job.result.outcome === 'AMBIGUOUS') {
-    notice(job.result.question, 'clarify');
-    $('query').focus();
+    if (isRefresh) notice('Evidence graph updated.');
+    else announceGraph(state.conversation);
+  } else if (!isRefresh && job.result.outcome === 'AMBIGUOUS') {
+    continueConversation(query, job.result.question, job.result.suggestions ?? suggestions);
+  } else if (!isRefresh && job.result.outcome === 'NO_PUBLIC_PROMISE') {
+    continueConversation(query, job.result.message, [...suggestions, ...(job.result.suggestions ?? [])]);
   } else {
     notice(job.result.message);
   }
 }
 
 function lookup(query, key = crypto.randomUUID()) {
+  const conversation = state.conversation;
   return action(async signal => {
     const result = await api.lookup(query, key, signal);
     signal.throwIfAborted();
     if (result.outcome === 'MATCH') {
       await loadGraph(result.commitment_id, signal);
-      notice();
+      announceGraph(conversation);
     } else if (result.outcome === 'AMBIGUOUS') {
-      notice(result.question, 'clarify');
-      $('query').focus();
+      continueConversation(query, result.question, result.suggestions);
     } else if (result.job_id) {
-      await followJob(result.job_id, signal, false, () => lookup(query));
+      await followJob(result.job_id, signal, { query, suggestions: result.suggestions, retry: () => lookup(query) });
     } else {
       throw new Error('TraceGraph returned an unexpected lookup result.');
     }
-  }, 'Finding the commitment…', () => lookup(query, key));
+  }, 'Finding the commitment…', () => lookup(query, key), conversation);
 }
 
 function refresh(id, key = crypto.randomUUID()) {
   return action(async signal => {
     const accepted = await api.refresh(id, key, signal);
     signal.throwIfAborted();
-    await followJob(accepted.job_id, signal, true, () => refresh(id));
+    await followJob(accepted.job_id, signal, { isRefresh: true, retry: () => refresh(id) });
   }, 'Checking for new evidence…', () => refresh(id, key));
 }
 
@@ -468,12 +574,30 @@ async function init() {
   $('search-form').addEventListener('submit', event => {
     event.preventDefault();
     const query = $('query').value.trim();
-    if (query) lookup(query);
+    if (query) submitSearch(query);
   });
+  $('conversation-form').addEventListener('submit', event => {
+    event.preventDefault();
+    const conversation = state.conversation;
+    const input = $('conversation-input');
+    const detail = input.value.trim();
+    if (!conversation || !detail || state.request) return;
+    const query = `${conversation.query}\n\nAdditional detail from the user: ${detail}`;
+    if (query.length > 4000) {
+      notice('The combined query is too long. Enter a shorter query in the main search box to continue here.', 'error');
+      return;
+    }
+    input.value = '';
+    conversation.query = query;
+    addConversationMessage('user', detail);
+    showRelatedOptions([]);
+    lookup(query);
+  });
+  $('conversation-quit').addEventListener('click', quitConversation);
   for (const example of document.querySelectorAll('[data-query]')) {
     example.addEventListener('click', () => {
       $('query').value = example.dataset.query;
-      lookup(example.dataset.query);
+      submitSearch(example.dataset.query);
     });
   }
   $('refresh').addEventListener('click', () => refresh(state.graph.commitment.id));

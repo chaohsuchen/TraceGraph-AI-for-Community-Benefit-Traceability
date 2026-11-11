@@ -95,14 +95,13 @@ class Retrieval:
         except Exception as error:
             raise CatalogError("Catalog snapshot read failed") from error
 
-        candidate_ids = {candidate["commitment_id"] for candidate in candidates}
         try:
             answer = self._judge(judge_input, candidates)
         except JudgeError:
             raise
         except Exception as error:
             raise JudgeError("Identity judge failed") from error
-        return _validate_answer(answer, candidate_ids, revision)
+        return _validate_answer(answer, candidates, revision)
 
     def _read_candidates(self, snapshot, embedding, lexical_text):
         revision = snapshot.catalog_revision
@@ -206,20 +205,40 @@ def _bm25_rank(records, query, k):
     return {commitment_id: rank for rank, commitment_id in enumerate(ranked_ids[:k], 1)}
 
 
-def _validate_answer(answer, candidate_ids, revision):
+def _validate_answer(answer, candidates, revision):
     if not isinstance(answer, Mapping):
         raise InvalidJudgeResponse("The judge response must be an object")
     outcome = answer.get("outcome")
+    by_id = {candidate["commitment_id"]: candidate for candidate in candidates}
     if outcome == "MATCH":
         commitment_id = answer.get("commitment_id")
-        if not isinstance(commitment_id, str) or commitment_id not in candidate_ids:
+        if not isinstance(commitment_id, str) or commitment_id not in by_id:
             raise InvalidJudgeResponse("The judge matched an ID outside the candidate list")
         return {"outcome": "MATCH", "commitment_id": commitment_id}
     if outcome == "AMBIGUOUS":
         question = answer.get("question")
         if not isinstance(question, str) or not question.strip():
             raise InvalidJudgeResponse("An ambiguous result requires a clarification question")
-        return {"outcome": "AMBIGUOUS", "question": question.strip()}
-    if outcome == "NO_MATCH":
-        return {"outcome": "NO_MATCH", "catalog_revision": revision}
-    raise InvalidJudgeResponse("The judge returned an unknown outcome")
+        result = {"outcome": "AMBIGUOUS", "question": question.strip()}
+    elif outcome == "NO_MATCH":
+        result = {"outcome": "NO_MATCH", "catalog_revision": revision}
+    else:
+        raise InvalidJudgeResponse("The judge returned an unknown outcome")
+
+    related_ids = answer.get("related_ids")
+    if isinstance(related_ids, list):
+        suggestions = []
+        valid_ids = dict.fromkeys(id_ for id_ in related_ids if isinstance(id_, str) and id_ in by_id)
+        for id_ in list(valid_ids)[:3]:
+            candidate = by_id[id_]
+            title = candidate["title"] or candidate["description"]
+            if isinstance(title, str) and title.strip():
+                suggestion = {"kind": "SAVED_COMMITMENT", "commitment_id": id_, "title": title,
+                              "description": candidate["description"] or ""}
+                organization = candidate["organization_name"] or candidate["responsible_entity_raw"]
+                if organization:
+                    suggestion["organization_name"] = organization
+                suggestions.append(suggestion)
+        if suggestions:
+            result["suggestions"] = suggestions
+    return result

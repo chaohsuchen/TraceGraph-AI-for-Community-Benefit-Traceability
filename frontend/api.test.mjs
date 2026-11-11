@@ -51,7 +51,9 @@ test('the standalone demo opens with cumulative findings, progress and conflict'
 test('the demo supports clarification and organization expansion', () => {
   const api = createDemoApi();
   assert.equal(api.lookup('Harbor Works renewable electricity', 'key1').commitment_id, DEMO_COMMITMENT_ID);
-  assert.equal(api.lookup('Harbor Works local hiring', 'key2').outcome, 'AMBIGUOUS');
+  const ambiguous = api.lookup('Harbor Works local hiring', 'key2');
+  assert.equal(ambiguous.outcome, 'AMBIGUOUS');
+  assert.deepEqual(ambiguous.suggestions.map(option => option.title), ['Local construction jobs', 'Local operations jobs']);
   assert.throws(() => api.lookup('Harbor Works construction jobs', 'key2'), { status: 409 });
   const clarified = api.lookup('Harbor Works construction jobs', 'key3');
   assert.equal(clarified.outcome, 'MATCH');

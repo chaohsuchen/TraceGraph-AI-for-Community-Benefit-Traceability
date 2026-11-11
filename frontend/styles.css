@@ -92,8 +92,24 @@ h2 { font-size: clamp(1.55rem, 3vw, 2.25rem); line-height: 1.15; }
   border-radius: .35rem;
   background: #edf3e9;
 }
-.notice[data-kind="clarify"] { background: #f8f0d7; border-color: #ddca96; }
 .notice[data-kind="error"] { background: #faede7; border-color: #d9b4a6; }
+.conversation { display: grid; gap: .85rem; margin-top: .85rem; padding: 1rem; border: 1px solid var(--line); border-radius: .5rem; background: #fbfcf8; }
+.conversation-head, .conversation-composer { display: flex; align-items: center; gap: .55rem; }
+.conversation-head { justify-content: space-between; }
+.conversation-head h2 { font-size: 1.45rem; }
+.conversation-log { display: grid; gap: .55rem; max-height: 15rem; overflow: auto; padding: .15rem .2rem; }
+.conversation-message { max-width: 92%; padding: .5rem .7rem; border-radius: .45rem; background: #edf3e9; overflow-wrap: anywhere; }
+.conversation-message[data-author="user"] { justify-self: end; background: #f0eee2; }
+.conversation-author { display: block; color: var(--green); font-size: .75rem; }
+#conversation-options-title { margin: 0 0 .35rem; font-size: .95rem; color: var(--green); }
+.conversation-choices { display: grid; gap: .45rem; margin: 0; padding: 0; list-style: none; }
+.conversation-choices li { display: grid; gap: .25rem; padding: .6rem .7rem; border: 1px solid var(--line); border-radius: .35rem; overflow-wrap: anywhere; }
+.conversation-choices .quiet { width: fit-content; }
+.conversation-choices a { width: fit-content; }
+.conversation .notice { margin-top: 0; }
+#conversation-form label { display: block; margin-bottom: .3rem; color: var(--green); font-weight: 650; }
+#conversation-input { flex: 1; min-width: 0; padding: .55rem .65rem; border: 1px solid #aebcaf; border-radius: .35rem; background: white; color: var(--ink); }
+.conversation-composer .primary { white-space: nowrap; }
 .workspace, .empty-state { border: 1px solid var(--line); border-radius: .5rem; background: #fbfcf8; }
 .empty-state { padding: 1.35rem; color: var(--muted); }
 .workspace-head, .verdict-strip {

@@ -16,6 +16,12 @@ def fixture_judge(identity, candidates):
         for row in candidates:
             if "overnight electric shuttle" in row["description"].lower():
                 return {"outcome": "MATCH", "commitment_id": row["commitment_id"]}
+    if identity.get("query") and ("night transit" in text or "weekend transit" in text):
+        related_ids = [row["commitment_id"] for row in candidates if "overnight electric shuttle" in row["description"].lower()]
+        if "night transit" in text and related_ids:
+            return {"outcome": "AMBIGUOUS", "question": "Do you mean the overnight electric shuttle pilot?",
+                    "related_ids": related_ids}
+        return {"outcome": "NO_MATCH", "related_ids": related_ids}
     return {"outcome": "NO_MATCH"}
 
 
@@ -33,7 +39,10 @@ def _citation(document, title, claim, status):
 
 def fixture_research(job, context):
     if not context and "overnight electric shuttle" not in job["query"].lower():
-        return {"draft": None}
+        result = {"draft": None}
+        if "weekend transit" in job["query"].lower():
+            result["related_evidence"] = [_citation("promise", "Public pilot commitment", ORIGINAL, "Commitment documented")]
+        return result
     original = _citation("promise", "Public pilot commitment", ORIGINAL, "Commitment documented")
     evidence = [original, _citation("budget", "Pilot budget approval", BUDGET, "Budget approved")]
     if context:

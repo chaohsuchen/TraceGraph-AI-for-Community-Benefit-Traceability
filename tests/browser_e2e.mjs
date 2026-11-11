@@ -220,3 +220,67 @@ test(publicLive ? 'browser with public-only live research and pgvector' : 'brows
     await browser.close();
   }
 });
+
+test('uncertain lookup and research share a continuing search conversation', { skip: publicLive, timeout: 45_000 }, async () => {
+  const browser = await chromium.launch({ executablePath: process.env.TRACEGRAPH_CHROME || undefined, headless: true });
+  try {
+    const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
+    page.setDefaultTimeout(7_000);
+    const errors = [];
+    page.on('pageerror', error => errors.push(error));
+    await page.goto(base);
+    const first = await search(page, fixtureQuery);
+    const panel = page.getByRole('region', { name: 'Commitment search' });
+    const log = panel.getByRole('log');
+    const related = panel.getByRole('list', { name: 'Related options' });
+    const hint = panel.getByRole('textbox', { name: 'Add a detail or source' });
+    const saved = 'Use this commitment ' + first.commitment.title;
+    const lead = related.getByRole('button', { name: /^Research this lead/ });
+
+    await page.getByRole('searchbox').fill('Which night transit service did Example Transit Authority promise?');
+    await page.getByRole('button', { name: 'Search', exact: true }).click();
+    await log.getByText('Do you mean the overnight electric shuttle pilot?', { exact: true }).waitFor();
+    await related.getByRole('button', { name: saved, exact: true }).waitFor();
+    assert.equal((await clickForGraph(page, saved)).commitment.id, first.commitment.id);
+    await log.getByText(`Opened ${first.commitment.title}.`, { exact: true }).waitFor();
+
+    const weekend = 'What did Example Transit Authority promise about weekend transit?';
+    await page.getByRole('searchbox').fill(weekend);
+    await page.getByRole('button', { name: 'Search', exact: true }).click();
+    await lead.waitFor();
+    assert.equal(await related.getByRole('button', { name: saved, exact: true }).count(), 1);
+    assert.equal(await related.getByRole('link', { name: 'Open source' }).getAttribute('href'),
+      'https://example.org/tracegraph-fixture/promise');
+
+    const detail = 'I am looking for the 2028 pilot.';
+    await hint.fill(detail);
+    const sent = page.waitForRequest(request => request.method() === 'POST' && request.url().endsWith('/api/v1/lookup'));
+    await panel.getByRole('button', { name: 'Search again', exact: true }).click();
+    const { query } = (await sent).postDataJSON();
+    assert.ok(query.startsWith(weekend) && query.includes(detail));
+    await lead.waitFor();
+    assert.equal(await log.getByText(detail, { exact: true }).count(), 1);
+    assert.equal(await log.getByText('No publicly documented original promise could be located.', { exact: true }).count(), 2);
+    const leadName = await lead.getAttribute('aria-label');
+    assert.equal((await clickForGraph(page, leadName)).commitment.id, first.commitment.id);
+    await log.getByText(`Opened ${first.commitment.title}.`, { exact: true }).last().waitFor();
+    assert.equal(await panel.isVisible(), true);
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
+
+    await panel.getByRole('button', { name: 'Quit', exact: true }).click();
+    await panel.waitFor({ state: 'hidden' });
+    assert.equal(await page.locator('#workspace').isVisible(), true);
+
+    await page.goto(base + '/?demo=1');
+    await page.getByRole('searchbox').fill('Harbor Works local hiring');
+    await page.getByRole('button', { name: 'Search', exact: true }).click();
+    await related.getByRole('button', { name: 'Use this commitment Local operations jobs', exact: true }).waitFor();
+    assert.equal(await related.getByRole('button', { name: /^Use this commitment/ }).count(), 2);
+    await related.getByRole('button', { name: 'Use this commitment Local operations jobs', exact: true }).click();
+    await log.getByText('Opened Local operations jobs.', { exact: true }).waitFor();
+    assert.equal(await panel.isVisible(), true);
+    assert.deepEqual(errors, []);
+  } finally {
+    await browser.close();
+  }
+});

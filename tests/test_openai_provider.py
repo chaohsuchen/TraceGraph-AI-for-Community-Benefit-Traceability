@@ -55,7 +55,7 @@ def _extracted(draft, citation_id, *, coverage=None):
 
 class OpenAIProviderTests(unittest.TestCase):
     def test_shared_identity_judge_uses_strict_responses_format(self):
-        answer = {"outcome": "NO_MATCH", "commitment_id": "", "question": ""}
+        answer = {"outcome": "NO_MATCH", "commitment_id": "", "question": "", "related_ids": []}
         opener = Mock(return_value=_response(answer))
         events = []
         client = OpenAIClient("test-key", "test-model", opener=opener, emit=events.append)
@@ -194,7 +194,10 @@ class OpenAIProviderTests(unittest.TestCase):
         )
 
         job = {**_JOB, "query": "What did the authority promise about overnight shuttle routes and new bus stops?"}
-        self.assertEqual(researcher(job, None), {"draft": None, "missing_scope": ["Add three bus stops"]})
+        result = researcher(job, None)
+        self.assertIsNone(result["draft"])
+        self.assertEqual(result["missing_scope"], ["Add three bus stops"])
+        self.assertEqual([item["excerpt"] for item in result["related_evidence"]], [_ORIGINAL_TEXT])
         self.assertTrue(any(event.get("stop_reason") == "SUFFICIENT" for event in events))
         extraction_payload = json.loads(opener.call_args_list[1].args[0].data)
         self.assertNotIn(false_quote, json.dumps(extraction_payload))

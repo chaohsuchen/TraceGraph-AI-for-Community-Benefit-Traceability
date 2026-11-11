@@ -47,7 +47,10 @@ class Agent:
         query = query.strip()
         decision = self._resolve({"query": query})
         if decision["outcome"] == "NO_MATCH":
-            return {"outcome": "START_DISCOVERY", "query": query}
+            result = {"outcome": "START_DISCOVERY", "query": query}
+            if decision.get("suggestions"):
+                result["suggestions"] = decision["suggestions"]
+            return result
         return decision
 
     def execute(self, claimed_job):
@@ -86,7 +89,10 @@ class Agent:
             }
             field = fields[outcome]
             if _has_text(decision[field]):
-                return {"outcome": outcome, field: decision[field]}
+                result = {"outcome": outcome, field: decision[field]}
+                if outcome != "MATCH" and decision.get("suggestions"):
+                    result["suggestions"] = decision["suggestions"]
+                return result
         except Exception as exc:
             raise ResolutionUnavailable("Retrieval failed to resolve the identity") from exc
         raise ResolutionUnavailable("Retrieval returned an incomplete identity decision")
@@ -116,10 +122,14 @@ class Agent:
                     "The verified sources did not document the full requested promise. "
                     f"Missing parts include {components}."
                 )
-            self._store.finish_without_run(claim, {
+            result = {
                 "outcome": "NO_PUBLIC_PROMISE",
                 "message": message,
-            })
+            }
+            suggestions = _web_leads(response.get("related_evidence", []))
+            if suggestions:
+                result["suggestions"] = suggestions
+            self._store.finish_without_run(claim, result)
             return
 
         if not all(_has_text(draft.get(field)) for field in ("description", "title", "original_text")):
@@ -223,6 +233,28 @@ def _scope_parts(response, field):
     if not isinstance(parts, list) or not all(_has_text(part) for part in parts):
         raise ResearchUnavailable("The discovery response contains invalid scope details")
     return [part.strip() for part in parts]
+
+
+def _web_leads(evidence):
+    leads = {}
+    for item in evidence:
+        source = item.get("source", {})
+        url, excerpt = source.get("url"), item.get("excerpt")
+        if not _has_text(url) or not _has_text(excerpt) or url in leads:
+            continue
+        try:
+            parsed = urlsplit(url)
+            if parsed.scheme not in ("https", "http") or not parsed.hostname or parsed.username is not None:
+                continue
+        except ValueError:
+            continue
+        title = item.get("summary") or source.get("title")
+        if _has_text(title):
+            leads[url] = {"kind": "WEB_LEAD", "title": title.strip()[:180], "description": excerpt.strip()[:500],
+                          "source_url": url}
+        if len(leads) == 3:
+            break
+    return list(leads.values())
 
 
 def _has_source_reference(source):

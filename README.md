@@ -10,11 +10,13 @@ flowchart LR
     S --> R["Fuse rankings and keep up to 5 candidates"]
     R --> L["LLM identity check"]
     L -->|MATCH| G["Interactive evidence graph"]
-    L -->|AMBIGUOUS| C["Ask a clarification"]
+    L -->|AMBIGUOUS| C["Continue search conversation"]
     L -->|NO_MATCH| W["Prompt-based web research"]
     W --> V["Verify citations and assess delivery"]
     V -->|Documented promise| D["Save in PostgreSQL"]
-    V -->|Original promise unverified| N["Report the evidence gap"]
+    V -->|Original promise unverified| C
+    C -->|Add details or research a lead| Q
+    C -->|Choose a saved commitment| G
     D --> G
     G -->|Research again| F["Research the saved commitment"]
     F -->|Merge findings and reassess| D
@@ -24,6 +26,8 @@ flowchart LR
 2. **Route the request.** A match opens the saved graph. An ambiguous query returns a focused clarification. A miss queues research. The browser checks the job status and opens the graph when it is ready.
 3. **Research the public record.** The discovery prompt asks the selected LLM to find the original promise, prioritize primary sources, and search for actual outcomes within a six-search budget. It asks the model to stop when the evidence is sufficient, actionable leads run out, or the budget is exhausted. The OpenAI adapter checks quoted passages against the public documents. TraceGraph requires a cited original promise and checks again for a duplicate before creating a new commitment.
 4. **Assess delivery.** The LLM breaks the commitment into independently verifiable conditions and provides supporting citation IDs and gaps. Python checks the references and exact excerpts, and requires verified support for every required condition before assigning `CORROBORATED`. For example, evidence that a payment was made can support partial delivery when it gives no basis for saying the payment met the deadline. An announcement, forecast, or generated graph edge cannot serve as proof of delivery.
+
+When an identity is ambiguous or research leaves the original promise unverified, the same search panel offers relevant saved commitments and cited web leads when available. Select a saved commitment to open its graph, choose a web lead to research it, or add a detail to narrow the next search. The panel keeps the conversation open until you choose **Quit**.
 
 PostgreSQL is the source of truth for commitment identity, embeddings, findings, source citations, and the current assessment. The API generates JSON for the browser. The LLM handles semantic judgments, and Python handles routing, validation, and persistence.
 

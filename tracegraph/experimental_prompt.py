@@ -42,6 +42,8 @@ _SEARCH_SYSTEM = """
 Research the target public commitment using web_search. First locate and cite
 the original promise. Search for primary sources on the material criteria, such
 as official statements, agreements, records of delivery, and oversight reports.
+If the query includes user clarifications, use them to narrow or correct the
+original question. Treat a supplied source as a lead and verify what it states.
 When the first source is forward-looking and the user asks what happened, make
 an outcome-focused search before stopping. Search for retrospective wording such
 as completed, met the target, implemented, or terminated, and for records dated

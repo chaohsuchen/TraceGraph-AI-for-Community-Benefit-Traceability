@@ -130,13 +130,13 @@
         "type": "object",
         "additionalProperties": false,
         "required": ["outcome","question"],
-        "properties": {"outcome":{"const":"AMBIGUOUS"},"question":{"type":"string","minLength":1}}
+        "properties": {"outcome":{"const":"AMBIGUOUS"},"question":{"type":"string","minLength":1},"suggestions":{"$ref":"#/components/schemas/SearchSuggestions"}}
       },
       "ResearchAccepted": {
         "type": "object",
         "additionalProperties": false,
         "required": ["job_id"],
-        "properties": {"job_id":{"$ref":"#/components/schemas/Id"}}
+        "properties": {"job_id":{"$ref":"#/components/schemas/Id"},"suggestions":{"$ref":"#/components/schemas/SearchSuggestions"}}
       },
       "Job": {
         "oneOf": [
@@ -191,7 +191,35 @@
         "type": "object",
         "additionalProperties": false,
         "required": ["outcome","message"],
-        "properties": {"outcome":{"const":"NO_PUBLIC_PROMISE"},"message":{"type":"string","minLength":1}}
+        "properties": {"outcome":{"const":"NO_PUBLIC_PROMISE"},"message":{"type":"string","minLength":1},"suggestions":{"$ref":"#/components/schemas/SearchSuggestions"}}
+      },
+      "SearchSuggestions": {
+        "type": "array",
+        "maxItems": 3,
+        "items": {"oneOf":[{"$ref":"#/components/schemas/SavedSuggestion"},{"$ref":"#/components/schemas/WebLead"}]}
+      },
+      "SavedSuggestion": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["kind","commitment_id","title","description"],
+        "properties": {
+          "kind": {"const":"SAVED_COMMITMENT"},
+          "commitment_id": {"$ref":"#/components/schemas/Id"},
+          "title": {"type":"string","minLength":1},
+          "description": {"type":"string"},
+          "organization_name": {"type":"string","minLength":1}
+        }
+      },
+      "WebLead": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["kind","title","description","source_url"],
+        "properties": {
+          "kind": {"const":"WEB_LEAD"},
+          "title": {"type":"string","minLength":1},
+          "description": {"type":"string","minLength":1},
+          "source_url": {"type":"string","format":"uri"}
+        }
       },
       "CommitmentGraph": {
         "type": "object",

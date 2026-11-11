@@ -24,8 +24,11 @@ def response_error(status, code, message, retryable=False):
     return status, {}, {"error": error(code, message, retryable)}
 
 
-def accepted(job_id):
-    return 202, {"Location": f"{PREFIX}/research-jobs/{quote(job_id, safe='')}"}, {"job_id": job_id}
+def accepted(job_id, suggestions=None):
+    body = {"job_id": job_id}
+    if suggestions:
+        body["suggestions"] = suggestions
+    return 202, {"Location": f"{PREFIX}/research-jobs/{quote(job_id, safe='')}"}, body
 
 
 class Application:
@@ -87,7 +90,7 @@ class Application:
         except self.resolution_errors:
             return response_error(503, "RESOLUTION_UNAVAILABLE", "The identity check could not be completed.", True)
         if outcome["outcome"] == "START_DISCOVERY":
-            return accepted(self.store.enqueue("DISCOVER", query=outcome["query"]))
+            return accepted(self.store.enqueue("DISCOVER", query=outcome["query"]), outcome.get("suggestions"))
         if outcome["outcome"] in ("MATCH", "AMBIGUOUS"):
             return 200, {}, outcome
         raise ValueError("Agent returned an unsupported lookup outcome.")

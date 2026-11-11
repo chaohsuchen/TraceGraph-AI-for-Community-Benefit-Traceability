@@ -161,7 +161,7 @@ class ProviderTests(unittest.TestCase):
     def test_identity_uses_structured_output_and_retrieval_rejects_forged_id(self):
         client = Mock()
         client.create.return_value = _json_message({
-            "outcome": "MATCH", "commitment_id": "forged-id", "question": "",
+            "outcome": "MATCH", "commitment_id": "forged-id", "question": "", "related_ids": [],
         })
         snapshot = Mock(catalog_revision="r1")
         snapshot.scan.return_value = [{"commitment_id": "real-id", "description": "run buses"}]
@@ -377,9 +377,10 @@ class ProviderTests(unittest.TestCase):
         client = Mock()
         coverage = [_coverage_row("Run five overnight routes every weekday", promise_gap="Days are unstated.")]
         client.create.side_effect = [_search_message(), _extracted(_draft(), coverage=coverage)]
-        self.assertEqual(ClaudeWebResearcher(client)(_JOB, None), {
-            "draft": None, "missing_scope": ["Run five overnight routes every weekday"],
-        })
+        result = ClaudeWebResearcher(client)(_JOB, None)
+        self.assertIsNone(result["draft"])
+        self.assertEqual(result["missing_scope"], ["Run five overnight routes every weekday"])
+        self.assertTrue(result["related_evidence"])
 
     def test_missing_delivery_proof_does_not_block_a_documented_promise(self):
         client = Mock()
@@ -409,9 +410,10 @@ class ProviderTests(unittest.TestCase):
         client = Mock()
         coverage = [_coverage_row("weekday operation")]
         client.create.side_effect = [_search_message(), _extracted(_draft(), coverage=coverage), _scope_review(False)]
-        self.assertEqual(ClaudeWebResearcher(client)(_JOB, None), {
-            "draft": None, "missing_scope": ["weekday operation"],
-        })
+        result = ClaudeWebResearcher(client)(_JOB, None)
+        self.assertIsNone(result["draft"])
+        self.assertEqual(result["missing_scope"], ["weekday operation"])
+        self.assertEqual(result["related_evidence"][0]["excerpt"], _ORIGINAL_TEXT)
 
     def test_empty_refresh_cannot_replace_previous_verdict(self):
         client = Mock()

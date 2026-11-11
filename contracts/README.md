@@ -19,6 +19,8 @@
 - POST /api/v1/commitments/{commitment_id}/research-runs 保留已有路径。它启动一次刷新任务，成功后更新同一条承诺的累积证据。
 - GET /api/v1/research-jobs/{job_id} 查询任务。RESOLVED 包含 commitment_id，run_id 是兼容字段，当前返回 null。
 
+AMBIGUOUS、待研究的查询和 NO_PUBLIC_PROMISE 可以带上 suggestions。SAVED_COMMITMENT 指向已有承诺，WEB_LEAD 提供待核实的网页摘录。用户选择已有承诺时直接加载图谱，选择网页线索或补充信息时发起新查询。浏览器保留对话上下文，直到用户退出。
+
 两个 POST 都使用 Idempotency-Key。网络重试复用同一键，独立刷新生成新键。相同键搭配不同请求会返回 409。失败或尚未完成的任务保留当前图谱。
 
 ## 图谱数据和更新
