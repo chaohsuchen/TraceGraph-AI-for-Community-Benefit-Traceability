@@ -1,0 +1,3848 @@
+{
+  "gold_items": 100,
+  "gold_unaligned": [],
+  "predictions": 583,
+  "lenient": {
+    "commitment": {
+      "all": {
+        "precision": 0.1338,
+        "recall": 0.78,
+        "f1": 0.2284,
+        "tp": 78,
+        "fp": 505,
+        "fn": 22,
+        "annotated_pages": {
+          "precision": 0.2989,
+          "recall": 0.78,
+          "f1": 0.4321,
+          "tp": 78,
+          "fp": 183,
+          "fn": 22
+        }
+      },
+      "anchor": {
+        "precision": 0.1134,
+        "recall": 0.7941,
+        "f1": 0.1985,
+        "tp": 54,
+        "fp": 422,
+        "fn": 14,
+        "annotated_pages": {
+          "precision": 0.3158,
+          "recall": 0.7941,
+          "f1": 0.4519,
+          "tp": 54,
+          "fp": 117,
+          "fn": 14
+        }
+      },
+      "heldout": {
+        "precision": 0.2243,
+        "recall": 0.75,
+        "f1": 0.3453,
+        "tp": 24,
+        "fp": 83,
+        "fn": 8,
+        "annotated_pages": {
+          "precision": 0.2667,
+          "recall": 0.75,
+          "f1": 0.3934,
+          "tp": 24,
+          "fp": 66,
+          "fn": 8
+        }
+      },
+      "recall_anchor_dev": {
+        "recall": 1.0,
+        "tp": 20,
+        "gold": 20
+      },
+      "recall_anchor_test": {
+        "recall": 0.7083,
+        "tp": 34,
+        "gold": 48
+      },
+      "recall_heldout_provisional": {
+        "recall": 0.75,
+        "tp": 24,
+        "gold": 32
+      },
+      "recall_human_validated": {
+        "recall": 0.8125,
+        "tp": 26,
+        "gold": 32
+      }
+    },
+    "all": {
+      "matched": 78,
+      "attributes": {
+        "responsible_entity": {
+          "precision": 0.974,
+          "recall": 0.974,
+          "f1": 0.974,
+          "tp": 75,
+          "fp": 2,
+          "fn": 2,
+          "presence": {
+            "precision": 0.987,
+            "recall": 0.987,
+            "f1": 0.987,
+            "tp": 76,
+            "fp": 1,
+            "fn": 1
+          },
+          "mean_token_f1_when_both_present": 0.8241
+        },
+        "amount_value": {
+          "precision": 0.973,
+          "recall": 0.7826,
+          "f1": 0.8675,
+          "tp": 36,
+          "fp": 1,
+          "fn": 10,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.8043,
+            "f1": 0.8916,
+            "tp": 37,
+            "fp": 0,
+            "fn": 9
+          },
+          "mean_token_f1_when_both_present": 0.6836
+        },
+        "term_periodicity": {
+          "precision": 0.625,
+          "recall": 0.1562,
+          "f1": 0.25,
+          "tp": 10,
+          "fp": 6,
+          "fn": 54,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4,
+            "tp": 16,
+            "fp": 0,
+            "fn": 48
+          },
+          "mean_token_f1_when_both_present": 0.5015
+        },
+        "geographic_scope": {
+          "precision": 0.9048,
+          "recall": 0.4524,
+          "f1": 0.6032,
+          "tp": 19,
+          "fp": 2,
+          "fn": 23,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6667,
+            "tp": 21,
+            "fp": 0,
+            "fn": 21
+          },
+          "mean_token_f1_when_both_present": 0.7884
+        },
+        "beneficiary_category": {
+          "precision": 0.6964,
+          "recall": 0.5,
+          "f1": 0.5821,
+          "tp": 39,
+          "fp": 17,
+          "fn": 39,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.7179,
+            "f1": 0.8358,
+            "tp": 56,
+            "fp": 0,
+            "fn": 22
+          },
+          "mean_token_f1_when_both_present": 0.5883
+        },
+        "beneficiary_named": {
+          "precision": 0.8,
+          "recall": 0.25,
+          "f1": 0.381,
+          "tp": 4,
+          "fp": 1,
+          "fn": 12,
+          "presence": {
+            "precision": 0.8,
+            "recall": 0.25,
+            "f1": 0.381,
+            "tp": 4,
+            "fp": 1,
+            "fn": 12
+          },
+          "mean_token_f1_when_both_present": 0.7649
+        },
+        "condition_contingency": {
+          "precision": 0.7778,
+          "recall": 0.875,
+          "f1": 0.8235,
+          "tp": 7,
+          "fp": 2,
+          "fn": 1,
+          "presence": {
+            "precision": 0.7778,
+            "recall": 0.875,
+            "f1": 0.8235,
+            "tp": 7,
+            "fp": 2,
+            "fn": 1
+          },
+          "mean_token_f1_when_both_present": 0.7015
+        },
+        "milestone": {
+          "precision": 0.8,
+          "recall": 0.3333,
+          "f1": 0.4706,
+          "tp": 4,
+          "fp": 1,
+          "fn": 8,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.4167,
+            "f1": 0.5882,
+            "tp": 5,
+            "fp": 0,
+            "fn": 7
+          },
+          "mean_token_f1_when_both_present": 0.7691
+        },
+        "macro_f1": 0.619
+      },
+      "obligation_type": {
+        "n": 78,
+        "accuracy": 0.7564,
+        "macro_f1": 0.7492,
+        "macro_f1_over": [
+          "Binding / license condition",
+          "Contractual commitment",
+          "Target / goal",
+          "Best effort",
+          "Forecast / projection",
+          "Contingent commitment",
+          "Reported accomplishment",
+          "Unresolved / ambiguous"
+        ],
+        "per_class": {
+          "Binding / license condition": {
+            "precision": 0.8261,
+            "recall": 0.9048,
+            "f1": 0.8636,
+            "tp": 19,
+            "fp": 4,
+            "fn": 2
+          },
+          "Contractual commitment": {
+            "precision": 0.6,
+            "recall": 0.8571,
+            "f1": 0.7059,
+            "tp": 12,
+            "fp": 8,
+            "fn": 2
+          },
+          "Target / goal": {
+            "precision": 1.0,
+            "recall": 0.625,
+            "f1": 0.7692,
+            "tp": 5,
+            "fp": 0,
+            "fn": 3
+          },
+          "Best effort": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "Forecast / projection": {
+            "precision": 0.8,
+            "recall": 0.9231,
+            "f1": 0.8571,
+            "tp": 12,
+            "fp": 3,
+            "fn": 1
+          },
+          "Contingent commitment": {
+            "precision": 0.5,
+            "recall": 0.6667,
+            "f1": 0.5714,
+            "tp": 2,
+            "fp": 2,
+            "fn": 1
+          },
+          "Reported accomplishment": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 1
+          },
+          "Unresolved / ambiguous": {
+            "precision": 0.7778,
+            "recall": 0.4375,
+            "f1": 0.56,
+            "tp": 7,
+            "fp": 2,
+            "fn": 9
+          }
+        },
+        "confusion": {
+          "Unresolved / ambiguous": {
+            "Unresolved / ambiguous": 7,
+            "Binding / license condition": 2,
+            "Contingent commitment": 1,
+            "Contractual commitment": 4,
+            "Forecast / projection": 2
+          },
+          "Binding / license condition": {
+            "Binding / license condition": 19,
+            "Contingent commitment": 1,
+            "Unresolved / ambiguous": 1
+          },
+          "Contingent commitment": {
+            "Contingent commitment": 2,
+            "Binding / license condition": 1
+          },
+          "Contractual commitment": {
+            "Contractual commitment": 12,
+            "Binding / license condition": 1,
+            "Forecast / projection": 1
+          },
+          "Target / goal": {
+            "Contractual commitment": 3,
+            "Target / goal": 5
+          },
+          "Forecast / projection": {
+            "Forecast / projection": 12,
+            "Unresolved / ambiguous": 1
+          },
+          "Reported accomplishment": {
+            "Contractual commitment": 1,
+            "Reported accomplishment": 1
+          },
+          "Best effort": {
+            "Best effort": 1
+          }
+        }
+      },
+      "evidence_status": {
+        "n": 78,
+        "accuracy": 0.3846,
+        "macro_f1": 0.0809,
+        "macro_f1_over": [
+          "corroborated",
+          "partially corroborated",
+          "self-reported only",
+          "conflicting",
+          "no public evidence located",
+          "source unavailable",
+          "not yet due",
+          "not applicable"
+        ],
+        "per_class": {
+          "corroborated": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 3
+          },
+          "partially corroborated": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 12
+          },
+          "self-reported only": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 1
+          },
+          "conflicting": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 6
+          },
+          "no public evidence located": {
+            "precision": 0.3816,
+            "recall": 1.0,
+            "f1": 0.5524,
+            "tp": 29,
+            "fp": 47,
+            "fn": 0
+          },
+          "source unavailable": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 3
+          },
+          "not yet due": {
+            "precision": 1.0,
+            "recall": 0.05,
+            "f1": 0.0952,
+            "tp": 1,
+            "fp": 0,
+            "fn": 19
+          },
+          "not applicable": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 4
+          }
+        },
+        "confusion": {
+          "no public evidence located": {
+            "no public evidence located": 29
+          },
+          "partially corroborated": {
+            "no public evidence located": 11,
+            "self-reported only": 1
+          },
+          "source unavailable": {
+            "no public evidence located": 3
+          },
+          "not applicable": {
+            "no public evidence located": 4
+          },
+          "not yet due": {
+            "no public evidence located": 19,
+            "not yet due": 1
+          },
+          "corroborated": {
+            "no public evidence located": 3
+          },
+          "conflicting": {
+            "no public evidence located": 6
+          },
+          "self-reported only": {
+            "no public evidence located": 1
+          }
+        }
+      }
+    },
+    "anchor": {
+      "matched": 54,
+      "attributes": {
+        "responsible_entity": {
+          "precision": 0.9623,
+          "recall": 0.9623,
+          "f1": 0.9623,
+          "tp": 51,
+          "fp": 2,
+          "fn": 2,
+          "presence": {
+            "precision": 0.9811,
+            "recall": 0.9811,
+            "f1": 0.9811,
+            "tp": 52,
+            "fp": 1,
+            "fn": 1
+          },
+          "mean_token_f1_when_both_present": 0.7429
+        },
+        "amount_value": {
+          "precision": 0.9545,
+          "recall": 0.8077,
+          "f1": 0.875,
+          "tp": 21,
+          "fp": 1,
+          "fn": 5,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.8462,
+            "f1": 0.9167,
+            "tp": 22,
+            "fp": 0,
+            "fn": 4
+          },
+          "mean_token_f1_when_both_present": 0.6572
+        },
+        "term_periodicity": {
+          "precision": 0.5455,
+          "recall": 0.1304,
+          "f1": 0.2105,
+          "tp": 6,
+          "fp": 5,
+          "fn": 40,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.2391,
+            "f1": 0.386,
+            "tp": 11,
+            "fp": 0,
+            "fn": 35
+          },
+          "mean_token_f1_when_both_present": 0.5217
+        },
+        "geographic_scope": {
+          "precision": 1.0,
+          "recall": 0.4167,
+          "f1": 0.5882,
+          "tp": 10,
+          "fp": 0,
+          "fn": 14,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.4167,
+            "f1": 0.5882,
+            "tp": 10,
+            "fp": 0,
+            "fn": 14
+          },
+          "mean_token_f1_when_both_present": 0.8556
+        },
+        "beneficiary_category": {
+          "precision": 0.7105,
+          "recall": 0.5,
+          "f1": 0.587,
+          "tp": 27,
+          "fp": 11,
+          "fn": 27,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.7037,
+            "f1": 0.8261,
+            "tp": 38,
+            "fp": 0,
+            "fn": 16
+          },
+          "mean_token_f1_when_both_present": 0.5893
+        },
+        "beneficiary_named": {
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.75,
+          "tp": 3,
+          "fp": 0,
+          "fn": 2,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1": 0.75,
+            "tp": 3,
+            "fp": 0,
+            "fn": 2
+          },
+          "mean_token_f1_when_both_present": 0.8381
+        },
+        "condition_contingency": {
+          "precision": 0.875,
+          "recall": 1.0,
+          "f1": 0.9333,
+          "tp": 7,
+          "fp": 1,
+          "fn": 0,
+          "presence": {
+            "precision": 0.875,
+            "recall": 1.0,
+            "f1": 0.9333,
+            "tp": 7,
+            "fp": 1,
+            "fn": 0
+          },
+          "mean_token_f1_when_both_present": 0.7015
+        },
+        "milestone": {
+          "precision": 1.0,
+          "recall": 0.3636,
+          "f1": 0.5333,
+          "tp": 4,
+          "fp": 0,
+          "fn": 7,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.3636,
+            "f1": 0.5333,
+            "tp": 4,
+            "fp": 0,
+            "fn": 7
+          },
+          "mean_token_f1_when_both_present": 0.9058
+        },
+        "macro_f1": 0.6799
+      },
+      "obligation_type": {
+        "n": 54,
+        "accuracy": 0.8148,
+        "macro_f1": 0.8432,
+        "macro_f1_over": [
+          "Binding / license condition",
+          "Contractual commitment",
+          "Target / goal",
+          "Best effort",
+          "Forecast / projection",
+          "Contingent commitment",
+          "Reported accomplishment",
+          "Unresolved / ambiguous"
+        ],
+        "per_class": {
+          "Binding / license condition": {
+            "precision": 0.8261,
+            "recall": 0.9048,
+            "f1": 0.8636,
+            "tp": 19,
+            "fp": 4,
+            "fn": 2
+          },
+          "Contractual commitment": {
+            "precision": 0.8333,
+            "recall": 0.8333,
+            "f1": 0.8333,
+            "tp": 5,
+            "fp": 1,
+            "fn": 1
+          },
+          "Target / goal": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "Best effort": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "Forecast / projection": {
+            "precision": 0.8889,
+            "recall": 0.8889,
+            "f1": 0.8889,
+            "tp": 8,
+            "fp": 1,
+            "fn": 1
+          },
+          "Contingent commitment": {
+            "precision": 0.5,
+            "recall": 0.6667,
+            "f1": 0.5714,
+            "tp": 2,
+            "fp": 2,
+            "fn": 1
+          },
+          "Reported accomplishment": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "Unresolved / ambiguous": {
+            "precision": 0.7143,
+            "recall": 0.5,
+            "f1": 0.5882,
+            "tp": 5,
+            "fp": 2,
+            "fn": 5
+          }
+        },
+        "confusion": {
+          "Unresolved / ambiguous": {
+            "Unresolved / ambiguous": 5,
+            "Binding / license condition": 2,
+            "Contingent commitment": 1,
+            "Forecast / projection": 1,
+            "Contractual commitment": 1
+          },
+          "Binding / license condition": {
+            "Binding / license condition": 19,
+            "Contingent commitment": 1,
+            "Unresolved / ambiguous": 1
+          },
+          "Contingent commitment": {
+            "Contingent commitment": 2,
+            "Binding / license condition": 1
+          },
+          "Target / goal": {
+            "Target / goal": 3
+          },
+          "Forecast / projection": {
+            "Forecast / projection": 8,
+            "Unresolved / ambiguous": 1
+          },
+          "Contractual commitment": {
+            "Contractual commitment": 5,
+            "Binding / license condition": 1
+          },
+          "Best effort": {
+            "Best effort": 1
+          },
+          "Reported accomplishment": {
+            "Reported accomplishment": 1
+          }
+        }
+      },
+      "evidence_status": {
+        "n": 54,
+        "accuracy": 0.537,
+        "macro_f1": 0.0884,
+        "macro_f1_over": [
+          "corroborated",
+          "partially corroborated",
+          "self-reported only",
+          "conflicting",
+          "no public evidence located",
+          "source unavailable",
+          "not yet due",
+          "not applicable"
+        ],
+        "per_class": {
+          "corroborated": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 3
+          },
+          "partially corroborated": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 11
+          },
+          "self-reported only": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 1
+          },
+          "conflicting": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 5
+          },
+          "no public evidence located": {
+            "precision": 0.5472,
+            "recall": 1.0,
+            "f1": 0.7073,
+            "tp": 29,
+            "fp": 24,
+            "fn": 0
+          },
+          "source unavailable": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "not yet due": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "not applicable": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 3
+          }
+        },
+        "confusion": {
+          "no public evidence located": {
+            "no public evidence located": 29
+          },
+          "partially corroborated": {
+            "no public evidence located": 10,
+            "self-reported only": 1
+          },
+          "source unavailable": {
+            "no public evidence located": 1
+          },
+          "not applicable": {
+            "no public evidence located": 3
+          },
+          "corroborated": {
+            "no public evidence located": 3
+          },
+          "conflicting": {
+            "no public evidence located": 5
+          },
+          "not yet due": {
+            "no public evidence located": 1
+          },
+          "self-reported only": {
+            "no public evidence located": 1
+          }
+        }
+      }
+    },
+    "anchor_test": {
+      "matched": 34,
+      "attributes": {
+        "responsible_entity": {
+          "precision": 0.9394,
+          "recall": 0.9394,
+          "f1": 0.9394,
+          "tp": 31,
+          "fp": 2,
+          "fn": 2,
+          "presence": {
+            "precision": 0.9697,
+            "recall": 0.9697,
+            "f1": 0.9697,
+            "tp": 32,
+            "fp": 1,
+            "fn": 1
+          },
+          "mean_token_f1_when_both_present": 0.7525
+        },
+        "amount_value": {
+          "precision": 0.9286,
+          "recall": 0.7222,
+          "f1": 0.8125,
+          "tp": 13,
+          "fp": 1,
+          "fn": 5,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.7778,
+            "f1": 0.875,
+            "tp": 14,
+            "fp": 0,
+            "fn": 4
+          },
+          "mean_token_f1_when_both_present": 0.5655
+        },
+        "term_periodicity": {
+          "precision": 0.3333,
+          "recall": 0.0714,
+          "f1": 0.1176,
+          "tp": 2,
+          "fp": 4,
+          "fn": 26,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.2143,
+            "f1": 0.3529,
+            "tp": 6,
+            "fp": 0,
+            "fn": 22
+          },
+          "mean_token_f1_when_both_present": 0.375
+        },
+        "geographic_scope": {
+          "precision": 1.0,
+          "recall": 0.3889,
+          "f1": 0.56,
+          "tp": 7,
+          "fp": 0,
+          "fn": 11,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.3889,
+            "f1": 0.56,
+            "tp": 7,
+            "fp": 0,
+            "fn": 11
+          },
+          "mean_token_f1_when_both_present": 0.873
+        },
+        "beneficiary_category": {
+          "precision": 0.5909,
+          "recall": 0.3824,
+          "f1": 0.4643,
+          "tp": 13,
+          "fp": 9,
+          "fn": 21,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.6471,
+            "f1": 0.7857,
+            "tp": 22,
+            "fp": 0,
+            "fn": 12
+          },
+          "mean_token_f1_when_both_present": 0.5374
+        },
+        "beneficiary_named": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6667,
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 1
+          },
+          "mean_token_f1_when_both_present": 0.8
+        },
+        "condition_contingency": {
+          "precision": 0.75,
+          "recall": 1.0,
+          "f1": 0.8571,
+          "tp": 3,
+          "fp": 1,
+          "fn": 0,
+          "presence": {
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571,
+            "tp": 3,
+            "fp": 1,
+            "fn": 0
+          },
+          "mean_token_f1_when_both_present": 0.7331
+        },
+        "milestone": {
+          "precision": 1.0,
+          "recall": 0.3333,
+          "f1": 0.5,
+          "tp": 2,
+          "fp": 0,
+          "fn": 4,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.3333,
+            "f1": 0.5,
+            "tp": 2,
+            "fp": 0,
+            "fn": 4
+          },
+          "mean_token_f1_when_both_present": 0.9615
+        },
+        "macro_f1": 0.6147
+      },
+      "obligation_type": {
+        "n": 34,
+        "accuracy": 0.7647,
+        "macro_f1": 0.6755,
+        "macro_f1_over": [
+          "Binding / license condition",
+          "Contractual commitment",
+          "Target / goal",
+          "Forecast / projection",
+          "Contingent commitment",
+          "Unresolved / ambiguous"
+        ],
+        "per_class": {
+          "Binding / license condition": {
+            "precision": 0.7647,
+            "recall": 0.9286,
+            "f1": 0.8387,
+            "tp": 13,
+            "fp": 4,
+            "fn": 1
+          },
+          "Contractual commitment": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571,
+            "tp": 3,
+            "fp": 0,
+            "fn": 1
+          },
+          "Target / goal": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "Best effort": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "Forecast / projection": {
+            "precision": 0.8571,
+            "recall": 0.8571,
+            "f1": 0.8571,
+            "tp": 6,
+            "fp": 1,
+            "fn": 1
+          },
+          "Contingent commitment": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 1
+          },
+          "Reported accomplishment": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "Unresolved / ambiguous": {
+            "precision": 0.6,
+            "recall": 0.4286,
+            "f1": 0.5,
+            "tp": 3,
+            "fp": 2,
+            "fn": 4
+          }
+        },
+        "confusion": {
+          "Binding / license condition": {
+            "Binding / license condition": 13,
+            "Unresolved / ambiguous": 1
+          },
+          "Unresolved / ambiguous": {
+            "Unresolved / ambiguous": 3,
+            "Binding / license condition": 2,
+            "Contingent commitment": 1,
+            "Forecast / projection": 1
+          },
+          "Contingent commitment": {
+            "Binding / license condition": 1
+          },
+          "Forecast / projection": {
+            "Forecast / projection": 6,
+            "Unresolved / ambiguous": 1
+          },
+          "Contractual commitment": {
+            "Contractual commitment": 3,
+            "Binding / license condition": 1
+          },
+          "Target / goal": {
+            "Target / goal": 1
+          },
+          "Best effort": {},
+          "Reported accomplishment": {}
+        }
+      },
+      "evidence_status": {
+        "n": 34,
+        "accuracy": 0.6471,
+        "macro_f1": 0.1309,
+        "macro_f1_over": [
+          "corroborated",
+          "partially corroborated",
+          "conflicting",
+          "no public evidence located",
+          "not yet due",
+          "not applicable"
+        ],
+        "per_class": {
+          "corroborated": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 3
+          },
+          "partially corroborated": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 3
+          },
+          "self-reported only": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "conflicting": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 2
+          },
+          "no public evidence located": {
+            "precision": 0.6471,
+            "recall": 1.0,
+            "f1": 0.7857,
+            "tp": 22,
+            "fp": 12,
+            "fn": 0
+          },
+          "source unavailable": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "not yet due": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "not applicable": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 3
+          }
+        },
+        "confusion": {
+          "no public evidence located": {
+            "no public evidence located": 22
+          },
+          "not applicable": {
+            "no public evidence located": 3
+          },
+          "partially corroborated": {
+            "no public evidence located": 3
+          },
+          "corroborated": {
+            "no public evidence located": 3
+          },
+          "conflicting": {
+            "no public evidence located": 2
+          },
+          "not yet due": {
+            "no public evidence located": 1
+          },
+          "self-reported only": {},
+          "source unavailable": {}
+        }
+      }
+    },
+    "heldout": {
+      "matched": 24,
+      "attributes": {
+        "responsible_entity": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 24,
+          "fp": 0,
+          "fn": 0,
+          "presence": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 24,
+            "fp": 0,
+            "fn": 0
+          },
+          "mean_token_f1_when_both_present": 1.0
+        },
+        "amount_value": {
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.8571,
+          "tp": 15,
+          "fp": 0,
+          "fn": 5,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571,
+            "tp": 15,
+            "fp": 0,
+            "fn": 5
+          },
+          "mean_token_f1_when_both_present": 0.7224
+        },
+        "term_periodicity": {
+          "precision": 0.8,
+          "recall": 0.2222,
+          "f1": 0.3478,
+          "tp": 4,
+          "fp": 1,
+          "fn": 14,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.2778,
+            "f1": 0.4348,
+            "tp": 5,
+            "fp": 0,
+            "fn": 13
+          },
+          "mean_token_f1_when_both_present": 0.4571
+        },
+        "geographic_scope": {
+          "precision": 0.8182,
+          "recall": 0.5,
+          "f1": 0.6207,
+          "tp": 9,
+          "fp": 2,
+          "fn": 9,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.6111,
+            "f1": 0.7586,
+            "tp": 11,
+            "fp": 0,
+            "fn": 7
+          },
+          "mean_token_f1_when_both_present": 0.7273
+        },
+        "beneficiary_category": {
+          "precision": 0.6667,
+          "recall": 0.5,
+          "f1": 0.5714,
+          "tp": 12,
+          "fp": 6,
+          "fn": 12,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571,
+            "tp": 18,
+            "fp": 0,
+            "fn": 6
+          },
+          "mean_token_f1_when_both_present": 0.5861
+        },
+        "beneficiary_named": {
+          "precision": 0.5,
+          "recall": 0.0909,
+          "f1": 0.1538,
+          "tp": 1,
+          "fp": 1,
+          "fn": 10,
+          "presence": {
+            "precision": 0.5,
+            "recall": 0.0909,
+            "f1": 0.1538,
+            "tp": 1,
+            "fp": 1,
+            "fn": 10
+          },
+          "mean_token_f1_when_both_present": 0.5455
+        },
+        "condition_contingency": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "presence": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 1
+          },
+          "mean_token_f1_when_both_present": null
+        },
+        "milestone": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "presence": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "mean_token_f1_when_both_present": 0.2222
+        },
+        "macro_f1": 0.4439
+      },
+      "obligation_type": {
+        "n": 24,
+        "accuracy": 0.625,
+        "macro_f1": 0.5016,
+        "macro_f1_over": [
+          "Contractual commitment",
+          "Target / goal",
+          "Forecast / projection",
+          "Reported accomplishment",
+          "Unresolved / ambiguous"
+        ],
+        "per_class": {
+          "Binding / license condition": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "Contractual commitment": {
+            "precision": 0.5,
+            "recall": 0.875,
+            "f1": 0.6364,
+            "tp": 7,
+            "fp": 7,
+            "fn": 1
+          },
+          "Target / goal": {
+            "precision": 1.0,
+            "recall": 0.4,
+            "f1": 0.5714,
+            "tp": 2,
+            "fp": 0,
+            "fn": 3
+          },
+          "Best effort": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "Forecast / projection": {
+            "precision": 0.6667,
+            "recall": 1.0,
+            "f1": 0.8,
+            "tp": 4,
+            "fp": 2,
+            "fn": 0
+          },
+          "Contingent commitment": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "Reported accomplishment": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "Unresolved / ambiguous": {
+            "precision": 1.0,
+            "recall": 0.3333,
+            "f1": 0.5,
+            "tp": 2,
+            "fp": 0,
+            "fn": 4
+          }
+        },
+        "confusion": {
+          "Unresolved / ambiguous": {
+            "Contractual commitment": 3,
+            "Unresolved / ambiguous": 2,
+            "Forecast / projection": 1
+          },
+          "Contractual commitment": {
+            "Contractual commitment": 7,
+            "Forecast / projection": 1
+          },
+          "Target / goal": {
+            "Contractual commitment": 3,
+            "Target / goal": 2
+          },
+          "Forecast / projection": {
+            "Forecast / projection": 4
+          },
+          "Reported accomplishment": {
+            "Contractual commitment": 1
+          },
+          "Binding / license condition": {},
+          "Best effort": {},
+          "Contingent commitment": {}
+        }
+      },
+      "evidence_status": {
+        "n": 24,
+        "accuracy": 0.0417,
+        "macro_f1": 0.02,
+        "macro_f1_over": [
+          "partially corroborated",
+          "conflicting",
+          "source unavailable",
+          "not yet due",
+          "not applicable"
+        ],
+        "per_class": {
+          "corroborated": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "partially corroborated": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "self-reported only": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "conflicting": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "no public evidence located": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 23,
+            "fn": 0
+          },
+          "source unavailable": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 2
+          },
+          "not yet due": {
+            "precision": 1.0,
+            "recall": 0.0526,
+            "f1": 0.1,
+            "tp": 1,
+            "fp": 0,
+            "fn": 18
+          },
+          "not applicable": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          }
+        },
+        "confusion": {
+          "not yet due": {
+            "no public evidence located": 18,
+            "not yet due": 1
+          },
+          "partially corroborated": {
+            "no public evidence located": 1
+          },
+          "source unavailable": {
+            "no public evidence located": 2
+          },
+          "conflicting": {
+            "no public evidence located": 1
+          },
+          "not applicable": {
+            "no public evidence located": 1
+          },
+          "corroborated": {},
+          "self-reported only": {},
+          "no public evidence located": {}
+        }
+      }
+    },
+    "human_validated": {
+      "matched": 26,
+      "attributes": {
+        "responsible_entity": {
+          "precision": 0.9231,
+          "recall": 0.96,
+          "f1": 0.9412,
+          "tp": 24,
+          "fp": 2,
+          "fn": 1,
+          "presence": {
+            "precision": 0.9615,
+            "recall": 1.0,
+            "f1": 0.9804,
+            "tp": 25,
+            "fp": 1,
+            "fn": 0
+          },
+          "mean_token_f1_when_both_present": 0.9267
+        },
+        "amount_value": {
+          "precision": 0.9375,
+          "recall": 0.7143,
+          "f1": 0.8108,
+          "tp": 15,
+          "fp": 1,
+          "fn": 6,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.7619,
+            "f1": 0.8649,
+            "tp": 16,
+            "fp": 0,
+            "fn": 5
+          },
+          "mean_token_f1_when_both_present": 0.709
+        },
+        "term_periodicity": {
+          "precision": 0.8571,
+          "recall": 0.3158,
+          "f1": 0.4615,
+          "tp": 6,
+          "fp": 1,
+          "fn": 13,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.3684,
+            "f1": 0.5385,
+            "tp": 7,
+            "fp": 0,
+            "fn": 12
+          },
+          "mean_token_f1_when_both_present": 0.5269
+        },
+        "geographic_scope": {
+          "precision": 0.8,
+          "recall": 0.4706,
+          "f1": 0.5926,
+          "tp": 8,
+          "fp": 2,
+          "fn": 9,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.5882,
+            "f1": 0.7407,
+            "tp": 10,
+            "fp": 0,
+            "fn": 7
+          },
+          "mean_token_f1_when_both_present": 0.6667
+        },
+        "beneficiary_category": {
+          "precision": 0.5714,
+          "recall": 0.4615,
+          "f1": 0.5106,
+          "tp": 12,
+          "fp": 9,
+          "fn": 14,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.8077,
+            "f1": 0.8936,
+            "tp": 21,
+            "fp": 0,
+            "fn": 5
+          },
+          "mean_token_f1_when_both_present": 0.5492
+        },
+        "beneficiary_named": {
+          "precision": 0.5,
+          "recall": 0.0833,
+          "f1": 0.1429,
+          "tp": 1,
+          "fp": 1,
+          "fn": 11,
+          "presence": {
+            "precision": 0.5,
+            "recall": 0.0833,
+            "f1": 0.1429,
+            "tp": 1,
+            "fp": 1,
+            "fn": 11
+          },
+          "mean_token_f1_when_both_present": 0.8571
+        },
+        "condition_contingency": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "tp": 1,
+          "fp": 1,
+          "fn": 1,
+          "presence": {
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1": 0.5,
+            "tp": 1,
+            "fp": 1,
+            "fn": 1
+          },
+          "mean_token_f1_when_both_present": 0.6364
+        },
+        "milestone": {
+          "precision": 0.6667,
+          "recall": 0.4,
+          "f1": 0.5,
+          "tp": 2,
+          "fp": 1,
+          "fn": 3,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1": 0.75,
+            "tp": 3,
+            "fp": 0,
+            "fn": 2
+          },
+          "mean_token_f1_when_both_present": 0.7407
+        },
+        "macro_f1": 0.5575
+      },
+      "obligation_type": {
+        "n": 26,
+        "accuracy": 0.6923,
+        "macro_f1": 0.6924,
+        "macro_f1_over": [
+          "Binding / license condition",
+          "Contractual commitment",
+          "Target / goal",
+          "Forecast / projection",
+          "Contingent commitment",
+          "Unresolved / ambiguous"
+        ],
+        "per_class": {
+          "Binding / license condition": {
+            "precision": 0.8333,
+            "recall": 1.0,
+            "f1": 0.9091,
+            "tp": 5,
+            "fp": 1,
+            "fn": 0
+          },
+          "Contractual commitment": {
+            "precision": 0.5833,
+            "recall": 0.875,
+            "f1": 0.7,
+            "tp": 7,
+            "fp": 5,
+            "fn": 1
+          },
+          "Target / goal": {
+            "precision": 1.0,
+            "recall": 0.3333,
+            "f1": 0.5,
+            "tp": 1,
+            "fp": 0,
+            "fn": 2
+          },
+          "Best effort": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "Forecast / projection": {
+            "precision": 0.3333,
+            "recall": 1.0,
+            "f1": 0.5,
+            "tp": 1,
+            "fp": 2,
+            "fn": 0
+          },
+          "Contingent commitment": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "Reported accomplishment": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "Unresolved / ambiguous": {
+            "precision": 1.0,
+            "recall": 0.375,
+            "f1": 0.5455,
+            "tp": 3,
+            "fp": 0,
+            "fn": 5
+          }
+        },
+        "confusion": {
+          "Unresolved / ambiguous": {
+            "Unresolved / ambiguous": 3,
+            "Contractual commitment": 3,
+            "Forecast / projection": 1,
+            "Binding / license condition": 1
+          },
+          "Contractual commitment": {
+            "Contractual commitment": 7,
+            "Forecast / projection": 1
+          },
+          "Forecast / projection": {
+            "Forecast / projection": 1
+          },
+          "Target / goal": {
+            "Contractual commitment": 2,
+            "Target / goal": 1
+          },
+          "Binding / license condition": {
+            "Binding / license condition": 5
+          },
+          "Contingent commitment": {
+            "Contingent commitment": 1
+          },
+          "Best effort": {},
+          "Reported accomplishment": {}
+        }
+      },
+      "evidence_status": {
+        "n": 26,
+        "accuracy": 0.2692,
+        "macro_f1": 0.0773,
+        "macro_f1_over": [
+          "corroborated",
+          "partially corroborated",
+          "conflicting",
+          "no public evidence located",
+          "source unavailable",
+          "not yet due",
+          "not applicable"
+        ],
+        "per_class": {
+          "corroborated": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "partially corroborated": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 3
+          },
+          "self-reported only": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "conflicting": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "no public evidence located": {
+            "precision": 0.24,
+            "recall": 1.0,
+            "f1": 0.3871,
+            "tp": 6,
+            "fp": 19,
+            "fn": 0
+          },
+          "source unavailable": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "not yet due": {
+            "precision": 1.0,
+            "recall": 0.0833,
+            "f1": 0.1538,
+            "tp": 1,
+            "fp": 0,
+            "fn": 11
+          },
+          "not applicable": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 2
+          }
+        },
+        "confusion": {
+          "no public evidence located": {
+            "no public evidence located": 6
+          },
+          "not yet due": {
+            "no public evidence located": 11,
+            "not yet due": 1
+          },
+          "not applicable": {
+            "no public evidence located": 2
+          },
+          "corroborated": {
+            "no public evidence located": 1
+          },
+          "partially corroborated": {
+            "no public evidence located": 3
+          },
+          "conflicting": {
+            "no public evidence located": 1
+          },
+          "source unavailable": {
+            "no public evidence located": 1
+          },
+          "self-reported only": {}
+        }
+      }
+    },
+    "_pairs": {
+      "TG-GOLD-A051": "B0-GFLB-SEL-2025-12-01-0191",
+      "TG-GOLD-H012": "B0-GFLB-SEL-2025-12-01-0078",
+      "TG-GOLD-A063": "B0-NYSGC-RWNYC-LIC-2025-12-19-0008",
+      "TG-GOLD-A034": "B0-GFLB-SEL-2025-12-01-0174",
+      "TG-GOLD-A010": "B0-RFA-2023-01-03-0316",
+      "TG-GOLD-A014": "B0-RFA-2023-01-03-0332",
+      "TG-GOLD-A059": "B0-NYSGC-RWNYC-LIC-2025-12-19-0004",
+      "TG-GOLD-A064": "B0-NYSGC-RWNYC-LIC-2025-12-19-0009",
+      "TG-GOLD-H001": "B0-GFLB-SEL-2025-12-01-0046",
+      "TG-GOLD-A007": "B0-RFA-2023-01-03-0289",
+      "TG-GOLD-A062": "B0-NYSGC-RWNYC-LIC-2025-12-19-0007",
+      "TG-GOLD-A037": "B0-GFLB-SEL-2025-12-01-0176",
+      "TG-GOLD-H025": "B0-GFLB-SEL-2025-12-01-0131",
+      "TG-GOLD-A054": "B0-GFLB-SEL-2025-12-01-0195",
+      "TG-GOLD-H004": "B0-GFLB-SEL-2025-12-01-0050",
+      "TG-GOLD-A048": "B0-GFLB-SEL-2025-12-01-0185",
+      "TG-GOLD-A018": "B0-RFA-2023-01-03-0346",
+      "TG-GOLD-A069": "B0-NYSGC-RWNYC-LIC-2025-12-19-0018",
+      "TG-GOLD-A026": "B0-GFLB-SEL-2025-12-01-0151",
+      "TG-GOLD-A006": "B0-RFA-2023-01-03-0268",
+      "TG-GOLD-A016": "B0-RFA-2023-01-03-0339",
+      "TG-GOLD-A056": "B0-GFLB-SEL-2025-12-01-0200",
+      "TG-GOLD-H007": "B0-GFLB-SEL-2025-12-01-0067",
+      "TG-GOLD-A053": "B0-GFLB-SEL-2025-12-01-0193",
+      "TG-GOLD-A046": "B0-GFLB-SEL-2025-12-01-0183",
+      "TG-GOLD-A055": "B0-GFLB-SEL-2025-12-01-0196",
+      "TG-GOLD-A023": "B0-GFLB-SEL-2025-12-01-0035",
+      "TG-GOLD-A033": "B0-GFLB-SEL-2025-12-01-0172",
+      "TG-GOLD-H006": "B0-GFLB-SEL-2025-12-01-0059",
+      "TG-GOLD-A001": "B0-RFA-2023-01-03-0002",
+      "TG-GOLD-A052": "B0-GFLB-SEL-2025-12-01-0192",
+      "TG-GOLD-H005": "B0-GFLB-SEL-2025-12-01-0051",
+      "TG-GOLD-A032": "B0-GFLB-SEL-2025-12-01-0171",
+      "TG-GOLD-A012": "B0-RFA-2023-01-03-0330",
+      "TG-GOLD-A047": "B0-GFLB-SEL-2025-12-01-0184",
+      "TG-GOLD-A045": "B0-GFLB-SEL-2025-12-01-0182",
+      "TG-GOLD-H022": "B0-GFLB-SEL-2025-12-01-0121",
+      "TG-GOLD-A040": "B0-GFLB-SEL-2025-12-01-0180",
+      "TG-GOLD-A025": "B0-GFLB-SEL-2025-12-01-0150",
+      "TG-GOLD-A003": "B0-RFA-2023-01-03-0011",
+      "TG-GOLD-A004": "B0-RFA-2023-01-03-0012",
+      "TG-GOLD-A020": "B0-GFLB-SEL-2025-12-01-0005",
+      "TG-GOLD-H002": "B0-GFLB-SEL-2025-12-01-0047",
+      "TG-GOLD-A008": "B0-RFA-2023-01-03-0293",
+      "TG-GOLD-A050": "B0-GFLB-SEL-2025-12-01-0190",
+      "TG-GOLD-A066": "B0-NYSGC-RWNYC-LIC-2025-12-19-0011",
+      "TG-GOLD-H008": "B0-GFLB-SEL-2025-12-01-0070",
+      "TG-GOLD-A009": "B0-RFA-2023-01-03-0294",
+      "TG-GOLD-A017": "B0-RFA-2023-01-03-0343",
+      "TG-GOLD-A029": "B0-GFLB-SEL-2025-12-01-0161",
+      "TG-GOLD-A049": "B0-GFLB-SEL-2025-12-01-0189",
+      "TG-GOLD-A065": "B0-NYSGC-RWNYC-LIC-2025-12-19-0010",
+      "TG-GOLD-H003": "B0-GFLB-SEL-2025-12-01-0049",
+      "TG-GOLD-A061": "B0-NYSGC-RWNYC-LIC-2025-12-19-0006",
+      "TG-GOLD-A030": "B0-GFLB-SEL-2025-12-01-0170",
+      "TG-GOLD-A036": "B0-GFLB-SEL-2025-12-01-0175",
+      "TG-GOLD-H018": "B0-GFLB-SEL-2025-12-01-0104",
+      "TG-GOLD-A005": "B0-RFA-2023-01-03-0193",
+      "TG-GOLD-H024": "B0-GFLB-SEL-2025-12-01-0128",
+      "TG-GOLD-H028": "B0-GFLB-SEL-2025-12-01-0134",
+      "TG-GOLD-A060": "B0-NYSGC-RWNYC-LIC-2025-12-19-0005",
+      "TG-GOLD-H016": "B0-GFLB-SEL-2025-12-01-0089",
+      "TG-GOLD-H019": "B0-GFLB-SEL-2025-12-01-0115",
+      "TG-GOLD-H010": "B0-GFLB-SEL-2025-12-01-0074",
+      "TG-GOLD-H015": "B0-GFLB-SEL-2025-12-01-0079",
+      "TG-GOLD-H009": "B0-GFLB-SEL-2025-12-01-0072",
+      "TG-GOLD-A042": "B0-GFLB-SEL-2025-12-01-0181",
+      "TG-GOLD-H032": "B0-GFLB-SEL-2025-12-01-0139",
+      "TG-GOLD-H026": "B0-GFLB-SEL-2025-12-01-0133",
+      "TG-GOLD-H023": "B0-GFLB-SEL-2025-12-01-0124",
+      "TG-GOLD-H031": "B0-GFLB-SEL-2025-12-01-0138",
+      "TG-GOLD-A022": "B0-GFLB-SEL-2025-12-01-0022",
+      "TG-GOLD-A058": "B0-NYSGC-RWNYC-LIC-2025-12-19-0001",
+      "TG-GOLD-A068": "B0-NYSGC-RWNYC-LIC-2025-12-19-0017",
+      "TG-GOLD-A013": "B0-RFA-2023-01-03-0331",
+      "TG-GOLD-A011": "B0-RFA-2023-01-03-0321",
+      "TG-GOLD-A024": "B0-GFLB-SEL-2025-12-01-0040",
+      "TG-GOLD-H011": "B0-GFLB-SEL-2025-12-01-0076"
+    }
+  },
+  "strict": {
+    "commitment": {
+      "all": {
+        "precision": 0.1184,
+        "recall": 0.69,
+        "f1": 0.202,
+        "tp": 69,
+        "fp": 514,
+        "fn": 31,
+        "annotated_pages": {
+          "precision": 0.2644,
+          "recall": 0.69,
+          "f1": 0.3823,
+          "tp": 69,
+          "fp": 192,
+          "fn": 31
+        }
+      },
+      "anchor": {
+        "precision": 0.1071,
+        "recall": 0.75,
+        "f1": 0.1875,
+        "tp": 51,
+        "fp": 425,
+        "fn": 17,
+        "annotated_pages": {
+          "precision": 0.2982,
+          "recall": 0.75,
+          "f1": 0.4268,
+          "tp": 51,
+          "fp": 120,
+          "fn": 17
+        }
+      },
+      "heldout": {
+        "precision": 0.1682,
+        "recall": 0.5625,
+        "f1": 0.259,
+        "tp": 18,
+        "fp": 89,
+        "fn": 14,
+        "annotated_pages": {
+          "precision": 0.2,
+          "recall": 0.5625,
+          "f1": 0.2951,
+          "tp": 18,
+          "fp": 72,
+          "fn": 14
+        }
+      },
+      "recall_anchor_dev": {
+        "recall": 1.0,
+        "tp": 20,
+        "gold": 20
+      },
+      "recall_anchor_test": {
+        "recall": 0.6458,
+        "tp": 31,
+        "gold": 48
+      },
+      "recall_heldout_provisional": {
+        "recall": 0.5625,
+        "tp": 18,
+        "gold": 32
+      },
+      "recall_human_validated": {
+        "recall": 0.6875,
+        "tp": 22,
+        "gold": 32
+      }
+    },
+    "all": {
+      "matched": 69,
+      "attributes": {
+        "responsible_entity": {
+          "precision": 0.9706,
+          "recall": 0.9706,
+          "f1": 0.9706,
+          "tp": 66,
+          "fp": 2,
+          "fn": 2,
+          "presence": {
+            "precision": 0.9853,
+            "recall": 0.9853,
+            "f1": 0.9853,
+            "tp": 67,
+            "fp": 1,
+            "fn": 1
+          },
+          "mean_token_f1_when_both_present": 0.8005
+        },
+        "amount_value": {
+          "precision": 0.9697,
+          "recall": 0.8,
+          "f1": 0.8767,
+          "tp": 32,
+          "fp": 1,
+          "fn": 8,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.825,
+            "f1": 0.9041,
+            "tp": 33,
+            "fp": 0,
+            "fn": 7
+          },
+          "mean_token_f1_when_both_present": 0.6771
+        },
+        "term_periodicity": {
+          "precision": 0.625,
+          "recall": 0.1695,
+          "f1": 0.2667,
+          "tp": 10,
+          "fp": 6,
+          "fn": 49,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.2712,
+            "f1": 0.4267,
+            "tp": 16,
+            "fp": 0,
+            "fn": 43
+          },
+          "mean_token_f1_when_both_present": 0.5015
+        },
+        "geographic_scope": {
+          "precision": 0.8947,
+          "recall": 0.4595,
+          "f1": 0.6071,
+          "tp": 17,
+          "fp": 2,
+          "fn": 20,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.5135,
+            "f1": 0.6786,
+            "tp": 19,
+            "fp": 0,
+            "fn": 18
+          },
+          "mean_token_f1_when_both_present": 0.7977
+        },
+        "beneficiary_category": {
+          "precision": 0.7083,
+          "recall": 0.4928,
+          "f1": 0.5812,
+          "tp": 34,
+          "fp": 14,
+          "fn": 35,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.6957,
+            "f1": 0.8205,
+            "tp": 48,
+            "fp": 0,
+            "fn": 21
+          },
+          "mean_token_f1_when_both_present": 0.6081
+        },
+        "beneficiary_named": {
+          "precision": 0.75,
+          "recall": 0.2308,
+          "f1": 0.3529,
+          "tp": 3,
+          "fp": 1,
+          "fn": 10,
+          "presence": {
+            "precision": 0.75,
+            "recall": 0.2308,
+            "f1": 0.3529,
+            "tp": 3,
+            "fp": 1,
+            "fn": 10
+          },
+          "mean_token_f1_when_both_present": 0.8381
+        },
+        "condition_contingency": {
+          "precision": 0.75,
+          "recall": 0.8571,
+          "f1": 0.8,
+          "tp": 6,
+          "fp": 2,
+          "fn": 1,
+          "presence": {
+            "precision": 0.75,
+            "recall": 0.8571,
+            "f1": 0.8,
+            "tp": 6,
+            "fp": 2,
+            "fn": 1
+          },
+          "mean_token_f1_when_both_present": 0.6935
+        },
+        "milestone": {
+          "precision": 0.8,
+          "recall": 0.3333,
+          "f1": 0.4706,
+          "tp": 4,
+          "fp": 1,
+          "fn": 8,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.4167,
+            "f1": 0.5882,
+            "tp": 5,
+            "fp": 0,
+            "fn": 7
+          },
+          "mean_token_f1_when_both_present": 0.7691
+        },
+        "macro_f1": 0.6157
+      },
+      "obligation_type": {
+        "n": 69,
+        "accuracy": 0.7826,
+        "macro_f1": 0.7926,
+        "macro_f1_over": [
+          "Binding / license condition",
+          "Contractual commitment",
+          "Target / goal",
+          "Best effort",
+          "Forecast / projection",
+          "Contingent commitment",
+          "Reported accomplishment",
+          "Unresolved / ambiguous"
+        ],
+        "per_class": {
+          "Binding / license condition": {
+            "precision": 0.8636,
+            "recall": 0.9048,
+            "f1": 0.8837,
+            "tp": 19,
+            "fp": 3,
+            "fn": 2
+          },
+          "Contractual commitment": {
+            "precision": 0.625,
+            "recall": 1.0,
+            "f1": 0.7692,
+            "tp": 10,
+            "fp": 6,
+            "fn": 0
+          },
+          "Target / goal": {
+            "precision": 1.0,
+            "recall": 0.5714,
+            "f1": 0.7273,
+            "tp": 4,
+            "fp": 0,
+            "fn": 3
+          },
+          "Best effort": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "Forecast / projection": {
+            "precision": 0.8571,
+            "recall": 0.9231,
+            "f1": 0.8889,
+            "tp": 12,
+            "fp": 2,
+            "fn": 1
+          },
+          "Contingent commitment": {
+            "precision": 0.5,
+            "recall": 0.6667,
+            "f1": 0.5714,
+            "tp": 2,
+            "fp": 2,
+            "fn": 1
+          },
+          "Reported accomplishment": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "Unresolved / ambiguous": {
+            "precision": 0.7143,
+            "recall": 0.3846,
+            "f1": 0.5,
+            "tp": 5,
+            "fp": 2,
+            "fn": 8
+          }
+        },
+        "confusion": {
+          "Unresolved / ambiguous": {
+            "Unresolved / ambiguous": 5,
+            "Binding / license condition": 2,
+            "Contingent commitment": 1,
+            "Contractual commitment": 3,
+            "Forecast / projection": 2
+          },
+          "Binding / license condition": {
+            "Binding / license condition": 19,
+            "Contingent commitment": 1,
+            "Unresolved / ambiguous": 1
+          },
+          "Contingent commitment": {
+            "Contingent commitment": 2,
+            "Binding / license condition": 1
+          },
+          "Contractual commitment": {
+            "Contractual commitment": 10
+          },
+          "Target / goal": {
+            "Contractual commitment": 3,
+            "Target / goal": 4
+          },
+          "Forecast / projection": {
+            "Forecast / projection": 12,
+            "Unresolved / ambiguous": 1
+          },
+          "Best effort": {
+            "Best effort": 1
+          },
+          "Reported accomplishment": {
+            "Reported accomplishment": 1
+          }
+        }
+      },
+      "evidence_status": {
+        "n": 69,
+        "accuracy": 0.4203,
+        "macro_f1": 0.0884,
+        "macro_f1_over": [
+          "corroborated",
+          "partially corroborated",
+          "self-reported only",
+          "conflicting",
+          "no public evidence located",
+          "source unavailable",
+          "not yet due",
+          "not applicable"
+        ],
+        "per_class": {
+          "corroborated": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 3
+          },
+          "partially corroborated": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 10
+          },
+          "self-reported only": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 1
+          },
+          "conflicting": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 5
+          },
+          "no public evidence located": {
+            "precision": 0.4179,
+            "recall": 1.0,
+            "f1": 0.5895,
+            "tp": 28,
+            "fp": 39,
+            "fn": 0
+          },
+          "source unavailable": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 3
+          },
+          "not yet due": {
+            "precision": 1.0,
+            "recall": 0.0625,
+            "f1": 0.1176,
+            "tp": 1,
+            "fp": 0,
+            "fn": 15
+          },
+          "not applicable": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 3
+          }
+        },
+        "confusion": {
+          "no public evidence located": {
+            "no public evidence located": 28
+          },
+          "partially corroborated": {
+            "no public evidence located": 9,
+            "self-reported only": 1
+          },
+          "source unavailable": {
+            "no public evidence located": 3
+          },
+          "not applicable": {
+            "no public evidence located": 3
+          },
+          "not yet due": {
+            "no public evidence located": 15,
+            "not yet due": 1
+          },
+          "corroborated": {
+            "no public evidence located": 3
+          },
+          "conflicting": {
+            "no public evidence located": 5
+          },
+          "self-reported only": {
+            "no public evidence located": 1
+          }
+        }
+      }
+    },
+    "anchor": {
+      "matched": 51,
+      "attributes": {
+        "responsible_entity": {
+          "precision": 0.96,
+          "recall": 0.96,
+          "f1": 0.96,
+          "tp": 48,
+          "fp": 2,
+          "fn": 2,
+          "presence": {
+            "precision": 0.98,
+            "recall": 0.98,
+            "f1": 0.98,
+            "tp": 49,
+            "fp": 1,
+            "fn": 1
+          },
+          "mean_token_f1_when_both_present": 0.7272
+        },
+        "amount_value": {
+          "precision": 0.9545,
+          "recall": 0.84,
+          "f1": 0.8936,
+          "tp": 21,
+          "fp": 1,
+          "fn": 4,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.88,
+            "f1": 0.9362,
+            "tp": 22,
+            "fp": 0,
+            "fn": 3
+          },
+          "mean_token_f1_when_both_present": 0.6572
+        },
+        "term_periodicity": {
+          "precision": 0.5455,
+          "recall": 0.1333,
+          "f1": 0.2143,
+          "tp": 6,
+          "fp": 5,
+          "fn": 39,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.2444,
+            "f1": 0.3929,
+            "tp": 11,
+            "fp": 0,
+            "fn": 34
+          },
+          "mean_token_f1_when_both_present": 0.5217
+        },
+        "geographic_scope": {
+          "precision": 1.0,
+          "recall": 0.4545,
+          "f1": 0.625,
+          "tp": 10,
+          "fp": 0,
+          "fn": 12,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.4545,
+            "f1": 0.625,
+            "tp": 10,
+            "fp": 0,
+            "fn": 12
+          },
+          "mean_token_f1_when_both_present": 0.8556
+        },
+        "beneficiary_category": {
+          "precision": 0.7714,
+          "recall": 0.5294,
+          "f1": 0.6279,
+          "tp": 27,
+          "fp": 8,
+          "fn": 24,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.6863,
+            "f1": 0.814,
+            "tp": 35,
+            "fp": 0,
+            "fn": 16
+          },
+          "mean_token_f1_when_both_present": 0.6284
+        },
+        "beneficiary_named": {
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.75,
+          "tp": 3,
+          "fp": 0,
+          "fn": 2,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1": 0.75,
+            "tp": 3,
+            "fp": 0,
+            "fn": 2
+          },
+          "mean_token_f1_when_both_present": 0.8381
+        },
+        "condition_contingency": {
+          "precision": 0.8571,
+          "recall": 1.0,
+          "f1": 0.9231,
+          "tp": 6,
+          "fp": 1,
+          "fn": 0,
+          "presence": {
+            "precision": 0.8571,
+            "recall": 1.0,
+            "f1": 0.9231,
+            "tp": 6,
+            "fp": 1,
+            "fn": 0
+          },
+          "mean_token_f1_when_both_present": 0.6935
+        },
+        "milestone": {
+          "precision": 1.0,
+          "recall": 0.3636,
+          "f1": 0.5333,
+          "tp": 4,
+          "fp": 0,
+          "fn": 7,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.3636,
+            "f1": 0.5333,
+            "tp": 4,
+            "fp": 0,
+            "fn": 7
+          },
+          "mean_token_f1_when_both_present": 0.9058
+        },
+        "macro_f1": 0.6909
+      },
+      "obligation_type": {
+        "n": 51,
+        "accuracy": 0.8235,
+        "macro_f1": 0.8458,
+        "macro_f1_over": [
+          "Binding / license condition",
+          "Contractual commitment",
+          "Target / goal",
+          "Best effort",
+          "Forecast / projection",
+          "Contingent commitment",
+          "Reported accomplishment",
+          "Unresolved / ambiguous"
+        ],
+        "per_class": {
+          "Binding / license condition": {
+            "precision": 0.8636,
+            "recall": 0.9048,
+            "f1": 0.8837,
+            "tp": 19,
+            "fp": 3,
+            "fn": 2
+          },
+          "Contractual commitment": {
+            "precision": 0.8,
+            "recall": 1.0,
+            "f1": 0.8889,
+            "tp": 4,
+            "fp": 1,
+            "fn": 0
+          },
+          "Target / goal": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 3,
+            "fp": 0,
+            "fn": 0
+          },
+          "Best effort": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "Forecast / projection": {
+            "precision": 0.8889,
+            "recall": 0.8889,
+            "f1": 0.8889,
+            "tp": 8,
+            "fp": 1,
+            "fn": 1
+          },
+          "Contingent commitment": {
+            "precision": 0.5,
+            "recall": 0.6667,
+            "f1": 0.5714,
+            "tp": 2,
+            "fp": 2,
+            "fn": 1
+          },
+          "Reported accomplishment": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "Unresolved / ambiguous": {
+            "precision": 0.6667,
+            "recall": 0.4444,
+            "f1": 0.5333,
+            "tp": 4,
+            "fp": 2,
+            "fn": 5
+          }
+        },
+        "confusion": {
+          "Unresolved / ambiguous": {
+            "Unresolved / ambiguous": 4,
+            "Binding / license condition": 2,
+            "Contingent commitment": 1,
+            "Forecast / projection": 1,
+            "Contractual commitment": 1
+          },
+          "Binding / license condition": {
+            "Binding / license condition": 19,
+            "Contingent commitment": 1,
+            "Unresolved / ambiguous": 1
+          },
+          "Contingent commitment": {
+            "Contingent commitment": 2,
+            "Binding / license condition": 1
+          },
+          "Target / goal": {
+            "Target / goal": 3
+          },
+          "Forecast / projection": {
+            "Forecast / projection": 8,
+            "Unresolved / ambiguous": 1
+          },
+          "Contractual commitment": {
+            "Contractual commitment": 4
+          },
+          "Best effort": {
+            "Best effort": 1
+          },
+          "Reported accomplishment": {
+            "Reported accomplishment": 1
+          }
+        }
+      },
+      "evidence_status": {
+        "n": 51,
+        "accuracy": 0.549,
+        "macro_f1": 0.0897,
+        "macro_f1_over": [
+          "corroborated",
+          "partially corroborated",
+          "self-reported only",
+          "conflicting",
+          "no public evidence located",
+          "source unavailable",
+          "not yet due",
+          "not applicable"
+        ],
+        "per_class": {
+          "corroborated": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 3
+          },
+          "partially corroborated": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 10
+          },
+          "self-reported only": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 1
+          },
+          "conflicting": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 4
+          },
+          "no public evidence located": {
+            "precision": 0.56,
+            "recall": 1.0,
+            "f1": 0.7179,
+            "tp": 28,
+            "fp": 22,
+            "fn": 0
+          },
+          "source unavailable": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "not yet due": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "not applicable": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 3
+          }
+        },
+        "confusion": {
+          "no public evidence located": {
+            "no public evidence located": 28
+          },
+          "partially corroborated": {
+            "no public evidence located": 9,
+            "self-reported only": 1
+          },
+          "source unavailable": {
+            "no public evidence located": 1
+          },
+          "not applicable": {
+            "no public evidence located": 3
+          },
+          "corroborated": {
+            "no public evidence located": 3
+          },
+          "conflicting": {
+            "no public evidence located": 4
+          },
+          "not yet due": {
+            "no public evidence located": 1
+          },
+          "self-reported only": {
+            "no public evidence located": 1
+          }
+        }
+      }
+    },
+    "anchor_test": {
+      "matched": 31,
+      "attributes": {
+        "responsible_entity": {
+          "precision": 0.9333,
+          "recall": 0.9333,
+          "f1": 0.9333,
+          "tp": 28,
+          "fp": 2,
+          "fn": 2,
+          "presence": {
+            "precision": 0.9667,
+            "recall": 0.9667,
+            "f1": 0.9667,
+            "tp": 29,
+            "fp": 1,
+            "fn": 1
+          },
+          "mean_token_f1_when_both_present": 0.7268
+        },
+        "amount_value": {
+          "precision": 0.9286,
+          "recall": 0.7647,
+          "f1": 0.8387,
+          "tp": 13,
+          "fp": 1,
+          "fn": 4,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.8235,
+            "f1": 0.9032,
+            "tp": 14,
+            "fp": 0,
+            "fn": 3
+          },
+          "mean_token_f1_when_both_present": 0.5655
+        },
+        "term_periodicity": {
+          "precision": 0.3333,
+          "recall": 0.0741,
+          "f1": 0.1212,
+          "tp": 2,
+          "fp": 4,
+          "fn": 25,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.2222,
+            "f1": 0.3636,
+            "tp": 6,
+            "fp": 0,
+            "fn": 21
+          },
+          "mean_token_f1_when_both_present": 0.375
+        },
+        "geographic_scope": {
+          "precision": 1.0,
+          "recall": 0.4375,
+          "f1": 0.6087,
+          "tp": 7,
+          "fp": 0,
+          "fn": 9,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.4375,
+            "f1": 0.6087,
+            "tp": 7,
+            "fp": 0,
+            "fn": 9
+          },
+          "mean_token_f1_when_both_present": 0.873
+        },
+        "beneficiary_category": {
+          "precision": 0.6842,
+          "recall": 0.4194,
+          "f1": 0.52,
+          "tp": 13,
+          "fp": 6,
+          "fn": 18,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.6129,
+            "f1": 0.76,
+            "tp": 19,
+            "fp": 0,
+            "fn": 12
+          },
+          "mean_token_f1_when_both_present": 0.6013
+        },
+        "beneficiary_named": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6667,
+          "tp": 1,
+          "fp": 0,
+          "fn": 1,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6667,
+            "tp": 1,
+            "fp": 0,
+            "fn": 1
+          },
+          "mean_token_f1_when_both_present": 0.8
+        },
+        "condition_contingency": {
+          "precision": 0.6667,
+          "recall": 1.0,
+          "f1": 0.8,
+          "tp": 2,
+          "fp": 1,
+          "fn": 0,
+          "presence": {
+            "precision": 0.6667,
+            "recall": 1.0,
+            "f1": 0.8,
+            "tp": 2,
+            "fp": 1,
+            "fn": 0
+          },
+          "mean_token_f1_when_both_present": 0.7246
+        },
+        "milestone": {
+          "precision": 1.0,
+          "recall": 0.3333,
+          "f1": 0.5,
+          "tp": 2,
+          "fp": 0,
+          "fn": 4,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.3333,
+            "f1": 0.5,
+            "tp": 2,
+            "fp": 0,
+            "fn": 4
+          },
+          "mean_token_f1_when_both_present": 0.9615
+        },
+        "macro_f1": 0.6236
+      },
+      "obligation_type": {
+        "n": 31,
+        "accuracy": 0.7742,
+        "macro_f1": 0.6873,
+        "macro_f1_over": [
+          "Binding / license condition",
+          "Contractual commitment",
+          "Target / goal",
+          "Forecast / projection",
+          "Contingent commitment",
+          "Unresolved / ambiguous"
+        ],
+        "per_class": {
+          "Binding / license condition": {
+            "precision": 0.8125,
+            "recall": 0.9286,
+            "f1": 0.8667,
+            "tp": 13,
+            "fp": 3,
+            "fn": 1
+          },
+          "Contractual commitment": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 2,
+            "fp": 0,
+            "fn": 0
+          },
+          "Target / goal": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "Best effort": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "Forecast / projection": {
+            "precision": 0.8571,
+            "recall": 0.8571,
+            "f1": 0.8571,
+            "tp": 6,
+            "fp": 1,
+            "fn": 1
+          },
+          "Contingent commitment": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 1
+          },
+          "Reported accomplishment": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "Unresolved / ambiguous": {
+            "precision": 0.5,
+            "recall": 0.3333,
+            "f1": 0.4,
+            "tp": 2,
+            "fp": 2,
+            "fn": 4
+          }
+        },
+        "confusion": {
+          "Binding / license condition": {
+            "Binding / license condition": 13,
+            "Unresolved / ambiguous": 1
+          },
+          "Unresolved / ambiguous": {
+            "Unresolved / ambiguous": 2,
+            "Binding / license condition": 2,
+            "Contingent commitment": 1,
+            "Forecast / projection": 1
+          },
+          "Contingent commitment": {
+            "Binding / license condition": 1
+          },
+          "Forecast / projection": {
+            "Forecast / projection": 6,
+            "Unresolved / ambiguous": 1
+          },
+          "Contractual commitment": {
+            "Contractual commitment": 2
+          },
+          "Target / goal": {
+            "Target / goal": 1
+          },
+          "Best effort": {},
+          "Reported accomplishment": {}
+        }
+      },
+      "evidence_status": {
+        "n": 31,
+        "accuracy": 0.6774,
+        "macro_f1": 0.1346,
+        "macro_f1_over": [
+          "corroborated",
+          "partially corroborated",
+          "conflicting",
+          "no public evidence located",
+          "not yet due",
+          "not applicable"
+        ],
+        "per_class": {
+          "corroborated": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 3
+          },
+          "partially corroborated": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 2
+          },
+          "self-reported only": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "conflicting": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "no public evidence located": {
+            "precision": 0.6774,
+            "recall": 1.0,
+            "f1": 0.8077,
+            "tp": 21,
+            "fp": 10,
+            "fn": 0
+          },
+          "source unavailable": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "not yet due": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "not applicable": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 3
+          }
+        },
+        "confusion": {
+          "no public evidence located": {
+            "no public evidence located": 21
+          },
+          "not applicable": {
+            "no public evidence located": 3
+          },
+          "partially corroborated": {
+            "no public evidence located": 2
+          },
+          "corroborated": {
+            "no public evidence located": 3
+          },
+          "conflicting": {
+            "no public evidence located": 1
+          },
+          "not yet due": {
+            "no public evidence located": 1
+          },
+          "self-reported only": {},
+          "source unavailable": {}
+        }
+      }
+    },
+    "heldout": {
+      "matched": 18,
+      "attributes": {
+        "responsible_entity": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 18,
+          "fp": 0,
+          "fn": 0,
+          "presence": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 18,
+            "fp": 0,
+            "fn": 0
+          },
+          "mean_token_f1_when_both_present": 1.0
+        },
+        "amount_value": {
+          "precision": 1.0,
+          "recall": 0.7333,
+          "f1": 0.8462,
+          "tp": 11,
+          "fp": 0,
+          "fn": 4,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.7333,
+            "f1": 0.8462,
+            "tp": 11,
+            "fp": 0,
+            "fn": 4
+          },
+          "mean_token_f1_when_both_present": 0.7169
+        },
+        "term_periodicity": {
+          "precision": 0.8,
+          "recall": 0.2857,
+          "f1": 0.4211,
+          "tp": 4,
+          "fp": 1,
+          "fn": 10,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.3571,
+            "f1": 0.5263,
+            "tp": 5,
+            "fp": 0,
+            "fn": 9
+          },
+          "mean_token_f1_when_both_present": 0.4571
+        },
+        "geographic_scope": {
+          "precision": 0.7778,
+          "recall": 0.4667,
+          "f1": 0.5833,
+          "tp": 7,
+          "fp": 2,
+          "fn": 8,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1": 0.75,
+            "tp": 9,
+            "fp": 0,
+            "fn": 6
+          },
+          "mean_token_f1_when_both_present": 0.7333
+        },
+        "beneficiary_category": {
+          "precision": 0.5385,
+          "recall": 0.3889,
+          "f1": 0.4516,
+          "tp": 7,
+          "fp": 6,
+          "fn": 11,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.7222,
+            "f1": 0.8387,
+            "tp": 13,
+            "fp": 0,
+            "fn": 5
+          },
+          "mean_token_f1_when_both_present": 0.5533
+        },
+        "beneficiary_named": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 8,
+          "presence": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 8
+          },
+          "mean_token_f1_when_both_present": null
+        },
+        "condition_contingency": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "presence": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 1,
+            "fn": 1
+          },
+          "mean_token_f1_when_both_present": null
+        },
+        "milestone": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "presence": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "mean_token_f1_when_both_present": 0.2222
+        },
+        "macro_f1": 0.4128
+      },
+      "obligation_type": {
+        "n": 18,
+        "accuracy": 0.6667,
+        "macro_f1": 0.5987,
+        "macro_f1_over": [
+          "Contractual commitment",
+          "Target / goal",
+          "Forecast / projection",
+          "Unresolved / ambiguous"
+        ],
+        "per_class": {
+          "Binding / license condition": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "Contractual commitment": {
+            "precision": 0.5455,
+            "recall": 1.0,
+            "f1": 0.7059,
+            "tp": 6,
+            "fp": 5,
+            "fn": 0
+          },
+          "Target / goal": {
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4,
+            "tp": 1,
+            "fp": 0,
+            "fn": 3
+          },
+          "Best effort": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "Forecast / projection": {
+            "precision": 0.8,
+            "recall": 1.0,
+            "f1": 0.8889,
+            "tp": 4,
+            "fp": 1,
+            "fn": 0
+          },
+          "Contingent commitment": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "Reported accomplishment": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "Unresolved / ambiguous": {
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4,
+            "tp": 1,
+            "fp": 0,
+            "fn": 3
+          }
+        },
+        "confusion": {
+          "Unresolved / ambiguous": {
+            "Contractual commitment": 2,
+            "Unresolved / ambiguous": 1,
+            "Forecast / projection": 1
+          },
+          "Contractual commitment": {
+            "Contractual commitment": 6
+          },
+          "Target / goal": {
+            "Contractual commitment": 3,
+            "Target / goal": 1
+          },
+          "Forecast / projection": {
+            "Forecast / projection": 4
+          },
+          "Binding / license condition": {},
+          "Best effort": {},
+          "Contingent commitment": {},
+          "Reported accomplishment": {}
+        }
+      },
+      "evidence_status": {
+        "n": 18,
+        "accuracy": 0.0556,
+        "macro_f1": 0.0417,
+        "macro_f1_over": [
+          "conflicting",
+          "source unavailable",
+          "not yet due"
+        ],
+        "per_class": {
+          "corroborated": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "partially corroborated": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "self-reported only": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "conflicting": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "no public evidence located": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 17,
+            "fn": 0
+          },
+          "source unavailable": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 2
+          },
+          "not yet due": {
+            "precision": 1.0,
+            "recall": 0.0667,
+            "f1": 0.125,
+            "tp": 1,
+            "fp": 0,
+            "fn": 14
+          },
+          "not applicable": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "confusion": {
+          "not yet due": {
+            "no public evidence located": 14,
+            "not yet due": 1
+          },
+          "source unavailable": {
+            "no public evidence located": 2
+          },
+          "conflicting": {
+            "no public evidence located": 1
+          },
+          "corroborated": {},
+          "partially corroborated": {},
+          "self-reported only": {},
+          "no public evidence located": {},
+          "not applicable": {}
+        }
+      }
+    },
+    "human_validated": {
+      "matched": 22,
+      "attributes": {
+        "responsible_entity": {
+          "precision": 0.9091,
+          "recall": 0.9524,
+          "f1": 0.9302,
+          "tp": 20,
+          "fp": 2,
+          "fn": 1,
+          "presence": {
+            "precision": 0.9545,
+            "recall": 1.0,
+            "f1": 0.9767,
+            "tp": 21,
+            "fp": 1,
+            "fn": 0
+          },
+          "mean_token_f1_when_both_present": 0.9127
+        },
+        "amount_value": {
+          "precision": 0.9286,
+          "recall": 0.7647,
+          "f1": 0.8387,
+          "tp": 13,
+          "fp": 1,
+          "fn": 4,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.8235,
+            "f1": 0.9032,
+            "tp": 14,
+            "fp": 0,
+            "fn": 3
+          },
+          "mean_token_f1_when_both_present": 0.6853
+        },
+        "term_periodicity": {
+          "precision": 0.8571,
+          "recall": 0.3333,
+          "f1": 0.48,
+          "tp": 6,
+          "fp": 1,
+          "fn": 12,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.3889,
+            "f1": 0.56,
+            "tp": 7,
+            "fp": 0,
+            "fn": 11
+          },
+          "mean_token_f1_when_both_present": 0.5269
+        },
+        "geographic_scope": {
+          "precision": 0.75,
+          "recall": 0.4286,
+          "f1": 0.5455,
+          "tp": 6,
+          "fp": 2,
+          "fn": 8,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.5714,
+            "f1": 0.7273,
+            "tp": 8,
+            "fp": 0,
+            "fn": 6
+          },
+          "mean_token_f1_when_both_present": 0.6583
+        },
+        "beneficiary_category": {
+          "precision": 0.5556,
+          "recall": 0.4545,
+          "f1": 0.5,
+          "tp": 10,
+          "fp": 8,
+          "fn": 12,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.8182,
+            "f1": 0.9,
+            "tp": 18,
+            "fp": 0,
+            "fn": 4
+          },
+          "mean_token_f1_when_both_present": 0.5561
+        },
+        "beneficiary_named": {
+          "precision": 0.5,
+          "recall": 0.1,
+          "f1": 0.1667,
+          "tp": 1,
+          "fp": 1,
+          "fn": 9,
+          "presence": {
+            "precision": 0.5,
+            "recall": 0.1,
+            "f1": 0.1667,
+            "tp": 1,
+            "fp": 1,
+            "fn": 9
+          },
+          "mean_token_f1_when_both_present": 0.8571
+        },
+        "condition_contingency": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "tp": 1,
+          "fp": 1,
+          "fn": 1,
+          "presence": {
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1": 0.5,
+            "tp": 1,
+            "fp": 1,
+            "fn": 1
+          },
+          "mean_token_f1_when_both_present": 0.6364
+        },
+        "milestone": {
+          "precision": 0.6667,
+          "recall": 0.4,
+          "f1": 0.5,
+          "tp": 2,
+          "fp": 1,
+          "fn": 3,
+          "presence": {
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1": 0.75,
+            "tp": 3,
+            "fp": 0,
+            "fn": 2
+          },
+          "mean_token_f1_when_both_present": 0.7407
+        },
+        "macro_f1": 0.5576
+      },
+      "obligation_type": {
+        "n": 22,
+        "accuracy": 0.7273,
+        "macro_f1": 0.721,
+        "macro_f1_over": [
+          "Binding / license condition",
+          "Contractual commitment",
+          "Target / goal",
+          "Forecast / projection",
+          "Contingent commitment",
+          "Unresolved / ambiguous"
+        ],
+        "per_class": {
+          "Binding / license condition": {
+            "precision": 0.8333,
+            "recall": 1.0,
+            "f1": 0.9091,
+            "tp": 5,
+            "fp": 1,
+            "fn": 0
+          },
+          "Contractual commitment": {
+            "precision": 0.6,
+            "recall": 1.0,
+            "f1": 0.75,
+            "tp": 6,
+            "fp": 4,
+            "fn": 0
+          },
+          "Target / goal": {
+            "precision": 1.0,
+            "recall": 0.3333,
+            "f1": 0.5,
+            "tp": 1,
+            "fp": 0,
+            "fn": 2
+          },
+          "Best effort": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "Forecast / projection": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6667,
+            "tp": 1,
+            "fp": 1,
+            "fn": 0
+          },
+          "Contingent commitment": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 1,
+            "fp": 0,
+            "fn": 0
+          },
+          "Reported accomplishment": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "Unresolved / ambiguous": {
+            "precision": 1.0,
+            "recall": 0.3333,
+            "f1": 0.5,
+            "tp": 2,
+            "fp": 0,
+            "fn": 4
+          }
+        },
+        "confusion": {
+          "Unresolved / ambiguous": {
+            "Unresolved / ambiguous": 2,
+            "Contractual commitment": 2,
+            "Forecast / projection": 1,
+            "Binding / license condition": 1
+          },
+          "Contractual commitment": {
+            "Contractual commitment": 6
+          },
+          "Forecast / projection": {
+            "Forecast / projection": 1
+          },
+          "Target / goal": {
+            "Contractual commitment": 2,
+            "Target / goal": 1
+          },
+          "Binding / license condition": {
+            "Binding / license condition": 5
+          },
+          "Contingent commitment": {
+            "Contingent commitment": 1
+          },
+          "Best effort": {},
+          "Reported accomplishment": {}
+        }
+      },
+      "evidence_status": {
+        "n": 22,
+        "accuracy": 0.2727,
+        "macro_f1": 0.0809,
+        "macro_f1_over": [
+          "corroborated",
+          "partially corroborated",
+          "conflicting",
+          "no public evidence located",
+          "source unavailable",
+          "not yet due",
+          "not applicable"
+        ],
+        "per_class": {
+          "corroborated": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "partially corroborated": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 3
+          },
+          "self-reported only": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          },
+          "conflicting": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "no public evidence located": {
+            "precision": 0.2381,
+            "recall": 1.0,
+            "f1": 0.3846,
+            "tp": 5,
+            "fp": 16,
+            "fn": 0
+          },
+          "source unavailable": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "not yet due": {
+            "precision": 1.0,
+            "recall": 0.1,
+            "f1": 0.1818,
+            "tp": 1,
+            "fp": 0,
+            "fn": 9
+          },
+          "not applicable": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          }
+        },
+        "confusion": {
+          "no public evidence located": {
+            "no public evidence located": 5
+          },
+          "not yet due": {
+            "no public evidence located": 9,
+            "not yet due": 1
+          },
+          "not applicable": {
+            "no public evidence located": 1
+          },
+          "corroborated": {
+            "no public evidence located": 1
+          },
+          "partially corroborated": {
+            "no public evidence located": 3
+          },
+          "conflicting": {
+            "no public evidence located": 1
+          },
+          "source unavailable": {
+            "no public evidence located": 1
+          },
+          "self-reported only": {}
+        }
+      }
+    },
+    "_pairs": {
+      "TG-GOLD-A051": "B0-GFLB-SEL-2025-12-01-0191",
+      "TG-GOLD-H012": "B0-GFLB-SEL-2025-12-01-0078",
+      "TG-GOLD-A063": "B0-NYSGC-RWNYC-LIC-2025-12-19-0008",
+      "TG-GOLD-A034": "B0-GFLB-SEL-2025-12-01-0174",
+      "TG-GOLD-A010": "B0-RFA-2023-01-03-0316",
+      "TG-GOLD-A014": "B0-RFA-2023-01-03-0332",
+      "TG-GOLD-A059": "B0-NYSGC-RWNYC-LIC-2025-12-19-0004",
+      "TG-GOLD-A064": "B0-NYSGC-RWNYC-LIC-2025-12-19-0009",
+      "TG-GOLD-H001": "B0-GFLB-SEL-2025-12-01-0046",
+      "TG-GOLD-A007": "B0-RFA-2023-01-03-0289",
+      "TG-GOLD-A062": "B0-NYSGC-RWNYC-LIC-2025-12-19-0007",
+      "TG-GOLD-A037": "B0-GFLB-SEL-2025-12-01-0176",
+      "TG-GOLD-H025": "B0-GFLB-SEL-2025-12-01-0131",
+      "TG-GOLD-A054": "B0-GFLB-SEL-2025-12-01-0195",
+      "TG-GOLD-H004": "B0-GFLB-SEL-2025-12-01-0050",
+      "TG-GOLD-A048": "B0-GFLB-SEL-2025-12-01-0185",
+      "TG-GOLD-A018": "B0-RFA-2023-01-03-0346",
+      "TG-GOLD-A069": "B0-NYSGC-RWNYC-LIC-2025-12-19-0018",
+      "TG-GOLD-A026": "B0-GFLB-SEL-2025-12-01-0151",
+      "TG-GOLD-A006": "B0-RFA-2023-01-03-0268",
+      "TG-GOLD-A016": "B0-RFA-2023-01-03-0339",
+      "TG-GOLD-A056": "B0-GFLB-SEL-2025-12-01-0200",
+      "TG-GOLD-H007": "B0-GFLB-SEL-2025-12-01-0067",
+      "TG-GOLD-A053": "B0-GFLB-SEL-2025-12-01-0193",
+      "TG-GOLD-A046": "B0-GFLB-SEL-2025-12-01-0183",
+      "TG-GOLD-A055": "B0-GFLB-SEL-2025-12-01-0196",
+      "TG-GOLD-A023": "B0-GFLB-SEL-2025-12-01-0035",
+      "TG-GOLD-A033": "B0-GFLB-SEL-2025-12-01-0172",
+      "TG-GOLD-H006": "B0-GFLB-SEL-2025-12-01-0059",
+      "TG-GOLD-A001": "B0-RFA-2023-01-03-0002",
+      "TG-GOLD-A052": "B0-GFLB-SEL-2025-12-01-0192",
+      "TG-GOLD-H005": "B0-GFLB-SEL-2025-12-01-0051",
+      "TG-GOLD-A032": "B0-GFLB-SEL-2025-12-01-0171",
+      "TG-GOLD-A012": "B0-RFA-2023-01-03-0330",
+      "TG-GOLD-A047": "B0-GFLB-SEL-2025-12-01-0184",
+      "TG-GOLD-A045": "B0-GFLB-SEL-2025-12-01-0182",
+      "TG-GOLD-H022": "B0-GFLB-SEL-2025-12-01-0121",
+      "TG-GOLD-A040": "B0-GFLB-SEL-2025-12-01-0180",
+      "TG-GOLD-A025": "B0-GFLB-SEL-2025-12-01-0150",
+      "TG-GOLD-A003": "B0-RFA-2023-01-03-0011",
+      "TG-GOLD-A004": "B0-RFA-2023-01-03-0012",
+      "TG-GOLD-A020": "B0-GFLB-SEL-2025-12-01-0005",
+      "TG-GOLD-H002": "B0-GFLB-SEL-2025-12-01-0047",
+      "TG-GOLD-A008": "B0-RFA-2023-01-03-0293",
+      "TG-GOLD-A050": "B0-GFLB-SEL-2025-12-01-0190",
+      "TG-GOLD-A066": "B0-NYSGC-RWNYC-LIC-2025-12-19-0011",
+      "TG-GOLD-H008": "B0-GFLB-SEL-2025-12-01-0070",
+      "TG-GOLD-A009": "B0-RFA-2023-01-03-0294",
+      "TG-GOLD-A017": "B0-RFA-2023-01-03-0343",
+      "TG-GOLD-A029": "B0-GFLB-SEL-2025-12-01-0161",
+      "TG-GOLD-A049": "B0-GFLB-SEL-2025-12-01-0189",
+      "TG-GOLD-A065": "B0-NYSGC-RWNYC-LIC-2025-12-19-0010",
+      "TG-GOLD-H003": "B0-GFLB-SEL-2025-12-01-0049",
+      "TG-GOLD-A061": "B0-NYSGC-RWNYC-LIC-2025-12-19-0006",
+      "TG-GOLD-A030": "B0-GFLB-SEL-2025-12-01-0170",
+      "TG-GOLD-A036": "B0-GFLB-SEL-2025-12-01-0175",
+      "TG-GOLD-H018": "B0-GFLB-SEL-2025-12-01-0104",
+      "TG-GOLD-A005": "B0-RFA-2023-01-03-0193",
+      "TG-GOLD-H024": "B0-GFLB-SEL-2025-12-01-0128",
+      "TG-GOLD-H028": "B0-GFLB-SEL-2025-12-01-0134",
+      "TG-GOLD-A060": "B0-NYSGC-RWNYC-LIC-2025-12-19-0005",
+      "TG-GOLD-H016": "B0-GFLB-SEL-2025-12-01-0089",
+      "TG-GOLD-H019": "B0-GFLB-SEL-2025-12-01-0115",
+      "TG-GOLD-H010": "B0-GFLB-SEL-2025-12-01-0074",
+      "TG-GOLD-A068": "B0-NYSGC-RWNYC-LIC-2025-12-19-0017",
+      "TG-GOLD-A013": "B0-RFA-2023-01-03-0331",
+      "TG-GOLD-A011": "B0-RFA-2023-01-03-0321",
+      "TG-GOLD-A024": "B0-GFLB-SEL-2025-12-01-0040",
+      "TG-GOLD-H011": "B0-GFLB-SEL-2025-12-01-0076"
+    }
+  }
+}

@@ -90,6 +90,23 @@ python -m tracegraph.runtime evaluate --commitment-id TG-GOLD-H008 --commitment-
 
 The report separates confirmed one-to-one matches, evidence that needs review, unmatched evidence, and failed research jobs. Confirmed recall is matched reference evidence divided by all reference evidence in scored cases. With no IDs supplied, the evaluator selects the first two completed detail tabs by ID. See `evaluate --help` for options, including a custom workbook path and reviewed matches.
 
+## B0 rules/patterns baseline
+
+B0 is the deterministic extraction floor from the Kickoff Pack (§04): regex, lexical patterns, and layout parsing with no generative model. It reads the Tier 1 PDFs in [`docs/tier1/`](docs/tier1/), segments them into page-addressed sentence passages, keeps passages with commitment language, classifies obligation strength with ordered taxonomy rules, and fills each attribute with regex and gazetteer patterns. Every output carries `document_id`, page, a character span in the canonical text, and a `passage_id`.
+
+```powershell
+python -m tracegraph.b0
+```
+
+Results go to `evaluation/results/b0/`: `predictions.jsonl`, `manifest.json` (file and gold hashes, extractor version), `metrics.json`, `matches.csv` (gold vs. predicted fields for error analysis), and `report.md`. The evaluator locates each gold quote in the canonical text by its alphanumeric characters, because the workbook offsets come from a different PDF extraction. It matches predictions one-to-one by span overlap and reports commitment P/R/F1, per-field P/R/F1, and obligation-class macro-F1 by split. Rules were written from the taxonomy and the `anchor_dev` split only, so report `anchor_test` and held-out results. The gold set samples commitments rather than labelling all of them, so commitment precision is a lower bound.
+
+| Module | Role |
+| --- | --- |
+| [`tracegraph/corpus.py`](tracegraph/corpus.py) | PDF ingestion, hashing, layout blocks, sentence and clause passages |
+| [`tracegraph/b0_rules.py`](tracegraph/b0_rules.py) | Trigger lexicon, obligation-class rules, field patterns |
+| [`tracegraph/extraction_eval.py`](tracegraph/extraction_eval.py) | Gold alignment, matching, and metrics, reusable for B1 and B2 |
+| [`tracegraph/b0.py`](tracegraph/b0.py) | Command-line runner and report |
+
 ## Repository layout
 
 | Directory | Contents |
