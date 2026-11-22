@@ -221,6 +221,9 @@ class EvidenceReconciler:
                 reference = source.get("url") or source["citation"]
                 assessment["reasoning"] += f'\n\nDirect evidence from {reference}. “{quote.strip()}”'
                 return assessment
+        fallback = value.get("delivery_fallback")
+        if isinstance(fallback, dict) and fallback.get("label") == "PARTIALLY_CORROBORATED":
+            return _assessment(fallback, state["relations"], checked_conflicts=self._verify_conflicts is not None)
         return _unverified("The available evidence does not directly establish withdrawal or disproof of this commitment.")
 
     @staticmethod

@@ -265,12 +265,13 @@ class AgentTest(unittest.TestCase):
         client.create.return_value = {"stop_reason": "end_turn", "content": [{"type": "text", "text": json.dumps({
             "label": "UNVERIFIED", "verdict": "Delivery remains uncertain.", "reasoning": "The annual amounts remain open.",
             "criteria": [{"criterion": "Provide annual public safety support", "scope_criteria": ["s1"],
+                          "required_elements": ["Annual public safety funding"],
                           "promise_scope": "The authority pledged annual public safety funding.",
                           "observed_scope": "No actual funding recipients or payments are documented.",
                           "promise_citation_ids": [], "delivery_citation_ids": [], "delivery_status": "UNVERIFIED",
                           "timing_requirement": "",
                           "explanation": "The available excerpts do not establish payment.", "gap": "A payment record."}],
-            "refutation": [], "not_yet_due": [],
+            "refutation": [], "not_yet_due": [], "scope_locks": [],
         })}]}
         plan = {"assignments": [{"observation_id": "o1", "finding_id": "new:1", "claim": "Funding was pledged."}],
                 "relations": []}

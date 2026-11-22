@@ -58,11 +58,12 @@ def _provider_plan(assignments=(), relations=(), *, new_claims=None):
 
 
 def _criterion(name="Operate five overnight routes", *, status="UNVERIFIED", scope=(), promise=(), delivery=(),
-               gap=None, timing=""):
+               gap=None, timing="", elements=None):
     if gap is None:
         gap = "" if status == "DELIVERED" else "Obtain the completed service records."
     return {
-        "criterion": name, "scope_criteria": list(scope), "promise_citation_ids": list(promise),
+        "criterion": name, "required_elements": list(elements) if elements is not None else [name],
+        "scope_criteria": list(scope), "promise_citation_ids": list(promise),
         "promise_scope": name, "observed_scope": "Only the population and location documented in the excerpts.",
         "delivery_citation_ids": list(delivery),
         "delivery_status": status, "explanation": "Only use outcomes supported by the source passages.",
@@ -71,17 +72,20 @@ def _criterion(name="Operate five overnight routes", *, status="UNVERIFIED", sco
 
 
 def _final_assessment(*criteria, label="UNVERIFIED", not_yet_due=()):
-    return {**_ASSESSMENT, "label": label, "criteria": list(criteria),
+    return {**_ASSESSMENT, "label": label, "criteria": list(criteria), "scope_locks": [],
             "not_yet_due": list(not_yet_due),
             "refutation": []}
 
 
-def _delivery_check(criterion, explanation, *, support=(), gap="", fulfilled_part=None, timing="", timing_support=()):
+def _delivery_check(criterion, explanation, *, support=(), gap="", fulfilled_part=None, timing="", timing_support=(),
+                    in_scope=None, element_support=None):
     if fulfilled_part is None:
         fulfilled_part = explanation if support else ""
     return {"criterion": criterion, "explanation": explanation, "gap": gap,
             "observed_scope": "Only the population and location documented in the excerpts.",
             "timing_applies": True,
+            "in_scope_performance": bool(support and fulfilled_part) if in_scope is None else in_scope,
+            "element_support": {"e1": [cid for cid, _ in support]} if element_support is None else element_support,
             "fulfilled_part": fulfilled_part, "timing_requirement": timing,
             "timing_support_ids": list(timing_support),
             "delivery_support": [{"citation_id": citation_id, "quote": quote} for citation_id, quote in support]}
@@ -100,6 +104,26 @@ def _delivery_review(*checks, scope_gap=""):
         f"v{index}": {key: value for key, value in check.items() if key != "criterion"}
         for index, check in enumerate(checks, 1)
     }})
+
+
+def _delivery_challenge(*rows):
+    return _json_message({"checks": {f"v{n}": row for n, row in enumerate(rows, 1)}})
+
+
+def _direct_witness(cid, quote, scope):
+    return {"binding": "DIRECT", "action_citation_id": cid, "action_quote": quote,
+            "scope_words": scope, "scope_citation_id": "", "scope_quote": "", "event_reference": ""}
+
+
+def _outcome_read(fact, *citation_ids, zero="", incomplete="", witness=None):
+    if witness is None:
+        witness = {"binding": "DIRECT" if citation_ids and not zero else "NONE",
+                   "action_citation_id": citation_ids[0] if citation_ids and not zero else "",
+                   "action_quote": fact if citation_ids and not zero else "",
+                   "scope_words": fact if citation_ids and not zero else "",
+                   "scope_citation_id": "", "scope_quote": "", "event_reference": ""}
+    return {"occurrence_witness": witness, "support_ids": list(citation_ids), "observed_fact": fact, "zero_delivery_alternative": zero,
+            "incomplete_delivery_alternative": incomplete}
 
 
 class ReconciliationTests(unittest.TestCase):
@@ -509,6 +533,9 @@ class ClaudeReconciliationTests(unittest.TestCase):
                                         support=[("c1", "Three routes opened.")],
                                         gap="Delivery of two routes remains unverified.")
                 return _delivery_review(check)
+            if "claims" in data:
+                return _delivery_challenge(_outcome_read("Three routes opened.", "c1",
+                                                         incomplete="Two promised routes may still be closed."))
             return _json_message(_final_assessment(
                 _criterion(status="PARTIAL", delivery=("c1",)), label="PARTIALLY_CORROBORATED",
             ))
@@ -521,7 +548,7 @@ class ClaudeReconciliationTests(unittest.TestCase):
             _CONTEXT, _snapshot(), _research(evidence)
         )
         self.assertEqual(result["label"], _ASSESSMENT["label"])
-        planner, assessor, classifier, verifier = [json.loads(call.kwargs["messages"][0]["content"])
+        planner, assessor, classifier, verifier, challenger = [json.loads(call.kwargs["messages"][0]["content"])
                                                    for call in client.create.call_args_list]
         self.assertEqual(len(planner["observations"]), 1)
         self.assertEqual(planner["new_finding_ids"], ["new:1"])
@@ -536,12 +563,13 @@ class ClaudeReconciliationTests(unittest.TestCase):
         self.assertEqual(verifier["observed_outcomes"], [{"citation_id": "c1", "quote": "Three routes opened."}])
         self.assertEqual(verifier["observed_timing"], {})
         self.assertNotIn("explanation", assessor["citations"]["c1"])
-        for body in (planner, assessor, classifier, verifier):
+        self.assertEqual(challenger["citations"], assessor["citations"])
+        for body in (planner, assessor, classifier, verifier, challenger):
             serialized = json.dumps(body)
             self.assertNotIn("private workbook note", serialized)
             self.assertNotIn("private annotator", serialized)
             self.assertNotIn("org-private-id", serialized)
-        for body in (assessor, verifier):
+        for body in (assessor, verifier, challenger):
             self.assertNotIn("observations", body)
             self.assertNotIn("findings", body)
             self.assertNotIn("relations", body)
@@ -714,10 +742,14 @@ class ClaudeReconciliationTests(unittest.TestCase):
                                  else 3 if outcomes else 2)
                 if outcomes:
                     verifier = json.loads(client.create.call_args.kwargs["messages"][0]["content"])
-                    self.assertEqual(verifier["check_conditions"], {
-                        f"v{index}": {"criterion": name, "timing_requirement": ""}
-                        for index, name in enumerate(conditions, 1)
-                    })
+                    for index, name in enumerate(conditions, 1):
+                        condition = verifier["check_conditions"][f"v{index}"]
+                        self.assertEqual(condition["criterion"], name)
+                        self.assertEqual(condition["required_elements"], {"e1": name})
+                        self.assertEqual(condition["promise_scope"], name)
+                        expected_ids = initial["criteria"][index - 1]["promise_citation_ids"]
+                        self.assertEqual(condition["promise_citation_ids"], expected_ids)
+                        self.assertEqual(condition["timing_requirement"], "")
                     self.assertEqual(verifier["observed_outcomes"], [{"citation_id": "c3", "quote": opening["excerpt"]}])
 
     def test_already_formed_partnership_can_document_both_original_terms_and_delivery(self):
@@ -733,7 +765,8 @@ class ClaudeReconciliationTests(unittest.TestCase):
                                     label="CORROBORATED")
         client = Mock()
         client.create.side_effect = [_json_message(initial), _observed_outcomes(("c1", excerpt)),
-                                     _delivery_review(_delivery_check(name, excerpt, support=[("c1", excerpt)]))]
+                                     _delivery_review(_delivery_check(name, excerpt, support=[("c1", excerpt)])),
+                                     _delivery_challenge(_outcome_read(excerpt, "c1"))]
 
         result = ClaudeReconciliationJudge(client).assess(context, snapshot)
 
@@ -774,8 +807,11 @@ class ClaudeReconciliationTests(unittest.TestCase):
                 timing = _delivery_check(deadline, "The transcript gives no payment date.",
                                          support=timing_support, gap=gap)
                 client = Mock()
+                challenged = [_outcome_read(paid, "c2")]
+                if timing_support:
+                    challenged.append(_outcome_read(paid, "c2", incomplete="Payment could have followed the deadline."))
                 client.create.side_effect = [_json_message(initial), _observed_outcomes(("c2", paid)),
-                                             _delivery_review(payment, timing)]
+                                             _delivery_review(payment, timing), _delivery_challenge(*challenged)]
 
                 result = ClaudeReconciliationJudge(client).assess(context, snapshot)
 
@@ -784,7 +820,11 @@ class ClaudeReconciliationTests(unittest.TestCase):
                 self.assertEqual(by_condition[amount]["delivery_citation_ids"], ["c2"])
                 self.assertEqual(by_condition[deadline]["delivery_status"], status)
                 self.assertEqual(by_condition[deadline]["delivery_citation_ids"], ["c2"] if timing_support else [])
-                self.assertEqual(by_condition[deadline]["gap"], gap)
+                if timing_support:
+                    self.assertIn("Payment could have followed the deadline.", by_condition[deadline]["gap"])
+                else:
+                    self.assertIn(deadline, by_condition[deadline]["gap"])
+                    self.assertEqual(by_condition[deadline]["promise_citation_ids"], ["c1"])
                 for call in client.create.call_args_list:
                     payload = call.kwargs["messages"][0]["content"]
                     self.assertNotIn(edge["reasoning"], payload)
@@ -802,13 +842,17 @@ class ClaudeReconciliationTests(unittest.TestCase):
                 timing = _delivery_check(deadline, "Payment was made on time.", support=[("c2", event)],
                                          timing_support=proposed_timing)
                 client = Mock()
-                client.create.side_effect = [_json_message(initial), _observed_outcomes(("c2", event), timing=approved_timing),
-                                             _delivery_review(outcome, timing)]
+                responses = [_json_message(initial), _observed_outcomes(("c2", event), timing=approved_timing),
+                             _delivery_review(outcome, timing)]
+                remaining = "" if approved_timing else "Payment could have followed the deadline."
+                responses.append(_delivery_challenge(_outcome_read(event, "c2"), _outcome_read(event, "c2", incomplete=remaining)))
+                client.create.side_effect = responses
                 result = ClaudeReconciliationJudge(client).assess(context, snapshot)
                 self.assertEqual(result["label"], expected)
                 if not approved_timing:
                     self.assertNotIn("Payment was made on time", result["reasoning"])
-                    self.assertIn("does not establish that delivery met this timing requirement", result["reasoning"])
+                    self.assertIn("Payment could have followed the deadline.", result["reasoning"])
+                    self.assertIn(deadline, result["reasoning"])
 
     def test_verified_delivery_requires_complete_scope_for_full_corroboration(self):
         name = "Operate five overnight routes"
@@ -823,9 +867,11 @@ class ClaudeReconciliationTests(unittest.TestCase):
         ):
             with self.subTest(scope_gap=scope_gap):
                 client = Mock()
-                client.create.side_effect = [_json_message(initial),
-                                             _observed_outcomes(("c1", excerpt), planned_terms=(("c1", pledge),)),
-                                             _delivery_review(check, scope_gap=scope_gap)]
+                responses = [_json_message(initial),
+                             _observed_outcomes(("c1", excerpt), planned_terms=(("c1", pledge),)),
+                             _delivery_review(check, scope_gap=scope_gap)]
+                responses.append(_delivery_challenge(_outcome_read(excerpt, "c1")))
+                client.create.side_effect = responses
                 result = ClaudeReconciliationJudge(client).assess(_CONTEXT, snapshot)
                 self.assertEqual(result["label"], expected)
                 self.assertEqual(result["scope_gap"], scope_gap)
@@ -868,7 +914,9 @@ class ClaudeReconciliationTests(unittest.TestCase):
         self.assertEqual(result["label"], "UNVERIFIED")
         self.assertNotIn(initial["verdict"], result["verdict"] + result["reasoning"])
         self.assertIn(query, result["reasoning"])
-        self.assertIn(gap, result["reasoning"])
+        self.assertTrue(result["criteria"][0]["gap"])
+        self.assertEqual(result["criteria"][0]["promise_scope"], name)
+        self.assertEqual(result["criteria"][0]["promise_citation_ids"], ["c1"])
         self.assertIn(elsewhere, result["reasoning"])
         self.assertIn("https://transit.example/elsewhere", result["reasoning"])
         self.assertNotIn("Delivery evidence: c2", result["reasoning"])
@@ -878,17 +926,18 @@ class ClaudeReconciliationTests(unittest.TestCase):
         outcome = "The authority reports funding memberships for twenty North Campus employees."
         snapshot = _snapshot({"id": "outcome", "claim": outcome, "supports": [_support("benefits", outcome)]})
         initial = _final_assessment(_criterion(name, status="DELIVERED", delivery=("c1",)), label="CORROBORATED")
-        gap = "The other eighty North Campus employees still lack funded memberships."
+        gap = "The available records do not establish funded memberships for the other eighty North Campus employees."
         review = _delivery_check(name, outcome, support=[("c1", outcome)], fulfilled_part=outcome, gap=gap)
         review["observed_scope"] = "Twenty North Campus employees; other employees and locations are not established."
         client = Mock()
         client.create.side_effect = [_json_message(initial), _observed_outcomes(("c1", outcome)),
-                                     _delivery_review(review)]
+                                     _delivery_review(review), _delivery_challenge(_outcome_read(
+                                         outcome, "c1", incomplete="The other eighty North Campus employees might have no memberships."))]
         result = ClaudeReconciliationJudge(client).assess(_CONTEXT, snapshot)
         self.assertEqual(result["label"], "PARTIALLY_CORROBORATED")
         self.assertIn(outcome, result["verdict"])
-        self.assertIn(gap, result["verdict"])
-        self.assertIn(review["observed_scope"], result["verdict"])
+        self.assertIn("other eighty North Campus employees might have no memberships", result["verdict"])
+        self.assertIn("twenty North Campus employees", result["criteria"][0]["observed_scope"])
         self.assertIn("Delivery evidence: c1", result["reasoning"])
         self.assertIn("https://transit.example/benefits", result["reasoning"])
 
@@ -905,6 +954,7 @@ class ClaudeReconciliationTests(unittest.TestCase):
             _json_message(_final_assessment(_criterion(name, status="DELIVERED", promise=("c1",), delivery=("c2",)))),
             _observed_outcomes(("c2", actual), planned_terms=(("c1", "form a partnership with Cirrus"),)),
             _delivery_review(_delivery_check(name, actual, support=[("c2", actual)])),
+            _delivery_challenge(_outcome_read(actual, "c2")),
         ]
         result = ClaudeReconciliationJudge(client).assess(_CONTEXT, snapshot)
         self.assertEqual(result["label"], "CORROBORATED")
@@ -920,10 +970,11 @@ class ClaudeReconciliationTests(unittest.TestCase):
             _observed_outcomes(("c1", "formed a partnership with Cirrus"), timing=(("c1", "on 1 November 2025"),)),
             _observed_outcomes(("c1", actual), timing=(("c1", "on 1 November 2025"),)),
             _delivery_review(_delivery_check(name, actual, support=[("c1", actual)], timing_support=("t1",))),
+            _delivery_challenge(_outcome_read(actual, "c1")),
         ]
         result = ClaudeReconciliationJudge(client).assess(_CONTEXT, snapshot)
         self.assertEqual(result["label"], "CORROBORATED")
-        self.assertEqual(client.create.call_count, 4)
+        self.assertEqual(client.create.call_count, 5)
 
     def test_larger_verbatim_quote_credits_only_its_classified_observed_span(self):
         name = "Operate three routes"
@@ -935,6 +986,7 @@ class ClaudeReconciliationTests(unittest.TestCase):
             _json_message(_final_assessment(_criterion(name, status="DELIVERED", delivery=("c1",)))),
             _observed_outcomes(("c1", observed), planned_terms=(("c1", "Five more routes are planned."),)),
             _delivery_review(_delivery_check(name, observed, support=[("c1", excerpt)])),
+            _delivery_challenge(_outcome_read(observed, "c1")),
         ]
         result = ClaudeReconciliationJudge(client).assess(_CONTEXT, snapshot)
         self.assertEqual(result["label"], "CORROBORATED")
@@ -950,7 +1002,7 @@ class ClaudeReconciliationTests(unittest.TestCase):
         client.create.side_effect = [
             _json_message(_final_assessment(_criterion(name, status="DELIVERED", delivery=("c1",),
                                                        timing="No deadline stated."))),
-            _observed_outcomes(("c1", outcome)), _delivery_review(review),
+            _observed_outcomes(("c1", outcome)), _delivery_review(review), _delivery_challenge(_outcome_read(outcome, "c1")),
         ]
         result = ClaudeReconciliationJudge(client).assess(_CONTEXT, snapshot)
         self.assertEqual(result["label"], "CORROBORATED")
@@ -967,7 +1019,8 @@ class ClaudeReconciliationTests(unittest.TestCase):
             with self.subTest(corrected=corrected):
                 if corrected:
                     retry = [_observed_outcomes(("c1", excerpt)),
-                             _delivery_review(_delivery_check(name, excerpt, support=[("c1", excerpt)]))]
+                             _delivery_review(_delivery_check(name, excerpt, support=[("c1", excerpt)])),
+                             _delivery_challenge(_outcome_read(excerpt, "c1"))]
                 else:
                     retry = [incorrect]
                 client.create.side_effect = [initial, incorrect, *retry]
