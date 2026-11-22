@@ -1,0 +1,1567 @@
+{
+  "input_sha256": "f26938f48fd9d19861da9a9d567e28b2d22f3f351d982828701ead5c6678e30e",
+  "judge_model": "gpt-5.4",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "judge_version": "tracegraph-nli-v4-owned-quotes",
+  "started_at": "2026-11-22T10:14:55.142084+00:00",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 25.64000000001397,
+      "request_id": "req_be137118b8fd4aadb768745deec14320",
+      "usage": {
+        "input_tokens": 4073,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 3148,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 7221
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 25.109000000054948,
+      "request_id": "req_8ad341c845584680b33c1b0e3cbd20d7",
+      "usage": {
+        "input_tokens": 4092,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 3840
+        },
+        "output_tokens": 3141,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 7233
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 21.31200000003446,
+      "request_id": "req_f716a4ad7fbc4baaaf38739c66ae8d3a",
+      "usage": {
+        "input_tokens": 4336,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 2639,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 6975
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 6.125,
+      "request_id": "req_ea82323412b54490ac575a862e996647",
+      "usage": {
+        "input_tokens": 8981,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 592,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 9573
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "invalid_responses": [
+    {
+      "stage": "evidence",
+      "response": {
+        "identity": {
+          "label": "MATCH",
+          "reason": "The returned commitment and question identify the same RWNYC license obligation: Resorts World New York City must deposit cash or bond equal to 5% of proposed total investment by December 31, 2025."
+        },
+        "findings": [
+          {
+            "finding_id": "finding-dbb6c084-d5c2-4886-84e0-9dbaae7fcd55",
+            "claims": [
+              {
+                "claim": "Resorts World New York City was required under its license conditions to deposit, via cash or bond, by December 31, 2025, an amount equal to 5 percent of the total investment proposed in its application.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-3faaa516-4623-443f-a00d-686df4a58734",
+                  "support-bad7c499-5924-4c51-8b92-738d7ad3d5ef"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-3faaa516-4623-443f-a00d-686df4a58734",
+                    "quote": "2. Bond Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application",
+                    "label": "ENTAILMENT",
+                    "reason": "This quote directly states the RWNYC obligation, form, amount basis, and deadline."
+                  },
+                  {
+                    "citation_id": "support-bad7c499-5924-4c51-8b92-738d7ad3d5ef",
+                    "quote": "2. Bond Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application",
+                    "label": "ENTAILMENT",
+                    "reason": "This duplicate excerpt expressly establishes the same license condition."
+                  }
+                ],
+                "reason": "The cited license text expressly requires RWNYC to deposit cash or bond equal to 5% of proposed total investment by December 31, 2025."
+              }
+            ]
+          },
+          {
+            "finding_id": "finding-689d16c9-34aa-4bf5-b182-f08383d32f16",
+            "claims": [
+              {
+                "claim": "At the February 3, 2026 commission meeting, staff reported that across the three licensees, two had provided their completion bond and the third was being finalized shortly.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-afeb7a83-1eb5-4433-a872-042b287ed995"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-afeb7a83-1eb5-4433-a872-042b287ed995",
+                    "quote": "Additionally, two of the three licensees have provided their completion bond for their respective project, with the third being finalized shortly.",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly reports the two-provided/third-finalizing status across the three licensees."
+                  }
+                ],
+                "reason": "The meeting transcript expressly reports that two of three licensees had provided completion bonds and the third was being finalized shortly."
+              },
+              {
+                "claim": "The February 3, 2026 statement did not identify Resorts World New York City specifically.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-afeb7a83-1eb5-4433-a872-042b287ed995"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-afeb7a83-1eb5-4433-a872-042b287ed995",
+                    "quote": "two of the three licensees have provided their completion bond for their respective project, with the third being finalized shortly",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote refers only to unnamed licensees and does not name Resorts World New York City."
+                  }
+                ],
+                "reason": "The cited statement speaks only of 'two of the three licensees' and 'the third,' without naming RWNYC."
+              }
+            ]
+          },
+          {
+            "finding_id": "source-reread-1",
+            "claims": [
+              {
+                "claim": "The 5 percent cash-or-bond deposit condition for Resorts World New York City is expressly tied to Racing, Pari-Mutuel Wagering and Breeding Law § 1321-e(1).",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-1-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-1-s",
+                    "quote": "in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 )",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote expressly ties the deposit condition to the cited statutory provision."
+                  }
+                ],
+                "reason": "The excerpt explicitly states that the RWNYC deposit obligation is 'in accordance with' § 1321-e(1)."
+              }
+            ]
+          },
+          {
+            "finding_id": "source-reread-2",
+            "claims": [
+              {
+                "claim": "The Commission retained authority to amend or modify Resorts World New York City's license conditions upon a request by Resorts World New York City or upon the initiative of the Commission.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-2-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-2-s",
+                    "quote": "Nothing shall prevent the Commission from amending or modifying the License Conditions upon a request by Resorts World New York City or upon the initiative of the Commission.",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states both routes for amendment or modification authority."
+                  }
+                ],
+                "reason": "The excerpt expressly says the Commission may amend or modify the license conditions either on RWNYC's request or on its own initiative."
+              },
+              {
+                "claim": "The Commission was not required to grant a requested change to Resorts World New York City's license conditions.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-2-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-2-s",
+                    "quote": "the Commission is not obligated to amend or modify the License Conditions based upon a request from Resorts World New York City seeking such a change.",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states that the Commission had no obligation to grant a requested modification."
+                  }
+                ],
+                "reason": "The excerpt explicitly says the Commission is 'not obligated' to amend or modify the conditions on RWNYC's request."
+              }
+            ]
+          },
+          {
+            "finding_id": "source-reread-3",
+            "claims": [
+              {
+                "claim": "Resorts World New York City's license award became effective on December 15, 2025.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-3-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-3-s",
+                    "quote": "License Award Effective Date: The License is awarded effective as of December 15, 2025.",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly gives the effective date."
+                  }
+                ],
+                "reason": "The excerpt expressly states the license award effective date as December 15, 2025."
+              },
+              {
+                "claim": "The effective date was shortly before the December 31, 2025 deadline for the 5 percent deposit condition.",
+                "label": "NEUTRAL",
+                "citation_ids": [
+                  "source-reread-3-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-3-s",
+                    "quote": "License Award Effective Date: The License is awarded effective as of December 15, 2025.",
+                    "label": "NEUTRAL",
+                    "reason": "This quote gives only the effective date; it does not itself mention the deposit deadline or the relative timing."
+                  }
+                ],
+                "reason": "The citation gives only the effective date and does not itself establish the comparison to the deposit deadline."
+              }
+            ]
+          }
+        ],
+        "coverage": [
+          {
+            "gold_id": "G1",
+            "finding_ids": [
+              "finding-dbb6c084-d5c2-4886-84e0-9dbaae7fcd55"
+            ],
+            "citation_ids": [
+              "support-3faaa516-4623-443f-a00d-686df4a58734",
+              "support-bad7c499-5924-4c51-8b92-738d7ad3d5ef"
+            ],
+            "label": "ENTAILMENT",
+            "reason": "A finding expressly states the RWNYC license required a cash-or-bond deposit equal to 5% of proposed total investment by December 31, 2025, and its attached license excerpt establishes each element.",
+            "claim_links": [
+              {
+                "finding_id": "finding-dbb6c084-d5c2-4886-84e0-9dbaae7fcd55",
+                "claim_index": 0,
+                "label": "ENTAILMENT",
+                "reason": "The claim matches the gold fact's organization, obligation, amount basis, and deadline."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-3faaa516-4623-443f-a00d-686df4a58734",
+                "quote": "2. Bond Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application",
+                "label": "ENTAILMENT",
+                "reason": "This quote directly states the required 5% cash-or-bond deposit by the stated date."
+              },
+              {
+                "citation_id": "support-bad7c499-5924-4c51-8b92-738d7ad3d5ef",
+                "quote": "2. Bond Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application",
+                "label": "ENTAILMENT",
+                "reason": "This duplicate excerpt also directly establishes the same fact."
+              }
+            ]
+          },
+          {
+            "gold_id": "G2",
+            "finding_ids": [
+              "finding-dbb6c084-d5c2-4886-84e0-9dbaae7fcd55"
+            ],
+            "citation_ids": [
+              "support-3faaa516-4623-443f-a00d-686df4a58734"
+            ],
+            "label": "ENTAILMENT",
+            "reason": "The finding presents the completion-security obligation, and its cited excerpt separately lists '1. License Fee' and '2. Bond,' establishing distinct obligations.",
+            "claim_links": [
+              {
+                "finding_id": "finding-dbb6c084-d5c2-4886-84e0-9dbaae7fcd55",
+                "claim_index": 0,
+                "label": "ENTAILMENT",
+                "reason": "By stating the bond deposit obligation while the citation separately lists a $500 million license fee, the answer substantively addresses the separate completion-security obligation."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-3faaa516-4623-443f-a00d-686df4a58734",
+                "quote": "1. License Fee Resorts World New York City shall pay, on or before December 31, 2025, a $500,000,000 gaming facility license fee by electronic funds transfer ... 2. Bond Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application",
+                "label": "ENTAILMENT",
+                "reason": "The quote enumerates the $500 million fee and the bond deposit as separate numbered conditions."
+              }
+            ]
+          },
+          {
+            "gold_id": "G3",
+            "finding_ids": [
+              "source-reread-1"
+            ],
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "label": "NEUTRAL",
+            "reason": "The returned finding says the RWNYC condition is tied to § 1321-e(1), but it does not present the separate fact that the governing statute permits bond instead of cash; the excerpt only shows the license condition's wording.",
+            "claim_links": [
+              {
+                "finding_id": "source-reread-1",
+                "claim_index": 0,
+                "label": "NEUTRAL",
+                "reason": "This claim addresses statutory linkage, not the statute's substantive permission for a bond instead of cash."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application, in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 ).",
+                "label": "NEUTRAL",
+                "reason": "The quote shows the license allows cash or bond and cites the statute, but it does not itself state what the statute permits."
+              }
+            ]
+          },
+          {
+            "gold_id": "G4",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No finding presents the official Q&A requirement that a deposit bond guarantee payment upon default.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G5",
+            "finding_ids": [
+              "finding-689d16c9-34aa-4bf5-b182-f08383d32f16"
+            ],
+            "citation_ids": [
+              "support-afeb7a83-1eb5-4433-a872-042b287ed995"
+            ],
+            "label": "ENTAILMENT",
+            "reason": "A finding states that in the February 3, 2026 commission meeting, staff said two unnamed licensees had provided completion bonds and a third was being finalized, and the attached transcript quote establishes that.",
+            "claim_links": [
+              {
+                "finding_id": "finding-689d16c9-34aa-4bf5-b182-f08383d32f16",
+                "claim_index": 0,
+                "label": "ENTAILMENT",
+                "reason": "This claim matches the date, unnamed-licensee scope, and two-provided/third-finalizing status."
+              },
+              {
+                "finding_id": "finding-689d16c9-34aa-4bf5-b182-f08383d32f16",
+                "claim_index": 1,
+                "label": "ENTAILMENT",
+                "reason": "This claim adds the unnamed nature of the statement, which is part of the gold fact."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-afeb7a83-1eb5-4433-a872-042b287ed995",
+                "quote": "Additionally, two of the three licensees have provided their completion bond for their respective project, with the third being finalized shortly.",
+                "label": "ENTAILMENT",
+                "reason": "This quote directly reports the February 2026 status for unnamed licensees."
+              }
+            ]
+          },
+          {
+            "gold_id": "G6",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No finding presents the Board's recalculated standardized RWNYC capital investment figure of $3.3 billion.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G7",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No finding presents that monetary fields in RWNYC's public capital-investment submission are redacted.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G8",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No finding presents the discrepancy between a 10% compiled-rules deposit figure and RWNYC's 5% individual license condition.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G9",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No finding presents Genting's audited report that GENNY financed the $500 million license fee in January 2026.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G10",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No finding presents that the June 2026 company report gives group restricted cash without attributing it to RWNYC's security.",
+            "claim_links": [],
+            "quote_checks": []
+          }
+        ]
+      },
+      "error": "G2: quote check is outside its own citation excerpt"
+    },
+    {
+      "stage": "evidence",
+      "response": {
+        "identity": {
+          "label": "MATCH",
+          "reason": "The returned commitment and question identify the same RWNYC license obligation: a cash-or-bond deposit equal to 5 percent of proposed total investment due by December 31, 2025, as stated in the cited license text."
+        },
+        "findings": [
+          {
+            "finding_id": "finding-dbb6c084-d5c2-4886-84e0-9dbaae7fcd55",
+            "claims": [
+              {
+                "claim": "Resorts World New York City was required under its license conditions to deposit, via cash or bond, by December 31, 2025, an amount equal to 5 percent of the total investment proposed in its application.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-3faaa516-4623-443f-a00d-686df4a58734",
+                  "support-bad7c499-5924-4c51-8b92-738d7ad3d5ef"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-3faaa516-4623-443f-a00d-686df4a58734",
+                    "quote": "2. Bond Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application",
+                    "label": "ENTAILMENT",
+                    "reason": "This quote directly states the obligor, deadline, payment form, and 5 percent amount tied to the application investment."
+                  },
+                  {
+                    "citation_id": "support-bad7c499-5924-4c51-8b92-738d7ad3d5ef",
+                    "quote": "2. Bond Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application",
+                    "label": "ENTAILMENT",
+                    "reason": "This duplicate excerpt also directly establishes the same bond-deposit obligation."
+                  }
+                ],
+                "reason": "The cited license condition expressly requires RWNYC to deposit cash or bond equal to 5 percent of the total investment proposed in its application by December 31, 2025."
+              }
+            ]
+          },
+          {
+            "finding_id": "finding-689d16c9-34aa-4bf5-b182-f08383d32f16",
+            "claims": [
+              {
+                "claim": "At the February 3, 2026 commission meeting, staff reported that across the three licensees, two had provided their completion bond and the third was being finalized shortly.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-afeb7a83-1eb5-4433-a872-042b287ed995"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-afeb7a83-1eb5-4433-a872-042b287ed995",
+                    "quote": "Additionally, two of the three licensees have provided their completion bond for their respective project, with the third being finalized shortly.",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly reports the two-provided/third-finalizing status across three licensees."
+                  }
+                ],
+                "reason": "The meeting transcript expressly states that two of three licensees had provided completion bonds and the third was being finalized shortly."
+              },
+              {
+                "claim": "The statement did not identify Resorts World New York City specifically.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-afeb7a83-1eb5-4433-a872-042b287ed995"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-afeb7a83-1eb5-4433-a872-042b287ed995",
+                    "quote": "two of the three licensees have provided their completion bond for their respective project, with the third being finalized shortly",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote refers only to unnamed 'licensees' and does not name Resorts World New York City."
+                  }
+                ],
+                "reason": "The cited passage mentions only 'three licensees' and does not name RWNYC."
+              }
+            ]
+          },
+          {
+            "finding_id": "source-reread-1",
+            "claims": [
+              {
+                "claim": "The 5 percent cash-or-bond deposit condition for Resorts World New York City is expressly tied to Racing, Pari-Mutuel Wagering and Breeding Law § 1321-e(1).",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-1-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-1-s",
+                    "quote": "Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application, in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 ).",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly links the 5 percent deposit condition to § 1321-e(1)."
+                  }
+                ],
+                "reason": "The cited license sentence expressly states the deposit condition is 'in accordance with' § 1321-e(1)."
+              }
+            ]
+          },
+          {
+            "finding_id": "source-reread-2",
+            "claims": [
+              {
+                "claim": "The Commission retained authority to amend or modify Resorts World New York City's license conditions, including on its own initiative or at the company's request.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-2-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-2-s",
+                    "quote": "Nothing shall prevent the Commission from amending or modifying the License Conditions upon a request by Resorts World New York City or upon the initiative of the Commission.",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the Commission could amend or modify the conditions either on request or on its own initiative."
+                  }
+                ],
+                "reason": "The excerpt expressly grants the Commission power to amend or modify license conditions on request or on its own initiative."
+              },
+              {
+                "claim": "The Commission was not required to grant a requested change.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-2-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-2-s",
+                    "quote": "the Commission is not obligated to amend or modify the License Conditions based upon a request from Resorts World New York City seeking such a change.",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states there was no obligation to approve a requested modification."
+                  }
+                ],
+                "reason": "The excerpt expressly says the Commission 'is not obligated' to amend or modify the conditions upon RWNYC's request."
+              }
+            ]
+          },
+          {
+            "finding_id": "source-reread-3",
+            "claims": [
+              {
+                "claim": "Resorts World New York City's license award became effective on December 15, 2025.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-3-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-3-s",
+                    "quote": "License Award Effective Date: The License is awarded effective as of December 15, 2025.",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the effective date."
+                  }
+                ],
+                "reason": "The citation expressly gives December 15, 2025 as the license effective date."
+              },
+              {
+                "claim": "This was shortly before the December 31, 2025 deadline for the 5 percent deposit condition.",
+                "label": "NEUTRAL",
+                "citation_ids": [
+                  "source-reread-3-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-3-s",
+                    "quote": "License Award Effective Date: The License is awarded effective as of December 15, 2025.",
+                    "label": "NEUTRAL",
+                    "reason": "This quote gives only the effective date; it does not itself mention the deposit deadline or characterize the interval as 'shortly before'."
+                  }
+                ],
+                "reason": "The attached citation states only the December 15, 2025 effective date and does not itself mention the deposit deadline or the comparative characterization."
+              }
+            ]
+          }
+        ],
+        "coverage": [
+          {
+            "gold_id": "G1",
+            "finding_ids": [
+              "finding-dbb6c084-d5c2-4886-84e0-9dbaae7fcd55"
+            ],
+            "citation_ids": [
+              "support-3faaa516-4623-443f-a00d-686df4a58734"
+            ],
+            "label": "ENTAILMENT",
+            "reason": "A returned finding states the exact RWNYC license requirement, and its attached license excerpt directly establishes the 5 percent cash-or-bond deposit due by December 31, 2025.",
+            "claim_links": [
+              {
+                "finding_id": "finding-dbb6c084-d5c2-4886-84e0-9dbaae7fcd55",
+                "claim_index": 0,
+                "label": "ENTAILMENT",
+                "reason": "This claim matches the gold fact's obligor, amount, payment form, and deadline."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-3faaa516-4623-443f-a00d-686df4a58734",
+                "quote": "2. Bond Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the required 5 percent cash-or-bond deposit by the stated deadline."
+              }
+            ]
+          },
+          {
+            "gold_id": "G2",
+            "finding_ids": [
+              "finding-dbb6c084-d5c2-4886-84e0-9dbaae7fcd55"
+            ],
+            "citation_ids": [
+              "support-bad7c499-5924-4c51-8b92-738d7ad3d5ef"
+            ],
+            "label": "ENTAILMENT",
+            "reason": "The returned finding conveys the bond obligation, and its attached excerpt separately lists '1. License Fee' and '2. Bond,' showing the $500 million fee and completion security as distinct obligations.",
+            "claim_links": [
+              {
+                "finding_id": "finding-dbb6c084-d5c2-4886-84e0-9dbaae7fcd55",
+                "claim_index": 0,
+                "label": "ENTAILMENT",
+                "reason": "By describing the bond deposit obligation, alongside the cited text's separate numbered fee provision, the finding substantively addresses that this is distinct from the license fee."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-bad7c499-5924-4c51-8b92-738d7ad3d5ef",
+                "quote": "1. License Fee Resorts World New York City shall pay, on or before December 31, 2025, a $500,000,000 gaming facility license fee",
+                "label": "ENTAILMENT",
+                "reason": "This quote identifies one obligation as the $500 million license fee."
+              },
+              {
+                "citation_id": "support-bad7c499-5924-4c51-8b92-738d7ad3d5ef",
+                "quote": "2. Bond Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application",
+                "label": "ENTAILMENT",
+                "reason": "This separate numbered quote identifies a different obligation, the bond deposit."
+              }
+            ]
+          },
+          {
+            "gold_id": "G3",
+            "finding_ids": [
+              "source-reread-1"
+            ],
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "label": "NEUTRAL",
+            "reason": "A returned finding ties the deposit condition to § 1321-e(1), but its attached excerpt does not state that the governing statute permits bond instead of cash; it states only the license condition itself allows 'cash or bond.'",
+            "claim_links": [
+              {
+                "finding_id": "source-reread-1",
+                "claim_index": 0,
+                "label": "NEUTRAL",
+                "reason": "The claim mentions the statutory citation but does not establish what the statute itself permits beyond the license wording."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application, in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 ).",
+                "label": "NEUTRAL",
+                "reason": "The quote shows the license allows 'cash or bond' and cites the statute, but it does not quote the statute's own permission."
+              }
+            ]
+          },
+          {
+            "gold_id": "G4",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No returned finding presents the official Q&A statement that a deposit bond must guarantee payment upon default.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G5",
+            "finding_ids": [
+              "finding-689d16c9-34aa-4bf5-b182-f08383d32f16"
+            ],
+            "citation_ids": [
+              "support-afeb7a83-1eb5-4433-a872-042b287ed995"
+            ],
+            "label": "ENTAILMENT",
+            "reason": "A returned finding states the February 3, 2026 commission report that two unnamed licensees had provided completion bonds and a third was being finalized shortly, and the attached transcript excerpt directly says so.",
+            "claim_links": [
+              {
+                "finding_id": "finding-689d16c9-34aa-4bf5-b182-f08383d32f16",
+                "claim_index": 0,
+                "label": "ENTAILMENT",
+                "reason": "This claim matches the cross-licensee February 2026 report."
+              },
+              {
+                "finding_id": "finding-689d16c9-34aa-4bf5-b182-f08383d32f16",
+                "claim_index": 1,
+                "label": "ENTAILMENT",
+                "reason": "This claim matches the fact that the licensees were unnamed rather than specifically identified as RWNYC."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-afeb7a83-1eb5-4433-a872-042b287ed995",
+                "quote": "Additionally, two of the three licensees have provided their completion bond for their respective project, with the third being finalized shortly.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly reports two provided bonds and a third being finalized, without naming the licensees."
+              }
+            ]
+          },
+          {
+            "gold_id": "G6",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No returned finding states the Board's recalculated standardized RWNYC capital investment figure of $3.3 billion.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G7",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No returned finding states that monetary fields in RWNYC's public capital-investment submission are redacted.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G8",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No returned finding states that compiled rules print a 10 percent deposit figure while RWNYC's individual license states 5 percent.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G9",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No returned finding states Genting's audited report said GENNY financed the $500 million license fee in January 2026.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G10",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No returned finding states that the June 2026 company report gives group restricted cash without attributing it to RWNYC's security.",
+            "claim_links": [],
+            "quote_checks": []
+          }
+        ]
+      },
+      "error": "G2 quote checks: duplicate support-bad7c499-5924-4c51-8b92-738d7ad3d5ef"
+    }
+  ],
+  "evidence": {
+    "identity": {
+      "label": "MATCH",
+      "reason": "The returned commitment and question identify the same RWNYC license condition: a cash-or-bond deposit equal to 5 percent of proposed total investment due by December 31, 2025."
+    },
+    "findings": [
+      {
+        "finding_id": "finding-dbb6c084-d5c2-4886-84e0-9dbaae7fcd55",
+        "claims": [
+          {
+            "claim": "Resorts World New York City was required under its license conditions to deposit, via cash or bond, by December 31, 2025, an amount equal to 5 percent of the total investment proposed in its application.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-3faaa516-4623-443f-a00d-686df4a58734",
+              "support-bad7c499-5924-4c51-8b92-738d7ad3d5ef"
+            ],
+            "quote_checks": [
+              {
+                "quote": "EXHIBIT 1 LICENSE CONDITIONS All references to laws of New York and provisions of the Official Compilation of Codes, Rules and Regulations of the State of New York (\"NYCRR\") are to the provisions of such laws and regulations as they exist on the date hereof and as they may hereafter be amended from time to time. Resorts World New York City shall materially perform consistent with the content of its Application and commitments expressed during the Community Advisory Committee evaluative process, as determined or otherwise approved by the Commission. General Conditions 1. License Fee Resorts World New York City shall pay, on or before December 31, 2025, a $500,000,000 gaming facility license fee by electronic funds transfer in accordance with Racing, Pari-Mutuel Wagering and Breeding Law§ 1321-e(3) and 9 NYC RR § 601.1 (b ). 2. Bond Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application, in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 ).",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt expressly states RWNYC shall by December 31, 2025 deposit via cash or bond an amount representing 5 percent of total investment proposed in the application.",
+                "citation_id": "support-3faaa516-4623-443f-a00d-686df4a58734"
+              },
+              {
+                "quote": "General Conditions 1. License Fee Resorts World New York City shall pay, on or before December 31, 2025, a $500,000,000 gaming facility license fee by electronic funds transfer in accordance with Racing, Pari-Mutuel Wagering and Breeding Law§ 1321-e(3) and 9 NYC RR § 601.1 (b ). 2. Bond Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application, in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 ).",
+                "label": "ENTAILMENT",
+                "reason": "This excerpt likewise expressly states the same bond condition, including organization, timing, form, and 5 percent amount.",
+                "citation_id": "support-bad7c499-5924-4c51-8b92-738d7ad3d5ef"
+              }
+            ],
+            "reason": "The cited license condition directly states the obligation, timing, payment form, and 5 percent measure."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-689d16c9-34aa-4bf5-b182-f08383d32f16",
+        "claims": [
+          {
+            "claim": "At the February 3, 2026 commission meeting, staff reported that across the three licensees, two had provided their completion bond and the third was being finalized shortly.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-afeb7a83-1eb5-4433-a872-042b287ed995"
+            ],
+            "quote_checks": [
+              {
+                "quote": "First, all three licensees have remitted their $500M license fee, which has, consistent with state law, in turn been remitted to the Metropolitan Transit Authority. Additionally, two of the three licensees have provided their completion bond for their respective project, with the third being finalized shortly.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt states that two of the three licensees had provided their completion bond and the third was being finalized shortly.",
+                "citation_id": "support-afeb7a83-1eb5-4433-a872-042b287ed995"
+              }
+            ],
+            "reason": "The excerpt directly reports the two-provided/third-finalizing status across the three licensees."
+          },
+          {
+            "claim": "The statement did not identify Resorts World New York City specifically.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-afeb7a83-1eb5-4433-a872-042b287ed995"
+            ],
+            "quote_checks": [
+              {
+                "quote": "First, all three licensees have remitted their $500M license fee, which has, consistent with state law, in turn been remitted to the Metropolitan Transit Authority. Additionally, two of the three licensees have provided their completion bond for their respective project, with the third being finalized shortly.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt refers only to 'two of the three licensees' and 'the third' without naming Resorts World New York City.",
+                "citation_id": "support-afeb7a83-1eb5-4433-a872-042b287ed995"
+              }
+            ],
+            "reason": "The cited statement is anonymous and does not name RWNYC."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-1",
+        "claims": [
+          {
+            "claim": "The 5 percent cash-or-bond deposit condition for Resorts World New York City is expressly tied to Racing, Pari-Mutuel Wagering and Breeding Law § 1321-e(1).",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "quote_checks": [
+              {
+                "quote": "Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application, in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 ).",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt expressly says the 5 percent cash-or-bond deposit is 'in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 ).'",
+                "citation_id": "source-reread-1-s"
+              }
+            ],
+            "reason": "The excerpt explicitly ties the RWNYC deposit condition to § 1321-e(1)."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-2",
+        "claims": [
+          {
+            "claim": "The Commission retained authority to amend or modify Resorts World New York City's license conditions, including on its own initiative or at the company's request, but was not required to grant a requested change.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-2-s"
+            ],
+            "quote_checks": [
+              {
+                "quote": "Nothing shall prevent the Commission from amending or modifying the License Conditions upon a request by Resorts World New York City or upon the initiative of the Commission. Likewise, the Commission is not obligated to amend or modify the License Conditions based upon a request from Resorts World New York City seeking such a change.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt states the Commission may amend or modify the conditions on RWNYC's request or its own initiative and is not obligated to grant RWNYC's request.",
+                "citation_id": "source-reread-2-s"
+              }
+            ],
+            "reason": "The excerpt directly states both the Commission's power to modify and its lack of obligation to approve a requested change."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-3",
+        "claims": [
+          {
+            "claim": "Resorts World New York City's license award became effective on December 15, 2025.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-3-s"
+            ],
+            "quote_checks": [
+              {
+                "quote": "License Award Effective Date: The License is awarded effective as of December 15, 2025.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt expressly states the license is awarded effective as of December 15, 2025.",
+                "citation_id": "source-reread-3-s"
+              }
+            ],
+            "reason": "The effective date is expressly stated."
+          },
+          {
+            "claim": "That effective date was shortly before the December 31, 2025 deadline for the 5 percent deposit condition.",
+            "label": "NEUTRAL",
+            "citation_ids": [
+              "source-reread-3-s"
+            ],
+            "quote_checks": [
+              {
+                "quote": "License Award Effective Date: The License is awarded effective as of December 15, 2025.",
+                "label": "NEUTRAL",
+                "reason": "The excerpt gives only the December 15, 2025 effective date and does not itself state the deposit deadline or characterize the interval as 'shortly before.'",
+                "citation_id": "source-reread-3-s"
+              }
+            ],
+            "reason": "This citation gives only the effective date; the comparative timing to the deposit deadline is not established by this excerpt alone."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "finding-dbb6c084-d5c2-4886-84e0-9dbaae7fcd55"
+        ],
+        "citation_ids": [
+          "support-3faaa516-4623-443f-a00d-686df4a58734"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Finding finding-dbb6c084-d5c2-4886-84e0-9dbaae7fcd55 states the same RWNYC license requirement, and its cited excerpt expressly gives the 5 percent cash-or-bond deposit due by December 31, 2025.",
+        "claim_links": [
+          {
+            "finding_id": "finding-dbb6c084-d5c2-4886-84e0-9dbaae7fcd55",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "The claim matches the reference fact's subject, obligation, amount basis, and deadline."
+          }
+        ],
+        "quote_checks": [
+          {
+            "quote": "EXHIBIT 1 LICENSE CONDITIONS All references to laws of New York and provisions of the Official Compilation of Codes, Rules and Regulations of the State of New York (\"NYCRR\") are to the provisions of such laws and regulations as they exist on the date hereof and as they may hereafter be amended from time to time. Resorts World New York City shall materially perform consistent with the content of its Application and commitments expressed during the Community Advisory Committee evaluative process, as determined or otherwise approved by the Commission. General Conditions 1. License Fee Resorts World New York City shall pay, on or before December 31, 2025, a $500,000,000 gaming facility license fee by electronic funds transfer in accordance with Racing, Pari-Mutuel Wagering and Breeding Law§ 1321-e(3) and 9 NYC RR § 601.1 (b ). 2. Bond Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application, in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 ).",
+            "label": "ENTAILMENT",
+            "reason": "The excerpt expressly states RWNYC shall by December 31, 2025 deposit via cash or bond an amount representing 5 percent of the total investment proposed in the application.",
+            "citation_id": "support-3faaa516-4623-443f-a00d-686df4a58734"
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents that the $500 million license fee is a separate obligation from the completion security.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [
+          "source-reread-1"
+        ],
+        "citation_ids": [
+          "source-reread-1-s"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding states the RWNYC condition is tied to § 1321-e(1), and the excerpt allows cash or bond, but neither the finding nor excerpt establishes what the governing statute itself permits.",
+        "claim_links": [
+          {
+            "finding_id": "source-reread-1",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "The claim is about the license condition's tie to the statute, not the statute's own permission structure."
+          }
+        ],
+        "quote_checks": [
+          {
+            "quote": "Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application, in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 ).",
+            "label": "NEUTRAL",
+            "reason": "The excerpt shows RWNYC may deposit via cash or bond under its license condition, but it does not quote the statute to establish that the governing statute itself permits bond instead of cash.",
+            "citation_id": "source-reread-1-s"
+          }
+        ]
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents any official Q&A statement about a deposit bond guaranteeing payment upon default.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G5",
+        "finding_ids": [
+          "finding-689d16c9-34aa-4bf5-b182-f08383d32f16"
+        ],
+        "citation_ids": [
+          "support-afeb7a83-1eb5-4433-a872-042b287ed995"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "The finding states that at the February 3, 2026 meeting staff said two unnamed licensees had provided completion bonds and a third was being finalized, and the excerpt directly says so.",
+        "claim_links": [
+          {
+            "finding_id": "finding-689d16c9-34aa-4bf5-b182-f08383d32f16",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim conveys the two-bonds-provided and third-finalizing statement across the three licensees."
+          },
+          {
+            "finding_id": "finding-689d16c9-34aa-4bf5-b182-f08383d32f16",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "This claim conveys that the statement did not identify RWNYC specifically, matching the reference fact's unnamed-licensees qualifier."
+          }
+        ],
+        "quote_checks": [
+          {
+            "quote": "First, all three licensees have remitted their $500M license fee, which has, consistent with state law, in turn been remitted to the Metropolitan Transit Authority. Additionally, two of the three licensees have provided their completion bond for their respective project, with the third being finalized shortly.",
+            "label": "ENTAILMENT",
+            "reason": "The excerpt states that two of the three licensees had provided their completion bond and the third was being finalized shortly, without naming the licensees.",
+            "citation_id": "support-afeb7a83-1eb5-4433-a872-042b287ed995"
+          }
+        ]
+      },
+      {
+        "gold_id": "G6",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents a Board-reported recalculated standardized RWNYC capital investment figure of $3.3 billion.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G7",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents that monetary fields in RWNYC's public capital-investment submission are redacted.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G8",
+        "finding_ids": [
+          "finding-dbb6c084-d5c2-4886-84e0-9dbaae7fcd55"
+        ],
+        "citation_ids": [
+          "support-3faaa516-4623-443f-a00d-686df4a58734"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding and excerpt establish the individual RWNYC license states 5 percent, but they do not present or evidence the separate compiled-rules 10 percent figure.",
+        "claim_links": [
+          {
+            "finding_id": "finding-dbb6c084-d5c2-4886-84e0-9dbaae7fcd55",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "The claim covers only the 5 percent RWNYC license condition, not any 10 percent compiled-rules text."
+          }
+        ],
+        "quote_checks": [
+          {
+            "quote": "EXHIBIT 1 LICENSE CONDITIONS All references to laws of New York and provisions of the Official Compilation of Codes, Rules and Regulations of the State of New York (\"NYCRR\") are to the provisions of such laws and regulations as they exist on the date hereof and as they may hereafter be amended from time to time. Resorts World New York City shall materially perform consistent with the content of its Application and commitments expressed during the Community Advisory Committee evaluative process, as determined or otherwise approved by the Commission. General Conditions 1. License Fee Resorts World New York City shall pay, on or before December 31, 2025, a $500,000,000 gaming facility license fee by electronic funds transfer in accordance with Racing, Pari-Mutuel Wagering and Breeding Law§ 1321-e(3) and 9 NYC RR § 601.1 (b ). 2. Bond Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application, in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 ).",
+            "label": "NEUTRAL",
+            "reason": "The excerpt establishes only the 5 percent figure in RWNYC's license and says nothing about compiled rules printing 10 percent.",
+            "citation_id": "support-3faaa516-4623-443f-a00d-686df4a58734"
+          }
+        ]
+      },
+      {
+        "gold_id": "G9",
+        "finding_ids": [
+          "finding-689d16c9-34aa-4bf5-b182-f08383d32f16"
+        ],
+        "citation_ids": [
+          "support-afeb7a83-1eb5-4433-a872-042b287ed995"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding says that by February 3, 2026 all three licensees had remitted their $500M license fee, but it does not present Genting's audited report, GENNY financing, or a January 2026 timing detail.",
+        "claim_links": [
+          {
+            "finding_id": "finding-689d16c9-34aa-4bf5-b182-f08383d32f16",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "This claim reports payment status across licensees but does not convey Genting's audited report or January 2026 GENNY financing."
+          }
+        ],
+        "quote_checks": [
+          {
+            "quote": "First, all three licensees have remitted their $500M license fee, which has, consistent with state law, in turn been remitted to the Metropolitan Transit Authority. Additionally, two of the three licensees have provided their completion bond for their respective project, with the third being finalized shortly.",
+            "label": "NEUTRAL",
+            "reason": "The excerpt states all three licensees had remitted the $500M fee by the meeting, but it does not identify Genting, GENNY, or January 2026 financing.",
+            "citation_id": "support-afeb7a83-1eb5-4433-a872-042b287ed995"
+          }
+        ]
+      },
+      {
+        "gold_id": "G10",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents that a June 2026 company report gives group restricted cash without attributing it to RWNYC's security.",
+        "claim_links": [],
+        "quote_checks": []
+      }
+    ]
+  },
+  "verdict_protocol": "two-stage-owned-citations-v4",
+  "judgment": {
+    "identity": {
+      "label": "MATCH",
+      "reason": "The returned commitment and question identify the same RWNYC license condition: a cash-or-bond deposit equal to 5 percent of proposed total investment due by December 31, 2025."
+    },
+    "findings": [
+      {
+        "finding_id": "finding-dbb6c084-d5c2-4886-84e0-9dbaae7fcd55",
+        "claims": [
+          {
+            "claim": "Resorts World New York City was required under its license conditions to deposit, via cash or bond, by December 31, 2025, an amount equal to 5 percent of the total investment proposed in its application.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-3faaa516-4623-443f-a00d-686df4a58734",
+              "support-bad7c499-5924-4c51-8b92-738d7ad3d5ef"
+            ],
+            "quote_checks": [
+              {
+                "quote": "EXHIBIT 1 LICENSE CONDITIONS All references to laws of New York and provisions of the Official Compilation of Codes, Rules and Regulations of the State of New York (\"NYCRR\") are to the provisions of such laws and regulations as they exist on the date hereof and as they may hereafter be amended from time to time. Resorts World New York City shall materially perform consistent with the content of its Application and commitments expressed during the Community Advisory Committee evaluative process, as determined or otherwise approved by the Commission. General Conditions 1. License Fee Resorts World New York City shall pay, on or before December 31, 2025, a $500,000,000 gaming facility license fee by electronic funds transfer in accordance with Racing, Pari-Mutuel Wagering and Breeding Law§ 1321-e(3) and 9 NYC RR § 601.1 (b ). 2. Bond Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application, in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 ).",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt expressly states RWNYC shall by December 31, 2025 deposit via cash or bond an amount representing 5 percent of total investment proposed in the application.",
+                "citation_id": "support-3faaa516-4623-443f-a00d-686df4a58734"
+              },
+              {
+                "quote": "General Conditions 1. License Fee Resorts World New York City shall pay, on or before December 31, 2025, a $500,000,000 gaming facility license fee by electronic funds transfer in accordance with Racing, Pari-Mutuel Wagering and Breeding Law§ 1321-e(3) and 9 NYC RR § 601.1 (b ). 2. Bond Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application, in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 ).",
+                "label": "ENTAILMENT",
+                "reason": "This excerpt likewise expressly states the same bond condition, including organization, timing, form, and 5 percent amount.",
+                "citation_id": "support-bad7c499-5924-4c51-8b92-738d7ad3d5ef"
+              }
+            ],
+            "reason": "The cited license condition directly states the obligation, timing, payment form, and 5 percent measure."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-689d16c9-34aa-4bf5-b182-f08383d32f16",
+        "claims": [
+          {
+            "claim": "At the February 3, 2026 commission meeting, staff reported that across the three licensees, two had provided their completion bond and the third was being finalized shortly.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-afeb7a83-1eb5-4433-a872-042b287ed995"
+            ],
+            "quote_checks": [
+              {
+                "quote": "First, all three licensees have remitted their $500M license fee, which has, consistent with state law, in turn been remitted to the Metropolitan Transit Authority. Additionally, two of the three licensees have provided their completion bond for their respective project, with the third being finalized shortly.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt states that two of the three licensees had provided their completion bond and the third was being finalized shortly.",
+                "citation_id": "support-afeb7a83-1eb5-4433-a872-042b287ed995"
+              }
+            ],
+            "reason": "The excerpt directly reports the two-provided/third-finalizing status across the three licensees."
+          },
+          {
+            "claim": "The statement did not identify Resorts World New York City specifically.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-afeb7a83-1eb5-4433-a872-042b287ed995"
+            ],
+            "quote_checks": [
+              {
+                "quote": "First, all three licensees have remitted their $500M license fee, which has, consistent with state law, in turn been remitted to the Metropolitan Transit Authority. Additionally, two of the three licensees have provided their completion bond for their respective project, with the third being finalized shortly.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt refers only to 'two of the three licensees' and 'the third' without naming Resorts World New York City.",
+                "citation_id": "support-afeb7a83-1eb5-4433-a872-042b287ed995"
+              }
+            ],
+            "reason": "The cited statement is anonymous and does not name RWNYC."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-1",
+        "claims": [
+          {
+            "claim": "The 5 percent cash-or-bond deposit condition for Resorts World New York City is expressly tied to Racing, Pari-Mutuel Wagering and Breeding Law § 1321-e(1).",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "quote_checks": [
+              {
+                "quote": "Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application, in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 ).",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt expressly says the 5 percent cash-or-bond deposit is 'in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 ).'",
+                "citation_id": "source-reread-1-s"
+              }
+            ],
+            "reason": "The excerpt explicitly ties the RWNYC deposit condition to § 1321-e(1)."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-2",
+        "claims": [
+          {
+            "claim": "The Commission retained authority to amend or modify Resorts World New York City's license conditions, including on its own initiative or at the company's request, but was not required to grant a requested change.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-2-s"
+            ],
+            "quote_checks": [
+              {
+                "quote": "Nothing shall prevent the Commission from amending or modifying the License Conditions upon a request by Resorts World New York City or upon the initiative of the Commission. Likewise, the Commission is not obligated to amend or modify the License Conditions based upon a request from Resorts World New York City seeking such a change.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt states the Commission may amend or modify the conditions on RWNYC's request or its own initiative and is not obligated to grant RWNYC's request.",
+                "citation_id": "source-reread-2-s"
+              }
+            ],
+            "reason": "The excerpt directly states both the Commission's power to modify and its lack of obligation to approve a requested change."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-3",
+        "claims": [
+          {
+            "claim": "Resorts World New York City's license award became effective on December 15, 2025.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-3-s"
+            ],
+            "quote_checks": [
+              {
+                "quote": "License Award Effective Date: The License is awarded effective as of December 15, 2025.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt expressly states the license is awarded effective as of December 15, 2025.",
+                "citation_id": "source-reread-3-s"
+              }
+            ],
+            "reason": "The effective date is expressly stated."
+          },
+          {
+            "claim": "That effective date was shortly before the December 31, 2025 deadline for the 5 percent deposit condition.",
+            "label": "NEUTRAL",
+            "citation_ids": [
+              "source-reread-3-s"
+            ],
+            "quote_checks": [
+              {
+                "quote": "License Award Effective Date: The License is awarded effective as of December 15, 2025.",
+                "label": "NEUTRAL",
+                "reason": "The excerpt gives only the December 15, 2025 effective date and does not itself state the deposit deadline or characterize the interval as 'shortly before.'",
+                "citation_id": "source-reread-3-s"
+              }
+            ],
+            "reason": "This citation gives only the effective date; the comparative timing to the deposit deadline is not established by this excerpt alone."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "finding-dbb6c084-d5c2-4886-84e0-9dbaae7fcd55"
+        ],
+        "citation_ids": [
+          "support-3faaa516-4623-443f-a00d-686df4a58734"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Finding finding-dbb6c084-d5c2-4886-84e0-9dbaae7fcd55 states the same RWNYC license requirement, and its cited excerpt expressly gives the 5 percent cash-or-bond deposit due by December 31, 2025.",
+        "claim_links": [
+          {
+            "finding_id": "finding-dbb6c084-d5c2-4886-84e0-9dbaae7fcd55",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "The claim matches the reference fact's subject, obligation, amount basis, and deadline."
+          }
+        ],
+        "quote_checks": [
+          {
+            "quote": "EXHIBIT 1 LICENSE CONDITIONS All references to laws of New York and provisions of the Official Compilation of Codes, Rules and Regulations of the State of New York (\"NYCRR\") are to the provisions of such laws and regulations as they exist on the date hereof and as they may hereafter be amended from time to time. Resorts World New York City shall materially perform consistent with the content of its Application and commitments expressed during the Community Advisory Committee evaluative process, as determined or otherwise approved by the Commission. General Conditions 1. License Fee Resorts World New York City shall pay, on or before December 31, 2025, a $500,000,000 gaming facility license fee by electronic funds transfer in accordance with Racing, Pari-Mutuel Wagering and Breeding Law§ 1321-e(3) and 9 NYC RR § 601.1 (b ). 2. Bond Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application, in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 ).",
+            "label": "ENTAILMENT",
+            "reason": "The excerpt expressly states RWNYC shall by December 31, 2025 deposit via cash or bond an amount representing 5 percent of the total investment proposed in the application.",
+            "citation_id": "support-3faaa516-4623-443f-a00d-686df4a58734"
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents that the $500 million license fee is a separate obligation from the completion security.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [
+          "source-reread-1"
+        ],
+        "citation_ids": [
+          "source-reread-1-s"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding states the RWNYC condition is tied to § 1321-e(1), and the excerpt allows cash or bond, but neither the finding nor excerpt establishes what the governing statute itself permits.",
+        "claim_links": [
+          {
+            "finding_id": "source-reread-1",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "The claim is about the license condition's tie to the statute, not the statute's own permission structure."
+          }
+        ],
+        "quote_checks": [
+          {
+            "quote": "Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application, in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 ).",
+            "label": "NEUTRAL",
+            "reason": "The excerpt shows RWNYC may deposit via cash or bond under its license condition, but it does not quote the statute to establish that the governing statute itself permits bond instead of cash.",
+            "citation_id": "source-reread-1-s"
+          }
+        ]
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents any official Q&A statement about a deposit bond guaranteeing payment upon default.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G5",
+        "finding_ids": [
+          "finding-689d16c9-34aa-4bf5-b182-f08383d32f16"
+        ],
+        "citation_ids": [
+          "support-afeb7a83-1eb5-4433-a872-042b287ed995"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "The finding states that at the February 3, 2026 meeting staff said two unnamed licensees had provided completion bonds and a third was being finalized, and the excerpt directly says so.",
+        "claim_links": [
+          {
+            "finding_id": "finding-689d16c9-34aa-4bf5-b182-f08383d32f16",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim conveys the two-bonds-provided and third-finalizing statement across the three licensees."
+          },
+          {
+            "finding_id": "finding-689d16c9-34aa-4bf5-b182-f08383d32f16",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "This claim conveys that the statement did not identify RWNYC specifically, matching the reference fact's unnamed-licensees qualifier."
+          }
+        ],
+        "quote_checks": [
+          {
+            "quote": "First, all three licensees have remitted their $500M license fee, which has, consistent with state law, in turn been remitted to the Metropolitan Transit Authority. Additionally, two of the three licensees have provided their completion bond for their respective project, with the third being finalized shortly.",
+            "label": "ENTAILMENT",
+            "reason": "The excerpt states that two of the three licensees had provided their completion bond and the third was being finalized shortly, without naming the licensees.",
+            "citation_id": "support-afeb7a83-1eb5-4433-a872-042b287ed995"
+          }
+        ]
+      },
+      {
+        "gold_id": "G6",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents a Board-reported recalculated standardized RWNYC capital investment figure of $3.3 billion.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G7",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents that monetary fields in RWNYC's public capital-investment submission are redacted.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G8",
+        "finding_ids": [
+          "finding-dbb6c084-d5c2-4886-84e0-9dbaae7fcd55"
+        ],
+        "citation_ids": [
+          "support-3faaa516-4623-443f-a00d-686df4a58734"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding and excerpt establish the individual RWNYC license states 5 percent, but they do not present or evidence the separate compiled-rules 10 percent figure.",
+        "claim_links": [
+          {
+            "finding_id": "finding-dbb6c084-d5c2-4886-84e0-9dbaae7fcd55",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "The claim covers only the 5 percent RWNYC license condition, not any 10 percent compiled-rules text."
+          }
+        ],
+        "quote_checks": [
+          {
+            "quote": "EXHIBIT 1 LICENSE CONDITIONS All references to laws of New York and provisions of the Official Compilation of Codes, Rules and Regulations of the State of New York (\"NYCRR\") are to the provisions of such laws and regulations as they exist on the date hereof and as they may hereafter be amended from time to time. Resorts World New York City shall materially perform consistent with the content of its Application and commitments expressed during the Community Advisory Committee evaluative process, as determined or otherwise approved by the Commission. General Conditions 1. License Fee Resorts World New York City shall pay, on or before December 31, 2025, a $500,000,000 gaming facility license fee by electronic funds transfer in accordance with Racing, Pari-Mutuel Wagering and Breeding Law§ 1321-e(3) and 9 NYC RR § 601.1 (b ). 2. Bond Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application, in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 ).",
+            "label": "NEUTRAL",
+            "reason": "The excerpt establishes only the 5 percent figure in RWNYC's license and says nothing about compiled rules printing 10 percent.",
+            "citation_id": "support-3faaa516-4623-443f-a00d-686df4a58734"
+          }
+        ]
+      },
+      {
+        "gold_id": "G9",
+        "finding_ids": [
+          "finding-689d16c9-34aa-4bf5-b182-f08383d32f16"
+        ],
+        "citation_ids": [
+          "support-afeb7a83-1eb5-4433-a872-042b287ed995"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding says that by February 3, 2026 all three licensees had remitted their $500M license fee, but it does not present Genting's audited report, GENNY financing, or a January 2026 timing detail.",
+        "claim_links": [
+          {
+            "finding_id": "finding-689d16c9-34aa-4bf5-b182-f08383d32f16",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "This claim reports payment status across licensees but does not convey Genting's audited report or January 2026 GENNY financing."
+          }
+        ],
+        "quote_checks": [
+          {
+            "quote": "First, all three licensees have remitted their $500M license fee, which has, consistent with state law, in turn been remitted to the Metropolitan Transit Authority. Additionally, two of the three licensees have provided their completion bond for their respective project, with the third being finalized shortly.",
+            "label": "NEUTRAL",
+            "reason": "The excerpt states all three licensees had remitted the $500M fee by the meeting, but it does not identify Genting, GENNY, or January 2026 financing.",
+            "citation_id": "support-afeb7a83-1eb5-4433-a872-042b287ed995"
+          }
+        ]
+      },
+      {
+        "gold_id": "G10",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents that a June 2026 company report gives group restricted cash without attributing it to RWNYC's security.",
+        "claim_links": [],
+        "quote_checks": []
+      }
+    ],
+    "protocol": "owned-quotes-v1",
+    "verdict": {
+      "label": "JUSTIFIED",
+      "reason": "The final assessment appropriately treats the record as proving the obligation but not delivery: the only delivery-related excerpt says unnamed licensees provided bonds and a third was still being finalized, which does not establish that RWNYC supplied the security, that it equaled 5%, or that it was deposited by December 31, 2025.",
+      "conditions": [
+        {
+          "condition_id": "K1",
+          "label": "NEUTRAL",
+          "citation_ids": [
+            "support-afeb7a83-1eb5-4433-a872-042b287ed995"
+          ],
+          "quote_checks": [
+            {
+              "quote": "First, all three licensees have remitted their $500M license fee, which has, consistent with state law, in turn been remitted to the Metropolitan Transit Authority. Additionally, two of the three licensees have provided their completion bond for their respective project, with the third being finalized shortly.",
+              "label": "NEUTRAL",
+              "reason": "The excerpt reports only that two unnamed licensees provided completion bonds and a third was being finalized; it does not identify RWNYC as having supplied cash or a bond.",
+              "citation_id": "support-afeb7a83-1eb5-4433-a872-042b287ed995"
+            }
+          ],
+          "reason": "The only delivery evidence is anonymous across three licensees, so RWNYC's own provision of security is unproven."
+        },
+        {
+          "condition_id": "K2",
+          "label": "NEUTRAL",
+          "citation_ids": [
+            "support-afeb7a83-1eb5-4433-a872-042b287ed995",
+            "support-3faaa516-4623-443f-a00d-686df4a58734"
+          ],
+          "quote_checks": [
+            {
+              "quote": "First, all three licensees have remitted their $500M license fee, which has, consistent with state law, in turn been remitted to the Metropolitan Transit Authority. Additionally, two of the three licensees have provided their completion bond for their respective project, with the third being finalized shortly.",
+              "label": "NEUTRAL",
+              "reason": "This excerpt says some licensees provided bonds, but gives no amount for any RWNYC security.",
+              "citation_id": "support-afeb7a83-1eb5-4433-a872-042b287ed995"
+            },
+            {
+              "quote": "EXHIBIT 1 LICENSE CONDITIONS All references to laws of New York and provisions of the Official Compilation of Codes, Rules and Regulations of the State of New York (\"NYCRR\") are to the provisions of such laws and regulations as they exist on the date hereof and as they may hereafter be amended from time to time. Resorts World New York City shall materially perform consistent with the content of its Application and commitments expressed during the Community Advisory Committee evaluative process, as determined or otherwise approved by the Commission. General Conditions 1. License Fee Resorts World New York City shall pay, on or before December 31, 2025, a $500,000,000 gaming facility license fee by electronic funds transfer in accordance with Racing, Pari-Mutuel Wagering and Breeding Law§ 1321-e(3) and 9 NYC RR § 601.1 (b ). 2. Bond Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application, in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 ).",
+              "label": "NEUTRAL",
+              "reason": "This excerpt establishes the required amount was 5% of proposed investment, but it is only the obligation and not evidence that any delivered RWNYC security actually equaled that amount.",
+              "citation_id": "support-3faaa516-4623-443f-a00d-686df4a58734"
+            }
+          ],
+          "reason": "The record shows the required 5% benchmark but no proof of the amount of any RWNYC deposit actually made."
+        },
+        {
+          "condition_id": "K3",
+          "label": "NEUTRAL",
+          "citation_ids": [
+            "support-afeb7a83-1eb5-4433-a872-042b287ed995",
+            "support-3faaa516-4623-443f-a00d-686df4a58734"
+          ],
+          "quote_checks": [
+            {
+              "quote": "First, all three licensees have remitted their $500M license fee, which has, consistent with state law, in turn been remitted to the Metropolitan Transit Authority. Additionally, two of the three licensees have provided their completion bond for their respective project, with the third being finalized shortly.",
+              "label": "NEUTRAL",
+              "reason": "The February 3, 2026 statement does not identify RWNYC and does not say any RWNYC security was deposited by December 31, 2025.",
+              "citation_id": "support-afeb7a83-1eb5-4433-a872-042b287ed995"
+            },
+            {
+              "quote": "EXHIBIT 1 LICENSE CONDITIONS All references to laws of New York and provisions of the Official Compilation of Codes, Rules and Regulations of the State of New York (\"NYCRR\") are to the provisions of such laws and regulations as they exist on the date hereof and as they may hereafter be amended from time to time. Resorts World New York City shall materially perform consistent with the content of its Application and commitments expressed during the Community Advisory Committee evaluative process, as determined or otherwise approved by the Commission. General Conditions 1. License Fee Resorts World New York City shall pay, on or before December 31, 2025, a $500,000,000 gaming facility license fee by electronic funds transfer in accordance with Racing, Pari-Mutuel Wagering and Breeding Law§ 1321-e(3) and 9 NYC RR § 601.1 (b ). 2. Bond Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application, in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 ).",
+              "label": "NEUTRAL",
+              "reason": "This excerpt states the deadline, but not that RWNYC met it.",
+              "citation_id": "support-3faaa516-4623-443f-a00d-686df4a58734"
+            }
+          ],
+          "reason": "The evidence gives the deadline and a later anonymous status update, but no direct proof that RWNYC deposited the security by December 31, 2025."
+        }
+      ]
+    }
+  },
+  "finished_at": "2026-11-22T10:16:14.190481+00:00"
+}

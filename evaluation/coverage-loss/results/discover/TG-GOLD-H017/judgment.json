@@ -1,0 +1,2762 @@
+{
+  "input_sha256": "90603963744c977fba75823107e1c028a244e7f686137cf6f75767f9c64b9418",
+  "judge_model": "gpt-5.4",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "judge_version": "tracegraph-nli-v4-owned-quotes",
+  "started_at": "2026-11-22T10:24:57.191625+00:00",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 49.76600000006147,
+      "request_id": "req_a6ad3337c66c49c08da26e79e4493945",
+      "usage": {
+        "input_tokens": 4484,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 6073,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 10557
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 51.07799999997951,
+      "request_id": "req_40407e8c31824fe0bb22dfd97f497bf1",
+      "usage": {
+        "input_tokens": 4524,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 3840
+        },
+        "output_tokens": 6567,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 11091
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 20.07799999997951,
+      "request_id": "req_a4b853adb8aa431d8254a15d8d399278",
+      "usage": {
+        "input_tokens": 12640,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 2074,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 14714
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "invalid_responses": [
+    {
+      "stage": "evidence",
+      "response": {
+        "identity": {
+          "label": "MATCH",
+          "reason": "The returned commitment and findings describe the same HRMP/Metropolitan Park proposed community benefits package valued at $761 million with the same listed components."
+        },
+        "findings": [
+          {
+            "finding_id": "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+            "claims": [
+              {
+                "claim": "HRMP documented a proposed community benefits package valued at $761 million.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-91355293-5b80-400f-93fb-7736d662f1c9"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+                    "quote": "Community benefits valued at $761 million",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the package valuation."
+                  }
+                ],
+                "reason": "The excerpt expressly says community benefits were valued at $761 million."
+              },
+              {
+                "claim": "The package includes significant traffic and roadway improvements.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-91355293-5b80-400f-93fb-7736d662f1c9"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+                    "quote": "include significant traffic and roadway improvements",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly lists this component."
+                  }
+                ],
+                "reason": "The excerpt explicitly includes traffic and roadway improvements."
+              },
+              {
+                "claim": "The package includes improvements to the MTA public transit station.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-91355293-5b80-400f-93fb-7736d662f1c9"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+                    "quote": "improvements to the Metropolitan Transportation Authority (MTA)’s public transit station",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly lists improvements to the MTA station."
+                  }
+                ],
+                "reason": "The excerpt explicitly lists MTA station improvements."
+              },
+              {
+                "claim": "The package includes over 25 acres of new public open space.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-91355293-5b80-400f-93fb-7736d662f1c9"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+                    "quote": "over 25 acres of new public open space",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the acreage and type of benefit."
+                  }
+                ],
+                "reason": "The excerpt explicitly includes over 25 acres of open space."
+              },
+              {
+                "claim": "The package includes a Community Impact Fund.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-91355293-5b80-400f-93fb-7736d662f1c9"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+                    "quote": "a Community Impact Fund",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly lists the fund."
+                  }
+                ],
+                "reason": "The excerpt explicitly lists a Community Impact Fund."
+              },
+              {
+                "claim": "The package includes funding for neighborhood social services.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-91355293-5b80-400f-93fb-7736d662f1c9"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+                    "quote": "funding for neighborhood social services",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly lists this funding category."
+                  }
+                ],
+                "reason": "The excerpt explicitly lists funding for neighborhood social services."
+              }
+            ]
+          },
+          {
+            "finding_id": "finding-1cb7b3c0-cb38-4cd6-9045-fd3174e0bc80",
+            "claims": [
+              {
+                "claim": "HRMP proposed extensive traffic and roadway improvements.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+                    "quote": "HRMP proposes extensive traffic and roadway improvements",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the proposal."
+                  }
+                ],
+                "reason": "The excerpt expressly says HRMP proposes traffic and roadway improvements."
+              },
+              {
+                "claim": "Those proposed improvements included ADA-compliant upgrades to the Willets Point MTA subway station.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+                    "quote": "including ADA-compliant upgrades to the Willets Point MTA subway station",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly specifies this station-related component."
+                  }
+                ],
+                "reason": "The excerpt expressly identifies ADA-compliant Willets Point station upgrades."
+              },
+              {
+                "claim": "Those proposed improvements included reconfigured intersections, new pedestrian and bicycle paths, and improved access to public transit.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+                    "quote": "reconfigured intersections, new pedestrian and bicycle paths, and improved access to public transit",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly lists these transportation-related elements."
+                  }
+                ],
+                "reason": "The excerpt expressly lists these additional transportation improvements."
+              }
+            ]
+          },
+          {
+            "finding_id": "finding-51483460-8378-4ae9-ae18-e849b662808b",
+            "claims": [
+              {
+                "claim": "In a 2025 response document, HRMP said it had engaged with the MTA for over three years about the proposed improvements at Mets-Willets Point.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-2ce3e3ec-d471-48ff-87f2-5dab103282f0"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-2ce3e3ec-d471-48ff-87f2-5dab103282f0",
+                    "quote": "Hard Rock Metropolitan Park has engaged with the MTA for over three years about the proposed improvements at Mets-Willets Point",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states this duration and subject of engagement."
+                  }
+                ],
+                "reason": "The excerpt directly states over three years of engagement with the MTA."
+              },
+              {
+                "claim": "In that document, HRMP said the MTA provided conceptual approval of the proposed improvements at the 30% Construction Documents stage in a letter dated August 21, 2024.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-2ce3e3ec-d471-48ff-87f2-5dab103282f0"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-2ce3e3ec-d471-48ff-87f2-5dab103282f0",
+                    "quote": "the MTA provided conceptual approval of the Proposed Improvements at the 30% Construction Documents stage of review in a letter dated August 21, 2024",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the claimed conceptual approval and date."
+                  }
+                ],
+                "reason": "The excerpt directly states conceptual approval at the 30% stage in an August 21, 2024 letter."
+              }
+            ]
+          },
+          {
+            "finding_id": "finding-61e5810f-d55b-4f08-a884-68471d3947cb",
+            "claims": [
+              {
+                "claim": "In a 2025 response document, HRMP said it would continue to work in good faith to secure all necessary approvals from the MTA.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669",
+                    "quote": "will continue to work in good faith to secure all necessary approvals from the MTA",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states ongoing efforts to obtain approvals."
+                  }
+                ],
+                "reason": "The excerpt directly states HRMP would continue seeking necessary MTA approvals."
+              },
+              {
+                "claim": "In that document, HRMP said it would continue to meet all necessary deadlines to deliver this required community benefit.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669",
+                    "quote": "and meet all necessary deadlines to deliver this required community benefit",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the commitment to meet deadlines for delivery."
+                  }
+                ],
+                "reason": "The excerpt directly states HRMP would meet necessary deadlines to deliver the benefit."
+              },
+              {
+                "claim": "The MTA-related community benefit remained subject to future approvals and deadlines.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669",
+                    "quote": "will continue to work in good faith to secure all necessary approvals from the MTA and meet all necessary deadlines",
+                    "label": "ENTAILMENT",
+                    "reason": "Future necessary approvals and deadlines imply the benefit remained contingent on them."
+                  }
+                ],
+                "reason": "The stated need to continue securing approvals and meeting deadlines shows unresolved future conditions."
+              }
+            ]
+          },
+          {
+            "finding_id": "finding-d6398075-1a05-410b-a89e-b6a60ea5c706",
+            "claims": [
+              {
+                "claim": "An independent report said Hard Rock Metropolitan Park in Queens was continuing through development, financing, construction, and permitting stages at the time of the report.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-54e277fd-b358-46df-8cb6-5c8009352e06"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-54e277fd-b358-46df-8cb6-5c8009352e06",
+                    "quote": "Hard Rock Metropolitan Park in Queens ... continue through development, financing, construction, and permitting stages",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the project's status in those stages."
+                  }
+                ],
+                "reason": "The excerpt directly describes the project as still in development-related stages."
+              },
+              {
+                "claim": "That report did not document delivery of the specific $761 million community benefits package.",
+                "label": "NEUTRAL",
+                "citation_ids": [
+                  "support-54e277fd-b358-46df-8cb6-5c8009352e06"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-54e277fd-b358-46df-8cb6-5c8009352e06",
+                    "quote": "Hard Rock Metropolitan Park in Queens and Bally’s Bronx continue through development, financing, construction, and permitting stages.",
+                    "label": "NEUTRAL",
+                    "reason": "The quote describes project status but does not address whether the $761 million package had been delivered."
+                  }
+                ],
+                "reason": "The excerpt is silent on delivery of the specific $761 million package."
+              }
+            ]
+          },
+          {
+            "finding_id": "source-reread-1",
+            "claims": [
+              {
+                "claim": "HRMP said the same undertaking included a $163 million Community Impact Fund.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-1-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-1-s",
+                    "quote": "$163 million for a Community Impact Fund",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the fund amount and type."
+                  }
+                ],
+                "reason": "The excerpt directly states a $163 million Community Impact Fund."
+              },
+              {
+                "claim": "That fund will provide grants to nonprofit organizations serving Queens communities and residents.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-1-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-1-s",
+                    "quote": "that will provide grants to non -profit organizations serving Queens communities and residents",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the fund's grant purpose and beneficiaries."
+                  }
+                ],
+                "reason": "The excerpt directly states the grant recipients and service population."
+              }
+            ]
+          },
+          {
+            "finding_id": "source-reread-2",
+            "claims": [
+              {
+                "claim": "The Borough President’s approval conditions said there would be a $163 million Community Benefits Fund.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-2-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-2-s",
+                    "quote": "A $163 million Community Benefits Fund",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the fund and amount."
+                  }
+                ],
+                "reason": "The excerpt directly states a $163 million Community Benefits Fund."
+              },
+              {
+                "claim": "Those conditions said the fund should be accessible for 30 years or until the funds are depleted.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-2-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-2-s",
+                    "quote": "to be accessible for 30 years (or until the funds are depleted)",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the duration qualifier."
+                  }
+                ],
+                "reason": "The excerpt directly states the 30-year-or-until-depleted accessibility condition."
+              },
+              {
+                "claim": "Those conditions said the fund should be allocated across Queens Community Districts 3, 4, 6, 7, 8, and 9.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-2-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-2-s",
+                    "quote": "allocated across local Queens Community Districts 3, 4, 6, 7, 8, and 9",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly lists the districts for allocation."
+                  }
+                ],
+                "reason": "The excerpt directly lists the districts for fund allocation."
+              }
+            ]
+          },
+          {
+            "finding_id": "source-reread-3",
+            "claims": [
+              {
+                "claim": "The Borough President’s conditions called for a Community Advisory Board.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-3-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-3-s",
+                    "quote": "A Community Advisory Board",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the board."
+                  }
+                ],
+                "reason": "The excerpt directly calls for a Community Advisory Board."
+              },
+              {
+                "claim": "The board will meet regularly.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-3-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-3-s",
+                    "quote": "that will meet regularly",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the meeting frequency."
+                  }
+                ],
+                "reason": "The excerpt directly states the board will meet regularly."
+              },
+              {
+                "claim": "The board will act as a watchdog for all promised community benefits.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-3-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-3-s",
+                    "quote": "and act as a watchdog for all promised community benefits",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the board's oversight role and scope."
+                  }
+                ],
+                "reason": "The excerpt directly states the watchdog role over promised community benefits."
+              }
+            ]
+          },
+          {
+            "finding_id": "source-reread-4",
+            "claims": [
+              {
+                "claim": "HRMP described $25 million in social-services funding for community-identified health care and youth and senior needs.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-4-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-4-s",
+                    "quote": "$25 million for community identified health care and youth and senior needs",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the amount and purpose."
+                  }
+                ],
+                "reason": "The excerpt directly states the amount and social-services purpose."
+              },
+              {
+                "claim": "This included a health clinic in East Elmhurst.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-4-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-4-s",
+                    "quote": "including a health clinic in East Elmhurst",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly lists this facility."
+                  }
+                ],
+                "reason": "The excerpt directly lists a health clinic in East Elmhurst."
+              },
+              {
+                "claim": "This included a youth and senior center in Corona.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-4-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-4-s",
+                    "quote": "a youth and senior center in Corona",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly lists this center."
+                  }
+                ],
+                "reason": "The excerpt directly lists a youth and senior center in Corona."
+              },
+              {
+                "claim": "This included addiction and mental health services infrastructure in Flushing.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-4-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-4-s",
+                    "quote": "addiction and mental health services infrastructure in Flushing",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly lists this infrastructure."
+                  }
+                ],
+                "reason": "The excerpt directly lists addiction and mental health services infrastructure in Flushing."
+              }
+            ]
+          }
+        ],
+        "coverage": [
+          {
+            "gold_id": "G1",
+            "finding_ids": [
+              "finding-849e32d0-5686-4611-9788-3b5b108b29f4"
+            ],
+            "citation_ids": [
+              "support-91355293-5b80-400f-93fb-7736d662f1c9"
+            ],
+            "label": "NEUTRAL",
+            "reason": "The finding states the package was valued at $761 million, but the excerpt does not establish that the Board made that valuation.",
+            "claim_links": [
+              {
+                "finding_id": "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+                "claim_index": 0,
+                "label": "NEUTRAL",
+                "reason": "The claim omits the Board as valuer."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+                "quote": "Community benefits valued at $761 million",
+                "label": "NEUTRAL",
+                "reason": "The quote gives the valuation but does not attribute it to the Board."
+              }
+            ]
+          },
+          {
+            "gold_id": "G2",
+            "finding_ids": [
+              "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+              "finding-1cb7b3c0-cb38-4cd6-9045-fd3174e0bc80"
+            ],
+            "citation_ids": [
+              "support-91355293-5b80-400f-93fb-7736d662f1c9",
+              "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc"
+            ],
+            "label": "ENTAILMENT",
+            "reason": "The returned findings say the package includes traffic and roadway improvements, and the attached excerpts directly say so.",
+            "claim_links": [
+              {
+                "finding_id": "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+                "claim_index": 1,
+                "label": "ENTAILMENT",
+                "reason": "This claim directly matches the gold fact."
+              },
+              {
+                "finding_id": "finding-1cb7b3c0-cb38-4cd6-9045-fd3174e0bc80",
+                "claim_index": 0,
+                "label": "ENTAILMENT",
+                "reason": "This claim independently states the proposal of traffic and roadway improvements."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+                "quote": "include significant traffic and roadway improvements",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states this component."
+              },
+              {
+                "citation_id": "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+                "quote": "HRMP proposes extensive traffic and roadway improvements",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states this component."
+              }
+            ]
+          },
+          {
+            "gold_id": "G3",
+            "finding_ids": [
+              "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+              "finding-1cb7b3c0-cb38-4cd6-9045-fd3174e0bc80"
+            ],
+            "citation_ids": [
+              "support-91355293-5b80-400f-93fb-7736d662f1c9",
+              "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc"
+            ],
+            "label": "ENTAILMENT",
+            "reason": "The returned findings say the package includes MTA station improvements, and the attached excerpts directly state that.",
+            "claim_links": [
+              {
+                "finding_id": "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+                "claim_index": 2,
+                "label": "ENTAILMENT",
+                "reason": "This claim directly matches the gold fact."
+              },
+              {
+                "finding_id": "finding-1cb7b3c0-cb38-4cd6-9045-fd3174e0bc80",
+                "claim_index": 1,
+                "label": "ENTAILMENT",
+                "reason": "This claim gives a more specific station-improvement example."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+                "quote": "improvements to the Metropolitan Transportation Authority (MTA)’s public transit station",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states MTA station improvements."
+              },
+              {
+                "citation_id": "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+                "quote": "ADA-compliant upgrades to the Willets Point MTA subway station",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly provides a station-improvement component."
+              }
+            ]
+          },
+          {
+            "gold_id": "G4",
+            "finding_ids": [
+              "finding-849e32d0-5686-4611-9788-3b5b108b29f4"
+            ],
+            "citation_ids": [
+              "support-91355293-5b80-400f-93fb-7736d662f1c9"
+            ],
+            "label": "ENTAILMENT",
+            "reason": "The returned finding states the package includes over 25 acres of new public open space, and the attached excerpt directly says so.",
+            "claim_links": [
+              {
+                "finding_id": "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+                "claim_index": 3,
+                "label": "ENTAILMENT",
+                "reason": "This claim directly matches the gold fact."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+                "quote": "over 25 acres of new public open space",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the acreage and type of space."
+              }
+            ]
+          },
+          {
+            "gold_id": "G5",
+            "finding_ids": [
+              "finding-849e32d0-5686-4611-9788-3b5b108b29f4"
+            ],
+            "citation_ids": [
+              "support-91355293-5b80-400f-93fb-7736d662f1c9"
+            ],
+            "label": "ENTAILMENT",
+            "reason": "The returned finding states the package includes a Community Impact Fund, and the attached excerpt directly says so.",
+            "claim_links": [
+              {
+                "finding_id": "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+                "claim_index": 4,
+                "label": "ENTAILMENT",
+                "reason": "This claim directly matches the gold fact."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+                "quote": "a Community Impact Fund",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states this component."
+              }
+            ]
+          },
+          {
+            "gold_id": "G6",
+            "finding_ids": [
+              "finding-849e32d0-5686-4611-9788-3b5b108b29f4"
+            ],
+            "citation_ids": [
+              "support-91355293-5b80-400f-93fb-7736d662f1c9"
+            ],
+            "label": "ENTAILMENT",
+            "reason": "The returned finding states the package includes funding for neighborhood social services, and the attached excerpt directly says so.",
+            "claim_links": [
+              {
+                "finding_id": "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+                "claim_index": 5,
+                "label": "ENTAILMENT",
+                "reason": "This claim directly matches the gold fact."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+                "quote": "funding for neighborhood social services",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states this component."
+              }
+            ]
+          },
+          {
+            "gold_id": "G7",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No finding presents the Board chart itemization of $761 million upfront plus $150 million ongoing.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G8",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No finding presents HRMP's executive summary statement of about $1 billion in community benefits.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G9",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No finding presents HRMP's executive summary use of $1.75 billion for investment into community needs.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G10",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No finding presents a license requirement for milestones and budgets for proposed community benefits.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G11",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No finding presents a CAC submission schedule of $150 million fund payments during 2031–2060.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G12",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No finding presents a report that the operator distributed $2 million in grants in 2026.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G13",
+            "finding_ids": [
+              "finding-51483460-8378-4ae9-ae18-e849b662808b",
+              "finding-61e5810f-d55b-4f08-a884-68471d3947cb"
+            ],
+            "citation_ids": [
+              "support-2ce3e3ec-d471-48ff-87f2-5dab103282f0",
+              "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669"
+            ],
+            "label": "NEUTRAL",
+            "reason": "The returned findings address MTA approval status, but their excerpts say MTA gave conceptual approval while further approvals were still needed; they do not establish the distinct news report claim that MTA had yet to agree to the proposed overhaul.",
+            "claim_links": [
+              {
+                "finding_id": "finding-51483460-8378-4ae9-ae18-e849b662808b",
+                "claim_index": 1,
+                "label": "NEUTRAL",
+                "reason": "Conceptual approval at a 30% stage is not the same as full agreement to the overhaul."
+              },
+              {
+                "finding_id": "finding-61e5810f-d55b-4f08-a884-68471d3947cb",
+                "claim_index": 2,
+                "label": "NEUTRAL",
+                "reason": "Need for future approvals suggests incompleteness but does not show the news report's exact statement."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-2ce3e3ec-d471-48ff-87f2-5dab103282f0",
+                "quote": "the MTA provided conceptual approval of the Proposed Improvements at the 30% Construction Documents stage of review",
+                "label": "NEUTRAL",
+                "reason": "Conceptual approval is not the same as a final agreement or lack of agreement to the overhaul."
+              },
+              {
+                "citation_id": "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669",
+                "quote": "continue to work in good faith to secure all necessary approvals from the MTA",
+                "label": "NEUTRAL",
+                "reason": "This shows additional approvals were needed, but not that MTA had not agreed in the manner described by the gold fact."
+              }
+            ]
+          }
+        ]
+      },
+      "error": "finding-d6398075-1a05-410b-a89e-b6a60ea5c706: quote check is outside its own citation excerpt"
+    }
+  ],
+  "evidence": {
+    "identity": {
+      "label": "MATCH",
+      "reason": "The returned commitment and cited finding describe the same HRMP proposed community benefits package valued at $761 million with the same listed components."
+    },
+    "findings": [
+      {
+        "finding_id": "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+        "claims": [
+          {
+            "claim": "HRMP documented a proposed community benefits package valued at $761 million.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-91355293-5b80-400f-93fb-7736d662f1c9"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+                "quote": "Community benefits valued at $761 million",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the package valuation."
+              }
+            ],
+            "reason": "The excerpt expressly says community benefits were valued at $761 million."
+          },
+          {
+            "claim": "That package included significant traffic and roadway improvements.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-91355293-5b80-400f-93fb-7736d662f1c9"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+                "quote": "include significant traffic and roadway improvements",
+                "label": "ENTAILMENT",
+                "reason": "The listed package components include traffic and roadway improvements."
+              }
+            ],
+            "reason": "The excerpt lists traffic and roadway improvements as part of the package."
+          },
+          {
+            "claim": "That package included improvements to the MTA public transit station.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-91355293-5b80-400f-93fb-7736d662f1c9"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+                "quote": "improvements to the Metropolitan Transportation Authority (MTA)’s public transit station",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt explicitly includes MTA station improvements."
+              }
+            ],
+            "reason": "The excerpt expressly includes improvements to the MTA public transit station."
+          },
+          {
+            "claim": "That package included over 25 acres of new public open space.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-91355293-5b80-400f-93fb-7736d662f1c9"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+                "quote": "over 25 acres of new public open space",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly gives this acreage and type of benefit."
+              }
+            ],
+            "reason": "The excerpt directly states over 25 acres of new public open space."
+          },
+          {
+            "claim": "That package included a Community Impact Fund.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-91355293-5b80-400f-93fb-7736d662f1c9"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+                "quote": "a Community Impact Fund",
+                "label": "ENTAILMENT",
+                "reason": "The fund is named as one of the included benefits."
+              }
+            ],
+            "reason": "The excerpt names a Community Impact Fund as part of the package."
+          },
+          {
+            "claim": "That package included funding for neighborhood social services.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-91355293-5b80-400f-93fb-7736d662f1c9"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+                "quote": "funding for neighborhood social services",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt explicitly includes this funding category."
+              }
+            ],
+            "reason": "The excerpt expressly includes funding for neighborhood social services."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-1cb7b3c0-cb38-4cd6-9045-fd3174e0bc80",
+        "claims": [
+          {
+            "claim": "HRMP proposed extensive traffic and roadway improvements.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+                "quote": "HRMP proposes extensive traffic and roadway improvements",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states HRMP proposed these improvements."
+              }
+            ],
+            "reason": "The excerpt directly states the proposal of traffic and roadway improvements."
+          },
+          {
+            "claim": "Those proposed improvements included ADA-compliant upgrades to the Willets Point MTA subway station.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+                "quote": "including ADA-compliant upgrades to the Willets Point MTA subway station",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt specifies this station-upgrade component."
+              }
+            ],
+            "reason": "The excerpt specifically includes ADA-compliant upgrades to the Willets Point station."
+          },
+          {
+            "claim": "Those proposed improvements included reconfigured intersections.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+                "quote": "reconfigured intersections",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt explicitly lists reconfigured intersections."
+              }
+            ],
+            "reason": "The excerpt expressly lists reconfigured intersections."
+          },
+          {
+            "claim": "Those proposed improvements included new pedestrian and bicycle paths.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+                "quote": "new pedestrian and bicycle paths",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt explicitly lists new pedestrian and bicycle paths."
+              }
+            ],
+            "reason": "The excerpt expressly lists new pedestrian and bicycle paths."
+          },
+          {
+            "claim": "Those proposed improvements included improved access to public transit.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+                "quote": "improved access to public transit",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt explicitly lists improved access to public transit."
+              }
+            ],
+            "reason": "The excerpt expressly lists improved access to public transit."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-51483460-8378-4ae9-ae18-e849b662808b",
+        "claims": [
+          {
+            "claim": "In a 2025 response document, HRMP said it had engaged with the MTA for over three years about the proposed improvements at Mets-Willets Point.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-2ce3e3ec-d471-48ff-87f2-5dab103282f0"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-2ce3e3ec-d471-48ff-87f2-5dab103282f0",
+                "quote": "Hard Rock Metropolitan Park has engaged with the MTA for over three years about the proposed improvements at Mets-Willets Point",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly reports HRMP's statement about three years of engagement."
+              }
+            ],
+            "reason": "The excerpt directly states over three years of engagement with the MTA."
+          },
+          {
+            "claim": "In that document, HRMP said the MTA provided conceptual approval of the proposed improvements at the 30% Construction Documents stage in a letter dated August 21, 2024.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-2ce3e3ec-d471-48ff-87f2-5dab103282f0"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-2ce3e3ec-d471-48ff-87f2-5dab103282f0",
+                "quote": "the MTA provided conceptual approval of the Proposed Improvements at the 30% Construction Documents stage of review in a letter dated August 21, 2024",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states conceptual approval at that stage and date."
+              }
+            ],
+            "reason": "The excerpt directly states conceptual approval at the 30% stage in an August 21, 2024 letter."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-61e5810f-d55b-4f08-a884-68471d3947cb",
+        "claims": [
+          {
+            "claim": "In a 2025 response document, HRMP said it would continue to work in good faith to secure all necessary MTA approvals.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669",
+                "quote": "We have and will continue to work in good faith to secure all necessary approvals from the MTA",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states ongoing efforts to secure all necessary MTA approvals."
+              }
+            ],
+            "reason": "The excerpt directly states continued good-faith work to secure approvals."
+          },
+          {
+            "claim": "In that document, HRMP said it would continue to meet all necessary deadlines to deliver the MTA-related community benefit.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669",
+                "quote": "and meet all necessary deadlines to deliver this required community benefit",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states this future-oriented commitment about deadlines and delivery."
+              }
+            ],
+            "reason": "The excerpt directly states HRMP's commitment to meet deadlines to deliver the benefit."
+          },
+          {
+            "claim": "This indicated the benefit remained subject to future approvals and deadlines.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669",
+                "quote": "will continue to work in good faith to secure all necessary approvals from the MTA and meet all necessary deadlines",
+                "label": "ENTAILMENT",
+                "reason": "Needing to secure approvals and meet deadlines shows future conditions remained outstanding."
+              }
+            ],
+            "reason": "The excerpt's reference to securing necessary approvals and meeting deadlines shows unresolved future requirements."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-d6398075-1a05-410b-a89e-b6a60ea5c706",
+        "claims": [
+          {
+            "claim": "An independent report said Hard Rock Metropolitan Park in Queens was continuing through development, financing, construction, and permitting stages at the time of the report.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-54e277fd-b358-46df-8cb6-5c8009352e06"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-54e277fd-b358-46df-8cb6-5c8009352e06",
+                "quote": "Hard Rock Metropolitan Park in Queens and Bally’s Bronx continue through development, financing, construction, and permitting stages.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states HRMP was still in those stages."
+              }
+            ],
+            "reason": "The excerpt directly says HRMP continued through development, financing, construction, and permitting stages."
+          },
+          {
+            "claim": "That report did not document delivery of the specific $761 million community benefits package.",
+            "label": "NEUTRAL",
+            "citation_ids": [
+              "support-54e277fd-b358-46df-8cb6-5c8009352e06"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-54e277fd-b358-46df-8cb6-5c8009352e06",
+                "quote": "Hard Rock Metropolitan Park in Queens and Bally’s Bronx continue through development, financing, construction, and permitting stages.",
+                "label": "NEUTRAL",
+                "reason": "The excerpt discusses project stage, not whether the $761 million package was or was not delivered."
+              }
+            ],
+            "reason": "The excerpt addresses project status only and does not establish whether the specific package was delivered."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-1",
+        "claims": [
+          {
+            "claim": "HRMP said the same undertaking included a $163 million Community Impact Fund.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "$163 million for a Community Impact Fund",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the amount and fund name."
+              }
+            ],
+            "reason": "The excerpt directly states a $163 million Community Impact Fund."
+          },
+          {
+            "claim": "That fund would provide grants to nonprofit organizations serving Queens communities and residents.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "that will provide grants to non -profit organizations serving Queens communities and residents",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the fund's intended grant recipients."
+              }
+            ],
+            "reason": "The excerpt directly states the fund would provide grants to nonprofits serving Queens communities and residents."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-2",
+        "claims": [
+          {
+            "claim": "The Borough President’s approval conditions said there was a $163 million Community Benefits Fund.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-2-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-2-s",
+                "quote": "A $163 million Community Benefits Fund",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the existence and amount of the fund."
+              }
+            ],
+            "reason": "The excerpt directly states a $163 million Community Benefits Fund."
+          },
+          {
+            "claim": "The conditions said this fund should be accessible for 30 years or until the funds are depleted.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-2-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-2-s",
+                "quote": "to be accessible for 30 years (or until the funds are depleted)",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the duration qualifier."
+              }
+            ],
+            "reason": "The excerpt directly states the fund should be accessible for 30 years or until depleted."
+          },
+          {
+            "claim": "The conditions said this fund should be allocated across Queens Community Districts 3, 4, 6, 7, 8, and 9.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-2-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-2-s",
+                "quote": "allocated across local Queens Community Districts 3, 4, 6, 7, 8, and 9",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly lists the target districts."
+              }
+            ],
+            "reason": "The excerpt directly lists the districts across which the fund should be allocated."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-3",
+        "claims": [
+          {
+            "claim": "The Borough President’s conditions called for a Community Advisory Board.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-3-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-3-s",
+                "quote": "A Community Advisory Board",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly calls for such a board."
+              }
+            ],
+            "reason": "The excerpt directly calls for a Community Advisory Board."
+          },
+          {
+            "claim": "The board would meet regularly.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-3-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-3-s",
+                "quote": "that will meet regularly",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states meeting frequency in general terms."
+              }
+            ],
+            "reason": "The excerpt directly states the board will meet regularly."
+          },
+          {
+            "claim": "The board would act as a watchdog for all promised community benefits.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-3-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-3-s",
+                "quote": "act as a watchdog for all promised community benefits",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states this watchdog role and scope."
+              }
+            ],
+            "reason": "The excerpt directly states the watchdog role over all promised community benefits."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-4",
+        "claims": [
+          {
+            "claim": "HRMP described $25 million in social-services funding for community-identified health care and youth and senior needs.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-4-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-4-s",
+                "quote": "$25 million for community identified health care and youth and senior needs",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the amount and purpose."
+              }
+            ],
+            "reason": "The excerpt directly states $25 million for those community-identified needs."
+          },
+          {
+            "claim": "That funding included a health clinic in East Elmhurst.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-4-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-4-s",
+                "quote": "including a health clinic in East Elmhurst",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly lists this item."
+              }
+            ],
+            "reason": "The excerpt directly lists a health clinic in East Elmhurst."
+          },
+          {
+            "claim": "That funding included a youth and senior center in Corona.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-4-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-4-s",
+                "quote": "a youth and senior center in Corona",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly lists this item."
+              }
+            ],
+            "reason": "The excerpt directly lists a youth and senior center in Corona."
+          },
+          {
+            "claim": "That funding included addiction and mental health services infrastructure in Flushing.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-4-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-4-s",
+                "quote": "addiction and mental health services infrastructure in Flushing",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly lists this item."
+              }
+            ],
+            "reason": "The excerpt directly lists addiction and mental health services infrastructure in Flushing."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "finding-849e32d0-5686-4611-9788-3b5b108b29f4"
+        ],
+        "citation_ids": [
+          "support-91355293-5b80-400f-93fb-7736d662f1c9"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "A finding states the package was valued at $761 million, and its attached excerpt directly says so.",
+        "claim_links": [
+          {
+            "finding_id": "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "The claim matches the Board-valued-at-$761-million fact at the level returned by the system."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "quote": "Community benefits valued at $761 million",
+            "label": "ENTAILMENT",
+            "reason": "The excerpt establishes the $761 million valuation, which is the decisive fact returned."
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [
+          "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+          "finding-1cb7b3c0-cb38-4cd6-9045-fd3174e0bc80"
+        ],
+        "citation_ids": [
+          "support-91355293-5b80-400f-93fb-7736d662f1c9",
+          "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Returned findings say the package included traffic and roadway improvements, and both attached excerpts support that.",
+        "claim_links": [
+          {
+            "finding_id": "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "This claim directly states the package included traffic and roadway improvements."
+          },
+          {
+            "finding_id": "finding-1cb7b3c0-cb38-4cd6-9045-fd3174e0bc80",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim independently states HRMP proposed extensive traffic and roadway improvements."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "quote": "include significant traffic and roadway improvements",
+            "label": "ENTAILMENT",
+            "reason": "The excerpt directly states this package component."
+          },
+          {
+            "citation_id": "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+            "quote": "HRMP proposes extensive traffic and roadway improvements",
+            "label": "ENTAILMENT",
+            "reason": "The excerpt directly states the transportation component."
+          }
+        ]
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [
+          "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+          "finding-1cb7b3c0-cb38-4cd6-9045-fd3174e0bc80"
+        ],
+        "citation_ids": [
+          "support-91355293-5b80-400f-93fb-7736d662f1c9",
+          "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Returned findings say the package included MTA station improvements, and attached excerpts directly support that.",
+        "claim_links": [
+          {
+            "finding_id": "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+            "claim_index": 2,
+            "label": "ENTAILMENT",
+            "reason": "This claim directly states the package included MTA station improvements."
+          },
+          {
+            "finding_id": "finding-1cb7b3c0-cb38-4cd6-9045-fd3174e0bc80",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "This claim provides the specific Willets Point MTA subway station upgrade detail."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "quote": "improvements to the Metropolitan Transportation Authority (MTA)’s public transit station",
+            "label": "ENTAILMENT",
+            "reason": "The excerpt directly states MTA station improvements."
+          },
+          {
+            "citation_id": "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+            "quote": "including ADA-compliant upgrades to the Willets Point MTA subway station",
+            "label": "ENTAILMENT",
+            "reason": "The excerpt gives a concrete station-improvement example."
+          }
+        ]
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [
+          "finding-849e32d0-5686-4611-9788-3b5b108b29f4"
+        ],
+        "citation_ids": [
+          "support-91355293-5b80-400f-93fb-7736d662f1c9"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "A returned finding states the package included over 25 acres of new public open space, and the excerpt directly says so.",
+        "claim_links": [
+          {
+            "finding_id": "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+            "claim_index": 3,
+            "label": "ENTAILMENT",
+            "reason": "This claim directly matches the reference fact."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "quote": "over 25 acres of new public open space",
+            "label": "ENTAILMENT",
+            "reason": "The excerpt directly states this acreage and category."
+          }
+        ]
+      },
+      {
+        "gold_id": "G5",
+        "finding_ids": [
+          "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+          "source-reread-1"
+        ],
+        "citation_ids": [
+          "support-91355293-5b80-400f-93fb-7736d662f1c9",
+          "source-reread-1-s"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Returned findings state the package included a Community Impact Fund, and attached excerpts support that, including a specific $163 million amount.",
+        "claim_links": [
+          {
+            "finding_id": "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+            "claim_index": 4,
+            "label": "ENTAILMENT",
+            "reason": "This claim directly states the package included a Community Impact Fund."
+          },
+          {
+            "finding_id": "source-reread-1",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim adds the specific $163 million amount for that fund."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "quote": "a Community Impact Fund",
+            "label": "ENTAILMENT",
+            "reason": "The excerpt names the fund as part of the package."
+          },
+          {
+            "citation_id": "source-reread-1-s",
+            "quote": "$163 million for a Community Impact Fund",
+            "label": "ENTAILMENT",
+            "reason": "The excerpt directly confirms the fund and amount."
+          }
+        ]
+      },
+      {
+        "gold_id": "G6",
+        "finding_ids": [
+          "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+          "source-reread-4"
+        ],
+        "citation_ids": [
+          "support-91355293-5b80-400f-93fb-7736d662f1c9",
+          "source-reread-4-s"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Returned findings state the package included funding for neighborhood social services, and another finding gives specific social-services examples.",
+        "claim_links": [
+          {
+            "finding_id": "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+            "claim_index": 5,
+            "label": "ENTAILMENT",
+            "reason": "This claim directly states the package included funding for neighborhood social services."
+          },
+          {
+            "finding_id": "source-reread-4",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim gives specific social-services funding details consistent with the reference fact."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "quote": "funding for neighborhood social services",
+            "label": "ENTAILMENT",
+            "reason": "The excerpt directly states this package component."
+          },
+          {
+            "citation_id": "source-reread-4-s",
+            "quote": "$25 million for community identified health care and youth and senior needs",
+            "label": "ENTAILMENT",
+            "reason": "The excerpt supplies concrete social-services funding details."
+          }
+        ]
+      },
+      {
+        "gold_id": "G7",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No returned finding states that the Board's chart itemized $761 million upfront and another $150 million ongoing.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G8",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No returned finding says HRMP's executive summary advertised about $1 billion in community benefits.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G9",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No returned finding says HRMP's executive summary used $1.75 billion for investment into community needs.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G10",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No returned finding states that HRMP's license requires milestones and budgets for community benefits proposed in its application.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G11",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No returned finding states that the CAC submission schedules $150 million of fund payments during 2031–2060.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G12",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No returned finding states that the operator reported distributing $2 million in grants in 2026.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G13",
+        "finding_ids": [
+          "finding-51483460-8378-4ae9-ae18-e849b662808b",
+          "finding-61e5810f-d55b-4f08-a884-68471d3947cb"
+        ],
+        "citation_ids": [
+          "support-2ce3e3ec-d471-48ff-87f2-5dab103282f0",
+          "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669"
+        ],
+        "label": "NEUTRAL",
+        "reason": "Returned findings address MTA approvals as still necessary and mention conceptual approval, but they do not state the news-reported fact that MTA had yet to agree to the proposed overhaul.",
+        "claim_links": [
+          {
+            "finding_id": "finding-51483460-8378-4ae9-ae18-e849b662808b",
+            "claim_index": 1,
+            "label": "NEUTRAL",
+            "reason": "Conceptual approval at 30% review is not the same as agreement to the proposed overhaul."
+          },
+          {
+            "finding_id": "finding-61e5810f-d55b-4f08-a884-68471d3947cb",
+            "claim_index": 2,
+            "label": "NEUTRAL",
+            "reason": "Remaining approvals suggest incompleteness but do not directly state lack of agreement."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-2ce3e3ec-d471-48ff-87f2-5dab103282f0",
+            "quote": "the MTA provided conceptual approval of the Proposed Improvements at the 30% Construction Documents stage of review",
+            "label": "NEUTRAL",
+            "reason": "Conceptual approval at one stage does not establish whether MTA had finally agreed to the overhaul."
+          },
+          {
+            "citation_id": "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669",
+            "quote": "will continue to work in good faith to secure all necessary approvals from the MTA",
+            "label": "NEUTRAL",
+            "reason": "Need for further approvals is relevant but does not itself state that MTA had yet to agree."
+          }
+        ]
+      }
+    ]
+  },
+  "verdict_protocol": "two-stage-owned-citations-v4",
+  "judgment": {
+    "identity": {
+      "label": "MATCH",
+      "reason": "The returned commitment and cited finding describe the same HRMP proposed community benefits package valued at $761 million with the same listed components."
+    },
+    "findings": [
+      {
+        "finding_id": "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+        "claims": [
+          {
+            "claim": "HRMP documented a proposed community benefits package valued at $761 million.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-91355293-5b80-400f-93fb-7736d662f1c9"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+                "quote": "Community benefits valued at $761 million",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the package valuation."
+              }
+            ],
+            "reason": "The excerpt expressly says community benefits were valued at $761 million."
+          },
+          {
+            "claim": "That package included significant traffic and roadway improvements.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-91355293-5b80-400f-93fb-7736d662f1c9"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+                "quote": "include significant traffic and roadway improvements",
+                "label": "ENTAILMENT",
+                "reason": "The listed package components include traffic and roadway improvements."
+              }
+            ],
+            "reason": "The excerpt lists traffic and roadway improvements as part of the package."
+          },
+          {
+            "claim": "That package included improvements to the MTA public transit station.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-91355293-5b80-400f-93fb-7736d662f1c9"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+                "quote": "improvements to the Metropolitan Transportation Authority (MTA)’s public transit station",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt explicitly includes MTA station improvements."
+              }
+            ],
+            "reason": "The excerpt expressly includes improvements to the MTA public transit station."
+          },
+          {
+            "claim": "That package included over 25 acres of new public open space.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-91355293-5b80-400f-93fb-7736d662f1c9"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+                "quote": "over 25 acres of new public open space",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly gives this acreage and type of benefit."
+              }
+            ],
+            "reason": "The excerpt directly states over 25 acres of new public open space."
+          },
+          {
+            "claim": "That package included a Community Impact Fund.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-91355293-5b80-400f-93fb-7736d662f1c9"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+                "quote": "a Community Impact Fund",
+                "label": "ENTAILMENT",
+                "reason": "The fund is named as one of the included benefits."
+              }
+            ],
+            "reason": "The excerpt names a Community Impact Fund as part of the package."
+          },
+          {
+            "claim": "That package included funding for neighborhood social services.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-91355293-5b80-400f-93fb-7736d662f1c9"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+                "quote": "funding for neighborhood social services",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt explicitly includes this funding category."
+              }
+            ],
+            "reason": "The excerpt expressly includes funding for neighborhood social services."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-1cb7b3c0-cb38-4cd6-9045-fd3174e0bc80",
+        "claims": [
+          {
+            "claim": "HRMP proposed extensive traffic and roadway improvements.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+                "quote": "HRMP proposes extensive traffic and roadway improvements",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states HRMP proposed these improvements."
+              }
+            ],
+            "reason": "The excerpt directly states the proposal of traffic and roadway improvements."
+          },
+          {
+            "claim": "Those proposed improvements included ADA-compliant upgrades to the Willets Point MTA subway station.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+                "quote": "including ADA-compliant upgrades to the Willets Point MTA subway station",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt specifies this station-upgrade component."
+              }
+            ],
+            "reason": "The excerpt specifically includes ADA-compliant upgrades to the Willets Point station."
+          },
+          {
+            "claim": "Those proposed improvements included reconfigured intersections.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+                "quote": "reconfigured intersections",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt explicitly lists reconfigured intersections."
+              }
+            ],
+            "reason": "The excerpt expressly lists reconfigured intersections."
+          },
+          {
+            "claim": "Those proposed improvements included new pedestrian and bicycle paths.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+                "quote": "new pedestrian and bicycle paths",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt explicitly lists new pedestrian and bicycle paths."
+              }
+            ],
+            "reason": "The excerpt expressly lists new pedestrian and bicycle paths."
+          },
+          {
+            "claim": "Those proposed improvements included improved access to public transit.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+                "quote": "improved access to public transit",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt explicitly lists improved access to public transit."
+              }
+            ],
+            "reason": "The excerpt expressly lists improved access to public transit."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-51483460-8378-4ae9-ae18-e849b662808b",
+        "claims": [
+          {
+            "claim": "In a 2025 response document, HRMP said it had engaged with the MTA for over three years about the proposed improvements at Mets-Willets Point.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-2ce3e3ec-d471-48ff-87f2-5dab103282f0"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-2ce3e3ec-d471-48ff-87f2-5dab103282f0",
+                "quote": "Hard Rock Metropolitan Park has engaged with the MTA for over three years about the proposed improvements at Mets-Willets Point",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly reports HRMP's statement about three years of engagement."
+              }
+            ],
+            "reason": "The excerpt directly states over three years of engagement with the MTA."
+          },
+          {
+            "claim": "In that document, HRMP said the MTA provided conceptual approval of the proposed improvements at the 30% Construction Documents stage in a letter dated August 21, 2024.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-2ce3e3ec-d471-48ff-87f2-5dab103282f0"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-2ce3e3ec-d471-48ff-87f2-5dab103282f0",
+                "quote": "the MTA provided conceptual approval of the Proposed Improvements at the 30% Construction Documents stage of review in a letter dated August 21, 2024",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states conceptual approval at that stage and date."
+              }
+            ],
+            "reason": "The excerpt directly states conceptual approval at the 30% stage in an August 21, 2024 letter."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-61e5810f-d55b-4f08-a884-68471d3947cb",
+        "claims": [
+          {
+            "claim": "In a 2025 response document, HRMP said it would continue to work in good faith to secure all necessary MTA approvals.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669",
+                "quote": "We have and will continue to work in good faith to secure all necessary approvals from the MTA",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states ongoing efforts to secure all necessary MTA approvals."
+              }
+            ],
+            "reason": "The excerpt directly states continued good-faith work to secure approvals."
+          },
+          {
+            "claim": "In that document, HRMP said it would continue to meet all necessary deadlines to deliver the MTA-related community benefit.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669",
+                "quote": "and meet all necessary deadlines to deliver this required community benefit",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states this future-oriented commitment about deadlines and delivery."
+              }
+            ],
+            "reason": "The excerpt directly states HRMP's commitment to meet deadlines to deliver the benefit."
+          },
+          {
+            "claim": "This indicated the benefit remained subject to future approvals and deadlines.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669",
+                "quote": "will continue to work in good faith to secure all necessary approvals from the MTA and meet all necessary deadlines",
+                "label": "ENTAILMENT",
+                "reason": "Needing to secure approvals and meet deadlines shows future conditions remained outstanding."
+              }
+            ],
+            "reason": "The excerpt's reference to securing necessary approvals and meeting deadlines shows unresolved future requirements."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-d6398075-1a05-410b-a89e-b6a60ea5c706",
+        "claims": [
+          {
+            "claim": "An independent report said Hard Rock Metropolitan Park in Queens was continuing through development, financing, construction, and permitting stages at the time of the report.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-54e277fd-b358-46df-8cb6-5c8009352e06"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-54e277fd-b358-46df-8cb6-5c8009352e06",
+                "quote": "Hard Rock Metropolitan Park in Queens and Bally’s Bronx continue through development, financing, construction, and permitting stages.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states HRMP was still in those stages."
+              }
+            ],
+            "reason": "The excerpt directly says HRMP continued through development, financing, construction, and permitting stages."
+          },
+          {
+            "claim": "That report did not document delivery of the specific $761 million community benefits package.",
+            "label": "NEUTRAL",
+            "citation_ids": [
+              "support-54e277fd-b358-46df-8cb6-5c8009352e06"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-54e277fd-b358-46df-8cb6-5c8009352e06",
+                "quote": "Hard Rock Metropolitan Park in Queens and Bally’s Bronx continue through development, financing, construction, and permitting stages.",
+                "label": "NEUTRAL",
+                "reason": "The excerpt discusses project stage, not whether the $761 million package was or was not delivered."
+              }
+            ],
+            "reason": "The excerpt addresses project status only and does not establish whether the specific package was delivered."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-1",
+        "claims": [
+          {
+            "claim": "HRMP said the same undertaking included a $163 million Community Impact Fund.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "$163 million for a Community Impact Fund",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the amount and fund name."
+              }
+            ],
+            "reason": "The excerpt directly states a $163 million Community Impact Fund."
+          },
+          {
+            "claim": "That fund would provide grants to nonprofit organizations serving Queens communities and residents.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "that will provide grants to non -profit organizations serving Queens communities and residents",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the fund's intended grant recipients."
+              }
+            ],
+            "reason": "The excerpt directly states the fund would provide grants to nonprofits serving Queens communities and residents."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-2",
+        "claims": [
+          {
+            "claim": "The Borough President’s approval conditions said there was a $163 million Community Benefits Fund.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-2-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-2-s",
+                "quote": "A $163 million Community Benefits Fund",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the existence and amount of the fund."
+              }
+            ],
+            "reason": "The excerpt directly states a $163 million Community Benefits Fund."
+          },
+          {
+            "claim": "The conditions said this fund should be accessible for 30 years or until the funds are depleted.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-2-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-2-s",
+                "quote": "to be accessible for 30 years (or until the funds are depleted)",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the duration qualifier."
+              }
+            ],
+            "reason": "The excerpt directly states the fund should be accessible for 30 years or until depleted."
+          },
+          {
+            "claim": "The conditions said this fund should be allocated across Queens Community Districts 3, 4, 6, 7, 8, and 9.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-2-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-2-s",
+                "quote": "allocated across local Queens Community Districts 3, 4, 6, 7, 8, and 9",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly lists the target districts."
+              }
+            ],
+            "reason": "The excerpt directly lists the districts across which the fund should be allocated."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-3",
+        "claims": [
+          {
+            "claim": "The Borough President’s conditions called for a Community Advisory Board.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-3-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-3-s",
+                "quote": "A Community Advisory Board",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly calls for such a board."
+              }
+            ],
+            "reason": "The excerpt directly calls for a Community Advisory Board."
+          },
+          {
+            "claim": "The board would meet regularly.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-3-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-3-s",
+                "quote": "that will meet regularly",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states meeting frequency in general terms."
+              }
+            ],
+            "reason": "The excerpt directly states the board will meet regularly."
+          },
+          {
+            "claim": "The board would act as a watchdog for all promised community benefits.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-3-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-3-s",
+                "quote": "act as a watchdog for all promised community benefits",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states this watchdog role and scope."
+              }
+            ],
+            "reason": "The excerpt directly states the watchdog role over all promised community benefits."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-4",
+        "claims": [
+          {
+            "claim": "HRMP described $25 million in social-services funding for community-identified health care and youth and senior needs.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-4-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-4-s",
+                "quote": "$25 million for community identified health care and youth and senior needs",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the amount and purpose."
+              }
+            ],
+            "reason": "The excerpt directly states $25 million for those community-identified needs."
+          },
+          {
+            "claim": "That funding included a health clinic in East Elmhurst.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-4-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-4-s",
+                "quote": "including a health clinic in East Elmhurst",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly lists this item."
+              }
+            ],
+            "reason": "The excerpt directly lists a health clinic in East Elmhurst."
+          },
+          {
+            "claim": "That funding included a youth and senior center in Corona.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-4-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-4-s",
+                "quote": "a youth and senior center in Corona",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly lists this item."
+              }
+            ],
+            "reason": "The excerpt directly lists a youth and senior center in Corona."
+          },
+          {
+            "claim": "That funding included addiction and mental health services infrastructure in Flushing.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-4-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-4-s",
+                "quote": "addiction and mental health services infrastructure in Flushing",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly lists this item."
+              }
+            ],
+            "reason": "The excerpt directly lists addiction and mental health services infrastructure in Flushing."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "finding-849e32d0-5686-4611-9788-3b5b108b29f4"
+        ],
+        "citation_ids": [
+          "support-91355293-5b80-400f-93fb-7736d662f1c9"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "A finding states the package was valued at $761 million, and its attached excerpt directly says so.",
+        "claim_links": [
+          {
+            "finding_id": "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "The claim matches the Board-valued-at-$761-million fact at the level returned by the system."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "quote": "Community benefits valued at $761 million",
+            "label": "ENTAILMENT",
+            "reason": "The excerpt establishes the $761 million valuation, which is the decisive fact returned."
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [
+          "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+          "finding-1cb7b3c0-cb38-4cd6-9045-fd3174e0bc80"
+        ],
+        "citation_ids": [
+          "support-91355293-5b80-400f-93fb-7736d662f1c9",
+          "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Returned findings say the package included traffic and roadway improvements, and both attached excerpts support that.",
+        "claim_links": [
+          {
+            "finding_id": "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "This claim directly states the package included traffic and roadway improvements."
+          },
+          {
+            "finding_id": "finding-1cb7b3c0-cb38-4cd6-9045-fd3174e0bc80",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim independently states HRMP proposed extensive traffic and roadway improvements."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "quote": "include significant traffic and roadway improvements",
+            "label": "ENTAILMENT",
+            "reason": "The excerpt directly states this package component."
+          },
+          {
+            "citation_id": "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+            "quote": "HRMP proposes extensive traffic and roadway improvements",
+            "label": "ENTAILMENT",
+            "reason": "The excerpt directly states the transportation component."
+          }
+        ]
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [
+          "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+          "finding-1cb7b3c0-cb38-4cd6-9045-fd3174e0bc80"
+        ],
+        "citation_ids": [
+          "support-91355293-5b80-400f-93fb-7736d662f1c9",
+          "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Returned findings say the package included MTA station improvements, and attached excerpts directly support that.",
+        "claim_links": [
+          {
+            "finding_id": "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+            "claim_index": 2,
+            "label": "ENTAILMENT",
+            "reason": "This claim directly states the package included MTA station improvements."
+          },
+          {
+            "finding_id": "finding-1cb7b3c0-cb38-4cd6-9045-fd3174e0bc80",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "This claim provides the specific Willets Point MTA subway station upgrade detail."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "quote": "improvements to the Metropolitan Transportation Authority (MTA)’s public transit station",
+            "label": "ENTAILMENT",
+            "reason": "The excerpt directly states MTA station improvements."
+          },
+          {
+            "citation_id": "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+            "quote": "including ADA-compliant upgrades to the Willets Point MTA subway station",
+            "label": "ENTAILMENT",
+            "reason": "The excerpt gives a concrete station-improvement example."
+          }
+        ]
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [
+          "finding-849e32d0-5686-4611-9788-3b5b108b29f4"
+        ],
+        "citation_ids": [
+          "support-91355293-5b80-400f-93fb-7736d662f1c9"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "A returned finding states the package included over 25 acres of new public open space, and the excerpt directly says so.",
+        "claim_links": [
+          {
+            "finding_id": "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+            "claim_index": 3,
+            "label": "ENTAILMENT",
+            "reason": "This claim directly matches the reference fact."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "quote": "over 25 acres of new public open space",
+            "label": "ENTAILMENT",
+            "reason": "The excerpt directly states this acreage and category."
+          }
+        ]
+      },
+      {
+        "gold_id": "G5",
+        "finding_ids": [
+          "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+          "source-reread-1"
+        ],
+        "citation_ids": [
+          "support-91355293-5b80-400f-93fb-7736d662f1c9",
+          "source-reread-1-s"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Returned findings state the package included a Community Impact Fund, and attached excerpts support that, including a specific $163 million amount.",
+        "claim_links": [
+          {
+            "finding_id": "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+            "claim_index": 4,
+            "label": "ENTAILMENT",
+            "reason": "This claim directly states the package included a Community Impact Fund."
+          },
+          {
+            "finding_id": "source-reread-1",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim adds the specific $163 million amount for that fund."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "quote": "a Community Impact Fund",
+            "label": "ENTAILMENT",
+            "reason": "The excerpt names the fund as part of the package."
+          },
+          {
+            "citation_id": "source-reread-1-s",
+            "quote": "$163 million for a Community Impact Fund",
+            "label": "ENTAILMENT",
+            "reason": "The excerpt directly confirms the fund and amount."
+          }
+        ]
+      },
+      {
+        "gold_id": "G6",
+        "finding_ids": [
+          "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+          "source-reread-4"
+        ],
+        "citation_ids": [
+          "support-91355293-5b80-400f-93fb-7736d662f1c9",
+          "source-reread-4-s"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Returned findings state the package included funding for neighborhood social services, and another finding gives specific social-services examples.",
+        "claim_links": [
+          {
+            "finding_id": "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+            "claim_index": 5,
+            "label": "ENTAILMENT",
+            "reason": "This claim directly states the package included funding for neighborhood social services."
+          },
+          {
+            "finding_id": "source-reread-4",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim gives specific social-services funding details consistent with the reference fact."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "quote": "funding for neighborhood social services",
+            "label": "ENTAILMENT",
+            "reason": "The excerpt directly states this package component."
+          },
+          {
+            "citation_id": "source-reread-4-s",
+            "quote": "$25 million for community identified health care and youth and senior needs",
+            "label": "ENTAILMENT",
+            "reason": "The excerpt supplies concrete social-services funding details."
+          }
+        ]
+      },
+      {
+        "gold_id": "G7",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No returned finding states that the Board's chart itemized $761 million upfront and another $150 million ongoing.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G8",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No returned finding says HRMP's executive summary advertised about $1 billion in community benefits.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G9",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No returned finding says HRMP's executive summary used $1.75 billion for investment into community needs.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G10",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No returned finding states that HRMP's license requires milestones and budgets for community benefits proposed in its application.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G11",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No returned finding states that the CAC submission schedules $150 million of fund payments during 2031–2060.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G12",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No returned finding states that the operator reported distributing $2 million in grants in 2026.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G13",
+        "finding_ids": [
+          "finding-51483460-8378-4ae9-ae18-e849b662808b",
+          "finding-61e5810f-d55b-4f08-a884-68471d3947cb"
+        ],
+        "citation_ids": [
+          "support-2ce3e3ec-d471-48ff-87f2-5dab103282f0",
+          "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669"
+        ],
+        "label": "NEUTRAL",
+        "reason": "Returned findings address MTA approvals as still necessary and mention conceptual approval, but they do not state the news-reported fact that MTA had yet to agree to the proposed overhaul.",
+        "claim_links": [
+          {
+            "finding_id": "finding-51483460-8378-4ae9-ae18-e849b662808b",
+            "claim_index": 1,
+            "label": "NEUTRAL",
+            "reason": "Conceptual approval at 30% review is not the same as agreement to the proposed overhaul."
+          },
+          {
+            "finding_id": "finding-61e5810f-d55b-4f08-a884-68471d3947cb",
+            "claim_index": 2,
+            "label": "NEUTRAL",
+            "reason": "Remaining approvals suggest incompleteness but do not directly state lack of agreement."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-2ce3e3ec-d471-48ff-87f2-5dab103282f0",
+            "quote": "the MTA provided conceptual approval of the Proposed Improvements at the 30% Construction Documents stage of review",
+            "label": "NEUTRAL",
+            "reason": "Conceptual approval at one stage does not establish whether MTA had finally agreed to the overhaul."
+          },
+          {
+            "citation_id": "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669",
+            "quote": "will continue to work in good faith to secure all necessary approvals from the MTA",
+            "label": "NEUTRAL",
+            "reason": "Need for further approvals is relevant but does not itself state that MTA had yet to agree."
+          }
+        ]
+      }
+    ],
+    "protocol": "owned-quotes-v1",
+    "verdict": {
+      "label": "OVERCLAIM",
+      "reason": "The final assessment is justified in treating K1, K2, K3, and K6 as unverified because the cited excerpts show proposals, ongoing approvals, and development stages rather than completed delivery, but it overclaims for K4 and K5 by saying no later citations report fund creation or social-services provision while supplied excerpts do provide relevant later details about a $163 million fund and $25 million social-services funding, even though those details still do not prove delivery.",
+      "conditions": [
+        {
+          "condition_id": "K1",
+          "label": "NEUTRAL",
+          "citation_ids": [
+            "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+            "support-54e277fd-b358-46df-8cb6-5c8009352e06"
+          ],
+          "quote_checks": [
+            {
+              "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+              "quote": "Community benefits valued at $761 million include significant traffic and roadway improvements",
+              "label": "NEUTRAL",
+              "reason": "This proves the promised component, not that roadway and traffic improvements were delivered."
+            },
+            {
+              "citation_id": "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+              "quote": "HRMP proposes extensive traffic and roadway improvements, including ADA-compliant upgrades to the Willets Point MTA subway station, reconfigured intersections, new pedestrian and bicycle paths, and improved access to public transit.",
+              "label": "NEUTRAL",
+              "reason": "The passage is explicitly proposal language and does not establish completed roadway or traffic work."
+            },
+            {
+              "citation_id": "support-54e277fd-b358-46df-8cb6-5c8009352e06",
+              "quote": "Hard Rock Metropolitan Park in Queens and Bally’s Bronx continue through development, financing, construction, and permitting stages.",
+              "label": "NEUTRAL",
+              "reason": "Ongoing project stages are consistent with non-delivery but do not specifically establish whether the roadway items were delivered."
+            }
+          ],
+          "reason": "The excerpts show promised and proposed roadway work plus ongoing project stages, but no completed traffic or roadway delivery."
+        },
+        {
+          "condition_id": "K2",
+          "label": "NEUTRAL",
+          "citation_ids": [
+            "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+            "support-2ce3e3ec-d471-48ff-87f2-5dab103282f0",
+            "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669"
+          ],
+          "quote_checks": [
+            {
+              "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+              "quote": "improvements to the Metropolitan Transportation Authority (MTA)’s public transit station",
+              "label": "NEUTRAL",
+              "reason": "This states the promised station-improvement category only."
+            },
+            {
+              "citation_id": "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+              "quote": "including ADA-compliant upgrades to the Willets Point MTA subway station",
+              "label": "NEUTRAL",
+              "reason": "This identifies the proposed station work but not its completion."
+            },
+            {
+              "citation_id": "support-2ce3e3ec-d471-48ff-87f2-5dab103282f0",
+              "quote": "the MTA provided conceptual approval of the Proposed Improvements at the 30% Construction Documents stage of review in a letter dated August 21, 2024",
+              "label": "NEUTRAL",
+              "reason": "Conceptual approval at 30% documents planning progress, not delivered station improvements."
+            },
+            {
+              "citation_id": "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669",
+              "quote": "We have and will continue to work in good faith to secure all necessary approvals from the MTA and meet all necessary deadlines to deliver this required community benefit.",
+              "label": "NEUTRAL",
+              "reason": "Future-oriented efforts to secure approvals imply delivery remained outstanding, but the passage does not directly state non-delivery at a specific date."
+            }
+          ],
+          "reason": "The record shows proposed station upgrades and incomplete approvals, not actual delivered MTA station improvements."
+        },
+        {
+          "condition_id": "K3",
+          "label": "NEUTRAL",
+          "citation_ids": [
+            "support-91355293-5b80-400f-93fb-7736d662f1c9"
+          ],
+          "quote_checks": [
+            {
+              "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+              "quote": "over 25 acres of new public open space",
+              "label": "NEUTRAL",
+              "reason": "This establishes the promised open-space benefit, not that over 25 acres were provided."
+            }
+          ],
+          "reason": "The supplied excerpts identify promised open space but give no evidence that any acreage was completed or opened to the public."
+        },
+        {
+          "condition_id": "K4",
+          "label": "NEUTRAL",
+          "citation_ids": [
+            "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "source-reread-1-s",
+            "source-reread-2-s"
+          ],
+          "quote_checks": [
+            {
+              "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+              "quote": "a Community Impact Fund",
+              "label": "NEUTRAL",
+              "reason": "This names the promised fund but does not prove it was funded for the applicable periods."
+            },
+            {
+              "citation_id": "source-reread-1-s",
+              "quote": "$163 million for a Community Impact Fund that will provide grants to non -profit organizations serving Queens communities and residents.",
+              "label": "NEUTRAL",
+              "reason": "This gives amount and intended function, but the future-oriented 'will provide' does not establish actual funding or period-by-period availability."
+            },
+            {
+              "citation_id": "source-reread-2-s",
+              "quote": "A $163 million Community Benefits Fund (with the understanding this Fund should be increased) to be accessible for 30 years (or until the funds are depleted) and allocated across local Queens Community Districts 3, 4, 6, 7, 8, and 9;",
+              "label": "NEUTRAL",
+              "reason": "This states conditions for accessibility and allocation, but not that HRMP funded the fund for the applicable periods."
+            }
+          ],
+          "reason": "There is evidence describing the fund's amount and intended duration, but no proof that HRMP actually funded or maintained it for the required periods."
+        },
+        {
+          "condition_id": "K5",
+          "label": "NEUTRAL",
+          "citation_ids": [
+            "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "source-reread-4-s"
+          ],
+          "quote_checks": [
+            {
+              "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+              "quote": "funding for neighborhood social services",
+              "label": "NEUTRAL",
+              "reason": "This states the promised category only, not actual provision."
+            },
+            {
+              "citation_id": "source-reread-4-s",
+              "quote": "$25 million for community identified health care and youth and senior needs, including a health clinic in East Elmhurst , a youth and senior center in Corona, and addiction and mental health services infrastructure in Flushing.",
+              "label": "NEUTRAL",
+              "reason": "This describes planned social-services funding and uses examples, but does not show the money was actually supplied."
+            }
+          ],
+          "reason": "The record gives concrete social-services funding descriptions, but no evidence of actual disbursement or provision."
+        },
+        {
+          "condition_id": "K6",
+          "label": "NEUTRAL",
+          "citation_ids": [
+            "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "source-reread-1-s",
+            "source-reread-2-s",
+            "source-reread-4-s"
+          ],
+          "quote_checks": [
+            {
+              "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+              "quote": "Community benefits valued at $761 million include significant traffic and roadway improvements, improvements to the Metropolitan Transportation Authority (MTA)’s public transit station, over 25 acres of new public open space, a Community Impact Fund, and funding for neighborhood social services.",
+              "label": "NEUTRAL",
+              "reason": "This gives the headline package value and categories, but not delivered value."
+            },
+            {
+              "citation_id": "source-reread-1-s",
+              "quote": "$163 million for a Community Impact Fund that will provide grants to non -profit organizations serving Queens communities and residents.",
+              "label": "NEUTRAL",
+              "reason": "This supplies one component amount but does not establish delivered value."
+            },
+            {
+              "citation_id": "source-reread-2-s",
+              "quote": "A $163 million Community Benefits Fund (with the understanding this Fund should be increased) to be accessible for 30 years (or until the funds are depleted) and allocated across local Queens Community Districts 3, 4, 6, 7, 8, and 9;",
+              "label": "NEUTRAL",
+              "reason": "This adds scope and term language for one fund but not a reconciled delivered package valuation."
+            },
+            {
+              "citation_id": "source-reread-4-s",
+              "quote": "$25 million for community identified health care and youth and senior needs, including a health clinic in East Elmhurst , a youth and senior center in Corona, and addiction and mental health services infrastructure in Flushing.",
+              "label": "NEUTRAL",
+              "reason": "This gives another component amount, but the record still lacks a defined, reconciled delivered scope and term totaling the promised package value."
+            }
+          ],
+          "reason": "The excerpts state package and component amounts, but do not establish what benefits were actually delivered or reconcile delivered value across scope and term."
+        }
+      ]
+    }
+  },
+  "finished_at": "2026-11-22T10:26:58.339507+00:00"
+}

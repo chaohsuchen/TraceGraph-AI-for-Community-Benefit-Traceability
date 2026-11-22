@@ -1,0 +1,1000 @@
+{
+  "input_sha256": "e624db14534fe90f234b131bb3bfc2d63bfa0e8c618ac2a454e48fe0a5ebd006",
+  "judge_model": "gpt-5.4",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "judge_version": "tracegraph-nli-v4-owned-quotes",
+  "started_at": "2026-11-22T10:24:15.690122+00:00",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 30.04700000002049,
+      "request_id": "req_87c2118f41ea4423bfda3e719e5d4427",
+      "usage": {
+        "input_tokens": 3801,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 3486,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 7287
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 10.922000000020489,
+      "request_id": "req_6dcaffc6a4f2480daaff5c0b4d4d7d5f",
+      "usage": {
+        "input_tokens": 7865,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 1042,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 8907
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "evidence": {
+    "identity": {
+      "label": "MATCH",
+      "reason": "The returned commitment and findings concern Resorts World NYC's Cirrus workforce-housing partnership and the promise to begin investing in new housing developments \"in the immediate term,\" matching the question's organization, obligation, scope, and timing."
+    },
+    "findings": [
+      {
+        "finding_id": "finding-f034b556-8e4a-4599-b218-76bbcfe82556",
+        "claims": [
+          {
+            "claim": "Resorts World NYC said it had formed a partnership or joint venture with Cirrus.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-156f7713-b876-4e51-8019-eb404596460e"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-156f7713-b876-4e51-8019-eb404596460e",
+                "quote": "Resorts World New York City has officially formed a joint venture with Cirrus",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the joint venture with Cirrus."
+              }
+            ],
+            "reason": "The cited passage expressly says RWNYC formed a joint venture with Cirrus."
+          },
+          {
+            "claim": "The partnership would begin investing in new housing developments in the immediate term.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-436cc973-1e15-4949-89a1-071b771291ee",
+              "support-156f7713-b876-4e51-8019-eb404596460e"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-436cc973-1e15-4949-89a1-071b771291ee",
+                "quote": "The new partnership will begin investing in new housing developments in the immediate term.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the immediate-term investment start."
+              },
+              {
+                "citation_id": "support-156f7713-b876-4e51-8019-eb404596460e",
+                "quote": "The new partnership will begin to invest in new housing developments in the immediate term.",
+                "label": "ENTAILMENT",
+                "reason": "This independently repeats the same immediate-term start."
+              }
+            ],
+            "reason": "Both cited excerpts directly state an immediate-term start to investing in new housing developments."
+          },
+          {
+            "claim": "The housing is described as affordable housing for working- and middle-class families.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-436cc973-1e15-4949-89a1-071b771291ee"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-436cc973-1e15-4949-89a1-071b771291ee",
+                "quote": "This landmark agreement with Cirrus, labor pension funds, and contractors will ensure there is affordable housing financed by, built by, and lived in by working- and middle-class families.",
+                "label": "ENTAILMENT",
+                "reason": "The quote identifies affordable housing and the beneficiary families."
+              }
+            ],
+            "reason": "The excerpt expressly describes affordable housing for working- and middle-class families."
+          },
+          {
+            "claim": "The projects would focus across New York City or the five boroughs.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-156f7713-b876-4e51-8019-eb404596460e"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-156f7713-b876-4e51-8019-eb404596460e",
+                "quote": "which will focus on large-scale projects across the five boroughs.",
+                "label": "ENTAILMENT",
+                "reason": "The quote states the geographic focus across the five boroughs."
+              }
+            ],
+            "reason": "The cited passage states the projects will focus across the five boroughs."
+          },
+          {
+            "claim": "No quantified dollar amount is stated.",
+            "label": "NEUTRAL",
+            "citation_ids": [
+              "support-436cc973-1e15-4949-89a1-071b771291ee",
+              "support-156f7713-b876-4e51-8019-eb404596460e"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-436cc973-1e15-4949-89a1-071b771291ee",
+                "quote": "The new partnership will begin investing in new housing developments in the immediate term.",
+                "label": "NEUTRAL",
+                "reason": "This quote gives no dollar amount but silence alone does not establish that none was stated anywhere."
+              },
+              {
+                "citation_id": "support-156f7713-b876-4e51-8019-eb404596460e",
+                "quote": "Resorts World New York City has officially formed a joint venture with Cirrus to invest in this housing commitment",
+                "label": "NEUTRAL",
+                "reason": "This quote does not mention a dollar amount, but does not prove no amount was stated."
+              }
+            ],
+            "reason": "The cited excerpts do not provide an amount, but they do not establish the broader claim that no quantified dollar amount was stated."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-13487f93-03a3-4bf9-a9fc-efa48e72b535",
+        "claims": [
+          {
+            "claim": "The materials describe a long-term strategic joint venture related to workforce housing creation.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-905fac10-b815-48bf-96a5-e3399ee7c582"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-905fac10-b815-48bf-96a5-e3399ee7c582",
+                "quote": "the Parties desire to enter into a long-term strategic joint venture",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly describes a long-term strategic joint venture."
+              }
+            ],
+            "reason": "The excerpt directly states the parties desire a long-term strategic joint venture."
+          },
+          {
+            "claim": "The investment scope includes co-investments and fund investments supporting development and ownership of workforce housing in New York City and its suburbs.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-9bdfc55c-2c02-440b-a9b3-c5c05628a5b1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-9bdfc55c-2c02-440b-a9b3-c5c05628a5b1",
+                "quote": "“Investments” means (i) co-investments by the Partnership with other investment vehicles and partnerships managed by the Management Company in the development and ownership of workforce housing in New York City and its suburbs (“Co-Investments”); (ii) investments by the Partnership alongside other Management Company anchor investors within the Management Company’s flagship funds in order to support further investments by these vehicles in the development and ownership of workforce housing in New York City and its suburbs",
+                "label": "ENTAILMENT",
+                "reason": "The quote defines investments exactly as co-investments and fund investments for workforce housing in NYC and its suburbs."
+              }
+            ],
+            "reason": "The partnership agreement excerpt directly defines the investment scope that way."
+          },
+          {
+            "claim": "The stated delivery ambition is tens of thousands of new homes for working families across New York City.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-006e8bf3-95aa-42e6-9a91-e309daa14599"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-006e8bf3-95aa-42e6-9a91-e309daa14599",
+                "quote": "deliver tens of thousands of new homes for working families across New York City",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the tens-of-thousands ambition and beneficiaries."
+              }
+            ],
+            "reason": "The cited public statement expressly says the initiative aims to deliver tens of thousands of new homes for working families across NYC."
+          },
+          {
+            "claim": "One public statement cites up to 50,000 units.",
+            "label": "NEUTRAL",
+            "citation_ids": [
+              "support-905fac10-b815-48bf-96a5-e3399ee7c582",
+              "support-9bdfc55c-2c02-440b-a9b3-c5c05628a5b1",
+              "support-006e8bf3-95aa-42e6-9a91-e309daa14599"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-905fac10-b815-48bf-96a5-e3399ee7c582",
+                "quote": "ultimate WFH creation via leveraging CWFHA’s WFH Investment pipeline",
+                "label": "NEUTRAL",
+                "reason": "This quote does not mention 50,000 units."
+              },
+              {
+                "citation_id": "support-9bdfc55c-2c02-440b-a9b3-c5c05628a5b1",
+                "quote": "in the development and ownership of workforce housing in New York City and its suburbs",
+                "label": "NEUTRAL",
+                "reason": "This quote defines investment types, not a 50,000-unit figure."
+              },
+              {
+                "citation_id": "support-006e8bf3-95aa-42e6-9a91-e309daa14599",
+                "quote": "deliver tens of thousands of new homes",
+                "label": "NEUTRAL",
+                "reason": "This states tens of thousands, not specifically up to 50,000 units."
+              }
+            ],
+            "reason": "None of this finding's attached excerpts states an 'up to 50,000 units' figure."
+          },
+          {
+            "claim": "No start-date beyond 'immediate term' is provided.",
+            "label": "NEUTRAL",
+            "citation_ids": [
+              "support-905fac10-b815-48bf-96a5-e3399ee7c582",
+              "support-9bdfc55c-2c02-440b-a9b3-c5c05628a5b1",
+              "support-006e8bf3-95aa-42e6-9a91-e309daa14599"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-905fac10-b815-48bf-96a5-e3399ee7c582",
+                "quote": "the Parties desire to enter into a long-term strategic joint venture",
+                "label": "NEUTRAL",
+                "reason": "This quote says nothing about any start-date."
+              },
+              {
+                "citation_id": "support-9bdfc55c-2c02-440b-a9b3-c5c05628a5b1",
+                "quote": "“Investments” means (i) co-investments",
+                "label": "NEUTRAL",
+                "reason": "This quote defines investments but does not address start timing."
+              },
+              {
+                "citation_id": "support-006e8bf3-95aa-42e6-9a91-e309daa14599",
+                "quote": "deliver tens of thousands of new homes for working families across New York City",
+                "label": "NEUTRAL",
+                "reason": "This quote states ambition, not whether any start-date beyond 'immediate term' exists."
+              }
+            ],
+            "reason": "These excerpts do not address whether any more specific start-date was or was not provided."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-1",
+        "claims": [
+          {
+            "claim": "RWNYC said it recently formed a joint venture with Cirrus Workforce Housing.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "RWNYC recently formed a joint venture with Cirrus Workforce Housing",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states RWNYC recently formed the joint venture."
+              }
+            ],
+            "reason": "The excerpt expressly says RWNYC recently formed the joint venture with Cirrus Workforce Housing."
+          },
+          {
+            "claim": "The joint venture would contribute up to $25 million each year over the term of the license.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "to contribute up to $25 million each year, over the term of the License",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the annual contribution level and duration."
+              }
+            ],
+            "reason": "The excerpt directly states the amount and license-term duration."
+          },
+          {
+            "claim": "The funding would help construct up to 50,000 units of workforce housing throughout New York City.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "to help fund the construction of up to 50,000 units of workforce housing throughout New York City",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the purpose, scale, and geography."
+              }
+            ],
+            "reason": "The excerpt directly states the venture would help fund up to 50,000 units throughout NYC."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-2",
+        "claims": [
+          {
+            "claim": "A Resorts World project fact sheet said approximately 3,000 units of workforce housing would be created.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-2-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-2-s",
+                "quote": "Approximately 3,000 units of union -built and labor-financed workforce housing would also be created.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states approximately 3,000 units would be created."
+              }
+            ],
+            "reason": "The fact sheet excerpt directly states approximately 3,000 units would be created."
+          },
+          {
+            "claim": "Those units were described as union-built and labor-financed.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-2-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-2-s",
+                "quote": "union -built and labor-financed workforce housing",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly provides those descriptors."
+              }
+            ],
+            "reason": "The excerpt explicitly describes the units as union-built and labor-financed."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "finding-f034b556-8e4a-4599-b218-76bbcfe82556"
+        ],
+        "citation_ids": [
+          "support-436cc973-1e15-4949-89a1-071b771291ee",
+          "support-156f7713-b876-4e51-8019-eb404596460e"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "A finding states the partnership would begin investing \"in the immediate term,\" and the cited excerpts provide that phrase without a calendar deadline.",
+        "claim_links": [
+          {
+            "finding_id": "finding-f034b556-8e4a-4599-b218-76bbcfe82556",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "This claim conveys the immediate-term start."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-436cc973-1e15-4949-89a1-071b771291ee",
+            "quote": "The new partnership will begin investing in new housing developments in the immediate term.",
+            "label": "ENTAILMENT",
+            "reason": "This directly records an immediate-term start and gives no specific date."
+          },
+          {
+            "citation_id": "support-156f7713-b876-4e51-8019-eb404596460e",
+            "quote": "The new partnership will begin to invest in new housing developments in the immediate term.",
+            "label": "ENTAILMENT",
+            "reason": "This repeats the immediate-term start without defining a calendar deadline."
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents a multimillion-dollar down payment made before the license award.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states the application expressed hope for construction to start before the license award.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding addresses license-required milestones and budgets for community benefits.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G5",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding says the public partnership agreement refers the investment-period start to section 3.1(b).",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G6",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents the $46.125 million Jamaica deed dated May 29 and recorded June 5, 2026.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G7",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states RWNYC ARCHER AVE LLC was the recorded buyer of the Jamaica site.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G8",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding mentions Queens block 10151, lot 39.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G9",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states RWNYC reported $25 million delivered in 2026 through September for the fund.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G10",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding says that in September 2026 the operator still described the 700 Jamaica units as proposed.",
+        "claim_links": [],
+        "quote_checks": []
+      }
+    ]
+  },
+  "verdict_protocol": "two-stage-owned-citations-v4",
+  "judgment": {
+    "identity": {
+      "label": "MATCH",
+      "reason": "The returned commitment and findings concern Resorts World NYC's Cirrus workforce-housing partnership and the promise to begin investing in new housing developments \"in the immediate term,\" matching the question's organization, obligation, scope, and timing."
+    },
+    "findings": [
+      {
+        "finding_id": "finding-f034b556-8e4a-4599-b218-76bbcfe82556",
+        "claims": [
+          {
+            "claim": "Resorts World NYC said it had formed a partnership or joint venture with Cirrus.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-156f7713-b876-4e51-8019-eb404596460e"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-156f7713-b876-4e51-8019-eb404596460e",
+                "quote": "Resorts World New York City has officially formed a joint venture with Cirrus",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the joint venture with Cirrus."
+              }
+            ],
+            "reason": "The cited passage expressly says RWNYC formed a joint venture with Cirrus."
+          },
+          {
+            "claim": "The partnership would begin investing in new housing developments in the immediate term.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-436cc973-1e15-4949-89a1-071b771291ee",
+              "support-156f7713-b876-4e51-8019-eb404596460e"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-436cc973-1e15-4949-89a1-071b771291ee",
+                "quote": "The new partnership will begin investing in new housing developments in the immediate term.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the immediate-term investment start."
+              },
+              {
+                "citation_id": "support-156f7713-b876-4e51-8019-eb404596460e",
+                "quote": "The new partnership will begin to invest in new housing developments in the immediate term.",
+                "label": "ENTAILMENT",
+                "reason": "This independently repeats the same immediate-term start."
+              }
+            ],
+            "reason": "Both cited excerpts directly state an immediate-term start to investing in new housing developments."
+          },
+          {
+            "claim": "The housing is described as affordable housing for working- and middle-class families.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-436cc973-1e15-4949-89a1-071b771291ee"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-436cc973-1e15-4949-89a1-071b771291ee",
+                "quote": "This landmark agreement with Cirrus, labor pension funds, and contractors will ensure there is affordable housing financed by, built by, and lived in by working- and middle-class families.",
+                "label": "ENTAILMENT",
+                "reason": "The quote identifies affordable housing and the beneficiary families."
+              }
+            ],
+            "reason": "The excerpt expressly describes affordable housing for working- and middle-class families."
+          },
+          {
+            "claim": "The projects would focus across New York City or the five boroughs.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-156f7713-b876-4e51-8019-eb404596460e"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-156f7713-b876-4e51-8019-eb404596460e",
+                "quote": "which will focus on large-scale projects across the five boroughs.",
+                "label": "ENTAILMENT",
+                "reason": "The quote states the geographic focus across the five boroughs."
+              }
+            ],
+            "reason": "The cited passage states the projects will focus across the five boroughs."
+          },
+          {
+            "claim": "No quantified dollar amount is stated.",
+            "label": "NEUTRAL",
+            "citation_ids": [
+              "support-436cc973-1e15-4949-89a1-071b771291ee",
+              "support-156f7713-b876-4e51-8019-eb404596460e"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-436cc973-1e15-4949-89a1-071b771291ee",
+                "quote": "The new partnership will begin investing in new housing developments in the immediate term.",
+                "label": "NEUTRAL",
+                "reason": "This quote gives no dollar amount but silence alone does not establish that none was stated anywhere."
+              },
+              {
+                "citation_id": "support-156f7713-b876-4e51-8019-eb404596460e",
+                "quote": "Resorts World New York City has officially formed a joint venture with Cirrus to invest in this housing commitment",
+                "label": "NEUTRAL",
+                "reason": "This quote does not mention a dollar amount, but does not prove no amount was stated."
+              }
+            ],
+            "reason": "The cited excerpts do not provide an amount, but they do not establish the broader claim that no quantified dollar amount was stated."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-13487f93-03a3-4bf9-a9fc-efa48e72b535",
+        "claims": [
+          {
+            "claim": "The materials describe a long-term strategic joint venture related to workforce housing creation.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-905fac10-b815-48bf-96a5-e3399ee7c582"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-905fac10-b815-48bf-96a5-e3399ee7c582",
+                "quote": "the Parties desire to enter into a long-term strategic joint venture",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly describes a long-term strategic joint venture."
+              }
+            ],
+            "reason": "The excerpt directly states the parties desire a long-term strategic joint venture."
+          },
+          {
+            "claim": "The investment scope includes co-investments and fund investments supporting development and ownership of workforce housing in New York City and its suburbs.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-9bdfc55c-2c02-440b-a9b3-c5c05628a5b1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-9bdfc55c-2c02-440b-a9b3-c5c05628a5b1",
+                "quote": "“Investments” means (i) co-investments by the Partnership with other investment vehicles and partnerships managed by the Management Company in the development and ownership of workforce housing in New York City and its suburbs (“Co-Investments”); (ii) investments by the Partnership alongside other Management Company anchor investors within the Management Company’s flagship funds in order to support further investments by these vehicles in the development and ownership of workforce housing in New York City and its suburbs",
+                "label": "ENTAILMENT",
+                "reason": "The quote defines investments exactly as co-investments and fund investments for workforce housing in NYC and its suburbs."
+              }
+            ],
+            "reason": "The partnership agreement excerpt directly defines the investment scope that way."
+          },
+          {
+            "claim": "The stated delivery ambition is tens of thousands of new homes for working families across New York City.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-006e8bf3-95aa-42e6-9a91-e309daa14599"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-006e8bf3-95aa-42e6-9a91-e309daa14599",
+                "quote": "deliver tens of thousands of new homes for working families across New York City",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the tens-of-thousands ambition and beneficiaries."
+              }
+            ],
+            "reason": "The cited public statement expressly says the initiative aims to deliver tens of thousands of new homes for working families across NYC."
+          },
+          {
+            "claim": "One public statement cites up to 50,000 units.",
+            "label": "NEUTRAL",
+            "citation_ids": [
+              "support-905fac10-b815-48bf-96a5-e3399ee7c582",
+              "support-9bdfc55c-2c02-440b-a9b3-c5c05628a5b1",
+              "support-006e8bf3-95aa-42e6-9a91-e309daa14599"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-905fac10-b815-48bf-96a5-e3399ee7c582",
+                "quote": "ultimate WFH creation via leveraging CWFHA’s WFH Investment pipeline",
+                "label": "NEUTRAL",
+                "reason": "This quote does not mention 50,000 units."
+              },
+              {
+                "citation_id": "support-9bdfc55c-2c02-440b-a9b3-c5c05628a5b1",
+                "quote": "in the development and ownership of workforce housing in New York City and its suburbs",
+                "label": "NEUTRAL",
+                "reason": "This quote defines investment types, not a 50,000-unit figure."
+              },
+              {
+                "citation_id": "support-006e8bf3-95aa-42e6-9a91-e309daa14599",
+                "quote": "deliver tens of thousands of new homes",
+                "label": "NEUTRAL",
+                "reason": "This states tens of thousands, not specifically up to 50,000 units."
+              }
+            ],
+            "reason": "None of this finding's attached excerpts states an 'up to 50,000 units' figure."
+          },
+          {
+            "claim": "No start-date beyond 'immediate term' is provided.",
+            "label": "NEUTRAL",
+            "citation_ids": [
+              "support-905fac10-b815-48bf-96a5-e3399ee7c582",
+              "support-9bdfc55c-2c02-440b-a9b3-c5c05628a5b1",
+              "support-006e8bf3-95aa-42e6-9a91-e309daa14599"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-905fac10-b815-48bf-96a5-e3399ee7c582",
+                "quote": "the Parties desire to enter into a long-term strategic joint venture",
+                "label": "NEUTRAL",
+                "reason": "This quote says nothing about any start-date."
+              },
+              {
+                "citation_id": "support-9bdfc55c-2c02-440b-a9b3-c5c05628a5b1",
+                "quote": "“Investments” means (i) co-investments",
+                "label": "NEUTRAL",
+                "reason": "This quote defines investments but does not address start timing."
+              },
+              {
+                "citation_id": "support-006e8bf3-95aa-42e6-9a91-e309daa14599",
+                "quote": "deliver tens of thousands of new homes for working families across New York City",
+                "label": "NEUTRAL",
+                "reason": "This quote states ambition, not whether any start-date beyond 'immediate term' exists."
+              }
+            ],
+            "reason": "These excerpts do not address whether any more specific start-date was or was not provided."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-1",
+        "claims": [
+          {
+            "claim": "RWNYC said it recently formed a joint venture with Cirrus Workforce Housing.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "RWNYC recently formed a joint venture with Cirrus Workforce Housing",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states RWNYC recently formed the joint venture."
+              }
+            ],
+            "reason": "The excerpt expressly says RWNYC recently formed the joint venture with Cirrus Workforce Housing."
+          },
+          {
+            "claim": "The joint venture would contribute up to $25 million each year over the term of the license.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "to contribute up to $25 million each year, over the term of the License",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the annual contribution level and duration."
+              }
+            ],
+            "reason": "The excerpt directly states the amount and license-term duration."
+          },
+          {
+            "claim": "The funding would help construct up to 50,000 units of workforce housing throughout New York City.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "to help fund the construction of up to 50,000 units of workforce housing throughout New York City",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the purpose, scale, and geography."
+              }
+            ],
+            "reason": "The excerpt directly states the venture would help fund up to 50,000 units throughout NYC."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-2",
+        "claims": [
+          {
+            "claim": "A Resorts World project fact sheet said approximately 3,000 units of workforce housing would be created.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-2-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-2-s",
+                "quote": "Approximately 3,000 units of union -built and labor-financed workforce housing would also be created.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states approximately 3,000 units would be created."
+              }
+            ],
+            "reason": "The fact sheet excerpt directly states approximately 3,000 units would be created."
+          },
+          {
+            "claim": "Those units were described as union-built and labor-financed.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-2-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-2-s",
+                "quote": "union -built and labor-financed workforce housing",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly provides those descriptors."
+              }
+            ],
+            "reason": "The excerpt explicitly describes the units as union-built and labor-financed."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "finding-f034b556-8e4a-4599-b218-76bbcfe82556"
+        ],
+        "citation_ids": [
+          "support-436cc973-1e15-4949-89a1-071b771291ee",
+          "support-156f7713-b876-4e51-8019-eb404596460e"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "A finding states the partnership would begin investing \"in the immediate term,\" and the cited excerpts provide that phrase without a calendar deadline.",
+        "claim_links": [
+          {
+            "finding_id": "finding-f034b556-8e4a-4599-b218-76bbcfe82556",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "This claim conveys the immediate-term start."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-436cc973-1e15-4949-89a1-071b771291ee",
+            "quote": "The new partnership will begin investing in new housing developments in the immediate term.",
+            "label": "ENTAILMENT",
+            "reason": "This directly records an immediate-term start and gives no specific date."
+          },
+          {
+            "citation_id": "support-156f7713-b876-4e51-8019-eb404596460e",
+            "quote": "The new partnership will begin to invest in new housing developments in the immediate term.",
+            "label": "ENTAILMENT",
+            "reason": "This repeats the immediate-term start without defining a calendar deadline."
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents a multimillion-dollar down payment made before the license award.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states the application expressed hope for construction to start before the license award.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding addresses license-required milestones and budgets for community benefits.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G5",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding says the public partnership agreement refers the investment-period start to section 3.1(b).",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G6",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents the $46.125 million Jamaica deed dated May 29 and recorded June 5, 2026.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G7",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states RWNYC ARCHER AVE LLC was the recorded buyer of the Jamaica site.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G8",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding mentions Queens block 10151, lot 39.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G9",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states RWNYC reported $25 million delivered in 2026 through September for the fund.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G10",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding says that in September 2026 the operator still described the 700 Jamaica units as proposed.",
+        "claim_links": [],
+        "quote_checks": []
+      }
+    ],
+    "protocol": "owned-quotes-v1",
+    "verdict": {
+      "label": "JUSTIFIED",
+      "reason": "The displayed assessment appropriately rates delivery as unverified because the supplied excerpts show a promise and partnership structure but do not establish that any qualifying workforce-housing investment actually began or that a first investment occurred within an identified immediate-term trigger.",
+      "conditions": [
+        {
+          "condition_id": "K1",
+          "label": "NEUTRAL",
+          "citation_ids": [
+            "support-436cc973-1e15-4949-89a1-071b771291ee",
+            "support-156f7713-b876-4e51-8019-eb404596460e",
+            "support-9bdfc55c-2c02-440b-a9b3-c5c05628a5b1",
+            "support-006e8bf3-95aa-42e6-9a91-e309daa14599",
+            "source-reread-1-s",
+            "source-reread-2-s"
+          ],
+          "quote_checks": [
+            {
+              "citation_id": "support-436cc973-1e15-4949-89a1-071b771291ee",
+              "quote": "The new partnership will begin investing in new housing developments in the immediate term.",
+              "label": "NEUTRAL",
+              "reason": "This is a forward-looking pledge to begin investing, not evidence that investing actually began."
+            },
+            {
+              "citation_id": "support-156f7713-b876-4e51-8019-eb404596460e",
+              "quote": "Resorts World New York City has officially formed a joint venture with Cirrus to invest in this housing commitment, which will focus on large-scale projects across the five boroughs. The new partnership will begin to invest in new housing developments in the immediate term.",
+              "label": "NEUTRAL",
+              "reason": "Formation of the joint venture and a statement that it will begin investing do not show an investment already occurred."
+            },
+            {
+              "citation_id": "support-9bdfc55c-2c02-440b-a9b3-c5c05628a5b1",
+              "quote": "“Investments” means (i) co-investments by the Partnership with other investment vehicles and partnerships managed by the Management Company in the development and ownership of workforce housing in New York City and its suburbs (“Co-Investments”); (ii) investments by the Partnership alongside other Management Company anchor investors within the Management Company’s flagship funds",
+              "label": "NEUTRAL",
+              "reason": "This defines the category of investments but does not document that any qualifying investment was made."
+            },
+            {
+              "citation_id": "support-006e8bf3-95aa-42e6-9a91-e309daa14599",
+              "quote": "Resorts World's Workforce Housing Initiative, funded through the Cirrus Workforce Housing Fund, is a landmark partnership with organized labor to deliver tens of thousands of new homes for working families across New York City.",
+              "label": "NEUTRAL",
+              "reason": "This describes the initiative and funding framework, not an actual commenced investment in a specific development."
+            },
+            {
+              "citation_id": "source-reread-1-s",
+              "quote": "RWNYC recently formed a joint venture with Cirrus Workforce Housing to contribute up to $25 million each year, over the term of the License, to help fund the construction of up to 50,000 units of workforce housing throughout New York City.",
+              "label": "NEUTRAL",
+              "reason": "This states an undertaking to contribute funding over time, not that a first contribution or investment already happened."
+            },
+            {
+              "citation_id": "source-reread-2-s",
+              "quote": "Approximately 3,000 units of union -built and labor-financed workforce housing would also be created.",
+              "label": "NEUTRAL",
+              "reason": "This is a future-looking statement about units that would be created, not proof that an investment had begun."
+            }
+          ],
+          "reason": "The evidence shows plans, a joint venture, and intended funding scope, but no excerpt states that RWNYC actually made or began a qualifying workforce-housing investment."
+        },
+        {
+          "condition_id": "K2",
+          "label": "NEUTRAL",
+          "citation_ids": [
+            "support-436cc973-1e15-4949-89a1-071b771291ee",
+            "support-156f7713-b876-4e51-8019-eb404596460e"
+          ],
+          "quote_checks": [
+            {
+              "citation_id": "support-436cc973-1e15-4949-89a1-071b771291ee",
+              "quote": "The new partnership will begin investing in new housing developments in the immediate term.",
+              "label": "NEUTRAL",
+              "reason": "The quote promises timing in general terms but does not identify a concrete start trigger or show when a first investment occurred."
+            },
+            {
+              "citation_id": "support-156f7713-b876-4e51-8019-eb404596460e",
+              "quote": "The new partnership will begin to invest in new housing developments in the immediate term.",
+              "label": "NEUTRAL",
+              "reason": "This repeats the vague timing language without establishing the trigger against which 'immediate term' is measured or any actual first investment date."
+            }
+          ],
+          "reason": "No supplied excerpt identifies the start trigger for measuring 'immediate term' or documents the date of the first qualifying investment, so timely occurrence cannot be established."
+        }
+      ]
+    }
+  },
+  "finished_at": "2026-11-22T10:24:56.951358+00:00"
+}

@@ -1,0 +1,63 @@
+{
+  "case_id": "TG-GOLD-H030",
+  "reference_sha256": "b8fece3a1cd37ec3511690b634e009f51402c851986a838ea22bc2765c42f7db",
+  "query": "HRMP aims for 6 percent service-disabled veterans but considers 2 percent more realistic.",
+  "model": "gpt-5.4",
+  "web_search_model": "gpt-5.4",
+  "started_at": "2026-11-22T09:40:37.738590+00:00",
+  "outcome": "PARTIAL_RESEARCH",
+  "message": "Research is incomplete; no commitment was saved.",
+  "graph": null,
+  "job_result": {
+    "gaps": [
+      "No source excerpt could be verified. Located links remain unverified research leads."
+    ],
+    "facts": [
+      {
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+        "excerpt": "HRMP aims for the minimum 6 percent utilization of service-disabled veterans. HRMP notes that the Applicant may have to bring current experienced employees from other states to work at the facility, and this may impact reaching these workforce composition goals."
+      },
+      {
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+        "excerpt": "For MWBE participation in the construction of the project, HRMP established goals of 8 percent women and 30 - 63 percent minorities and aims for 6 percent SDV."
+      },
+      {
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+        "excerpt": "All Applicants are expected to track and report service-disabled veteran employment and meet the RFA-articulated 6 percent goal requirement."
+      }
+    ],
+    "query": "HRMP aims for 6 percent service-disabled veterans but considers 2 percent more realistic.",
+    "message": "Research is incomplete; no commitment was saved.",
+    "outcome": "PARTIAL_RESEARCH",
+    "suggestions": [
+      {
+        "kind": "WEB_LEAD",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+        "excerpt": "",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+        "description": "Located source; no excerpt could be verified.",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+      },
+      {
+        "kind": "WEB_LEAD",
+        "title": "https://www.dol.gov/sites/dolgov/files/VETS/files/Employer-Guide-to-Hiring-Veterans2025-07.pdf",
+        "excerpt": "",
+        "source_url": "https://www.dol.gov/sites/dolgov/files/VETS/files/Employer-Guide-to-Hiring-Veterans2025-07.pdf",
+        "description": "Located source; no excerpt could be verified.",
+        "source_title": "https://www.dol.gov/sites/dolgov/files/VETS/files/Employer-Guide-to-Hiring-Veterans2025-07.pdf"
+      },
+      {
+        "kind": "WEB_LEAD",
+        "title": "https://www.opm.gov/policy-data-oversight/hiring-information/merit-hiring-plan-resources/rule-of-many-and-veterans-preference.pdf",
+        "excerpt": "",
+        "source_url": "https://www.opm.gov/policy-data-oversight/hiring-information/merit-hiring-plan-resources/rule-of-many-and-veterans-preference.pdf",
+        "description": "Located source; no excerpt could be verified.",
+        "source_title": "https://www.opm.gov/policy-data-oversight/hiring-information/merit-hiring-plan-resources/rule-of-many-and-veterans-preference.pdf"
+      }
+    ]
+  },
+  "finished_at": "2026-11-22T09:40:58.499406+00:00"
+}

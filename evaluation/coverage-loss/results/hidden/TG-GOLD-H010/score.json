@@ -1,0 +1,53 @@
+{
+  "case_id": "TG-GOLD-H010",
+  "identity": "MISMATCH",
+  "reference_coverage": {
+    "numerator": 0,
+    "denominator": 5,
+    "rate": 0.0
+  },
+  "finding_support": {
+    "numerator": 9,
+    "denominator": 11,
+    "rate": 0.8181818181818182
+  },
+  "traceability": {
+    "numerator": 9,
+    "denominator": 11,
+    "rate": 0.8181818181818182
+  },
+  "claim_count": 11,
+  "evidence_eligible_claims": 11,
+  "unquoted_claims": 0,
+  "credited_reference_ids": [],
+  "coverage_labels": {
+    "ENTAILMENT": 4,
+    "CONTRADICTION": 0,
+    "NEUTRAL": 0,
+    "MISSING": 1
+  },
+  "finding_labels": {
+    "ENTAILMENT": 9,
+    "CONTRADICTION": 0,
+    "NEUTRAL": 2
+  },
+  "citation_audit": "OWNED_QUOTES_V1",
+  "verdict": "INDETERMINATE",
+  "verdict_evaluation": {
+    "applicable": true,
+    "reason": null,
+    "label": "INDETERMINATE"
+  },
+  "outcome": "RESOLVED",
+  "output_kind": "GRAPH",
+  "system": "TraceGraph",
+  "case_applicability": "APPLICABLE",
+  "delivery_applicable": true,
+  "user_visible_findings": 6,
+  "source_counts": {
+    "capture_passages": 0,
+    "unmatched_records": 3,
+    "suggestions": 0
+  },
+  "score_version": "tracegraph-score-v4"
+}

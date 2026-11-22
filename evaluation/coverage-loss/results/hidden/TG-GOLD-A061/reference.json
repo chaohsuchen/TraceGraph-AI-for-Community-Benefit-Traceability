@@ -1,0 +1,349 @@
+{
+  "case_id": "TG-GOLD-A061",
+  "query": "Resorts World shall deposit cash or bond equal to 5 percent of its proposed total investment by December 31, 2025.",
+  "facts": [
+    {
+      "id": "G1",
+      "text": "The RWNYC license required cash or bond equal to 5% of total investment proposed in its application by December 31, 2025.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A061",
+          "row": 5
+        }
+      ]
+    },
+    {
+      "id": "G2",
+      "text": "The $500 million gaming license fee is a separate obligation from the completion security.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A061",
+          "row": 5
+        }
+      ]
+    },
+    {
+      "id": "G3",
+      "text": "The governing statute permits an approved deposit bond instead of cash.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A061",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "G4",
+      "text": "The official Q&A says a deposit bond must guarantee payment upon default.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A061",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "G5",
+      "text": "In February 2026 the Commission said two unnamed licensees had provided completion bonds and a third bond was being finalized.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A061",
+          "row": 8
+        }
+      ]
+    },
+    {
+      "id": "G6",
+      "text": "The Board reported a recalculated standardized RWNYC capital investment figure of $3.3 billion.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A061",
+          "row": 9
+        }
+      ]
+    },
+    {
+      "id": "G7",
+      "text": "Monetary fields in RWNYC's public capital-investment submission are redacted.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A061",
+          "row": 10
+        }
+      ]
+    },
+    {
+      "id": "G8",
+      "text": "The compiled rules print a 10% deposit figure even though RWNYC's individual license states 5%.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A061",
+          "row": 11
+        }
+      ]
+    },
+    {
+      "id": "G9",
+      "text": "Genting's audited report says GENNY financed the $500 million license fee in January 2026.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A061",
+          "row": 13
+        }
+      ]
+    },
+    {
+      "id": "G10",
+      "text": "The June 2026 company report gives group restricted cash without attributing it to RWNYC's security.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A061",
+          "row": 14
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "K1",
+      "text": "RWNYC supplied cash or an acceptable completion bond to the Commission.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A061",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-A061",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "K2",
+      "text": "The RWNYC security equaled 5% of its approved total proposed application investment.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A061",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-A061",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "K3",
+      "text": "The RWNYC security was deposited by December 31, 2025.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A061",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-A061",
+          "row": 8
+        }
+      ]
+    }
+  ],
+  "delivery_applicable": true,
+  "reference_verdict": {
+    "status": "partially corroborated",
+    "reasoning": "Retain partially corroborated, pending human review. Confidence is high for the license obligation: cash or bond equal to 5% of total Application investment by December 31, 2025. RWNYC-specific provision, approved amount and timeliness remain unverified. The unnamed two-licensee bond statement cannot identify RWNYC or exclude cash. Later reviewed records add no receipt; fees, financing and group cash are distinct. Keep the formula uncomputed and avoid double-counting TG-GOLD-A010. Missing public evidence does not establish nonposting or breach.",
+    "delivery_applicable": true,
+    "source_refs": [
+      {
+        "sheet": "TG-GOLD-A061",
+        "row": 17
+      },
+      {
+        "sheet": "TG-GOLD-A061",
+        "row": 18
+      }
+    ]
+  },
+  "sources": [
+    {
+      "sheet": "TG-GOLD-A061",
+      "row": 5,
+      "title": "RWNYC Gaming Facility License Award",
+      "citation": "December 19, 2025 license letter, PDF p.4, Exhibit 1, Conditions 1–2",
+      "publisher": "New York State Gaming Commission",
+      "url": null,
+      "url_origin": null,
+      "locator": "December 19, 2025 license letter, PDF p.4, Exhibit 1, Conditions 1–2",
+      "published_on": null,
+      "evidence_status": "Binding obligation documented",
+      "specific_evidence": "Condition 2 requires RWNYC to deposit cash or bond representing 5% of total investment proposed in the Application by December 31, 2025. Condition 1 separately requires the $500 million license fee; the award document does not establish security receipt.",
+      "notes": "Binding obligation only. Implements TG-GOLD-A010 with a fixed rate and deadline; do not count a second security obligation or equate fee payment with performance."
+    },
+    {
+      "sheet": "TG-GOLD-A061",
+      "row": 6,
+      "title": "PML 1321-e: Required Capital Investment",
+      "citation": "Subdivision 1; displayed revision May 12, 2023",
+      "publisher": "New York State Senate",
+      "url": null,
+      "url_origin": null,
+      "locator": "Subdivision 1; displayed revision May 12, 2023",
+      "published_on": null,
+      "evidence_status": "Statutory framework",
+      "specific_evidence": "The statute provides for construction security of 5–10% of proposed investment, permits an approved deposit bond instead of cash, and governs escrow, return and forfeiture. It establishes the legal framework without confirming any RWNYC deposit or accepted instrument.",
+      "notes": "Cash and bond are alternatives. An unidentified unfinished bond cannot establish absence of qualifying cash; the face amount is construction security, not community-benefit spending."
+    },
+    {
+      "sheet": "TG-GOLD-A061",
+      "row": 7,
+      "title": "Official Round Two Questions and Answers",
+      "citation": "December 2024 with errata; Q741–744, printed pp.37–39; Q815, printed pp.56–57",
+      "publisher": "New York State Gaming Facility Location Board",
+      "url": null,
+      "url_origin": null,
+      "locator": "December 2024 with errata; Q741–744, printed pp.37–39; Q815, printed pp.56–57",
+      "published_on": null,
+      "evidence_status": "Calculation basis clarified",
+      "specific_evidence": "The answers explain project-specific rate and timing, identify total Application investment as the calculation base, and require a deposit bond to guarantee payment on default. They do not reconcile RWNYC investment line items or document an accepted RWNYC instrument.",
+      "notes": "Keep the formula uncomputed. Ordinary letters of credit, borrowing capacity and parent completion guarantees do not independently establish accepted completion security."
+    },
+    {
+      "sheet": "TG-GOLD-A061",
+      "row": 8,
+      "title": "February 2026 Adopted Commission Minutes",
+      "citation": "February 3, 2026 meeting, adopted March 16; PDF pp.1 and 4",
+      "publisher": "New York State Gaming Commission",
+      "url": null,
+      "url_origin": null,
+      "locator": "February 3, 2026 meeting, adopted March 16; PDF pp.1 and 4",
+      "published_on": null,
+      "evidence_status": "Unattributed bond provision",
+      "specific_evidence": "The Commission reported that two of three licensees had provided completion bonds and the third was being finalized. It also discussed the five-percent setting. The minutes identify neither the two providers nor their amounts, posting dates or December deadline compliance.",
+      "notes": "Do not infer RWNYC's identity from the unnamed pair. Adoption on March 16 is not a posting date; the same-meeting transcript is not independent confirmation."
+    },
+    {
+      "sheet": "TG-GOLD-A061",
+      "row": 9,
+      "title": "GFLB Report and Findings",
+      "citation": "March 2026; RWNYC assessment, printed pp.33–34 and applicant capital-investment summary",
+      "publisher": "New York State Gaming Facility Location Board",
+      "url": null,
+      "url_origin": null,
+      "locator": "March 2026; RWNYC assessment, printed pp.33–34 and applicant capital-investment summary",
+      "published_on": null,
+      "evidence_status": "Investment base unresolved",
+      "specific_evidence": "The Board reports $3.3 billion of standardized RWNYC capital investment following recalculation and assesses the project. This evaluation figure does not identify the Commission-approved calculation base or principal of the required security, and it is not evidence of receipt.",
+      "notes": "Do not multiply this evaluation total by 5% as an approved amount. Project financing guarantees and development progress do not establish A061 performance."
+    },
+    {
+      "sheet": "TG-GOLD-A061",
+      "row": 10,
+      "title": "RWNYC Capital Investment Details",
+      "citation": "Public application copy, all six pages visually reviewed in completed research",
+      "publisher": "Genting New York LLC; hosted by New York State Gaming Facility Location Board",
+      "url": null,
+      "url_origin": null,
+      "locator": "Public application copy, all six pages visually reviewed in completed research",
+      "published_on": null,
+      "evidence_status": "Redacted amounts",
+      "specific_evidence": "The public capital-investment submission contains redacted monetary fields. Visual review of all six pages did not establish the approved A061 dollar base, a completion-bond principal, a cash receipt or a Commission acceptance date.",
+      "notes": "The four-page Minimum Capital Investment submission was also visually reviewed and redacted. Advertised $5.5 billion and $7.5 billion totals do not resolve the approved base."
+    },
+    {
+      "sheet": "TG-GOLD-A061",
+      "row": 11,
+      "title": "NYSGC Compiled Casino Gaming Rules",
+      "citation": "Updated December 31, 2025; 5301.9(a), printed p.1005; 5301.10(d)(3)",
+      "publisher": "New York State Gaming Commission",
+      "url": null,
+      "url_origin": null,
+      "locator": "Updated December 31, 2025; 5301.9(a), printed p.1005; 5301.10(d)(3)",
+      "published_on": null,
+      "evidence_status": "Rate discrepancy contextualized",
+      "specific_evidence": "The compiled rules continue to print a 10% deposit requirement and address final-construction-stage certification. Official Q&A acknowledged the rate discrepancy. These contextual provisions do not establish RWNYC receipt, override its license's explicit 5% requirement or demonstrate a breach.",
+      "notes": "Preserve the governing license rate and deadline. The completed review did not resolve the conforming rule history or locate a RWNYC-specific deadline amendment."
+    },
+    {
+      "sheet": "TG-GOLD-A061",
+      "row": 12,
+      "title": "October 2026 Commission Transcript",
+      "citation": "October 9, 2026 meeting transcript, 15 pages; latest listed meeting at research cutoff",
+      "publisher": "New York State Gaming Commission",
+      "url": null,
+      "url_origin": null,
+      "locator": "October 9, 2026 meeting transcript, 15 pages; latest listed meeting at research cutoff",
+      "published_on": null,
+      "evidence_status": "No RW-specific receipt located",
+      "specific_evidence": "The reviewed October transcript yielded no bond match or RWNYC-specific security receipt. Selected March, May, July and August Commission records were also screened without identifying RWNYC's deposit. This later coverage did not resolve provision, approved amount or deadline compliance.",
+      "notes": "Scoped nonfinding only. October minutes were still draft at cutoff; construction and opening updates do not establish security posting or release."
+    },
+    {
+      "sheet": "TG-GOLD-A061",
+      "row": 13,
+      "title": "Genting Malaysia Berhad FY2025 Audited Financial Report",
+      "citation": "FY2025; Notes 30 and 40, PDF pp.63 and 72; Note 40 printed p.156",
+      "publisher": "Genting Malaysia Berhad; company report retrieved through FinancialFilings mirror",
+      "url": null,
+      "url_origin": null,
+      "locator": "FY2025; Notes 30 and 40, PDF pp.63 and 72; Note 40 printed p.156",
+      "published_on": null,
+      "evidence_status": "License fee reported; bond unverified",
+      "specific_evidence": "The audited report states that GENNY used a credit facility in January 2026 to pay the $500 million commercial casino license fee. Consolidated restricted cash is disclosed without A061 attribution; neither fact establishes RWNYC's completion-security provision or timeliness.",
+      "notes": "The license fee and completion security are separate obligations. Consolidated cash and financing proceeds cannot identify an accepted cash deposit or bond."
+    },
+    {
+      "sheet": "TG-GOLD-A061",
+      "row": 14,
+      "title": "Genting Malaysia Berhad Second Quarterly Report 2026",
+      "citation": "Six months ended June 30, 2026; PDF pp.3 and 11; published August 2026",
+      "publisher": "Genting Malaysia Berhad; unaudited company report retrieved through FinancialFilings mirror",
+      "url": null,
+      "url_origin": null,
+      "locator": "Six months ended June 30, 2026; PDF pp.3 and 11; published August 2026",
+      "published_on": null,
+      "evidence_status": "Group cash unattributed",
+      "specific_evidence": "The latest periodic company report identified in the completed review discloses consolidated restricted cash and no material contingent-liability change, without an A061 allocation or receipt. Its period ends June 30, so it cannot establish performance during the remaining months before cutoff.",
+      "notes": "Group accounting disclosures do not identify the licensee, instrument or acceptance date. No report-specific disclosure is not proof of nonposting; issuer access required mirrors."
+    }
+  ],
+  "provenance": {
+    "workbook": "Golden Dataset (6).xlsx",
+    "sha256": "2da588b49b311957885ed7ff98bcd31c49e9d3ef8e99a761a3e9e5fcdb360099",
+    "identity": {
+      "sheet": "gold commitments",
+      "row": 80
+    },
+    "detail_sheet": "TG-GOLD-A061",
+    "detail_internal_id_cell": "B1",
+    "workbook_valid_flag": 1,
+    "workbook_split": "anchor_dev",
+    "workbook_evidence_status": "partially corroborated",
+    "workbook_fields": {
+      "gold_id": "TG-GOLD-A061",
+      "document_id": "NYSGC-RWNYC-LIC-2025-12-19",
+      "page_section": "pdf p.4; Exhibit 1: General Condition 2 (Bond)",
+      "char_start": 5205.0,
+      "char_end": 5382.0,
+      "commitment_text": "Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application",
+      "normalized_statement": "Resorts World shall deposit cash or bond equal to 5 percent of its proposed total investment by December 31, 2025.",
+      "obligation_type": "Binding / license condition",
+      "responsible_entity": "Genting New York LLC d/b/a Resorts World New York City",
+      "amount_value": "5 percent of the total investment proposed in the Application",
+      "term_periodicity": "one-time",
+      "geographic_scope": "unspecified",
+      "beneficiary_category": "regulator / State (completion security)",
+      "beneficiary_named": "none named",
+      "condition_contingency": "none stated",
+      "milestone": "on or before December 31, 2025",
+      "evidence_status": "partially corroborated",
+      "confidence": "High",
+      "adjudication_note": "none",
+      "duplicate_of": "TG-GOLD-A010",
+      "notes": "duplicate/restatement of the RFA deposit requirement (fixes the rate at 5 percent). Formula not computed. | Web evidence 2026-10-14 (no public evidence located -> partially corroborated): Only 'two of the three licensees had provided the completion bond' as of 3 Feb 2026 [S01]; RW not named.",
+      "evaluation_split": "anchor_dev",
+      "manually annotated valid?": 1.0
+    },
+    "detail_research_cutoff": "2026-11-04",
+    "evaluation_use": "22-case annotated benchmark; development-exposed cases included",
+    "reference_preparation": "Locally curated factual hypotheses and delivery conditions from the cited Golden (6) cells; prior to research."
+  }
+}

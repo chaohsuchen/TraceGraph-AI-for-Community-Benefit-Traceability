@@ -1,0 +1,203 @@
+{
+  "case_id": "TG-GOLD-H012",
+  "query": "Bally's committed to pay for employee memberships in Upwards for priority childcare placement.",
+  "facts": [
+    {
+      "id": "G1",
+      "text": "Bally's pledged to pay for Upwards memberships for its Bronx employees.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H012",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H012",
+          "row": 6
+        },
+        {
+          "sheet": "gold commitments",
+          "row": 26
+        }
+      ]
+    },
+    {
+      "id": "G2",
+      "text": "The memberships promised to Bronx employees would give them priority childcare placement at Upwards' vetted facilities.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H012",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H012",
+          "row": 6
+        },
+        {
+          "sheet": "gold commitments",
+          "row": 26
+        }
+      ]
+    },
+    {
+      "id": "G3",
+      "text": "The Gaming Facility Location Board recommended annual updates on participation in the Bronx childcare benefit.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H012",
+          "row": 5
+        }
+      ]
+    },
+    {
+      "id": "G4",
+      "text": "The Gaming Facility Location Board identified uncertainty about childcare capacity for the Bronx program.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H012",
+          "row": 5
+        }
+      ]
+    },
+    {
+      "id": "G5",
+      "text": "Upwards, formerly WeeCare, confirmed a company-wide Bally's partnership providing employees free access to its childcare network.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H012",
+          "row": 7
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "K1",
+      "text": "Bally's actually funded Upwards memberships for employees at its Bronx operation.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H012",
+          "row": 6
+        },
+        {
+          "sheet": "TG-GOLD-H012",
+          "row": 18
+        }
+      ]
+    },
+    {
+      "id": "K2",
+      "text": "Priority childcare placement at vetted Upwards facilities was available in practice to Bronx employees under those memberships.",
+      "source_refs": [
+        {
+          "sheet": "gold commitments",
+          "row": 26
+        },
+        {
+          "sheet": "TG-GOLD-H012",
+          "row": 18
+        }
+      ]
+    }
+  ],
+  "delivery_applicable": true,
+  "reference_verdict": {
+    "status": "Corporate program corroborated. Bronx delivery unverified.",
+    "reasoning": "Check a Bronx benefits guide or provider confirmation for eligibility and priority terms. Anonymized enrollment or employer-paid membership records would verify rollout.",
+    "delivery_applicable": true,
+    "source_refs": [
+      {
+        "sheet": "TG-GOLD-H012",
+        "row": 17
+      },
+      {
+        "sheet": "TG-GOLD-H012",
+        "row": 18
+      }
+    ]
+  },
+  "sources": [
+    {
+      "sheet": "TG-GOLD-H012",
+      "row": 5,
+      "title": "GFLB Selection Report",
+      "citation": "Dec. 1, 2025, PDF p. 15",
+      "publisher": "Gaming Facility Location Board",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf#page=15",
+      "url_origin": "unchanged pilot source cross-reference",
+      "locator": "PDF p. 15",
+      "published_on": "2025-12-01",
+      "evidence_status": "Commitment documented",
+      "specific_evidence": "Records paid membership and priority placement. The Board recommends annual participation updates.",
+      "notes": "The Board identified uncertainty about childcare capacity."
+    },
+    {
+      "sheet": "TG-GOLD-H012",
+      "row": 6,
+      "title": "Final Draft CAC Proposal and Amendments",
+      "citation": "Sept. 19, 2025, Childcare response",
+      "publisher": "Bally’s Corporation",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+      "url_origin": "unchanged pilot source cross-reference",
+      "locator": "Childcare response",
+      "published_on": "2025-09-19",
+      "evidence_status": "Bronx coverage stated",
+      "specific_evidence": "Bally’s says the partnership will cover Bronx employees and describes funded memberships and priority placement.",
+      "notes": "Applicant statement of intended Bronx coverage."
+    },
+    {
+      "sheet": "TG-GOLD-H012",
+      "row": 7,
+      "title": "Bally’s–Upwards Partnership Announcement",
+      "citation": "Provider announcement",
+      "publisher": "Upwards, formerly WeeCare",
+      "url": "https://upwards.com/blog/posts/ballys-partners-with-weecare-to-provide-access-to-childcare-benefits-for-employees/",
+      "url_origin": "unchanged pilot source cross-reference",
+      "locator": "Provider announcement",
+      "published_on": null,
+      "evidence_status": "Corporate program corroborated",
+      "specific_evidence": "The childcare provider confirms a company-wide partnership providing free access to its network.",
+      "notes": "Bronx-specific rollout requires separate evidence."
+    }
+  ],
+  "provenance": {
+    "workbook": "Golden Dataset (6).xlsx",
+    "sha256": "2da588b49b311957885ed7ff98bcd31c49e9d3ef8e99a761a3e9e5fcdb360099",
+    "identity": {
+      "sheet": "gold commitments",
+      "row": 26
+    },
+    "detail_sheet": "TG-GOLD-H012",
+    "detail_internal_id_cell": "B1",
+    "workbook_valid_flag": 1,
+    "workbook_split": "heldout_provisional",
+    "workbook_evidence_status": "not yet due",
+    "workbook_fields": {
+      "gold_id": "TG-GOLD-H012",
+      "document_id": "GFLB-SEL-2025-12-01",
+      "page_section": "pdf p.15; Bally’s Bronx: Workforce Enhancement",
+      "char_start": 33089.0,
+      "char_end": 33240.0,
+      "commitment_text": "Bally’s committed to pay for employees’ membership in Upwards, which would give the employee priority childcare placement in Upwards’ vetted facilities",
+      "normalized_statement": "Bally's committed to pay for employee memberships in Upwards for priority childcare placement.",
+      "obligation_type": "Contractual commitment",
+      "responsible_entity": "Bally’s Corporation",
+      "amount_value": "unspecified",
+      "term_periodicity": "operations",
+      "geographic_scope": "unspecified",
+      "beneficiary_category": "workforce/jobs (childcare)",
+      "beneficiary_named": "Upwards",
+      "condition_contingency": "none stated",
+      "milestone": "none stated",
+      "evidence_status": "not yet due",
+      "confidence": "High",
+      "adjudication_note": "none",
+      "duplicate_of": "none",
+      "notes": "none",
+      "evaluation_split": "heldout_provisional",
+      "manually annotated valid?": 1.0
+    },
+    "detail_research_cutoff": null,
+    "evaluation_use": "22-case annotated benchmark; development-exposed cases included",
+    "reference_preparation": "Previously frozen fact and condition wording; A1:F18 and the master query verified against Golden (6)."
+  }
+}

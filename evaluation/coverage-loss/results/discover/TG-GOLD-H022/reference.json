@@ -1,0 +1,363 @@
+{
+  "case_id": "TG-GOLD-H022",
+  "query": "HRMP committed $150 million to a community impact fund over a 30-year license term.",
+  "facts": [
+    {
+      "id": "G1",
+      "text": "The Board recorded $150 million for the community impact fund over 30 years.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H022",
+          "row": 5
+        }
+      ]
+    },
+    {
+      "id": "G2",
+      "text": "The Board proposed alternatives for commitments extending beyond the awarded term.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H022",
+          "row": 5
+        }
+      ]
+    },
+    {
+      "id": "G3",
+      "text": "The CAC schedule puts the $150 million operating tranche inside a $163.2 million phased package.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H022",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "G4",
+      "text": "The CAC schedule specifies $5 million annually from 2031 through 2060.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H022",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "G5",
+      "text": "The issued Queens Future license grants an initial 20 years from the operation certificate with possible ten-year renewal.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H022",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "G6",
+      "text": "Material changes to commitments require written Commission approval.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H022",
+          "row": 8
+        }
+      ]
+    },
+    {
+      "id": "G7",
+      "text": "The operator's later fund page lists approximately $5 million annually from 2031 through 2050.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H022",
+          "row": 9
+        }
+      ]
+    },
+    {
+      "id": "G8",
+      "text": "The operator reported distributing $2 million in 2026.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H022",
+          "row": 9
+        }
+      ]
+    },
+    {
+      "id": "G9",
+      "text": "The Metropolitan Park FAQ continued to advertise a $163 million fund package.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H022",
+          "row": 10
+        }
+      ]
+    },
+    {
+      "id": "G10",
+      "text": "Queens Theatre publicly acknowledged support from the Metropolitan Park Community Impact Fund.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H022",
+          "row": 11
+        }
+      ]
+    },
+    {
+      "id": "G11",
+      "text": "Belongo identified the Metropolitan Park Community Impact Fund as a supporter.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H022",
+          "row": 12
+        }
+      ]
+    },
+    {
+      "id": "G12",
+      "text": "The applicant proposed a seven-person fund advisory board.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H022",
+          "row": 13
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "K1",
+      "text": "The operating fund actually received or disbursed money against the original $150 million operating tranche.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H022",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H022",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "K2",
+      "text": "The payments meet the applicable schedule over the original 30-year commitment or a formally approved revision.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H022",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H022",
+          "row": 6
+        },
+        {
+          "sheet": "TG-GOLD-H022",
+          "row": 7
+        },
+        {
+          "sheet": "TG-GOLD-H022",
+          "row": 8
+        }
+      ]
+    }
+  ],
+  "delivery_applicable": true,
+  "reference_verdict": {
+    "status": "conflicting",
+    "reasoning": "Retain conflicting with Medium confidence for the unreconciled long-term amount and schedule. The original $150 million covers operating years within a $163.2 million package. The current later-grant plan calculates to about $100 million, but no approved reduction was located. Footnote 5 offers alternatives, not automatic reduction. Record partial implementation separately: the operator reports $2 million distributed in 2026 and two recipients acknowledge support without amounts or payment dates. These construction-era grants do not verify fulfillment of the original operating tranche.",
+    "delivery_applicable": true,
+    "source_refs": [
+      {
+        "sheet": "TG-GOLD-H022",
+        "row": 17
+      },
+      {
+        "sheet": "TG-GOLD-H022",
+        "row": 18
+      }
+    ]
+  },
+  "sources": [
+    {
+      "sheet": "TG-GOLD-H022",
+      "row": 5,
+      "title": "GFLB Selection Document",
+      "citation": "Dec. 1, 2025; PDF pp.19-20; p.10 footnote 5",
+      "publisher": "Gaming Facility Location Board",
+      "url": null,
+      "url_origin": null,
+      "locator": "Dec. 1, 2025; PDF pp.19-20; p.10 footnote 5",
+      "published_on": null,
+      "evidence_status": "Historical commitment documented",
+      "specific_evidence": "Records the $150 million, 30-year commitment. Chart 5 shows $13 million earlier-phase and $150 million ongoing fund costs. Footnote 5 recommends proportionate reduction or funding within awarded years, with unrealized commitments continuing on extension.",
+      "notes": "The Board offered alternatives; this does not establish that the Commission selected a reduction for this fund."
+    },
+    {
+      "sheet": "TG-GOLD-H022",
+      "row": 6,
+      "title": "Metropolitan Park September 29 CAC response",
+      "citation": "Sept. 29, 2025; PDF p.1",
+      "publisher": "Queens Future / Hard Rock Metropolitan Park; hosted by GFLB",
+      "url": null,
+      "url_origin": null,
+      "locator": "Sept. 29, 2025; PDF p.1",
+      "published_on": null,
+      "evidence_status": "Applicant schedule clarified",
+      "specific_evidence": "Sets out $1.6 million annually in 2024-2025, $2 million annually in 2026-2030, and $5 million annually in 2031-2060. The $150 million operating tranche is part of the $163.2 million phased package.",
+      "notes": "Historical applicant plan, not a payment ledger. Do not subtract construction-era grants from the operating tranche without reconciliation."
+    },
+    {
+      "sheet": "TG-GOLD-H022",
+      "row": 7,
+      "title": "Queens Future executed-form gaming license",
+      "citation": "Dec. 19, 2025 letter; Dec.22 acceptance; PDF pp.3-5",
+      "publisher": "NYS Gaming Commission",
+      "url": null,
+      "url_origin": null,
+      "locator": "Dec. 19, 2025 letter; Dec.22 acceptance; PDF pp.3-5",
+      "published_on": null,
+      "evidence_status": "Final license and reporting duties",
+      "specific_evidence": "Awards an initial 20-year term beginning with the operation certificate, with a possible ten-year renewal. The license generally incorporates application performance and requires public community-benefit progress reports, but contains no fund-specific dollar schedule.",
+      "notes": "Renewal is possible, not already awarded. General incorporation does not establish an expressly approved $150 million or $100 million fund schedule."
+    },
+    {
+      "sheet": "TG-GOLD-H022",
+      "row": 8,
+      "title": "NYSGC casino rules compilation",
+      "citation": "Updated Dec.31, 2025; PDF p.32; 9 NYCRR 5301.10(a)",
+      "publisher": "NYS Gaming Commission",
+      "url": null,
+      "url_origin": null,
+      "locator": "Updated Dec.31, 2025; PDF p.32; 9 NYCRR 5301.10(a)",
+      "published_on": null,
+      "evidence_status": "Approval mechanism documented",
+      "specific_evidence": "Requires timely written notification and written Commission approval of material commitment changes. No fund-specific approved reconciliation between the original 30-year promise and the final initial license term was located in the completed public research.",
+      "notes": "A scoped retrieval gap does not establish that approval is absent or that an unauthorized change occurred."
+    },
+    {
+      "sheet": "TG-GOLD-H022",
+      "row": 9,
+      "title": "Metropolitan Park fund page",
+      "citation": "Undated; retrieved Nov.6, 2026",
+      "publisher": "Hard Rock at Metropolitan Park",
+      "url": null,
+      "url_origin": null,
+      "locator": "Undated; retrieved Nov.6, 2026",
+      "published_on": null,
+      "evidence_status": "Current plan and aggregate self-report",
+      "specific_evidence": "Lists approximately $2 million annually for 2026-2030 and $5 million annually for 2031-2050; reports $2 million distributed in 2026. The later stream calculates to approximately $100 million, not an independently approved replacement obligation.",
+      "notes": "Operator self-report, not an audited aggregate. Current calendar years do not determine the actual operation-certificate date or license expiry."
+    },
+    {
+      "sheet": "TG-GOLD-H022",
+      "row": 10,
+      "title": "Metropolitan Park general FAQ",
+      "citation": "Undated; retrieved Nov.6, 2026; community benefits question",
+      "publisher": "Hard Rock at Metropolitan Park",
+      "url": null,
+      "url_origin": null,
+      "locator": "Undated; retrieved Nov.6, 2026; community benefits question",
+      "published_on": null,
+      "evidence_status": "Coexisting operator description differs",
+      "specific_evidence": "The general FAQ continues to advertise a $163 million community impact fund package alongside the dedicated fund page with a shorter later-grant calendar. The pages therefore do not provide a fully reconciled current total or schedule.",
+      "notes": "Publication and revision dates are unverified. Do not assume either webpage proves a formally approved amendment to the commitment."
+    },
+    {
+      "sheet": "TG-GOLD-H022",
+      "row": 11,
+      "title": "Queens Theatre season announcement",
+      "citation": "2026-2027 season announcement; fund named near end",
+      "publisher": "Queens Theatre",
+      "url": null,
+      "url_origin": null,
+      "locator": "2026-2027 season announcement; fund named near end",
+      "published_on": null,
+      "evidence_status": "Recipient acknowledgment",
+      "specific_evidence": "Names the Metropolitan Park Community Impact Fund among supporters of programming and community initiatives. This recipient-origin acknowledgment supports a named support relationship external to the operator, but does not quantify or date cash received.",
+      "notes": "No grant amount, payment date or complete 2026 ledger. The September10 year follows the 2026-2027 season context."
+    },
+    {
+      "sheet": "TG-GOLD-H022",
+      "row": 12,
+      "title": "Belongo authorized community-program release",
+      "citation": "Oct.30, 2026; community-program release",
+      "publisher": "Belongo, through Shore Fire Media",
+      "url": null,
+      "url_origin": null,
+      "locator": "Oct.30, 2026; community-program release",
+      "published_on": null,
+      "evidence_status": "Recipient acknowledgment",
+      "specific_evidence": "Identifies the Metropolitan Park Community Impact Fund as a supporter of Belongo community programs. This dated recipient-authorized announcement supports a relationship, but supplies no grant amount, cash receipt date or reconciliation to the operator's 2026 aggregate.",
+      "notes": "Belongo's supporters page and this release are one recipient source family, not separate cash receipts or two independent recipients."
+    },
+    {
+      "sheet": "TG-GOLD-H022",
+      "row": 13,
+      "title": "Metropolitan Park September 19 CAC response",
+      "citation": "Sept.19, 2025; PDF pp.2-3",
+      "publisher": "Queens Future / Hard Rock Metropolitan Park; hosted by GFLB",
+      "url": null,
+      "url_origin": null,
+      "locator": "Sept.19, 2025; PDF pp.2-3",
+      "published_on": null,
+      "evidence_status": "Proposed governance documented",
+      "specific_evidence": "Describes annual fund disbursements and a seven-person advisory board with community-board input on appointments. This adds proposed governance context, but does not verify a separately incorporated fund, executed standalone fund agreement or independent grant authority.",
+      "notes": "Earlier applicant governance wording is not proof of current legal ownership. Current operator disclosure retains final grant authority."
+    },
+    {
+      "sheet": "TG-GOLD-H022",
+      "row": 14,
+      "title": "GFLB Report and Findings",
+      "citation": "March2026; PDF p.30 and appendix pp.78-79",
+      "publisher": "Gaming Facility Location Board",
+      "url": null,
+      "url_origin": null,
+      "locator": "March2026; PDF p.30 and appendix pp.78-79",
+      "published_on": null,
+      "evidence_status": "Historical package restated",
+      "specific_evidence": "Repeats the historical community impact fund descriptions and package components. The retrospective report helps trace the promise, but does not supply a Commission-approved revised payment schedule or independently verify the operator's reported 2026 disbursement.",
+      "notes": "Restatement of the historical proposal does not settle the present schedule conflict or establish fulfillment of future operating-year contributions."
+    }
+  ],
+  "provenance": {
+    "workbook": "Golden Dataset (6).xlsx",
+    "sha256": "2da588b49b311957885ed7ff98bcd31c49e9d3ef8e99a761a3e9e5fcdb360099",
+    "identity": {
+      "sheet": "gold commitments",
+      "row": 84
+    },
+    "detail_sheet": "TG-GOLD-H022",
+    "detail_internal_id_cell": "B1",
+    "workbook_valid_flag": 1,
+    "workbook_split": "heldout_provisional",
+    "workbook_evidence_status": "conflicting",
+    "workbook_fields": {
+      "gold_id": "TG-GOLD-H022",
+      "document_id": "GFLB-SEL-2025-12-01",
+      "page_section": "pdf p.19; Hard Rock Metropolitan Park: Local Impact Siting",
+      "char_start": 44166.0,
+      "char_end": 44239.0,
+      "commitment_text": "The Applicant committed to this $150 million over a 30-year license term.",
+      "normalized_statement": "HRMP committed $150 million to a community impact fund over a 30-year license term.",
+      "obligation_type": "Contractual commitment",
+      "responsible_entity": "Queens Future, LLC d/b/a Hard Rock Metropolitan Park",
+      "amount_value": "$150 million total",
+      "term_periodicity": "over a 30-year license term",
+      "geographic_scope": "Queens",
+      "beneficiary_category": "community (impact fund)",
+      "beneficiary_named": "community impact fund",
+      "condition_contingency": "none stated",
+      "milestone": "none stated",
+      "evidence_status": "conflicting",
+      "confidence": "Medium",
+      "adjudication_note": "30-year assumption conflicts with footnote 6 (proposed 20-year initial term for $5-10B investment); Board applies footnote 5 proportional reduction.",
+      "duplicate_of": "none",
+      "notes": "none",
+      "evaluation_split": "heldout_provisional",
+      "manually annotated valid?": 1.0
+    },
+    "detail_research_cutoff": "2026-11-06",
+    "evaluation_use": "22-case annotated benchmark; development-exposed cases included",
+    "reference_preparation": "Locally curated factual hypotheses and delivery conditions from the cited Golden (6) cells; prior to research."
+  }
+}

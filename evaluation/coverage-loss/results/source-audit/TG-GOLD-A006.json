@@ -1,0 +1,49 @@
+{
+  "case": "TG-GOLD-A006",
+  "selected_distinct_urls": 1,
+  "review": {
+    "https://esd.ny.gov/office-contractor-and-supplier-diversity": {
+      "relationship": "same_host_distinct_or_unresolved_document",
+      "identical_content_urls": [],
+      "old_passages_repeated": [],
+      "snapshot_consistent": true,
+      "original_status": {
+        "status": "readable",
+        "characters": 12247,
+        "sha256": "301e06d8a57f5115be27eec594f2a763f0a553dcdbbc3339507514c0d68292fc"
+      },
+      "same_host_or_filename_compared": [
+        {
+          "url": "https://esd.ny.gov/sites/default/files/media/document/071824-ESD-Board-Materials.pdf",
+          "status": "TimeoutError",
+          "characters": 0,
+          "sha256": null
+        },
+        {
+          "url": "https://esd.ny.gov/sites/default/files/media/document/MNY-Round-14-Guidelines_0.pdf",
+          "status": "TimeoutError",
+          "characters": 0,
+          "sha256": null
+        },
+        {
+          "url": "https://esd.ny.gov/sites/default/files/Guidelines-Defense-Industry-Assistance-Grants-%204618.pdf",
+          "status": "readable",
+          "characters": 13830,
+          "sha256": "8265698e7e6fd78e175ad8dcf2a9a3c6c27314e2ad830c6bd7d01b0dd66887d8"
+        },
+        {
+          "url": "https://esd.ny.gov/participation-requirements-new-york-state-certified-mwbes",
+          "status": "readable",
+          "characters": 9550,
+          "sha256": "1eba63f4a144f79d7dfd9333b027b5114deedb7976ff0afd2993c085bc9da132"
+        },
+        {
+          "url": "https://esd.ny.gov/sites/default/files/media/document/Market-NY-Rd15-Guidelines-051925.pdf",
+          "status": "readable",
+          "characters": 32581,
+          "sha256": "1558b0c832ab20dc9545a6633505e3247017826449cf95a56d5bf9bbc427627e"
+        }
+      ]
+    }
+  }
+}

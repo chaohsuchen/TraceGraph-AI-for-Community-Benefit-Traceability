@@ -1,0 +1,89 @@
+{
+  "fingerprint": "ba20ac8ab06928248114f573581f1172f5b334c0aee6d3df4b910a11c2a04d2c",
+  "reversed_original_ids": [
+    "p12",
+    "p11",
+    "p10",
+    "p9",
+    "p8",
+    "p7",
+    "p6",
+    "p5",
+    "p4",
+    "p3",
+    "p2",
+    "p1"
+  ],
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 6.655999999959022,
+      "request_id": "req_c3802b5a19d44c10b99f4603d751e651",
+      "usage": {
+        "input_tokens": 3684,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 440,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4124
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "decisions": [
+    {
+      "gold_id": "G2",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p3"
+      ],
+      "reason": "p3 states Bally's \"raised its minimum annual commitment ... from $12.5 million to $15 million ... though that amount can be higher if 1% of its gross gaming revenue exceeds $15 million,\" establishing a $15 million annual minimum for the Bronx fund."
+    },
+    {
+      "gold_id": "G4",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p5",
+        "p6",
+        "p9"
+      ],
+      "reason": "The passages show a Community Benefit Fund Board and describe it selecting funding priorities, but they do not state that the Bronx fund board was independent or administered by an independent local board."
+    },
+    {
+      "gold_id": "G5",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p5"
+      ],
+      "reason": "p5 explicitly says the Community Benefit Fund Board would be \"composed of eleven voting\" members, establishing an eleven-member board."
+    },
+    {
+      "gold_id": "G6",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No supplied passage states that local elected officials and Community Board 10 would make appointments to the board."
+    },
+    {
+      "gold_id": "G7",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p10",
+        "p12"
+      ],
+      "reason": "p10 and p12 say contributions begin \"from the time the gaming facility is opened,\" which is consistent with paying nothing before opening, but no passage mentions the Board questioning a $765 million net present value or uses that wording."
+    }
+  ]
+}

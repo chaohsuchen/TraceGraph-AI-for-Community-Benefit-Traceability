@@ -1,0 +1,133 @@
+[
+  {
+    "type": "research_start"
+  },
+  {
+    "phase": "search",
+    "event": "started"
+  },
+  {
+    "type": "search_budget",
+    "allocated": 4,
+    "remaining": 2,
+    "limit": 6
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 7.609000000054948,
+    "request_id": "req_5e7f919c264d49ffa3d01dfbf966244a",
+    "usage": {
+      "input_tokens": 13378,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 4608
+      },
+      "output_tokens": 602,
+      "output_tokens_details": {
+        "reasoning_tokens": 94
+      },
+      "total_tokens": 13980
+    },
+    "search_enabled": true,
+    "web_search_ids": [
+      "ws_006cb2c13259550b016b02b8989cd487d287e852ecd0975383",
+      "ws_006cb2c13259550b016b02b89a5d2087d2b1e52612e4102458"
+    ],
+    "stop_reason": "completed",
+    "web_search_statuses": [
+      "completed",
+      "completed"
+    ]
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 0.8279999999795109,
+    "request_id": "req_509c35e24574448d8826c4017ef98c66",
+    "usage": {
+      "input_tokens": 1644,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 14,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1658
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "source_span_recovery",
+    "readable_pages": 1,
+    "verified_count": 0
+  },
+  {
+    "type": "source_validation",
+    "status": "NO_VERIFIED_EXCERPTS",
+    "located_sources": 18
+  },
+  {
+    "phase": "search",
+    "event": "completed",
+    "source": "self_reported",
+    "stop_reason": "SUFFICIENT",
+    "stop_reason_status": "reported"
+  },
+  {
+    "type": "research_capture",
+    "brief": "STOP_REASON=SUFFICIENT",
+    "citations": {}
+  }
+]

@@ -1,0 +1,805 @@
+[
+  {
+    "type": "research_start"
+  },
+  {
+    "phase": "search",
+    "event": "started"
+  },
+  {
+    "type": "search_budget",
+    "allocated": 4,
+    "remaining": 2,
+    "limit": 6
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 14.952999999979511,
+    "request_id": "req_bf4ac1140ab04928a2d8c2e85755ad66",
+    "usage": {
+      "input_tokens": 17973,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 4608
+      },
+      "output_tokens": 1154,
+      "output_tokens_details": {
+        "reasoning_tokens": 262
+      },
+      "total_tokens": 19127
+    },
+    "search_enabled": true,
+    "web_search_ids": [
+      "ws_0307c9b0e15d6793016b02b6f72fcc87d2bd7a955179d8e34b",
+      "ws_0307c9b0e15d6793016b02b6f9a1b487d2b4058ebf69c72d44",
+      "ws_0307c9b0e15d6793016b02b6faf2d887d2af95f6d11305ae61"
+    ],
+    "stop_reason": "completed",
+    "web_search_statuses": [
+      "completed",
+      "completed",
+      "completed"
+    ]
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000084/baly-20260630.htm",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000084/baly-20260630.htm",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250085.pdf",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "phase": "search",
+    "event": "completed",
+    "source": "self_reported",
+    "stop_reason": "SUFFICIENT",
+    "stop_reason_status": "reported"
+  },
+  {
+    "type": "research_capture",
+    "brief": "[c1] Our bus service commitments are centered around maintaining and enhancing the existing Bally’s shuttle service, which currently operates at 10 locations throughout our local catchment area and provides free, accessible transportation to thousands of community members and their families. This shuttle service is a critical component of our commitment to providing convenient and reliable transportation options for our patrons and employees. We plan to expand this based on usage and demand.\n[c2] Our goal is to include additional stops (1) within Ferry Point Park and (2) within our site or at its entrance, which would enhance transit access for our employees and visitors.\n[c3] Based on ongoing dialogue with the MTA including during the CEQR process, we have agreed that Bally’s would be responsible for funding the construction of bus stops and any associated infrastructure required to meet MTA standards.\nSTOP_REASON=SUFFICIENT",
+    "citations": {
+      "c1": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "excerpt": "Our bus service commitments are centered around maintaining and enhancing the existing Bally’s shuttle service, which currently operates at 10 locations throughout our local catchment area and provides free, accessible transportation to thousands of community members and their families. This shuttle service is a critical component of our commitment to providing convenient and reliable transportation options for our patrons and employees. We plan to expand this based on usage and demand.",
+        "context": "Our bus service commitments are centered around maintaining and enhancing the existing Bally’s shuttle service, which currently operates at 10 locations throughout our local catchment area and provides free, accessible transportation to thousands of community members and their families. This shuttle service is a critical component of our commitment to providing convenient and reliable transportation options for our patrons and employees. We plan to expand this based on usage and demand."
+      },
+      "c2": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "excerpt": "Our goal is to include additional stops (1) within Ferry Point Park and (2) within our site or at its entrance, which would enhance transit access for our employees and visitors.",
+        "context": "Our goal is to include additional stops (1) within Ferry Point Park and (2) within our site or at its entrance, which would enhance transit access for our employees and visitors."
+      },
+      "c3": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "excerpt": "Based on ongoing dialogue with the MTA including during the CEQR process, we have agreed that Bally’s would be responsible for funding the construction of bus stops and any associated infrastructure required to meet MTA standards.",
+        "context": "Based on ongoing dialogue with the MTA including during the CEQR process, we have agreed that Bally’s would be responsible for funding the construction of bus stops and any associated infrastructure required to meet MTA standards."
+      }
+    }
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 9.90700000000652,
+    "request_id": "req_98406a41b3c04c51bf42c8f20106c92c",
+    "usage": {
+      "input_tokens": 2115,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 712,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2827
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 3.280999999959022,
+    "request_id": "req_ce6ae5fe7f91410db7b7244321c85aeb",
+    "usage": {
+      "input_tokens": 984,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 288,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1272
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "research_scope_review",
+    "checks": [
+      {
+        "criterion_id": "1",
+        "explanation": "Excerpt c3 documents Bally’s proposal term: \"Bally’s would be responsible for funding the construction of bus stops and any associated infrastructure required to meet MTA standards.\"",
+        "original_citation_ids": [
+          "c3"
+        ],
+        "missing_original_terms": []
+      },
+      {
+        "criterion_id": "2",
+        "explanation": "Excerpt c2 states Bally’s plan to add stops in the specified locations: \"Our goal is to include additional stops (1) within Ferry Point Park and (2) within our site or at its entrance.\"",
+        "original_citation_ids": [
+          "c2"
+        ],
+        "missing_original_terms": []
+      },
+      {
+        "criterion_id": "3",
+        "explanation": "Excerpt c1 documents the transportation commitment: \"maintaining and enhancing the existing Bally’s shuttle service\" and \"We plan to expand this based on usage and demand.\"",
+        "original_citation_ids": [
+          "c1"
+        ],
+        "missing_original_terms": []
+      },
+      {
+        "criterion_id": "4",
+        "explanation": "The supplied excerpts do not document all parts of the criterion. c1 supports a shuttle commitment (\"maintaining and enhancing the existing Bally’s shuttle service\"), but none of the excerpts state Bally’s would pay for \"traffic mitigation,\" \"Ferry Point Park improvements,\" or a \"ferry shuttle.\"",
+        "original_citation_ids": [
+          "c1"
+        ],
+        "missing_original_terms": [
+          "traffic mitigation",
+          "Ferry Point Park improvements",
+          "ferry shuttle"
+        ]
+      }
+    ],
+    "missing_scope": [
+      "Bally’s to pay for traffic mitigation, Ferry Point Park improvements, and a ferry shuttle"
+    ]
+  },
+  {
+    "type": "source_recovery",
+    "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+    "status": "UNAVAILABLE",
+    "text_sha256": null,
+    "source_reads": 1,
+    "source_read_limit": 2
+  },
+  {
+    "type": "search_budget",
+    "allocated": 2,
+    "remaining": 0,
+    "limit": 6
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 13.438000000081956,
+    "request_id": "req_75a7955501c543aeb03f1a9a9e5e3064",
+    "usage": {
+      "input_tokens": 13418,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 4608
+      },
+      "output_tokens": 1222,
+      "output_tokens_details": {
+        "reasoning_tokens": 144
+      },
+      "total_tokens": 14640
+    },
+    "search_enabled": true,
+    "web_search_ids": [
+      "ws_03e2e56ffa4fe81e016b02b731786c87d28fe9abc745b03eef",
+      "ws_03e2e56ffa4fe81e016b02b73392a487d29a4041bf7515e9a0"
+    ],
+    "stop_reason": "completed",
+    "web_search_statuses": [
+      "completed",
+      "completed"
+    ]
+  },
+  {
+    "type": "source_validation",
+    "url": "https://ballysbronx.com/wp-content/uploads/2025/08/Ballys-CAC-Meeting-Materials-08-08-25-vFINAL4.pdf",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://ballysbronx.com/wp-content/uploads/2025/08/Ballys-CAC-Meeting-Materials-08-08-25-vFINAL4.pdf",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://ballysbronx.com/wp-content/uploads/2025/08/Ballys-CAC-Meeting-Materials-08-08-25-vFINAL4.pdf",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/ballys-new-york-casino-local-impact-siting-mitigating-potential-impacts-communities-measures",
+    "status": "QUOTE_NOT_FOUND"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://ballysbronx.com/faq/",
+    "status": "QUOTE_NOT_FOUND"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://ballysbronx.com/faq/",
+    "status": "QUOTE_NOT_FOUND"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+    "status": "QUOTE_NOT_FOUND"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+    "status": "QUOTE_NOT_FOUND"
+  },
+  {
+    "type": "research_recovery_capture",
+    "citations": {
+      "c1": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "excerpt": "Our bus service commitments are centered around maintaining and enhancing the existing Bally’s shuttle service, which currently operates at 10 locations throughout our local catchment area and provides free, accessible transportation to thousands of community members and their families. This shuttle service is a critical component of our commitment to providing convenient and reliable transportation options for our patrons and employees. We plan to expand this based on usage and demand.",
+        "context": "Our bus service commitments are centered around maintaining and enhancing the existing Bally’s shuttle service, which currently operates at 10 locations throughout our local catchment area and provides free, accessible transportation to thousands of community members and their families. This shuttle service is a critical component of our commitment to providing convenient and reliable transportation options for our patrons and employees. We plan to expand this based on usage and demand."
+      },
+      "c2": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "excerpt": "Our goal is to include additional stops (1) within Ferry Point Park and (2) within our site or at its entrance, which would enhance transit access for our employees and visitors.",
+        "context": "Our goal is to include additional stops (1) within Ferry Point Park and (2) within our site or at its entrance, which would enhance transit access for our employees and visitors."
+      },
+      "c3": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "excerpt": "Based on ongoing dialogue with the MTA including during the CEQR process, we have agreed that Bally’s would be responsible for funding the construction of bus stops and any associated infrastructure required to meet MTA standards.",
+        "context": "Based on ongoing dialogue with the MTA including during the CEQR process, we have agreed that Bally’s would be responsible for funding the construction of bus stops and any associated infrastructure required to meet MTA standards."
+      },
+      "c4": {
+        "url": "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean",
+        "title": "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean",
+        "excerpt": "We are allocating $100 million for parkland improvements, including new walking paths, playgrounds, and the revitalization of Ferry Point Park, as well as at least $75 million for transportation upgrades such as a new Lafayette Avenue overpass, widened roads, and enhanced public transit access to the Project Site and Ferry Point Park via two new MTA bus stops.",
+        "context": "We are allocating $100 million for parkland improvements, including new walking paths, playgrounds, and the revitalization of Ferry Point Park, as well as at least $75 million for transportation upgrades such as a new Lafayette Avenue overpass, widened roads, and enhanced public transit access to the Project Site and Ferry Point Park via two new MTA bus stops."
+      },
+      "c5": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+        "excerpt": "the proposed integrated facility would provide space for an MTA bus stop on-site, as well as a bus stop along the proposed reconstructed Ring Road in Ferry Point Park for Park users.",
+        "context": "the proposed integrated facility would provide space for an MTA bus stop on-site, as well as a bus stop along the proposed reconstructed Ring Road in Ferry Point Park for Park users."
+      },
+      "c6": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+        "excerpt": "Preliminary discussions have been held with MTA regarding potential extension of bus lines to the Project Site and with NYCEDC regarding potential for increased ferry service to the Ferry Point Park ferry landing.",
+        "context": "Preliminary discussions have been held with MTA regarding potential extension of bus lines to the Project Site and with NYCEDC regarding potential for increased ferry service to the Ferry Point Park ferry landing."
+      },
+      "c7": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+        "excerpt": "Commitments for increased service for the MTA bus stops are in place, but specific details will need to be further materialized.",
+        "context": "Commitments for increased service for the MTA bus stops are in place, but specific details will need to be further materialized."
+      },
+      "c8": {
+        "url": "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean",
+        "title": "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean",
+        "excerpt": "In collaboration with elected officials, community organizations, and local stakeholders, Bally’s has pledged approximately $765 million in net present value for an array of community benefits—in addition to the direct project scope and equity investment opportunities. This unprecedented commitment includes direct financial support for local schools, housing, mental health, public safety, transportation upgrades, parkland enhancements and community organizations.",
+        "context": "In collaboration with elected officials, community organizations, and local stakeholders, Bally’s has pledged approximately $765 million in net present value for an array of community benefits—in addition to the direct project scope and equity investment opportunities. This unprecedented commitment includes direct financial support for local schools, housing, mental health, public safety, transportation upgrades, parkland enhancements and community organizations."
+      },
+      "c9": {
+        "url": "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean",
+        "title": "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean",
+        "excerpt": "Bally’s Bronx is also investing heavily in the area’s infrastructure and quality of life. We are allocating $100 million for parkland improvements, including new walking paths, playgrounds, and the revitalization of Ferry Point Park, as well as at least $75 million for transportation upgrades such as a new Lafayette Avenue overpass, widened roads, and enhanced public transit access to the Project Site and Ferry Point Park via two new MTA bus stops.",
+        "context": "Bally’s Bronx is also investing heavily in the area’s infrastructure and quality of life. We are allocating $100 million for parkland improvements, including new walking paths, playgrounds, and the revitalization of Ferry Point Park, as well as at least $75 million for transportation upgrades such as a new Lafayette Avenue overpass, widened roads, and enhanced public transit access to the Project Site and Ferry Point Park via two new MTA bus stops."
+      }
+    }
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 14.483999999938533,
+    "request_id": "req_f6f5dfebeab44476a8f434d878073e63",
+    "usage": {
+      "input_tokens": 2647,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 1792
+      },
+      "output_tokens": 1101,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3748
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "source_recovery",
+    "url": "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean",
+    "status": "READ",
+    "text_sha256": "b8dbd9e7f9be6fb89e9e6e4850a0688493fc391018c2ffa23a48e0560a20535d",
+    "source_reads": 2,
+    "source_read_limit": 2
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 2.077999999979511,
+    "request_id": "req_41d108dd257345c8b5baecb0e6da6d33",
+    "usage": {
+      "input_tokens": 1779,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 194,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1973
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "research_recovery_capture",
+    "citations": {
+      "c1": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "excerpt": "Our bus service commitments are centered around maintaining and enhancing the existing Bally’s shuttle service, which currently operates at 10 locations throughout our local catchment area and provides free, accessible transportation to thousands of community members and their families. This shuttle service is a critical component of our commitment to providing convenient and reliable transportation options for our patrons and employees. We plan to expand this based on usage and demand.",
+        "context": "Our bus service commitments are centered around maintaining and enhancing the existing Bally’s shuttle service, which currently operates at 10 locations throughout our local catchment area and provides free, accessible transportation to thousands of community members and their families. This shuttle service is a critical component of our commitment to providing convenient and reliable transportation options for our patrons and employees. We plan to expand this based on usage and demand."
+      },
+      "c2": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "excerpt": "Our goal is to include additional stops (1) within Ferry Point Park and (2) within our site or at its entrance, which would enhance transit access for our employees and visitors.",
+        "context": "Our goal is to include additional stops (1) within Ferry Point Park and (2) within our site or at its entrance, which would enhance transit access for our employees and visitors."
+      },
+      "c3": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "excerpt": "Based on ongoing dialogue with the MTA including during the CEQR process, we have agreed that Bally’s would be responsible for funding the construction of bus stops and any associated infrastructure required to meet MTA standards.",
+        "context": "Based on ongoing dialogue with the MTA including during the CEQR process, we have agreed that Bally’s would be responsible for funding the construction of bus stops and any associated infrastructure required to meet MTA standards."
+      },
+      "c4": {
+        "url": "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean",
+        "title": "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean",
+        "excerpt": "We are allocating $100 million for parkland improvements, including new walking paths, playgrounds, and the revitalization of Ferry Point Park, as well as at least $75 million for transportation upgrades such as a new Lafayette Avenue overpass, widened roads, and enhanced public transit access to the Project Site and Ferry Point Park via two new MTA bus stops.",
+        "context": "We are allocating $100 million for parkland improvements, including new walking paths, playgrounds, and the revitalization of Ferry Point Park, as well as at least $75 million for transportation upgrades such as a new Lafayette Avenue overpass, widened roads, and enhanced public transit access to the Project Site and Ferry Point Park via two new MTA bus stops."
+      },
+      "c5": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+        "excerpt": "the proposed integrated facility would provide space for an MTA bus stop on-site, as well as a bus stop along the proposed reconstructed Ring Road in Ferry Point Park for Park users.",
+        "context": "the proposed integrated facility would provide space for an MTA bus stop on-site, as well as a bus stop along the proposed reconstructed Ring Road in Ferry Point Park for Park users."
+      },
+      "c6": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+        "excerpt": "Preliminary discussions have been held with MTA regarding potential extension of bus lines to the Project Site and with NYCEDC regarding potential for increased ferry service to the Ferry Point Park ferry landing.",
+        "context": "Preliminary discussions have been held with MTA regarding potential extension of bus lines to the Project Site and with NYCEDC regarding potential for increased ferry service to the Ferry Point Park ferry landing."
+      },
+      "c7": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+        "excerpt": "Commitments for increased service for the MTA bus stops are in place, but specific details will need to be further materialized.",
+        "context": "Commitments for increased service for the MTA bus stops are in place, but specific details will need to be further materialized."
+      },
+      "c8": {
+        "url": "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean",
+        "title": "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean",
+        "excerpt": "In collaboration with elected officials, community organizations, and local stakeholders, Bally’s has pledged approximately $765 million in net present value for an array of community benefits—in addition to the direct project scope and equity investment opportunities. This unprecedented commitment includes direct financial support for local schools, housing, mental health, public safety, transportation upgrades, parkland enhancements and community organizations.",
+        "context": "In collaboration with elected officials, community organizations, and local stakeholders, Bally’s has pledged approximately $765 million in net present value for an array of community benefits—in addition to the direct project scope and equity investment opportunities. This unprecedented commitment includes direct financial support for local schools, housing, mental health, public safety, transportation upgrades, parkland enhancements and community organizations."
+      },
+      "c9": {
+        "url": "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean",
+        "title": "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean",
+        "excerpt": "Bally’s Bronx is also investing heavily in the area’s infrastructure and quality of life. We are allocating $100 million for parkland improvements, including new walking paths, playgrounds, and the revitalization of Ferry Point Park, as well as at least $75 million for transportation upgrades such as a new Lafayette Avenue overpass, widened roads, and enhanced public transit access to the Project Site and Ferry Point Park via two new MTA bus stops.",
+        "context": "Bally’s Bronx is also investing heavily in the area’s infrastructure and quality of life. We are allocating $100 million for parkland improvements, including new walking paths, playgrounds, and the revitalization of Ferry Point Park, as well as at least $75 million for transportation upgrades such as a new Lafayette Avenue overpass, widened roads, and enhanced public transit access to the Project Site and Ferry Point Park via two new MTA bus stops."
+      }
+    }
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 15.047000000020489,
+    "request_id": "req_c83fb601d3be4ea296a93c2b364f8e60",
+    "usage": {
+      "input_tokens": 2935,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 1792
+      },
+      "output_tokens": 1236,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4171
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "research_extracted",
+    "draft": null,
+    "evidence": [
+      {
+        "source": {
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+          "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "excerpt": "Our bus service commitments are centered around maintaining and enhancing the existing Bally’s shuttle service, which currently operates at 10 locations throughout our local catchment area and provides free, accessible transportation to thousands of community members and their families. This shuttle service is a critical component of our commitment to providing convenient and reliable transportation options for our patrons and employees. We plan to expand this based on usage and demand.",
+        "status": "partial",
+        "explanation": "This excerpt documents existing Bally’s shuttle service and a plan to expand it based on usage and demand, but it does not tie that shuttle commitment specifically to ferry service.",
+        "summary": "Bally’s describes existing shuttle service and possible expansion, but not a specific ferry shuttle.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:34:18.456916+00:00"
+      },
+      {
+        "source": {
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+          "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "excerpt": "Our goal is to include additional stops (1) within Ferry Point Park and (2) within our site or at its entrance, which would enhance transit access for our employees and visitors.",
+        "status": "supports",
+        "explanation": "This excerpt supports Bally’s goal of adding stops within Ferry Point Park and at or within the site entrance, reinforcing the bus-stop commitment.",
+        "summary": "Bally’s says it aims to add stops in Ferry Point Park and at the site.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:34:18.456916+00:00"
+      },
+      {
+        "source": {
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+          "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "excerpt": "Based on ongoing dialogue with the MTA including during the CEQR process, we have agreed that Bally’s would be responsible for funding the construction of bus stops and any associated infrastructure required to meet MTA standards.",
+        "status": "supports",
+        "explanation": "This excerpt directly states Bally’s would be responsible for funding construction of bus stops and associated infrastructure required to meet MTA standards.",
+        "summary": "Bally’s says it agreed to fund bus-stop construction and related infrastructure.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:34:18.456916+00:00"
+      },
+      {
+        "source": {
+          "url": "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean",
+          "title": "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean",
+          "citation": "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "excerpt": "We are allocating $100 million for parkland improvements, including new walking paths, playgrounds, and the revitalization of Ferry Point Park, as well as at least $75 million for transportation upgrades such as a new Lafayette Avenue overpass, widened roads, and enhanced public transit access to the Project Site and Ferry Point Park via two new MTA bus stops.",
+        "status": "supports",
+        "explanation": "This excerpt directly documents Bally’s allocation of $100 million for parkland improvements including Ferry Point Park revitalization, and at least $75 million for transportation upgrades including enhanced public transit access via two new MTA bus stops.",
+        "summary": "Bally’s allocates funds for Ferry Point Park improvements and transportation upgrades including two bus stops.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:34:18.456916+00:00"
+      },
+      {
+        "source": {
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+          "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "excerpt": "the proposed integrated facility would provide space for an MTA bus stop on-site, as well as a bus stop along the proposed reconstructed Ring Road in Ferry Point Park for Park users.",
+        "status": "supports",
+        "explanation": "This excerpt supports the scope and location of the proposed bus-stop elements: one on-site and one along the reconstructed Ring Road in Ferry Point Park.",
+        "summary": "The project would include space for one on-site bus stop and one in Ferry Point Park.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:34:18.456916+00:00"
+      },
+      {
+        "source": {
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+          "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "excerpt": "Preliminary discussions have been held with MTA regarding potential extension of bus lines to the Project Site and with NYCEDC regarding potential for increased ferry service to the Ferry Point Park ferry landing.",
+        "status": "partial",
+        "explanation": "This excerpt mentions only preliminary discussions about increased ferry service to the Ferry Point Park ferry landing; it does not document a firm Bally’s commitment to provide a ferry shuttle or pay for one.",
+        "summary": "Ferry service was under preliminary discussion, not shown here as a firm commitment.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:34:18.456916+00:00"
+      },
+      {
+        "source": {
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+          "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "excerpt": "Commitments for increased service for the MTA bus stops are in place, but specific details will need to be further materialized.",
+        "status": "partial",
+        "explanation": "This excerpt suggests commitments for increased MTA bus-stop service exist, but says details remain to be materialized; it does not show completed implementation.",
+        "summary": "Bus-service commitments are said to exist, but details are unresolved.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:34:18.456916+00:00"
+      },
+      {
+        "source": {
+          "url": "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean",
+          "title": "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean",
+          "citation": "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "excerpt": "Bally’s Bronx is also investing heavily in the area’s infrastructure and quality of life. We are allocating $100 million for parkland improvements, including new walking paths, playgrounds, and the revitalization of Ferry Point Park, as well as at least $75 million for transportation upgrades such as a new Lafayette Avenue overpass, widened roads, and enhanced public transit access to the Project Site and Ferry Point Park via two new MTA bus stops.",
+        "status": "supports",
+        "explanation": "This excerpt duplicates and reinforces the documented allocations for parkland improvements and transportation upgrades tied to Ferry Point Park and two MTA bus stops.",
+        "summary": "Bally’s reiterates funding for Ferry Point Park improvements and transportation upgrades with two bus stops.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:34:18.456916+00:00"
+      },
+      {
+        "source": {
+          "url": "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean",
+          "title": "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean",
+          "citation": "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "excerpt": "In collaboration with elected officials, community organizations, and local stakeholders, Bally’s has pledged approximately $765 million in net present value for an array of community benefits—in addition to the direct project scope and equity investment opportunities. This unprecedented commitment includes direct financial support for local schools, housing, mental health, public safety, transportation upgrades, parkland enhancements and community organizations.",
+        "status": "partial",
+        "explanation": "This excerpt broadly describes community-benefit categories including transportation upgrades and parkland enhancements, but it is less specific than the more detailed funding excerpts.",
+        "summary": "Bally’s broadly pledges community benefits including transportation and parkland enhancements.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:34:18.456916+00:00"
+      }
+    ],
+    "coverage": [
+      {
+        "kind": "PROMISE",
+        "criterion": "Bally’s to fund construction of new MTA bus stops and associated infrastructure for the project site and Ferry Point Park",
+        "promise_gap": "",
+        "promise_citation_ids": [
+          "c3",
+          "c4",
+          "c5",
+          "c9"
+        ],
+        "delivery_gap": "Citations describe proposed or agreed responsibility and project allocations, but do not show that bus stops or related infrastructure were actually built or funded.",
+        "delivery_citation_ids": []
+      },
+      {
+        "kind": "PROMISE",
+        "criterion": "Bally’s to provide parkland improvements including revitalization of Ferry Point Park",
+        "promise_gap": "",
+        "promise_citation_ids": [
+          "c4",
+          "c9"
+        ],
+        "delivery_gap": "Citations show planned allocation for parkland improvements, including Ferry Point Park, but no evidence here shows completed improvements or spending.",
+        "delivery_citation_ids": []
+      },
+      {
+        "kind": "PROMISE",
+        "criterion": "Bally’s to fund traffic or transportation mitigation upgrades",
+        "promise_gap": "The excerpts document at least $75 million for transportation upgrades, but they do not clearly use or define the specific term 'traffic mitigation' or fully enumerate all mitigation obligations.",
+        "promise_citation_ids": [
+          "c4",
+          "c9"
+        ],
+        "delivery_gap": "No cited evidence shows actual completion or payment for the transportation upgrades.",
+        "delivery_citation_ids": []
+      },
+      {
+        "kind": "PROMISE",
+        "criterion": "Bally’s to provide a ferry shuttle or committed ferry service enhancement",
+        "promise_gap": "The cited excerpts show only preliminary discussions about increased ferry service and existing shuttle-service expansion generally; they do not directly document a specific promise to provide a ferry shuttle.",
+        "promise_citation_ids": [],
+        "delivery_gap": "No cited evidence shows an actual ferry shuttle or implemented ferry-service enhancement.",
+        "delivery_citation_ids": []
+      },
+      {
+        "kind": "OUTCOME",
+        "criterion": "Whether Bally’s has actually delivered any of the cited transportation or park commitments",
+        "promise_gap": "",
+        "promise_citation_ids": [],
+        "delivery_gap": "All relevant excerpts are forward-looking, proposed, or describe commitments in place without evidence of completed delivery.",
+        "delivery_citation_ids": []
+      }
+    ],
+    "target_status": "IDENTIFIED",
+    "gaps": [
+      "Citations describe proposed or agreed responsibility and project allocations, but do not show that bus stops or related infrastructure were actually built or funded.",
+      "Citations show planned allocation for parkland improvements, including Ferry Point Park, but no evidence here shows completed improvements or spending.",
+      "The excerpts document at least $75 million for transportation upgrades, but they do not clearly use or define the specific term 'traffic mitigation' or fully enumerate all mitigation obligations.",
+      "No cited evidence shows actual completion or payment for the transportation upgrades.",
+      "The cited excerpts show only preliminary discussions about increased ferry service and existing shuttle-service expansion generally; they do not directly document a specific promise to provide a ferry shuttle.",
+      "No cited evidence shows an actual ferry shuttle or implemented ferry-service enhancement.",
+      "All relevant excerpts are forward-looking, proposed, or describe commitments in place without evidence of completed delivery."
+    ]
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 7.295999999972992,
+    "request_id": "req_577f703fdf314b818fca0bbc1bcaedb0",
+    "usage": {
+      "input_tokens": 2275,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 588,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2863
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "evidence_synthesis",
+    "phase": "initial",
+    "capture_count": 9,
+    "selection": {
+      "findings": [
+        {
+          "citation_id": "c4",
+          "summary": "Bally’s said it was allocating $100 million for parkland improvements, including “the revitalization of Ferry Point Park,” and at least $75 million for transportation upgrades including “enhanced public transit access to the Project Site and Ferry Point Park via two new MTA bus stops.”",
+          "status": "Promise documented",
+          "explanation": "This passage directly states Bally’s proposed funding allocations and expressly ties them to Ferry Point Park improvements and two new MTA bus stops.",
+          "excerpt": "We are allocating $100 million for parkland improvements, including new walking paths, playgrounds, and the revitalization of Ferry Point Park, as well as at least $75 million for transportation upgrades such as a new Lafayette Avenue overpass, widened roads, and enhanced public transit access to the Project Site and Ferry Point Park via two new MTA bus stops.",
+          "locator": ""
+        },
+        {
+          "citation_id": "c3",
+          "summary": "Bally’s stated that, based on ongoing dialogue with the MTA during the CEQR process, it had agreed that Bally’s would be responsible for funding construction of bus stops and any associated infrastructure required to meet MTA standards.",
+          "status": "Promise documented",
+          "explanation": "This is the clearest passage assigning Bally’s responsibility to pay for bus stop construction and related infrastructure.",
+          "excerpt": "Based on ongoing dialogue with the MTA including during the CEQR process, we have agreed that Bally’s would be responsible for funding the construction of bus stops and any associated infrastructure required to meet MTA standards.",
+          "locator": ""
+        },
+        {
+          "citation_id": "c1",
+          "summary": "Bally’s said its bus service commitments were centered on maintaining and enhancing its existing Bally’s shuttle service, which currently operates at 10 locations and provides free, accessible transportation, and that it planned to expand this service based on usage and demand.",
+          "status": "Promise documented",
+          "explanation": "This documents a commitment to maintain, enhance, and potentially expand Bally’s existing shuttle service, but it is a Bally’s shuttle service, not clearly a ferry shuttle.",
+          "excerpt": "Our bus service commitments are centered around maintaining and enhancing the existing Bally’s shuttle service, which currently operates at 10 locations throughout our local catchment area and provides free, accessible transportation to thousands of community members and their families. This shuttle service is a critical component of our commitment to providing convenient and reliable transportation options for our patrons and employees. We plan to expand this based on usage and demand.",
+          "locator": ""
+        },
+        {
+          "citation_id": "c6",
+          "summary": "Bally’s reported only “preliminary discussions” with NYCEDC regarding the “potential for increased ferry service to the Ferry Point Park ferry landing.”",
+          "status": "Qualification",
+          "explanation": "This passage limits the ferry-related claim: it describes early discussions about potential increased ferry service, not a direct commitment by Bally’s to provide a ferry shuttle.",
+          "excerpt": "Preliminary discussions have been held with MTA regarding potential extension of bus lines to the Project Site and with NYCEDC regarding potential for increased ferry service to the Ferry Point Park ferry landing.",
+          "locator": ""
+        },
+        {
+          "citation_id": "c7",
+          "summary": "Bally’s said commitments for increased service for the MTA bus stops were in place, but “specific details will need to be further materialized.”",
+          "status": "Qualification",
+          "explanation": "This adds that bus-stop-related service commitments existed, while also documenting that details were still unresolved.",
+          "excerpt": "Commitments for increased service for the MTA bus stops are in place, but specific details will need to be further materialized.",
+          "locator": ""
+        }
+      ],
+      "gap": "The supplied passages support proposed funding for Ferry Point Park improvements and bus-stop/transit infrastructure, but they do not directly document a commitment to pay for “traffic mitigation” using that term, nor a specific commitment to provide a ferry shuttle. They also do not show actual construction, spending, or completed delivery of the bus stops, park improvements, ferry service changes, or other transportation upgrades.",
+      "followup_query": "site:nycasinos.ny.gov Bally's Bronx CEQR traffic mitigation ferry shuttle Ferry Point Park bus stops funding"
+    },
+    "canonical": false
+  },
+  {
+    "type": "evidence_gap_search",
+    "recommended": true,
+    "performed": false,
+    "query": "site:nycasinos.ny.gov Bally's Bronx CEQR traffic mitigation ferry shuttle Ferry Point Park bus stops funding",
+    "gap": "The supplied passages support proposed funding for Ferry Point Park improvements and bus-stop/transit infrastructure, but they do not directly document a commitment to pay for “traffic mitigation” using that term, nor a specific commitment to provide a ferry shuttle. They also do not show actual construction, spending, or completed delivery of the bus stops, park improvements, ferry service changes, or other transportation upgrades.",
+    "new_verified_excerpts": 0
+  }
+]

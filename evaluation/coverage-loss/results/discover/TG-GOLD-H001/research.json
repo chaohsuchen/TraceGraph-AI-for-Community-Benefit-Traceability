@@ -1,0 +1,278 @@
+{
+  "case_id": "TG-GOLD-H001",
+  "reference_sha256": "d105484810716a34d9b3ec08ebc0af026c9e54a1330f366f9924fd4d32b5136b",
+  "query": "Bally's commits to a diverse 3,503-FTE permanent workforce, 70 percent from the Bronx, reflecting Bronx demographics.",
+  "model": "gpt-5.4",
+  "web_search_model": "gpt-5.4",
+  "started_at": "2026-11-22T09:33:04.898167+00:00",
+  "outcome": "RESOLVED",
+  "graph": {
+    "commitment": {
+      "title": "Bally's proposed permanent operations workforce commitment",
+      "description": "Build a diverse permanent workforce of 3,503 full-time equivalent employees, with 70 percent coming from the Bronx and reflecting Bronx demographics.",
+      "original_text": "For its permanent operations, Bally’s commits to building a diverse workforce of 3,503 full-time equivalent employees, with 70 percent of those workers coming from the Bronx, and reflecting the demographics of the Bronx. It cites its performance at Bally’s Chicago, where over 80 percent of the employees at its temporary facility identify as minority, and 45 percent are women.",
+      "responsible_entity_raw": "Bally’s",
+      "beneficiary": {
+        "name": "Bronx residents",
+        "category": "Workers/community"
+      },
+      "obligation_type": "Workforce hiring commitment",
+      "amount_value": "3,503 full-time equivalent employees; 70 percent from the Bronx",
+      "term_periodicity": "Permanent operations",
+      "geographic_scope": "Bronx",
+      "condition_contingency": "For its permanent operations",
+      "milestone": null,
+      "notes": null,
+      "id": "commitment-d4224338-cc66-46fc-a2ee-ea32bf51c9e6",
+      "original_promise": {
+        "document_id": null,
+        "source": {
+          "id": "source-03dd158c-01db-486b-923a-81dbfd4bf80c",
+          "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+          "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "locator": "Cited passage",
+        "char_start": null,
+        "char_end": null
+      }
+    },
+    "organization": {
+      "id": "org-d57a3e3b-8a0c-4691-8782-485267b8e6f7",
+      "name": "Bally's"
+    },
+    "assessment": {
+      "label": "UNVERIFIED",
+      "verdict": "Delivery unverified for: Build a permanent operations workforce of 3,503 full-time equivalent employees; Have 70 percent of the permanent operations workforce come from the Bronx; Have the permanent operations workforce reflect the demographics of the Bronx",
+      "reasoning": "Requested scope: Bally's commits to a diverse 3,503-FTE permanent workforce, 70 percent from the Bronx, reflecting Bronx demographics.\n\nBuild a permanent operations workforce of 3,503 full-time equivalent employees\nStatus: UNVERIFIED\nThe promise excerpt directly states 'Bally’s commits to building a diverse workforce of 3,503 full-time equivalent employees' for permanent operations. The later excerpt only establishes applicant approval/compliance steps, not actual staffing at permanent operations.\nPromised scope: Bally’s promises that its permanent operations in the Bronx casino proposal would have a workforce of 3,503 full-time equivalent employees. Intended beneficiaries are prospective employees; location is the Bronx project site; benefit/action is creation of permanent employment at that scale.\nObserved scope: The cited follow-up evidence shows Bally’s Bronx was among applicants that received committee approval and submitted zoning/environmental compliance materials. It does not show any permanent operations workforce exists, how many employees were hired, or that operations began. Actual employees and workforce size are unreported.\nEvidence gap: No direct evidence shows Bally’s permanent Bronx operations opened or employed 3,503 FTE workers.\nPromise evidence: c1\n\nHave 70 percent of the permanent operations workforce come from the Bronx\nStatus: UNVERIFIED\nThe original passage expressly includes '70 percent of those workers coming from the Bronx.' The other cited excerpt concerns approvals and compliance only, not realized hiring outcomes for Bronx residents.\nPromised scope: Bally’s promises that 70 percent of workers in its permanent Bronx operations workforce would come from the Bronx. Intended beneficiaries are Bronx residents as prospective employees; location is the Bronx project; benefit/action is local hiring at the 70 percent level.\nObserved scope: No cited evidence reports actual hiring for the Bronx project, the residence of any hired workers, or the share of workers from the Bronx. The approval/compliance excerpt does not address workforce composition.\nEvidence gap: No evidence establishes that any permanent operations workforce exists for the Bronx project or that 70 percent of it comes from the Bronx.\nPromise evidence: c1\n\nHave the permanent operations workforce reflect the demographics of the Bronx\nStatus: UNVERIFIED\nThe promise excerpt says the permanent workforce would be 'reflecting the demographics of the Bronx.' The same passage cites Chicago performance as support, but Chicago is not delivery for the Bronx project. No result is cited for an actual Bronx workforce.\nPromised scope: Bally’s promises that the permanent operations workforce for its Bronx project would reflect Bronx demographics. Intended beneficiaries are the workforce and Bronx community broadly; location is the Bronx project; benefit/action is demographic representativeness in hiring.\nObserved scope: The only composition evidence in the record is contextual and concerns Bally’s Chicago temporary facility, where over 80 percent identify as minority and 45 percent are women. That is a different site and population. No cited evidence shows the demographics of any actual workforce for the proposed Bronx permanent operations.\nEvidence gap: No direct evidence shows the demographic makeup of any Bronx permanent-operations workforce, or that it reflects Bronx demographics.\nPromise evidence: c1\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “For its permanent operations, Bally’s commits to building a diverse workforce of 3,503 full-time equivalent employees, with 70 percent of those workers coming from the Bronx, and reflecting the demographics of the Bronx. It cites its performance at Bally’s Chicago, where over 80 percent of the employees at its temporary facility identify as minority, and 45 percent are women.”\nhttps://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf\n\nc2: “Four Applicants - Bally’s Bronx, Hard Rock Metropolitan Park, MGM Yonkers, and Resorts World New York City – received approval from their respective Committees and submitted evidence of zoning compliance, and completion of environmental review.”\nhttps://apps.cio.ny.gov/apps/mediacontact/public/view.cfm?backButton=&parm=8CF994EA-BE93-69D0-2215473F6E0C6BC5",
+      "verification_date": "2026-11-22"
+    },
+    "findings": [
+      {
+        "id": "finding-6d1b06ef-10bc-4103-b19e-0d1c6d6532ba",
+        "claim": "Bally’s casino application states that for permanent operations it commits to employ 3,503 full-time equivalent workers, with 70% coming from the Bronx and the workforce reflecting Bronx demographics.",
+        "supports": [
+          {
+            "id": "support-a62407d3-a135-4205-8451-edc4f65dcfba",
+            "source": {
+              "id": "source-03dd158c-01db-486b-923a-81dbfd4bf80c",
+              "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+              "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+              "citation": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Promise documented",
+            "excerpt": "For its permanent operations, Bally’s commits to building a diverse workforce of 3,503 full-time equivalent employees, with 70 percent of those workers coming from the Bronx, and reflecting the demographics of the Bronx. It cites its performance at Bally’s Chicago, where over 80 percent of the employees at its temporary facility identify as minority, and 45 percent are women.",
+            "locator": "Cited passage",
+            "summary": "In its casino application materials, Bally’s said that for its permanent operations it commits to a diverse workforce of 3,503 full-time equivalent employees, with 70 percent coming from the Bronx and reflecting Bronx demographics; it cited Bally’s Chicago temporary-facility workforce composition as supporting context.",
+            "explanation": "The passage directly states the workforce commitment’s terms, scope, and numerical target for permanent operations, and adds Bally’s cited Chicago staffing data as context rather than as delivery of the Bronx commitment.",
+            "retrieved_at": "2026-11-22T09:33:38.124407+00:00"
+          }
+        ]
+      },
+      {
+        "id": "finding-06cee580-c6c4-44cc-9cb1-e12d6fd0b1ab",
+        "claim": "A New York State notice said Bally’s Bronx received Community Advisory Committee approval and submitted evidence of zoning compliance and completed environmental review in the casino licensing process.",
+        "supports": [
+          {
+            "id": "support-891aa139-88c0-4400-80e4-73622866ddc7",
+            "source": {
+              "id": "source-e04a8c32-deee-4145-841f-5fadc9ab830e",
+              "url": "https://apps.cio.ny.gov/apps/mediacontact/public/view.cfm?backButton=&parm=8CF994EA-BE93-69D0-2215473F6E0C6BC5",
+              "title": "https://apps.cio.ny.gov/apps/mediacontact/public/view.cfm?backButton=&parm=8CF994EA-BE93-69D0-2215473F6E0C6BC5",
+              "citation": "https://apps.cio.ny.gov/apps/mediacontact/public/view.cfm?backButton=&parm=8CF994EA-BE93-69D0-2215473F6E0C6BC5",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Implementation evidence",
+            "excerpt": "Four Applicants - Bally’s Bronx, Hard Rock Metropolitan Park, MGM Yonkers, and Resorts World New York City – received approval from their respective Committees and submitted evidence of zoning compliance, and completion of environmental review.",
+            "locator": "Cited passage",
+            "summary": "A New York State notice said Bally’s Bronx was among four applicants that received approval from its Community Advisory Committee and submitted evidence of zoning compliance and completion of environmental review.",
+            "explanation": "This is evidence of progress in the broader casino licensing process for Bally’s Bronx, but it does not show fulfillment of the permanent-workforce hiring commitment.",
+            "retrieved_at": "2026-11-22T09:33:38.124407+00:00"
+          }
+        ]
+      },
+      {
+        "id": "source-reread-1",
+        "claim": "In Bally’s Bronx CAC Q&A, Bally’s framed the 70% hiring commitment as a minimum target goal that includes Bronx residents or local historically underserved populations.",
+        "supports": [
+          {
+            "id": "source-reread-1-s",
+            "excerpt": "We anticipate that our minimum target goal will be that 70% of our employees will be from the Bronx or from local, historically underserved populations.",
+            "source": {
+              "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+              "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf"
+            }
+          }
+        ]
+      },
+      {
+        "id": "source-reread-2",
+        "claim": "Bally’s said its New York State resident hiring goal would be structured to include its Bronx-based hiring targets.",
+        "supports": [
+          {
+            "id": "source-reread-2-s",
+            "excerpt": "Our minimum goal for residents of New York State will be inclusive of our targets for Bronx based hiring.",
+            "source": {
+              "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+              "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf"
+            }
+          }
+        ]
+      },
+      {
+        "id": "source-reread-3",
+        "claim": "Bally’s said it expected the share of employees who are New York State residents to be well above 70% for the Bally’s Bronx project.",
+        "supports": [
+          {
+            "id": "source-reread-3-s",
+            "excerpt": "Based upon this, we expect our New York State resident employee target percentage to be well north of 70%.",
+            "source": {
+              "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+              "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf"
+            }
+          }
+        ]
+      },
+      {
+        "id": "source-reread-4",
+        "claim": "Bally’s committed to work with stakeholders and government leaders so that as many Bronx residents as possible are eligible for jobs at Bally’s Bronx.",
+        "supports": [
+          {
+            "id": "source-reread-4-s",
+            "excerpt": "Bally’s is committed to being fully engaged with all stakeholders and government leaders to ensure that as many Bronx residents as possible are eligible to become employees at Bally’s Bronx.",
+            "source": {
+              "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+              "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf"
+            }
+          }
+        ]
+      }
+    ],
+    "relations": [],
+    "assessment_trace": {
+      "not_yet_due": [],
+      "criteria": [
+        {
+          "criterion": "Build a permanent operations workforce of 3,503 full-time equivalent employees",
+          "scope_criteria": [
+            "s1"
+          ],
+          "promise_scope": "Bally’s promises that its permanent operations in the Bronx casino proposal would have a workforce of 3,503 full-time equivalent employees. Intended beneficiaries are prospective employees; location is the Bronx project site; benefit/action is creation of permanent employment at that scale.",
+          "observed_scope": "The cited follow-up evidence shows Bally’s Bronx was among applicants that received committee approval and submitted zoning/environmental compliance materials. It does not show any permanent operations workforce exists, how many employees were hired, or that operations began. Actual employees and workforce size are unreported.",
+          "promise_citation_ids": [
+            "c1"
+          ],
+          "delivery_citation_ids": [],
+          "delivery_status": "UNVERIFIED",
+          "timing_requirement": "Applies to Bally’s 'permanent operations'; no specific calendar deadline is stated in the cited promise excerpt.",
+          "explanation": "The promise excerpt directly states 'Bally’s commits to building a diverse workforce of 3,503 full-time equivalent employees' for permanent operations. The later excerpt only establishes applicant approval/compliance steps, not actual staffing at permanent operations.",
+          "gap": "No direct evidence shows Bally’s permanent Bronx operations opened or employed 3,503 FTE workers.",
+          "delivery_support": []
+        },
+        {
+          "criterion": "Have 70 percent of the permanent operations workforce come from the Bronx",
+          "scope_criteria": [
+            "s1"
+          ],
+          "promise_scope": "Bally’s promises that 70 percent of workers in its permanent Bronx operations workforce would come from the Bronx. Intended beneficiaries are Bronx residents as prospective employees; location is the Bronx project; benefit/action is local hiring at the 70 percent level.",
+          "observed_scope": "No cited evidence reports actual hiring for the Bronx project, the residence of any hired workers, or the share of workers from the Bronx. The approval/compliance excerpt does not address workforce composition.",
+          "promise_citation_ids": [
+            "c1"
+          ],
+          "delivery_citation_ids": [],
+          "delivery_status": "UNVERIFIED",
+          "timing_requirement": "Applies to Bally’s permanent operations workforce; no specific date or deadline is stated in the cited promise excerpt.",
+          "explanation": "The original passage expressly includes '70 percent of those workers coming from the Bronx.' The other cited excerpt concerns approvals and compliance only, not realized hiring outcomes for Bronx residents.",
+          "gap": "No evidence establishes that any permanent operations workforce exists for the Bronx project or that 70 percent of it comes from the Bronx.",
+          "delivery_support": []
+        },
+        {
+          "criterion": "Have the permanent operations workforce reflect the demographics of the Bronx",
+          "scope_criteria": [
+            "s1"
+          ],
+          "promise_scope": "Bally’s promises that the permanent operations workforce for its Bronx project would reflect Bronx demographics. Intended beneficiaries are the workforce and Bronx community broadly; location is the Bronx project; benefit/action is demographic representativeness in hiring.",
+          "observed_scope": "The only composition evidence in the record is contextual and concerns Bally’s Chicago temporary facility, where over 80 percent identify as minority and 45 percent are women. That is a different site and population. No cited evidence shows the demographics of any actual workforce for the proposed Bronx permanent operations.",
+          "promise_citation_ids": [
+            "c1"
+          ],
+          "delivery_citation_ids": [],
+          "delivery_status": "UNVERIFIED",
+          "timing_requirement": "Applies to permanent operations; no specific calendar deadline is stated in the cited promise excerpt.",
+          "explanation": "The promise excerpt says the permanent workforce would be 'reflecting the demographics of the Bronx.' The same passage cites Chicago performance as support, but Chicago is not delivery for the Bronx project. No result is cited for an actual Bronx workforce.",
+          "gap": "No direct evidence shows the demographic makeup of any Bronx permanent-operations workforce, or that it reflects Bronx demographics.",
+          "delivery_support": []
+        }
+      ],
+      "label": "UNVERIFIED",
+      "verdict": "Delivery unverified for: Build a permanent operations workforce of 3,503 full-time equivalent employees; Have 70 percent of the permanent operations workforce come from the Bronx; Have the permanent operations workforce reflect the demographics of the Bronx",
+      "reasoning": "Requested scope: Bally's commits to a diverse 3,503-FTE permanent workforce, 70 percent from the Bronx, reflecting Bronx demographics.\n\nBuild a permanent operations workforce of 3,503 full-time equivalent employees\nStatus: UNVERIFIED\nThe promise excerpt directly states 'Bally’s commits to building a diverse workforce of 3,503 full-time equivalent employees' for permanent operations. The later excerpt only establishes applicant approval/compliance steps, not actual staffing at permanent operations.\nPromised scope: Bally’s promises that its permanent operations in the Bronx casino proposal would have a workforce of 3,503 full-time equivalent employees. Intended beneficiaries are prospective employees; location is the Bronx project site; benefit/action is creation of permanent employment at that scale.\nObserved scope: The cited follow-up evidence shows Bally’s Bronx was among applicants that received committee approval and submitted zoning/environmental compliance materials. It does not show any permanent operations workforce exists, how many employees were hired, or that operations began. Actual employees and workforce size are unreported.\nEvidence gap: No direct evidence shows Bally’s permanent Bronx operations opened or employed 3,503 FTE workers.\nPromise evidence: c1\n\nHave 70 percent of the permanent operations workforce come from the Bronx\nStatus: UNVERIFIED\nThe original passage expressly includes '70 percent of those workers coming from the Bronx.' The other cited excerpt concerns approvals and compliance only, not realized hiring outcomes for Bronx residents.\nPromised scope: Bally’s promises that 70 percent of workers in its permanent Bronx operations workforce would come from the Bronx. Intended beneficiaries are Bronx residents as prospective employees; location is the Bronx project; benefit/action is local hiring at the 70 percent level.\nObserved scope: No cited evidence reports actual hiring for the Bronx project, the residence of any hired workers, or the share of workers from the Bronx. The approval/compliance excerpt does not address workforce composition.\nEvidence gap: No evidence establishes that any permanent operations workforce exists for the Bronx project or that 70 percent of it comes from the Bronx.\nPromise evidence: c1\n\nHave the permanent operations workforce reflect the demographics of the Bronx\nStatus: UNVERIFIED\nThe promise excerpt says the permanent workforce would be 'reflecting the demographics of the Bronx.' The same passage cites Chicago performance as support, but Chicago is not delivery for the Bronx project. No result is cited for an actual Bronx workforce.\nPromised scope: Bally’s promises that the permanent operations workforce for its Bronx project would reflect Bronx demographics. Intended beneficiaries are the workforce and Bronx community broadly; location is the Bronx project; benefit/action is demographic representativeness in hiring.\nObserved scope: The only composition evidence in the record is contextual and concerns Bally’s Chicago temporary facility, where over 80 percent identify as minority and 45 percent are women. That is a different site and population. No cited evidence shows the demographics of any actual workforce for the proposed Bronx permanent operations.\nEvidence gap: No direct evidence shows the demographic makeup of any Bronx permanent-operations workforce, or that it reflects Bronx demographics.\nPromise evidence: c1\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “For its permanent operations, Bally’s commits to building a diverse workforce of 3,503 full-time equivalent employees, with 70 percent of those workers coming from the Bronx, and reflecting the demographics of the Bronx. It cites its performance at Bally’s Chicago, where over 80 percent of the employees at its temporary facility identify as minority, and 45 percent are women.”\nhttps://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf\n\nc2: “Four Applicants - Bally’s Bronx, Hard Rock Metropolitan Park, MGM Yonkers, and Resorts World New York City – received approval from their respective Committees and submitted evidence of zoning compliance, and completion of environmental review.”\nhttps://apps.cio.ny.gov/apps/mediacontact/public/view.cfm?backButton=&parm=8CF994EA-BE93-69D0-2215473F6E0C6BC5",
+      "refutation": [],
+      "scope_anchors": {
+        "s1": "Bally's permanent operations workforce of 3,503 FTE, with 70% from the Bronx and reflecting Bronx demographics"
+      },
+      "citations": {
+        "c1": {
+          "source": {
+            "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+            "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+            "citation": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf"
+          },
+          "excerpt": "For its permanent operations, Bally’s commits to building a diverse workforce of 3,503 full-time equivalent employees, with 70 percent of those workers coming from the Bronx, and reflecting the demographics of the Bronx. It cites its performance at Bally’s Chicago, where over 80 percent of the employees at its temporary facility identify as minority, and 45 percent are women.",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:33:38.124407+00:00",
+          "finding_id": "finding-6d1b06ef-10bc-4103-b19e-0d1c6d6532ba",
+          "support_ids": [
+            "support-a62407d3-a135-4205-8451-edc4f65dcfba"
+          ]
+        },
+        "c2": {
+          "source": {
+            "title": "https://apps.cio.ny.gov/apps/mediacontact/public/view.cfm?backButton=&parm=8CF994EA-BE93-69D0-2215473F6E0C6BC5",
+            "url": "https://apps.cio.ny.gov/apps/mediacontact/public/view.cfm?backButton=&parm=8CF994EA-BE93-69D0-2215473F6E0C6BC5",
+            "citation": "https://apps.cio.ny.gov/apps/mediacontact/public/view.cfm?backButton=&parm=8CF994EA-BE93-69D0-2215473F6E0C6BC5"
+          },
+          "excerpt": "Four Applicants - Bally’s Bronx, Hard Rock Metropolitan Park, MGM Yonkers, and Resorts World New York City – received approval from their respective Committees and submitted evidence of zoning compliance, and completion of environmental review.",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:33:38.124407+00:00",
+          "finding_id": "finding-06cee580-c6c4-44cc-9cb1-e12d6fd0b1ab",
+          "support_ids": [
+            "support-891aa139-88c0-4400-80e4-73622866ddc7"
+          ]
+        }
+      },
+      "scope_gap": ""
+    }
+  },
+  "job_result": {
+    "run_id": null,
+    "outcome": "RESOLVED",
+    "commitment_id": "commitment-d4224338-cc66-46fc-a2ee-ea32bf51c9e6",
+    "unmatched_records": [
+      {
+        "excerpt": "2025 – Gaming License Application due in June",
+        "source_url": "https://ballysbronx.com/",
+        "source_title": "https://ballysbronx.com/"
+      },
+      {
+        "excerpt": "BREAKING: Bally’s Wins State Casino License",
+        "source_url": "https://ballysbronx.com/",
+        "source_title": "https://ballysbronx.com/"
+      },
+      {
+        "excerpt": "December 15, 2025",
+        "source_url": "https://ballysbronx.com/",
+        "source_title": "https://ballysbronx.com/"
+      }
+    ]
+  },
+  "finished_at": "2026-11-22T09:35:00.638218+00:00"
+}

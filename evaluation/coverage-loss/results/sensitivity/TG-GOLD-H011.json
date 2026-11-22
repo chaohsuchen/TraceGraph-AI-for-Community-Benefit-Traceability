@@ -1,0 +1,92 @@
+{
+  "fingerprint": "c2b944778a05024fdb2764690f10db486d7709ffffc8cae6ad9c457c22deb1c4",
+  "reversed_original_ids": [
+    "p17",
+    "p16",
+    "p15",
+    "p14",
+    "p13",
+    "p12",
+    "p11",
+    "p10",
+    "p9",
+    "p8",
+    "p7",
+    "p6",
+    "p5",
+    "p4",
+    "p3",
+    "p2",
+    "p1"
+  ],
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 6.328000000095926,
+      "request_id": "req_9923bfc69a2e45a8825c28a7156e3809",
+      "usage": {
+        "input_tokens": 4261,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 468,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4729
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "decisions": [
+    {
+      "gold_id": "G2",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p16"
+      ],
+      "reason": "Bally’s states it is \"maintaining and enhancing the existing Bally’s shuttle service\" and \"plan[s] to expand this based on usage and demand,\" which establishes a proposal to expand the existing shuttle service."
+    },
+    {
+      "gold_id": "G3",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p10",
+        "p15"
+      ],
+      "reason": "The passages say Bally’s goal is to include an additional stop \"within Ferry Point Park\" and that it would fund construction of bus stops, but they do not establish a promise specifically to fund at least one additional bus stop in Ferry Point Park."
+    },
+    {
+      "gold_id": "G4",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p10",
+        "p14",
+        "p15"
+      ],
+      "reason": "The evidence identifies two contemplated locations—one stop in Ferry Point Park and one on-site or at its entrance—but does not establish a promise to fund two new bus stops at the Bronx facility itself."
+    },
+    {
+      "gold_id": "G7",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt mentions the City’s Ferry Point environmental review docket or a final environmental impact statement for Bally’s project."
+    },
+    {
+      "gold_id": "G8",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt is from NYC Ferry or lists Ferry Point Park shuttle service with an October 2022 schedule."
+    }
+  ]
+}

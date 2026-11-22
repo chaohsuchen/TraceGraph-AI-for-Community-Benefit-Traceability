@@ -1,0 +1,221 @@
+{
+  "case_id": "TG-GOLD-H008",
+  "query": "Bally's committed up to $10 million for a new police substation and $5 million per year in public safety support.",
+  "facts": [
+    {
+      "id": "G1",
+      "text": "Bally's promised a capital investment capped at $10 million for a new Bronx police substation.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H008",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H008",
+          "row": 6
+        },
+        {
+          "sheet": "gold commitments",
+          "row": 22
+        }
+      ]
+    },
+    {
+      "id": "G2",
+      "text": "Bally's identified the NYPD's 45th Precinct as the precinct for the proposed substation.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H008",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "G3",
+      "text": "Bally's promised $5 million each year for public safety staffing and support in the Bronx.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H008",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H008",
+          "row": 6
+        },
+        {
+          "sheet": "gold commitments",
+          "row": 22
+        }
+      ]
+    },
+    {
+      "id": "G4",
+      "text": "During the Community Advisory Committee process, Bally's increased the annual public safety pledge from $3 million to $5 million.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H008",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H008",
+          "row": 6
+        },
+        {
+          "sheet": "gold commitments",
+          "row": 22
+        }
+      ]
+    },
+    {
+      "id": "G5",
+      "text": "The executed Bronx gaming facility license requires public progress reports on community benefit milestones.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H008",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "G6",
+      "text": "The executed Bronx gaming facility license requires independent monitoring of community benefit milestones.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H008",
+          "row": 7
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "K1",
+      "text": "Bally's actually delivered the capital contribution due for the new Bronx NYPD substation under the up-to-$10-million commitment.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H008",
+          "row": 6
+        },
+        {
+          "sheet": "TG-GOLD-H008",
+          "row": 18
+        }
+      ]
+    },
+    {
+      "id": "K2",
+      "text": "Bally's actually paid the $5 million in Bronx public safety support for the annual periods due since the approved funding milestone.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H008",
+          "row": 6
+        },
+        {
+          "sheet": "TG-GOLD-H008",
+          "row": 18
+        }
+      ]
+    }
+  ],
+  "delivery_applicable": true,
+  "reference_verdict": {
+    "status": "Commitment confirmed. Delivery unverified.",
+    "reasoning": "Verify the capital contribution through expenditure and NYPD or City acceptance records. Verify the annual support through dated payments or agency receipts, starting from the approved funding milestone.",
+    "delivery_applicable": true,
+    "source_refs": [
+      {
+        "sheet": "TG-GOLD-H008",
+        "row": 17
+      },
+      {
+        "sheet": "TG-GOLD-H008",
+        "row": 18
+      }
+    ]
+  },
+  "sources": [
+    {
+      "sheet": "TG-GOLD-H008",
+      "row": 5,
+      "title": "GFLB Selection Report",
+      "citation": "Dec. 1, 2025, PDF p. 13",
+      "publisher": "Gaming Facility Location Board",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "url_origin": "workbook",
+      "locator": "PDF p. 13",
+      "published_on": "2025-12-01",
+      "evidence_status": "Commitment documented",
+      "specific_evidence": "Records up to $10 million in capital funding and $5 million in annual support.",
+      "notes": "The Board records the increase from $3 million during the CAC process."
+    },
+    {
+      "sheet": "TG-GOLD-H008",
+      "row": 6,
+      "title": "Final Draft CAC Proposal and Amendments",
+      "citation": "Sept. 19, 2025, Public Safety",
+      "publisher": "Bally’s Corporation",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+      "url_origin": "unchanged pilot source cross-reference",
+      "locator": "Public Safety",
+      "published_on": "2025-09-19",
+      "evidence_status": "Direct applicant confirmation",
+      "specific_evidence": "Bally’s identifies the NYPD 45th Precinct and confirms up to $10 million for the substation and $5 million annually for staffing and support.",
+      "notes": "The capital amount is a cap. The earlier annual figure was $3 million."
+    },
+    {
+      "sheet": "TG-GOLD-H008",
+      "row": 7,
+      "title": "Executed Gaming Facility License",
+      "citation": "Exhibit 1 §§ 3 and 10",
+      "publisher": "NYS Gaming Commission",
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf#page=3",
+      "url_origin": "unchanged pilot source cross-reference",
+      "locator": "Exhibit 1 §§ 3 and 10",
+      "published_on": null,
+      "evidence_status": "Reporting requirement",
+      "specific_evidence": "Requires public progress reports and independent monitoring of community benefit milestones.",
+      "notes": "Workforce diversity and demographic data are included in the reporting requirement."
+    }
+  ],
+  "provenance": {
+    "workbook": "Golden Dataset (6).xlsx",
+    "sha256": "2da588b49b311957885ed7ff98bcd31c49e9d3ef8e99a761a3e9e5fcdb360099",
+    "identity": {
+      "sheet": "gold commitments",
+      "row": 22
+    },
+    "detail_sheet": "TG-GOLD-H008",
+    "detail_internal_id_cell": "B1",
+    "workbook_valid_flag": 1,
+    "workbook_split": "heldout_provisional",
+    "workbook_evidence_status": "not yet due",
+    "workbook_fields": {
+      "gold_id": "TG-GOLD-H008",
+      "document_id": "GFLB-SEL-2025-12-01",
+      "page_section": "pdf p.13; Bally’s Bronx: Local Impact Siting",
+      "char_start": 29737.0,
+      "char_end": 29906.0,
+      "commitment_text": "Bally’s committed to mitigate these impacts through a capital investment of up to $10 million for a new police substation and $5 million in annual public safety support.",
+      "normalized_statement": "Bally's committed up to $10 million for a new police substation and $5 million per year in public safety support.",
+      "obligation_type": "Contractual commitment",
+      "responsible_entity": "Bally’s Corporation",
+      "amount_value": "up to $10 million (capital); $5 million annual",
+      "term_periodicity": "one-time capital; annual support",
+      "geographic_scope": "Bronx",
+      "beneficiary_category": "public safety",
+      "beneficiary_named": "new police substation",
+      "condition_contingency": "none stated",
+      "milestone": "none stated",
+      "evidence_status": "not yet due",
+      "confidence": "High",
+      "adjudication_note": "none",
+      "duplicate_of": "none",
+      "notes": "Annual amount increased from $3M to $5M during the CAC process (next sentence).",
+      "evaluation_split": "heldout_provisional",
+      "manually annotated valid?": 1.0
+    },
+    "detail_research_cutoff": null,
+    "evaluation_use": "22-case annotated benchmark; development-exposed cases included",
+    "reference_preparation": "Previously frozen fact and condition wording; A1:F18 and the master query verified against Golden (6)."
+  }
+}

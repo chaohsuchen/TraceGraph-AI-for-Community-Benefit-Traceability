@@ -1,0 +1,284 @@
+{
+  "records": {
+    "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf": {
+      "url": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+      "final": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+      "redirects": [],
+      "length": 1298721,
+      "body_sha256": "67e1549cac89ccf938e33718ef7e27e79cee419278bff4bce65f77f4471837a3"
+    },
+    "https://ny.eater.com/news/24445921/major-food-group-restaurants-hard-rock-hotel-metropolitan-park-queens-food-hall-citi-field": {
+      "url": "https://ny.eater.com/news/24445921/major-food-group-restaurants-hard-rock-hotel-metropolitan-park-queens-food-hall-citi-field",
+      "final": "https://ny.eater.com/news/24445921/major-food-group-restaurants-hard-rock-hotel-metropolitan-park-queens-food-hall-citi-field",
+      "redirects": [],
+      "length": 302766,
+      "body_sha256": "346fd4934c09893d5ed8283862aa4a127c69e73a000cf52102bad7f89f430b44"
+    },
+    "https://nycasinos.ny.gov/ballys-bronx-application-materials": {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "final": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "redirects": [],
+      "length": 330903,
+      "body_sha256": "8042fadc0bc7bd75f779e35878821e6fdc14b4f887b63613980c29ca7081680b"
+    },
+    "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean": {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean",
+      "final": "https://nycasinos.ny.gov/system/files/documents/2025/10/ballys.executivesummary.supplement.clean_redacted.pdf",
+      "redirects": [
+        "https://nycasinos.ny.gov/system/files/documents/2025/10/ballys.executivesummary.supplement.clean_redacted.pdf"
+      ],
+      "length": 180091,
+      "body_sha256": "e80e8225a63b4328d2a55f59743914ce8346a3dfc24ad1f43fd7611960df4145"
+    },
+    "https://nycasinos.ny.gov/ballys-new-york-casino-diversity-framework-current-and-planned-diversity-efforts-anticipated": {
+      "url": "https://nycasinos.ny.gov/ballys-new-york-casino-diversity-framework-current-and-planned-diversity-efforts-anticipated",
+      "final": "https://nycasinos.ny.gov/system/files/documents/2025/07/evaldiv3.-ballys.-anticipatedcomposition_redacted.pdf",
+      "redirects": [
+        "https://nycasinos.ny.gov/system/files/documents/2025/07/evaldiv3.-ballys.-anticipatedcomposition_redacted.pdf"
+      ],
+      "length": 202427,
+      "body_sha256": "6dc526df6bb3f33ea159cd8e9b8b6e82803bb0bce9f1d8cf0543a560c5ed6a33"
+    },
+    "https://nycasinos.ny.gov/ballys-new-york-casino-local-impact-siting-mitigating-potential-impacts-communities-measures": {
+      "url": "https://nycasinos.ny.gov/ballys-new-york-casino-local-impact-siting-mitigating-potential-impacts-communities-measures",
+      "final": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalloc4.ballys.communities_redacted.pdf",
+      "redirects": [
+        "https://nycasinos.ny.gov/system/files/documents/2025/07/evalloc4.ballys.communities_redacted.pdf"
+      ],
+      "length": 1433589,
+      "body_sha256": "07f14e80f109f547327ac66d13428972d14df6765b78dbe55edf9c81dc9b4836"
+    },
+    "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-organized-labor-employees": {
+      "url": "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-organized-labor-employees",
+      "final": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworklabor1.ballys.employees_redacted.pdf",
+      "redirects": [
+        "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworklabor1.ballys.employees_redacted.pdf"
+      ],
+      "length": 263129,
+      "body_sha256": "2aeedbe23fe5ab40eff8c8da15053b8b774cb7e8f1d4151028f40ff79b24a526"
+    },
+    "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026": {
+      "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "final": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "redirects": [
+        "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+      ],
+      "length": 3664906,
+      "body_sha256": "29a46b0fb1c1276298f483d9adc26a1dba3a55d163c2b5a71d05c6084a2dcfd5"
+    },
+    "https://nycasinos.ny.gov/resorts-world-new-york-city-local-impact-siting-mitigating-potential-impacts-communities-measures-0": {
+      "url": "https://nycasinos.ny.gov/resorts-world-new-york-city-local-impact-siting-mitigating-potential-impacts-communities-measures-0",
+      "final": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc4.rwnyc_.communities_redacted_redactedrevised.pdf",
+      "redirects": [
+        "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc4.rwnyc_.communities_redacted_redactedrevised.pdf"
+      ],
+      "length": 729120,
+      "body_sha256": "b18fd132e89bda1b4bf631397054d4625fb535dd13319f55c28d6c4db87f3a94"
+    },
+    "https://nycasinos.ny.gov/system/files/documents/2025/07/evaldiv9.ballys.diversitybusinessmodel_redacted.pdf": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evaldiv9.ballys.diversitybusinessmodel_redacted.pdf",
+      "final": "https://nycasinos.ny.gov/system/files/documents/2025/07/evaldiv9.ballys.diversitybusinessmodel_redacted.pdf",
+      "redirects": [],
+      "length": 335163,
+      "body_sha256": "0ad71974c726d3b15bf94c2be40f925ad5ea9e3e67bce7be505c815406bf1e71"
+    },
+    "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+      "final": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+      "redirects": [],
+      "length": 812932,
+      "body_sha256": "e9791515e7e8058f29eb9819abb6a09bdb8571071a72040f57b33cf166a33713"
+    },
+    "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+      "final": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+      "redirects": [],
+      "length": 1148830,
+      "body_sha256": "4e2db3314ad61df8a0215b5b71590538db677c72899571114bc69bc3a3270ccd"
+    },
+    "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "final": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "redirects": [],
+      "length": 141155,
+      "body_sha256": "ba309718ca4b1025edeee0316ea4433c094fdd2a494d029fdefa7041b81e30fc"
+    },
+    "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "final": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "redirects": [],
+      "length": 304143,
+      "body_sha256": "01186eabfd69644de611d36fc773090519835745e55c179747faf2f148c8b552"
+    },
+    "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf",
+      "final": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf",
+      "redirects": [],
+      "length": 197752,
+      "body_sha256": "f3f03a13e76ffa38162d5119005e95f17cde634ec50541a80c95f88bc30559e1"
+    },
+    "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+      "final": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+      "redirects": [],
+      "length": 778808,
+      "body_sha256": "eeddc4547a451ccacc3b4ffc0dd1f6946a5ec667d2a065ca0d03d00e7c8ae2fe"
+    },
+    "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "final": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "redirects": [],
+      "length": 1123879,
+      "body_sha256": "dc93d5c86d5e63f1a42fe0ab6f9d4be6febf6e1c371e1a347d84dd1979c105e4"
+    },
+    "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+      "final": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+      "redirects": [],
+      "length": 382760,
+      "body_sha256": "8e4672eac24318cd36d7c9d055fb196f693154494f5fe8cb5ae8656aa6264b48"
+    },
+    "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys.pdf": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys.pdf",
+      "final": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys.pdf",
+      "redirects": [],
+      "length": 166145,
+      "body_sha256": "aaee83ccbe61303cb3e2f5a252faf1888ef8aa1d16f85bfb3204c845113a6e88"
+    },
+    "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "failure": "no_readable_response"
+    },
+    "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "final": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "redirects": [],
+      "length": 4872069,
+      "body_sha256": "865aaed2aa0bc322b2a189c4a016a4fa75de9b6ea8a5e9191f273cf491696115"
+    },
+    "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "final": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "redirects": [],
+      "length": 3664906,
+      "body_sha256": "29a46b0fb1c1276298f483d9adc26a1dba3a55d163c2b5a71d05c6084a2dcfd5"
+    },
+    "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "final": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "redirects": [],
+      "length": 576610,
+      "body_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc"
+    }
+  },
+  "pairs": [
+    {
+      "case": "TG-GOLD-A034",
+      "new": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "same_host_old_urls": [
+        "https://nycasinos.ny.gov/resorts-world-new-york-city-local-impact-siting-mitigating-potential-impacts-communities-measures-0",
+        "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026"
+      ],
+      "matches": [
+        {
+          "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+          "relationship": "identical_response_bytes"
+        }
+      ]
+    },
+    {
+      "case": "TG-GOLD-H001",
+      "new": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "same_host_old_urls": [
+        "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+        "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+        "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf"
+      ],
+      "matches": []
+    },
+    {
+      "case": "TG-GOLD-H002",
+      "new": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+      "same_host_old_urls": [],
+      "matches": []
+    },
+    {
+      "case": "TG-GOLD-H002",
+      "new": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "same_host_old_urls": [
+        "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+        "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+        "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys.pdf",
+        "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf"
+      ],
+      "matches": []
+    },
+    {
+      "case": "TG-GOLD-H003",
+      "new": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "same_host_old_urls": [
+        "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+        "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "https://nycasinos.ny.gov/ballys-new-york-casino-local-impact-siting-mitigating-potential-impacts-communities-measures",
+        "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+        "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean"
+      ],
+      "matches": []
+    },
+    {
+      "case": "TG-GOLD-H005",
+      "new": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "same_host_old_urls": [
+        "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+        "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+        "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+        "https://nycasinos.ny.gov/ballys-bronx-application-materials"
+      ],
+      "matches": []
+    },
+    {
+      "case": "TG-GOLD-H007",
+      "new": "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-organized-labor-employees",
+      "same_host_old_urls": [
+        "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+        "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+        "https://nycasinos.ny.gov/ballys-new-york-casino-diversity-framework-current-and-planned-diversity-efforts-anticipated",
+        "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+        "https://nycasinos.ny.gov/system/files/documents/2025/07/evaldiv9.ballys.diversitybusinessmodel_redacted.pdf",
+        "https://nycasinos.ny.gov/ballys-bronx-application-materials"
+      ],
+      "matches": [
+        {
+          "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+          "relationship": "old_page_links_to_new_attachment"
+        }
+      ]
+    },
+    {
+      "case": "TG-GOLD-H023",
+      "new": "https://ny.eater.com/news/24445921/major-food-group-restaurants-hard-rock-hotel-metropolitan-park-queens-food-hall-citi-field",
+      "same_host_old_urls": [],
+      "matches": []
+    },
+    {
+      "case": "TG-GOLD-H030",
+      "new": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "same_host_old_urls": [
+        "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+      ],
+      "matches": []
+    },
+    {
+      "case": "TG-GOLD-H032",
+      "new": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "same_host_old_urls": [
+        "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+        "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+        "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+        "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf"
+      ],
+      "matches": []
+    }
+  ]
+}

@@ -1,0 +1,345 @@
+{
+  "case_id": "TG-GOLD-H030",
+  "query": "HRMP aims for 6 percent service-disabled veterans but considers 2 percent more realistic.",
+  "facts": [
+    {
+      "id": "G1",
+      "text": "The Board reported a 6% service-disabled-veteran aspiration for Metropolitan Park's operational workforce.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H030",
+          "row": 5
+        }
+      ]
+    },
+    {
+      "id": "G2",
+      "text": "The Board reported 2% as HRMP's more realistic forecast for the operational service-disabled-veteran share.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H030",
+          "row": 5
+        }
+      ]
+    },
+    {
+      "id": "G3",
+      "text": "The applicant's anticipated workforce breakdown identifies approximately 6% as living with a disability.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H030",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "G4",
+      "text": "The applicant's anticipated workforce breakdown separately identifies approximately 2% veteran status.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H030",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "G5",
+      "text": "The March 2026 operational summary retains the 6% aim but omits the 2% realism clause.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H030",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "G6",
+      "text": "The HRMP license requires reporting on construction and operational workforce demographics.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H030",
+          "row": 8
+        }
+      ]
+    },
+    {
+      "id": "G7",
+      "text": "Regulatory review considers good-faith diversity efforts and allows reasonable deviations.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H030",
+          "row": 9
+        }
+      ]
+    },
+    {
+      "id": "G8",
+      "text": "The applicant reported 2% veteran identification at existing gaming locations in 2024.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H030",
+          "row": 10
+        }
+      ]
+    },
+    {
+      "id": "G9",
+      "text": "CPC publicized a September 2026 Metropolitan Park employment information session.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H030",
+          "row": 11
+        }
+      ]
+    },
+    {
+      "id": "G10",
+      "text": "HRMP's proposed community recruitment channels included service-disabled veterans.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H030",
+          "row": 12
+        }
+      ]
+    },
+    {
+      "id": "G11",
+      "text": "The applicant's construction participation metric uses FTE hours worked.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H030",
+          "row": 13
+        }
+      ]
+    },
+    {
+      "id": "G12",
+      "text": "The applicant separately made a 6% supplier utilization commitment for service-disabled-veteran-owned businesses.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H030",
+          "row": 14
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "K1",
+      "text": "The measured operational workforce at HRMP reached its 6% service-disabled-veteran hiring aspiration, using project-specific employees and a defined denominator.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H030",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H030",
+          "row": 6
+        },
+        {
+          "sheet": "TG-GOLD-H030",
+          "row": 18
+        }
+      ]
+    }
+  ],
+  "delivery_applicable": true,
+  "reference_verdict": {
+    "status": "partially corroborated",
+    "reasoning": "Recommend Target / goal and Medium confidence. Partial corroboration concerns reconstruction of the promise, not attainment. A 6% aspiration and 2% forecast can coexist, while applicant disability and general-veteran categories leave the SDV basis unresolved. The later report changes operational wording without proving an approved amendment. License reporting and good-faith duties are binding, but no operational SDV numerator, denominator or achieved percentage was located. Recruitment publicity, construction hours, existing-property veteran data and supplier participation do not verify the operational target.",
+    "delivery_applicable": true,
+    "source_refs": [
+      {
+        "sheet": "TG-GOLD-H030",
+        "row": 17
+      },
+      {
+        "sheet": "TG-GOLD-H030",
+        "row": 18
+      }
+    ]
+  },
+  "sources": [
+    {
+      "sheet": "TG-GOLD-H030",
+      "row": 5,
+      "title": "GFLB Selection Document",
+      "citation": "Dec.1, 2025; PDF p.21; overview p.10",
+      "publisher": "Gaming Facility Location Board",
+      "url": null,
+      "url_origin": null,
+      "locator": "Dec.1, 2025; PDF p.21; overview p.10",
+      "published_on": null,
+      "evidence_status": "Goal and forecast documented",
+      "specific_evidence": "Places the 6% service-disabled-veteran aspiration and 2% realistic expectation in the operational workforce paragraph. The Board characterizes applicants' diversity promises as best-efforts pledges. A higher goal and lower feasibility forecast are not inherently contradictory.",
+      "notes": "Preserve the historical statement. Do not treat either percentage as an achieved workforce rate or as a supplier-spending measure."
+    },
+    {
+      "sheet": "TG-GOLD-H030",
+      "row": 6,
+      "title": "Applicant anticipated workforce composition",
+      "citation": "June25, 2025; PDF pp.2-3",
+      "publisher": "Queens Future / Hard Rock Metropolitan Park; hosted by GFLB",
+      "url": null,
+      "url_origin": null,
+      "locator": "June25, 2025; PDF pp.2-3",
+      "published_on": null,
+      "evidence_status": "Metric category remains unresolved",
+      "specific_evidence": "Separately labels approximately 6% as living with a disability and 2% as veteran status. The projected composition is qualified as an aspirational long-term forecast supported by good-faith efforts, rather than a directly measured SDV workforce rate.",
+      "notes": "Disability and general veteran categories do not identify service-connected disability. A direct SDV classification and defined denominator are required."
+    },
+    {
+      "sheet": "TG-GOLD-H030",
+      "row": 7,
+      "title": "GFLB Report and Findings",
+      "citation": "March2026; PDF p.4 disclaimer; p.32 operations; p.89 construction",
+      "publisher": "Gaming Facility Location Board",
+      "url": null,
+      "url_origin": null,
+      "locator": "March2026; PDF p.4 disclaimer; p.32 operations; p.89 construction",
+      "published_on": null,
+      "evidence_status": "Later summary wording differs",
+      "specific_evidence": "The main operational paragraph retains a minimum 6% SDV aim but omits the 2% realism clause. The construction appendix still discusses a 6% goal and approximately 2% forecast. The report cautions that summaries can differ from application material.",
+      "notes": "Omission of the operational 2% clause is not proof of an approved amendment; the remaining construction forecast has a different phase."
+    },
+    {
+      "sheet": "TG-GOLD-H030",
+      "row": 8,
+      "title": "Queens Future executed form gaming license",
+      "citation": "Dec.19, 2025 letter; PDF p.4 Exhibit1 and General Condition3",
+      "publisher": "NYS Gaming Commission",
+      "url": null,
+      "url_origin": null,
+      "locator": "Dec.19, 2025 letter; PDF p.4 Exhibit1 and General Condition3",
+      "published_on": null,
+      "evidence_status": "Binding procedural duties",
+      "specific_evidence": "Requires material performance consistent with application and CAC commitments and public progress reports containing construction and operational workforce demographics. The five-page license does not expressly fix this row's 6% or 2% numerical SDV employment term.",
+      "notes": "General incorporation and reporting duties do not independently resolve the operative category or guarantee attainment of a specific percentage."
+    },
+    {
+      "sheet": "TG-GOLD-H030",
+      "row": 9,
+      "title": "NYSGC casino gaming rules",
+      "citation": "Updated Dec.31, 2025; PDF pp.61-63 Part5312; p.32 Rule5301.10(a)",
+      "publisher": "NYS Gaming Commission",
+      "url": null,
+      "url_origin": null,
+      "locator": "Updated Dec.31, 2025; PDF pp.61-63 Part5312; p.32 Rule5301.10(a)",
+      "published_on": null,
+      "evidence_status": "Planning and good-faith framework",
+      "specific_evidence": "Requires annual Commission-approved diversity plans, self-assessment and performance reports. Compliance review considers commitment consistency, reasonable deviations and good-faith efforts; material workforce changes require written approval. A numerical shortfall alone does not establish a regulatory violation.",
+      "notes": "No HRMP-specific approved diversity plan or approved 2% replacement was located. Missing public evidence does not prove noncompliance."
+    },
+    {
+      "sheet": "TG-GOLD-H030",
+      "row": 10,
+      "title": "Applicant historical workforce demographics",
+      "citation": "June25, 2025 document; revised-redaction copy; PDF pp.2,4 footnote2",
+      "publisher": "Hard Rock; hosted by GFLB",
+      "url": null,
+      "url_origin": null,
+      "locator": "June25, 2025 document; revised-redaction copy; PDF pp.2,4 footnote2",
+      "published_on": null,
+      "evidence_status": "Historical category clarified",
+      "specific_evidence": "Reports 2% veteran identification across existing gaming locations in 2024. Footnote2 says accurate service-disabled-veteran data was not formally collected each year and total veteran-status measurement began in 2023. These figures do not measure HRMP operational SDV attainment.",
+      "notes": "Existing-property, all-veteran data uses a different population from HRMP and does not verify the row's lower forecast."
+    },
+    {
+      "sheet": "TG-GOLD-H030",
+      "row": 11,
+      "title": "CPC employment information session announcement",
+      "citation": "Sept.21-29, 2026 notice; advertised event Sept.29",
+      "publisher": "Chinese-American Planning Council",
+      "url": null,
+      "url_origin": null,
+      "locator": "Sept.21-29, 2026 notice; advertised event Sept.29",
+      "published_on": null,
+      "evidence_status": "Recruitment outreach advertised",
+      "specific_evidence": "Advertises a September29, 2026 employment information session with the HRMP hiring team covering current and upcoming opportunities. This external participating partner announcement supports recruitment publicity, not attendance, completed hires or an SDV-specific employment outcome.",
+      "notes": "An event announcement is not a post-event results report. No SDV count, workforce denominator or achieved percentage is supplied."
+    },
+    {
+      "sheet": "TG-GOLD-H030",
+      "row": 12,
+      "title": "Applicant job opportunities submission",
+      "citation": "June25, 2025; PDF pp.4-5",
+      "publisher": "Queens Future / Hard Rock Metropolitan Park; hosted by GFLB",
+      "url": null,
+      "url_origin": null,
+      "locator": "June25, 2025; PDF pp.4-5",
+      "published_on": null,
+      "evidence_status": "Recruitment plan documented",
+      "specific_evidence": "Describes community-partner recruitment intended to include service-disabled veterans and lists CPC among the partners. The plan links the intended recruitment channel to later external publicity, but does not quantify hires, retention or project-specific SDV composition.",
+      "notes": "Applicant-origin plan and MOU descriptions remain distinct from measured implementation. Do not infer an achieved employment percentage from a partnership."
+    },
+    {
+      "sheet": "TG-GOLD-H030",
+      "row": 13,
+      "title": "Applicant construction workforce goals",
+      "citation": "June25, 2025; PDF p.3",
+      "publisher": "Queens Future / Hard Rock Metropolitan Park; hosted by GFLB",
+      "url": null,
+      "url_origin": null,
+      "locator": "June25, 2025; PDF p.3",
+      "published_on": null,
+      "evidence_status": "Different phase and denominator",
+      "specific_evidence": "Describes the combined construction workforce participation target using a ratio of total FTE hours worked. This construction measure is separate from the operational workforce composition in H030 and cannot supply its missing employee denominator or achieved SDV rate.",
+      "notes": "Construction hours are not interchangeable with operational headcount or FTEs. Supplier contract shares are another separate measure."
+    },
+    {
+      "sheet": "TG-GOLD-H030",
+      "row": 14,
+      "title": "October executive summary supplement",
+      "citation": "Oct.14, 2025; PDF p.5; duplicate tracked version p.10",
+      "publisher": "Queens Future / Hard Rock Metropolitan Park; hosted by GFLB",
+      "url": null,
+      "url_origin": null,
+      "locator": "Oct.14, 2025; PDF p.5; duplicate tracked version p.10",
+      "published_on": null,
+      "evidence_status": "Separate supplier goal documented",
+      "specific_evidence": "Separately commits to a 6% service-disabled-veteran-owned-business utilization goal alongside 30% MWBE utilization. The supplier-oriented pledge addresses business participation, rather than the proportion of employees who are service-disabled veterans, and cannot verify H030 employment performance.",
+      "notes": "Keep the SDVOB business goal separate from SDV employee composition. The tracked version is a duplicate, not independent corroboration."
+    }
+  ],
+  "provenance": {
+    "workbook": "Golden Dataset (6).xlsx",
+    "sha256": "2da588b49b311957885ed7ff98bcd31c49e9d3ef8e99a761a3e9e5fcdb360099",
+    "identity": {
+      "sheet": "gold commitments",
+      "row": 85
+    },
+    "detail_sheet": "TG-GOLD-H030",
+    "detail_internal_id_cell": "B1",
+    "workbook_valid_flag": 1,
+    "workbook_split": "heldout_provisional",
+    "workbook_evidence_status": "conflicting",
+    "workbook_fields": {
+      "gold_id": "TG-GOLD-H030",
+      "document_id": "GFLB-SEL-2025-12-01",
+      "page_section": "pdf p.21; Hard Rock Metropolitan Park: Diversity Framework",
+      "char_start": 48600.0,
+      "char_end": 48689.0,
+      "commitment_text": "HRMP aims for 6 percent service-disabled veterans but considers 2 percent more realistic.",
+      "normalized_statement": "HRMP aims for 6 percent service-disabled veterans but considers 2 percent more realistic.",
+      "obligation_type": "Unresolved / ambiguous",
+      "responsible_entity": "Queens Future, LLC d/b/a Hard Rock Metropolitan Park",
+      "amount_value": "6 percent (aim) vs 2 percent (expected)",
+      "term_periodicity": "operations",
+      "geographic_scope": "unspecified",
+      "beneficiary_category": "service-disabled veterans",
+      "beneficiary_named": "none named",
+      "condition_contingency": "none stated",
+      "milestone": "none stated",
+      "evidence_status": "conflicting",
+      "confidence": "High",
+      "adjudication_note": "Obligor states two figures for the same goal.",
+      "duplicate_of": "none",
+      "notes": "none",
+      "evaluation_split": "heldout_provisional",
+      "manually annotated valid?": 1.0
+    },
+    "detail_research_cutoff": "2026-11-06",
+    "evaluation_use": "22-case annotated benchmark; development-exposed cases included",
+    "reference_preparation": "Locally curated factual hypotheses and delivery conditions from the cited Golden (6) cells; prior to research."
+  }
+}

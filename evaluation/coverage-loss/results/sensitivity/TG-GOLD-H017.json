@@ -1,0 +1,91 @@
+{
+  "fingerprint": "86d0fe1fb2a3a5140d3c9afea823099ee2f8869105b2cc5ed69017283d0f17e4",
+  "reversed_original_ids": [
+    "p6",
+    "p5",
+    "p4",
+    "p3",
+    "p2",
+    "p1"
+  ],
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 4.718999999924563,
+      "request_id": "req_39fee74c4e40450b9595b600aecbe478",
+      "usage": {
+        "input_tokens": 2380,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 427,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2807
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "decisions": [
+    {
+      "gold_id": "G7",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p6"
+      ],
+      "reason": "Passage p6 states that community benefits valued at $761 million include the listed items, directly supporting a chart itemization of $761 million upfront; it does not mention the additional $150 million ongoing."
+    },
+    {
+      "gold_id": "G8",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p6"
+      ],
+      "reason": "p6 gives $761 million in community benefits, not an executive-summary claim of about $1 billion."
+    },
+    {
+      "gold_id": "G9",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage mentions an executive summary using $1.75 billion for investment into community needs."
+    },
+    {
+      "gold_id": "G10",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt states that HRMP's license requires milestones and budgets for community benefits proposed in its application."
+    },
+    {
+      "gold_id": "G11",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage schedules $150 million of fund payments during 2031–2060."
+    },
+    {
+      "gold_id": "G12",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt reports distributing $2 million in grants in 2026."
+    },
+    {
+      "gold_id": "G13",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p1",
+        "p2"
+      ],
+      "reason": "The passages say HRMP is working to secure MTA approvals and had conceptual approval at the 30% design stage, but they do not say news coverage reported MTA had yet to agree to the overhaul."
+    }
+  ]
+}

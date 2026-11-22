@@ -1,0 +1,938 @@
+{
+  "input_sha256": "dee1d6563cdfb176a4fcaa856ee02c6bdeb65c8e2d4e5637d42adac3334df54c",
+  "judge_model": "gpt-5.4",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "judge_version": "tracegraph-nli-v4-owned-quotes",
+  "started_at": "2026-11-22T10:18:10.328393+00:00",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 31.07799999997951,
+      "request_id": "req_1a5cd7978658488a8bcc2c3ccac0c24a",
+      "usage": {
+        "input_tokens": 4204,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 2816
+        },
+        "output_tokens": 3765,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 7969
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 9.577999999979511,
+      "request_id": "req_bc110805c5c846c4a93802f5bd550ad2",
+      "usage": {
+        "input_tokens": 9411,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 2816
+        },
+        "output_tokens": 1050,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 10461
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "evidence": {
+    "identity": {
+      "label": "MISMATCH",
+      "reason": "The question says Bally's plans to exceed the 10 percent renewable energy requirement, but the returned commitment and cited text identify a plan to meet or ensure at least 10 percent, not to exceed it."
+    },
+    "findings": [
+      {
+        "finding_id": "finding-89667e14-2835-48ca-a1a7-b817a8f57799",
+        "claims": [
+          {
+            "claim": "Bally's application describes plans for procuring or generating on-site at least 10 percent of the facility's annual electricity consumption from NYSERDA-qualified renewable energy sources.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-d5b5010a-5ef8-4ad3-88ab-86f8fbcd2389"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-d5b5010a-5ef8-4ad3-88ab-86f8fbcd2389",
+                "quote": "A description of plans for procuring or generating on-site at least 10 percent of the facility’s annual electricity consumption from renewable energy sources qualified by the New York State Energy Research and Development Authority (NYSERDA).",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states plans for at least 10 percent from NYSERDA-qualified renewable sources, via procurement or on-site generation."
+              }
+            ],
+            "reason": "The quoted application text expressly states plans for at least 10 percent from NYSERDA-qualified renewable sources."
+          },
+          {
+            "claim": "This plan was documented in records posted as final by May 5, 2026.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-5a582c53-0956-416e-954a-a1189a8a40a4"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-5a582c53-0956-416e-954a-a1189a8a40a4",
+                "quote": "As of May 5, 2026, the following Bally's records denoted with “REVISED REDACTIONS” suffixes have undergone the statutory review process, are considered final, and are posted below.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt states that as of May 5, 2026 the listed Bally's records were final and posted."
+              }
+            ],
+            "reason": "The dated posting excerpt states the listed Bally's records were considered final and posted as of May 5, 2026."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-320da05e-3f60-4ffc-a785-33da5d5bf262",
+        "claims": [
+          {
+            "claim": "Beyond on-site generation, the remaining renewable electricity needed to meet at least 10 percent of the facility's annual electricity consumption will be procured from NYSERDA-qualified renewable energy sources.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-e74782d3-31e2-4482-8f86-a38297184675"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-e74782d3-31e2-4482-8f86-a38297184675",
+                "quote": "In addition to on-site generation, the remainder of the renewable energy needed to meet at least 10 percent of the facility’s annual electricity consumption will be procured from renewable energy sources qualified by the New York State Energy Research and Development Authority (NYSERDA).",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly says the remainder beyond on-site generation will be procured from NYSERDA-qualified renewable sources to meet at least 10 percent."
+              }
+            ],
+            "reason": "The excerpt expressly states off-site procurement of the remainder from NYSERDA-qualified sources."
+          },
+          {
+            "claim": "Bally's includes NYSERDA Tier IV NYC-centric renewable energy in that procurement plan.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-3ca43975-7aea-4ea7-9361-5b615a09c84e"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-3ca43975-7aea-4ea7-9361-5b615a09c84e",
+                "quote": "Bronx Bally’s will also embrace NYSERDA Tier IV NYC centric renewable energy with the goal to increase the penetration of renewable energy in New York City through eligible resources located in NYC or delivered through a new transmission interconnection to NYC.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt states Bronx Bally's will embrace NYSERDA Tier IV NYC-centric renewable energy."
+              }
+            ],
+            "reason": "The cited text specifically says Bronx Bally's will embrace NYSERDA Tier IV NYC-centric renewable energy."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-0e29fa31-2262-4e5f-ba32-61af66512271",
+        "claims": [
+          {
+            "claim": "Bally's proposes photovoltaic solar panels across the parking garage and select roof areas.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-5f778b87-4721-44f2-81c1-6593088e2318"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-5f778b87-4721-44f2-81c1-6593088e2318",
+                "quote": "the resort plans to install photovoltaic (PV) solar panels across the parking garage and select roof areas",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the resort plans to install PV solar panels in those locations."
+              }
+            ],
+            "reason": "The excerpt expressly describes planned PV solar panels on the parking garage and select roof areas."
+          },
+          {
+            "claim": "These photovoltaic solar installations total approximately 46,000 square feet.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-5f778b87-4721-44f2-81c1-6593088e2318"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-5f778b87-4721-44f2-81c1-6593088e2318",
+                "quote": "Approximately 46,000-sq. ft. will be utilized for photovoltaic panels and associated inverters.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly gives the approximate area used for the photovoltaic installation."
+              }
+            ],
+            "reason": "The citation states approximately 46,000 square feet will be used."
+          },
+          {
+            "claim": "These areas are predicted to produce approximately 1.8 million kWh of carbon-free electricity per year.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-5f778b87-4721-44f2-81c1-6593088e2318"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-5f778b87-4721-44f2-81c1-6593088e2318",
+                "quote": "These areas are predicted to produce approximately 1.8 million kWh of carbon free electricity per year.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the predicted annual production amount."
+              }
+            ],
+            "reason": "The excerpt gives the predicted annual on-site solar output as about 1.8 million kWh."
+          },
+          {
+            "claim": "The on-site solar target is approximately 6 percent of annual energy consumption.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-b1d24917-6e86-46f9-97ea-90fbab86d3c3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-b1d24917-6e86-46f9-97ea-90fbab86d3c3",
+                "quote": "The target is approximately 6% of the annual energy consumption.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the target share of annual energy consumption."
+              }
+            ],
+            "reason": "The citation explicitly gives the on-site target as about 6 percent of annual energy consumption."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-bc844b42-6143-4243-8894-76148a812acf",
+        "claims": [
+          {
+            "claim": "As the gaming facility's design is finalized, the exact proportions between on-site generation and procured energy will be further refined.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-6d968e43-beff-49d2-a43c-e56b70089d50"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-6d968e43-beff-49d2-a43c-e56b70089d50",
+                "quote": "As the Gaming Facility’s design is finalized, the exact proportions of energy generated on-site versus energy procured will be further refined",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states future refinement of the proportions between on-site generation and procured energy."
+              }
+            ],
+            "reason": "The excerpt explicitly states the exact proportions will be further refined as design is finalized."
+          },
+          {
+            "claim": "That refinement will still ensure the target of at least 10 percent renewable energy consumption is met.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-6d968e43-beff-49d2-a43c-e56b70089d50"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-6d968e43-beff-49d2-a43c-e56b70089d50",
+                "quote": "to ensure the target of at least 10 percent renewable energy consumption is met.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the refinement is to ensure at least 10 percent renewable energy consumption is met."
+              }
+            ],
+            "reason": "The quoted text expressly says the target remains at least 10 percent."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-1",
+        "claims": [
+          {
+            "claim": "Bally's shall contract promptly with an independent third-party CMT firm proposed by Bally's and approved by the Commission.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "Bally’s shall contract promptly with and compensate appropriately an independent third-party CMT firm, proposed by Bally’s and approved by the Commission",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly imposes this contracting requirement."
+              }
+            ],
+            "reason": "The excerpt expressly requires Bally's to contract with a Commission-approved independent third-party CMT firm."
+          },
+          {
+            "claim": "That firm is to monitor and report to the Commission, with notice to Bally's board, on Bally's ongoing compliance with each element of the Application and Bally's regulatory obligations.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "to monitor and report to the Commission, with notice to the board of directors of Bally’s, as frequently as the Commission may request, on the ongoing compliance of Bally’s with each of the elements of the Application and the regulatory obligations of Bally’s",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the monitoring and reporting scope covers each element of the Application and regulatory obligations."
+              }
+            ],
+            "reason": "The quoted language expressly defines the monitoring and reporting duty and its scope."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-2",
+        "claims": [
+          {
+            "claim": "Each such report shall detail progress, set forth relevant budget and expenditure, and explain actual or anticipated delays in delivery of benefits proposed in the Application or Bally's other commitments.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-2-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-2-s",
+                "quote": "Each such report shall detail progress, set forth relevant budget and expenditure, and explain actual or anticipated delays in delivery of benefits proposed in the Application or Bally’s other commitments.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the required contents of each report."
+              }
+            ],
+            "reason": "The excerpt expressly sets out the reporting requirements for progress, budgets, expenditures, and delays."
+          },
+          {
+            "claim": "This would include the renewable-energy undertaking if it is treated as one of those commitments.",
+            "label": "NEUTRAL",
+            "citation_ids": [
+              "source-reread-2-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-2-s",
+                "quote": "benefits proposed in the Application or Bally’s other commitments",
+                "label": "NEUTRAL",
+                "reason": "The excerpt gives a category of reportable items but does not specifically identify the renewable-energy undertaking as one of them."
+              }
+            ],
+            "reason": "The excerpt does not specifically state that the renewable-energy undertaking is among the reportable commitments."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents the stricter claim that Bally's Bronx aims to exceed 10%; the returned findings only say at least 10% or ensure the target is met.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [
+          "finding-0e29fa31-2262-4e5f-ba32-61af66512271"
+        ],
+        "citation_ids": [
+          "support-5f778b87-4721-44f2-81c1-6593088e2318"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "A finding states Bally's proposes photovoltaic solar panels at the facility, and its cited excerpt directly supports that.",
+        "claim_links": [
+          {
+            "finding_id": "finding-0e29fa31-2262-4e5f-ba32-61af66512271",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "The claim directly states proposed on-site photovoltaic solar panels across facility areas."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-5f778b87-4721-44f2-81c1-6593088e2318",
+            "quote": "the resort plans to install photovoltaic (PV) solar panels across the parking garage and select roof areas",
+            "label": "ENTAILMENT",
+            "reason": "This directly establishes on-site solar photovoltaics at the Bronx facility."
+          }
+        ]
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [
+          "finding-320da05e-3f60-4ffc-a785-33da5d5bf262"
+        ],
+        "citation_ids": [
+          "support-e74782d3-31e2-4482-8f86-a38297184675"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "A finding says the remainder will be procured from NYSERDA-qualified renewable sources, and the excerpt directly supports that.",
+        "claim_links": [
+          {
+            "finding_id": "finding-320da05e-3f60-4ffc-a785-33da5d5bf262",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "The claim directly states off-site procurement from NYSERDA-qualified renewable sources."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-e74782d3-31e2-4482-8f86-a38297184675",
+            "quote": "the remainder of the renewable energy needed to meet at least 10 percent of the facility’s annual electricity consumption will be procured from renewable energy sources qualified by the New York State Energy Research and Development Authority (NYSERDA).",
+            "label": "ENTAILMENT",
+            "reason": "This directly establishes procurement of NYSERDA-qualified renewable energy beyond on-site generation."
+          }
+        ]
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [
+          "finding-0e29fa31-2262-4e5f-ba32-61af66512271"
+        ],
+        "citation_ids": [
+          "support-5f778b87-4721-44f2-81c1-6593088e2318"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "A finding states projected annual on-site solar production of about 1.8 million kWh, and the excerpt directly states that amount.",
+        "claim_links": [
+          {
+            "finding_id": "finding-0e29fa31-2262-4e5f-ba32-61af66512271",
+            "claim_index": 2,
+            "label": "ENTAILMENT",
+            "reason": "The claim directly states predicted production of approximately 1.8 million kWh per year."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-5f778b87-4721-44f2-81c1-6593088e2318",
+            "quote": "These areas are predicted to produce approximately 1.8 million kWh of carbon free electricity per year.",
+            "label": "ENTAILMENT",
+            "reason": "This directly gives the projected annual on-site solar production."
+          }
+        ]
+      },
+      {
+        "gold_id": "G5",
+        "finding_ids": [
+          "finding-89667e14-2835-48ca-a1a7-b817a8f57799",
+          "finding-bc844b42-6143-4243-8894-76148a812acf"
+        ],
+        "citation_ids": [
+          "support-d5b5010a-5ef8-4ad3-88ab-86f8fbcd2389",
+          "support-6d968e43-beff-49d2-a43c-e56b70089d50"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Returned findings state at least 10% of annual electricity consumption from renewable sources and ensuring the at-least-10% target is met; the excerpts directly support that minimum.",
+        "claim_links": [
+          {
+            "finding_id": "finding-89667e14-2835-48ca-a1a7-b817a8f57799",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "The claim directly states plans for at least 10 percent of annual electricity consumption from NYSERDA-qualified renewable sources."
+          },
+          {
+            "finding_id": "finding-bc844b42-6143-4243-8894-76148a812acf",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "The claim directly states ensuring the target of at least 10 percent renewable energy consumption is met."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-d5b5010a-5ef8-4ad3-88ab-86f8fbcd2389",
+            "quote": "at least 10 percent of the facility’s annual electricity consumption from renewable energy sources qualified by the New York State Energy Research and Development Authority (NYSERDA).",
+            "label": "ENTAILMENT",
+            "reason": "This directly establishes a minimum of 10 percent of annual facility electricity consumption from renewable sources."
+          },
+          {
+            "citation_id": "support-6d968e43-beff-49d2-a43c-e56b70089d50",
+            "quote": "to ensure the target of at least 10 percent renewable energy consumption is met.",
+            "label": "ENTAILMENT",
+            "reason": "This confirms the plan's minimum target is at least 10 percent."
+          }
+        ]
+      }
+    ]
+  },
+  "verdict_protocol": "two-stage-owned-citations-v4",
+  "judgment": {
+    "identity": {
+      "label": "MISMATCH",
+      "reason": "The question says Bally's plans to exceed the 10 percent renewable energy requirement, but the returned commitment and cited text identify a plan to meet or ensure at least 10 percent, not to exceed it."
+    },
+    "findings": [
+      {
+        "finding_id": "finding-89667e14-2835-48ca-a1a7-b817a8f57799",
+        "claims": [
+          {
+            "claim": "Bally's application describes plans for procuring or generating on-site at least 10 percent of the facility's annual electricity consumption from NYSERDA-qualified renewable energy sources.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-d5b5010a-5ef8-4ad3-88ab-86f8fbcd2389"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-d5b5010a-5ef8-4ad3-88ab-86f8fbcd2389",
+                "quote": "A description of plans for procuring or generating on-site at least 10 percent of the facility’s annual electricity consumption from renewable energy sources qualified by the New York State Energy Research and Development Authority (NYSERDA).",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states plans for at least 10 percent from NYSERDA-qualified renewable sources, via procurement or on-site generation."
+              }
+            ],
+            "reason": "The quoted application text expressly states plans for at least 10 percent from NYSERDA-qualified renewable sources."
+          },
+          {
+            "claim": "This plan was documented in records posted as final by May 5, 2026.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-5a582c53-0956-416e-954a-a1189a8a40a4"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-5a582c53-0956-416e-954a-a1189a8a40a4",
+                "quote": "As of May 5, 2026, the following Bally's records denoted with “REVISED REDACTIONS” suffixes have undergone the statutory review process, are considered final, and are posted below.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt states that as of May 5, 2026 the listed Bally's records were final and posted."
+              }
+            ],
+            "reason": "The dated posting excerpt states the listed Bally's records were considered final and posted as of May 5, 2026."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-320da05e-3f60-4ffc-a785-33da5d5bf262",
+        "claims": [
+          {
+            "claim": "Beyond on-site generation, the remaining renewable electricity needed to meet at least 10 percent of the facility's annual electricity consumption will be procured from NYSERDA-qualified renewable energy sources.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-e74782d3-31e2-4482-8f86-a38297184675"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-e74782d3-31e2-4482-8f86-a38297184675",
+                "quote": "In addition to on-site generation, the remainder of the renewable energy needed to meet at least 10 percent of the facility’s annual electricity consumption will be procured from renewable energy sources qualified by the New York State Energy Research and Development Authority (NYSERDA).",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly says the remainder beyond on-site generation will be procured from NYSERDA-qualified renewable sources to meet at least 10 percent."
+              }
+            ],
+            "reason": "The excerpt expressly states off-site procurement of the remainder from NYSERDA-qualified sources."
+          },
+          {
+            "claim": "Bally's includes NYSERDA Tier IV NYC-centric renewable energy in that procurement plan.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-3ca43975-7aea-4ea7-9361-5b615a09c84e"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-3ca43975-7aea-4ea7-9361-5b615a09c84e",
+                "quote": "Bronx Bally’s will also embrace NYSERDA Tier IV NYC centric renewable energy with the goal to increase the penetration of renewable energy in New York City through eligible resources located in NYC or delivered through a new transmission interconnection to NYC.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt states Bronx Bally's will embrace NYSERDA Tier IV NYC-centric renewable energy."
+              }
+            ],
+            "reason": "The cited text specifically says Bronx Bally's will embrace NYSERDA Tier IV NYC-centric renewable energy."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-0e29fa31-2262-4e5f-ba32-61af66512271",
+        "claims": [
+          {
+            "claim": "Bally's proposes photovoltaic solar panels across the parking garage and select roof areas.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-5f778b87-4721-44f2-81c1-6593088e2318"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-5f778b87-4721-44f2-81c1-6593088e2318",
+                "quote": "the resort plans to install photovoltaic (PV) solar panels across the parking garage and select roof areas",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the resort plans to install PV solar panels in those locations."
+              }
+            ],
+            "reason": "The excerpt expressly describes planned PV solar panels on the parking garage and select roof areas."
+          },
+          {
+            "claim": "These photovoltaic solar installations total approximately 46,000 square feet.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-5f778b87-4721-44f2-81c1-6593088e2318"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-5f778b87-4721-44f2-81c1-6593088e2318",
+                "quote": "Approximately 46,000-sq. ft. will be utilized for photovoltaic panels and associated inverters.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly gives the approximate area used for the photovoltaic installation."
+              }
+            ],
+            "reason": "The citation states approximately 46,000 square feet will be used."
+          },
+          {
+            "claim": "These areas are predicted to produce approximately 1.8 million kWh of carbon-free electricity per year.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-5f778b87-4721-44f2-81c1-6593088e2318"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-5f778b87-4721-44f2-81c1-6593088e2318",
+                "quote": "These areas are predicted to produce approximately 1.8 million kWh of carbon free electricity per year.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the predicted annual production amount."
+              }
+            ],
+            "reason": "The excerpt gives the predicted annual on-site solar output as about 1.8 million kWh."
+          },
+          {
+            "claim": "The on-site solar target is approximately 6 percent of annual energy consumption.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-b1d24917-6e86-46f9-97ea-90fbab86d3c3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-b1d24917-6e86-46f9-97ea-90fbab86d3c3",
+                "quote": "The target is approximately 6% of the annual energy consumption.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the target share of annual energy consumption."
+              }
+            ],
+            "reason": "The citation explicitly gives the on-site target as about 6 percent of annual energy consumption."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-bc844b42-6143-4243-8894-76148a812acf",
+        "claims": [
+          {
+            "claim": "As the gaming facility's design is finalized, the exact proportions between on-site generation and procured energy will be further refined.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-6d968e43-beff-49d2-a43c-e56b70089d50"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-6d968e43-beff-49d2-a43c-e56b70089d50",
+                "quote": "As the Gaming Facility’s design is finalized, the exact proportions of energy generated on-site versus energy procured will be further refined",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states future refinement of the proportions between on-site generation and procured energy."
+              }
+            ],
+            "reason": "The excerpt explicitly states the exact proportions will be further refined as design is finalized."
+          },
+          {
+            "claim": "That refinement will still ensure the target of at least 10 percent renewable energy consumption is met.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-6d968e43-beff-49d2-a43c-e56b70089d50"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-6d968e43-beff-49d2-a43c-e56b70089d50",
+                "quote": "to ensure the target of at least 10 percent renewable energy consumption is met.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the refinement is to ensure at least 10 percent renewable energy consumption is met."
+              }
+            ],
+            "reason": "The quoted text expressly says the target remains at least 10 percent."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-1",
+        "claims": [
+          {
+            "claim": "Bally's shall contract promptly with an independent third-party CMT firm proposed by Bally's and approved by the Commission.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "Bally’s shall contract promptly with and compensate appropriately an independent third-party CMT firm, proposed by Bally’s and approved by the Commission",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly imposes this contracting requirement."
+              }
+            ],
+            "reason": "The excerpt expressly requires Bally's to contract with a Commission-approved independent third-party CMT firm."
+          },
+          {
+            "claim": "That firm is to monitor and report to the Commission, with notice to Bally's board, on Bally's ongoing compliance with each element of the Application and Bally's regulatory obligations.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "to monitor and report to the Commission, with notice to the board of directors of Bally’s, as frequently as the Commission may request, on the ongoing compliance of Bally’s with each of the elements of the Application and the regulatory obligations of Bally’s",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the monitoring and reporting scope covers each element of the Application and regulatory obligations."
+              }
+            ],
+            "reason": "The quoted language expressly defines the monitoring and reporting duty and its scope."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-2",
+        "claims": [
+          {
+            "claim": "Each such report shall detail progress, set forth relevant budget and expenditure, and explain actual or anticipated delays in delivery of benefits proposed in the Application or Bally's other commitments.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-2-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-2-s",
+                "quote": "Each such report shall detail progress, set forth relevant budget and expenditure, and explain actual or anticipated delays in delivery of benefits proposed in the Application or Bally’s other commitments.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the required contents of each report."
+              }
+            ],
+            "reason": "The excerpt expressly sets out the reporting requirements for progress, budgets, expenditures, and delays."
+          },
+          {
+            "claim": "This would include the renewable-energy undertaking if it is treated as one of those commitments.",
+            "label": "NEUTRAL",
+            "citation_ids": [
+              "source-reread-2-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-2-s",
+                "quote": "benefits proposed in the Application or Bally’s other commitments",
+                "label": "NEUTRAL",
+                "reason": "The excerpt gives a category of reportable items but does not specifically identify the renewable-energy undertaking as one of them."
+              }
+            ],
+            "reason": "The excerpt does not specifically state that the renewable-energy undertaking is among the reportable commitments."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents the stricter claim that Bally's Bronx aims to exceed 10%; the returned findings only say at least 10% or ensure the target is met.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [
+          "finding-0e29fa31-2262-4e5f-ba32-61af66512271"
+        ],
+        "citation_ids": [
+          "support-5f778b87-4721-44f2-81c1-6593088e2318"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "A finding states Bally's proposes photovoltaic solar panels at the facility, and its cited excerpt directly supports that.",
+        "claim_links": [
+          {
+            "finding_id": "finding-0e29fa31-2262-4e5f-ba32-61af66512271",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "The claim directly states proposed on-site photovoltaic solar panels across facility areas."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-5f778b87-4721-44f2-81c1-6593088e2318",
+            "quote": "the resort plans to install photovoltaic (PV) solar panels across the parking garage and select roof areas",
+            "label": "ENTAILMENT",
+            "reason": "This directly establishes on-site solar photovoltaics at the Bronx facility."
+          }
+        ]
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [
+          "finding-320da05e-3f60-4ffc-a785-33da5d5bf262"
+        ],
+        "citation_ids": [
+          "support-e74782d3-31e2-4482-8f86-a38297184675"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "A finding says the remainder will be procured from NYSERDA-qualified renewable sources, and the excerpt directly supports that.",
+        "claim_links": [
+          {
+            "finding_id": "finding-320da05e-3f60-4ffc-a785-33da5d5bf262",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "The claim directly states off-site procurement from NYSERDA-qualified renewable sources."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-e74782d3-31e2-4482-8f86-a38297184675",
+            "quote": "the remainder of the renewable energy needed to meet at least 10 percent of the facility’s annual electricity consumption will be procured from renewable energy sources qualified by the New York State Energy Research and Development Authority (NYSERDA).",
+            "label": "ENTAILMENT",
+            "reason": "This directly establishes procurement of NYSERDA-qualified renewable energy beyond on-site generation."
+          }
+        ]
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [
+          "finding-0e29fa31-2262-4e5f-ba32-61af66512271"
+        ],
+        "citation_ids": [
+          "support-5f778b87-4721-44f2-81c1-6593088e2318"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "A finding states projected annual on-site solar production of about 1.8 million kWh, and the excerpt directly states that amount.",
+        "claim_links": [
+          {
+            "finding_id": "finding-0e29fa31-2262-4e5f-ba32-61af66512271",
+            "claim_index": 2,
+            "label": "ENTAILMENT",
+            "reason": "The claim directly states predicted production of approximately 1.8 million kWh per year."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-5f778b87-4721-44f2-81c1-6593088e2318",
+            "quote": "These areas are predicted to produce approximately 1.8 million kWh of carbon free electricity per year.",
+            "label": "ENTAILMENT",
+            "reason": "This directly gives the projected annual on-site solar production."
+          }
+        ]
+      },
+      {
+        "gold_id": "G5",
+        "finding_ids": [
+          "finding-89667e14-2835-48ca-a1a7-b817a8f57799",
+          "finding-bc844b42-6143-4243-8894-76148a812acf"
+        ],
+        "citation_ids": [
+          "support-d5b5010a-5ef8-4ad3-88ab-86f8fbcd2389",
+          "support-6d968e43-beff-49d2-a43c-e56b70089d50"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Returned findings state at least 10% of annual electricity consumption from renewable sources and ensuring the at-least-10% target is met; the excerpts directly support that minimum.",
+        "claim_links": [
+          {
+            "finding_id": "finding-89667e14-2835-48ca-a1a7-b817a8f57799",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "The claim directly states plans for at least 10 percent of annual electricity consumption from NYSERDA-qualified renewable sources."
+          },
+          {
+            "finding_id": "finding-bc844b42-6143-4243-8894-76148a812acf",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "The claim directly states ensuring the target of at least 10 percent renewable energy consumption is met."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-d5b5010a-5ef8-4ad3-88ab-86f8fbcd2389",
+            "quote": "at least 10 percent of the facility’s annual electricity consumption from renewable energy sources qualified by the New York State Energy Research and Development Authority (NYSERDA).",
+            "label": "ENTAILMENT",
+            "reason": "This directly establishes a minimum of 10 percent of annual facility electricity consumption from renewable sources."
+          },
+          {
+            "citation_id": "support-6d968e43-beff-49d2-a43c-e56b70089d50",
+            "quote": "to ensure the target of at least 10 percent renewable energy consumption is met.",
+            "label": "ENTAILMENT",
+            "reason": "This confirms the plan's minimum target is at least 10 percent."
+          }
+        ]
+      }
+    ],
+    "protocol": "owned-quotes-v1",
+    "verdict": {
+      "label": "INDETERMINATE",
+      "reason": "The displayed assessment cannot be cleanly rated against the required delivery conditions because it evaluates different hypotheses about a documented plan and an extra 'exceed 10%' qualifier, instead of separately assessing K1-K3 as operating-facility delivery outcomes.",
+      "conditions": [
+        {
+          "condition_id": "K1",
+          "label": "NEUTRAL",
+          "citation_ids": [
+            "support-5f778b87-4721-44f2-81c1-6593088e2318"
+          ],
+          "quote_checks": [
+            {
+              "citation_id": "support-5f778b87-4721-44f2-81c1-6593088e2318",
+              "quote": "the resort plans to install photovoltaic (PV) solar panels across the parking garage and select roof areas",
+              "label": "NEUTRAL",
+              "reason": "This is only a plan to install solar panels, not evidence that the operating Bronx facility actually generated electricity using them."
+            }
+          ],
+          "reason": "The record shows a planned PV installation, but no evidence that the operating Bronx facility actually generated electricity from on-site solar photovoltaics."
+        },
+        {
+          "condition_id": "K2",
+          "label": "NEUTRAL",
+          "citation_ids": [
+            "support-e74782d3-31e2-4482-8f86-a38297184675",
+            "support-3ca43975-7aea-4ea7-9361-5b615a09c84e"
+          ],
+          "quote_checks": [
+            {
+              "citation_id": "support-e74782d3-31e2-4482-8f86-a38297184675",
+              "quote": "the remainder of the renewable energy needed to meet at least 10 percent of the facility’s annual electricity consumption will be procured from renewable energy sources qualified by the New York State Energy Research and Development Authority (NYSERDA).",
+              "label": "NEUTRAL",
+              "reason": "This states intended future procurement, not that the operating Bronx facility actually procured off-site NYSERDA-qualified renewable energy."
+            },
+            {
+              "citation_id": "support-3ca43975-7aea-4ea7-9361-5b615a09c84e",
+              "quote": "Bronx Bally’s will also embrace NYSERDA Tier IV NYC centric renewable energy",
+              "label": "NEUTRAL",
+              "reason": "This is forward-looking and does not establish actual off-site procurement by the operating facility."
+            }
+          ],
+          "reason": "The excerpts describe planned or future NYSERDA-qualified procurement, but not actual off-site procurement by the operating Bronx facility."
+        },
+        {
+          "condition_id": "K3",
+          "label": "NEUTRAL",
+          "citation_ids": [
+            "support-d5b5010a-5ef8-4ad3-88ab-86f8fbcd2389",
+            "support-e74782d3-31e2-4482-8f86-a38297184675",
+            "support-b1d24917-6e86-46f9-97ea-90fbab86d3c3",
+            "support-6d968e43-beff-49d2-a43c-e56b70089d50"
+          ],
+          "quote_checks": [
+            {
+              "citation_id": "support-d5b5010a-5ef8-4ad3-88ab-86f8fbcd2389",
+              "quote": "A description of plans for procuring or generating on-site at least 10 percent of the facility’s annual electricity consumption from renewable energy sources qualified by the New York State Energy Research and Development Authority (NYSERDA).",
+              "label": "NEUTRAL",
+              "reason": "This is a description of plans, not evidence of actual supply share in the same operating year."
+            },
+            {
+              "citation_id": "support-e74782d3-31e2-4482-8f86-a38297184675",
+              "quote": "the remainder of the renewable energy needed to meet at least 10 percent of the facility’s annual electricity consumption will be procured",
+              "label": "NEUTRAL",
+              "reason": "The passage concerns intended future procurement to meet at least 10 percent, not actual realized supply above 10 percent in an operating year."
+            },
+            {
+              "citation_id": "support-b1d24917-6e86-46f9-97ea-90fbab86d3c3",
+              "quote": "The target is approximately 6% of the annual energy consumption.",
+              "label": "NEUTRAL",
+              "reason": "A target for on-site solar does not establish actual combined supply share, and it is below the condition's 'more than 10%' threshold absent proof of actual off-site amounts for the same year."
+            },
+            {
+              "citation_id": "support-6d968e43-beff-49d2-a43c-e56b70089d50",
+              "quote": "to ensure the target of at least 10 percent renewable energy consumption is met.",
+              "label": "NEUTRAL",
+              "reason": "The passage sets a minimum target of at least 10 percent, not evidence that on-site solar plus off-site procurement actually supplied more than 10 percent in the same operating year."
+            }
+          ],
+          "reason": "The evidence describes plans and targets, but not actual operating-year performance, and it does not establish the stricter threshold of more than 10 percent supplied for the same year."
+        }
+      ]
+    }
+  },
+  "finished_at": "2026-11-22T10:18:51.212480+00:00"
+}

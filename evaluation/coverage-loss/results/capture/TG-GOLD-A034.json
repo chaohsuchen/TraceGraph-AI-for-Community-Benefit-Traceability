@@ -1,0 +1,159 @@
+{
+  "fingerprint": "b85e1fc9a992e717aa7654ee075cfc44e79f48de61918f65bd5f9b82e07b0483",
+  "origin": "frozen",
+  "passages": {
+    "p1": {
+      "url": "https://rwnewyork.com/rws-next-chapter/resorts-world-new-york-city-cirrus-unveil-new-agreement-to-build-up-to-50000-units-of-workforce-housing/",
+      "title": "https://rwnewyork.com/rws-next-chapter/resorts-world-new-york-city-cirrus-unveil-new-agreement-to-build-up-to-50000-units-of-workforce-housing/",
+      "excerpt": "Resorts World New York City has officially formed a joint venture with Cirrus to invest in this housing commitment, which will focus on large-scale projects across the five boroughs. The new partnership will begin to invest in new housing developments in the immediate term."
+    },
+    "p2": {
+      "url": "https://rwnewyork.com/rws-next-chapter/resorts-world-new-york-city-cirrus-unveil-new-agreement-to-build-up-to-50000-units-of-workforce-housing/",
+      "title": "https://rwnewyork.com/rws-next-chapter/resorts-world-new-york-city-cirrus-unveil-new-agreement-to-build-up-to-50000-units-of-workforce-housing/",
+      "excerpt": "To meet this need, Resorts World has made a down payment to build fair housing in a multi-million-dollar commitment not just for its employees but all working-class New Yorkers."
+    },
+    "p3": {
+      "url": "https://rwnewyork.com/community/community-investments/",
+      "title": "https://rwnewyork.com/community/community-investments/",
+      "excerpt": "Workforce Housing Fund"
+    },
+    "p4": {
+      "url": "https://rwnewyork.com/community/community-investments/",
+      "title": "https://rwnewyork.com/community/community-investments/",
+      "excerpt": "$25M Annually"
+    },
+    "p5": {
+      "url": "https://rwnewyork.com/community/community-investments/",
+      "title": "https://rwnewyork.com/community/community-investments/",
+      "excerpt": "$25M Delivered in 2026"
+    },
+    "p6": {
+      "url": "https://rwnewyork.com/community/community-investments/",
+      "title": "https://rwnewyork.com/community/community-investments/",
+      "excerpt": "Data as of September 2026"
+    },
+    "p7": {
+      "url": "https://rwnewyork.com/community/community-investments/",
+      "title": "https://rwnewyork.com/community/community-investments/",
+      "excerpt": "Workforce Housing Fund LANDMARK JOINT VENTURE WITH ORGANIZED LABOR We aim to tackle the city’s affordability crisis head-on by delivering the largest injection of new workforce housing in decades. We are creating up to 50,000 units citywide that are union-financed and union-built. $25M Annually $25M Delivered in 2026 Data as of September 2026"
+    },
+    "p8": {
+      "url": "https://rwnewyork.com/community/community-investments/",
+      "title": "https://rwnewyork.com/community/community-investments/",
+      "excerpt": "Community Commitments We're investing in the places we call home. We’re putting real dollars behind real promises with meaningful community development in Queens because we’re more than just a business. We are a trusted community partner with purpose that continues to keep its promises."
+    },
+    "p9": {
+      "url": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+      "title": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+      "excerpt": "$25M Annually for up to 50,000 units"
+    },
+    "p10": {
+      "url": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+      "title": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+      "excerpt": "Data as of September 2026"
+    },
+    "p11": {
+      "url": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+      "title": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+      "excerpt": "POWERED BY RESORTS WORLD'S $750M DIRECT INVESTMENT"
+    },
+    "p12": {
+      "url": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+      "title": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+      "excerpt": "Resorts World's Workforce Housing Initiative, funded through the Cirrus Workforce Housing Fund, is a landmark partnership with organized labor to deliver tens of thousands of new homes for working families across New York City."
+    },
+    "p13": {
+      "url": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+      "title": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+      "excerpt": "About 700 new homes could be coming to Downtown Jamaica on the site of what’s now a massive parking garage, as part of the agreement by Resorts World New York City and Cirrus Real Estate Partners to deliver nearly 50,000 units across the five boroughs. The joint venture has purchased the 1.8-acre development site and parking garage at 92-30 165th St. for $46.1 million with plans to turn the lot into housing, according to Cirrus and Ripco Real Estate, which brokered the deal."
+    }
+  },
+  "calls": [],
+  "decisions": [
+    {
+      "gold_id": "G1",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p4",
+        "p7"
+      ],
+      "reason": "The passages show a Workforce Housing Fund with “$25M Annually,” but they do not state the license-term duration, the lesser-of formula, or the 2% of incremental GGR above 2025 levels."
+    },
+    {
+      "gold_id": "G2",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage mentions Board proposals or benefits projected beyond the awarded license term."
+    },
+    {
+      "gold_id": "G3",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage states RWNYC’s original license term or that it is 15 years."
+    },
+    {
+      "gold_id": "G4",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage mentions a Cirrus partnership agreement defining annual commitments as calendar-year cash capital contributions."
+    },
+    {
+      "gold_id": "G5",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "reason": "The dashboard excerpts state “$25M Delivered in 2026” and “Data as of September 2026.”"
+    },
+    {
+      "gold_id": "G6",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p13"
+      ],
+      "reason": "One passage says the site was purchased “for $46.1 million,” but it does not provide official records, the exact $46.125 million amount, a deed, or the May 29, 2026 date."
+    },
+    {
+      "gold_id": "G7",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage mentions a $24 million mortgage accompanying the Jamaica acquisition."
+    },
+    {
+      "gold_id": "G8",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage identifies the recorded buyer as RWNYC ARCHER AVE LLC."
+    },
+    {
+      "gold_id": "G9",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "The passages mention a site at “92-30 165th St.” but do not give the recorded parcel identifiers Queens block 10151, lot 39, or the exact address 92-02 165 Street."
+    },
+    {
+      "gold_id": "G10",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p13"
+      ],
+      "reason": "The excerpt links the joint venture to a purchased Jamaica site, but it is not trade reporting about “Cirrus WFHA Funding,” nor does it establish that specific named entity’s link to the acquisition."
+    },
+    {
+      "gold_id": "G11",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p13"
+      ],
+      "reason": "The passage says “About 700 new homes could be coming,” which is a tentative projection rather than RWNYC describing 700 Jamaica workforce housing units as proposed."
+    },
+    {
+      "gold_id": "G12",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage mentions an August 2026 PLUTO record or zero residential units on the Jamaica parcel."
+    }
+  ]
+}

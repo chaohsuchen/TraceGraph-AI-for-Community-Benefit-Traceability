@@ -1,0 +1,343 @@
+{
+  "case_id": "TG-GOLD-A036",
+  "query": "Workforce housing investments are promised to begin 'in the immediate term'.",
+  "facts": [
+    {
+      "id": "G1",
+      "text": "The Board recorded an immediate-term start for workforce housing investments without defining a calendar deadline.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A036",
+          "row": 5
+        }
+      ]
+    },
+    {
+      "id": "G2",
+      "text": "RWNYC announced a multimillion-dollar down payment for the Cirrus housing initiative before the license award.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A036",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "G3",
+      "text": "RWNYC's application expressed hope for construction to start before the license award.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A036",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "G4",
+      "text": "RWNYC's license requires milestones and budgets for community benefits.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A036",
+          "row": 8
+        }
+      ]
+    },
+    {
+      "id": "G5",
+      "text": "The public partnership agreement refers the investment-period start to section 3.1(b).",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A036",
+          "row": 9
+        }
+      ]
+    },
+    {
+      "id": "G6",
+      "text": "The $46.125 million deed for the Jamaica site was dated May 29 and recorded June 5, 2026.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A036",
+          "row": 10
+        }
+      ]
+    },
+    {
+      "id": "G7",
+      "text": "RWNYC ARCHER AVE LLC is the recorded buyer of the Jamaica site.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A036",
+          "row": 11
+        }
+      ]
+    },
+    {
+      "id": "G8",
+      "text": "The deed and mortgage refer to Queens block 10151, lot 39.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A036",
+          "row": 12
+        }
+      ]
+    },
+    {
+      "id": "G9",
+      "text": "RWNYC reported $25 million delivered in 2026 through September for the fund.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A036",
+          "row": 13
+        }
+      ]
+    },
+    {
+      "id": "G10",
+      "text": "In September 2026 the operator still described the 700 Jamaica units as proposed.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A036",
+          "row": 14
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "K1",
+      "text": "A qualifying workforce-housing investment by RWNYC actually began.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A036",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-A036",
+          "row": 9
+        },
+        {
+          "sheet": "TG-GOLD-A036",
+          "row": 10
+        }
+      ]
+    },
+    {
+      "id": "K2",
+      "text": "The first qualifying investment occurred within the promised immediate term measured against an identified start trigger.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A036",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-A036",
+          "row": 6
+        },
+        {
+          "sheet": "TG-GOLD-A036",
+          "row": 9
+        }
+      ]
+    }
+  ],
+  "delivery_applicable": true,
+  "reference_verdict": {
+    "status": "partially corroborated",
+    "reasoning": "Retain partially corroborated for initiation activity, with low confidence in temporal compliance. Official transaction indexes corroborate a 2026 property acquisition, while the operator reports earlier seed funding and $25 million delivered in 2026. Neither independently dates a qualifying housing-fund contribution. The timing representation predates the license award, but no calendar deadline, defined start trigger or approved housing milestone was verified. Proposed units, construction commencement and occupied housing are separate stages. Scoped DOB results do not establish breach. Link A034 without adding a monetary obligation; temporal performance remains unassessable pending double review.",
+    "delivery_applicable": true,
+    "source_refs": [
+      {
+        "sheet": "TG-GOLD-A036",
+        "row": 17
+      },
+      {
+        "sheet": "TG-GOLD-A036",
+        "row": 18
+      }
+    ]
+  },
+  "sources": [
+    {
+      "sheet": "TG-GOLD-A036",
+      "row": 5,
+      "title": "GFLB Selection Document",
+      "citation": "1 December 2025; PDF p.25, printed p.24",
+      "publisher": "New York State Gaming Facility Location Board",
+      "url": null,
+      "url_origin": null,
+      "locator": "1 December 2025; PDF p.25, printed p.24",
+      "published_on": null,
+      "evidence_status": "Commitment documented; timing unresolved",
+      "specific_evidence": "The Board records the promise to begin workforce housing investments in the immediate term, calls the project substance vague, and urges monitoring. The wording supplies neither a calendar deadline nor a defined qualifying start event.",
+      "notes": "Timing qualifier of TG-GOLD-A034; do not count another monetary obligation. Publication date is not an established start trigger."
+    },
+    {
+      "sheet": "TG-GOLD-A036",
+      "row": 6,
+      "title": "RWNYC Cirrus agreement announcement",
+      "citation": "15 May 2025 announcement; date corroborated by operator announcement index",
+      "publisher": "Resorts World New York City",
+      "url": null,
+      "url_origin": null,
+      "locator": "15 May 2025 announcement; date corroborated by operator announcement index",
+      "published_on": null,
+      "evidence_status": "Operator self-report; initiation asserted",
+      "specific_evidence": "RWNYC announced the Cirrus workforce housing arrangement and reported a multimillion-dollar down payment before the December license award. The announcement already used near-term investment language, so the award cannot silently become the sole timing trigger.",
+      "notes": "Announcement date verified from the local report and operator index. Neither exact payment date, quantified amount nor recipient receipt was verified."
+    },
+    {
+      "sheet": "TG-GOLD-A036",
+      "row": 7,
+      "title": "RWNYC Communities application",
+      "citation": "June 2025 application, revised public copy; PDF pp.9–10",
+      "publisher": "Resorts World New York City; hosted by New York State",
+      "url": null,
+      "url_origin": null,
+      "locator": "June 2025 application, revised public copy; PDF pp.9–10",
+      "published_on": null,
+      "evidence_status": "Operator self-report; timing unresolved",
+      "specific_evidence": "The application describes initial housing funding, repeats near-term investment language, and expresses hope for construction before any downstate license award. These passages distinguish the reported investment activity from an aspirational construction start.",
+      "notes": "Pre-award construction is an expressed hope, not a verified mandatory milestone. Applicant statements do not independently authenticate funding or its transfer date."
+    },
+    {
+      "sheet": "TG-GOLD-A036",
+      "row": 8,
+      "title": "RWNYC Gaming Facility License Award",
+      "citation": "19 December 2025 letter; effective 15 December; PDF pp.4–5, Conditions 3, 5 and 10",
+      "publisher": "New York State Gaming Commission",
+      "url": null,
+      "url_origin": null,
+      "locator": "19 December 2025 letter; effective 15 December; PDF pp.4–5, Conditions 3, 5 and 10",
+      "published_on": null,
+      "evidence_status": "Monitoring obligations documented; housing start date unresolved",
+      "specific_evidence": "The license requires milestones, budgets and public progress reports for application and CAC community benefits, with further monitoring conditions. The five-page award does not establish a housing-specific start date against which immediate-term compliance can be measured.",
+      "notes": "Obtain approved milestones, budgets and progress assessments to resolve timing. Award effectiveness alone does not define when this earlier representation started running."
+    },
+    {
+      "sheet": "TG-GOLD-A036",
+      "row": 9,
+      "title": "Exhibit 175 Cirrus partnership agreement",
+      "citation": "Version dated 15 May 2025; PDF p.11, printed p.8",
+      "publisher": "New York State Gaming Facility Location Board (public exhibit host)",
+      "url": null,
+      "url_origin": null,
+      "locator": "Version dated 15 May 2025; PDF p.11, printed p.8",
+      "published_on": null,
+      "evidence_status": "Public agreement text incomplete for start trigger",
+      "specific_evidence": "The agreement identifies RESORTS WORLD CIRRUS WFH, LP and defines the investment-period start by reference to Section 3.1(b). That operative provision was unavailable in the retrieved public text, preventing a reliable start-trigger interpretation.",
+      "notes": "The version date, document label and recitals do not authenticate signatures or prove payment. Obtain operative provisions and dated capital-account records."
+    },
+    {
+      "sheet": "TG-GOLD-A036",
+      "row": 10,
+      "title": "NYC DOF Master index for deed and mortgage",
+      "citation": "Deed CRFN 2026000156049; document 29 May 2026; recorded 5 June 2026",
+      "publisher": "New York City Department of Finance",
+      "url": null,
+      "url_origin": null,
+      "locator": "Deed CRFN 2026000156049; document 29 May 2026; recorded 5 June 2026",
+      "published_on": null,
+      "evidence_status": "Acquisition metadata corroborated",
+      "specific_evidence": "The official index records a $46.125 million deed dated 29 May 2026 and recorded 5 June 2026. Joined with parties and parcel indexes, it corroborates acquisition activity, while neither indexed date independently proves a fund-contribution transfer.",
+      "notes": "DOF data updated 8 October 2026, good through 30 June. Original instruments were unverified; mortgage face amount does not establish cash drawn or equity."
+    },
+    {
+      "sheet": "TG-GOLD-A036",
+      "row": 11,
+      "title": "NYC DOF Parties index",
+      "citation": "Deed and mortgage document IDs 2026060200718001 and 2026060200718002",
+      "publisher": "New York City Department of Finance",
+      "url": null,
+      "url_origin": null,
+      "locator": "Deed and mortgage document IDs 2026060200718001 and 2026060200718002",
+      "published_on": null,
+      "evidence_status": "Buyer and seller corroborated",
+      "specific_evidence": "The deed parties index identifies RWNYC ARCHER AVE LLC as buyer and JAMAICA FIRST PARKING, LLC as seller. The same seller is indexed as mortgagee, supporting the transaction relationship without independently demonstrating a housing-fund cash contribution.",
+      "notes": "Join these parties to Master and Legals by document_id. Corporate purchase and recipient fund contributions are different events and require separate evidence."
+    },
+    {
+      "sheet": "TG-GOLD-A036",
+      "row": 12,
+      "title": "NYC DOF Legals index",
+      "citation": "Queens borough 4, block 10151, lot 39; 92-02 165 STREET",
+      "publisher": "New York City Department of Finance",
+      "url": null,
+      "url_origin": null,
+      "locator": "Queens borough 4, block 10151, lot 39; 92-02 165 STREET",
+      "published_on": null,
+      "evidence_status": "Acquired parcel identification corroborated",
+      "specific_evidence": "The legal index links the deed and mortgage document IDs to Queens block 10151, lot 39, at 92-02 165 STREET. This ties the indexed acquisition to the Jamaica parcel without establishing construction commencement or occupied housing.",
+      "notes": "Join using document_id, not Master recorded_borough. Parcel identification supports acquisition attribution; it does not establish completed housing or compliance with an undefined deadline."
+    },
+    {
+      "sheet": "TG-GOLD-A036",
+      "row": 13,
+      "title": "RWNYC Community Investments dashboard",
+      "citation": "2026 contribution claim; dashboard data as of September 2026",
+      "publisher": "Resorts World New York City",
+      "url": null,
+      "url_origin": null,
+      "locator": "2026 contribution claim; dashboard data as of September 2026",
+      "published_on": null,
+      "evidence_status": "Operator contribution claim; independently undated",
+      "specific_evidence": "RWNYC reports $25 million delivered in 2026, using dashboard data through September. The statement supports an operator claim of housing-fund activity, but supplies no exact transfer date or independent recipient confirmation to test immediate-term timing.",
+      "notes": "Request dated contribution receipts or recipient capital-account entries. Reported delivery is distinct from the property purchase, housing construction and completed residential units."
+    },
+    {
+      "sheet": "TG-GOLD-A036",
+      "row": 14,
+      "title": "RWNYC Workforce Housing project page",
+      "citation": "Project data as of September 2026",
+      "publisher": "Resorts World New York City",
+      "url": null,
+      "url_origin": null,
+      "locator": "Project data as of September 2026",
+      "published_on": null,
+      "evidence_status": "Proposed housing disclosed; construction unverified",
+      "specific_evidence": "The housing page continues to describe 700 units as proposed in September 2026 data. Its breaking-ground section heading does not establish actual construction commencement, and proposed units cannot be treated as delivered or occupied homes.",
+      "notes": "Construction remains unverified in the completed review, including scoped DOB checks. Limited search results do not prove inactivity, nonpayment or breach."
+    }
+  ],
+  "provenance": {
+    "workbook": "Golden Dataset (6).xlsx",
+    "sha256": "2da588b49b311957885ed7ff98bcd31c49e9d3ef8e99a761a3e9e5fcdb360099",
+    "identity": {
+      "sheet": "gold commitments",
+      "row": 77
+    },
+    "detail_sheet": "TG-GOLD-A036",
+    "detail_internal_id_cell": "B1",
+    "workbook_valid_flag": 1,
+    "workbook_split": "anchor_dev",
+    "workbook_evidence_status": "partially corroborated",
+    "workbook_fields": {
+      "gold_id": "TG-GOLD-A036",
+      "document_id": "GFLB-SEL-2025-12-01",
+      "page_section": "pdf p.25; Resorts World: Local Impact Siting",
+      "char_start": 60636.0,
+      "char_end": 60714.0,
+      "commitment_text": "the promised investments in workforce housing to begin “in the immediate term”",
+      "normalized_statement": "Workforce housing investments are promised to begin 'in the immediate term'.",
+      "obligation_type": "Unresolved / ambiguous",
+      "responsible_entity": "Genting New York LLC d/b/a Resorts World New York City",
+      "amount_value": "unspecified",
+      "term_periodicity": "\"in the immediate term\" (undated)",
+      "geographic_scope": "unspecified",
+      "beneficiary_category": "housing (workforce housing)",
+      "beneficiary_named": "none named",
+      "condition_contingency": "none stated",
+      "milestone": "begin \"in the immediate term\"",
+      "evidence_status": "partially corroborated",
+      "confidence": "Low",
+      "adjudication_note": "Milestone language with no date; Board calls the substance 'vague'.",
+      "duplicate_of": "TG-GOLD-A034",
+      "notes": "duplicate/restatement (timing qualifier) of the workforce housing fund commitment. | Web evidence 2026-10-14 (no public evidence located -> partially corroborated): First acquisition closed by Jul 2026 [S12]; no construction timeline or affordability breakdown released [S13].",
+      "evaluation_split": "anchor_dev",
+      "manually annotated valid?": 1.0
+    },
+    "detail_research_cutoff": "2026-11-04",
+    "evaluation_use": "22-case annotated benchmark; development-exposed cases included",
+    "reference_preparation": "Locally curated factual hypotheses and delivery conditions from the cited Golden (6) cells; prior to research."
+  }
+}

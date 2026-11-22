@@ -1,0 +1,768 @@
+{
+  "input_sha256": "dc634e355c8e5c375472fc4c42ca58b9c06c27f7276f5cfeffff32991d877ed3",
+  "judge_model": "gpt-5.4",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "judge_version": "tracegraph-nli-v4-owned-quotes",
+  "started_at": "2026-11-22T10:24:15.706776+00:00",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 23.5,
+      "request_id": "req_b0130b0896f44fee8344d2d3fa3ff468",
+      "usage": {
+        "input_tokens": 3500,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 2517,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 6017
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 9.76500000001397,
+      "request_id": "req_731e07e9a5344e39bf94715f1f3f710e",
+      "usage": {
+        "input_tokens": 6548,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 777,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 7325
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "evidence": {
+    "identity": {
+      "label": "MATCH",
+      "reason": "The returned commitment and the question describe the same Bally’s permanent-workforce promise: 3,503 FTEs for permanent operations, 70% from the Bronx, reflecting Bronx demographics."
+    },
+    "findings": [
+      {
+        "finding_id": "finding-6d1b06ef-10bc-4103-b19e-0d1c6d6532ba",
+        "claims": [
+          {
+            "claim": "For its permanent operations, Bally’s commits to building a diverse workforce of 3,503 full-time equivalent employees.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-a62407d3-a135-4205-8451-edc4f65dcfba"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-a62407d3-a135-4205-8451-edc4f65dcfba",
+                "quote": "For its permanent operations, Bally’s commits to building a diverse workforce of 3,503 full-time equivalent employees",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the permanent-operations commitment and the 3,503 FTE amount."
+              }
+            ],
+            "reason": "The cited passage expressly states Bally’s commitment to a 3,503-FTE workforce for permanent operations."
+          },
+          {
+            "claim": "Bally’s commits that 70 percent of those workers will come from the Bronx.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-a62407d3-a135-4205-8451-edc4f65dcfba"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-a62407d3-a135-4205-8451-edc4f65dcfba",
+                "quote": "with 70 percent of those workers coming from the Bronx",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly gives the 70% Bronx-origin workforce commitment."
+              }
+            ],
+            "reason": "The excerpt explicitly sets 70 percent of the workforce as coming from the Bronx."
+          },
+          {
+            "claim": "Bally’s commits that the workforce will reflect the demographics of the Bronx.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-a62407d3-a135-4205-8451-edc4f65dcfba"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-a62407d3-a135-4205-8451-edc4f65dcfba",
+                "quote": "and reflecting the demographics of the Bronx",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the demographic-reflection commitment."
+              }
+            ],
+            "reason": "The cited text expressly says the workforce will reflect Bronx demographics."
+          },
+          {
+            "claim": "Bally’s cites its Chicago temporary-facility workforce as having over 80 percent minority employees and 45 percent women.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-a62407d3-a135-4205-8451-edc4f65dcfba"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-a62407d3-a135-4205-8451-edc4f65dcfba",
+                "quote": "It cites its performance at Bally’s Chicago, where over 80 percent of the employees at its temporary facility identify as minority, and 45 percent are women.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly reports the Chicago workforce figures as cited by Bally’s."
+              }
+            ],
+            "reason": "The passage explicitly reports the cited Chicago temporary-facility composition."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-06cee580-c6c4-44cc-9cb1-e12d6fd0b1ab",
+        "claims": [
+          {
+            "claim": "Four applicants, including Bally’s Bronx, received approval from their respective Committees.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-891aa139-88c0-4400-80e4-73622866ddc7"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-891aa139-88c0-4400-80e4-73622866ddc7",
+                "quote": "Four Applicants - Bally’s Bronx, Hard Rock Metropolitan Park, MGM Yonkers, and Resorts World New York City – received approval from their respective Committees",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states committee approval for Bally’s Bronx and the other listed applicants."
+              }
+            ],
+            "reason": "The excerpt expressly says Bally’s Bronx was among four applicants approved by their Committees."
+          },
+          {
+            "claim": "Those four applicants submitted evidence of zoning compliance and completion of environmental review.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-891aa139-88c0-4400-80e4-73622866ddc7"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-891aa139-88c0-4400-80e4-73622866ddc7",
+                "quote": "and submitted evidence of zoning compliance, and completion of environmental review",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the submissions made by the approved applicants."
+              }
+            ],
+            "reason": "The cited passage explicitly states submission of zoning-compliance and environmental-review evidence."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-1",
+        "claims": [
+          {
+            "claim": "Bally’s anticipated a minimum target goal that 70 percent of its employees would be from the Bronx or from local, historically underserved populations.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "We anticipate that our minimum target goal will be that 70% of our employees will be from the Bronx or from local, historically underserved populations.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the anticipated minimum target goal and its Bronx-or-local-underserved scope."
+              }
+            ],
+            "reason": "The excerpt expressly describes the 70% minimum target goal as Bronx residents or local historically underserved populations."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-2",
+        "claims": [
+          {
+            "claim": "Bally’s minimum goal for New York State residents would be inclusive of its Bronx-based hiring targets.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-2-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-2-s",
+                "quote": "Our minimum goal for residents of New York State will be inclusive of our targets for Bronx based hiring.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the New York State resident goal includes Bronx-based hiring targets."
+              }
+            ],
+            "reason": "The passage explicitly says the New York State resident goal is inclusive of Bronx-based targets."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-3",
+        "claims": [
+          {
+            "claim": "Bally’s expected its New York State resident employee target percentage to be well above 70 percent.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-3-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-3-s",
+                "quote": "Based upon this, we expect our New York State resident employee target percentage to be well north of 70%.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the expected New York State resident target percentage exceeds 70%."
+              }
+            ],
+            "reason": "The cited text expressly says Bally’s expected the New York State resident target to be well north of 70%."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-4",
+        "claims": [
+          {
+            "claim": "Bally’s is committed to engage with stakeholders and government leaders to ensure that as many Bronx residents as possible are eligible to become employees at Bally’s Bronx.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-4-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-4-s",
+                "quote": "Bally’s is committed to being fully engaged with all stakeholders and government leaders to ensure that as many Bronx residents as possible are eligible to become employees at Bally’s Bronx.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the engagement commitment and its goal of maximizing Bronx resident eligibility."
+              }
+            ],
+            "reason": "The excerpt explicitly states Bally’s commitment to engage stakeholders and leaders so Bronx residents can be eligible for jobs."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "finding-6d1b06ef-10bc-4103-b19e-0d1c6d6532ba"
+        ],
+        "citation_ids": [
+          "support-a62407d3-a135-4205-8451-edc4f65dcfba"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding states a commitment to 3,503 permanent FTE employees, but the reference fact specifically says approximately 3,503 permanent Bronx positions; the returned finding does not establish the qualifier 'approximately' or that the positions are Bronx positions.",
+        "claim_links": [
+          {
+            "finding_id": "finding-6d1b06ef-10bc-4103-b19e-0d1c6d6532ba",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "It matches 3,503 permanent FTE employees but does not state 'approximately' or specify the positions as Bronx positions."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-a62407d3-a135-4205-8451-edc4f65dcfba",
+            "quote": "For its permanent operations, Bally’s commits to building a diverse workforce of 3,503 full-time equivalent employees",
+            "label": "NEUTRAL",
+            "reason": "This supports 3,503 permanent FTE employees, but not the narrower wording 'approximately 3,503 permanent full-time-equivalent Bronx positions.'"
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [
+          "finding-6d1b06ef-10bc-4103-b19e-0d1c6d6532ba"
+        ],
+        "citation_ids": [
+          "support-a62407d3-a135-4205-8451-edc4f65dcfba"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "The finding directly states a 70%-from-the-Bronx target for Bally’s permanent workforce.",
+        "claim_links": [
+          {
+            "finding_id": "finding-6d1b06ef-10bc-4103-b19e-0d1c6d6532ba",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "This claim directly states 70 percent of permanent workers coming from the Bronx."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-a62407d3-a135-4205-8451-edc4f65dcfba",
+            "quote": "with 70 percent of those workers coming from the Bronx",
+            "label": "ENTAILMENT",
+            "reason": "The quote expressly states the 70% Bronx target for the permanent workforce."
+          }
+        ]
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [
+          "source-reread-1"
+        ],
+        "citation_ids": [
+          "source-reread-1-s"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "The finding says Bally’s described the target population as employees from the Bronx or from local historically underserved populations.",
+        "claim_links": [
+          {
+            "finding_id": "source-reread-1",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim directly presents Bronx employees or local historically underserved populations as the target population."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "source-reread-1-s",
+            "quote": "We anticipate that our minimum target goal will be that 70% of our employees will be from the Bronx or from local, historically underserved populations.",
+            "label": "ENTAILMENT",
+            "reason": "The quote explicitly describes the target population as Bronx employees or local historically underserved populations."
+          }
+        ]
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents a promise of quarterly hiring reporting.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G5",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents a license requirement for public workforce demographic reporting as part of community-benefit reporting.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G6",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents the Board’s distinction between approximately 3,741 permanent positions and approximately 3,503 FTEs.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G7",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents that the workforce-review Bronx vacancies were at the existing golf course and restaurant.",
+        "claim_links": [],
+        "quote_checks": []
+      }
+    ]
+  },
+  "verdict_protocol": "two-stage-owned-citations-v4",
+  "judgment": {
+    "identity": {
+      "label": "MATCH",
+      "reason": "The returned commitment and the question describe the same Bally’s permanent-workforce promise: 3,503 FTEs for permanent operations, 70% from the Bronx, reflecting Bronx demographics."
+    },
+    "findings": [
+      {
+        "finding_id": "finding-6d1b06ef-10bc-4103-b19e-0d1c6d6532ba",
+        "claims": [
+          {
+            "claim": "For its permanent operations, Bally’s commits to building a diverse workforce of 3,503 full-time equivalent employees.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-a62407d3-a135-4205-8451-edc4f65dcfba"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-a62407d3-a135-4205-8451-edc4f65dcfba",
+                "quote": "For its permanent operations, Bally’s commits to building a diverse workforce of 3,503 full-time equivalent employees",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the permanent-operations commitment and the 3,503 FTE amount."
+              }
+            ],
+            "reason": "The cited passage expressly states Bally’s commitment to a 3,503-FTE workforce for permanent operations."
+          },
+          {
+            "claim": "Bally’s commits that 70 percent of those workers will come from the Bronx.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-a62407d3-a135-4205-8451-edc4f65dcfba"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-a62407d3-a135-4205-8451-edc4f65dcfba",
+                "quote": "with 70 percent of those workers coming from the Bronx",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly gives the 70% Bronx-origin workforce commitment."
+              }
+            ],
+            "reason": "The excerpt explicitly sets 70 percent of the workforce as coming from the Bronx."
+          },
+          {
+            "claim": "Bally’s commits that the workforce will reflect the demographics of the Bronx.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-a62407d3-a135-4205-8451-edc4f65dcfba"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-a62407d3-a135-4205-8451-edc4f65dcfba",
+                "quote": "and reflecting the demographics of the Bronx",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the demographic-reflection commitment."
+              }
+            ],
+            "reason": "The cited text expressly says the workforce will reflect Bronx demographics."
+          },
+          {
+            "claim": "Bally’s cites its Chicago temporary-facility workforce as having over 80 percent minority employees and 45 percent women.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-a62407d3-a135-4205-8451-edc4f65dcfba"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-a62407d3-a135-4205-8451-edc4f65dcfba",
+                "quote": "It cites its performance at Bally’s Chicago, where over 80 percent of the employees at its temporary facility identify as minority, and 45 percent are women.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly reports the Chicago workforce figures as cited by Bally’s."
+              }
+            ],
+            "reason": "The passage explicitly reports the cited Chicago temporary-facility composition."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-06cee580-c6c4-44cc-9cb1-e12d6fd0b1ab",
+        "claims": [
+          {
+            "claim": "Four applicants, including Bally’s Bronx, received approval from their respective Committees.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-891aa139-88c0-4400-80e4-73622866ddc7"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-891aa139-88c0-4400-80e4-73622866ddc7",
+                "quote": "Four Applicants - Bally’s Bronx, Hard Rock Metropolitan Park, MGM Yonkers, and Resorts World New York City – received approval from their respective Committees",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states committee approval for Bally’s Bronx and the other listed applicants."
+              }
+            ],
+            "reason": "The excerpt expressly says Bally’s Bronx was among four applicants approved by their Committees."
+          },
+          {
+            "claim": "Those four applicants submitted evidence of zoning compliance and completion of environmental review.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-891aa139-88c0-4400-80e4-73622866ddc7"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-891aa139-88c0-4400-80e4-73622866ddc7",
+                "quote": "and submitted evidence of zoning compliance, and completion of environmental review",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the submissions made by the approved applicants."
+              }
+            ],
+            "reason": "The cited passage explicitly states submission of zoning-compliance and environmental-review evidence."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-1",
+        "claims": [
+          {
+            "claim": "Bally’s anticipated a minimum target goal that 70 percent of its employees would be from the Bronx or from local, historically underserved populations.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "We anticipate that our minimum target goal will be that 70% of our employees will be from the Bronx or from local, historically underserved populations.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the anticipated minimum target goal and its Bronx-or-local-underserved scope."
+              }
+            ],
+            "reason": "The excerpt expressly describes the 70% minimum target goal as Bronx residents or local historically underserved populations."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-2",
+        "claims": [
+          {
+            "claim": "Bally’s minimum goal for New York State residents would be inclusive of its Bronx-based hiring targets.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-2-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-2-s",
+                "quote": "Our minimum goal for residents of New York State will be inclusive of our targets for Bronx based hiring.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the New York State resident goal includes Bronx-based hiring targets."
+              }
+            ],
+            "reason": "The passage explicitly says the New York State resident goal is inclusive of Bronx-based targets."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-3",
+        "claims": [
+          {
+            "claim": "Bally’s expected its New York State resident employee target percentage to be well above 70 percent.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-3-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-3-s",
+                "quote": "Based upon this, we expect our New York State resident employee target percentage to be well north of 70%.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the expected New York State resident target percentage exceeds 70%."
+              }
+            ],
+            "reason": "The cited text expressly says Bally’s expected the New York State resident target to be well north of 70%."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-4",
+        "claims": [
+          {
+            "claim": "Bally’s is committed to engage with stakeholders and government leaders to ensure that as many Bronx residents as possible are eligible to become employees at Bally’s Bronx.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-4-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-4-s",
+                "quote": "Bally’s is committed to being fully engaged with all stakeholders and government leaders to ensure that as many Bronx residents as possible are eligible to become employees at Bally’s Bronx.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the engagement commitment and its goal of maximizing Bronx resident eligibility."
+              }
+            ],
+            "reason": "The excerpt explicitly states Bally’s commitment to engage stakeholders and leaders so Bronx residents can be eligible for jobs."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "finding-6d1b06ef-10bc-4103-b19e-0d1c6d6532ba"
+        ],
+        "citation_ids": [
+          "support-a62407d3-a135-4205-8451-edc4f65dcfba"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding states a commitment to 3,503 permanent FTE employees, but the reference fact specifically says approximately 3,503 permanent Bronx positions; the returned finding does not establish the qualifier 'approximately' or that the positions are Bronx positions.",
+        "claim_links": [
+          {
+            "finding_id": "finding-6d1b06ef-10bc-4103-b19e-0d1c6d6532ba",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "It matches 3,503 permanent FTE employees but does not state 'approximately' or specify the positions as Bronx positions."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-a62407d3-a135-4205-8451-edc4f65dcfba",
+            "quote": "For its permanent operations, Bally’s commits to building a diverse workforce of 3,503 full-time equivalent employees",
+            "label": "NEUTRAL",
+            "reason": "This supports 3,503 permanent FTE employees, but not the narrower wording 'approximately 3,503 permanent full-time-equivalent Bronx positions.'"
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [
+          "finding-6d1b06ef-10bc-4103-b19e-0d1c6d6532ba"
+        ],
+        "citation_ids": [
+          "support-a62407d3-a135-4205-8451-edc4f65dcfba"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "The finding directly states a 70%-from-the-Bronx target for Bally’s permanent workforce.",
+        "claim_links": [
+          {
+            "finding_id": "finding-6d1b06ef-10bc-4103-b19e-0d1c6d6532ba",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "This claim directly states 70 percent of permanent workers coming from the Bronx."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-a62407d3-a135-4205-8451-edc4f65dcfba",
+            "quote": "with 70 percent of those workers coming from the Bronx",
+            "label": "ENTAILMENT",
+            "reason": "The quote expressly states the 70% Bronx target for the permanent workforce."
+          }
+        ]
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [
+          "source-reread-1"
+        ],
+        "citation_ids": [
+          "source-reread-1-s"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "The finding says Bally’s described the target population as employees from the Bronx or from local historically underserved populations.",
+        "claim_links": [
+          {
+            "finding_id": "source-reread-1",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim directly presents Bronx employees or local historically underserved populations as the target population."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "source-reread-1-s",
+            "quote": "We anticipate that our minimum target goal will be that 70% of our employees will be from the Bronx or from local, historically underserved populations.",
+            "label": "ENTAILMENT",
+            "reason": "The quote explicitly describes the target population as Bronx employees or local historically underserved populations."
+          }
+        ]
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents a promise of quarterly hiring reporting.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G5",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents a license requirement for public workforce demographic reporting as part of community-benefit reporting.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G6",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents the Board’s distinction between approximately 3,741 permanent positions and approximately 3,503 FTEs.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G7",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents that the workforce-review Bronx vacancies were at the existing golf course and restaurant.",
+        "claim_links": [],
+        "quote_checks": []
+      }
+    ],
+    "protocol": "owned-quotes-v1",
+    "verdict": {
+      "label": "JUSTIFIED",
+      "reason": "The final assessment appropriately treats all three conditions as unverified because the cited record contains only pledge statements about a future permanent workforce and later licensing-process approvals, but no evidence of actual staffing, Bronx residency share, or demographic makeup of an operating Bronx casino workforce.",
+      "conditions": [
+        {
+          "condition_id": "K1",
+          "label": "NEUTRAL",
+          "citation_ids": [
+            "support-a62407d3-a135-4205-8451-edc4f65dcfba",
+            "support-891aa139-88c0-4400-80e4-73622866ddc7"
+          ],
+          "quote_checks": [
+            {
+              "citation_id": "support-a62407d3-a135-4205-8451-edc4f65dcfba",
+              "quote": "For its permanent operations, Bally’s commits to building a diverse workforce of 3,503 full-time equivalent employees",
+              "label": "NEUTRAL",
+              "reason": "This proves only a commitment for future permanent operations, not that Bally’s actually employed about 3,503 permanent FTEs."
+            },
+            {
+              "citation_id": "support-891aa139-88c0-4400-80e4-73622866ddc7",
+              "quote": "received approval from their respective Committees and submitted evidence of zoning compliance, and completion of environmental review.",
+              "label": "NEUTRAL",
+              "reason": "Licensing-process approval and compliance submissions do not establish that the Bronx casino operated with about 3,503 permanent FTEs."
+            }
+          ],
+          "reason": "The record shows a workforce commitment and later regulatory progress, but no evidence that Bally's actually employed about 3,503 permanent FTEs at the Bronx casino."
+        },
+        {
+          "condition_id": "K2",
+          "label": "NEUTRAL",
+          "citation_ids": [
+            "support-a62407d3-a135-4205-8451-edc4f65dcfba",
+            "source-reread-1-s"
+          ],
+          "quote_checks": [
+            {
+              "citation_id": "support-a62407d3-a135-4205-8451-edc4f65dcfba",
+              "quote": "with 70 percent of those workers coming from the Bronx",
+              "label": "NEUTRAL",
+              "reason": "This is a stated hiring commitment for the planned permanent workforce, not evidence of the actual residency of an existing workforce."
+            },
+            {
+              "citation_id": "source-reread-1-s",
+              "quote": "We anticipate that our minimum target goal will be that 70% of our employees will be from the Bronx or from local, historically underserved populations.",
+              "label": "NEUTRAL",
+              "reason": "This later statement remains a target goal and is broader than Bronx residents alone, so it does not prove that 70% of the actual permanent workforce lived in the Bronx."
+            }
+          ],
+          "reason": "The evidence discusses targets for future hiring, including one formulation broadened to Bronx or other local historically underserved populations, but does not establish that 70% of the actual permanent workforce lived in the Bronx."
+        },
+        {
+          "condition_id": "K3",
+          "label": "NEUTRAL",
+          "citation_ids": [
+            "support-a62407d3-a135-4205-8451-edc4f65dcfba"
+          ],
+          "quote_checks": [
+            {
+              "citation_id": "support-a62407d3-a135-4205-8451-edc4f65dcfba",
+              "quote": "and reflecting the demographics of the Bronx. It cites its performance at Bally’s Chicago, where over 80 percent of the employees at its temporary facility identify as minority, and 45 percent are women.",
+              "label": "NEUTRAL",
+              "reason": "This states the Bronx-workforce commitment and gives Chicago context, but not the demographic composition of an operating Bronx casino workforce."
+            }
+          ],
+          "reason": "The cited material states the goal to reflect Bronx demographics and references Chicago experience, but provides no evidence that the operating Bronx casino's permanent workforce actually reflected Bronx demographics."
+        }
+      ]
+    }
+  },
+  "finished_at": "2026-11-22T10:24:49.263648+00:00"
+}

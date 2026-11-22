@@ -1,0 +1,118 @@
+{
+  "fingerprint": "6a05ff738a90023866b9968b7abdd88d1720e7e2647ac63c80723396f12f607e",
+  "origin": "new_tool_free_v4",
+  "passages": {
+    "p1": {
+      "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "excerpt": "Bally’s committed to pay for employees’ membership in Upwards, which would give the employee priority childcare placement in Upwards’ vetted facilities, but little information was provided about what membership entails or whether Upwards’ network facilities are already at capacity."
+    },
+    "p2": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+      "excerpt": "To assist our working families, we have partnered with Upwards, the largest childcare network in the United States, to offer high-quality childcare options including for Bally’s Bronx employees."
+    },
+    "p3": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+      "excerpt": "Members also receive priority placement at Upwards facilities, which are plentiful near our proposed sites, and the program is increasingly popular among our employees."
+    },
+    "p4": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+      "excerpt": "We fund every employee membership to the Upwards network and offer financial assistance to ease the burden of childcare costs. This includes contributing to a Dependent Care FSA or providing \"credits\" for free childcare days."
+    },
+    "p5": {
+      "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "excerpt": "The Board recommends the Commission require Bally’s to provide annual updates on employee participation in the Upwards membership program for childcare and to address any challenges employees face in accessing convenient daycare options."
+    },
+    "p6": {
+      "url": "https://careers.ballys.com/job/ballys-atlantic-city/atlantic-city/new-jersey/united-states/casinos-resorts/promotions-and-events-rep-on-call/10814f67-2cbe-4f0e-9f81-0d0150993f17",
+      "title": "https://careers.ballys.com/job/ballys-atlantic-city/atlantic-city/new-jersey/united-states/casinos-resorts/promotions-and-events-rep-on-call/10814f67-2cbe-4f0e-9f81-0d0150993f17",
+      "excerpt": "Depending on your location, you may have access to childcare assistance, employee assistance programs, and support services designed to help you navigate what matters."
+    },
+    "p7": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalloc4.ballys.communities_redacted.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalloc4.ballys.communities_redacted.pdf",
+      "excerpt": "Childcare Services: Free childcare support for employees through our Upwards partnership"
+    }
+  },
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 5.98499999998603,
+      "request_id": "req_ffd4cc1ed0f54be48f24cefd2c038df7",
+      "usage": {
+        "input_tokens": 2316,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 398,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2714
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "decisions": [
+    {
+      "gold_id": "G1",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p1",
+        "p2",
+        "p4"
+      ],
+      "reason": "The passages show Bally’s committed to pay/fund Upwards memberships and mention Bronx employees, but they do not state that the paid memberships were specifically pledged for Bronx employees rather than employees generally."
+    },
+    {
+      "gold_id": "G2",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "reason": "The evidence says Upwards membership would give priority placement and separately mentions Bronx employees, but it does not directly tie the priority-placement memberships specifically to Bronx employees."
+    },
+    {
+      "gold_id": "G3",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p5"
+      ],
+      "reason": "The Board recommended annual updates on participation in the Upwards membership program, but the excerpt does not specify a Bronx childcare benefit."
+    },
+    {
+      "gold_id": "G4",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p1"
+      ],
+      "reason": "The report notes uncertainty about what membership entails and whether network facilities are already at capacity, but it does not specify uncertainty about childcare capacity for a Bronx program."
+    },
+    {
+      "gold_id": "G5",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p2",
+        "p4",
+        "p7"
+      ],
+      "reason": "The passages indicate a Bally’s-Upwards partnership with funded memberships or childcare support, but none is a confirmation by Upwards itself or states it is company-wide and gives employees free access to the network at that exact scope."
+    }
+  ]
+}

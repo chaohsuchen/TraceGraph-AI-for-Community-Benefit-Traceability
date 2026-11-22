@@ -1,0 +1,275 @@
+{
+  "case_id": "TG-GOLD-H032",
+  "query": "HRMP committed $25 million to a small-business lender program supporting MWBE firms.",
+  "facts": [
+    {
+      "id": "G1",
+      "text": "HRMP pledged $25 million to develop and implement a small-business lending program.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H032",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H032",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "G2",
+      "text": "HRMP presented MWBE firms as beneficiaries of the lending program.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H032",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H032",
+          "row": 8
+        }
+      ]
+    },
+    {
+      "id": "G3",
+      "text": "The Board highlighted HRMP's partnership with McKissack & McKissack alongside the lending proposal.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H032",
+          "row": 5
+        }
+      ]
+    },
+    {
+      "id": "G4",
+      "text": "HRMP said the lending program would reduce lender risk.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H032",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "G5",
+      "text": "HRMP described technical assistance with MWBE certification.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H032",
+          "row": 8
+        }
+      ]
+    },
+    {
+      "id": "G6",
+      "text": "HRMP's executive summary describes subsidized lending to give firms access to working capital.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H032",
+          "row": 9
+        }
+      ]
+    },
+    {
+      "id": "G7",
+      "text": "The HRMP license incorporates application and CAC commitments without expressly naming the lending program.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H032",
+          "row": 11
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "K1",
+      "text": "HRMP actually made the promised $25 million available to the lending program.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H032",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H032",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "K2",
+      "text": "The program actually operated to support access to loans for the intended small businesses, including MWBE firms.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H032",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H032",
+          "row": 7
+        },
+        {
+          "sheet": "TG-GOLD-H032",
+          "row": 8
+        }
+      ]
+    }
+  ],
+  "delivery_applicable": true,
+  "reference_verdict": {
+    "status": "self-reported only",
+    "reasoning": "The $25M amount is consistent across three HRMP filings and the Board's report, but every statement of the commitment originates with HRMP; the Board only restates it. No lender, terms, launch or loans have been reported by anyone since the license award. The scope varies (small business vs MWBE). It binds only through the license's general Application/CAC clause. If you treat it as not launchable until construction, 'not yet due' is the alternative.",
+    "delivery_applicable": true,
+    "source_refs": [
+      {
+        "sheet": "TG-GOLD-H032",
+        "row": 17
+      },
+      {
+        "sheet": "TG-GOLD-H032",
+        "row": 18
+      }
+    ]
+  },
+  "sources": [
+    {
+      "sheet": "TG-GOLD-H032",
+      "row": 5,
+      "title": "GFLB Selection document (1 Dec 2025)",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "publisher": "NY Gaming Facility Location Board (regulator)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "pdf p.21: \"The Board views HRMP's $25 million commitment to a small-business lender program - supporting MWBE firms - and its partnership with McKissack & McKissack ... as a strength.\"",
+      "notes": "Quote verified verbatim (char 49705-49795)."
+    },
+    {
+      "sheet": "TG-GOLD-H032",
+      "row": 6,
+      "title": "GFLB Report and Findings (Mar 2026)",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "publisher": "NY Gaming Facility Location Board (regulator)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "Same sentence (printed pp.32-33).",
+      "notes": "none"
+    },
+    {
+      "sheet": "TG-GOLD-H032",
+      "row": 7,
+      "title": "HRMP application: Local Impact Siting, Local Business (Jun 2025)",
+      "citation": "https://nycasinos.ny.gov/hard-rock-metropolitan-park-local-impact-siting-full-diversified-regional-tourism-local-business-0",
+      "publisher": "Hard Rock Metropolitan Park (obligor)",
+      "url": "https://nycasinos.ny.gov/hard-rock-metropolitan-park-local-impact-siting-full-diversified-regional-tourism-local-business-0",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/hard-rock-metropolitan-park-local-impact-siting-full-diversified-regional-tourism-local-business-0",
+      "published_on": null,
+      "evidence_status": "self-reported only",
+      "specific_evidence": "\"Hard Rock Metropolitan Park has committed $25 million to developing and implementing a small business lending program. This program will assist small businesses in receiving loans and reducing lender risk\".",
+      "notes": "Framed as small businesses in surrounding communities, not MWBE-specific."
+    },
+    {
+      "sheet": "TG-GOLD-H032",
+      "row": 8,
+      "title": "HRMP responses to CAC inquiries (29 Sep 2025)",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "publisher": "Hard Rock Metropolitan Park (obligor)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "published_on": null,
+      "evidence_status": "self-reported only",
+      "specific_evidence": "\"We also provide technical assistance to help businesses gain MWBE certification and are backing this work with a $25 million MWBE lending program.\"",
+      "notes": "Framed as MWBE."
+    },
+    {
+      "sheet": "TG-GOLD-H032",
+      "row": 9,
+      "title": "HRMP application Executive Summary (Jun 2025) and Supplement (Oct 2025)",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2025/07/gi1.hardrock.executivesummary.pdf ; https://nycasinos.ny.gov/system/files/documents/2025/10/gi1.hardrock.executivesummary.supplement-redacted.pdf",
+      "publisher": "Hard Rock Metropolitan Park (obligor)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/gi1.hardrock.executivesummary.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2025/07/gi1.hardrock.executivesummary.pdf ; https://nycasinos.ny.gov/system/files/documents/2025/10/gi1.hardrock.executivesummary.supplement-redacted.pdf",
+      "published_on": null,
+      "evidence_status": "self-reported only",
+      "specific_evidence": "\"access to working capital through a subsidized lending program\" (McKissack MWBE/SDVOB plan), no amount.",
+      "notes": "none"
+    },
+    {
+      "sheet": "TG-GOLD-H032",
+      "row": 10,
+      "title": "HRMP application: Workforce Enhancement, MWBE goals (Jun 2025)",
+      "citation": "https://nycasinos.ny.gov/metropolitan-park-workforce-enhancement-mwbe-goals",
+      "publisher": "Hard Rock Metropolitan Park (obligor)",
+      "url": "https://nycasinos.ny.gov/metropolitan-park-workforce-enhancement-mwbe-goals",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/metropolitan-park-workforce-enhancement-mwbe-goals",
+      "published_on": null,
+      "evidence_status": "no public evidence located",
+      "specific_evidence": "Lending program not mentioned; covers 30% M/WBE + 6% SDVOB construction goals.",
+      "notes": "none"
+    },
+    {
+      "sheet": "TG-GOLD-H032",
+      "row": 11,
+      "title": "HRMP license award and Exhibit 1 License Conditions (19 Dec 2025; effective 15 Dec 2025)",
+      "citation": "https://gaming.ny.gov/hard-rock-metropolitan-park-commercial-casino-license",
+      "publisher": "NYS Gaming Commission (regulator)",
+      "url": "https://gaming.ny.gov/hard-rock-metropolitan-park-commercial-casino-license",
+      "url_origin": "workbook",
+      "locator": "https://gaming.ny.gov/hard-rock-metropolitan-park-commercial-casino-license",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "Does not name this item. Exhibit 1: \"Hard Rock shall materially perform consistent with the content of its Application and commitments expressed during the Community Advisory Committee evaluative process, as determined or otherwise approved by the Commission.\"",
+      "notes": "Lending program and MWBE not named."
+    }
+  ],
+  "provenance": {
+    "workbook": "Golden Dataset (6).xlsx",
+    "sha256": "2da588b49b311957885ed7ff98bcd31c49e9d3ef8e99a761a3e9e5fcdb360099",
+    "identity": {
+      "sheet": "gold commitments",
+      "row": 97
+    },
+    "detail_sheet": "TG-GOLD-H032",
+    "detail_internal_id_cell": "B1",
+    "workbook_valid_flag": 1,
+    "workbook_split": "heldout_provisional",
+    "workbook_evidence_status": "not yet due",
+    "workbook_fields": {
+      "gold_id": "TG-GOLD-H032",
+      "document_id": "GFLB-SEL-2025-12-01",
+      "page_section": "pdf p.21; Hard Rock Metropolitan Park: Diversity Framework",
+      "char_start": 49705.0,
+      "char_end": 49795.0,
+      "commitment_text": "HRMP’s $25 million commitment to a small-business lender program - supporting MWBE firms -",
+      "normalized_statement": "HRMP committed $25 million to a small-business lender program supporting MWBE firms.",
+      "obligation_type": "Contractual commitment",
+      "responsible_entity": "Queens Future, LLC d/b/a Hard Rock Metropolitan Park",
+      "amount_value": "$25 million",
+      "term_periodicity": "unspecified",
+      "geographic_scope": "unspecified",
+      "beneficiary_category": "MWBE firms / small businesses",
+      "beneficiary_named": "small-business lender program (unnamed)",
+      "condition_contingency": "none stated",
+      "milestone": "none stated",
+      "evidence_status": "not yet due",
+      "confidence": "High",
+      "adjudication_note": "none",
+      "duplicate_of": "none",
+      "notes": "none",
+      "evaluation_split": "heldout_provisional",
+      "manually annotated valid?": 1.0
+    },
+    "detail_research_cutoff": null,
+    "evaluation_use": "22-case annotated benchmark; development-exposed cases included",
+    "reference_preparation": "Locally curated factual hypotheses and delivery conditions from the cited Golden (6) cells; prior to research."
+  }
+}

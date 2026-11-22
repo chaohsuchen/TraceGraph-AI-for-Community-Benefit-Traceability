@@ -1,0 +1,124 @@
+{
+  "case_id": "TG-GOLD-H023",
+  "reference_sha256": "d675a0e02e84ab223297335394434b58b6d043a456e9119990123f11bf1eb817",
+  "query": "The Board believes HRMP is obligated to complete the Taste of Queens food hall.",
+  "model": "gpt-5.4",
+  "web_search_model": "gpt-5.4",
+  "started_at": "2026-11-22T09:40:06.915629+00:00",
+  "outcome": "PARTIAL_RESEARCH",
+  "message": "Research is incomplete; no commitment was saved.",
+  "graph": null,
+  "job_result": {
+    "gaps": [
+      "No cited evidence shows the platform/podium or overbuild was actually built; later Board report describes it as planned.",
+      "Cited primary-language excerpts assign HRMP to deliver a parking podium/platform, while stating Queens Baseball Company/New York Mets will then build the Taste of Queens. No cited excerpt from HRMP or an official record directly documents an original HRMP obligation to complete the food hall itself.",
+      "No cited evidence shows the food hall was completed, and Board statements reflect a belief/recommendation about obligation rather than proof of an original HRMP commitment or actual completion.",
+      "Citations show the Board's belief and recommendation, but not whether the Commission imposed such a license condition.",
+      "The supplied passages do not document an original binding HRMP commitment to complete the Taste of Queens food hall itself; instead, they consistently assign HRMP to delivering the podium/platform/overbuild and assign the Mets/Queens Baseball Company to building the food hall. The main unresolved issue is whether the Commission later imposed a license condition requiring HRMP to complete the food hall despite that earlier division of roles."
+    ],
+    "facts": [
+      {
+        "excerpt": "As discussed in our Application (see EvalEconCaliber5.HardRock.RetailRecOther), HRMP will unlock further development potential within Metropolitan Park by delivering a parking podium on which Queens Baseball Company (i.e., the New York Mets) will then build the Taste of Queens.",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf"
+      },
+      {
+        "excerpt": "As discussed in our Application (see EvalEconCaliber5.HardRock.RetailRecOther), HRMP will unlock further development potential within Metropolitan Park by delivering a parking podium on which Queens Baseball Company (i.e., the New York Mets) will then build the Taste of Queens. Detailed design for the interior of the Taste of Queens is still underway. We currently anticipate that the market (“food hall”) will be located on the elevated first floor, directly accessible and visible from the MTA gateway plaza as well as the open space. The market will accommodate approximately 20 local food vendors, and we plan to partner with local groups to ensure that includes a mix of operators coming from both brick-and-mortar and street vendor origins. We look forward to working with our community partners on further programmatic details in the years ahead before grand opening.",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf"
+      },
+      {
+        "excerpt": "Further, HRMP plans to construct an overbuild with a construction cost of approximately $60 million as part of one of the casino’s garages, to serve as the platform for a Taste of Queens food hall that is being built by the New York Mets.",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+      },
+      {
+        "excerpt": "Because the Applicant repeatedly referred to the Taste of Queens as a core project element in its presentations to the community, however, the Board strongly believes that HRMP has an obligation to complete the food hall.",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+      },
+      {
+        "excerpt": "Those projects accordingly were not considered in the Board’s evaluation, but were raised during the Community Advisory Committee process, and the Board recommends to the Commission that the Applicant’s license require those projects to be completed.",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+      },
+      {
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc5.hardrock.tourism.redactedrevised.pdf",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc5.hardrock.tourism.redactedrevised.pdf",
+        "excerpt": "As part of Metropolitan Park, an affiliate of the New York Mets expects to build Taste of Queens—a food and entertainment space."
+      },
+      {
+        "source_url": "https://ny.eater.com/news/24445921/major-food-group-restaurants-hard-rock-hotel-metropolitan-park-queens-food-hall-citi-field",
+        "source_title": "https://ny.eater.com/news/24445921/major-food-group-restaurants-hard-rock-hotel-metropolitan-park-queens-food-hall-citi-field",
+        "excerpt": "Outside of Hard Rock’s hotel and casino, Metropolitan Park will also include a 30,000-square-foot food hall, Taste of Queens, which will have 20 or so restaurants and food vendors from the borough."
+      },
+      {
+        "source_url": "https://ny.eater.com/news/24445921/major-food-group-restaurants-hard-rock-hotel-metropolitan-park-queens-food-hall-citi-field",
+        "source_title": "https://ny.eater.com/news/24445921/major-food-group-restaurants-hard-rock-hotel-metropolitan-park-queens-food-hall-citi-field",
+        "excerpt": "Major Food Group will oversee the restaurants and bars inside the Hard Rock Hotel and Casino Metropolitan Park, the group’s next location inside the sprawling project that has yet to break ground, with a projected opening year of 2030."
+      }
+    ],
+    "query": "The Board believes HRMP is obligated to complete the Taste of Queens food hall.",
+    "message": "Research is incomplete; no commitment was saved.",
+    "outcome": "PARTIAL_RESEARCH",
+    "suggestions": [
+      {
+        "kind": "WEB_LEAD",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+        "excerpt": "As discussed in our Application (see EvalEconCaliber5.HardRock.RetailRecOther), HRMP will unlock further development potential within Metropolitan Park by delivering a parking podium on which Queens Baseball Company (i.e., the New York Mets) will then build the Taste of Queens.",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+        "description": "As discussed in our Application (see EvalEconCaliber5.HardRock.RetailRecOther), HRMP will unlock further development potential within Metropolitan Park by delivering a parking podium on which Queens Baseball Company (i.e., the New York Mets) will then build the Taste of Queens.",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf"
+      },
+      {
+        "kind": "WEB_LEAD",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+        "excerpt": "As discussed in our Application (see EvalEconCaliber5.HardRock.RetailRecOther), HRMP will unlock further development potential within Metropolitan Park by delivering a parking podium on which Queens Baseball Company (i.e., the New York Mets) will then build the Taste of Queens. Detailed design for the interior of the Taste of Queens is still underway. We currently anticipate that the market (“food hall”) will be located on the elevated first floor, directly accessible and visible from the MTA gateway plaza as well as the open space. The market will accommodate approximately 20 local food vendors, and we plan to partner with local groups to ensure that includes a mix of operators coming from both brick-and-mortar and street vendor origins. We look forward to working with our community partners on further programmatic details in the years ahead before grand opening.",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+        "description": "As discussed in our Application (see EvalEconCaliber5.HardRock.RetailRecOther), HRMP will unlock further development potential within Metropolitan Park by delivering a parking podium on which Queens Baseball Company (i.e., the New York Mets) will then build the Taste of Queens. Detailed design for the interior of the Taste of Queens is still underway. We currently anticipate that the market (“food hall”) will be located on the elevated first floor, directly accessible and visible from the MTA gateway plaza as well as the open space. The market will accommodate approximately 20 local food vendors, and we plan to partner with local groups to ensure that includes a mix of operators coming from both brick-and-mortar and street vendor origins. We look forward to working with our community partners on further programmatic details in the years ahead before grand opening.",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf"
+      },
+      {
+        "kind": "WEB_LEAD",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+        "excerpt": "Further, HRMP plans to construct an overbuild with a construction cost of approximately $60 million as part of one of the casino’s garages, to serve as the platform for a Taste of Queens food hall that is being built by the New York Mets.",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+        "description": "Further, HRMP plans to construct an overbuild with a construction cost of approximately $60 million as part of one of the casino’s garages, to serve as the platform for a Taste of Queens food hall that is being built by the New York Mets.",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+      }
+    ],
+    "unmatched_records": [
+      {
+        "excerpt": "The market will accommodate approximately 20 local food vendors, and we plan to partner with local groups to ensure that includes a mix of operators coming from both brick-and-mortar and street vendor origins.",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf"
+      },
+      {
+        "excerpt": "As discussed in our Application (see EvalEconCaliber5.HardRock.RetailRecOther), HRMP will unlock further development potential within Metropolitan Park by delivering a parking podium on which Queens Baseball Company (i.e., the New York Mets) will then build the Taste of Queens.",
+        "source_url": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-29-2025",
+        "source_title": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-29-2025"
+      },
+      {
+        "excerpt": "Further, HRMP plans to construct an overbuild with a construction cost of approximately $60 million as part of one of the casino’s garages, to serve as the platform for a Taste of Queens food hall that is being built by the New York Mets.",
+        "source_url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+        "source_title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026"
+      },
+      {
+        "excerpt": "Because the Applicant repeatedly referred to the Taste of Queens as a core project element in its presentations to the community, however, the Board strongly believes that HRMP has an obligation to complete the food hall.",
+        "source_url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+        "source_title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026"
+      },
+      {
+        "excerpt": "the Board recommends to the Commission that the Applicant’s license require those projects to be completed.",
+        "source_url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+        "source_title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026"
+      },
+      {
+        "excerpt": "Taste of Queens Buildout 60 -- 60",
+        "source_url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+        "source_title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026"
+      }
+    ]
+  },
+  "finished_at": "2026-11-22T09:41:47.524842+00:00"
+}

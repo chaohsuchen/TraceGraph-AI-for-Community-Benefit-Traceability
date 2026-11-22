@@ -1,0 +1,98 @@
+{
+  "fingerprint": "8eaabcf82e934f029eea1cd1d949549503e78a80ec4b073847be4c6bed1cb101",
+  "reversed_original_ids": [
+    "p5",
+    "p4",
+    "p3",
+    "p2",
+    "p1"
+  ],
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 5.718999999924563,
+      "request_id": "req_0cd35ba1a9e646daa5d13a12a546f701",
+      "usage": {
+        "input_tokens": 2281,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 485,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2766
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "decisions": [
+    {
+      "gold_id": "G2",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p3",
+        "p5"
+      ],
+      "reason": "The passages say the partnership will begin investing in the immediate term, but none states a multimillion-dollar down payment or that it occurred before the license award."
+    },
+    {
+      "gold_id": "G3",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt mentions an application expressing hope for construction to start before the license award."
+    },
+    {
+      "gold_id": "G4",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt discusses license-required milestones or budgets for community benefits."
+    },
+    {
+      "gold_id": "G5",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt mentions section 3.1(b) or says the public partnership agreement ties the investment-period start to that section."
+    },
+    {
+      "gold_id": "G6",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt gives a deed date, recording date, amount, or identifies a Jamaica site transaction."
+    },
+    {
+      "gold_id": "G7",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt identifies RWNYC ARCHER AVE LLC as a recorded buyer."
+    },
+    {
+      "gold_id": "G8",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt mentions Queens block 10151, lot 39, or deed and mortgage parcel references."
+    },
+    {
+      "gold_id": "G9",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt reports $25 million delivered in 2026 through September for the fund."
+    },
+    {
+      "gold_id": "G10",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt says that in September 2026 the operator still described 700 Jamaica units as proposed."
+    }
+  ]
+}

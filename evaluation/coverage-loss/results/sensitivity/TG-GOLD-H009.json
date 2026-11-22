@@ -1,0 +1,79 @@
+{
+  "fingerprint": "c8a7c687fccfb27130adb66999d5f41847c80e06da10f772eda4b24b976cdecc",
+  "reversed_original_ids": [
+    "p3",
+    "p2",
+    "p1"
+  ],
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 4.75,
+      "request_id": "req_d4c19557a03a431f8a748104badeb9b8",
+      "usage": {
+        "input_tokens": 1824,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 363,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2187
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "decisions": [
+    {
+      "gold_id": "G2",
+      "label": "CONTRADICTION",
+      "citation_ids": [
+        "p3"
+      ],
+      "reason": "p3 describes the 70% Bronx-resident figure as a \"strong pledge,\" not as a goal."
+    },
+    {
+      "gold_id": "G3",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p2"
+      ],
+      "reason": "p2 says Bally's \"committed to hiring at least 70%+ Bronx residents as a minimum target,\" but the excerpts do not mention \"best-faith geographic hiring preferences.\""
+    },
+    {
+      "gold_id": "G4",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt says Bally's agreed to share geographic hiring data for the Bronx project."
+    },
+    {
+      "gold_id": "G5",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt discusses an executed Bronx gaming facility license or public progress reports on community benefit milestones."
+    },
+    {
+      "gold_id": "G6",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt discusses an executed Bronx gaming facility license or independent monitoring of community benefit milestones."
+    },
+    {
+      "gold_id": "G7",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt discusses any license reporting requirement including workforce diversity and demographic data."
+    }
+  ]
+}

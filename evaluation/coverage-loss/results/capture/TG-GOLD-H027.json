@@ -1,0 +1,64 @@
+{
+  "fingerprint": "00046ad7ff0bde9ceb920ee3114b7baeaaf18292521bb07c4c470949b02e0c61",
+  "origin": "frozen",
+  "passages": {
+    "p1": {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "The Commission conservatively estimates to be complete with the review of all Applicants’ material by mid-Summer 2026."
+    },
+    "p2": {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "As of May 5, 2026, the following Hard Rock Metropolitan Park records denoted with “REVISED REDACTIONS” suffixes have undergone the statutory review process, are considered final, and are posted below."
+    },
+    "p3": {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-workforce-enhancement-job-opportunities",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-workforce-enhancement-job-opportunities",
+      "excerpt": "The company workforce training programs also include opportunities for employee access to additional resources, such as tuition reimbursement, that will enable employees to acquire education or job training needed to advance their career paths through increased responsibility and paygrades."
+    },
+    "p4": {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-workforce-enhancement-job-opportunities",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-workforce-enhancement-job-opportunities",
+      "excerpt": "Hard Rock Metropolitan Park will assist employees with access to promotion opportunities and will establish transparent career paths with measurable criteria leading to increased responsibility and higher pay grades designed to allow and encourage employees to pursue career advancement within the company."
+    },
+    "p5": {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-workforce-enhancement-job-opportunities",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-workforce-enhancement-job-opportunities",
+      "excerpt": "Hard Rock believes promoting from within benefits the company and the employees, and it strives to offer a stable and long-term career path for each employee. Thus, Hard Rock Metropolitan Park will assist employees with access to promotion opportunities and will establish transparent career paths with measurable criteria leading to increased responsibility and higher pay grades designed to allow and encourage employees to pursue career advancement within the company. The company workforce training programs also include opportunities for employee access to additional resources, such as tuition reimbursement, that will enable employees to acquire education or job training needed to advance their career paths through increased responsibility and paygrades."
+    }
+  },
+  "calls": [],
+  "decisions": [
+    {
+      "gold_id": "G1",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p3",
+        "p5"
+      ],
+      "reason": "The passages mention tuition reimbursement opportunities for employees, but none compares applicants or states HRMP was the only applicant proposing both onsite daycare and tuition reimbursement."
+    },
+    {
+      "gold_id": "G2",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt mentions onsite daycare or on-site childcare as an employee benefit in HRMP's executive summary."
+    },
+    {
+      "gold_id": "G3",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p3",
+        "p5"
+      ],
+      "reason": "These excerpts state the company's workforce training programs include employee access to resources such as tuition reimbursement."
+    },
+    {
+      "gold_id": "G4",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt discusses any license incorporation of application or CAC commitments, generally or with respect to these benefits."
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "fingerprint": "1c12c543002bc37305c0a8f9182dda7e4163ed08f32f79474cbec991d453c277",
+  "reversed_original_ids": [
+    "p5",
+    "p4",
+    "p3",
+    "p2",
+    "p1"
+  ],
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 4.672000000020489,
+      "request_id": "req_b54c777fee504a43ada4cf3a51517a3d",
+      "usage": {
+        "input_tokens": 2132,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 335,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2467
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "decisions": [
+    {
+      "gold_id": "G3",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p3"
+      ],
+      "reason": "The passages mention McKissack as HRMP's equity partner overseeing MWBE data tracking, but none say the Board highlighted a partnership with McKissack alongside the lending proposal."
+    },
+    {
+      "gold_id": "G4",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt states that HRMP said the lending program would reduce lender risk."
+    },
+    {
+      "gold_id": "G6",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt is an HRMP executive summary or says subsidized lending would give firms access to working capital; the retrieved text only mentions a $25 million lending program to expand capital access."
+    },
+    {
+      "gold_id": "G7",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p4"
+      ],
+      "reason": "The only license passage identifies HRMP's licensure status and does not address incorporation of application or CAC commitments, with or without naming the lending program."
+    }
+  ]
+}

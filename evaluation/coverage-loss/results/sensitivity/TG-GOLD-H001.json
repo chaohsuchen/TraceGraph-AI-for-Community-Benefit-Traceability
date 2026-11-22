@@ -1,0 +1,75 @@
+{
+  "fingerprint": "8ff4c1b89afd2a98736785e45eb1369a9d5ee10360116ab9256d5dea9508e84d",
+  "reversed_original_ids": [
+    "p5",
+    "p4",
+    "p3",
+    "p2",
+    "p1"
+  ],
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 4.469000000040978,
+      "request_id": "req_60fe584f60f84e05acc88a943956e5b7",
+      "usage": {
+        "input_tokens": 1883,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 315,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2198
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "decisions": [
+    {
+      "gold_id": "G3",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p5"
+      ],
+      "reason": "p5 says 70 percent of permanent-operation workers will come from the Bronx and the workforce will reflect Bronx demographics, but it does not mention 'local underserved populations' or describe this as a CAC answer about the target population."
+    },
+    {
+      "gold_id": "G4",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No supplied excerpt mentions a promise of quarterly hiring reporting."
+    },
+    {
+      "gold_id": "G5",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No supplied excerpt states that the Bronx license requires public workforce demographic reporting as part of community-benefit reporting."
+    },
+    {
+      "gold_id": "G6",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p5"
+      ],
+      "reason": "p5 gives 3,503 full-time equivalent employees for permanent operations, but no excerpt shows the Board distinguishing that figure from approximately 3,741 permanent positions."
+    },
+    {
+      "gold_id": "G7",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No supplied excerpt discusses Bronx vacancies in a workforce review or says they were at the existing golf course and restaurant."
+    }
+  ]
+}

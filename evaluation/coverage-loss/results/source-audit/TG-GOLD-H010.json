@@ -1,0 +1,18 @@
+{
+  "case": "TG-GOLD-H010",
+  "selected_distinct_urls": 1,
+  "review": {
+    "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf": {
+      "relationship": "different_host_independence_unestablished",
+      "identical_content_urls": [],
+      "old_passages_repeated": [],
+      "snapshot_consistent": true,
+      "original_status": {
+        "status": "readable",
+        "characters": 9571,
+        "sha256": "c364e24715855df49f2ae52c2262e1aa54db416c96b1ee025804918306e0d5f0"
+      },
+      "same_host_or_filename_compared": []
+    }
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "fingerprint": "49da414d9d3c6fc098d2ca2e2dea81ef60e932cba8516843c612755920c083a7",
+  "origin": "new_tool_free_v4",
+  "passages": {
+    "p1": {
+      "url": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "title": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "excerpt": "Community benefits valued at $761 million include significant traffic and roadway improvements, improvements to the Metropolitan Transportation Authority (MTA)’s public transit station, over 25 acres of new public open space, a Community Impact Fund, and funding for neighborhood social services."
+    },
+    "p2": {
+      "url": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "title": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "excerpt": "HRMP proposes extensive traffic and roadway improvements, including ADA-compliant upgrades to the Willets Point MTA subway station, reconfigured intersections, new pedestrian and bicycle paths, and improved access to public transit."
+    },
+    "p3": {
+      "url": "https://apps.cio.ny.gov/apps/mediacontact/public/view.cfm?backButton=&parm=8CF994EA-BE93-69D0-2215473F6E0C6BC5",
+      "title": "https://apps.cio.ny.gov/apps/mediacontact/public/view.cfm?backButton=&parm=8CF994EA-BE93-69D0-2215473F6E0C6BC5",
+      "excerpt": "Gaming Facility Location Board Selects 3 Applicants to Apply to the Gaming Commission for Gaming Facility Licenses"
+    },
+    "p4": {
+      "url": "https://www.actionnetwork.com/news/new-york-casino-resorts-world-hard-rock-ballys-update/",
+      "title": "https://www.actionnetwork.com/news/new-york-casino-resorts-world-hard-rock-ballys-update/",
+      "excerpt": "Resorts World NYC is already generating gaming revenue and expanding its casino floor, while Hard Rock Metropolitan Park in Queens and Bally’s Bronx continue through development, financing, construction, and permitting stages."
+    },
+    "p5": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf",
+      "excerpt": "Hard Rock Metropolitan Park has engaged with the MTA for over three years about the proposed improvements at Mets-Willets Point, and the MTA provided conceptual approval of the Proposed Improvements at the 30% Construction Documents stage of review in a letter dated August 21, 2024"
+    },
+    "p6": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf",
+      "excerpt": "We have and will continue to work in good faith to secure all necessary approvals from the MTA and meet all necessary deadlines to deliver this required community benefit."
+    }
+  },
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 5.515999999945052,
+      "request_id": "req_9d07dbd755e94eaf9a01384f7d0d1e54",
+      "usage": {
+        "input_tokens": 2515,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 605,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3120
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "decisions": [
+    {
+      "gold_id": "G1",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p1"
+      ],
+      "reason": "Passage p1 explicitly states the community benefits were \"valued at $761 million.\""
+    },
+    {
+      "gold_id": "G2",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p1"
+      ],
+      "reason": "Passage p1 says the benefits include \"significant traffic and roadway improvements.\""
+    },
+    {
+      "gold_id": "G3",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p1"
+      ],
+      "reason": "Passage p1 states the package includes \"improvements to the Metropolitan Transportation Authority (MTA)’s public transit station.\""
+    },
+    {
+      "gold_id": "G4",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p1"
+      ],
+      "reason": "Passage p1 states the benefits include \"over 25 acres of new public open space.\""
+    },
+    {
+      "gold_id": "G5",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p1"
+      ],
+      "reason": "Passage p1 lists \"a Community Impact Fund\" among the community benefits."
+    },
+    {
+      "gold_id": "G6",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p1"
+      ],
+      "reason": "Passage p1 expressly includes \"funding for neighborhood social services.\""
+    },
+    {
+      "gold_id": "G7",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt mentions a Board chart itemizing $761 million upfront and $150 million ongoing."
+    },
+    {
+      "gold_id": "G8",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt shows an executive summary advertising about $1 billion in community benefits."
+    },
+    {
+      "gold_id": "G9",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt shows an executive summary using $1.75 billion for investment into community needs."
+    },
+    {
+      "gold_id": "G10",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt mentions a license requirement for milestones and budgets for proposed community benefits."
+    },
+    {
+      "gold_id": "G11",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt schedules $150 million of fund payments during 2031–2060."
+    },
+    {
+      "gold_id": "G12",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt reports distributing $2 million in grants in 2026."
+    },
+    {
+      "gold_id": "G13",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p5",
+        "p6"
+      ],
+      "reason": "The retrieved passages discuss engagement with MTA, conceptual approval, and efforts to secure approvals, but do not say news coverage reported MTA had yet to agree to the overhaul."
+    }
+  ]
+}

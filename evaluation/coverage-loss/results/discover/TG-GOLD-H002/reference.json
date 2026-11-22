@@ -1,0 +1,287 @@
+{
+  "case_id": "TG-GOLD-H002",
+  "query": "Bally's will contribute 1 percent of GGR annually (minimum $15 million) to a Community Benefits Fund from opening, administered by an independent local board.",
+  "facts": [
+    {
+      "id": "G1",
+      "text": "Bally's promised an annual Bronx community fund contribution of 1% of gross gaming revenue.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H002",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H002",
+          "row": 8
+        }
+      ]
+    },
+    {
+      "id": "G2",
+      "text": "The Bronx fund contribution has a $15 million annual minimum.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H002",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H002",
+          "row": 8
+        }
+      ]
+    },
+    {
+      "id": "G3",
+      "text": "Contributions are tied to casino opening rather than license award.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H002",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H002",
+          "row": 6
+        },
+        {
+          "sheet": "TG-GOLD-H002",
+          "row": 10
+        }
+      ]
+    },
+    {
+      "id": "G4",
+      "text": "The Bronx community benefits fund was to be governed by an independent local board.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H002",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H002",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "G5",
+      "text": "The negotiated fund board was to have eleven members.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H002",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "G6",
+      "text": "The operator described appointments by local elected officials and Community Board 10.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H002",
+          "row": 8
+        }
+      ]
+    },
+    {
+      "id": "G7",
+      "text": "The Board questioned the benefits package's $765 million net present value because the fund pays nothing before opening.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H002",
+          "row": 10
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "K1",
+      "text": "An independently governed local fund board was established.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H002",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H002",
+          "row": 8
+        }
+      ]
+    },
+    {
+      "id": "K2",
+      "text": "Bally's made the annual fund payments due after opening at 1% of gross gaming revenue with a $15 million minimum.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H002",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H002",
+          "row": 6
+        },
+        {
+          "sheet": "TG-GOLD-H002",
+          "row": 8
+        }
+      ]
+    }
+  ],
+  "delivery_applicable": true,
+  "reference_verdict": {
+    "status": "not yet due",
+    "reasoning": "§5 decision order: (1) payments can be evidenced; (2) the trigger (facility opening) is after the assessment date → not yet due. No document reports the fund entity or its board being set up, which is the only step that could happen before opening; if one does, it would be partial evidence. Gale had 2 articles ever mentioning the fund, none since Dec 2025. Re-assess at opening.",
+    "delivery_applicable": true,
+    "source_refs": [
+      {
+        "sheet": "TG-GOLD-H002",
+        "row": 17
+      },
+      {
+        "sheet": "TG-GOLD-H002",
+        "row": 18
+      }
+    ]
+  },
+  "sources": [
+    {
+      "sheet": "TG-GOLD-H002",
+      "row": 5,
+      "title": "GFLB selection document, Bally's Bronx: Board Evaluation",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf (GFLB-SEL-2025-12-01) — PDF p.12 (printed p.11)",
+      "publisher": "Gaming Facility Location Board (Dec 1, 2025)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf (GFLB-SEL-2025-12-01) — PDF p.12 (printed p.11)",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "Source of the commitment: 1% of GGR, $15M minimum, from opening; independent local board.",
+      "notes": "Called 'Bronx Benefit Fund' in Chart 4."
+    },
+    {
+      "sheet": "TG-GOLD-H002",
+      "row": 6,
+      "title": "Bally's casino boosts investment offer'",
+      "citation": "https://www.bxtimes.com/ballys-casino-boosts-investment-offer/",
+      "publisher": "Bronx Times (Sep 2025)",
+      "url": "https://www.bxtimes.com/ballys-casino-boosts-investment-offer/",
+      "url_origin": "workbook",
+      "locator": "https://www.bxtimes.com/ballys-casino-boosts-investment-offer/",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "Bally's declined the CAC's request to start contributions at licensure; payments tied to opening and revenue.",
+      "notes": "Confirms the trigger is opening."
+    },
+    {
+      "sheet": "TG-GOLD-H002",
+      "row": 7,
+      "title": "Final Draft CAC Proposal and Amendments for Bally's",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys.pdf",
+      "publisher": "NY casino CAC process (Sep 2025)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys.pdf",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "CAC process agreed an 11-member Community Benefit Fund Board with local roles.",
+      "notes": "Negotiation record. Board formation would be the first checkable step."
+    },
+    {
+      "sheet": "TG-GOLD-H002",
+      "row": 8,
+      "title": "Bally's Bets on the Bronx' community benefits document",
+      "citation": "https://ballysbronx.com/wp-content/uploads/2026/03/Ballys-Bets-on-the-Bronx-03.06.26.pdf",
+      "publisher": "Bally's (posted Mar 2026)",
+      "url": "https://ballysbronx.com/wp-content/uploads/2026/03/Ballys-Bets-on-the-Bronx-03.06.26.pdf",
+      "url_origin": "workbook",
+      "locator": "https://ballysbronx.com/wp-content/uploads/2026/03/Ballys-Bets-on-the-Bronx-03.06.26.pdf",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "1% of GGR with $15M/yr minimum; directors appointed by local elected officials and CB10.",
+      "notes": "Obligor's pledge."
+    },
+    {
+      "sheet": "TG-GOLD-H002",
+      "row": 9,
+      "title": "Bally's Form 10-Q, Q2 2026",
+      "citation": "https://www.sec.gov/Archives/edgar/data/0001747079/000174707926000084/baly-20260630.htm",
+      "publisher": "Bally's Corporation, filed with SEC (period ending Jun 30, 2026)",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001747079/000174707926000084/baly-20260630.htm",
+      "url_origin": "workbook",
+      "locator": "https://www.sec.gov/Archives/edgar/data/0001747079/000174707926000084/baly-20260630.htm",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "A Compliance Monitoring Team approved by the Gaming Commission has been engaged.",
+      "notes": "Obligor's own statement about an accountability mechanism."
+    },
+    {
+      "sheet": "TG-GOLD-H002",
+      "row": 10,
+      "title": "GFLB final report and findings",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "publisher": "Gaming Facility Location Board (Mar 2026)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "Restates 1% / $15M from opening; notes the $765M net present value of Bally's benefits may be overstated because no fund money is paid before opening.",
+      "notes": "Regulator commentary. Method D."
+    },
+    {
+      "sheet": "TG-GOLD-H002",
+      "row": 11,
+      "title": "Bally's says its Bronx casino project is still a safe bet, amid debt concerns'",
+      "citation": "https://gothamist.com/news/ballys-says-its-bronx-casino-project-is-still-a-safe-bet-amid-debt-concerns (also in Gale OneFile: News)",
+      "publisher": "Gothamist (Sep 22, 2026)",
+      "url": "https://gothamist.com/news/ballys-says-its-bronx-casino-project-is-still-a-safe-bet-amid-debt-concerns",
+      "url_origin": "workbook",
+      "locator": "https://gothamist.com/news/ballys-says-its-bronx-casino-project-is-still-a-safe-bet-amid-debt-concerns (also in Gale OneFile: News)",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "A quoted local source says the negotiated benefits are 'extensive and sorely needed'.",
+      "notes": "Commentary only. Speaker's role not verified. Method B."
+    }
+  ],
+  "provenance": {
+    "workbook": "Golden Dataset (6).xlsx",
+    "sha256": "2da588b49b311957885ed7ff98bcd31c49e9d3ef8e99a761a3e9e5fcdb360099",
+    "identity": {
+      "sheet": "gold commitments",
+      "row": 17
+    },
+    "detail_sheet": "TG-GOLD-H002",
+    "detail_internal_id_cell": "B1",
+    "workbook_valid_flag": 1,
+    "workbook_split": "heldout_provisional",
+    "workbook_evidence_status": "not yet due",
+    "workbook_fields": {
+      "gold_id": "TG-GOLD-H002",
+      "document_id": "GFLB-SEL-2025-12-01",
+      "page_section": "pdf p.12; Bally’s Bronx: Board Evaluation",
+      "char_start": 24782.0,
+      "char_end": 25068.0,
+      "commitment_text": "Bally’s will make an annual contribution of 1 percent of gross gaming revenue, with a minimum of $15 million, to a Community Benefits Fund from the time the gaming facility opens, with the Fund to be administered by an independent board representing local communities and organizations.",
+      "normalized_statement": "Bally's will contribute 1 percent of GGR annually (minimum $15 million) to a Community Benefits Fund from opening, administered by an independent local board.",
+      "obligation_type": "Contractual commitment",
+      "responsible_entity": "Bally’s Corporation",
+      "amount_value": "1 percent of gross gaming revenue, with a minimum of $15 million (annual)",
+      "term_periodicity": "annual; from the time the gaming facility opens",
+      "geographic_scope": "Bronx",
+      "beneficiary_category": "local communities and organizations",
+      "beneficiary_named": "Community Benefits Fund (administered by an independent board)",
+      "condition_contingency": "begins when the gaming facility opens",
+      "milestone": "facility opening (projected mid-2030)",
+      "evidence_status": "not yet due",
+      "confidence": "High",
+      "adjudication_note": "none",
+      "duplicate_of": "none",
+      "notes": "Formula with floor; not computed. Called 'Bronx Benefit Fund' in Chart 4 (alias for entity resolution).",
+      "evaluation_split": "heldout_provisional",
+      "manually annotated valid?": 1.0
+    },
+    "detail_research_cutoff": null,
+    "evaluation_use": "22-case annotated benchmark; development-exposed cases included",
+    "reference_preparation": "Locally curated factual hypotheses and delivery conditions from the cited Golden (6) cells; prior to research."
+  }
+}

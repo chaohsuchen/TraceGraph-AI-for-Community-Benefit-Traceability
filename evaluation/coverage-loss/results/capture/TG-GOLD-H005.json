@@ -1,0 +1,42 @@
+{
+  "fingerprint": "dd0d1a865ddda4f7c64dc8620c8ef66b3476cd5d6f53f7c8e8284307812c8fa9",
+  "origin": "frozen",
+  "passages": {
+    "p1": {
+      "url": "https://gaming.ny.gov/ballys-bronx-commercial-casino-license",
+      "title": "https://gaming.ny.gov/ballys-bronx-commercial-casino-license",
+      "excerpt": "Each such report shall detail progress, set forth relevant budget and expenditure, and explain actual or anticipated delays in delivery of benefits proposed in the Application or Bally’s other commitments."
+    }
+  },
+  "calls": [],
+  "decisions": [
+    {
+      "gold_id": "G1",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p1"
+      ],
+      "reason": "The passage mentions reporting on 'benefits proposed in the Application or Bally’s other commitments' but does not state that Bally's projected approximately 75% of capital expenditures would benefit Bronx-based firms."
+    },
+    {
+      "gold_id": "G2",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage mentions excavation or foundation permits for the Bronx project."
+    },
+    {
+      "gold_id": "G3",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage mentions a $560 million financing facility or Bally's obtaining $400 million for preconstruction costs."
+    },
+    {
+      "gold_id": "G4",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p1"
+      ],
+      "reason": "The passage requires reports to include 'relevant budget and expenditure' and delays in delivering proposed benefits, but it does not say the Board recommended reporting at opening how much actual capital spending benefited Bronx-based firms."
+    }
+  ]
+}

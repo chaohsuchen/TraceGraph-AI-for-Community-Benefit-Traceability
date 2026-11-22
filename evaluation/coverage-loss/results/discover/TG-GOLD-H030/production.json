@@ -1,0 +1,463 @@
+{
+  "arm": "discover",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 10.375,
+      "request_id": "req_48c19dcc58da4f11abae5be59e5b5844",
+      "usage": {
+        "input_tokens": 13214,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 4608
+        },
+        "output_tokens": 766,
+        "output_tokens_details": {
+          "reasoning_tokens": 123
+        },
+        "total_tokens": 13980
+      },
+      "search_enabled": true,
+      "web_search_ids": [
+        "ws_0356f54592786e24016b02c129a51887d2a4079163f6cae133",
+        "ws_0356f54592786e24016b02c12bb13487d29b56fdb9d449a1de",
+        "ws_0356f54592786e24016b02c12ce94887d2ae554ce5791037ce"
+      ],
+      "stop_reason": "completed",
+      "web_search_statuses": [
+        "completed",
+        "completed",
+        "searching"
+      ]
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 3.1089999999385327,
+      "request_id": "req_ac46f238369f4759a7ebf4e3a0977aeb",
+      "usage": {
+        "input_tokens": 6394,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 323,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 6717
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "documents": [
+    {
+      "url": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "status": "readable",
+      "characters": 72605,
+      "sha256": "a43eb98faa802446f8f9507a7e6ea7ebdd10d44f59abc1a762750e161e65dfc2"
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "status": "readable",
+      "characters": 23645,
+      "sha256": "9bcc90e56ae7aa1107a305627ebddce1bd1b04b5d89ee837bd5a973c4cbeacfc"
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "status": "readable",
+      "characters": 72606,
+      "sha256": "106bbbaf0d168554b64cd4a6604e696b9722d6a45a389f0ee982ecb9fcdeddb1"
+    }
+  ],
+  "search": {
+    "stop": "SUFFICIENT",
+    "proposals": [
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+        "quote": "(3) Construction goals are 8 percent women, 30-63 percent minorities and 6 percent service-disabled veterans, but HRMP’s experts note that service-disabled veteran composition will likely be approximately 2 percent due to the limited data on service-disabled veterans in the workforce and limited ability to target recruitment to these individuals."
+      },
+      {
+        "url": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+        "quote": "HRMP aims for 6 percent service-disabled veterans but considers 2 percent more realistic."
+      },
+      {
+        "url": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+        "quote": "For MWBE participation in the construction of the project, HRMP established goals of 8 percent women and 30 - 63 percent minorities and aims for 6 percent SDV participation though expects the previously mentioned 2 percent."
+      },
+      {
+        "url": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+        "quote": "HRMP also lacked data on service-disabled veteran employment, which it did not previously track."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+        "quote": "As of May 5, 2026, the following Hard Rock Metropolitan Park records denoted with “REVISED REDACTIONS” suffixes have undergone the statutory review process, are considered final, and are posted below."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+        "quote": "Diversity Framework - Workforce Demographics"
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+        "quote": "These job creation, local hiring, and diversity commitments were among the key factors driving the Board’s selection of HRMP, and the Board emphasizes that the goals HRMP expressed to the community must be honored."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+        "quote": "HRMP will not be operational in the first three and one-half years of the projection period."
+      }
+    ],
+    "located": {
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-12-2025": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-12-2025",
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "https://sam.gov/fal/bdab05af045b42b192f69fbfe1a7e346/view": "https://sam.gov/fal/bdab05af045b42b192f69fbfe1a7e346/view",
+      "https://ruraltransportation.org/rural-mobility-planning-for-everyone/": "https://ruraltransportation.org/rural-mobility-planning-for-everyone/",
+      "https://govtribe.com/file/government-file/36c77625r0093-dot-pdf": "https://govtribe.com/file/government-file/36c77625r0093-dot-pdf",
+      "https://nycasinos.ny.gov/resorts-world-new-york-city-application-materials": "https://nycasinos.ny.gov/resorts-world-new-york-city-application-materials",
+      "https://dhss.delaware.gov/dhcc/dhrb/": "https://dhss.delaware.gov/dhcc/dhrb/",
+      "https://hrdailyadvisor.hci.org/2012/11/27/hrci-responds-to-reader-challenges-announces-two-new-certifications/": "https://hrdailyadvisor.hci.org/2012/11/27/hrci-responds-to-reader-challenges-announces-two-new-certifications/",
+      "https://govtribe.com/file/government-file/w91crb21r0018-w91crb21r0018-amendment-1-conformed-copy-dot-pdf": "https://govtribe.com/file/government-file/w91crb21r0018-w91crb21r0018-amendment-1-conformed-copy-dot-pdf",
+      "https://nycasinos.ny.gov/metropolitan-park-application-materials": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "https://govtribe.com/file/government-file/w50s9f22r0006-solicitation-21-mar-22-dot-pdf": "https://govtribe.com/file/government-file/w50s9f22r0006-solicitation-21-mar-22-dot-pdf",
+      "https://www.scribd.com/document/797657101/ssrn-3806115": "https://www.scribd.com/document/797657101/ssrn-3806115",
+      "https://www.dol.gov/agencies/vets/programs/hvrp/glossary-of-terms": "https://www.dol.gov/agencies/vets/programs/hvrp/glossary-of-terms",
+      "https://govtribe.com/file/government-file/36c10f23r0004-2-dot-docx": "https://govtribe.com/file/government-file/36c10f23r0004-2-dot-docx"
+    },
+    "requested_actions": 2
+  },
+  "shortlist": [
+    {
+      "url": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "title": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "excerpt": "HRMP aims for 6 percent service-disabled veterans but considers 2 percent more realistic.",
+      "start": 48528,
+      "end": 48617
+    },
+    {
+      "url": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "title": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "excerpt": "For MWBE participation in the construction of the project, HRMP established goals of 8 percent women and 30 - 63 percent minorities and aims for 6 percent SDV participation though expects the previously mentioned 2 percent.",
+      "start": 49395,
+      "end": 49618
+    },
+    {
+      "url": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "title": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "excerpt": "HRMP also lacked data on service-disabled veteran employment, which it did not previously track.",
+      "start": 49172,
+      "end": 49268
+    },
+    {
+      "url": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "title": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "excerpt": "Diversity Framework The Board appreciated HRMP’s goal of building an operational workforce that reflects the demographics of Queens: 51 percent women and 83 percent minorities. HRMP aims for 6 percent service-disabled veterans but considers 2 percent more realistic.",
+      "start": 48351,
+      "end": 48617
+    },
+    {
+      "url": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "title": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "excerpt": "HRMP aims for 6 percent service-disabled veterans but considers 2 percent more realistic. HRMP notes that the Applicant may have to bring current experienced employees from other states to work at the facility, and this may impact reaching these workforce composition goals.",
+      "start": 48528,
+      "end": 48802
+    },
+    {
+      "url": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "title": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "excerpt": "Construction workforce diversity goals are targeted for 5 percent women, 40 percent minorities, and approximately 5 percent service-disabled veterans - below the State- indicated minimum of 6 percent. Resorts World also projected that 19 percent of its construction FTEs will be Queens residents, which the Board considers low.",
+      "start": 66125,
+      "end": 66452
+    },
+    {
+      "url": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "title": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "excerpt": "For Minority and Women-Owned Business Enterprises (MWBE) goals during construction, Bally’s proposed targets of 10 percent women, 40 percent minorities, and 10 percent service-disabled veterans. With respect to contractor MWBE goals, the Board considers Bally’s partnership with the Velez Organization a strength.",
+      "start": 35744,
+      "end": 36057
+    },
+    {
+      "url": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "title": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "excerpt": "For MWBE participation in the construction of the project, HRMP established goals of 8 percent women and 30 - 63 percent minorities and aims for 6 percent SDV participation though expects the previously mentioned 2 percent.",
+      "start": 49395,
+      "end": 49618
+    },
+    {
+      "url": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "title": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "excerpt": "The Board noted that Resorts World provided data on current employment at its existing facility but failed to supply sufficient demographic context for the areas from which they draw employees, limiting the Board’s ability to fully assess its diversity strategy. Construction workforce diversity goals are targeted for 5 percent women, 40 percent minorities, and approximately 5 percent service-disabled veterans - below the State- indicated minimum of 6 percent.",
+      "start": 65862,
+      "end": 66325
+    },
+    {
+      "url": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "title": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "excerpt": "Diversity Framework The Board supports Resorts World’s reported permanent employment target of 47 percent women, and 85 percent minorities, but expects the service-disabled veterans’ employment target to be the required 6 percent, not the 5 percent offered. Resorts World indicated that they expect their diversity composition to remain largely unchanged from their current employment levels.",
+      "start": 65293,
+      "end": 65685
+    },
+    {
+      "url": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "title": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "excerpt": "The Board also expressed 15 concern about transparency, as more than 36.4 percent of executive leadership race was reported as “non-specified.” This is not an acceptable response, and the Board expects more diverse executive leadership for the Bronx project. For Minority and Women-Owned Business Enterprises (MWBE) goals during construction, Bally’s proposed targets of 10 percent women, 40 percent minorities, and 10 percent service-disabled veterans.",
+      "start": 35485,
+      "end": 35938
+    },
+    {
+      "url": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "title": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "excerpt": "Median compensation for full-time employees is estimated near $150,000 annually, including benefits. Employment is projected to be 47 percent women, 85 percent minorities, and approximately 5 percent service-disabled veterans.",
+      "start": 58953,
+      "end": 59179
+    },
+    {
+      "url": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "title": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+      "excerpt": "All Applicants are expected to track and report service-disabled veteran employment to meet New York’s 6 percent requirement. The Board also expects the Applicants to be innovative and diligent in their efforts to prevent problem gambling and to help problem gamblers not just by telling those people that help is available, but by doing more to help them actually find and use the help.",
+      "start": 20614,
+      "end": 21001
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "As of May 5, 2026, the following Hard Rock Metropolitan Park records denoted with “REVISED REDACTIONS” suffixes have undergone the statutory review process, are considered final, and are posted below.",
+      "start": 2023,
+      "end": 2223
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "Diversity Framework - Workforce Demographics",
+      "start": 4467,
+      "end": 4511
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "Organization Download Hard Rock Metropolitan Park - Gaming Facility of Highest Caliber - Table of Organization - REVISED REDACTIONS Download Hard Rock Metropolitan Park - Gaming Facility of Highest Caliber - Table of Organization - Attachment 1 - REVISED REDACTIONS Download Metropolitan Park - Gaming Facility of Highest Caliber - Layout Pt 1 Download Metropolitan Park - Gaming Facility of Highest Caliber - Layout Pt 2 Download Metropolitan Park - Gaming Facility of Highest Caliber - Layout Pt 4 Download Metropolitan Park - Gaming Facility of Highest Caliber - Layout Pt 5 Download Metropolitan Park - Gaming Facility of Highest Caliber - Layout Pt 6 Download Metropolitan Park - Gaming",
+      "start": 10958,
+      "end": 11649
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "Updated records are being uploaded adjacent to (not replacing) existing redacted records on each project’s Application Materials page as they become available. As of May 2026, more than 450 such records, denoted with “REVISED REDACTIONS” suffixes, have undergone the statutory review process, are considered final, and have been posted online.",
+      "start": 1399,
+      "end": 1742
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "As of May 2026, more than 450 such records, denoted with “REVISED REDACTIONS” suffixes, have undergone the statutory review process, are considered final, and have been posted online. Interested parties may wish to check the website periodically as revised records are being uploaded in batches as they emerge from the statutory review process.",
+      "start": 1559,
+      "end": 1903
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "Workforce Enhancement - Problem Gambling Prevention Measures - Attachment 5 Workforce Enhancement - Problem Gambling Prevention Measures - Attachment 6 Diversity Framework - Workforce Demographics As of May 12, 2026, the following additional records denoted with “REVISED REDACTIONS” suffixes have undergone the statutory review process, are considered final, and are posted below.",
+      "start": 4315,
+      "end": 4696
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "Metropolitan Park - Workforce Enhancement - Problem Gambling Prevention Measures - Attachment 3 - REVISED REDACTIONS Download Hard Rock Metropolitan Park - Workforce Enhancement - Problem Gambling Prevention Measures - Attachment 4 - REVISED REDACTIONS Download Hard Rock Metropolitan Park - Workforce Enhancement - Problem Gambling Prevention Measures - Attachment 5 - REVISED REDACTIONS Download Hard Rock Metropolitan Park - Workforce Enhancement - Problem Gambling Prevention Measures - Attachment 6 - REVISED REDACTIONS Download Metropolitan Park - Workforce Enhancement - Sustainable Development Principals - Leadership in Environmental and Energy Design (LEED) Download Metropolitan Park -",
+      "start": 20058,
+      "end": 20754
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "will be posted online for public review, with redactions of language exempt from disclosure pursuant to New York State’s Freedom of Information Law (FOIL).” ...",
+      "start": 698,
+      "end": 858
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "Metropolitan Park - Local Impact Siting - Mitigating Potential Impacts on Communities - Measures to Mitigate Impact on Underserved Communities - Attachment 5 - REVISED REDACTIONS Download Hard Rock Metropolitan Park - Local Impact Siting - Mitigating Potential Impacts on Communities - Measures to Mitigate Impact on Underserved Communities - Attachment 7 - REVISED REDACTIONS Download Metropolitan Park - Local Impact Siting - Full Diversified Regional Tourism - Plans for Promoting Local Businesses Download Hard Rock Metropolitan Park - Local Impact Siting - Full Diversified Regional Tourism - Plans for Promoting Local Businesses - REVISED REDACTIONS Download Hard Rock Metropolitan Park -",
+      "start": 17968,
+      "end": 18662
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "on Communities - Measures to Mitigate Impact on Underserved Communities - Attachment 7 Local Impact Siting - Full Diversified Regional Tourism - Plans for Promoting Local Businesses Local Impact Siting - Full Diversified Regional Tourism - Plans for Promoting Local Businesses - Attachment 1 Local Impact Siting - Full Diversified Regional Tourism - Local Business Goods and Services Local Impact Siting - Full Diversified Regional Tourism - Local Business Goods and Services - Attachment 1 Workforce Enhancement - Workforce Table - Attachment 1 Workforce Enhancement - Problem Gambling Prevention Measures - Attachment 3 Workforce Enhancement - Problem Gambling Prevention Measures - Attachment 4",
+      "start": 3617,
+      "end": 4314
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "Skip to main content Navigation Menu Toggle Gaming Facility Location Board Request for Applications Required Approvals Evaluation Criteria and Selection Historical Resources About the Board About the Board Board Meetings Newsroom Applicants Applicants Bally's Bronx Hard Rock Metropolitan Park Resorts World New York City Hard Rock Metropolitan Park Metropolitan Park Application Materials On this page On this page Metropolitan Park Application Materials Revised Redacted Material Pursuant to the Gaming Facility Location Board's 2023 Request for Applications: “Applications, Supplements and associated materials will be treated as public records and, as soon as possible after both Return Dates,",
+      "start": 0,
+      "end": 697
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "Workforce Enhancement - Organized Labor - Labor Harmony Plans Attachment 2 Workforce Enhancement - Organized Labor - Labor Harmony Plans Attachment 3 Workforce Enhancement - Organized Labor - Labor Harmony Plans Attachment 4 Workforce Enhancement - Organized Labor - Labor Peace Agreements Attachment 1 Gaming Facility of Highest Caliber - Retail, Recreation, Other - Attachment 3 Gaming Facility of Highest Caliber - Table of Organization Gaming Facility of Highest Caliber - Table of Organization - Attachment 1 Gaming Facility of Highest Caliber - Restaurant - Attachment 1 Gaming Facility of Highest Caliber - Restaurant - Attachment 2 Highest and Best Value to Patrons to Create a Secure and",
+      "start": 4697,
+      "end": 5393
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "excerpt": "These job creation, local hiring, and diversity commitments were among the key factors driving the Board’s selection of HRMP, and the Board emphasizes that the goals HRMP expressed to the community must be honored.",
+      "start": 42661,
+      "end": 42875
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "excerpt": "HRMP will not be operational in the first three and one-half years of the projection period.",
+      "start": 41872,
+      "end": 41964
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "excerpt": "Diversity Framework The Board appreciated HRMP’s goal of building an operational workforce that reflects the demographics of Queens: 51 percent women and 83 percent minorities. HRMP aims for 6 percent service-disabled veterans but considers 2 percent more realistic.",
+      "start": 48352,
+      "end": 48618
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "excerpt": "HRMP aims for 6 percent service-disabled veterans but considers 2 percent more realistic. HRMP notes that the Applicant may have to bring current experienced employees from other states to work at the facility, and this may impact reaching these workforce composition goals.",
+      "start": 48529,
+      "end": 48803
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "excerpt": "Construction workforce diversity goals are targeted for 5 percent women, 40 percent minorities, and approximately 5 percent service-disabled veterans - below the State- indicated minimum of 6 percent. Resorts World also projected that 19 percent of its construction FTEs will be Queens residents, which the Board considers low.",
+      "start": 66126,
+      "end": 66453
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "excerpt": "For Minority and Women-Owned Business Enterprises (MWBE) goals during construction, Bally’s proposed targets of 10 percent women, 40 percent minorities, and 10 percent service-disabled veterans. With respect to contractor MWBE goals, the Board considers Bally’s partnership with the Velez Organization a strength.",
+      "start": 35746,
+      "end": 36059
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "excerpt": "For MWBE participation in the construction of the project, HRMP established goals of 8 percent women and 30 - 63 percent minorities and aims for 6 percent SDV participation though expects the previously mentioned 2 percent.",
+      "start": 49396,
+      "end": 49619
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "excerpt": "The Board noted that Resorts World provided data on current employment at its existing facility but failed to supply sufficient demographic context for the areas from which they draw employees, limiting the Board’s ability to fully assess its diversity strategy. Construction workforce diversity goals are targeted for 5 percent women, 40 percent minorities, and approximately 5 percent service-disabled veterans - below the State- indicated minimum of 6 percent.",
+      "start": 65863,
+      "end": 66326
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "excerpt": "Diversity Framework The Board supports Resorts World’s reported permanent employment target of 47 percent women, and 85 percent minorities, but expects the service-disabled veterans’ employment target to be the required 6 percent, not the 5 percent offered. Resorts World indicated that they expect their diversity composition to remain largely unchanged from their current employment levels.",
+      "start": 65294,
+      "end": 65686
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "excerpt": "The Board also expressed 15 concern about transparency, as more than 36.4 percent of executive leadership race was reported as “non-specified.” This is not an acceptable response, and the Board expects more diverse executive leadership for the Bronx project. For Minority and Women-Owned Business Enterprises (MWBE) goals during construction, Bally’s proposed targets of 10 percent women, 40 percent minorities, and 10 percent service-disabled veterans.",
+      "start": 35487,
+      "end": 35940
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "excerpt": "Median compensation for full-time employees is estimated near $150,000 annually, including benefits. Employment is projected to be 47 percent women, 85 percent minorities, and approximately 5 percent service-disabled veterans.",
+      "start": 58954,
+      "end": 59180
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "excerpt": "All Applicants are expected to track and report service-disabled veteran employment to meet New York’s 6 percent requirement. The Board also expects the Applicants to be innovative and diligent in their efforts to prevent problem gambling and to help problem gamblers not just by telling those people that help is available, but by doing more to help them actually find and use the help.",
+      "start": 20616,
+      "end": 21003
+    }
+  ],
+  "selection": {
+    "findings": [
+      {
+        "id": "W29",
+        "claim": "HRMP said bringing experienced employees from other states to the facility could hinder meeting its service-disabled veteran workforce composition goals.",
+        "quote": "HRMP aims for 6 percent service-disabled veterans but considers 2 percent more realistic. HRMP notes that the Applicant may have to bring current experienced employees from other states to work at the facility, and this may impact reaching these workforce composition goals."
+      },
+      {
+        "id": "W32",
+        "claim": "For construction MWBE participation on the HRMP project, HRMP set a 6 percent service-disabled veteran participation goal but expected only 2 percent.",
+        "quote": "For MWBE participation in the construction of the project, HRMP established goals of 8 percent women and 30 - 63 percent minorities and aims for 6 percent SDV participation though expects the previously mentioned 2 percent."
+      },
+      {
+        "id": "W26",
+        "claim": "The Board said HRMP’s job creation, local hiring, and diversity commitments to the community, including this veteran-related goal, must be honored.",
+        "quote": "These job creation, local hiring, and diversity commitments were among the key factors driving the Board’s selection of HRMP, and the Board emphasizes that the goals HRMP expressed to the community must be honored."
+      },
+      {
+        "id": "W37",
+        "claim": "The Board expects all applicants, including HRMP, to track and report service-disabled veteran employment to meet New York’s 6 percent requirement.",
+        "quote": "All Applicants are expected to track and report service-disabled veteran employment to meet New York’s 6 percent requirement."
+      }
+    ]
+  },
+  "additions": [
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "quote": "HRMP aims for 6 percent service-disabled veterans but considers 2 percent more realistic. HRMP notes that the Applicant may have to bring current experienced employees from other states to work at the facility, and this may impact reaching these workforce composition goals.",
+      "claim": "HRMP said bringing experienced employees from other states to the facility could hinder meeting its service-disabled veteran workforce composition goals.",
+      "start": 48529,
+      "end": 48803
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "quote": "For MWBE participation in the construction of the project, HRMP established goals of 8 percent women and 30 - 63 percent minorities and aims for 6 percent SDV participation though expects the previously mentioned 2 percent.",
+      "claim": "For construction MWBE participation on the HRMP project, HRMP set a 6 percent service-disabled veteran participation goal but expected only 2 percent.",
+      "start": 49396,
+      "end": 49619
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "quote": "These job creation, local hiring, and diversity commitments were among the key factors driving the Board’s selection of HRMP, and the Board emphasizes that the goals HRMP expressed to the community must be honored.",
+      "claim": "The Board said HRMP’s job creation, local hiring, and diversity commitments to the community, including this veteran-related goal, must be honored.",
+      "start": 42661,
+      "end": 42875
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "quote": "All Applicants are expected to track and report service-disabled veteran employment to meet New York’s 6 percent requirement.",
+      "claim": "The Board expects all applicants, including HRMP, to track and report service-disabled veteran employment to meet New York’s 6 percent requirement.",
+      "start": 20616,
+      "end": 20741
+    }
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "arm": "discover",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 7.593999999924563,
+      "request_id": "req_3b0cbed2bf894d9f9f2e9754ea0495bc",
+      "usage": {
+        "input_tokens": 9539,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 4608
+        },
+        "output_tokens": 767,
+        "output_tokens_details": {
+          "reasoning_tokens": 91
+        },
+        "total_tokens": 10306
+      },
+      "search_enabled": true,
+      "web_search_ids": [
+        "ws_028f999e6058859a016b02c2a772b087d29d6b5bb41a480cb4"
+      ],
+      "stop_reason": "completed",
+      "web_search_statuses": [
+        "completed"
+      ]
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 1.015999999945052,
+      "request_id": "req_4a616cbeb66b4394a048bb24932c468c",
+      "usage": {
+        "input_tokens": 2003,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 13,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2016
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "documents": [
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "status": "unreadable",
+      "characters": 0,
+      "sha256": null
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork2.hardrock.jobopportunities.redacted.pdf",
+      "status": "readable",
+      "characters": 35171,
+      "sha256": "db0d318bbdb9c23b37192ff92302fbf795898eb47cc851eb02522acca5de425d"
+    },
+    {
+      "url": "https://www.metropolitanpark.com/workforce",
+      "status": "unreadable",
+      "characters": 0,
+      "sha256": null
+    }
+  ],
+  "search": {
+    "stop": "SUFFICIENT",
+    "proposals": [
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+        "quote": "The Board also notes positively that HRMP is the only Applicant proposing onsite daycare and tuition reimbursement."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+        "quote": "2) HRMP commits to offer tuition reimbursement through its Continuing Education Assistance Program, providing up to $4,000 annually for work-related courses and degree programs."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+        "quote": "3) HRMP will have an on-site child day care program for employees with children from three months to 12 years old."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+        "quote": "The indoor area will be 14,267 square feet, accommodating up to 160 children for daycare and 108 children for after school."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+        "quote": "There will be two nursery rooms, a toddler room, six classrooms, sleeping rooms for overnight care, and two classrooms for children with special needs and sensory issues."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+        "quote": "There will also be an outdoor space of 3,000 square feet. The entire facility will be ADA-accessible and open 24/7."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork2.hardrock.jobopportunities.redacted.pdf",
+        "quote": "The company workforce training programs also include opportunities for employee access to additional resources, such as tuition reimbursement, that will enable employees to acquire education or job training needed to advance their career paths through increased responsibility and paygrades."
+      },
+      {
+        "url": "https://www.metropolitanpark.com/workforce",
+        "quote": "Being In The Band Has It’s Perks\n\n  * International Opportunities\n\n  * Fun & Exciting Environment\n\n  * Career Advancement Opportunities\n\n  * Health & Wellness Programs\n\n  * Tuition Reimbursement"
+      },
+      {
+        "url": "https://gaming.ny.gov/system/files/documents/2025/12/hrmp-license-document-executed-12.22.25-c.pdf",
+        "quote": "Queens Future, LLC doing business as Hard Rock Metropolitan Park (“Hard Rock”) having submitted a response to the RFA (the response, along with such other amendments, updates, promises, offers, and submissions is collectively referred to as the “Application”);"
+      },
+      {
+        "url": "https://gaming.ny.gov/system/files/documents/2025/12/hrmp-license-document-executed-12.22.25-c.pdf",
+        "quote": "License Award Effective Date: The License is awarded effective as of December 15, 2025."
+      }
+    ],
+    "located": {
+      "https://www.metropolitanpark.com/workforce": "https://www.metropolitanpark.com/workforce",
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork2.hardrock.jobopportunities.redacted.pdf": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork2.hardrock.jobopportunities.redacted.pdf",
+      "https://gaming.ny.gov/system/files/documents/2025/12/hrmp-license-document-executed-12.22.25-c.pdf": "https://gaming.ny.gov/system/files/documents/2025/12/hrmp-license-document-executed-12.22.25-c.pdf",
+      "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "https://www.metropolitanpark.com/benefits": "https://www.metropolitanpark.com/benefits",
+      "https://www.metropolitanpark.com/fund": "https://www.metropolitanpark.com/fund",
+      "https://nycasinos.ny.gov/metropolitan-park-application-materials": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "https://www.metropolitanpark.com/faq": "https://www.metropolitanpark.com/faq",
+      "https://gaming.ny.gov/node/11656": "https://gaming.ny.gov/node/11656",
+      "https://www.metropolitanpark.com/addyoursupport": "https://www.metropolitanpark.com/addyoursupport",
+      "https://www.metropolitanpark.com/business": "https://www.metropolitanpark.com/business",
+      "https://www.metropolitanpark.com/vendor": "https://www.metropolitanpark.com/vendor",
+      "https://www.metropolitanpark.com/community-support": "https://www.metropolitanpark.com/community-support",
+      "https://www.metropolitanpark.com/team": "https://www.metropolitanpark.com/team",
+      "https://www.metropolitanpark.com/privacypolicy": "https://www.metropolitanpark.com/privacypolicy"
+    },
+    "requested_actions": 2
+  },
+  "shortlist": [
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork2.hardrock.jobopportunities.redacted.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork2.hardrock.jobopportunities.redacted.pdf",
+      "excerpt": "The company workforce training programs also include opportunities for employee access to additional resources, such as tuition reimbursement, that will enable employees to acquire education or job training needed to advance their career paths through increased responsibility and paygrades.",
+      "start": 5025,
+      "end": 5316
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork2.hardrock.jobopportunities.redacted.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork2.hardrock.jobopportunities.redacted.pdf",
+      "excerpt": "The company workforce training programs also include opportunities for employee access to additional resources, such as tuition reimbursement, that will enable employees to acquire education or job training needed to advance their career paths through increased responsibility and paygrades.",
+      "start": 5025,
+      "end": 5316
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork2.hardrock.jobopportunities.redacted.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork2.hardrock.jobopportunities.redacted.pdf",
+      "excerpt": "Hard Rock believes promoting from within benefits the company and the employees, and it strives to offer a stable and long-term career path for each employee. Thus, Hard Rock Metropolitan Park will assist employees with access to promotion opportunities and will establish transparent career paths with measurable criteria leading to increased responsibility and higher pay grades designed to allow and encourage employees to pursue career advancement within the company.",
+      "start": 4553,
+      "end": 5024
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork2.hardrock.jobopportunities.redacted.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork2.hardrock.jobopportunities.redacted.pdf",
+      "excerpt": "Below is a sample flyer for Red e App. This app is currently in use at multiple Hard Rock locations and has shown great success in informing employees of career growth opportunities.",
+      "start": 30142,
+      "end": 30324
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork2.hardrock.jobopportunities.redacted.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork2.hardrock.jobopportunities.redacted.pdf",
+      "excerpt": "Team members will also offer position-based training programs for applicants who don’t have experience in certain fields such as slot apprenticeships, table games dealer schools, JUNE 25, 2025 HARD ROCK AT METROPOLITAN PARK 3 EV AL WORK2.HARDROCK.JOBOPPORTUNITIES and more, to prepare for career paths within the organization. Hard Rock believes promoting from within benefits the company and the employees, and it strives to offer a stable and long-term career path for each employee.",
+      "start": 4226,
+      "end": 4711
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork2.hardrock.jobopportunities.redacted.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork2.hardrock.jobopportunities.redacted.pdf",
+      "excerpt": "Recruitment Center at Citi Field Recruitment Center at 40-11 National St. Corona, NY JUNE 25, 2025 HARD ROCK AT METROPOLITAN PARK 2 EV AL WORK2.HARDROCK.JOBOPPORTUNITIES Hard Rock is currently an employer of over 900 team members in the State of New York, including almost 600 employees at its Hard Rock Cafes in Times Square, Yankee Stadium, and Niagara Falls.",
+      "start": 1282,
+      "end": 1643
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork2.hardrock.jobopportunities.redacted.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork2.hardrock.jobopportunities.redacted.pdf",
+      "excerpt": "Queens Chamber of Commerce advocates for growing the pool of eligible MWBE certified businesses in Queens, and provides networking opportunities and certification support for eligible entrepreneurs. Queens Economic Development Corporation, a leading business advocate and development supporter for individuals and businesses living and working in Queens.",
+      "start": 11560,
+      "end": 11914
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork2.hardrock.jobopportunities.redacted.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork2.hardrock.jobopportunities.redacted.pdf",
+      "excerpt": "Queens Chamber of Commerce, a nonprofit organization dedicated to helping small businesses in Queens foster connections and build capacity for success through implementing programs that advocate for members’ interests including economic and workforce development initiatives that offer access to business and tech resources, mentorship opportunities, networking events and more. Queens Chamber of Commerce advocates for growing the pool of eligible MWBE certified businesses in Queens, and provides networking opportunities and certification support for eligible entrepreneurs.",
+      "start": 11181,
+      "end": 11758
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork2.hardrock.jobopportunities.redacted.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork2.hardrock.jobopportunities.redacted.pdf",
+      "excerpt": "Queens Economic Development Corporation, a leading business advocate and development supporter for individuals and businesses living and working in Queens. QEDC advocates for Queens economic development through business counseling, trainings, marketing, tourism, and neighborhood development activities.",
+      "start": 11759,
+      "end": 12062
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork2.hardrock.jobopportunities.redacted.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork2.hardrock.jobopportunities.redacted.pdf",
+      "excerpt": "The app also allows the company to send real time messaging for all team member related activities, to include career opportunities and career events on property. Below is a sample flyer for Red e App.",
+      "start": 29979,
+      "end": 30180
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork2.hardrock.jobopportunities.redacted.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork2.hardrock.jobopportunities.redacted.pdf",
+      "excerpt": "The Center for the Women of New York, a local organization dedicated to supporting women’s need for financial independence through services such as job training, education, advocacy against trafficking and domestic violence, and communal support services and activities to connect women and their families. The Center for the Women of New York operates job training and skills-based programming out of three of the five boroughs in partnership with the public library systems.",
+      "start": 13078,
+      "end": 13554
+    }
+  ],
+  "selection": {
+    "findings": []
+  },
+  "additions": []
+}

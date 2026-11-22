@@ -1,0 +1,140 @@
+{
+  "fingerprint": "cddf0c50e3db425dc13fc93c3ccb4f8a3d03cbdb12a9e60aec92363c41ea913e",
+  "origin": "new_tool_free_v4",
+  "passages": {
+    "p1": {
+      "url": "https://nycasinos.ny.gov/ballys-new-york-casino-diversity-framework-current-and-planned-diversity-efforts-mwbe-contracts",
+      "title": "https://nycasinos.ny.gov/ballys-new-york-casino-diversity-framework-current-and-planned-diversity-efforts-mwbe-contracts",
+      "excerpt": "Drawing from our successful approach to construction workforce diversity in other markets such as Chicago where we have exceeded our stated goals, we have established clear diversity targets for our contractors and subcontractors that align with our overall project goals: 40% minority workers, 10% women workers and 10% veteran workers."
+    },
+    "p2": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evaldiv6.ballys.mwbeconstructiongoals_redacted.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evaldiv6.ballys.mwbeconstructiongoals_redacted.pdf",
+      "excerpt": "The following table illustrates the significant workforce diversity targets for the Bally’s Bronx construction project. We will create 15,000 union construction jobs, including 6,000 (40% utilization) minority workers, 1,500 women workers (10%) and 1,500 veteran workers (10%)."
+    },
+    "p3": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "excerpt": "In the construction phase, Bally’s seeks to achieve a workforce drawn primarily from the Bronx and made up of approximately 10 percent women, 10 percent service-disabled veterans, and 40 percent minority construction workers."
+    },
+    "p4": {
+      "url": "https://casinos.ballys.com/chicago/faq.htm",
+      "title": "https://casinos.ballys.com/chicago/faq.htm",
+      "excerpt": "Bally’s Chicago has set a 46% MBE/WBE construction goal, exceeding city requirements."
+    },
+    "p5": {
+      "url": "https://casinos.ballys.com/chicago/about-ballys.htm",
+      "title": "https://casinos.ballys.com/chicago/about-ballys.htm",
+      "excerpt": "And, we have met with nonprofit groups to discuss workforce development initiatives to help us meet our women, minority, veteran, and persons with disability hiring goals by reaching out to and recruiting Chicagoans who are seeking careers and job growth in this dynamic industry."
+    },
+    "p6": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork4.ballys.mwbe_redacted.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork4.ballys.mwbe_redacted.pdf",
+      "excerpt": "In addition to our business enterprise goals, we are establishing the following workforce diversity targets for the estimated 15,000 construction jobs that will be created:"
+    },
+    "p7": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork4.ballys.mwbe_redacted.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork4.ballys.mwbe_redacted.pdf",
+      "excerpt": "Veterans 10% 1,500"
+    },
+    "p8": {
+      "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "excerpt": "For Minority and Women-Owned Business Enterprises (MWBE) goals during construction, Bally’s proposed targets of 10 percent women, 40 percent minorities, and 10 percent service-disabled veterans."
+    }
+  },
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 5.157000000006519,
+      "request_id": "req_3b9278f376204a34a25d58f17f6c9ed2",
+      "usage": {
+        "input_tokens": 2400,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 415,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2815
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "decisions": [
+    {
+      "gold_id": "G1",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p2",
+        "p3",
+        "p8"
+      ],
+      "reason": "The passages expressly state Bally’s Bronx construction targets included 10% women workers/construction workers."
+    },
+    {
+      "gold_id": "G2",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p2",
+        "p3",
+        "p8"
+      ],
+      "reason": "The excerpts directly give a 40% minority construction workforce target for Bally’s Bronx."
+    },
+    {
+      "gold_id": "G3",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p3",
+        "p8"
+      ],
+      "reason": "Both passages state a 10% service-disabled-veteran target for the construction workforce."
+    },
+    {
+      "gold_id": "G4",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p1",
+        "p2",
+        "p7"
+      ],
+      "reason": "Bally’s own workforce-target passages describe the 10% category as veterans, showing its chart uses the broader veterans category rather than service-disabled veterans."
+    },
+    {
+      "gold_id": "G5",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt mentions a separate 35% MWBE participation goal."
+    },
+    {
+      "gold_id": "G6",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage states a separate 5% spending goal with service-disabled-veteran-owned firms."
+    },
+    {
+      "gold_id": "G7",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt addresses any license requirement for public progress reports on workforce diversity or demographic data."
+    },
+    {
+      "gold_id": "G8",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage addresses any license requirement for independent monitoring of community benefit milestones."
+    }
+  ]
+}

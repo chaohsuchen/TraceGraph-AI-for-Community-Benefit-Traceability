@@ -1,0 +1,125 @@
+{
+  "fingerprint": "088a9058e30059cadd421bef30e2971dee1971c9ee27492c0f85cb50c7744a4a",
+  "reversed_original_ids": [
+    "p10",
+    "p9",
+    "p8",
+    "p7",
+    "p6",
+    "p5",
+    "p4",
+    "p3",
+    "p2",
+    "p1"
+  ],
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 7.25,
+      "request_id": "req_c68846d9bf534b55a3367a96592693af",
+      "usage": {
+        "input_tokens": 2687,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 648,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3335
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "decisions": [
+    {
+      "gold_id": "G2",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p1"
+      ],
+      "reason": "p1 says funding for \"additional years\" should be resolved as previously indicated, but it does not state that the Board proposed alternatives for commitments extending beyond the awarded term."
+    },
+    {
+      "gold_id": "G3",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p5",
+        "p6",
+        "p10"
+      ],
+      "reason": "The passages show a Community Impact Fund with figures \"13 150 163\" and say $150 million was committed, but they do not identify a CAC schedule or specify that the $150 million operating tranche sits inside a $163.2 million phased package."
+    },
+    {
+      "gold_id": "G4",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt states \"$5 million annually from 2031 through 2060.\""
+    },
+    {
+      "gold_id": "G5",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p7",
+        "p9"
+      ],
+      "reason": "The only license-term text here is \"during their 20-year Term of License\"; no passage states an initial 20 years from the operation certificate with a possible ten-year renewal."
+    },
+    {
+      "gold_id": "G6",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt mentions written Commission approval for material changes to commitments."
+    },
+    {
+      "gold_id": "G7",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt mentions a later fund page listing approximately $5 million annually from 2031 through 2050."
+    },
+    {
+      "gold_id": "G8",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p2"
+      ],
+      "reason": "p2 mentions \"individual philanthropic commitments totaling approximately $2 million,\" but not that the operator distributed $2 million in 2026."
+    },
+    {
+      "gold_id": "G9",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p4"
+      ],
+      "reason": "p4 says the Community Impact Fund is valued at $163 million over 30 years, but no excerpt identifies a Metropolitan Park FAQ continuing to advertise a $163 million fund package."
+    },
+    {
+      "gold_id": "G10",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt mentions Queens Theatre acknowledging support from the Metropolitan Park Community Impact Fund."
+    },
+    {
+      "gold_id": "G11",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt mentions Belongo identifying the Metropolitan Park Community Impact Fund as a supporter."
+    },
+    {
+      "gold_id": "G12",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt mentions a proposed seven-person fund advisory board."
+    }
+  ]
+}

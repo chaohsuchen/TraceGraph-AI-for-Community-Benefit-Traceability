@@ -1,0 +1,117 @@
+{
+  "fingerprint": "4a0ed8c49e062bafc5de952b070f8381c55ae32480d5df50661b710c259c8c09",
+  "origin": "new_tool_free_v4",
+  "passages": {
+    "p1": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2023/01/01.03.23.gflbrfarelease.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2023/01/01.03.23.gflbrfarelease.pdf",
+      "excerpt": "Revenue from new gaming facilities is expected to generate substantial fiscal benefit to New York’s public schools, local governments, and problem gambling treatment services. The jobs created by these casinos must deliver livable wages to help families live, stay, and prosper in New York."
+    },
+    "p2": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/gi1.rwnyc_.executivesummary.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/gi1.rwnyc_.executivesummary.pdf",
+      "excerpt": "RWNYC maintains strong labor relationships and collective bargaining agreements to ensure fair wages and job security."
+    },
+    "p3": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/gi1.rwnyc_.executivesummary.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/gi1.rwnyc_.executivesummary.pdf",
+      "excerpt": "The current median wage at RWNYC is $39 per hour, annualized at more than $80,000. When benefits are factored in, our median compensation package totals nearly $150,000 a year."
+    },
+    "p4": {
+      "url": "https://nycasinos.ny.gov/resorts-world-new-york-city-application-materials",
+      "title": "https://nycasinos.ny.gov/resorts-world-new-york-city-application-materials",
+      "excerpt": "Resorts World New York City - Exhibit 138 - Workforce Table - REVISED REDACTIONS"
+    },
+    "p5": {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "title": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "excerpt": "Bally's New York Casino - Workforce Enhancement - Organized Labor - Employees - Average - REVISED REDACTIONS"
+    },
+    "p6": {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "title": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "excerpt": "Bally's New York Casino - Workforce Enhancement - Organized Labor - Labor Peace Agreements"
+    }
+  },
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 6.218999999924563,
+      "request_id": "req_abc6d66ae58742049addc93e7581bdd9",
+      "usage": {
+        "input_tokens": 2051,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 451,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2502
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "decisions": [
+    {
+      "gold_id": "G1",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p1"
+      ],
+      "reason": "Passage p1 states verbatim that \"The jobs created by these casinos must deliver livable wages,\" which matches the claim about the New York gaming RFA."
+    },
+    {
+      "gold_id": "G2",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p1"
+      ],
+      "reason": "p1 contains the livable-wages requirement but gives no numerical wage floor, and no other excerpt addresses whether the RFA specifies one."
+    },
+    {
+      "gold_id": "G3",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p6"
+      ],
+      "reason": "p6 only mentions \"Labor Peace Agreements\" in a materials title and does not establish that the RFA identifies such an agreement as an ongoing material license condition."
+    },
+    {
+      "gold_id": "G4",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt provides a Board report projection of roughly $80,000 median wage for Bally's."
+    },
+    {
+      "gold_id": "G5",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt provides a Board report projection of roughly $140,000 average wage for HRMP."
+    },
+    {
+      "gold_id": "G6",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p3"
+      ],
+      "reason": "p3 says RWNYC's current median wage is more than $80,000 and median compensation is nearly $150,000, but it is not a Board report projection of a roughly $150,000 median wage."
+    },
+    {
+      "gold_id": "G7",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt contains the text of the three executed gaming licenses or shows that they omit a livable-wage floor."
+    }
+  ]
+}

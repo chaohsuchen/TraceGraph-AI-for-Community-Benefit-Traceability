@@ -1,0 +1,62 @@
+{
+  "fingerprint": "d871196bd55cbe5ef114ca42ef828f54f2cab0ff06f1311f731e4b1dbd6962d3",
+  "reversed_original_ids": [
+    "p5",
+    "p4",
+    "p3",
+    "p2",
+    "p1"
+  ],
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 4.5,
+      "request_id": "req_d178f552a3be4509a0039e9e631498e8",
+      "usage": {
+        "input_tokens": 1917,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 269,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2186
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "decisions": [
+    {
+      "gold_id": "G1",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p1",
+        "p3"
+      ],
+      "reason": "The passages show HRMP/Hard Rock Metropolitan Park included tuition reimbursement, but none states a Board comparison or that HRMP was the only applicant proposing both onsite daycare and tuition reimbursement; onsite daycare is also not documented here."
+    },
+    {
+      "gold_id": "G2",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt mentions on-site childcare/daycare, so the claimed executive-summary proposal of on-site childcare is not established from this capture."
+    },
+    {
+      "gold_id": "G4",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage discusses the license’s incorporation of application or CAC commitments, so this general incorporation claim is unsupported in the retrieved excerpts."
+    }
+  ]
+}

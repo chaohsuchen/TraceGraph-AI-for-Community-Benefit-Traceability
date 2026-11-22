@@ -1,0 +1,66 @@
+{
+  "case_id": "TG-GOLD-H002",
+  "identity": "MATCH",
+  "reference_coverage": {
+    "numerator": 4,
+    "denominator": 7,
+    "rate": 0.5714285714285714
+  },
+  "finding_support": {
+    "numerator": 24,
+    "denominator": 24,
+    "rate": 1.0
+  },
+  "traceability": {
+    "numerator": 24,
+    "denominator": 24,
+    "rate": 1.0
+  },
+  "claim_count": 24,
+  "evidence_eligible_claims": 24,
+  "unquoted_claims": 0,
+  "credited_reference_ids": [
+    "G1",
+    "G2",
+    "G3",
+    "G6"
+  ],
+  "coverage_labels": {
+    "ENTAILMENT": 4,
+    "CONTRADICTION": 0,
+    "NEUTRAL": 2,
+    "MISSING": 1
+  },
+  "finding_labels": {
+    "ENTAILMENT": 24,
+    "CONTRADICTION": 0,
+    "NEUTRAL": 0
+  },
+  "citation_audit": "OWNED_QUOTES_V1",
+  "verdict": null,
+  "verdict_evaluation": {
+    "applicable": false,
+    "reason": "NO_DISPLAYED_VERDICT",
+    "label": null
+  },
+  "retrieval_diagnostic": {
+    "retrieved_reference_coverage": {
+      "numerator": 2,
+      "denominator": 7,
+      "rate": 0.2857142857142857
+    },
+    "abstention": "JUSTIFIED"
+  },
+  "outcome": "PARTIAL_RESEARCH",
+  "output_kind": "PARTIAL_FACTS",
+  "system": "TraceGraph",
+  "case_applicability": "APPLICABLE",
+  "delivery_applicable": true,
+  "user_visible_findings": 10,
+  "source_counts": {
+    "capture_passages": 12,
+    "unmatched_records": 6,
+    "suggestions": 3
+  },
+  "score_version": "tracegraph-score-v4"
+}

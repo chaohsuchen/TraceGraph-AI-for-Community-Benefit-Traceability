@@ -1,0 +1,1182 @@
+{
+  "input_sha256": "612d8a26d868bc0da71446477700aab0b1857a3d5ee3c4d64dd9ae348aa90517",
+  "judge_model": "gpt-5.4",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "judge_version": "tracegraph-nli-v4-owned-quotes",
+  "started_at": "2026-11-22T10:16:14.349638+00:00",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 29.21799999999348,
+      "request_id": "req_94a8e7c7be7543d18ab7410024026909",
+      "usage": {
+        "input_tokens": 3528,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 3219,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 6747
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 6.922000000020489,
+      "request_id": "req_d0801a47b80b444c96a70345edeea115",
+      "usage": {
+        "input_tokens": 2924,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 550,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3474
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "evidence": {
+    "identity": {
+      "label": "MATCH",
+      "reason": "Finding partial:f4 directly states that the Board strongly believes HRMP has an obligation to complete the food hall, matching the question’s organization, obligation, scope, and beneficiary object."
+    },
+    "findings": [
+      {
+        "finding_id": "partial:f1",
+        "claims": [
+          {
+            "claim": "HRMP will deliver a parking podium within Metropolitan Park.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "HRMP will unlock further development potential within Metropolitan Park by delivering a parking podium",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states HRMP will deliver the parking podium."
+              }
+            ],
+            "reason": "The excerpt expressly says HRMP will deliver a parking podium within Metropolitan Park."
+          },
+          {
+            "claim": "Queens Baseball Company (the New York Mets) will build the Taste of Queens on that podium.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "on which Queens Baseball Company (i.e., the New York Mets) will then build the Taste of Queens",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly attributes building the Taste of Queens to Queens Baseball Company/the Mets."
+              }
+            ],
+            "reason": "The excerpt expressly says the Mets entity will then build Taste of Queens."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f2",
+        "claims": [
+          {
+            "claim": "HRMP will deliver a parking podium on which Queens Baseball Company (the New York Mets) will build the Taste of Queens.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "HRMP will unlock further development potential within Metropolitan Park by delivering a parking podium on which Queens Baseball Company (i.e., the New York Mets) will then build the Taste of Queens.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states HRMP's podium role and the Mets' build role."
+              }
+            ],
+            "reason": "The excerpt directly states HRMP delivers the podium and the Mets build Taste of Queens."
+          },
+          {
+            "claim": "Detailed interior design for the Taste of Queens is still underway.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "Detailed design for the interior of the Taste of Queens is still underway.",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the design status is still underway."
+              }
+            ],
+            "reason": "The excerpt expressly states interior design is still underway."
+          },
+          {
+            "claim": "The market is currently anticipated to be located on the elevated first floor and be accessible and visible from the MTA gateway plaza and the open space.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "We currently anticipate that the market (“food hall”) will be located on the elevated first floor, directly accessible and visible from the MTA gateway plaza as well as the open space.",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly gives the anticipated location and access/visibility, preserving the qualifier 'currently anticipate'."
+              }
+            ],
+            "reason": "The excerpt expressly states the anticipated location and visibility, with current anticipation as the modality."
+          },
+          {
+            "claim": "The market will accommodate approximately 20 local food vendors.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "The market will accommodate approximately 20 local food vendors",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the approximate vendor count."
+              }
+            ],
+            "reason": "The excerpt expressly states the market will accommodate approximately 20 local vendors."
+          },
+          {
+            "claim": "They plan to partner with local groups so the operators include a mix from brick-and-mortar and street-vendor origins.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "we plan to partner with local groups to ensure that includes a mix of operators coming from both brick-and-mortar and street vendor origins",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states a plan to partner with local groups and the intended mix of operator origins."
+              }
+            ],
+            "reason": "The excerpt expressly states that plan and intended operator mix."
+          },
+          {
+            "claim": "They look forward to working with community partners on further programmatic details before grand opening.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "We look forward to working with our community partners on further programmatic details in the years ahead before grand opening.",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states that future collaborative work is anticipated before opening."
+              }
+            ],
+            "reason": "The excerpt expressly states anticipated future work with community partners before grand opening."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f3",
+        "claims": [
+          {
+            "claim": "HRMP plans to construct an overbuild as part of one of the casino’s garages.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "HRMP plans to construct an overbuild with a construction cost of approximately $60 million as part of one of the casino’s garages",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states HRMP plans to construct the overbuild as part of a garage."
+              }
+            ],
+            "reason": "The excerpt expressly states HRMP plans to construct the overbuild."
+          },
+          {
+            "claim": "The overbuild's construction cost is approximately $60 million.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "with a construction cost of approximately $60 million",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the approximate cost."
+              }
+            ],
+            "reason": "The excerpt expressly states the approximate construction cost."
+          },
+          {
+            "claim": "The overbuild will serve as the platform for a Taste of Queens food hall being built by the New York Mets.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "to serve as the platform for a Taste of Queens food hall that is being built by the New York Mets",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the platform function and attributes the food hall build to the Mets."
+              }
+            ],
+            "reason": "The excerpt expressly states the platform role and attributes the build to the Mets."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f4",
+        "claims": [
+          {
+            "claim": "The Board states that the applicant repeatedly referred to the Taste of Queens as a core project element in presentations to the community.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s4"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s4",
+                "quote": "Because the Applicant repeatedly referred to the Taste of Queens as a core project element in its presentations to the community",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the applicant repeatedly referred to Taste of Queens as a core project element in community presentations."
+              }
+            ],
+            "reason": "The excerpt expressly states the Board's stated basis for its view."
+          },
+          {
+            "claim": "The Board strongly believes that HRMP has an obligation to complete the food hall.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s4"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s4",
+                "quote": "the Board strongly believes that HRMP has an obligation to complete the food hall",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the Board's belief about HRMP's obligation to complete the food hall."
+              }
+            ],
+            "reason": "The excerpt directly states the Board strongly believes HRMP has that obligation."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f5",
+        "claims": [
+          {
+            "claim": "Those projects were not considered in the Board’s evaluation.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s5"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s5",
+                "quote": "Those projects accordingly were not considered in the Board’s evaluation",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states those projects were not considered in the Board's evaluation."
+              }
+            ],
+            "reason": "The excerpt expressly states the projects were not considered in the evaluation."
+          },
+          {
+            "claim": "Those projects were raised during the Community Advisory Committee process.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s5"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s5",
+                "quote": "but were raised during the Community Advisory Committee process",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the projects were raised during the CAC process."
+              }
+            ],
+            "reason": "The excerpt expressly states they were raised during the CAC process."
+          },
+          {
+            "claim": "The Board recommends to the Commission that the applicant’s license require those projects to be completed.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s5"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s5",
+                "quote": "the Board recommends to the Commission that the Applicant’s license require those projects to be completed",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the Board's recommendation that the license require completion."
+              }
+            ],
+            "reason": "The excerpt expressly states that recommendation."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f6",
+        "claims": [
+          {
+            "claim": "The Board's chart includes a line item 'Taste of Queens Buildout' with value 60 in two columns.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s6"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s6",
+                "quote": "Taste of Queens Buildout 60 -- 60",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly shows the chart line item and the two displayed 60 values."
+              }
+            ],
+            "reason": "The excerpt directly shows the chart line item with two 60 values."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "partial:f4"
+        ],
+        "citation_ids": [
+          "partial:s4"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Finding partial:f4 expressly says the Board strongly believes HRMP has an obligation to complete the food hall, which entails the Board expressed a belief that HRMP should complete Taste of Queens.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f4",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "The claim directly states the Board's belief in HRMP's obligation to complete the food hall."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s4",
+            "quote": "the Board strongly believes that HRMP has an obligation to complete the food hall",
+            "label": "ENTAILMENT",
+            "reason": "This directly states the Board's expressed belief that HRMP should complete the food hall."
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [
+          "partial:f5"
+        ],
+        "citation_ids": [
+          "partial:s5"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding says the projects were not considered in the Board’s evaluation, but it does not establish that the Board stated the food hall was outside HRMP's commitments in its application.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f5",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "Not being considered in the evaluation is not the same as being outside HRMP's application commitments."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s5",
+            "quote": "Those projects accordingly were not considered in the Board’s evaluation",
+            "label": "NEUTRAL",
+            "reason": "This addresses the Board's evaluation, not whether the food hall was outside HRMP's application commitments."
+          }
+        ]
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [
+          "partial:f6"
+        ],
+        "citation_ids": [
+          "partial:s6"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Finding partial:f6 conveys that the Board's chart includes a Taste of Queens Buildout line with 60 values, establishing inclusion of a $60 million buildout item.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f6",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "The claim directly conveys the chart line item and its 60 values."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s6",
+            "quote": "Taste of Queens Buildout 60 -- 60",
+            "label": "ENTAILMENT",
+            "reason": "This directly shows the chart includes a Taste of Queens Buildout line with 60 values."
+          }
+        ]
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [
+          "partial:f1",
+          "partial:f2"
+        ],
+        "citation_ids": [
+          "partial:s1",
+          "partial:s2"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Findings partial:f1 and partial:f2 expressly describe HRMP's role as delivering the parking podium for the Taste of Queens food hall.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim states HRMP will deliver the parking podium."
+          },
+          {
+            "finding_id": "partial:f2",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim states HRMP delivers the podium while the Mets build the food hall."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s1",
+            "quote": "HRMP will unlock further development potential within Metropolitan Park by delivering a parking podium",
+            "label": "ENTAILMENT",
+            "reason": "This directly states HRMP's role is delivering the parking podium."
+          },
+          {
+            "citation_id": "partial:s2",
+            "quote": "HRMP will unlock further development potential within Metropolitan Park by delivering a parking podium on which Queens Baseball Company (i.e., the New York Mets) will then build the Taste of Queens.",
+            "label": "ENTAILMENT",
+            "reason": "This directly states HRMP's podium-delivery role for the food hall project."
+          }
+        ]
+      },
+      {
+        "gold_id": "G5",
+        "finding_ids": [
+          "partial:f1",
+          "partial:f3"
+        ],
+        "citation_ids": [
+          "partial:s1",
+          "partial:s3"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Findings partial:f1 and partial:f3 expressly attribute building the Taste of Queens food hall to Queens Baseball Company/the New York Mets, a Mets-affiliated entity.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "This claim states Queens Baseball Company/the Mets will build Taste of Queens."
+          },
+          {
+            "finding_id": "partial:f3",
+            "claim_index": 2,
+            "label": "ENTAILMENT",
+            "reason": "This claim states the food hall is being built by the New York Mets."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s1",
+            "quote": "Queens Baseball Company (i.e., the New York Mets) will then build the Taste of Queens",
+            "label": "ENTAILMENT",
+            "reason": "This directly attributes construction to a Mets-affiliated entity."
+          },
+          {
+            "citation_id": "partial:s3",
+            "quote": "a Taste of Queens food hall that is being built by the New York Mets",
+            "label": "ENTAILMENT",
+            "reason": "This directly attributes the build to the New York Mets."
+          }
+        ]
+      },
+      {
+        "gold_id": "G6",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents the food hall's square footage.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G7",
+        "finding_ids": [
+          "partial:f5"
+        ],
+        "citation_ids": [
+          "partial:s5"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding addresses a recommendation that the license require projects to be completed, but it does not establish that the license generally incorporates application and CAC commitments without expressly naming the food hall.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f5",
+            "claim_index": 2,
+            "label": "NEUTRAL",
+            "reason": "A recommendation about license requirements is not the same as the license actually incorporating commitments generally without naming the food hall."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s5",
+            "quote": "the Board recommends to the Commission that the Applicant’s license require those projects to be completed",
+            "label": "NEUTRAL",
+            "reason": "This is a recommendation, not evidence of the actual license text or its general incorporation language."
+          }
+        ]
+      },
+      {
+        "gold_id": "G8",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents press coverage or a June 1, 2030 completion target attributed to Commission filings.",
+        "claim_links": [],
+        "quote_checks": []
+      }
+    ]
+  },
+  "verdict_protocol": "two-stage-owned-citations-v4",
+  "judgment": {
+    "identity": {
+      "label": "MATCH",
+      "reason": "Finding partial:f4 directly states that the Board strongly believes HRMP has an obligation to complete the food hall, matching the question’s organization, obligation, scope, and beneficiary object."
+    },
+    "findings": [
+      {
+        "finding_id": "partial:f1",
+        "claims": [
+          {
+            "claim": "HRMP will deliver a parking podium within Metropolitan Park.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "HRMP will unlock further development potential within Metropolitan Park by delivering a parking podium",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states HRMP will deliver the parking podium."
+              }
+            ],
+            "reason": "The excerpt expressly says HRMP will deliver a parking podium within Metropolitan Park."
+          },
+          {
+            "claim": "Queens Baseball Company (the New York Mets) will build the Taste of Queens on that podium.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "on which Queens Baseball Company (i.e., the New York Mets) will then build the Taste of Queens",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly attributes building the Taste of Queens to Queens Baseball Company/the Mets."
+              }
+            ],
+            "reason": "The excerpt expressly says the Mets entity will then build Taste of Queens."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f2",
+        "claims": [
+          {
+            "claim": "HRMP will deliver a parking podium on which Queens Baseball Company (the New York Mets) will build the Taste of Queens.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "HRMP will unlock further development potential within Metropolitan Park by delivering a parking podium on which Queens Baseball Company (i.e., the New York Mets) will then build the Taste of Queens.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states HRMP's podium role and the Mets' build role."
+              }
+            ],
+            "reason": "The excerpt directly states HRMP delivers the podium and the Mets build Taste of Queens."
+          },
+          {
+            "claim": "Detailed interior design for the Taste of Queens is still underway.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "Detailed design for the interior of the Taste of Queens is still underway.",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the design status is still underway."
+              }
+            ],
+            "reason": "The excerpt expressly states interior design is still underway."
+          },
+          {
+            "claim": "The market is currently anticipated to be located on the elevated first floor and be accessible and visible from the MTA gateway plaza and the open space.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "We currently anticipate that the market (“food hall”) will be located on the elevated first floor, directly accessible and visible from the MTA gateway plaza as well as the open space.",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly gives the anticipated location and access/visibility, preserving the qualifier 'currently anticipate'."
+              }
+            ],
+            "reason": "The excerpt expressly states the anticipated location and visibility, with current anticipation as the modality."
+          },
+          {
+            "claim": "The market will accommodate approximately 20 local food vendors.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "The market will accommodate approximately 20 local food vendors",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the approximate vendor count."
+              }
+            ],
+            "reason": "The excerpt expressly states the market will accommodate approximately 20 local vendors."
+          },
+          {
+            "claim": "They plan to partner with local groups so the operators include a mix from brick-and-mortar and street-vendor origins.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "we plan to partner with local groups to ensure that includes a mix of operators coming from both brick-and-mortar and street vendor origins",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states a plan to partner with local groups and the intended mix of operator origins."
+              }
+            ],
+            "reason": "The excerpt expressly states that plan and intended operator mix."
+          },
+          {
+            "claim": "They look forward to working with community partners on further programmatic details before grand opening.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "We look forward to working with our community partners on further programmatic details in the years ahead before grand opening.",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states that future collaborative work is anticipated before opening."
+              }
+            ],
+            "reason": "The excerpt expressly states anticipated future work with community partners before grand opening."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f3",
+        "claims": [
+          {
+            "claim": "HRMP plans to construct an overbuild as part of one of the casino’s garages.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "HRMP plans to construct an overbuild with a construction cost of approximately $60 million as part of one of the casino’s garages",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states HRMP plans to construct the overbuild as part of a garage."
+              }
+            ],
+            "reason": "The excerpt expressly states HRMP plans to construct the overbuild."
+          },
+          {
+            "claim": "The overbuild's construction cost is approximately $60 million.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "with a construction cost of approximately $60 million",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the approximate cost."
+              }
+            ],
+            "reason": "The excerpt expressly states the approximate construction cost."
+          },
+          {
+            "claim": "The overbuild will serve as the platform for a Taste of Queens food hall being built by the New York Mets.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "to serve as the platform for a Taste of Queens food hall that is being built by the New York Mets",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the platform function and attributes the food hall build to the Mets."
+              }
+            ],
+            "reason": "The excerpt expressly states the platform role and attributes the build to the Mets."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f4",
+        "claims": [
+          {
+            "claim": "The Board states that the applicant repeatedly referred to the Taste of Queens as a core project element in presentations to the community.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s4"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s4",
+                "quote": "Because the Applicant repeatedly referred to the Taste of Queens as a core project element in its presentations to the community",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the applicant repeatedly referred to Taste of Queens as a core project element in community presentations."
+              }
+            ],
+            "reason": "The excerpt expressly states the Board's stated basis for its view."
+          },
+          {
+            "claim": "The Board strongly believes that HRMP has an obligation to complete the food hall.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s4"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s4",
+                "quote": "the Board strongly believes that HRMP has an obligation to complete the food hall",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the Board's belief about HRMP's obligation to complete the food hall."
+              }
+            ],
+            "reason": "The excerpt directly states the Board strongly believes HRMP has that obligation."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f5",
+        "claims": [
+          {
+            "claim": "Those projects were not considered in the Board’s evaluation.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s5"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s5",
+                "quote": "Those projects accordingly were not considered in the Board’s evaluation",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states those projects were not considered in the Board's evaluation."
+              }
+            ],
+            "reason": "The excerpt expressly states the projects were not considered in the evaluation."
+          },
+          {
+            "claim": "Those projects were raised during the Community Advisory Committee process.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s5"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s5",
+                "quote": "but were raised during the Community Advisory Committee process",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the projects were raised during the CAC process."
+              }
+            ],
+            "reason": "The excerpt expressly states they were raised during the CAC process."
+          },
+          {
+            "claim": "The Board recommends to the Commission that the applicant’s license require those projects to be completed.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s5"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s5",
+                "quote": "the Board recommends to the Commission that the Applicant’s license require those projects to be completed",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the Board's recommendation that the license require completion."
+              }
+            ],
+            "reason": "The excerpt expressly states that recommendation."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f6",
+        "claims": [
+          {
+            "claim": "The Board's chart includes a line item 'Taste of Queens Buildout' with value 60 in two columns.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s6"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s6",
+                "quote": "Taste of Queens Buildout 60 -- 60",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly shows the chart line item and the two displayed 60 values."
+              }
+            ],
+            "reason": "The excerpt directly shows the chart line item with two 60 values."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "partial:f4"
+        ],
+        "citation_ids": [
+          "partial:s4"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Finding partial:f4 expressly says the Board strongly believes HRMP has an obligation to complete the food hall, which entails the Board expressed a belief that HRMP should complete Taste of Queens.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f4",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "The claim directly states the Board's belief in HRMP's obligation to complete the food hall."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s4",
+            "quote": "the Board strongly believes that HRMP has an obligation to complete the food hall",
+            "label": "ENTAILMENT",
+            "reason": "This directly states the Board's expressed belief that HRMP should complete the food hall."
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [
+          "partial:f5"
+        ],
+        "citation_ids": [
+          "partial:s5"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding says the projects were not considered in the Board’s evaluation, but it does not establish that the Board stated the food hall was outside HRMP's commitments in its application.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f5",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "Not being considered in the evaluation is not the same as being outside HRMP's application commitments."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s5",
+            "quote": "Those projects accordingly were not considered in the Board’s evaluation",
+            "label": "NEUTRAL",
+            "reason": "This addresses the Board's evaluation, not whether the food hall was outside HRMP's application commitments."
+          }
+        ]
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [
+          "partial:f6"
+        ],
+        "citation_ids": [
+          "partial:s6"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Finding partial:f6 conveys that the Board's chart includes a Taste of Queens Buildout line with 60 values, establishing inclusion of a $60 million buildout item.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f6",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "The claim directly conveys the chart line item and its 60 values."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s6",
+            "quote": "Taste of Queens Buildout 60 -- 60",
+            "label": "ENTAILMENT",
+            "reason": "This directly shows the chart includes a Taste of Queens Buildout line with 60 values."
+          }
+        ]
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [
+          "partial:f1",
+          "partial:f2"
+        ],
+        "citation_ids": [
+          "partial:s1",
+          "partial:s2"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Findings partial:f1 and partial:f2 expressly describe HRMP's role as delivering the parking podium for the Taste of Queens food hall.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim states HRMP will deliver the parking podium."
+          },
+          {
+            "finding_id": "partial:f2",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim states HRMP delivers the podium while the Mets build the food hall."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s1",
+            "quote": "HRMP will unlock further development potential within Metropolitan Park by delivering a parking podium",
+            "label": "ENTAILMENT",
+            "reason": "This directly states HRMP's role is delivering the parking podium."
+          },
+          {
+            "citation_id": "partial:s2",
+            "quote": "HRMP will unlock further development potential within Metropolitan Park by delivering a parking podium on which Queens Baseball Company (i.e., the New York Mets) will then build the Taste of Queens.",
+            "label": "ENTAILMENT",
+            "reason": "This directly states HRMP's podium-delivery role for the food hall project."
+          }
+        ]
+      },
+      {
+        "gold_id": "G5",
+        "finding_ids": [
+          "partial:f1",
+          "partial:f3"
+        ],
+        "citation_ids": [
+          "partial:s1",
+          "partial:s3"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Findings partial:f1 and partial:f3 expressly attribute building the Taste of Queens food hall to Queens Baseball Company/the New York Mets, a Mets-affiliated entity.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "This claim states Queens Baseball Company/the Mets will build Taste of Queens."
+          },
+          {
+            "finding_id": "partial:f3",
+            "claim_index": 2,
+            "label": "ENTAILMENT",
+            "reason": "This claim states the food hall is being built by the New York Mets."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s1",
+            "quote": "Queens Baseball Company (i.e., the New York Mets) will then build the Taste of Queens",
+            "label": "ENTAILMENT",
+            "reason": "This directly attributes construction to a Mets-affiliated entity."
+          },
+          {
+            "citation_id": "partial:s3",
+            "quote": "a Taste of Queens food hall that is being built by the New York Mets",
+            "label": "ENTAILMENT",
+            "reason": "This directly attributes the build to the New York Mets."
+          }
+        ]
+      },
+      {
+        "gold_id": "G6",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents the food hall's square footage.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G7",
+        "finding_ids": [
+          "partial:f5"
+        ],
+        "citation_ids": [
+          "partial:s5"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding addresses a recommendation that the license require projects to be completed, but it does not establish that the license generally incorporates application and CAC commitments without expressly naming the food hall.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f5",
+            "claim_index": 2,
+            "label": "NEUTRAL",
+            "reason": "A recommendation about license requirements is not the same as the license actually incorporating commitments generally without naming the food hall."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s5",
+            "quote": "the Board recommends to the Commission that the Applicant’s license require those projects to be completed",
+            "label": "NEUTRAL",
+            "reason": "This is a recommendation, not evidence of the actual license text or its general incorporation language."
+          }
+        ]
+      },
+      {
+        "gold_id": "G8",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents press coverage or a June 1, 2030 completion target attributed to Commission filings.",
+        "claim_links": [],
+        "quote_checks": []
+      }
+    ],
+    "protocol": "owned-quotes-v1",
+    "verdict": null
+  },
+  "capture_judgment": {
+    "facts": [
+      {
+        "gold_id": "G1",
+        "label": "ENTAILMENT",
+        "citation_ids": [
+          "p2",
+          "p9"
+        ],
+        "reason": "The Board excerpt expressly says it \"strongly believes that HRMP has an obligation to complete the food hall,\" which establishes the Board's belief that HRMP should complete Taste of Queens."
+      },
+      {
+        "gold_id": "G2",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "p2",
+          "p3",
+          "p10"
+        ],
+        "reason": "The passages show the Board believed HRMP had an obligation and recommended the license require completion, but they do not verbatim state that the food hall was outside HRMP's commitments in its application."
+      },
+      {
+        "gold_id": "G3",
+        "label": "ENTAILMENT",
+        "citation_ids": [
+          "p11"
+        ],
+        "reason": "The Board's chart excerpt lists \"Taste of Queens Buildout 60 -- 60,\" supporting that the chart included $60 million for Taste of Queens buildout."
+      },
+      {
+        "gold_id": "G4",
+        "label": "ENTAILMENT",
+        "citation_ids": [
+          "p4",
+          "p6",
+          "p7"
+        ],
+        "reason": "HRMP states it will \"deliver[] a parking podium on which Queens Baseball Company ... will then build the Taste of Queens,\" which describes HRMP's role as delivering the podium for the food hall."
+      },
+      {
+        "gold_id": "G5",
+        "label": "ENTAILMENT",
+        "citation_ids": [
+          "p1",
+          "p4",
+          "p6",
+          "p7",
+          "p8"
+        ],
+        "reason": "Multiple passages state the Taste of Queens food hall is or will be built by Queens Baseball Company/the New York Mets, a Mets-affiliated entity."
+      },
+      {
+        "gold_id": "G6",
+        "label": "NEUTRAL",
+        "citation_ids": [],
+        "reason": "No supplied excerpt gives the food hall's square footage or says it was roughly 30,000 square feet."
+      },
+      {
+        "gold_id": "G7",
+        "label": "NEUTRAL",
+        "citation_ids": [],
+        "reason": "No supplied excerpt discusses license-incorporation language about the application and CAC commitments generally or whether the food hall is expressly named there."
+      },
+      {
+        "gold_id": "G8",
+        "label": "NEUTRAL",
+        "citation_ids": [],
+        "reason": "No supplied excerpt mentions press coverage, a June 1, 2030 completion target, or attribution to Commission filings."
+      }
+    ],
+    "abstention": {
+      "label": "UNNECESSARY",
+      "reason": "The question asks whether the Board believes HRMP is obligated to complete the Taste of Queens food hall, and the retrieved Board passage directly states it \"strongly believes that HRMP has an obligation to complete the food hall\" (p2/p9). That specific belief is documented even though other passages indicate the Mets would build the food hall and HRMP described its own role as delivering the podium."
+    }
+  },
+  "finished_at": "2026-11-22T10:16:50.702074+00:00"
+}

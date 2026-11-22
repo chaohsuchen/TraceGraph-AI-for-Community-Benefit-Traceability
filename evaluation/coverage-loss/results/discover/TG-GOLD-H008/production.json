@@ -1,0 +1,223 @@
+{
+  "arm": "discover",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 12.170999999972992,
+      "request_id": "req_ffe9fe9a11374c01a3eb85e43f0ee629",
+      "usage": {
+        "input_tokens": 13951,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 4608
+        },
+        "output_tokens": 1177,
+        "output_tokens_details": {
+          "reasoning_tokens": 169
+        },
+        "total_tokens": 15128
+      },
+      "search_enabled": true,
+      "web_search_ids": [
+        "ws_0d1ca9b6585e23d0016b02c10cd78887d2a3d019a0ba56eecb",
+        "ws_0d1ca9b6585e23d0016b02c10fdbc087d29bb4c4b9f5cf928c"
+      ],
+      "stop_reason": "completed",
+      "web_search_statuses": [
+        "completed",
+        "completed"
+      ]
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 1.2809999999590218,
+      "request_id": "req_18483d521b724308955ef636a52f1c9b",
+      "usage": {
+        "input_tokens": 1899,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 13,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 1912
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "documents": [
+    {
+      "url": "https://bronxboropres.nyc.gov/Documents/Services/Planning%20and%20Development/ULURP/Ballys-Ferry-Point-Map-Amendment-Bronx-Borough-President-Gibson-Recommendation-4.21.25.pdf?t=202510141212260",
+      "status": "unreadable",
+      "characters": 0,
+      "sha256": null
+    },
+    {
+      "url": "https://www.ballys.com/Our-Brands/casinos-resorts/default.aspx",
+      "status": "unreadable",
+      "characters": 0,
+      "sha256": null
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "status": "readable",
+      "characters": 26589,
+      "sha256": "77ff7313e2aaf4cd3d040899dd95dc2996b8b83512100a9c7bfa085c6a40cc7e"
+    }
+  ],
+  "search": {
+    "stop": "SUFFICIENT",
+    "proposals": [
+      {
+        "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+        "quote": "The Board considered it crucial that Bally’s committed to mitigate these impacts through a capital investment of up to $10 million for a new police substation and $5 million in annual public safety support. The Board notes that Bally’s agreed to increase this amount from $3 million to $5 million during the Community Advisory Committee process."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+        "quote": "The Bally’s market study identified that there would be $24.6 million of annual additional costs to New York City related to police, fire and other government services. Bally’s has committed to mitigate the impact Bally’s Bronx may have on emergency costs with a capital commitment of up to $10 million for a new police substation, and $5 million for annual public safety support."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "quote": "A key component of this commitment is our up to $10 million capital contribution towards the construction of a new NYPD substation for the 45th Precinct. This new facility will serve as a crucial hub for local law enforcement operations, enhancing their ability to maintain safety and security in the area."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "quote": "In addition to this substantial upfront capital investment, we will provide ongoing funding for additional NYPD support staff/officers. This was outlined in our Community Benefits Agreement, where we initially intended to fund up to $3 million dollars annually for purposes of staffing. Hearing the request from the CAC, we will amend our commitment to provide $5 million dollars annually for the purposes of staffing and support."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "quote": "By hosting a substation on-site, Bally’s would directly support public safety response for the project and its surrounding area. Through funding either or both the NYPD Overtime and NYPD Paid Detail Programs, Bally’s would go above and beyond by helping address conditions not directly caused by the project, while also strengthening the capacity of the already understaffed 45th Precinct."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "quote": "The guiding principle is that Bally’s contributions must supplement, not replace, existing NYPD resources."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+        "quote": "At Bally’s, as part of our project, we are committed to enhancing the safety and security of the surrounding communities as part of our broader community support initiatives. To achieve this, we are committing $10 million in upfront capital improvements and additional, on-going support of public safety staffing, logistical and technical support to ensure the crucial presence of law enforcement and emergency response for residents and visitors alike."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+        "quote": "All told, we will provide an additional $60 million in net present value in public safety benefits over the life of the project."
+      },
+      {
+        "url": "https://bronxboropres.nyc.gov/Documents/Services/Planning%20and%20Development/ULURP/Ballys-Ferry-Point-Map-Amendment-Bronx-Borough-President-Gibson-Recommendation-4.21.25.pdf?t=202510141212260",
+        "quote": "I believe the Bally’s proposal merits conditional support, subject to a State-mandated Community Benefits Agreement that includes enforceable commitments on local hiring, workforce development, small business inclusion, cultural investments, and public safety measures outlined in this recommendation and within the Community Benefits Agreement framework."
+      }
+    ],
+    "located": {
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+      "https://bronxboropres.nyc.gov/Documents/Services/Planning%20and%20Development/ULURP/Ballys-Ferry-Point-Map-Amendment-Bronx-Borough-President-Gibson-Recommendation-4.21.25.pdf?t=202510141212260": "https://bronxboropres.nyc.gov/Documents/Services/Planning%20and%20Development/ULURP/Ballys-Ferry-Point-Map-Amendment-Bronx-Borough-President-Gibson-Recommendation-4.21.25.pdf?t=202510141212260",
+      "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "https://www.ballys.com/Our-Brands/casinos-resorts/default.aspx": "https://www.ballys.com/Our-Brands/casinos-resorts/default.aspx",
+      "https://nycasinos.ny.gov/ballys-bronx-application-materials": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "https://www.ballys.com/esg/default.aspx": "https://www.ballys.com/esg/default.aspx",
+      "https://www.ballys.com/master-purchase-agreement/": "https://www.ballys.com/master-purchase-agreement/",
+      "https://bronxboropres.nyc.gov/business_detail_T9_R157.php": "https://bronxboropres.nyc.gov/business_detail_T9_R157.php",
+      "https://bronxboropres.nyc.gov/services/borough_operations.php": "https://bronxboropres.nyc.gov/services/borough_operations.php",
+      "https://careers.ballys.com/job/ballys-new-york/bronx/new-york/united-states/casinos-resorts/superintendent-golf-course/0d7546fa-71d7-4a50-9a1a-a15fbc18cf9d": "https://careers.ballys.com/job/ballys-new-york/bronx/new-york/united-states/casinos-resorts/superintendent-golf-course/0d7546fa-71d7-4a50-9a1a-a15fbc18cf9d",
+      "https://bronxboropres.nyc.gov/services/planning_development/ulurp.php": "https://bronxboropres.nyc.gov/services/planning_development/ulurp.php",
+      "https://bronxboropres.nyc.gov/newsroom/releases_statements.php": "https://bronxboropres.nyc.gov/newsroom/releases_statements.php",
+      "https://casinos.ballys.com/golf-links-ferry-point/contact-us.htm": "https://casinos.ballys.com/golf-links-ferry-point/contact-us.htm",
+      "https://investors.ballys.com/news/default.aspx": "https://investors.ballys.com/news/default.aspx",
+      "https://careers.ballys.com/job/ballys-new-york/bronx/new-york/united-states/casinos-resorts/ranger/eea9d7a1-e9f8-4cc3-be06-8081ef1e4001": "https://careers.ballys.com/job/ballys-new-york/bronx/new-york/united-states/casinos-resorts/ranger/eea9d7a1-e9f8-4cc3-be06-8081ef1e4001"
+    },
+    "requested_actions": 2
+  },
+  "shortlist": [
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "excerpt": "Our primary focus is to ensure that these connections enhance accessibility while maintaining pedestrian safety around the site. Additionally, we must respect the designated staging areas for MTA emergency response equipment, which are crucial for operational readiness and public safety 5.",
+      "start": 16129,
+      "end": 16419
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "excerpt": "Additionally, we must respect the designated staging areas for MTA emergency response equipment, which are crucial for operational readiness and public safety 5. Can you add more seating, programming, lighting, and diverse vegetation as part of enhancements to Ferry Point Park and its waterfront paths?",
+      "start": 16258,
+      "end": 16561
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "excerpt": "Currently, organic waste—such as grass clippings from fine turf areas—is collected at the golf course and stored in dedicated organic containers. These containers are serviced by private carters typically three to four times per year, and the collected organic waste is transported off-site for appropriate disposal.",
+      "start": 21868,
+      "end": 22184
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "excerpt": "Bally’s remains committed to evaluating best practices in waste management. As new programs and technologies develop, on-site composting will continue to be considered among the suite of strategies to further reduce landfill reliance, decrease transportation impacts, and support more sustainable operations.",
+      "start": 23452,
+      "end": 23760
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "excerpt": "As a licensed gaming facility operator in multiple jurisdictions, Bally’s is required to comply with the jurisdictional requirements of the host state gaming regulator as well as a variety of other laws, including labor and employment laws. Bally’s is committed to following all laws and regulations in New York.",
+      "start": 1480,
+      "end": 1792
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "excerpt": "5 Our bus service commitments are centered around maintaining and enhancing the existing Bally’s shuttle service, which currently operates at 10 locations throughout our local catchment area and provides free, accessible transportation to thousands of community members and their families. This shuttle service is a critical component of our commitment to providing convenient and reliable transportation options for our patrons and employees.",
+      "start": 11212,
+      "end": 11655
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "excerpt": "Can you create a fund to support expanded service for the Soundview ferry route and shuttle buses between the Ferry Point stop and upland neighborhood locations? We’ve included $3 million annually towards ongoing transit funding within our Community Benefits Agreement.",
+      "start": 498,
+      "end": 767
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "excerpt": "Finally, Bally’s supports the Clean Slate Act that went into effect in New York in 2024, which provides greater access to individuals that may have a criminal record to enter the job market. Bally’s is committed to being fully engaged with all stakeholders and government leaders to ensure that as many Bronx residents as possible are eligible to become employees at Bally’s Bronx.",
+      "start": 2348,
+      "end": 2729
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "excerpt": "Bally’s is committed to following all laws and regulations in New York. On the specific issues of drug testing, Bally’s currently does not conduct pre-employment drug testing as Bally’s believes that such testing can be an unnecessary and unintentional barrier to employment.",
+      "start": 1721,
+      "end": 1996
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "excerpt": "This commitment demonstrates our willingness to invest in the necessary infrastructure to support enhanced public transit options, ensuring that our site is well-connected and accessible to the community. By collaborating with the MTA, we aim to improve overall transit accessibility and convenience for everyone in the area.",
+      "start": 12414,
+      "end": 12739
+    }
+  ],
+  "selection": {
+    "findings": []
+  },
+  "additions": []
+}

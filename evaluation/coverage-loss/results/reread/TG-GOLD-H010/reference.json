@@ -1,0 +1,199 @@
+{
+  "case_id": "TG-GOLD-H010",
+  "query": "Bally's plans to exceed the 10 percent renewable energy requirement through on-site solar and NYSERDA-qualified off-site procurement.",
+  "facts": [
+    {
+      "id": "G1",
+      "text": "Bally's Bronx plan aims to exceed a 10% renewable electricity share.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H010",
+          "row": 5
+        },
+        {
+          "sheet": "gold commitments",
+          "row": 24
+        }
+      ]
+    },
+    {
+      "id": "G2",
+      "text": "The plan includes on-site solar photovoltaics at the Bronx facility.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H010",
+          "row": 5
+        },
+        {
+          "sheet": "gold commitments",
+          "row": 24
+        }
+      ]
+    },
+    {
+      "id": "G3",
+      "text": "Bally's Bronx plan includes off-site procurement of NYSERDA-qualified renewable energy.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H010",
+          "row": 5
+        },
+        {
+          "sheet": "gold commitments",
+          "row": 24
+        }
+      ]
+    },
+    {
+      "id": "G4",
+      "text": "Bally's Bronx electricity submission projects roughly 1.8 million kWh of annual on-site solar production.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H010",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "G5",
+      "text": "Bally's Bronx electricity submission specifies a renewable electricity minimum of 10% of annual facility electricity consumption.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H010",
+          "row": 6
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "K1",
+      "text": "The operating Bronx facility generated electricity using its own solar photovoltaics.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H010",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H010",
+          "row": 18
+        }
+      ]
+    },
+    {
+      "id": "K2",
+      "text": "The operating Bronx facility procured NYSERDA-qualified renewable energy off site.",
+      "source_refs": [
+        {
+          "sheet": "gold commitments",
+          "row": 24
+        },
+        {
+          "sheet": "TG-GOLD-H010",
+          "row": 18
+        }
+      ]
+    },
+    {
+      "id": "K3",
+      "text": "On-site solar plus qualifying off-site procurement supplied more than 10% of the Bronx facility's actual electricity consumption for the same operating year.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H010",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H010",
+          "row": 18
+        }
+      ]
+    }
+  ],
+  "delivery_applicable": true,
+  "reference_verdict": {
+    "status": "Target documented. Operating result unverified.",
+    "reasoning": "Compare metered on-site solar plus eligible off-site procurement with total facility electricity consumption for the same operating year. H010 requires a share above 10%.",
+    "delivery_applicable": true,
+    "source_refs": [
+      {
+        "sheet": "TG-GOLD-H010",
+        "row": 17
+      },
+      {
+        "sheet": "TG-GOLD-H010",
+        "row": 18
+      }
+    ]
+  },
+  "sources": [
+    {
+      "sheet": "TG-GOLD-H010",
+      "row": 5,
+      "title": "GFLB Selection Report",
+      "citation": "Dec. 1, 2025, PDF p. 14",
+      "publisher": "Gaming Facility Location Board",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf#page=14",
+      "url_origin": "unchanged pilot source cross-reference",
+      "locator": "PDF p. 14",
+      "published_on": "2025-12-01",
+      "evidence_status": "Target documented",
+      "specific_evidence": "The Board describes a plan to surpass 10% through on-site solar and qualified off-site procurement.",
+      "notes": "This is a plan assessed at selection."
+    },
+    {
+      "sheet": "TG-GOLD-H010",
+      "row": 6,
+      "title": "Bally’s Bronx Application, Electricity",
+      "citation": "Electricity submission, PDF pp. 2–3",
+      "publisher": "Bally’s Corporation",
+      "url": "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-sustainable-development-principals-electricity#page=2",
+      "url_origin": "unchanged pilot source cross-reference",
+      "locator": "Electricity submission, PDF pp. 2–3",
+      "published_on": null,
+      "evidence_status": "Design and minimum documented",
+      "specific_evidence": "Projects roughly 1.8 million kWh of annual on-site solar output and describes qualified procurement to reach at least 10% of annual facility electricity consumption.",
+      "notes": "The application states a 10% minimum. H010 captures the Board’s description of a plan to exceed it."
+    }
+  ],
+  "provenance": {
+    "workbook": "Golden Dataset (6).xlsx",
+    "sha256": "2da588b49b311957885ed7ff98bcd31c49e9d3ef8e99a761a3e9e5fcdb360099",
+    "identity": {
+      "sheet": "gold commitments",
+      "row": 24
+    },
+    "detail_sheet": "TG-GOLD-H010",
+    "detail_internal_id_cell": "B1",
+    "workbook_valid_flag": 1,
+    "workbook_split": "heldout_provisional",
+    "workbook_evidence_status": "not yet due",
+    "workbook_fields": {
+      "gold_id": "TG-GOLD-H010",
+      "document_id": "GFLB-SEL-2025-12-01",
+      "page_section": "pdf p.14; Bally’s Bronx: Workforce Enhancement",
+      "char_start": 31375.0,
+      "char_end": 31604.0,
+      "commitment_text": "proposing a credible plan to surpass the 10 percent renewable energy requirement through on-site solar photovoltaics and off-site procurement of New York State Energy Research and Development Authority-qualified renewable energy.",
+      "normalized_statement": "Bally's plans to exceed the 10 percent renewable energy requirement through on-site solar and NYSERDA-qualified off-site procurement.",
+      "obligation_type": "Target / goal",
+      "responsible_entity": "Bally’s Corporation",
+      "amount_value": "more than 10 percent renewable energy",
+      "term_periodicity": "operations",
+      "geographic_scope": "Bronx",
+      "beneficiary_category": "environment / sustainability",
+      "beneficiary_named": "none named",
+      "condition_contingency": "none stated",
+      "milestone": "none stated",
+      "evidence_status": "not yet due",
+      "confidence": "Medium",
+      "adjudication_note": "none",
+      "duplicate_of": "none",
+      "notes": "none",
+      "evaluation_split": "heldout_provisional",
+      "manually annotated valid?": 1.0
+    },
+    "detail_research_cutoff": null,
+    "evaluation_use": "22-case annotated benchmark; development-exposed cases included",
+    "reference_preparation": "Previously frozen fact and condition wording; A1:F18 and the master query verified against Golden (6)."
+  }
+}

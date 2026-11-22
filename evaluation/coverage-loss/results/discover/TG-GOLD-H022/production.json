@@ -1,0 +1,365 @@
+{
+  "arm": "discover",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 8.60999999998603,
+      "request_id": "req_96bd5afa95e74fb09a28c80fb06d88ac",
+      "usage": {
+        "input_tokens": 13613,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 4608
+        },
+        "output_tokens": 678,
+        "output_tokens_details": {
+          "reasoning_tokens": 122
+        },
+        "total_tokens": 14291
+      },
+      "search_enabled": true,
+      "web_search_ids": [
+        "ws_0031ac80ee8cbaca016b02c29b0db887d2ae9ebcb6f4cc8d67",
+        "ws_0031ac80ee8cbaca016b02c29d31cc87d2b71ab3f66d580c5b"
+      ],
+      "stop_reason": "completed",
+      "web_search_statuses": [
+        "completed",
+        "completed"
+      ]
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 4.125,
+      "request_id": "req_89d0b0ff48aa4d26845380340d827007",
+      "usage": {
+        "input_tokens": 4053,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 358,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4411
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "documents": [
+    {
+      "url": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "status": "readable",
+      "characters": 56308,
+      "sha256": "682c84bb71938c09af276954ad416419f436059ff4be91d0c91db1150d6520e3"
+    },
+    {
+      "url": "https://www.metropolitanpark.com/benefits",
+      "status": "unreadable",
+      "characters": 0,
+      "sha256": null
+    },
+    {
+      "url": "https://citymeetings.nyc/meetings/new-york-city-council/2025-03-06-1000-am-subcommittee-on-zoning-and-franchises/chapter/community-benefits-and-oversight-for-queens-future-project/",
+      "status": "readable",
+      "characters": 2645,
+      "sha256": "001edec0f9f089be45cce1aeecf103b8a21d0b677f16af61b96d2f8498daff5c"
+    }
+  ],
+  "search": {
+    "stop": "SUFFICIENT",
+    "proposals": [
+      {
+        "url": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+        "quote": "$163 million for a Community Impact Fund that will provide grants to non-profit organizations serving Queens communities and residents. Metropolitan Park will organize and operate the Fund based on recommendations of representatives of these most impacted Community Board Districts in cooperation with our local governing partners."
+      },
+      {
+        "url": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+        "quote": "A seven (7) member Board will be formed that will include at least one member appointed by the Chair of Queens Community Board 3 and additional member nominations will be based on geographic proximity to the site."
+      },
+      {
+        "url": "https://www.metropolitanpark.com/fund",
+        "quote": "The Metropolitan Park Community Impact Fund is a long-term charitable commitment designed to support organizations and programs that serve Queens residents—especially the communities surrounding Willets Point."
+      },
+      {
+        "url": "https://www.metropolitanpark.com/fund",
+        "quote": "With $2 million in grants distributed in 2026 alone, the Community Impact Fund will provide direct, neighborhood-level investment to local nonprofits and community-based organizations."
+      },
+      {
+        "url": "https://www.metropolitanpark.com/fund",
+        "quote": "Planned funding levels include:"
+      },
+      {
+        "url": "https://www.metropolitanpark.com/fund",
+        "quote": "Approximately $2 million annually from 2026 through 2030"
+      },
+      {
+        "url": "https://www.metropolitanpark.com/fund",
+        "quote": "Approximately $5 million annually from 2031 through 2050"
+      },
+      {
+        "url": "https://www.metropolitanpark.com/fund",
+        "quote": "Starting in 2026, the Fund will distribute approximately $2 million per year in grants, typically about $15,000 per organization, supporting dozens of Queens-based nonprofits annually. Funding will increase to roughly $5 million per year beginning in 2031 and continue through 2050."
+      },
+      {
+        "url": "https://www.metropolitanpark.com/fund",
+        "quote": "The Community Impact Fund is owned and operated by Hard Rock at Metropolitan Park."
+      },
+      {
+        "url": "https://www.metropolitanpark.com/benefits",
+        "quote": "PROVIDE COMMUNITY SUPPORT AND INVESTMENT: $163 million for a Community Impact Trust that will provide grants to non-profit organizations serving Queens communities and residents."
+      },
+      {
+        "url": "https://www.metropolitanpark.com/benefits",
+        "quote": "The detailed community benefits, contingent on the group receiving a gaming license, are a part of the $8 billion proposal to convert parking lots around Citi Field into a community-driven vision"
+      },
+      {
+        "url": "https://www.metropolitanpark.com/fund",
+        "quote": "The Fund offers two grant cycles each year:"
+      }
+    ],
+    "located": {
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "https://citymeetings.nyc/meetings/new-york-city-council/2025-03-06-1000-am-subcommittee-on-zoning-and-franchises/chapter/community-benefits-and-oversight-for-queens-future-project/": "https://citymeetings.nyc/meetings/new-york-city-council/2025-03-06-1000-am-subcommittee-on-zoning-and-franchises/chapter/community-benefits-and-oversight-for-queens-future-project/",
+      "https://www.metropolitanpark.com/preview": "https://www.metropolitanpark.com/preview",
+      "https://www.metropolitanpark.com/fund": "https://www.metropolitanpark.com/fund",
+      "https://www.revisor.mn.gov/statutes/2026/cite/473/full": "https://www.revisor.mn.gov/statutes/2026/cite/473/full",
+      "https://publicdocs.santa-ana.org/WebLink/DocView.aspx?dbid=1&id=82788&repo=Clerk": "https://publicdocs.santa-ana.org/WebLink/DocView.aspx?dbid=1&id=82788&repo=Clerk",
+      "https://a002-ceqraccess.nyc.gov/ceqr/Details?data=MjNETUUwMDZR0&signature=b3851a8ba774a5b3fb99a147e2d42a07da99cad0": "https://a002-ceqraccess.nyc.gov/ceqr/Details?data=MjNETUUwMDZR0&signature=b3851a8ba774a5b3fb99a147e2d42a07da99cad0",
+      "https://www.metropolitanpark.com/benefits": "https://www.metropolitanpark.com/benefits",
+      "https://dec.ny.gov/news/environmental-notice-bulletin/2023-11-08/seqr/queens-queens-future-development-project": "https://dec.ny.gov/news/environmental-notice-bulletin/2023-11-08/seqr/queens-queens-future-development-project",
+      "https://citymeetings.nyc/meetings/new-york-city-council/2025-03-06-1000-am-subcommittee-on-zoning-and-franchises/chapter/council-member-schulman-inquires-about-union-jobs-and-local-business-support-for-queens-future-project/": "https://citymeetings.nyc/meetings/new-york-city-council/2025-03-06-1000-am-subcommittee-on-zoning-and-franchises/chapter/council-member-schulman-inquires-about-union-jobs-and-local-business-support-for-queens-future-project/",
+      "https://mrsc.org/explore-topics/parks/financing/metropolitan-park-districts": "https://mrsc.org/explore-topics/parks/financing/metropolitan-park-districts",
+      "https://mrsc.org/explore-topics/facilities/districts/metropolitan-park-districts": "https://mrsc.org/explore-topics/facilities/districts/metropolitan-park-districts",
+      "https://lobbyingsoftware.com/org/73245/queens-future-llc": "https://lobbyingsoftware.com/org/73245/queens-future-llc"
+    },
+    "requested_actions": 2
+  },
+  "shortlist": [
+    {
+      "url": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "excerpt": "A seven (7) member Board will be formed that will include at least one member appointed by the Chair of Queens Community Board 3 and additional member nominations will be based on geographic proximity to the site.",
+      "start": 31652,
+      "end": 31865
+    },
+    {
+      "url": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "excerpt": "$150 million to build Taste of Queens, a community -oriented green food market that will operate year-round and feature Queens-based food vendors. Metropolitan Park Queens Future $25 million for community identified health care and youth and senior needs, including a health clinic in East Elmhurst , a youth and senior center in Corona, and addiction and mental health services infrastructure in Flushing.",
+      "start": 32286,
+      "end": 32692
+    },
+    {
+      "url": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "excerpt": "$320 million to construct, operate and maintain approximately 25 acres of new public open space at Metropolitan Park $480 million for public infrastructure improvements, including transforming the Mets -Willets Point 7 Train station into a welcoming entrance to Flushing Meadows -Corona Park with long overdue ADA accessibility, safer neighborhood connectivity and significant investment in climate resiliency measures. $150 million to build Taste of Queens, a community -oriented green food market that will operate year-round and feature Queens-based food vendors.",
+      "start": 31866,
+      "end": 32432
+    },
+    {
+      "url": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "excerpt": "3, Q. 82-11 37th Avenue, Suite 606 Jackson Heights, New York 11372 Telephone: (718) 458-2707 Fax: (718) 458-3316 Website: queenscb3.cityofnewyork.us/ Email: communityboard@queenscb3.cityofnewyork.us $163 million for a Community Impact Fund that will provide grants to non -profit organizations serving Queens communities and residents.",
+      "start": 31120,
+      "end": 31455
+    },
+    {
+      "url": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "excerpt": "Based on the above consideration, I hereby approve this application with conditions: • A letter from the Applicant Team that spells out in writing all Community Benefit terms that were discussed during the ULURP process, as well as new conditions as cited by the Borough President; • A $163 million Community Benefits Fund (with the understanding this Fund should be increased) to be accessible for 30 years (or until the funds are depleted) and allocated across local Queens Community Districts 3, 4, 6, 7, 8, and 9; • A Community Advisory Board that will meet regularly and act as a watchdog for all promised community benefits; • A “CommUNITY Passport” program terms and conditions, with the",
+      "start": 21889,
+      "end": 22583
+    },
+    {
+      "url": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "excerpt": "Many recent studies have cited mixed economic outcomes when casinos are built, often not translating to long-term success. However, the Applicant Team has done a commendable job of creating a plan that would enrich local constituents’ lives with a 25-acre public park, community facility space, transportation improvements, a food hall designed to elevate Queens-based eateries and a nine-figure community benefits fund, among other aspects.",
+      "start": 21247,
+      "end": 21688
+    },
+    {
+      "url": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "excerpt": "Metropolitan Park, Queens Future has committed in writing to the following community benefit s and transit investments: COMMUNITY BOARD No. 3, Q.",
+      "start": 30980,
+      "end": 31125
+    },
+    {
+      "url": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "excerpt": "and active recreational space for sports; • Programming plans for the 30,000-SF community facility space and a commitment to local outreach in the surrounding zip codes (11368, 11369, 11370 and 11371 for Corona and East Elmhurst) to fill the community facility space with local tenants; • Specifying how the $25 million reserved for neighborhood projects is intended to be used; • Workforce development plan that includes (but is not limited to) the following: 30% MWBE Hiring Goal (with the intention of exceeding said goal); the total projected number of jobs, both permanent and temporary; list of community-based organizations with which the Applicant has signed MOUs for workforce development;",
+      "start": 23283,
+      "end": 23981
+    },
+    {
+      "url": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "excerpt": "MPQ has committed to a minority-and women- owned business enterprise (M/WBE) contracting, local hiring and workforce development initiatives, a small business lending programing, childcare for employees Metropolitan Park has committed to partnering with the local community for ongoing input and engagement in the transformation of the 50 – acres into Metropolitan Park. Vote Therefore, upon the motion to approve the application with conditions, was passed with a vote of (26) In Favor, (8) Opposed (3) Abstentions We thank City Planning for providing the community the opportunity to comment on the application.",
+      "start": 32693,
+      "end": 33306
+    },
+    {
+      "url": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "excerpt": "More than 240 residents were in attendance and the community board office received over 100 emails that were overwhelmingly in favor of the project. Land Use Actions: Queens Future Map Change and Amendment - ULURP#: 250047MMQ- CITY MAP AMENDMENT (MM) a.",
+      "start": 29306,
+      "end": 29559
+    },
+    {
+      "url": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "excerpt": "Community Board 4 (CB4) voted to approve the application by a vote of twenty- seven (27) in favor, zero (0) in opposition, and two (2) abstentions. Community Board 6 (CB6) voted to approve the application with conditions by a vote of thirty-two (32) in favor, six (6) in opposition and zero (0) abstentions – their condition was to ensure that the funds allocated to the Community Fund are used to fund projects the communities themselves select.",
+      "start": 18731,
+      "end": 19177
+    },
+    {
+      "url": "https://citymeetings.nyc/meetings/new-york-city-council/2025-03-06-1000-am-subcommittee-on-zoning-and-franchises/chapter/community-benefits-and-oversight-for-queens-future-project/",
+      "title": "https://citymeetings.nyc/meetings/new-york-city-council/2025-03-06-1000-am-subcommittee-on-zoning-and-franchises/chapter/community-benefits-and-oversight-for-queens-future-project/",
+      "excerpt": "A seven-person local committee will be established based on proximity to the site Community Boards 3 and 7 will have representation on the committee A $163 million community benefit fund is included in the RFA application to the state The gaming license and its renewal will serve as the ultimate enforcement mechanism Francisco Moya 0:34:48 And then during the ULURP, the project team has committed to making significant contributions in community benefits, which you just mentioned. 0:34:56 Is there a vision for some kind of oversight or body to track these commitments over time?",
+      "start": 690,
+      "end": 1273
+    },
+    {
+      "url": "https://citymeetings.nyc/meetings/new-york-city-council/2025-03-06-1000-am-subcommittee-on-zoning-and-franchises/chapter/community-benefits-and-oversight-for-queens-future-project/",
+      "title": "https://citymeetings.nyc/meetings/new-york-city-council/2025-03-06-1000-am-subcommittee-on-zoning-and-franchises/chapter/community-benefits-and-oversight-for-queens-future-project/",
+      "excerpt": "0:35:18 But council member, we're also, as part of our RFA application to the state, including the hundred $63,000,000 community benefit fund. 0:35:27 So the ultimate enforcement mechanism is the gaming license itself, our ability to maintain the ability to operate the project, and then ultimately to get a license renewal down the road.",
+      "start": 1590,
+      "end": 1928
+    },
+    {
+      "url": "https://citymeetings.nyc/meetings/new-york-city-council/2025-03-06-1000-am-subcommittee-on-zoning-and-franchises/chapter/community-benefits-and-oversight-for-queens-future-project/",
+      "title": "https://citymeetings.nyc/meetings/new-york-city-council/2025-03-06-1000-am-subcommittee-on-zoning-and-franchises/chapter/community-benefits-and-oversight-for-queens-future-project/",
+      "excerpt": "0:35:09 We've committed to both community boards three and seven immediately proximate to us to have representation where they can appoint somebody to be on that committee. 0:35:18 But council member, we're also, as part of our RFA application to the state, including the hundred $63,000,000 community benefit fund.",
+      "start": 1417,
+      "end": 1732
+    },
+    {
+      "url": "https://citymeetings.nyc/meetings/new-york-city-council/2025-03-06-1000-am-subcommittee-on-zoning-and-franchises/chapter/community-benefits-and-oversight-for-queens-future-project/",
+      "title": "https://citymeetings.nyc/meetings/new-york-city-council/2025-03-06-1000-am-subcommittee-on-zoning-and-franchises/chapter/community-benefits-and-oversight-for-queens-future-project/",
+      "excerpt": "0:35:01 We're gonna have a seven person local committee that will be established based on proximity to the site. 0:35:09 We've committed to both community boards three and seven immediately proximate to us to have representation where they can appoint somebody to be on that committee.",
+      "start": 1304,
+      "end": 1589
+    },
+    {
+      "url": "https://citymeetings.nyc/meetings/new-york-city-council/2025-03-06-1000-am-subcommittee-on-zoning-and-franchises/chapter/community-benefits-and-oversight-for-queens-future-project/",
+      "title": "https://citymeetings.nyc/meetings/new-york-city-council/2025-03-06-1000-am-subcommittee-on-zoning-and-franchises/chapter/community-benefits-and-oversight-for-queens-future-project/",
+      "excerpt": "0:35:27 So the ultimate enforcement mechanism is the gaming license itself, our ability to maintain the ability to operate the project, and then ultimately to get a license renewal down the road. 0:35:41 So this is something that we're committing to as part of the overall project and ultimately enforceable by the Gaming Commission as well.",
+      "start": 1733,
+      "end": 2074
+    },
+    {
+      "url": "https://citymeetings.nyc/meetings/new-york-city-council/2025-03-06-1000-am-subcommittee-on-zoning-and-franchises/chapter/community-benefits-and-oversight-for-queens-future-project/",
+      "title": "https://citymeetings.nyc/meetings/new-york-city-council/2025-03-06-1000-am-subcommittee-on-zoning-and-franchises/chapter/community-benefits-and-oversight-for-queens-future-project/",
+      "excerpt": "Home > New York City Council Meetings > Subcommittee on Zoning and Franchises - March 06, 2025 Q&A Community benefits and oversight for Queens Future project 0:34:48 · 63 sec Summary Transcript Council Member Moya asks about the oversight mechanism for tracking community benefit commitments made by the Queens Future project team. Michael Sullivan from Queens Future LLC outlines their plans for oversight and enforcement.",
+      "start": 266,
+      "end": 689
+    },
+    {
+      "url": "https://citymeetings.nyc/meetings/new-york-city-council/2025-03-06-1000-am-subcommittee-on-zoning-and-franchises/chapter/community-benefits-and-oversight-for-queens-future-project/",
+      "title": "https://citymeetings.nyc/meetings/new-york-city-council/2025-03-06-1000-am-subcommittee-on-zoning-and-franchises/chapter/community-benefits-and-oversight-for-queens-future-project/",
+      "excerpt": "Want to stay up to date? Sign up for the newsletter.",
+      "start": 2572,
+      "end": 2624
+    },
+    {
+      "url": "https://citymeetings.nyc/meetings/new-york-city-council/2025-03-06-1000-am-subcommittee-on-zoning-and-franchises/chapter/community-benefits-and-oversight-for-queens-future-project/",
+      "title": "https://citymeetings.nyc/meetings/new-york-city-council/2025-03-06-1000-am-subcommittee-on-zoning-and-franchises/chapter/community-benefits-and-oversight-for-queens-future-project/",
+      "excerpt": "(optional) Submit Answer Skip Thank you! Want to stay up to date?",
+      "start": 2531,
+      "end": 2596
+    },
+    {
+      "url": "https://citymeetings.nyc/meetings/new-york-city-council/2025-03-06-1000-am-subcommittee-on-zoning-and-franchises/chapter/community-benefits-and-oversight-for-queens-future-project/",
+      "title": "https://citymeetings.nyc/meetings/new-york-city-council/2025-03-06-1000-am-subcommittee-on-zoning-and-franchises/chapter/community-benefits-and-oversight-for-queens-future-project/",
+      "excerpt": "Francisco Moya 0:35:49 Thank you. 0:35:49 Glad to hear that.",
+      "start": 2090,
+      "end": 2150
+    },
+    {
+      "url": "https://citymeetings.nyc/meetings/new-york-city-council/2025-03-06-1000-am-subcommittee-on-zoning-and-franchises/chapter/community-benefits-and-oversight-for-queens-future-project/",
+      "title": "https://citymeetings.nyc/meetings/new-york-city-council/2025-03-06-1000-am-subcommittee-on-zoning-and-franchises/chapter/community-benefits-and-oversight-for-queens-future-project/",
+      "excerpt": "0:35:49 Glad to hear that. Report an issue About transcription errors ← Previous Chapter Operation and maintenance of new parkland in Queens Future project Next Chapter → Traffic circulation and design for Queens Future project Is citymeetings.nyc useful to you?",
+      "start": 2124,
+      "end": 2386
+    }
+  ],
+  "selection": {
+    "findings": [
+      {
+        "id": "W5",
+        "claim": "The Queens Borough President's approval conditions described the same Community Benefits Fund as $163 million, available for 30 years or until depleted, and allocated across Queens Community Districts 3, 4, 6, 7, 8, and 9.",
+        "quote": "A $163 million Community Benefits Fund (with the understanding this Fund should be increased) to be accessible for 30 years (or until the funds are depleted) and allocated across local Queens Community Districts 3, 4, 6, 7, 8, and 9;"
+      },
+      {
+        "id": "W5",
+        "claim": "The Borough President tied oversight of the promised community benefits, including the fund, to a Community Advisory Board that would meet regularly and act as a watchdog.",
+        "quote": "A Community Advisory Board that will meet regularly and act as a watchdog for all promised community benefits;"
+      },
+      {
+        "id": "W11",
+        "claim": "Queens Community Board 6 approved the application with a condition that money allocated to the Community Fund be used for projects selected by the communities themselves.",
+        "quote": "Community Board 6 (CB6) voted to approve the application with conditions by a vote of thirty-two (32) in favor, six (6) in opposition and zero (0) abstentions – their condition was to ensure that the funds allocated to the Community Fund are used to fund projects the communities themselves select."
+      },
+      {
+        "id": "W4",
+        "claim": "In Community Board 3 materials, the Community Impact Fund was described as $163 million in grants for nonprofit organizations serving Queens communities and residents.",
+        "quote": "$163 million for a Community Impact Fund that will provide grants to non -profit organizations serving Queens communities and residents."
+      }
+    ]
+  },
+  "additions": [
+    {
+      "url": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "quote": "A $163 million Community Benefits Fund (with the understanding this Fund should be increased) to be accessible for 30 years (or until the funds are depleted) and allocated across local Queens Community Districts 3, 4, 6, 7, 8, and 9;",
+      "claim": "The Queens Borough President's approval conditions described the same Community Benefits Fund as $163 million, available for 30 years or until depleted, and allocated across Queens Community Districts 3, 4, 6, 7, 8, and 9.",
+      "start": 22173,
+      "end": 22406
+    },
+    {
+      "url": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "quote": "A Community Advisory Board that will meet regularly and act as a watchdog for all promised community benefits;",
+      "claim": "The Borough President tied oversight of the promised community benefits, including the fund, to a Community Advisory Board that would meet regularly and act as a watchdog.",
+      "start": 22409,
+      "end": 22519
+    },
+    {
+      "url": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "quote": "Community Board 6 (CB6) voted to approve the application with conditions by a vote of thirty-two (32) in favor, six (6) in opposition and zero (0) abstentions – their condition was to ensure that the funds allocated to the Community Fund are used to fund projects the communities themselves select.",
+      "claim": "Queens Community Board 6 approved the application with a condition that money allocated to the Community Fund be used for projects selected by the communities themselves.",
+      "start": 18879,
+      "end": 19177
+    },
+    {
+      "url": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "quote": "$163 million for a Community Impact Fund that will provide grants to non -profit organizations serving Queens communities and residents.",
+      "claim": "In Community Board 3 materials, the Community Impact Fund was described as $163 million in grants for nonprofit organizations serving Queens communities and residents.",
+      "start": 31319,
+      "end": 31455
+    }
+  ]
+}

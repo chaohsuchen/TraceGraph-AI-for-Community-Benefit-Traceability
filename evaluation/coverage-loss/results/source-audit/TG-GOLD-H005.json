@@ -1,0 +1,43 @@
+{
+  "case": "TG-GOLD-H005",
+  "selected_distinct_urls": 1,
+  "review": {
+    "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf": {
+      "relationship": "same_host_distinct_or_unresolved_document",
+      "identical_content_urls": [],
+      "old_passages_repeated": [],
+      "snapshot_consistent": true,
+      "original_status": {
+        "status": "readable",
+        "characters": 72606,
+        "sha256": "106bbbaf0d168554b64cd4a6604e696b9722d6a45a389f0ee982ecb9fcdeddb1"
+      },
+      "same_host_or_filename_compared": [
+        {
+          "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+          "status": "TimeoutError",
+          "characters": 0,
+          "sha256": null
+        },
+        {
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+          "status": "unreadable",
+          "characters": 0,
+          "sha256": null
+        },
+        {
+          "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+          "status": "TimeoutError",
+          "characters": 0,
+          "sha256": null
+        },
+        {
+          "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+          "status": "readable",
+          "characters": 18732,
+          "sha256": "9971c9b9ea52d065e4f5cb1c5b7c3232c9182315324899ebfc59844cc7956602"
+        }
+      ]
+    }
+  }
+}

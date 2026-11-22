@@ -1,0 +1,355 @@
+{
+  "arm": "discover",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 11.01500000001397,
+      "request_id": "req_c1912268ecbc4a84ac917c94f285877d",
+      "usage": {
+        "input_tokens": 13819,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 2560
+        },
+        "output_tokens": 1100,
+        "output_tokens_details": {
+          "reasoning_tokens": 163
+        },
+        "total_tokens": 14919
+      },
+      "search_enabled": true,
+      "web_search_ids": [
+        "ws_0ad2d0e4b7c144f9016b02c10cbe0487d297f431afffd53564",
+        "ws_0ad2d0e4b7c144f9016b02c10f0f7487d28a7e4599d952a680"
+      ],
+      "stop_reason": "completed",
+      "web_search_statuses": [
+        "completed",
+        "completed"
+      ]
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 3.719000000040978,
+      "request_id": "req_dd8b113b9d91420e81637e107f573aad",
+      "usage": {
+        "input_tokens": 3707,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 302,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4009
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "documents": [
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000034/baly-20251231.htm",
+      "status": "unreadable",
+      "characters": 0,
+      "sha256": null
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "status": "readable",
+      "characters": 23053,
+      "sha256": "1c45927c89aa5069e3121ca910d06f2601d5f157188a74e90b8e407e82dfb75c"
+    },
+    {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "status": "readable",
+      "characters": 18732,
+      "sha256": "9971c9b9ea52d065e4f5cb1c5b7c3232c9182315324899ebfc59844cc7956602"
+    }
+  ],
+  "search": {
+    "stop": "SUFFICIENT",
+    "proposals": [
+      {
+        "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+        "quote": "Bally’s has committed to comprehensive infrastructure improvements, including construction of a new overpass over the Hutchinson River Parkway, reconstruction of Ferry Point Park Ring Road to two lanes and adding sidewalks, improved pedestrian facilities, expanded Ferry Point Park bike paths, and adding an MTA bus stop at Ferry Point and two bus stops at Bally’s Bronx location."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+        "quote": "Bally’s also promised to provide direct pedestrian and bicycle connections between the facility, Ferry Point Park, and the Ferry Point waterfront and to expand the ferry shuttle service."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+        "quote": "Bally’s will coordinate with state and city agencies to manage traffic impacts. Specific examples of traffic mitigants include flaggers, optimize traffic signaling, and coordinating with existing Ferry Point access roads to minimize disruption from material deliveries."
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000034/baly-20251231.htm",
+        "quote": "The closing of the transactions contemplated by the Conveyance Agreement occurred in February 2026 and was contingent upon, among other things, (i) Bally’s New York’s agreement to (a) make certain capital improvements to Ferry Point Park in the Bronx, NY with a fair market value of approximately $161 million and (b) to deliver security instruments to the City to secure the performance and completion of such capital improvements,"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000034/baly-20251231.htm",
+        "quote": "Bally’s New York must spend $161 million in capital improvements to Ferry Point Park to be completed within 7 years after closing."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+        "quote": "Since September 2023 Bally’s has offered shuttle service with 10 stops, including stops at the Bally’s Golf Links at Ferry Point and various stops between the Throggs Neck neighborhood and the Westchester Square 6-Train Subway station."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+        "quote": "the proposed integrated facility would provide space for an MTA bus stop on-site, as well as a bus stop along the proposed reconstructed Ring Road in Ferry Point Park for Park users."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+        "quote": "physical infrastructure improvements such as the proposed Lafayette overpass, widening of ring road and restriping and signalizing of certain intersections would have a significant positive impact on not only project transit and circulation, but also for the broader Bronx community as well."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+        "quote": "Preliminary discussions have been held with MTA regarding potential extension of bus lines to the Project Site and with NYCEDC regarding potential for increased ferry service to the Ferry Point Park ferry landing."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+        "quote": "Commitments for increased service for the MTA bus stops are in place, but specific details will need to be further materialized."
+      },
+      {
+        "url": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250085.pdf",
+        "quote": "Currently, Bally’s operates a shuttle bus between this stop and the golf course. In December 2021, New York City ferry service began with the opening of a new landing on the western side of Ferry Point Park."
+      }
+    ],
+    "located": {
+      "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250085.pdf": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250085.pdf",
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "https://nycasinos.ny.gov/ballys-bronx-application-materials": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "https://a002-ceqraccess.nyc.gov/ceqr/Details?data=MjRETUUwMTFY0&signature=1c7557f385641122298923258ffa78cd2f1ddc67": "https://a002-ceqraccess.nyc.gov/ceqr/Details?data=MjRETUUwMTFY0&signature=1c7557f385641122298923258ffa78cd2f1ddc67",
+      "https://legistar.council.nyc.gov/LegislationDetail.aspx?From=RSS&GUID=BCAA61FC-C776-460B-A6D8-58972CC66DBF&ID=7440216": "https://legistar.council.nyc.gov/LegislationDetail.aspx?From=RSS&GUID=BCAA61FC-C776-460B-A6D8-58972CC66DBF&ID=7440216",
+      "https://a856-cityrecord.nyc.gov/RequestDetail/20250213027": "https://a856-cityrecord.nyc.gov/RequestDetail/20250213027",
+      "https://www.nyc.gov/html/dot/html/ferrybus/charterbus.shtml": "https://www.nyc.gov/html/dot/html/ferrybus/charterbus.shtml",
+      "https://www.nyc.gov/html/dot/html/motorist/weektraf.shtml?os=sasdc": "https://www.nyc.gov/html/dot/html/motorist/weektraf.shtml?os=sasdc",
+      "https://www.nyc.gov/html/dot/html/ferrybus/ferrybus.shtml": "https://www.nyc.gov/html/dot/html/ferrybus/ferrybus.shtml",
+      "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000034/baly-20251231.htm": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000034/baly-20251231.htm",
+      "https://ballysbronx.com/faq/what-happens-to-the-park/": "https://ballysbronx.com/faq/what-happens-to-the-park/",
+      "https://www.nyc.gov/html/dot/html/about/accessibility-information.shtml": "https://www.nyc.gov/html/dot/html/about/accessibility-information.shtml",
+      "https://home4.nyc.gov/html/dot/html/pedestrians/safertstransit.shtml": "https://home4.nyc.gov/html/dot/html/pedestrians/safertstransit.shtml",
+      "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000108/ex102-amendedandrestatedlo.htm": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000108/ex102-amendedandrestatedlo.htm"
+    },
+    "requested_actions": 2
+  },
+  "shortlist": [
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "excerpt": "How is the Ferry Point walking path being improved as part of this proposal? Ferry Point walking paths are one of the contemplated improvements being considered as improvements.",
+      "start": 10955,
+      "end": 11132
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "excerpt": "Here is a link to the materials: https://ballysbronx.com/wp-content/uploads/2025/03/Ballys-Bets-on-the-Bronx-CBA- Materials-vFinal.pdf Transportation & Site Access 5. Please provide more details on the project’s pedestrian-oriented design strategy, including shaded and rest areas, and improvements to walking paths both within the project site and to nearby community assets such as Ferry Point Park.",
+      "start": 6523,
+      "end": 6924
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "excerpt": "Please provide more details on the project’s pedestrian-oriented design strategy, including shaded and rest areas, and improvements to walking paths both within the project site and to nearby community assets such as Ferry Point Park. Has the team explored opportunities to create a direct physical connection between the southern end of the site and the waterfront open space network (including Ferry Point Park and the walking path)?",
+      "start": 6690,
+      "end": 7125
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "excerpt": "Instead, the improvements to Ring Road were designed to provide pedestrian and bike facilities between the east side and west side of Ferry Point Park along Ring Road. 4 6.",
+      "start": 7322,
+      "end": 7494
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "excerpt": "The enhancements to Ferry Point Park are currently being finalized as part of the negotiation with the various city departments in conjunction with the final conveyance agreement. Conceptually, however, some improvements have included discussions around improving pedestrian access, bike paths and walkways, new walking paths to connect to the existing 9/11 memorial and the improvement of existing playing feels that need to be improved.",
+      "start": 10129,
+      "end": 10567
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "excerpt": "Please provide further details on the proposed enhancements to Ferry Point Park, particularly how they connect to and are integrated with the gaming facility. The enhancements to Ferry Point Park are currently being finalized as part of the negotiation with the various city departments in conjunction with the final conveyance agreement.",
+      "start": 9970,
+      "end": 10308
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "excerpt": "The specific improvements to the Ferry Point walking path are still subject to on-going negotiations with City and State agencies. 11.",
+      "start": 11239,
+      "end": 11373
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "excerpt": "These include local meetings with stakeholder groups, ongoing bus service from the neighborhood to the ferry terminal, incorporating a police substation, and minimizing the height and visibility of the building structure. In addition, our proposal includes a community funding commitment, through which Bally’s will support local initiatives and projects.",
+      "start": 12798,
+      "end": 13153
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "excerpt": "Has the team explored opportunities to create a direct physical connection between the southern end of the site and the waterfront open space network (including Ferry Point Park and the walking path)? As mentioned at the initial CAC meeting, a direct connection under the Whitestone Bridge for pedestrians/park users was discussed with TBTA and due to their security concerns, it was not pursued.",
+      "start": 6925,
+      "end": 7321
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "excerpt": "Ferry Point walking paths are one of the contemplated improvements being considered as improvements. As such, walkways have been proposed to better connect the walking path with the existing 9/11 memorials.",
+      "start": 11032,
+      "end": 11238
+    },
+    {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "title": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "excerpt": "Skip to main content Navigation Menu Toggle Gaming Facility Location Board Request for Applications Required Approvals Evaluation Criteria and Selection Historical Resources About the Board About the Board Board Meetings Newsroom Applicants Applicants Bally's Bronx Hard Rock Metropolitan Park Resorts World New York City Bally's Bronx Bally's Bronx Application Materials On this page On this page Bally's Bronx Application Materials Revised Redacted Material Pursuant to the Gaming Facility Location Board's 2023 Request for Applications: “Applications, Supplements and associated materials will be treated as public records and, as soon as possible after both Return Dates, will be posted online",
+      "start": 0,
+      "end": 697
+    },
+    {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "title": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "excerpt": "New York Casino - Workforce Enhancement - Job Opportunities Download Bally's New York Casino - Workforce Enhancement - MWBE Goals Download Bally's New York Casino - Workforce Enhancement - Workforce Training Download Bally's New York Casino - Workforce Enhancement - Problem Gambling Prevention Measures Download Bally's New York Casino - Workforce Enhancement - Sustainable Development Principals - Leadership in Environmental and Energy Design (LEED) Download Bally's New York Casino - Workforce Enhancement - Sustainable Development Principals - Traffic Download Bally's New York Casino - Workforce Enhancement - Sustainable Development Principals - Traffic Analysis Memo Download Bally's New",
+      "start": 15185,
+      "end": 15880
+    },
+    {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "title": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "excerpt": "Project - Debt Financing Terms Download Bally's New York Casino - Demonstrating Ability to Finance the Project - Debt Commitment Letters and Agreements Download Bally's New York Casino - Demonstrating Ability to Finance the Project - Term Sheets for Public or Private Offering of Equity Download Bally's New York Casino - Demonstrating Ability to Finance the Project - Letters of Confidence From Financial Advisors Regarding Availability of Debt and Equity Financing Download Bally's New York Casino - Demonstrating Ability to Finance the Project - Legal Actions A Download Bally's New York Casino - Demonstrating Ability to Finance the Project - Legal Actions B Download Bally's New York Casino -",
+      "start": 11007,
+      "end": 11704
+    },
+    {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "title": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "excerpt": "Demonstrating Ability to Finance the Project – Bankruptcies A Download Bally's New York Casino - Demonstrating Ability to Finance the Project – Bankruptcies B Download Bally's New York Casino - Demonstrating Ability to Finance the Project - Contract Breaches A Download Bally's New York Casino - Demonstrating Ability to Finance the Project - Contract Breaches B Download Bally's New York Casino - Demonstrating Ability to Finance the Project - Tax Delinquencies A Download Bally's New York Casino - Demonstrating Ability to Finance the Project - Tax Delinquencies B Download Bally's New York Casino - Demonstrating Ability to Finance the Project - Financial Commitments and Guarantees Download",
+      "start": 11705,
+      "end": 12399
+    },
+    {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "title": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "excerpt": "for public review, with redactions of language exempt from disclosure pursuant to New York State’s Freedom of Information Law (FOIL).” ...",
+      "start": 698,
+      "end": 836
+    },
+    {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "title": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "excerpt": "Ability to Finance the Project - Financing Source Details Download Bally's New York Casino - Demonstrating Ability to Finance the Project - Financing Source Details - BALY Download Bally's New York Casino - Demonstrating Ability to Finance the Project - Financing Source Details - GLPI Download Bally's New York Casino - Demonstrating Ability to Finance the Project - How the Project Will Be Financed Download Bally's New York Casino - Demonstrating Ability to Finance the Project - Pro Forma Financing Sources Download Bally's New York Casino - Demonstrating Ability to Finance the Project - Financing Plan for First 3 Years Download Bally's New York Casino - Demonstrating Ability to Finance the",
+      "start": 10309,
+      "end": 11006
+    },
+    {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "title": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "excerpt": "Facility of Highest Caliber - Table of Organization Download Bally's New York Casino - Gaming Facility of Highest Caliber - Layout Download Bally's New York Casino - Gaming Facility of Highest Caliber - Back of House Download Bally's New York Casino - Gaming Facility of Highest Caliber - Transportation and Parking Download Bally's New York Casino - Gaming Facility of Highest Caliber - Physical Plant and Mechanical Systems Download Bally's New York Casino - Highest and Best Value to Patrons to Create a Secure and Robust Gaming Market Download Bally's New York Casino - Site Location Benefits and Recapture Rate – Location Download Bally's New York Casino - Site Location Benefits and Recapture",
+      "start": 7044,
+      "end": 7742
+    },
+    {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "title": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "excerpt": "Impacts on Communities - Local Economic Impact Study - Housing Report Download Bally's New York Casino - Local Impact Siting - Mitigating Potential Impacts on Communities - Local Economic Impact Study - Housing Report - REVISED REDACTIONS Download Bally's New York Casino - Local Impact Siting - Mitigating Potential Impacts on Communities - Regional Economic Plan Download Bally's New York Casino - Local Impact Siting - Mitigating Potential Impacts on Communities - Measures to Mitigate Impact on Underserved Communities Download Bally's New York Casino - Local Impact Siting - Full Diversified Regional Tourism - Plans for Promoting Local Businesses Download Bally's New York Casino - Local",
+      "start": 13791,
+      "end": 14484
+    },
+    {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "title": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "excerpt": "York Casino - Workforce Enhancement - Sustainable Development Principals - Water Download Bally's New York Casino - Workforce Enhancement - Sustainable Development Principals - Energy Star Download Bally's New York Casino - Workforce Enhancement - Sustainable Development Principals - Electricity Download Bally's New York Casino - Workforce Enhancement - Sustainable Development Principals - Energy Consumption and Efficiency Download Bally's New York Casino - Workforce Enhancement - Development of a Skilled and Diverse Workforce Download Bally's New York Casino - Workforce Enhancement - Domestically Manufactured Slot Machines Download Bally's New York Casino - Workforce Enhancement -",
+      "start": 15881,
+      "end": 16571
+    },
+    {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "title": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "excerpt": "Organizational Document - Voting Trust Download Bally's New York Casino - Organizational Document - Stockholder Agreement Download Requirements Before Board Review Economic Activity and Business Development Bally's New York Casino - Capital Investment Details Download Bally's New York Casino - Maximizing State and Local Revenues Download Bally's New York Casino - Providing Highest Number of Quality Jobs - Staffing Cases Download Bally's New York Casino - Providing Highest Number of Quality Jobs Download Bally's New York Casino - Gaming Facility of Highest Caliber With a Variety of Quality Amenities Download Bally's New York Casino - Gaming Facility of Highest Caliber - Hotel Download",
+      "start": 5652,
+      "end": 6344
+    }
+  ],
+  "selection": {
+    "findings": [
+      {
+        "id": "W5",
+        "claim": "The Ferry Point Park enhancements tied to Bally’s proposal are still being finalized through negotiations with city departments as part of the final conveyance agreement.",
+        "quote": "The enhancements to Ferry Point Park are currently being finalized as part of the negotiation with the various city departments in conjunction with the final conveyance agreement."
+      },
+      {
+        "id": "W5",
+        "claim": "Conceptual Ferry Point Park improvements under the Bally’s proposal have included improving pedestrian access, bike paths and walkways, new walking paths to the existing 9/11 memorial, and improvements to existing playing fields.",
+        "quote": "Conceptually, however, some improvements have included discussions around improving pedestrian access, bike paths and walkways, new walking paths to connect to the existing 9/11 memorial and the improvement of existing playing feels that need to be improved."
+      },
+      {
+        "id": "W7",
+        "claim": "The specific improvements to the Ferry Point walking path under the Bally’s project remain subject to ongoing negotiations with City and State agencies.",
+        "quote": "The specific improvements to the Ferry Point walking path are still subject to on-going negotiations with City and State agencies."
+      },
+      {
+        "id": "W8",
+        "claim": "Bally’s states that its proposal includes ongoing bus service from the neighborhood to the ferry terminal.",
+        "quote": "These include local meetings with stakeholder groups, ongoing bus service from the neighborhood to the ferry terminal, incorporating a police substation, and minimizing the height and visibility of the building structure."
+      }
+    ]
+  },
+  "additions": [
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "quote": "The enhancements to Ferry Point Park are currently being finalized as part of the negotiation with the various city departments in conjunction with the final conveyance agreement.",
+      "claim": "The Ferry Point Park enhancements tied to Bally’s proposal are still being finalized through negotiations with city departments as part of the final conveyance agreement.",
+      "start": 10129,
+      "end": 10308
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "quote": "Conceptually, however, some improvements have included discussions around improving pedestrian access, bike paths and walkways, new walking paths to connect to the existing 9/11 memorial and the improvement of existing playing feels that need to be improved.",
+      "claim": "Conceptual Ferry Point Park improvements under the Bally’s proposal have included improving pedestrian access, bike paths and walkways, new walking paths to the existing 9/11 memorial, and improvements to existing playing fields.",
+      "start": 10309,
+      "end": 10567
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "quote": "The specific improvements to the Ferry Point walking path are still subject to on-going negotiations with City and State agencies.",
+      "claim": "The specific improvements to the Ferry Point walking path under the Bally’s project remain subject to ongoing negotiations with City and State agencies.",
+      "start": 11239,
+      "end": 11369
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "quote": "These include local meetings with stakeholder groups, ongoing bus service from the neighborhood to the ferry terminal, incorporating a police substation, and minimizing the height and visibility of the building structure.",
+      "claim": "Bally’s states that its proposal includes ongoing bus service from the neighborhood to the ferry terminal.",
+      "start": 12798,
+      "end": 13019
+    }
+  ]
+}

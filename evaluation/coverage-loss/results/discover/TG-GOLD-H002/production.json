@@ -1,0 +1,351 @@
+{
+  "arm": "discover",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 7.609000000054948,
+      "request_id": "req_500544351abd46908169944ec62c2316",
+      "usage": {
+        "input_tokens": 14412,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 4608
+        },
+        "output_tokens": 655,
+        "output_tokens_details": {
+          "reasoning_tokens": 154
+        },
+        "total_tokens": 15067
+      },
+      "search_enabled": true,
+      "web_search_ids": [
+        "ws_0a84af6ec4853458016b02c270df7887d2bacb481034db90ab",
+        "ws_0a84af6ec4853458016b02c272dc7c87d2961002f2aca9db92"
+      ],
+      "stop_reason": "completed",
+      "web_search_statuses": [
+        "completed",
+        "completed"
+      ]
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 4.125,
+      "request_id": "req_174a6b86692d47eca95da3a732ed1304",
+      "usage": {
+        "input_tokens": 4296,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 393,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4689
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "documents": [
+    {
+      "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "status": "TimeoutError",
+      "characters": 0,
+      "sha256": null
+    },
+    {
+      "url": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+      "status": "readable",
+      "characters": 4890,
+      "sha256": "705116e39baf82859b2595378259645242e66a61bfc7ada81041d306e922eaf1"
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "status": "readable",
+      "characters": 23053,
+      "sha256": "1c45927c89aa5069e3121ca910d06f2601d5f157188a74e90b8e407e82dfb75c"
+    }
+  ],
+  "search": {
+    "stop": "SUFFICIENT",
+    "proposals": [
+      {
+        "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+        "quote": "Bally’s will make an annual contribution of 1 percent of gross gaming revenue, with a minimum of $15 million, to a Community Benefits Fund from the time the gaming facility opens, with the Fund to be administered by an independent board representing local communities and organizations."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+        "quote": "In addition, the Bronx Benefit Fund will contribute 1 percent of gaming revenues with a minimum floor of $15 million annually"
+      },
+      {
+        "url": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+        "quote": "BENEFIT Bronx Benefit Fund | DESCRIPTION Directors Appointed by Local Elected Officials and Bronx Community Board #10 to allocate amongst: ▪ Local Schools/PTA Funds ▪ NYCHA/ Community Housing ▪ Bronx Community Organizations with an emphasis on youth sports – Throggs Neck Little League, Pelham Bay Little League, Co-Op City Little League, AFC Rapid Soccer, etc."
+      },
+      {
+        "url": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+        "quote": "ESTIMATED IMPACT 1% of Gross Gaming Revenues or 3% of Net Operating Profits $10 million per annum Minimum Commitment $200 million net present value"
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+        "quote": "The expectation is that Board appointees by local public servants elected by the community will work collaboratively with the Community Board and City agencies on any necessary approvals or reviews required in order to make any investments as contemplated by the Board of the Community Benefit Fund."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+        "quote": "Funds will be backstopped by gaming revenues from the gaming facility licensee, as direct annual payment from the gaming facility to the Community Benefit fund."
+      }
+    ],
+    "located": {
+      "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+      "https://www.bxtimes.com/ballys-casino-boosts-investment-offer/": "https://www.bxtimes.com/ballys-casino-boosts-investment-offer/",
+      "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000108/baly-20260930.htm": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000108/baly-20260930.htm",
+      "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000084/baly-20260630.htm": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000084/baly-20260630.htm",
+      "https://lavocedinewyork.com/en/new-york/2025/09/29/ballys-bronx-sails-through-the-coney-sinks-in-final-casino-approval-hearings/": "https://lavocedinewyork.com/en/new-york/2025/09/29/ballys-bronx-sails-through-the-coney-sinks-in-final-casino-approval-hearings/",
+      "https://nycasinos.ny.gov/ballys-bronx-application-materials": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "https://www.casinoreports.com/news/nyc-casinos-bally-cac-amendments/": "https://www.casinoreports.com/news/nyc-casinos-bally-cac-amendments/",
+      "https://www.bxtimes.com/ballys-casino-bid-passes-council-09292025/": "https://www.bxtimes.com/ballys-casino-bid-passes-council-09292025/",
+      "https://cdcgaming.com/brief/new-york-city-ballys-cac-proposes-amendments-for-bronx-casino-application/": "https://cdcgaming.com/brief/new-york-city-ballys-cac-proposes-amendments-for-bronx-casino-application/",
+      "https://www.youtube.com/watch?v=sPuqjvUDL3w": "https://www.youtube.com/watch?v=sPuqjvUDL3w",
+      "https://www.youtube.com/watch?v=_RZWvgvW7rg": "https://www.youtube.com/watch?v=_RZWvgvW7rg",
+      "https://apnews.com/article/a804d9bf7a83c90cbbd2226d38ab102d": "https://apnews.com/article/a804d9bf7a83c90cbbd2226d38ab102d",
+      "https://www.axios.com/2025/12/01/new-york-city-casinos-steve-cohen-mets": "https://www.axios.com/2025/12/01/new-york-city-casinos-steve-cohen-mets",
+      "https://apnews.com/article/4ad140651214d5a412c8bf04a7dbbd40": "https://apnews.com/article/4ad140651214d5a412c8bf04a7dbbd40",
+      "https://apnews.com/article/252cc3bafd1b097adf7a8afd516f1859": "https://apnews.com/article/252cc3bafd1b097adf7a8afd516f1859"
+    },
+    "requested_actions": 2
+  },
+  "shortlist": [
+    {
+      "url": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+      "title": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+      "excerpt": "Bronx Benefit Fund Directors Appointed by Local Elected Officials and Bronx Community Board #10 to allocate amongst: ▪ Local Schools/PTA Funds ▪ NYCHA/ Community Housing ▪ Bronx Community Organizations with an emphasis on youth sports – Throggs Neck Little League, Pelham Bay Little League, Co-Op City Little League, AFC Rapid Soccer, etc.",
+      "start": 806,
+      "end": 1145
+    },
+    {
+      "url": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+      "title": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+      "excerpt": "4 COMMUNITY BENEFITS – CONTINUED BENEFIT DESCRIPTION ESTIMATED IMPACT Workforce Development ▪ Community Prioritized Hiring ▪ Pre-Apprentice Programs ▪ Coordination with Bronx Educational Institutions ▪ Childcare Services Ongoing Contributions of $60 million net present value Local Support ▪ Local Sourcing & Contracting Goals ▪ “Made in the Bronx” Store ▪ Youth Engagement Programs ▪ Open Facilities for Local Non-Profits ▪ Create / Hire a local Community Engagement Office who will actively participate with the Community Board Office & bring expertise to help solve local issues beyond just those that directly affect the Bronx Integrated Resort Ongoing Contributions of $40 million net present",
+      "start": 2451,
+      "end": 3148
+    },
+    {
+      "url": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+      "title": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+      "excerpt": "▪ Mental Health & Substance Abuse Fund ▪ BronxNet Fund 1% of Gross Gaming Revenues or 3% of Net Operating Profits $10 million per annum Minimum Commitment $200 million net present value © 2025 Bally's Corporation. All rights reserved.",
+      "start": 1146,
+      "end": 1380
+    },
+    {
+      "url": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+      "title": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+      "excerpt": "3 COMMUNITY BENEFITS – CONTINUED BENEFIT DESCRIPTION ESTIMATED IMPACT Traffic & Transit Improvements[1] ▪ New Lafayette Ave Overpass ▪ Ferry Point Ring Road Rebuilt ▪ Added MTA Bus Stops ▪ Expanded Shuttle Services ▪ Parking Accommodations at Bally’s $75 million Upfront Capital Improvements plus Ongoing Contributions of $60 million net present value Parkland Improvements[1] ▪ Improved Access, Parking & Facilities at Ferry Point Park ▪ Pedestrian & Bicycle Safety Improvements ▪ Assume Certain Maintenance Obligations from NYC Parks with a priority on facilities within Bronx Community Board #10 ▪ Summer Concert Series $100 million Upfront Capital Improvements plus Ongoing Contributions of $20",
+      "start": 1381,
+      "end": 2079
+    },
+    {
+      "url": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+      "title": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+      "excerpt": "2 COMMUNITY BENEFITS BENEFIT DESCRIPTION ESTIMATED IMPACT Project Scope ▪ Largest Private Development in the History of the Borough ▪ 15,000+ Construction Jobs ▪ 4,000+ Permanent Jobs ▪ Unionized Benefits ▪ Property, Sales & Hotel Taxes Approximately $4 billion Capital Investment Massive Direct & Indirect Economic Impact to New York City Community Investment Program ▪ Bronx Residents will have opportunity to purchase equity interest in the Bronx Integrated Resort ▪ Modelled after our Chicago Program including non-recourse financing Up to 9% of project equity will be offered in this form, allowing for thousands of individual investors to participate Creating Generational Wealth Opportunities",
+      "start": 106,
+      "end": 805
+    },
+    {
+      "url": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+      "title": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+      "excerpt": "8 PARKLAND ALIENATION ▪ Project proposes to purchase the development site that includes approximately 18.5 acres of NYC parkland which currently includes: the parking area, existing clubhouse, and a portion of the practice area ▪ The parking area, clubhouse and practice area to be rebuilt to the highest standards approved by NYC Parks and Nicklaus Golf within the remaining park (clubhouse and practice area) and within the development site (parking area) ▪ A fair market valuation of the development site land will determine the ultimate value for replacement cost (not acre for acre) based on the proposed C8-4 zoning district (commercial use only) ▪ Replacement cost will be offset by (1)",
+      "start": 3786,
+      "end": 4479
+    },
+    {
+      "url": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+      "title": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+      "excerpt": "acquiring replacement parkland and (2) improving existing parkland within the community and borough in collaboration with community members and officials ▪ The process requires state legislative approval, a home rule message from the City Council, and the governor's signature ▪ Legislation to be introduced in January 2025 with the goal of completing the process by the first quarter of 2025 BETS ON THE BRONX",
+      "start": 4480,
+      "end": 4890
+    },
+    {
+      "url": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+      "title": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+      "excerpt": "value Total Enumerated Community Benefits $625 million net present value excluding Direct Project Scope Impact and excluding Community Investment Program APPENDIX © 2025 Bally's Corporation.",
+      "start": 3149,
+      "end": 3339
+    },
+    {
+      "url": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+      "title": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+      "excerpt": "million net present value Public Safety Enhancements ▪ Additional NYPD substations in neighboring communities ▪ Supplemental Funding for Public Safety $10 million Upfront Capital Improvements plus Ongoing Contributions of $60 million net present value [1] Illustrative rendered views of improvements included on pages 6-7 © 2025 Bally's Corporation.",
+      "start": 2080,
+      "end": 2429
+    },
+    {
+      "url": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+      "title": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+      "excerpt": "COMMUNITY BENEFITS PROPOSAL BETS ON THE BRONX March 2025 © 2025 Bally's Corporation. All rights reserved.",
+      "start": 0,
+      "end": 105
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "excerpt": "The expectation is that Board appointees by local public servants elected by the community will work collaboratively with the Community Board and City agencies on any necessary approvals or reviews required in order to make any investments as contemplated by the Board of the Community Benefit Fund.",
+      "start": 5672,
+      "end": 5971
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "excerpt": "Funds will be backstopped by gaming revenues from the gaming facility licensee, as direct annual payment from the gaming facility to the Community Benefit fund.",
+      "start": 6201,
+      "end": 6361
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "excerpt": "d) How will the fund interact with the Community Board and City agencies? The expectation is that Board appointees by local public servants elected by the community will work collaboratively with the Community Board and City agencies on any necessary approvals or reviews required in order to make any investments as contemplated by the Board of the Community Benefit Fund.",
+      "start": 5598,
+      "end": 5971
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "excerpt": "Regarding the Community Investments Program discussed at public meetings: a) How will the community benefits be governed? A Board of Directors (“Board”) who will be appointed by our four local elected officials (Borrough President, Senator, Assembly Member and Council Member) will have the ability to allocate the 3 benefit funds as required.",
+      "start": 4915,
+      "end": 5258
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "excerpt": "Funds will be backstopped by gaming revenues from the gaming facility licensee, as direct annual payment from the gaming facility to the Community Benefit fund. f) What as-of-right investments have you identified for the Community Investment Fund, if any?",
+      "start": 6201,
+      "end": 6456
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "excerpt": "1 Bally’s Bronx Community Advisory Committee Q&A with Bally’s August 6, 2025 Financials 1. The capital stack includes five sources of equity: equity issuance, free cash flow, cash reserves, draws on an existing credit facility, and $735M in sale-leaseback proceeds.",
+      "start": 0,
+      "end": 265
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "excerpt": "The project is being designed with a minimum standard of LEED Gold. It has been designed to accommodate the higher 2100 flood and surge requirements with a ground floor elevation of approximately 35’ above sea level, and the basement floor at 15.1’ which is above the projected surge level.",
+      "start": 11548,
+      "end": 11838
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "excerpt": "These include local meetings with stakeholder groups, ongoing bus service from the neighborhood to the ferry terminal, incorporating a police substation, and minimizing the height and visibility of the building structure. In addition, our proposal includes a community funding commitment, through which Bally’s will support local initiatives and projects.",
+      "start": 12798,
+      "end": 13153
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "excerpt": "Given our proposed capital commitments from GLPI, total equity for this project will be less than $1.5 billion. We could potentially sell $750 million, both in the form of the community investment 2 program – like Chicago outlined above, and the remainder through private placements.",
+      "start": 2498,
+      "end": 2781
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "excerpt": "Currently much of our free cash flow is going into constructing Chicago, which upon completion, will generate more than $100 million of additional free cash flow per annum. Relative to equity sales, as exemplified by our Chicago project, our approach is to undertake these financings as we begin to fund our equity into the project in order to provide ability for local Bronx and NYC residents to partake in the offering.",
+      "start": 1811,
+      "end": 2232
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "excerpt": "Note that we already have interested parties that wish to put more than $1 billion into the project today. Additionally, as a publicly traded company, we have the ability to sell equity in the parent Bally’s Corporation as an additional means of funding.",
+      "start": 2782,
+      "end": 3036
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "excerpt": "Water conservation features may also be incorporated as part of sustainable site design, but there is no indication at this time that an independent, on-site wastewater (sewage) treatment plant will be constructed at the project site. Sanitary wastewater from restrooms, concessions, and other facilities will continue to be managed through the City’s existing combined sewer infrastructure.",
+      "start": 22066,
+      "end": 22457
+    }
+  ],
+  "selection": {
+    "findings": [
+      {
+        "id": "W14",
+        "claim": "Bally’s said the Community Benefit Fund would be governed by a Board of Directors appointed by four local elected officials: the Borough President, Senator, Assembly Member, and Council Member.",
+        "quote": "A Board of Directors (“Board”) who will be appointed by our four local elected officials (Borrough President, Senator, Assembly Member and Council Member) will have the ability to allocate the 3 benefit funds as required."
+      },
+      {
+        "id": "W12",
+        "claim": "Bally’s said the Community Benefit Fund would receive direct annual payments from the gaming facility, backstopped by gaming revenues from the licensee.",
+        "quote": "Funds will be backstopped by gaming revenues from the gaming facility licensee, as direct annual payment from the gaming facility to the Community Benefit fund."
+      },
+      {
+        "id": "W11",
+        "claim": "Bally’s said appointees to the Community Benefit Fund board are expected to work with the Community Board and City agencies on approvals or reviews needed for investments.",
+        "quote": "The expectation is that Board appointees by local public servants elected by the community will work collaboratively with the Community Board and City agencies on any necessary approvals or reviews required in order to make any investments as contemplated by the Board of the Community Benefit Fund."
+      },
+      {
+        "id": "W1",
+        "claim": "Bally’s community benefits document says Bronx Benefit Fund directors appointed by local elected officials and Bronx Community Board #10 would allocate money among local schools/PTA funds, NYCHA and community housing, and Bronx community organizations.",
+        "quote": "Bronx Benefit Fund Directors Appointed by Local Elected Officials and Bronx Community Board #10 to allocate amongst: ▪ Local Schools/PTA Funds ▪ NYCHA/ Community Housing ▪ Bronx Community Organizations with an emphasis on youth sports – Throggs Neck Little League, Pelham Bay Little League, Co-Op City Little League, AFC Rapid Soccer, etc."
+      }
+    ]
+  },
+  "additions": [
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "quote": "A Board of Directors (“Board”) who will be appointed by our four local elected officials (Borrough President, Senator, Assembly Member and Council Member) will have the ability to allocate the 3 benefit funds as required.",
+      "claim": "Bally’s said the Community Benefit Fund would be governed by a Board of Directors appointed by four local elected officials: the Borough President, Senator, Assembly Member, and Council Member.",
+      "start": 5037,
+      "end": 5258
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "quote": "Funds will be backstopped by gaming revenues from the gaming facility licensee, as direct annual payment from the gaming facility to the Community Benefit fund.",
+      "claim": "Bally’s said the Community Benefit Fund would receive direct annual payments from the gaming facility, backstopped by gaming revenues from the licensee.",
+      "start": 6201,
+      "end": 6361
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "quote": "The expectation is that Board appointees by local public servants elected by the community will work collaboratively with the Community Board and City agencies on any necessary approvals or reviews required in order to make any investments as contemplated by the Board of the Community Benefit Fund.",
+      "claim": "Bally’s said appointees to the Community Benefit Fund board are expected to work with the Community Board and City agencies on approvals or reviews needed for investments.",
+      "start": 5672,
+      "end": 5971
+    },
+    {
+      "url": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+      "title": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+      "quote": "Bronx Benefit Fund Directors Appointed by Local Elected Officials and Bronx Community Board #10 to allocate amongst: ▪ Local Schools/PTA Funds ▪ NYCHA/ Community Housing ▪ Bronx Community Organizations with an emphasis on youth sports – Throggs Neck Little League, Pelham Bay Little League, Co-Op City Little League, AFC Rapid Soccer, etc.",
+      "claim": "Bally’s community benefits document says Bronx Benefit Fund directors appointed by local elected officials and Bronx Community Board #10 would allocate money among local schools/PTA funds, NYCHA and community housing, and Bronx community organizations.",
+      "start": 806,
+      "end": 1145
+    }
+  ]
+}

@@ -1,0 +1,384 @@
+{
+  "arm": "discover",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 7.969000000040978,
+      "request_id": "req_85beb268e3c94c1591de93e53205ac07",
+      "usage": {
+        "input_tokens": 13913,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 4608
+        },
+        "output_tokens": 526,
+        "output_tokens_details": {
+          "reasoning_tokens": 192
+        },
+        "total_tokens": 14439
+      },
+      "search_enabled": true,
+      "web_search_ids": [
+        "ws_0a2af104478d5202016b02c2ab862087d2bcf67222b289a734",
+        "ws_0a2af104478d5202016b02c2ae2c5887d285ba35ad6341c542",
+        "ws_0a2af104478d5202016b02c2af05f487d29541a67b0690dfcc"
+      ],
+      "stop_reason": "completed",
+      "web_search_statuses": [
+        "completed",
+        "completed",
+        "searching"
+      ]
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 1.797000000020489,
+      "request_id": "req_9699093317a5472f9dc42e920a1f1836",
+      "usage": {
+        "input_tokens": 5274,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 126,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 5400
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "documents": [
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "status": "readable",
+      "characters": 36732,
+      "sha256": "4356ade1a7e0af75f812fa3178dfedf285efee5c83207207e65bab80fd59300b"
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-12-2025",
+      "status": "readable",
+      "characters": 31503,
+      "sha256": "279959cdb860744d9cf1cc3b47a719682ff45e1521d38623820f203275146ac9"
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "status": "readable",
+      "characters": 23645,
+      "sha256": "9bcc90e56ae7aa1107a305627ebddce1bd1b04b5d89ee837bd5a973c4cbeacfc"
+    }
+  ],
+  "search": {
+    "stop": "SUFFICIENT",
+    "proposals": [
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+        "quote": "As further evidence of working with local businesses, Hard Rock Metropolitan Park has committed $25 million to developing and implementing a small business lending program. This program will assist small businesses in receiving loans and reducing lender risk, ultimately maximizing the potential for success for small businesses in the surrounding communities."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+        "quote": "The Board views HRMP’s $25 million commitment to a small-business lender program - supporting MWBE firms - and its partnership with McKissack & McKissack, expected to be part of the ownership group, as a strength.⁸"
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+        "quote": "We also provide technical assistance to help businesses gain MWBE certification and are backing this work with a $25 million MWBE lending program."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-12-2025",
+        "quote": "We have already launched MWBE capacity-building efforts, including two contracting sessions at Citi Field, a $25 million lending program to expand capital access, and robust prequalification processes."
+      }
+    ],
+    "located": {
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-12-2025": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-12-2025",
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "https://nycasinos.ny.gov/metropolitan-park-application-materials": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "https://gaming.ny.gov/node/11656": "https://gaming.ny.gov/node/11656",
+      "https://www.metropolitanpark.com/fund": "https://www.metropolitanpark.com/fund",
+      "https://nycasinos.ny.gov/resorts-world-new-york-city-application-materials": "https://nycasinos.ny.gov/resorts-world-new-york-city-application-materials",
+      "https://www.metropolitanpark.com/vendor": "https://www.metropolitanpark.com/vendor",
+      "https://www.metropolitanpark.com/preview": "https://www.metropolitanpark.com/preview",
+      "https://www.metropolitanpark.com/": "https://www.metropolitanpark.com/",
+      "https://nycasinos.ny.gov/caesars-palace-times-square-application-materials": "https://nycasinos.ny.gov/caesars-palace-times-square-application-materials",
+      "https://www.metropolitanpark.com/benefits": "https://www.metropolitanpark.com/benefits"
+    },
+    "requested_actions": 2
+  },
+  "shortlist": [
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "excerpt": "As further evidence of working with local businesses, Hard Rock Metropolitan Park has committed $25 million to developing and implementing a small business lending program. This program will assist small businesses in receiving loans and reducing lender risk, ultimately maximizing the potential for success for small businesses in the surrounding communities.",
+      "start": 9615,
+      "end": 9975
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "excerpt": "As further evidence of working with local businesses, Hard Rock Metropolitan Park has committed $25 million to developing and implementing a small business lending program. This program will assist small businesses in receiving loans and reducing lender risk, ultimately maximizing the potential for success for small businesses in the surrounding communities.",
+      "start": 9615,
+      "end": 9975
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "excerpt": "During the holidays, this will be lit up with holiday lights and will feature local, homemade holiday gifts. As further evidence of working with local businesses, Hard Rock Metropolitan Park has committed $25 million to developing and implementing a small business lending program.",
+      "start": 9506,
+      "end": 9787
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "excerpt": "This program will assist small businesses in receiving loans and reducing lender risk, ultimately maximizing the potential for success for small businesses in the surrounding communities. Hard Rock Metropolitan Park will take the below approach to assist New York State vendors in identifying the need for goods and services to be provided at Hard Rock.",
+      "start": 9788,
+      "end": 10141
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "excerpt": "Additionally, Hard Rock Metropolitan Park is launching an MWBE certification program in partnership with the Queens Economic Development Corporation and Queens Chamber of Commerce. Becoming a certified minority or woman owned business enterprise can be a daunting task.",
+      "start": 5737,
+      "end": 6006
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "excerpt": "Through workshops offered to local minority and women owned businesses, the program will make the process more approachable by providing business owners the knowledge and tools necessary to complete the New York City and New York State certification processes. Becoming MWBE certified can be a boon for these businesses, opening better bid access for government contracts, creating opportunities for one-on-one procurement counseling and providing free advertising in the New York State or New York City MWBE online directory.",
+      "start": 6007,
+      "end": 6533
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "excerpt": "Hard Rock Metropolitan Park has always and will continue to be committed to providing an environment where diverse local suppliers have an equal opportunity to compete for our business. Hard Rock's Preferred Vendor Status Program actively promotes inclusion of diverse local suppliers by extending opportunities that are exclusive to local diverse vendors and provides equal opportunity to qualified businesses.",
+      "start": 1355,
+      "end": 1766
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "excerpt": "JUNE 25, 2025 HARD ROCK AT METROPOLITAN PARK 16 EV ALLOC6.HARDROCK.LOCALBUSINESS Dorandy Mercado/Mercado Art Studio - Hallandale Beach, Florida My relationship with the Hard Rock began years before I opened my small business. I began working at the Hard Rock when I was a college art student.",
+      "start": 35488,
+      "end": 35780
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "excerpt": "E. Certification • Any vendor claiming to be a Local Vendor Entity described above shall deliver a written affidavit or other required documentation supporting the claim to local status to the Purchasing Department.",
+      "start": 14976,
+      "end": 15191
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "excerpt": "LOCAL BUSINESS EvalLoc6.HardRock.LocalBusiness JUNE 25, 2025 HARD ROCK AT METROPOLITAN PARK 1 EV ALLOC6.HARDROCK.LOCALBUSINESS A description of plans for contracting with local business owners for provision of goods and services to the Gaming Facility, including developing plans designed to assist businesses in the State in identifying the needs for goods and services to the Gaming Facility. Hard Rock Metropolitan Park is committed to strengthening the community it serves by ensuring that we have a positive, mutually beneficial impact on the local community and the state of New York.",
+      "start": 0,
+      "end": 590
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "excerpt": "I look forward to growing with the Hard Rock brand as a valued partner. Robert Brown President/Owner JUNE 25, 2025 HARD ROCK AT METROPOLITAN PARK 15 EV ALLOC6.HARDROCK.LOCALBUSINESS Mercado Art Studio - Hallandale, FL After three years of working for the local ceramic’s studio, I went on to open my own small business in 2015, Mercado Art Studio, a ceramic studio based in Hallandale, FL.",
+      "start": 30765,
+      "end": 31154
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-12-2025",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-12-2025",
+      "excerpt": "We have already launched MWBE capacity-building efforts, including two contracting sessions at Citi Field, a $25 million lending program to expand capital access, and robust prequalification processes.",
+      "start": 18294,
+      "end": 18495
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-12-2025",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-12-2025",
+      "excerpt": "We have already launched MWBE capacity-building efforts, including two contracting sessions at Citi Field, a $25 million lending program to expand capital access, and robust prequalification processes. These initiatives go further than any other project.",
+      "start": 18294,
+      "end": 18548
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-12-2025",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-12-2025",
+      "excerpt": "From the outset, HRMP committed more resources, partnerships, and direct investments into the neighborhoods of Queens than any other project in this competitive process. Our $163 million Community Impact Fund, an additional $25 million in neighborhood facilities, and millions more in philanthropic commitments ensure that local organizations, cultural institutions, small businesses, and families see direct and lasting benefits from HRMP .",
+      "start": 337,
+      "end": 778
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-12-2025",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-12-2025",
+      "excerpt": "There is another $25 million dedicated to three neighborhood projects: East Elmhurst health clinic, Corona/Jackson Heights senior/youth center, and Flushing addiction services. There are also individual philanthropic commitments totaling approximately $2 million for items including capital improvements at Hinton Park, capital improvements to six Little League facilities, a financial literacy program, and a STEM scholarship program.",
+      "start": 4407,
+      "end": 4842
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-12-2025",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-12-2025",
+      "excerpt": "Our $163 million Community Impact Fund, an additional $25 million in neighborhood facilities, and millions more in philanthropic commitments ensure that local organizations, cultural institutions, small businesses, and families see direct and lasting benefits from HRMP . These investments are paired with major public infrastructure—25 acres of new parks, a renovated 7-train station, new bike and pedestrian connections, and a climate-resilient design—that will all be delivered at the time of opening.",
+      "start": 507,
+      "end": 1011
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-12-2025",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-12-2025",
+      "excerpt": "Conclusion: HRMP has gone further than any other proposal in New York when it comes to community benefits, infrastructure investment, and local partnerships. From a $163 million Community Impact Fund and $25 million in neighborhood facilities, to 25 acres of new parkland, a fully renovated 7- train station, and thousands of local jobs, our commitments are unmatched in scope, scale, and accountability.",
+      "start": 29531,
+      "end": 29935
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-12-2025",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-12-2025",
+      "excerpt": "Every element of our community benefits package—from youth and senior centers, to workforce pipelines, to new green space and cultural programming—comes directly from what we heard in countless meetings with residents, small business owners, unions, and civic organizations. That is why HRMP has garnered overwhelming support from local residents, community leaders, organized labor, small businesses, and elected officials alike.",
+      "start": 2742,
+      "end": 3172
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-12-2025",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-12-2025",
+      "excerpt": "From a $163 million Community Impact Fund and $25 million in neighborhood facilities, to 25 acres of new parkland, a fully renovated 7- train station, and thousands of local jobs, our commitments are unmatched in scope, scale, and accountability. These benefits are not abstract promises—they are binding obligations built into the license, designed with the community, and structured to deliver results year after year.",
+      "start": 29689,
+      "end": 30109
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-12-2025",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-12-2025",
+      "excerpt": "To further promote equal employment opportunities, HRMP developed an Equal Opportunity Program (“EO Program”). More information regarding the EO Program can be found in EvalDiv5.HardRock.EqualOpportunity.",
+      "start": 14159,
+      "end": 14363
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-12-2025",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-12-2025",
+      "excerpt": "By supporting this project, Queens and New York State will secure once-in-a-generation investment that delivers for the community today and for decades to come.",
+      "start": 31343,
+      "end": 31503
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-12-2025",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-12-2025",
+      "excerpt": "At the same time, major infrastructure investments—25 acres of new parks, a renovated 7-train station, new bike and pedestrian connections, the Taste of Queens food hall, and a climate-resilient infrastructure—will all be delivered on opening day, providing clear value to the community before the doors to the Integrated Resort even open ahead of commencing regular gaming operations. There is another $25 million dedicated to three neighborhood projects: East Elmhurst health clinic, Corona/Jackson Heights senior/youth center, and Flushing addiction services.",
+      "start": 4021,
+      "end": 4583
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "Opportunities Download Metropolitan Park - Diversity Framework - Current and Planned Diversity Efforts - MWBE Construction Goals Download Metropolitan Park - Diversity Framework - Current and Planned Diversity Efforts - MWBE Contracts Download Metropolitan Park - Diversity Framework - Current and Planned Diversity Efforts - MWBE Partnerships Download Metropolitan Park - Diversity Framework - Current and Planned Diversity Efforts - Diversity Business Model Download Metropolitan Park - Diversity Framework - Current and Planned Diversity Efforts - Recruitment Download Metropolitan Park - Diversity Framework - Current and Planned Diversity Efforts - Professional Development Download Scroll back",
+      "start": 22835,
+      "end": 23534
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "Metropolitan Park - Organizational Chart - Attachment 1 Download Metropolitan Park - Organizational Chart - Attachment 1 - REVISED REDACTIONS Download Metropolitan Park - Directors and Officers Download Metropolitan Park - Principal Resumes Download Metropolitan Park - Principal Resumes - Attachment 1 Download Metropolitan Park - Ownership and Other Interests Download Metropolitan Park - Ownership and Other Interests - Attachment 1 Download Metropolitan Park - Promoters, Sponsors and Others Download Metropolitan Park - Project Firms Download Metropolitan Park - Project Firms - Attachments 1-16 Download Metropolitan Park - Project Firms - Attachments 17-39 Download Metropolitan Park -",
+      "start": 6783,
+      "end": 7475
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "Robust Gaming Market Providing Highest Number of Quality Jobs - Attachment 1 Providing Highest Number of Quality Jobs - Attachment 2 Providing Highest Number of Quality Jobs - Attachment 3 Responses to GFLB Questions Metropolitan Park - Response to GFLB Questions - 10/21/25 Download Supplemental Material - October 14, 2025 Metropolitan Park - Supplement - Executive Summary Download Metropolitan Park - Supplement - Market Study Download Metropolitan Park - Supplement - Revenue Study Download Metropolitan Park - Supplement - State and Local Revenue Download Metropolitan Park - Supplement - State and Local Revenue - Excel Download Metropolitan Park - Supplement - Competitive 10 Years Download",
+      "start": 5394,
+      "end": 6092
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "on Communities - Measures to Mitigate Impact on Underserved Communities - Attachment 7 Local Impact Siting - Full Diversified Regional Tourism - Plans for Promoting Local Businesses Local Impact Siting - Full Diversified Regional Tourism - Plans for Promoting Local Businesses - Attachment 1 Local Impact Siting - Full Diversified Regional Tourism - Local Business Goods and Services Local Impact Siting - Full Diversified Regional Tourism - Local Business Goods and Services - Attachment 1 Workforce Enhancement - Workforce Table - Attachment 1 Workforce Enhancement - Problem Gambling Prevention Measures - Attachment 3 Workforce Enhancement - Problem Gambling Prevention Measures - Attachment 4",
+      "start": 3617,
+      "end": 4314
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "Facility of Highest Caliber - Back of House Download Metropolitan Park - Gaming Facility of Highest Caliber - Transportation and Parking Download Metropolitan Park - Gaming Facility of Highest Caliber - Physical Plant and Mechanical Systems Download Metropolitan Park - Highest and Best Value to Patrons to Create a Secure and Robust Gaming Market Download Hard Rock Metropolitan Park - Highest and Best Value to Patrons to Create a Secure and Robust Gaming Market - REVISED REDACTIONS Download Metropolitan Park - Site Location Benefits and Recapture Rate - Location Description Download Metropolitan Park - Site Location Benefits and Recapture Rate - Assessed Value Download Metropolitan Park -",
+      "start": 11650,
+      "end": 12346
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "Local Impact Siting - Full Diversified Regional Tourism - Plans for Promoting Local Businesses - Attachment 1 - REVISED REDACTIONS Download Metropolitan Park - Local Impact Siting - Full Diversified Regional Tourism - Local Business Goods and Services Download Hard Rock Metropolitan Park - Local Impact Siting - Full Diversified Regional Tourism - Local Business Goods and Services - REVISED REDACTIONS Download Hard Rock Metropolitan Park - Local Impact Siting - Full Diversified Regional Tourism - Local Business Goods and Services - Attachment 1 - REVISED REDACTIONS Download Metropolitan Park - Local Impact Siting - Full Diversified Regional Tourism - Local Agreements Download Metropolitan",
+      "start": 18663,
+      "end": 19359
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "The Commission procured the services of a FOIL counsel to review redactions to ensure they are appropriate, including the trade secret process outlined in POL § 89(5)(b). Updated records are being uploaded adjacent to (not replacing) existing redacted records on each project’s Application Materials page as they become available.",
+      "start": 1228,
+      "end": 1558
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "All determinations concerning whether Applications, Supplements and/or associated materials submitted in response to this RFA are subject to disclosure under FOIL will be made by the Board or the Commission, as applicable, in their sole discretion. The Commission procured the services of a FOIL counsel to review redactions to ensure they are appropriate, including the trade secret process outlined in POL § 89(5)(b).",
+      "start": 979,
+      "end": 1398
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "REVISED REDACTIONS Download Metropolitan Park - Gaming Facility of Highest Caliber - Retail, Recreation, Other Download Hard Rock Metropolitan Park - Gaming Facility of Highest Caliber - Retail, Recreation, Other - Attachment 3 - REVISED REDACTIONS Download Metropolitan Park - Gaming Facility of Highest Caliber - Comparison with Area Facilities Download Metropolitan Park - Gaming Facility of Highest Caliber - Hours of Operation Download Metropolitan Park - Gaming Facility of Highest Caliber - Player Database and Loyalty Program Download Metropolitan Park - Gaming Facility of Highest Caliber - Internal Controls Download Metropolitan Park - Gaming Facility of Highest Caliber - Table of",
+      "start": 10265,
+      "end": 10957
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "Park - Local Impact Siting - Full Diversified Regional Tourism - Cross Marketing Download Metropolitan Park - Local Impact Siting - Partnerships with Live Entertainment Venues Download Workforce Enhancement Metropolitan Park - Workforce Enhancement - Workforce Table Download Hard Rock Metropolitan Park - Workforce Enhancement - Workforce Table - Attachment 1 - REVISED REDACTIONS Download Metropolitan Park - Workforce Enhancement - Job Opportunities Download Metropolitan Park - Workforce Enhancement - MWBE Goals Download Metropolitan Park - Workforce Enhancement - Workforce Training Download Metropolitan Park - Workforce Enhancement - Problem Gambling Prevention Measures Download Hard Rock",
+      "start": 19360,
+      "end": 20057
+    }
+  ],
+  "selection": {
+    "findings": [
+      {
+        "id": "W1",
+        "claim": "Hard Rock Metropolitan Park said the $25 million commitment was to develop and implement a small business lending program.",
+        "quote": "Hard Rock Metropolitan Park has committed $25 million to developing and implementing a small business lending program."
+      },
+      {
+        "id": "W1",
+        "claim": "Hard Rock Metropolitan Park said the lending program would help small businesses receive loans and reduce lender risk for businesses in surrounding communities.",
+        "quote": "This program will assist small businesses in receiving loans and reducing lender risk, ultimately maximizing the potential for success for small businesses in the surrounding communities."
+      }
+    ]
+  },
+  "additions": [
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "quote": "Hard Rock Metropolitan Park has committed $25 million to developing and implementing a small business lending program.",
+      "claim": "Hard Rock Metropolitan Park said the $25 million commitment was to develop and implement a small business lending program.",
+      "start": 9669,
+      "end": 9787
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf",
+      "quote": "This program will assist small businesses in receiving loans and reducing lender risk, ultimately maximizing the potential for success for small businesses in the surrounding communities.",
+      "claim": "Hard Rock Metropolitan Park said the lending program would help small businesses receive loans and reduce lender risk for businesses in surrounding communities.",
+      "start": 9788,
+      "end": 9975
+    }
+  ]
+}

@@ -1,0 +1,296 @@
+{
+  "case_id": "TG-GOLD-A036",
+  "reference_sha256": "7341ae5ba96f477c389b541ec3a2549dfd9e8e682ffbde192a4e24f24ee93a4e",
+  "query": "Workforce housing investments are promised to begin 'in the immediate term'.",
+  "model": "gpt-5.4",
+  "web_search_model": "gpt-5.4",
+  "started_at": "2026-11-22T09:31:19.672890+00:00",
+  "outcome": "RESOLVED",
+  "graph": {
+    "commitment": {
+      "title": "Proposed immediate-term workforce housing investment start",
+      "description": "A new Resorts World NYC partnership proposed that it would begin investing in new workforce/affordable housing developments in the immediate term.",
+      "original_text": "The new partnership will begin investing in new housing developments in the immediate term. This landmark agreement with Cirrus, labor pension funds, and contractors will ensure there is affordable housing financed by, built by, and lived in by working- and middle-class families.",
+      "responsible_entity_raw": "The new partnership",
+      "beneficiary": {
+        "name": "working- and middle-class families",
+        "category": "families"
+      },
+      "obligation_type": "investment",
+      "amount_value": null,
+      "term_periodicity": "immediate term",
+      "geographic_scope": null,
+      "condition_contingency": null,
+      "milestone": "Begin investing in new housing developments",
+      "notes": "c1 describes affordable housing financed through a new partnership; the excerpt does not specify an amount, exact start date, or binding schedule.",
+      "id": "commitment-41f7cff3-dd64-45d7-a406-153731337bbc",
+      "original_promise": {
+        "document_id": null,
+        "source": {
+          "id": "source-e0e6c9b8-29d1-4c86-a772-83c4ea19479a",
+          "url": "https://nycasinos.ny.gov/resorts-world-new-york-city-local-impact-siting-mitigating-potential-impacts-communities-local-0",
+          "title": "https://nycasinos.ny.gov/resorts-world-new-york-city-local-impact-siting-mitigating-potential-impacts-communities-local-0",
+          "citation": "https://nycasinos.ny.gov/resorts-world-new-york-city-local-impact-siting-mitigating-potential-impacts-communities-local-0",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "locator": "Cited passage",
+        "char_start": null,
+        "char_end": null
+      }
+    },
+    "organization": {
+      "id": "org-b1ad081d-8b68-4384-9801-0df91a2d73b1",
+      "name": "Resorts World NYC"
+    },
+    "assessment": {
+      "label": "UNVERIFIED",
+      "verdict": "Delivery unverified for: Begin workforce/affordable housing investments",
+      "reasoning": "Requested scope: Workforce housing investments are promised to begin 'in the immediate term'.\n\nBegin workforce/affordable housing investments\nStatus: UNVERIFIED\nThe original commitment is documented in c1 and c2: the partnership \"will begin investing in new housing developments in the immediate term.\" Later evidence shows organizational steps and ongoing program claims: c2 says Resorts World NYC \"has officially formed a joint venture with Cirrus\"; c3 defines the partnership’s contemplated \"Investments\" in workforce housing in New York City and its suburbs; c4 says the initiative is \"funded through the Cirrus Workforce Housing Fund\" and is a partnership to deliver homes. These sources establish that a partnership/fund structure exists and that Resorts World reports an active initiative. But they do not directly show that the partnership actually began investing in any specific housing development, nor when any first investment occurred.\nPromised scope: Resorts World NYC, through a new partnership with Cirrus, labor pension funds, and contractors, promises to begin investing in new affordable/workforce housing developments. Intended beneficiaries are working- and middle-class families. Location in the cited promise is unspecified, though a related Resorts World NYC release describes projects across New York City’s five boroughs.\nObserved scope: Directly observed: Resorts World New York City is reported to have officially formed a joint venture with Cirrus, and partnership documents describe a vehicle for investments in workforce housing in New York City and its suburbs. Resorts World also reports a Workforce Housing Initiative funded through the Cirrus Workforce Housing Fund. However, the cited evidence does not identify any actual housing development investment that the partnership had already begun, nor any specific financed project or beneficiaries receiving housing.\nEvidence gap: Missing is direct evidence of commenced investments for this promised action and timing—for example, a dated statement that the partnership made its first investment(s), identified financed developments, or otherwise documented that investing had in fact begun in the promised immediate term.\nPromise evidence: c1, c2\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “The new partnership will begin investing in new housing developments in the immediate term. This landmark agreement with Cirrus, labor pension funds, and contractors will ensure there is affordable housing financed by, built by, and lived in by working- and middle-class families.”\nhttps://nycasinos.ny.gov/resorts-world-new-york-city-local-impact-siting-mitigating-potential-impacts-communities-local-0\n\nc2: “Resorts World New York City has officially formed a joint venture with Cirrus to invest in this housing commitment, which will focus on large-scale projects across the five boroughs. The new partnership will begin to invest in new housing developments in the immediate term.”\nhttps://rwnewyork.com/rws-next-chapter/resorts-world-new-york-city-cirrus-unveil-new-agreement-to-build-up-to-50000-units-of-workforce-housing/\n\nc3: ““Investments” means (i) co-investments by the Partnership with other investment vehicles and partnerships managed by the Management Company in the development and ownership of workforce housing in New York City and its suburbs (“Co-Investments”); (ii) investments by the Partnership alongside other Management Company anchor investors within the Management Company’s flagship funds in order to support further investments by these vehicles in the development and ownership of workforce housing in New York City and its suburbs”\nhttps://nycasinos.ny.gov/system/files/documents/2026/02/exhibit-175-rwnyc-cirrus-partnership-agreement_redacted.pdf\n\nc4: “Resorts World's Workforce Housing Initiative, funded through the Cirrus Workforce Housing Fund, is a landmark partnership with organized labor to deliver tens of thousands of new homes for working families across New York City.”\nhttps://rwnewyork.com/community/community-investments/workforce-housing/\n\nc5: “WHEREAS, the Parties desire to amplify both the actual and perceived scale and results of the RWNYC Impact Goals (the “Multiplier Effect”) and ultimate WFH creation via leveraging CWFHA’s WFH Investment pipeline, the CWFHA Coalition and CWFHA’s WFH investment expertise, and as such the Parties desire to enter into a long-term strategic joint venture (the “RCJV”) to:”\nhttps://nycasinos.ny.gov/system/files/documents/2026/02/exhibit-174-rwnyc-cirrus-mou_redacted.pdf",
+      "verification_date": "2026-11-22"
+    },
+    "findings": [
+      {
+        "id": "finding-f034b556-8e4a-4599-b218-76bbcfe82556",
+        "claim": "Resorts World NYC stated that it had formed a joint venture/partnership with Cirrus and related labor-backed partners to begin investing in new workforce or affordable housing developments in the immediate term, for working- and middle-class families, with projects focused across New York City and no quantified dollar amount stated.",
+        "supports": [
+          {
+            "id": "support-436cc973-1e15-4949-89a1-071b771291ee",
+            "source": {
+              "id": "source-e0e6c9b8-29d1-4c86-a772-83c4ea19479a",
+              "url": "https://nycasinos.ny.gov/resorts-world-new-york-city-local-impact-siting-mitigating-potential-impacts-communities-local-0",
+              "title": "https://nycasinos.ny.gov/resorts-world-new-york-city-local-impact-siting-mitigating-potential-impacts-communities-local-0",
+              "citation": "https://nycasinos.ny.gov/resorts-world-new-york-city-local-impact-siting-mitigating-potential-impacts-communities-local-0",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Promise documented",
+            "excerpt": "The new partnership will begin investing in new housing developments in the immediate term. This landmark agreement with Cirrus, labor pension funds, and contractors will ensure there is affordable housing financed by, built by, and lived in by working- and middle-class families.",
+            "locator": "Cited passage",
+            "summary": "Resorts World NYC said its new partnership would \"begin investing in new housing developments in the immediate term\" and described the agreement as one with Cirrus, labor pension funds, and contractors intended to ensure affordable housing \"financed by, built by, and lived in by working- and middle-class families.\"",
+            "explanation": "This passage directly states the timing promise, identifies the partnership parties at a high level, and describes the intended affordable-housing scope and beneficiary group.",
+            "retrieved_at": "2026-11-22T09:32:16.434414+00:00"
+          },
+          {
+            "id": "support-156f7713-b876-4e51-8019-eb404596460e",
+            "source": {
+              "id": "source-cf9d7d4b-e1d9-45ea-9d67-3d5750088987",
+              "url": "https://rwnewyork.com/rws-next-chapter/resorts-world-new-york-city-cirrus-unveil-new-agreement-to-build-up-to-50000-units-of-workforce-housing/",
+              "title": "https://rwnewyork.com/rws-next-chapter/resorts-world-new-york-city-cirrus-unveil-new-agreement-to-build-up-to-50000-units-of-workforce-housing/",
+              "citation": "https://rwnewyork.com/rws-next-chapter/resorts-world-new-york-city-cirrus-unveil-new-agreement-to-build-up-to-50000-units-of-workforce-housing/",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Promise documented",
+            "excerpt": "Resorts World New York City has officially formed a joint venture with Cirrus to invest in this housing commitment, which will focus on large-scale projects across the five boroughs. The new partnership will begin to invest in new housing developments in the immediate term.",
+            "locator": "Cited passage",
+            "summary": "Resorts World New York City said it had \"officially formed a joint venture with Cirrus\" to invest in the housing commitment, that the commitment would focus on large-scale projects across the five boroughs, and that the new partnership would begin investing in new housing developments \"in the immediate term.\"",
+            "explanation": "This passage ties the immediate-term investment start to a joint venture with Cirrus and adds scope: large-scale projects across New York City's five boroughs.",
+            "retrieved_at": "2026-11-22T09:32:16.434414+00:00"
+          }
+        ]
+      },
+      {
+        "id": "finding-13487f93-03a3-4bf9-a9fc-efa48e72b535",
+        "claim": "The RWNYC-Cirrus partnership materials describe the investment scope as workforce-housing co-investments and fund investments supporting development and ownership in New York City and its suburbs, with stated delivery ambition of tens of thousands of homes and one public statement citing up to 50,000 units; no start-date beyond 'immediate term' is provided.",
+        "supports": [
+          {
+            "id": "support-905fac10-b815-48bf-96a5-e3399ee7c582",
+            "source": {
+              "id": "source-61a05a8e-701b-4f8b-9963-c3caf009e58d",
+              "url": "https://nycasinos.ny.gov/system/files/documents/2026/02/exhibit-174-rwnyc-cirrus-mou_redacted.pdf",
+              "title": "https://nycasinos.ny.gov/system/files/documents/2026/02/exhibit-174-rwnyc-cirrus-mou_redacted.pdf",
+              "citation": "https://nycasinos.ny.gov/system/files/documents/2026/02/exhibit-174-rwnyc-cirrus-mou_redacted.pdf",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Context",
+            "excerpt": "WHEREAS, the Parties desire to amplify both the actual and perceived scale and results of the RWNYC Impact Goals (the “Multiplier Effect”) and ultimate WFH creation via leveraging CWFHA’s WFH Investment pipeline, the CWFHA Coalition and CWFHA’s WFH investment expertise, and as such the Parties desire to enter into a long-term strategic joint venture (the “RCJV”) to:",
+            "locator": "Cited passage",
+            "summary": "The cited memorandum language frames the Resorts World NYC-Cirrus arrangement as a long-term strategic joint venture aimed at amplifying RWNYC Impact Goals and ultimate workforce-housing creation by leveraging CWFHA’s workforce-housing investment pipeline, coalition, and expertise.",
+            "explanation": "This passage provides context on the joint venture's purpose and workforce-housing focus, but it does not itself say investments had begun or would begin immediately.",
+            "retrieved_at": "2026-11-22T09:32:16.434414+00:00"
+          },
+          {
+            "id": "support-9bdfc55c-2c02-440b-a9b3-c5c05628a5b1",
+            "source": {
+              "id": "source-ccaae017-c110-4e2d-b94d-115acb8b36d7",
+              "url": "https://nycasinos.ny.gov/system/files/documents/2026/02/exhibit-175-rwnyc-cirrus-partnership-agreement_redacted.pdf",
+              "title": "https://nycasinos.ny.gov/system/files/documents/2026/02/exhibit-175-rwnyc-cirrus-partnership-agreement_redacted.pdf",
+              "citation": "https://nycasinos.ny.gov/system/files/documents/2026/02/exhibit-175-rwnyc-cirrus-partnership-agreement_redacted.pdf",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Qualification",
+            "excerpt": "“Investments” means (i) co-investments by the Partnership with other investment vehicles and partnerships managed by the Management Company in the development and ownership of workforce housing in New York City and its suburbs (“Co-Investments”); (ii) investments by the Partnership alongside other Management Company anchor investors within the Management Company’s flagship funds in order to support further investments by these vehicles in the development and ownership of workforce housing in New York City and its suburbs",
+            "locator": "Cited passage",
+            "summary": "The partnership agreement defines \"Investments\" as co-investments and fund investments supporting the development and ownership of workforce housing in New York City and its suburbs.",
+            "explanation": "This contractual definition qualifies the scope of the undertaking by specifying the types of investments and that they cover workforce housing in New York City and its suburbs, not just the five boroughs.",
+            "retrieved_at": "2026-11-22T09:32:16.434414+00:00"
+          },
+          {
+            "id": "support-006e8bf3-95aa-42e6-9a91-e309daa14599",
+            "source": {
+              "id": "source-797b1944-e1fb-473c-8679-346044127f1b",
+              "url": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+              "title": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+              "citation": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Context",
+            "excerpt": "Resorts World's Workforce Housing Initiative, funded through the Cirrus Workforce Housing Fund, is a landmark partnership with organized labor to deliver tens of thousands of new homes for working families across New York City.",
+            "locator": "Cited passage",
+            "summary": "Resorts World described its Workforce Housing Initiative as funded through the Cirrus Workforce Housing Fund and as a partnership with organized labor to deliver tens of thousands of new homes for working families across New York City.",
+            "explanation": "This provides supporting context on the vehicle and stated delivery scale of the workforce-housing initiative.",
+            "retrieved_at": "2026-11-22T09:32:16.434414+00:00"
+          }
+        ]
+      },
+      {
+        "id": "source-reread-1",
+        "claim": "RWNYC said the Cirrus workforce-housing joint venture would contribute up to $25 million annually over the term of the license for workforce housing across New York City.",
+        "supports": [
+          {
+            "id": "source-reread-1-s",
+            "excerpt": "RWNYC recently formed a joint venture with Cirrus Workforce Housing to contribute up to $25 million each year, over the term of the License, to help fund the construction of up to 50,000 units of workforce housing throughout New York City.",
+            "source": {
+              "url": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary",
+              "title": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary"
+            }
+          }
+        ]
+      },
+      {
+        "id": "source-reread-2",
+        "claim": "A later Resorts World project fact sheet tied the same workforce-housing undertaking to approximately 3,000 units described as union-built and labor-financed.",
+        "supports": [
+          {
+            "id": "source-reread-2-s",
+            "excerpt": "• Approximately 3,000 units of union -built and labor-financed workforce housing would also be created.",
+            "source": {
+              "url": "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf",
+              "title": "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf"
+            }
+          }
+        ]
+      }
+    ],
+    "relations": [],
+    "assessment_trace": {
+      "not_yet_due": [],
+      "criteria": [
+        {
+          "criterion": "Begin workforce/affordable housing investments",
+          "scope_criteria": [
+            "s1"
+          ],
+          "promise_scope": "Resorts World NYC, through a new partnership with Cirrus, labor pension funds, and contractors, promises to begin investing in new affordable/workforce housing developments. Intended beneficiaries are working- and middle-class families. Location in the cited promise is unspecified, though a related Resorts World NYC release describes projects across New York City’s five boroughs.",
+          "observed_scope": "Directly observed: Resorts World New York City is reported to have officially formed a joint venture with Cirrus, and partnership documents describe a vehicle for investments in workforce housing in New York City and its suburbs. Resorts World also reports a Workforce Housing Initiative funded through the Cirrus Workforce Housing Fund. However, the cited evidence does not identify any actual housing development investment that the partnership had already begun, nor any specific financed project or beneficiaries receiving housing.",
+          "promise_citation_ids": [
+            "c1",
+            "c2"
+          ],
+          "delivery_citation_ids": [],
+          "delivery_status": "UNVERIFIED",
+          "timing_requirement": "The promise says investments will begin \"in the immediate term.\" No exact calendar date is given, but the obligation includes near-term commencement, not just creation of a partnership or investment framework.",
+          "explanation": "The original commitment is documented in c1 and c2: the partnership \"will begin investing in new housing developments in the immediate term.\" Later evidence shows organizational steps and ongoing program claims: c2 says Resorts World NYC \"has officially formed a joint venture with Cirrus\"; c3 defines the partnership’s contemplated \"Investments\" in workforce housing in New York City and its suburbs; c4 says the initiative is \"funded through the Cirrus Workforce Housing Fund\" and is a partnership to deliver homes. These sources establish that a partnership/fund structure exists and that Resorts World reports an active initiative. But they do not directly show that the partnership actually began investing in any specific housing development, nor when any first investment occurred.",
+          "gap": "Missing is direct evidence of commenced investments for this promised action and timing—for example, a dated statement that the partnership made its first investment(s), identified financed developments, or otherwise documented that investing had in fact begun in the promised immediate term.",
+          "delivery_support": []
+        }
+      ],
+      "label": "UNVERIFIED",
+      "verdict": "Delivery unverified for: Begin workforce/affordable housing investments",
+      "reasoning": "Requested scope: Workforce housing investments are promised to begin 'in the immediate term'.\n\nBegin workforce/affordable housing investments\nStatus: UNVERIFIED\nThe original commitment is documented in c1 and c2: the partnership \"will begin investing in new housing developments in the immediate term.\" Later evidence shows organizational steps and ongoing program claims: c2 says Resorts World NYC \"has officially formed a joint venture with Cirrus\"; c3 defines the partnership’s contemplated \"Investments\" in workforce housing in New York City and its suburbs; c4 says the initiative is \"funded through the Cirrus Workforce Housing Fund\" and is a partnership to deliver homes. These sources establish that a partnership/fund structure exists and that Resorts World reports an active initiative. But they do not directly show that the partnership actually began investing in any specific housing development, nor when any first investment occurred.\nPromised scope: Resorts World NYC, through a new partnership with Cirrus, labor pension funds, and contractors, promises to begin investing in new affordable/workforce housing developments. Intended beneficiaries are working- and middle-class families. Location in the cited promise is unspecified, though a related Resorts World NYC release describes projects across New York City’s five boroughs.\nObserved scope: Directly observed: Resorts World New York City is reported to have officially formed a joint venture with Cirrus, and partnership documents describe a vehicle for investments in workforce housing in New York City and its suburbs. Resorts World also reports a Workforce Housing Initiative funded through the Cirrus Workforce Housing Fund. However, the cited evidence does not identify any actual housing development investment that the partnership had already begun, nor any specific financed project or beneficiaries receiving housing.\nEvidence gap: Missing is direct evidence of commenced investments for this promised action and timing—for example, a dated statement that the partnership made its first investment(s), identified financed developments, or otherwise documented that investing had in fact begun in the promised immediate term.\nPromise evidence: c1, c2\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “The new partnership will begin investing in new housing developments in the immediate term. This landmark agreement with Cirrus, labor pension funds, and contractors will ensure there is affordable housing financed by, built by, and lived in by working- and middle-class families.”\nhttps://nycasinos.ny.gov/resorts-world-new-york-city-local-impact-siting-mitigating-potential-impacts-communities-local-0\n\nc2: “Resorts World New York City has officially formed a joint venture with Cirrus to invest in this housing commitment, which will focus on large-scale projects across the five boroughs. The new partnership will begin to invest in new housing developments in the immediate term.”\nhttps://rwnewyork.com/rws-next-chapter/resorts-world-new-york-city-cirrus-unveil-new-agreement-to-build-up-to-50000-units-of-workforce-housing/\n\nc3: ““Investments” means (i) co-investments by the Partnership with other investment vehicles and partnerships managed by the Management Company in the development and ownership of workforce housing in New York City and its suburbs (“Co-Investments”); (ii) investments by the Partnership alongside other Management Company anchor investors within the Management Company’s flagship funds in order to support further investments by these vehicles in the development and ownership of workforce housing in New York City and its suburbs”\nhttps://nycasinos.ny.gov/system/files/documents/2026/02/exhibit-175-rwnyc-cirrus-partnership-agreement_redacted.pdf\n\nc4: “Resorts World's Workforce Housing Initiative, funded through the Cirrus Workforce Housing Fund, is a landmark partnership with organized labor to deliver tens of thousands of new homes for working families across New York City.”\nhttps://rwnewyork.com/community/community-investments/workforce-housing/\n\nc5: “WHEREAS, the Parties desire to amplify both the actual and perceived scale and results of the RWNYC Impact Goals (the “Multiplier Effect”) and ultimate WFH creation via leveraging CWFHA’s WFH Investment pipeline, the CWFHA Coalition and CWFHA’s WFH investment expertise, and as such the Parties desire to enter into a long-term strategic joint venture (the “RCJV”) to:”\nhttps://nycasinos.ny.gov/system/files/documents/2026/02/exhibit-174-rwnyc-cirrus-mou_redacted.pdf",
+      "refutation": [],
+      "scope_anchors": {
+        "s1": "Resorts World NYC partnership to begin investing in workforce/affordable housing developments in the immediate term"
+      },
+      "citations": {
+        "c1": {
+          "source": {
+            "title": "https://nycasinos.ny.gov/resorts-world-new-york-city-local-impact-siting-mitigating-potential-impacts-communities-local-0",
+            "url": "https://nycasinos.ny.gov/resorts-world-new-york-city-local-impact-siting-mitigating-potential-impacts-communities-local-0",
+            "citation": "https://nycasinos.ny.gov/resorts-world-new-york-city-local-impact-siting-mitigating-potential-impacts-communities-local-0"
+          },
+          "excerpt": "The new partnership will begin investing in new housing developments in the immediate term. This landmark agreement with Cirrus, labor pension funds, and contractors will ensure there is affordable housing financed by, built by, and lived in by working- and middle-class families.",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:32:16.434414+00:00",
+          "finding_id": "finding-f034b556-8e4a-4599-b218-76bbcfe82556",
+          "support_ids": [
+            "support-436cc973-1e15-4949-89a1-071b771291ee"
+          ]
+        },
+        "c2": {
+          "source": {
+            "title": "https://rwnewyork.com/rws-next-chapter/resorts-world-new-york-city-cirrus-unveil-new-agreement-to-build-up-to-50000-units-of-workforce-housing/",
+            "url": "https://rwnewyork.com/rws-next-chapter/resorts-world-new-york-city-cirrus-unveil-new-agreement-to-build-up-to-50000-units-of-workforce-housing/",
+            "citation": "https://rwnewyork.com/rws-next-chapter/resorts-world-new-york-city-cirrus-unveil-new-agreement-to-build-up-to-50000-units-of-workforce-housing/"
+          },
+          "excerpt": "Resorts World New York City has officially formed a joint venture with Cirrus to invest in this housing commitment, which will focus on large-scale projects across the five boroughs. The new partnership will begin to invest in new housing developments in the immediate term.",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:32:16.434414+00:00",
+          "finding_id": "finding-f034b556-8e4a-4599-b218-76bbcfe82556",
+          "support_ids": [
+            "support-156f7713-b876-4e51-8019-eb404596460e"
+          ]
+        },
+        "c3": {
+          "source": {
+            "title": "https://nycasinos.ny.gov/system/files/documents/2026/02/exhibit-175-rwnyc-cirrus-partnership-agreement_redacted.pdf",
+            "url": "https://nycasinos.ny.gov/system/files/documents/2026/02/exhibit-175-rwnyc-cirrus-partnership-agreement_redacted.pdf",
+            "citation": "https://nycasinos.ny.gov/system/files/documents/2026/02/exhibit-175-rwnyc-cirrus-partnership-agreement_redacted.pdf"
+          },
+          "excerpt": "“Investments” means (i) co-investments by the Partnership with other investment vehicles and partnerships managed by the Management Company in the development and ownership of workforce housing in New York City and its suburbs (“Co-Investments”); (ii) investments by the Partnership alongside other Management Company anchor investors within the Management Company’s flagship funds in order to support further investments by these vehicles in the development and ownership of workforce housing in New York City and its suburbs",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:32:16.434414+00:00",
+          "finding_id": "finding-13487f93-03a3-4bf9-a9fc-efa48e72b535",
+          "support_ids": [
+            "support-9bdfc55c-2c02-440b-a9b3-c5c05628a5b1"
+          ]
+        },
+        "c4": {
+          "source": {
+            "title": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+            "url": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+            "citation": "https://rwnewyork.com/community/community-investments/workforce-housing/"
+          },
+          "excerpt": "Resorts World's Workforce Housing Initiative, funded through the Cirrus Workforce Housing Fund, is a landmark partnership with organized labor to deliver tens of thousands of new homes for working families across New York City.",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:32:16.434414+00:00",
+          "finding_id": "finding-13487f93-03a3-4bf9-a9fc-efa48e72b535",
+          "support_ids": [
+            "support-006e8bf3-95aa-42e6-9a91-e309daa14599"
+          ]
+        },
+        "c5": {
+          "source": {
+            "title": "https://nycasinos.ny.gov/system/files/documents/2026/02/exhibit-174-rwnyc-cirrus-mou_redacted.pdf",
+            "url": "https://nycasinos.ny.gov/system/files/documents/2026/02/exhibit-174-rwnyc-cirrus-mou_redacted.pdf",
+            "citation": "https://nycasinos.ny.gov/system/files/documents/2026/02/exhibit-174-rwnyc-cirrus-mou_redacted.pdf"
+          },
+          "excerpt": "WHEREAS, the Parties desire to amplify both the actual and perceived scale and results of the RWNYC Impact Goals (the “Multiplier Effect”) and ultimate WFH creation via leveraging CWFHA’s WFH Investment pipeline, the CWFHA Coalition and CWFHA’s WFH investment expertise, and as such the Parties desire to enter into a long-term strategic joint venture (the “RCJV”) to:",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:32:16.434414+00:00",
+          "finding_id": "finding-13487f93-03a3-4bf9-a9fc-efa48e72b535",
+          "support_ids": [
+            "support-905fac10-b815-48bf-96a5-e3399ee7c582"
+          ]
+        }
+      },
+      "scope_gap": ""
+    }
+  },
+  "job_result": {
+    "run_id": null,
+    "outcome": "RESOLVED",
+    "commitment_id": "commitment-41f7cff3-dd64-45d7-a406-153731337bbc"
+  },
+  "finished_at": "2026-11-22T09:33:38.794788+00:00"
+}

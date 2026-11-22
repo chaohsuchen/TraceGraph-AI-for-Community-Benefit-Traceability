@@ -1,0 +1,676 @@
+[
+  {
+    "type": "research_start"
+  },
+  {
+    "phase": "search",
+    "event": "started"
+  },
+  {
+    "type": "search_budget",
+    "allocated": 4,
+    "remaining": 2,
+    "limit": 6
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 11.608999999938533,
+    "request_id": "req_7a79dea57fbb470b9e1e267dcf07e32a",
+    "usage": {
+      "input_tokens": 21166,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 4608
+      },
+      "output_tokens": 766,
+      "output_tokens_details": {
+        "reasoning_tokens": 294
+      },
+      "total_tokens": 21932
+    },
+    "search_enabled": true,
+    "web_search_ids": [
+      "ws_0f35e1ac2e04cc05016b02b6e4f46087d29f5d62e0151b1e72",
+      "ws_0f35e1ac2e04cc05016b02b6e787c087d28c1d02404b51f487",
+      "ws_0f35e1ac2e04cc05016b02b6e9b92087d2b94d7f6bdf0757ae",
+      "ws_0f35e1ac2e04cc05016b02b6eafaf087d2b8e2ec986ae5fbae"
+    ],
+    "stop_reason": "completed",
+    "web_search_statuses": [
+      "completed",
+      "completed",
+      "completed",
+      "completed"
+    ]
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "phase": "search",
+    "event": "completed",
+    "source": "self_reported",
+    "stop_reason": "SUFFICIENT",
+    "stop_reason_status": "reported"
+  },
+  {
+    "type": "research_capture",
+    "brief": "[c1] We commit to an annual contribution of 1% of gross gaming revenue with a minimum of $12.5 million from the time the gaming facility is opened.\nSTOP_REASON=SUFFICIENT",
+    "citations": {
+      "c1": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "excerpt": "We commit to an annual contribution of 1% of gross gaming revenue with a minimum of $12.5 million from the time the gaming facility is opened.",
+        "context": "We commit to an annual contribution of 1% of gross gaming revenue with a minimum of $12.5 million from the time the gaming facility is opened."
+      }
+    }
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 5.73499999998603,
+    "request_id": "req_eeb961f2882d41f9899d44867ac58b0b",
+    "usage": {
+      "input_tokens": 1878,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 417,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2295
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 2.577999999979511,
+    "request_id": "req_a27f2473bc2b490993c9996a3d079b56",
+    "usage": {
+      "input_tokens": 704,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 227,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 931
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "research_scope_review",
+    "checks": [
+      {
+        "criterion_id": "1",
+        "explanation": "Excerpt c1 states: \"We commit to an annual contribution of 1% of gross gaming revenue with a minimum of $12.5 million from the time the gaming facility is opened.\" This documents an original commitment to contribute annually 1% of gross gaming revenue, with a stated minimum annual amount, from opening. However, the stated minimum amount in the excerpt is $12.5 million, not $15 million.",
+        "original_citation_ids": [
+          "c1"
+        ],
+        "missing_original_terms": [
+          "minimum annual amount of $15 million"
+        ]
+      },
+      {
+        "criterion_id": "2",
+        "explanation": "The only excerpt documents: \"We commit to an annual contribution of 1% of gross gaming revenue with a minimum of $12.5 million from the time the gaming facility is opened.\" It does not mention a \"Community Benefits Fund\" or that it would be \"administered by an independent local board.\"",
+        "original_citation_ids": [
+          "c1"
+        ],
+        "missing_original_terms": [
+          "Community Benefits Fund",
+          "administered by an independent local board"
+        ]
+      }
+    ],
+    "missing_scope": [
+      "Bally's to contribute annually 1% of gross gaming revenue, with a stated minimum annual amount, from opening.",
+      "Bally's to contribute to a Community Benefits Fund administered by an independent local board."
+    ]
+  },
+  {
+    "type": "source_recovery",
+    "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+    "status": "READ",
+    "text_sha256": "baf7fce45c929af603318326cf3c033089bddc04087a01bda19c12265756fc46",
+    "source_reads": 1,
+    "source_read_limit": 2
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 7.171999999904074,
+    "request_id": "req_a325dd3821524ddbaf5e6a6f785d23a0",
+    "usage": {
+      "input_tokens": 1719,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 865,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2584
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "research_recovery_capture",
+    "citations": {
+      "c1": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "excerpt": "We commit to an annual contribution of 1% of gross gaming revenue with a minimum of $12.5 million from the time the gaming facility is opened.",
+        "context": "We commit to an annual contribution of 1% of gross gaming revenue with a minimum of $12.5 million from the time the gaming facility is opened."
+      },
+      "c2": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "excerpt": "3. Will Bally’s provide all operational support including but not limited to staffing, accounting, and legal support to this board through the Bally’s Foundation and, if necessary, create a Bronx- specific arm of the Foundation to administer and help facilitate the local Community Benefit Funds? Bally’s should designate a hired company representative, ideally a CB10 resident with deep knowledge of the surrounding neighborhoods, to work with the board and the community. Our intention is for all functions for the Bronx Community Benefit Fund to be funded by the Community Benefit Funds via Bally’s Bronx. Additionally, the Bally’s Foundation is an entirely separate entity (non-profit) and is not associated with the pledged Community Benefit Fund via Bally’s Bronx.",
+        "context": "3. Will Bally’s provide all operational support including but not limited to staffing, accounting, and legal support to this board through the Bally’s Foundation and, if necessary, create a Bronx- specific arm of the Foundation to administer and help facilitate the local Community Benefit Funds? Bally’s should designate a hired company representative, ideally a CB10 resident with deep knowledge of the surrounding neighborhoods, to work with the board and the community. Our intention is for all functions for the Bronx Community Benefit Fund to be funded by the Community Benefit Funds via Bally’s Bronx. Additionally, the Bally’s Foundation is an entirely separate entity (non-profit) and is not associated with the pledged Community Benefit Fund via Bally’s Bronx."
+      },
+      "c3": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "excerpt": "Community Benefit Fund Contributions and Priorities 1. Will Bally’s commit to contributing a minimum of seventeen and a half million dollars annually, or one percent of gross gaming revenue, whichever is higher, beginning at the time of licensure rather than waiting until the facility opens? We commit to an annual contribution of 1% of gross gaming revenue with a minimum of $12.5 million from the time the gaming facility is opened. We would highlight that this is a minimum commitment to fund solely the Community Benefit Fund, not inclusive of additional commitments.",
+        "context": "Community Benefit Fund Contributions and Priorities 1. Will Bally’s commit to contributing a minimum of seventeen and a half million dollars annually, or one percent of gross gaming revenue, whichever is higher, beginning at the time of licensure rather than waiting until the facility opens? We commit to an annual contribution of 1% of gross gaming revenue with a minimum of $12.5 million from the time the gaming facility is opened. We would highlight that this is a minimum commitment to fund solely the Community Benefit Fund, not inclusive of additional commitments."
+      },
+      "c4": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "excerpt": "2. Will the Community Benefit Fund Board and Bally’s codify that projects and institutions within CB10, using it as the nucleus of priority, are funded first before expanding to the broader Bronx, ensuring that CB10 which will be greatly impacted by this project’s needs are fully addressed? Bally’s will leave the specific funding directives to be made by the Community Benefit Fund Board to the Board including discretion in selecting investments or other improvements to be made throughout the community.",
+        "context": "2. Will the Community Benefit Fund Board and Bally’s codify that projects and institutions within CB10, using it as the nucleus of priority, are funded first before expanding to the broader Bronx, ensuring that CB10 which will be greatly impacted by this project’s needs are fully addressed? Bally’s will leave the specific funding directives to be made by the Community Benefit Fund Board to the Board including discretion in selecting investments or other improvements to be made throughout the community."
+      },
+      "c5": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "excerpt": "3. Will all distributions be transparent, with public annual reports and presentations to the community? Yes, all distributions from the Community Benefit Fund will be conducted with full transparency. Gaming revenue figures, which form the basis for these distributions, are publicly reported, ensuring that the underlying financial data is accessible to all stakeholders. The calculation methods for determining fund distributions are also made public, allowing for open scrutiny and understanding of how funds are allocated. The Community Benefit Fund Board should provide comprehensive annual reports and presentations outlining the fund's financial performance, distribution outcomes, and the impact of the funded initiatives on the community.",
+        "context": "3. Will all distributions be transparent, with public annual reports and presentations to the community? Yes, all distributions from the Community Benefit Fund will be conducted with full transparency. Gaming revenue figures, which form the basis for these distributions, are publicly reported, ensuring that the underlying financial data is accessible to all stakeholders. The calculation methods for determining fund distributions are also made public, allowing for open scrutiny and understanding of how funds are allocated. The Community Benefit Fund Board should provide comprehensive annual reports and presentations outlining the fund's financial performance, distribution outcomes, and the impact of the funded initiatives on the community."
+      },
+      "c6": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "excerpt": "4. Will Bally’s commit to continuous permanent funding for neighborhood cleaning and beautification, including litter removal, graffiti cleanup, landscaping, and corridor services through grants? The grants should allow qualified local nonprofits to lead this work, while also permitting experienced providers such as Wildcat and ACE when necessary. We believe the Community Benefit Fund Board should have the responsibility of selecting and for oversight of the specific initiatives which they fund.",
+        "context": "4. Will Bally’s commit to continuous permanent funding for neighborhood cleaning and beautification, including litter removal, graffiti cleanup, landscaping, and corridor services through grants? The grants should allow qualified local nonprofits to lead this work, while also permitting experienced providers such as Wildcat and ACE when necessary. We believe the Community Benefit Fund Board should have the responsibility of selecting and for oversight of the specific initiatives which they fund."
+      },
+      "c7": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "excerpt": "5. Will Bally’s fund local institutions within CB10 and adjacent neighborhoods through the Community Benefit Fund, including but not limited to: a. Veterans’ posts such as Theodore Korony American Legion Post 253, Throggs Neck Memorial Post 1456, and AMVETS Post 38 b. Civic and club organizations including American Turners and the Inter Club Association of the five Clarence Avenue beach clubs and their annual Interclub Day c. Youth and recreation leagues including Co-op City Little League, Throggs Neck Little League, Pelham Bay Little League, Hoops in the Sun, and Legacy Volleyball d. Local public, Catholic, and private schools in CB10 e. Senior centers and programs including Northeast Bronx Senior Center, JASA Co- op City, JASA Throggs Neck, BronxWorks older adult programs, AARP and NORC programs f. Community theater programs and after school programs g. Environmental and cultural groups such as City Island Oyster Reef, BioBus, Bronx Council on the Arts, the Throggs Neck St. Patrick’s Day Parade, and the Veterans Day Parade, Bronx Net We believe the Community Benefit Fund Board should have the responsibility of selecting the specific initiatives which they fund as well as developing and managing oversight.",
+        "context": "5. Will Bally’s fund local institutions within CB10 and adjacent neighborhoods through the Community Benefit Fund, including but not limited to: a. Veterans’ posts such as Theodore Korony American Legion Post 253, Throggs Neck Memorial Post 1456, and AMVETS Post 38 b. Civic and club organizations including American Turners and the Inter Club Association of the five Clarence Avenue beach clubs and their annual Interclub Day c. Youth and recreation leagues including Co-op City Little League, Throggs Neck Little League, Pelham Bay Little League, Hoops in the Sun, and Legacy Volleyball d. Local public, Catholic, and private schools in CB10 e. Senior centers and programs including Northeast Bronx Senior Center, JASA Co- op City, JASA Throggs Neck, BronxWorks older adult programs, AARP and NORC programs f. Community theater programs and after school programs g. Environmental and cultural groups such as City Island Oyster Reef, BioBus, Bronx Council on the Arts, the Throggs Neck St. Patrick’s Day Parade, and the Veterans Day Parade, Bronx Net We believe the Community Benefit Fund Board should have the responsibility of selecting the specific initiatives which they fund as well as developing and managing oversight."
+      },
+      "c8": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys.pdf",
+        "excerpt": "Will Bally’s agree to establish a Community Benefit Fund Board composed of eleven voting",
+        "context": "Will Bally’s agree to establish a Community Benefit Fund Board composed of eleven voting"
+      },
+      "c9": {
+        "url": "https://www.bxtimes.com/ballys-casino-boosts-investment-offer/",
+        "title": "https://www.bxtimes.com/ballys-casino-boosts-investment-offer/",
+        "excerpt": "Bally’s committed to increasing its annual contributions to its “Community Benefit Fund” to $12.5 million, the Bronx Times has learned.",
+        "context": "Bally’s committed to increasing its annual contributions to its “Community Benefit Fund” to $12.5 million, the Bronx Times has learned."
+      },
+      "c10": {
+        "url": "https://www.casinoreports.com/news/nyc-casinos-ballys-bronx-bid-forward/",
+        "title": "https://www.casinoreports.com/news/nyc-casinos-ballys-bronx-bid-forward/",
+        "excerpt": "Bally's also raised its minimum annual commitment to the CFTB from $12.5 million to $15 million at the time of the casino opening, though that amount can be higher if 1% of its gross gaming revenue exceeds $15 million.",
+        "context": "Bally's also raised its minimum annual commitment to the CFTB from $12.5 million to $15 million at the time of the casino opening, though that amount can be higher if 1% of its gross gaming revenue exceeds $15 million."
+      },
+      "c11": {
+        "url": "https://bronx.news12.com/ballys-bronx-community-advisory-committee-votes-in-favor-of-ferry-point-casino-plan",
+        "title": "https://bronx.news12.com/ballys-bronx-community-advisory-committee-votes-in-favor-of-ferry-point-casino-plan",
+        "excerpt": "Earlier this month, Bally's answered to amendments from the Community Advisory Committee, agreeing to increase their community investment package for projects and organizations in the East Bronx to $12.5 million or 1% of its annual gross gaming revenue once the facility opens.",
+        "context": "Earlier this month, Bally's answered to amendments from the Community Advisory Committee, agreeing to increase their community investment package for projects and organizations in the East Bronx to $12.5 million or 1% of its annual gross gaming revenue once the facility opens."
+      },
+      "c12": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf",
+        "excerpt": "Upon awarding of a license we will explore and define the appropriate methodology for providing the financial support for all Community Benefit Fund and associated commitments.",
+        "context": "Upon awarding of a license we will explore and define the appropriate methodology for providing the financial support for all Community Benefit Fund and associated commitments."
+      }
+    }
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 10.047000000020489,
+    "request_id": "req_8e4562132c5a4c37b4fc565b7cb621fb",
+    "usage": {
+      "input_tokens": 3413,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 697,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4110
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "search_budget",
+    "allocated": 2,
+    "remaining": 0,
+    "limit": 6
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 11.937000000034459,
+    "request_id": "req_b7d79edd1b3045778e2a7958773445e2",
+    "usage": {
+      "input_tokens": 13574,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 4608
+      },
+      "output_tokens": 953,
+      "output_tokens_details": {
+        "reasoning_tokens": 160
+      },
+      "total_tokens": 14527
+    },
+    "search_enabled": true,
+    "web_search_ids": [
+      "ws_046e7dabb10a1e52016b02b722aadc87d2a41816f17551f5aa",
+      "ws_046e7dabb10a1e52016b02b725620887d2b439f64ee463c5ca",
+      "ws_046e7dabb10a1e52016b02b726507c87d2b5bf6b61eb2e106e"
+    ],
+    "stop_reason": "completed",
+    "web_search_statuses": [
+      "completed",
+      "completed",
+      "searching"
+    ]
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000084/baly-20260630.htm",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "research_recovery_capture",
+    "citations": {
+      "c1": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "excerpt": "We commit to an annual contribution of 1% of gross gaming revenue with a minimum of $12.5 million from the time the gaming facility is opened.",
+        "context": "We commit to an annual contribution of 1% of gross gaming revenue with a minimum of $12.5 million from the time the gaming facility is opened."
+      },
+      "c2": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "excerpt": "3. Will Bally’s provide all operational support including but not limited to staffing, accounting, and legal support to this board through the Bally’s Foundation and, if necessary, create a Bronx- specific arm of the Foundation to administer and help facilitate the local Community Benefit Funds? Bally’s should designate a hired company representative, ideally a CB10 resident with deep knowledge of the surrounding neighborhoods, to work with the board and the community. Our intention is for all functions for the Bronx Community Benefit Fund to be funded by the Community Benefit Funds via Bally’s Bronx. Additionally, the Bally’s Foundation is an entirely separate entity (non-profit) and is not associated with the pledged Community Benefit Fund via Bally’s Bronx.",
+        "context": "3. Will Bally’s provide all operational support including but not limited to staffing, accounting, and legal support to this board through the Bally’s Foundation and, if necessary, create a Bronx- specific arm of the Foundation to administer and help facilitate the local Community Benefit Funds? Bally’s should designate a hired company representative, ideally a CB10 resident with deep knowledge of the surrounding neighborhoods, to work with the board and the community. Our intention is for all functions for the Bronx Community Benefit Fund to be funded by the Community Benefit Funds via Bally’s Bronx. Additionally, the Bally’s Foundation is an entirely separate entity (non-profit) and is not associated with the pledged Community Benefit Fund via Bally’s Bronx."
+      },
+      "c3": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "excerpt": "Community Benefit Fund Contributions and Priorities 1. Will Bally’s commit to contributing a minimum of seventeen and a half million dollars annually, or one percent of gross gaming revenue, whichever is higher, beginning at the time of licensure rather than waiting until the facility opens? We commit to an annual contribution of 1% of gross gaming revenue with a minimum of $12.5 million from the time the gaming facility is opened. We would highlight that this is a minimum commitment to fund solely the Community Benefit Fund, not inclusive of additional commitments.",
+        "context": "Community Benefit Fund Contributions and Priorities 1. Will Bally’s commit to contributing a minimum of seventeen and a half million dollars annually, or one percent of gross gaming revenue, whichever is higher, beginning at the time of licensure rather than waiting until the facility opens? We commit to an annual contribution of 1% of gross gaming revenue with a minimum of $12.5 million from the time the gaming facility is opened. We would highlight that this is a minimum commitment to fund solely the Community Benefit Fund, not inclusive of additional commitments."
+      },
+      "c4": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "excerpt": "2. Will the Community Benefit Fund Board and Bally’s codify that projects and institutions within CB10, using it as the nucleus of priority, are funded first before expanding to the broader Bronx, ensuring that CB10 which will be greatly impacted by this project’s needs are fully addressed? Bally’s will leave the specific funding directives to be made by the Community Benefit Fund Board to the Board including discretion in selecting investments or other improvements to be made throughout the community.",
+        "context": "2. Will the Community Benefit Fund Board and Bally’s codify that projects and institutions within CB10, using it as the nucleus of priority, are funded first before expanding to the broader Bronx, ensuring that CB10 which will be greatly impacted by this project’s needs are fully addressed? Bally’s will leave the specific funding directives to be made by the Community Benefit Fund Board to the Board including discretion in selecting investments or other improvements to be made throughout the community."
+      },
+      "c5": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "excerpt": "3. Will all distributions be transparent, with public annual reports and presentations to the community? Yes, all distributions from the Community Benefit Fund will be conducted with full transparency. Gaming revenue figures, which form the basis for these distributions, are publicly reported, ensuring that the underlying financial data is accessible to all stakeholders. The calculation methods for determining fund distributions are also made public, allowing for open scrutiny and understanding of how funds are allocated. The Community Benefit Fund Board should provide comprehensive annual reports and presentations outlining the fund's financial performance, distribution outcomes, and the impact of the funded initiatives on the community.",
+        "context": "3. Will all distributions be transparent, with public annual reports and presentations to the community? Yes, all distributions from the Community Benefit Fund will be conducted with full transparency. Gaming revenue figures, which form the basis for these distributions, are publicly reported, ensuring that the underlying financial data is accessible to all stakeholders. The calculation methods for determining fund distributions are also made public, allowing for open scrutiny and understanding of how funds are allocated. The Community Benefit Fund Board should provide comprehensive annual reports and presentations outlining the fund's financial performance, distribution outcomes, and the impact of the funded initiatives on the community."
+      },
+      "c6": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "excerpt": "4. Will Bally’s commit to continuous permanent funding for neighborhood cleaning and beautification, including litter removal, graffiti cleanup, landscaping, and corridor services through grants? The grants should allow qualified local nonprofits to lead this work, while also permitting experienced providers such as Wildcat and ACE when necessary. We believe the Community Benefit Fund Board should have the responsibility of selecting and for oversight of the specific initiatives which they fund.",
+        "context": "4. Will Bally’s commit to continuous permanent funding for neighborhood cleaning and beautification, including litter removal, graffiti cleanup, landscaping, and corridor services through grants? The grants should allow qualified local nonprofits to lead this work, while also permitting experienced providers such as Wildcat and ACE when necessary. We believe the Community Benefit Fund Board should have the responsibility of selecting and for oversight of the specific initiatives which they fund."
+      },
+      "c7": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+        "excerpt": "5. Will Bally’s fund local institutions within CB10 and adjacent neighborhoods through the Community Benefit Fund, including but not limited to: a. Veterans’ posts such as Theodore Korony American Legion Post 253, Throggs Neck Memorial Post 1456, and AMVETS Post 38 b. Civic and club organizations including American Turners and the Inter Club Association of the five Clarence Avenue beach clubs and their annual Interclub Day c. Youth and recreation leagues including Co-op City Little League, Throggs Neck Little League, Pelham Bay Little League, Hoops in the Sun, and Legacy Volleyball d. Local public, Catholic, and private schools in CB10 e. Senior centers and programs including Northeast Bronx Senior Center, JASA Co- op City, JASA Throggs Neck, BronxWorks older adult programs, AARP and NORC programs f. Community theater programs and after school programs g. Environmental and cultural groups such as City Island Oyster Reef, BioBus, Bronx Council on the Arts, the Throggs Neck St. Patrick’s Day Parade, and the Veterans Day Parade, Bronx Net We believe the Community Benefit Fund Board should have the responsibility of selecting the specific initiatives which they fund as well as developing and managing oversight.",
+        "context": "5. Will Bally’s fund local institutions within CB10 and adjacent neighborhoods through the Community Benefit Fund, including but not limited to: a. Veterans’ posts such as Theodore Korony American Legion Post 253, Throggs Neck Memorial Post 1456, and AMVETS Post 38 b. Civic and club organizations including American Turners and the Inter Club Association of the five Clarence Avenue beach clubs and their annual Interclub Day c. Youth and recreation leagues including Co-op City Little League, Throggs Neck Little League, Pelham Bay Little League, Hoops in the Sun, and Legacy Volleyball d. Local public, Catholic, and private schools in CB10 e. Senior centers and programs including Northeast Bronx Senior Center, JASA Co- op City, JASA Throggs Neck, BronxWorks older adult programs, AARP and NORC programs f. Community theater programs and after school programs g. Environmental and cultural groups such as City Island Oyster Reef, BioBus, Bronx Council on the Arts, the Throggs Neck St. Patrick’s Day Parade, and the Veterans Day Parade, Bronx Net We believe the Community Benefit Fund Board should have the responsibility of selecting the specific initiatives which they fund as well as developing and managing oversight."
+      },
+      "c8": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys.pdf",
+        "excerpt": "Will Bally’s agree to establish a Community Benefit Fund Board composed of eleven voting",
+        "context": "Will Bally’s agree to establish a Community Benefit Fund Board composed of eleven voting"
+      },
+      "c9": {
+        "url": "https://www.bxtimes.com/ballys-casino-boosts-investment-offer/",
+        "title": "https://www.bxtimes.com/ballys-casino-boosts-investment-offer/",
+        "excerpt": "Bally’s committed to increasing its annual contributions to its “Community Benefit Fund” to $12.5 million, the Bronx Times has learned.",
+        "context": "Bally’s committed to increasing its annual contributions to its “Community Benefit Fund” to $12.5 million, the Bronx Times has learned."
+      },
+      "c10": {
+        "url": "https://www.casinoreports.com/news/nyc-casinos-ballys-bronx-bid-forward/",
+        "title": "https://www.casinoreports.com/news/nyc-casinos-ballys-bronx-bid-forward/",
+        "excerpt": "Bally's also raised its minimum annual commitment to the CFTB from $12.5 million to $15 million at the time of the casino opening, though that amount can be higher if 1% of its gross gaming revenue exceeds $15 million.",
+        "context": "Bally's also raised its minimum annual commitment to the CFTB from $12.5 million to $15 million at the time of the casino opening, though that amount can be higher if 1% of its gross gaming revenue exceeds $15 million."
+      },
+      "c11": {
+        "url": "https://bronx.news12.com/ballys-bronx-community-advisory-committee-votes-in-favor-of-ferry-point-casino-plan",
+        "title": "https://bronx.news12.com/ballys-bronx-community-advisory-committee-votes-in-favor-of-ferry-point-casino-plan",
+        "excerpt": "Earlier this month, Bally's answered to amendments from the Community Advisory Committee, agreeing to increase their community investment package for projects and organizations in the East Bronx to $12.5 million or 1% of its annual gross gaming revenue once the facility opens.",
+        "context": "Earlier this month, Bally's answered to amendments from the Community Advisory Committee, agreeing to increase their community investment package for projects and organizations in the East Bronx to $12.5 million or 1% of its annual gross gaming revenue once the facility opens."
+      },
+      "c12": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf",
+        "excerpt": "Upon awarding of a license we will explore and define the appropriate methodology for providing the financial support for all Community Benefit Fund and associated commitments.",
+        "context": "Upon awarding of a license we will explore and define the appropriate methodology for providing the financial support for all Community Benefit Fund and associated commitments."
+      }
+    }
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 11.73499999998603,
+    "request_id": "req_9bf20a94b8bd4291b6896276c4ffd4ea",
+    "usage": {
+      "input_tokens": 3964,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 2816
+      },
+      "output_tokens": 824,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4788
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "research_extracted",
+    "draft": null,
+    "evidence": [
+      {
+        "source": {
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+          "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "excerpt": "Community Benefit Fund Contributions and Priorities 1. Will Bally’s commit to contributing a minimum of seventeen and a half million dollars annually, or one percent of gross gaming revenue, whichever is higher, beginning at the time of licensure rather than waiting until the facility opens? We commit to an annual contribution of 1% of gross gaming revenue with a minimum of $12.5 million from the time the gaming facility is opened. We would highlight that this is a minimum commitment to fund solely the Community Benefit Fund, not inclusive of additional commitments.",
+        "status": "supports_partial_promise",
+        "explanation": "This Bally’s response directly documents an original commitment to contribute annually 1% of gross gaming revenue with a minimum of $12.5 million, starting when the gaming facility opens. It does not support the user-stated $15 million minimum.",
+        "summary": "Bally’s says it commits to 1% of gross gaming revenue annually, minimum $12.5 million, from facility opening.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:33:52.496461+00:00"
+      },
+      {
+        "source": {
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+          "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "excerpt": "3. Will Bally’s provide all operational support including but not limited to staffing, accounting, and legal support to this board through the Bally’s Foundation and, if necessary, create a Bronx- specific arm of the Foundation to administer and help facilitate the local Community Benefit Funds? Bally’s should designate a hired company representative, ideally a CB10 resident with deep knowledge of the surrounding neighborhoods, to work with the board and the community. Our intention is for all functions for the Bronx Community Benefit Fund to be funded by the Community Benefit Funds via Bally’s Bronx. Additionally, the Bally’s Foundation is an entirely separate entity (non-profit) and is not associated with the pledged Community Benefit Fund via Bally’s Bronx.",
+        "status": "supports_partial_promise",
+        "explanation": "This excerpt discusses support to 'this board' and distinguishes the Bally’s Foundation from the pledged Community Benefit Fund. It supports the existence of a board related to fund administration, but does not fully establish that the board is independent and local as stated in the target.",
+        "summary": "Bally’s discusses operational support for a board tied to the Bronx Community Benefit Fund and says the Bally’s Foundation is separate from the pledged fund.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:33:52.496461+00:00"
+      },
+      {
+        "source": {
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys.pdf",
+          "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys.pdf",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "excerpt": "Will Bally’s agree to establish a Community Benefit Fund Board composed of eleven voting",
+        "status": "supports_partial_promise",
+        "explanation": "This truncated official-source excerpt indicates a proposal to establish a Community Benefit Fund Board and begins to describe its composition, but the visible text is incomplete and does not show the full composition or independence terms.",
+        "summary": "Official-source excerpt indicates a proposal to establish a Community Benefit Fund Board.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:33:52.496461+00:00"
+      },
+      {
+        "source": {
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf",
+          "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "excerpt": "Upon awarding of a license we will explore and define the appropriate methodology for providing the financial support for all Community Benefit Fund and associated commitments.",
+        "status": "context_only",
+        "explanation": "This official-source excerpt shows Bally’s had not yet fully defined the methodology for providing financial support for all Community Benefit Fund commitments upon license award. It does not document the exact original board-independence term or a $15 million minimum.",
+        "summary": "Bally’s says it would explore and define the methodology for providing financial support for Community Benefit Fund commitments upon license award.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:33:52.496461+00:00"
+      }
+    ],
+    "coverage": [
+      {
+        "kind": "PROMISE",
+        "criterion": "Bally’s to contribute annually 1% of gross gaming revenue to a Community Benefit Fund, with a stated minimum, from opening of the gaming facility",
+        "promise_gap": "The cited primary-source excerpt documents a minimum of $12.5 million from opening, not the $15 million minimum stated in the target.",
+        "promise_citation_ids": [
+          "c3"
+        ],
+        "delivery_gap": "No cited evidence of actual payments or facility opening.",
+        "delivery_citation_ids": []
+      },
+      {
+        "kind": "PROMISE",
+        "criterion": "Community Benefit Fund to be administered by an independent local board",
+        "promise_gap": "The cited excerpts indicate a Community Benefit Fund Board and discuss its role, but do not directly document that the board is independent and local in the form stated in the target.",
+        "promise_citation_ids": [
+          "c2",
+          "c8"
+        ],
+        "delivery_gap": "No cited evidence that such a board was actually constituted or administered the fund.",
+        "delivery_citation_ids": []
+      }
+    ],
+    "target_status": "IDENTIFIED",
+    "gaps": [
+      "The cited primary-source excerpt documents a minimum of $12.5 million from opening, not the $15 million minimum stated in the target.",
+      "No cited evidence of actual payments or facility opening.",
+      "The cited excerpts indicate a Community Benefit Fund Board and discuss its role, but do not directly document that the board is independent and local in the form stated in the target.",
+      "No cited evidence that such a board was actually constituted or administered the fund."
+    ]
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 10.875,
+    "request_id": "req_8f2c880824cf47708002c5e63ca35ad9",
+    "usage": {
+      "input_tokens": 3511,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 843,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4354
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "evidence_synthesis",
+    "phase": "initial",
+    "capture_count": 12,
+    "selection": {
+      "findings": [
+        {
+          "citation_id": "c3",
+          "summary": "In response to a request that it contribute at least $17.5 million annually or 1% of gross gaming revenue beginning at licensure, Bally’s instead said: “We commit to an annual contribution of 1% of gross gaming revenue with a minimum of $12.5 million from the time the gaming facility is opened,” and added that this was a minimum commitment solely for the Community Benefit Fund, excluding additional commitments.",
+          "status": "Promise documented",
+          "explanation": "This passage directly states Bally’s commitment terms, timing, and that the $12.5 million/1% pledge is only for the Community Benefit Fund. It also shows Bally’s did not accept the asked-for licensure start or $17.5 million minimum in this document.",
+          "excerpt": "Will Bally’s commit to contributing a minimum of seventeen and a half million dollars annually, or one percent of gross gaming revenue, whichever is higher, beginning at the time of licensure rather than waiting until the facility opens? We commit to an annual contribution of 1% of gross gaming revenue with a minimum of $12.5 million from the time the gaming facility is opened. We would highlight that this is a minimum commitment to fund solely the Community Benefit Fund, not inclusive of additional commitments.",
+          "locator": ""
+        },
+        {
+          "citation_id": "c4",
+          "summary": "Bally’s said it would leave “specific funding directives” to the Community Benefit Fund Board, including discretion in selecting investments or other improvements to be made throughout the community.",
+          "status": "Promise documented",
+          "explanation": "This supports that a Community Benefit Fund Board was contemplated to direct spending decisions, but it does not establish the board was independent/local in the exact terms stated or that it was already operating.",
+          "excerpt": "Will the Community Benefit Fund Board and Bally’s codify that projects and institutions within CB10, using it as the nucleus of priority, are funded first before expanding to the broader Bronx, ensuring that CB10 which will be greatly impacted by this project’s needs are fully addressed? Bally’s will leave the specific funding directives to be made by the Community Benefit Fund Board to the Board including discretion in selecting investments or other improvements to be made throughout the community.",
+          "locator": ""
+        },
+        {
+          "citation_id": "c5",
+          "summary": "Bally’s said all Community Benefit Fund distributions would be conducted with “full transparency,” with gaming revenue figures and distribution-calculation methods made public, and that the Community Benefit Fund Board “should provide comprehensive annual reports and presentations” on financial performance, distribution outcomes, and community impact.",
+          "status": "Promise documented",
+          "explanation": "This passage documents promised transparency and an expected reporting role for the board, but the wording about board reports is aspirational ('should provide') rather than proof of actual reports or board constitution.",
+          "excerpt": "Will all distributions be transparent, with public annual reports and presentations to the community? Yes, all distributions from the Community Benefit Fund will be conducted with full transparency. Gaming revenue figures, which form the basis for these distributions, are publicly reported, ensuring that the underlying financial data is accessible to all stakeholders. The calculation methods for determining fund distributions are also made public, allowing for open scrutiny and understanding of how funds are allocated. The Community Benefit Fund Board should provide comprehensive annual reports and presentations outlining the fund's financial performance, distribution outcomes, and the impact of the funded initiatives on the community.",
+          "locator": ""
+        },
+        {
+          "citation_id": "c2",
+          "summary": "When asked whether Bally’s would provide operational support to the board through the Bally’s Foundation, Bally’s replied that its intention was for all functions for the Bronx Community Benefit Fund to be funded via Bally’s Bronx, and that the Bally’s Foundation is an entirely separate nonprofit not associated with the pledged Community Benefit Fund.",
+          "status": "Qualification",
+          "explanation": "This clarifies administration/support context: the source does not confirm that an independent local board would administer the fund through the Bally’s Foundation; instead it distinguishes the Foundation from the pledged fund.",
+          "excerpt": "Will Bally’s provide all operational support including but not limited to staffing, accounting, and legal support to this board through the Bally’s Foundation and, if necessary, create a Bronx- specific arm of the Foundation to administer and help facilitate the local Community Benefit Funds? Bally’s should designate a hired company representative, ideally a CB10 resident with deep knowledge of the surrounding neighborhoods, to work with the board and the community. Our intention is for all functions for the Bronx Community Benefit Fund to be funded by the Community Benefit Funds via Bally’s Bronx. Additionally, the Bally’s Foundation is an entirely separate entity (non-profit) and is not associated with the pledged Community Benefit Fund via Bally’s Bronx.",
+          "locator": ""
+        },
+        {
+          "citation_id": "c12",
+          "summary": "In a later response memo, Bally’s said: “Upon awarding of a license we will explore and define the appropriate methodology for providing the financial support for all Community Benefit Fund and associated commitments.”",
+          "status": "Qualification",
+          "explanation": "This later passage indicates that, at that point, Bally’s had not yet defined the methodology for providing financial support, which limits what can be concluded about final administration arrangements or implementation.",
+          "excerpt": "Upon awarding of a license we will explore and define the appropriate methodology for providing the financial support for all Community Benefit Fund and associated commitments.",
+          "locator": ""
+        },
+        {
+          "citation_id": "c10",
+          "summary": "Casino Reports later reported that Bally’s “raised its minimum annual commitment to the CFTB from $12.5 million to $15 million at the time of the casino opening,” while 1% of gross gaming revenue could be higher than $15 million.",
+          "status": "Context",
+          "explanation": "This is secondary-source reporting of a later increase to $15 million, matching the question’s figure, but the supplied primary-source passages do not directly document that revised term.",
+          "excerpt": "Bally's also raised its minimum annual commitment to the CFTB from $12.5 million to $15 million at the time of the casino opening, though that amount can be higher if 1% of its gross gaming revenue exceeds $15 million.",
+          "locator": ""
+        }
+      ],
+      "gap": "The verified primary-source passages provided here document a $12.5 million minimum from facility opening, not the $15 million minimum in the question. They also do not directly establish that an independent local board was formally constituted to administer the fund, nor provide evidence of actual opening or payments. A primary Bally’s/CAC amendment or final host-community agreement reflecting the later reported $15 million increase would materially affect the answer.",
+      "followup_query": "site:nycasinos.ny.gov Bally's Bronx $15 million 1% gross gaming revenue Community Benefit Fund Board amendment PDF"
+    },
+    "canonical": false
+  },
+  {
+    "type": "evidence_gap_search",
+    "recommended": true,
+    "performed": false,
+    "query": "site:nycasinos.ny.gov Bally's Bronx $15 million 1% gross gaming revenue Community Benefit Fund Board amendment PDF",
+    "gap": "The verified primary-source passages provided here document a $12.5 million minimum from facility opening, not the $15 million minimum in the question. They also do not directly establish that an independent local board was formally constituted to administer the fund, nor provide evidence of actual opening or payments. A primary Bally’s/CAC amendment or final host-community agreement reflecting the later reported $15 million increase would materially affect the answer.",
+    "new_verified_excerpts": 0
+  }
+]

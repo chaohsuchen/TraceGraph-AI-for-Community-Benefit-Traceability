@@ -1,0 +1,43 @@
+{
+  "case": "TG-GOLD-H032",
+  "selected_distinct_urls": 1,
+  "review": {
+    "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc6.hardrock.localbusiness_redactedrevised_0.pdf": {
+      "relationship": "same_host_distinct_or_unresolved_document",
+      "identical_content_urls": [],
+      "old_passages_repeated": [],
+      "snapshot_consistent": true,
+      "original_status": {
+        "status": "readable",
+        "characters": 36732,
+        "sha256": "4356ade1a7e0af75f812fa3178dfedf285efee5c83207207e65bab80fd59300b"
+      },
+      "same_host_or_filename_compared": [
+        {
+          "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+          "status": "TimeoutError",
+          "characters": 0,
+          "sha256": null
+        },
+        {
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+          "status": "readable",
+          "characters": 31503,
+          "sha256": "279959cdb860744d9cf1cc3b47a719682ff45e1521d38623820f203275146ac9"
+        },
+        {
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+          "status": "readable",
+          "characters": 8280,
+          "sha256": "d58f398141d137855778184a3689f2cc36936ec8d8b4aa30139046ea8a690da4"
+        },
+        {
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+          "status": "unreadable",
+          "characters": 0,
+          "sha256": null
+        }
+      ]
+    }
+  }
+}

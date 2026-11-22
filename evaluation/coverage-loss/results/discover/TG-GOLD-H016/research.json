@@ -1,0 +1,302 @@
+{
+  "case_id": "TG-GOLD-H016",
+  "reference_sha256": "719bef566e05884f328608d2977e36e4896061543ba5ef90a7bd6399b5fc78e7",
+  "query": "Bally's construction targets: 10 percent women, 40 percent minorities, 10 percent service-disabled veterans.",
+  "model": "gpt-5.4",
+  "web_search_model": "gpt-5.4",
+  "started_at": "2026-11-22T09:38:27.067347+00:00",
+  "outcome": "RESOLVED",
+  "graph": {
+    "commitment": {
+      "title": "Proposed Bally’s Bronx construction workforce diversity targets",
+      "description": "Bally’s documented construction workforce diversity targets for its Bronx project: 40% minority workers, 10% women workers, and 10% veteran/service-disabled veteran workers.",
+      "original_text": "The following table illustrates the significant workforce diversity targets for the Bally’s Bronx construction project. We will create 15,000 union construction jobs, including 6,000 (40% utilization) minority workers, 1,500 women workers (10%) and 1,500 veteran workers (10%).",
+      "responsible_entity_raw": "Bally’s",
+      "beneficiary": {
+        "name": "construction workforce",
+        "category": "workers"
+      },
+      "obligation_type": "target",
+      "amount_value": "40% minority workers; 10% women workers; 10% veteran/service-disabled veteran workers",
+      "term_periodicity": null,
+      "geographic_scope": "Bronx, New York",
+      "condition_contingency": "Construction phase / Bronx construction project",
+      "milestone": null,
+      "notes": "Sources describe these as construction workforce diversity targets or goals, including targets for contractors and subcontractors. One source phrases the veteran category as 'veteran workers' and another as 'service-disabled veterans.'",
+      "id": "commitment-5742bacd-698c-4901-86e2-ae6a5fa31bc9",
+      "original_promise": {
+        "document_id": null,
+        "source": {
+          "id": "source-8b368f83-cf4d-4049-b9c0-eccb4e5f4c86",
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evaldiv6.ballys.mwbeconstructiongoals_redacted.pdf",
+          "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evaldiv6.ballys.mwbeconstructiongoals_redacted.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2025/07/evaldiv6.ballys.mwbeconstructiongoals_redacted.pdf",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "locator": "Cited passage",
+        "char_start": null,
+        "char_end": null
+      }
+    },
+    "organization": {
+      "id": "org-43ee8a61-041f-4d2f-9277-f007e050b657",
+      "name": "Bally's"
+    },
+    "assessment": {
+      "label": "UNVERIFIED",
+      "verdict": "Delivery unverified for: 10% women workers in Bally's Bronx construction workforce; 40% minority workers in Bally's Bronx construction workforce; 10% service-disabled veterans/veteran workers in Bally's Bronx construction workforce",
+      "reasoning": "Requested scope: Bally's construction targets: 10 percent women, 40 percent minorities, 10 percent service-disabled veterans.\n\n10% women workers in Bally's Bronx construction workforce\nStatus: UNVERIFIED\nThe cited records document the original target. c1 states, \"We will create 15,000 union construction jobs, including ... 1,500 women workers (10%).\" c2 says Bally's \"established clear diversity targets\" of \"10% women workers\" for contractors and subcontractors, and c3-c4 likewise describe Bally's construction-phase or proposed targets. But these excerpts are still statements of targets or proposals, not evidence that the Bronx construction workforce actually reached 10% women.\nPromised scope: Promisor: Bally's. Intended beneficiaries: women construction workers on the Bally's Bronx construction project workforce. Location: Bronx construction project. Benefit/action promised: create union construction jobs with 10% women worker utilization, described as a workforce diversity target for the project.\nObserved scope: Observed evidence only documents Bally's proposed or sought construction workforce targets for the Bronx project; it does not show actual women workers employed, actual workforce composition, or achieved 10% women participation at the project site.\nEvidence gap: No cited evidence shows actual delivery for the requested population and location: no report of the actual Bronx construction workforce composition, no completed hiring results, and no proof that 10% women participation was achieved.\nPromise evidence: c1, c2, c3, c4\n\n40% minority workers in Bally's Bronx construction workforce\nStatus: UNVERIFIED\nThe promise is documented. c1 says Bally's would create jobs \"including 6,000 (40% utilization) minority workers,\" and c2 says Bally's set contractor and subcontractor targets of \"40% minority workers.\" c3-c4 repeat that Bally's sought or proposed a 40% minority construction workforce target. None of these excerpts provides outcome evidence that the Bronx project's actual construction workforce reached that share.\nPromised scope: Promisor: Bally's. Intended beneficiaries: minority construction workers on the Bally's Bronx construction project workforce. Location: Bronx construction project. Benefit/action promised: create union construction jobs with 40% minority worker utilization, described as a workforce diversity target for the project.\nObserved scope: Observed evidence only documents Bally's proposed or sought construction workforce targets for the Bronx project; it does not show actual minority workers employed, actual workforce composition, or achieved 40% minority participation at the project site.\nEvidence gap: No cited evidence establishes actual performance for the requested Bronx construction workforce—only proposed targets are shown, not achieved minority workforce participation.\nPromise evidence: c1, c2, c3, c4\n\n10% service-disabled veterans/veteran workers in Bally's Bronx construction workforce\nStatus: UNVERIFIED\nThe cited sources document the target, though with slightly different wording. c1 refers to \"1,500 veteran workers (10%),\" while c3-c4 say \"10 percent service-disabled veterans\" or \"10 percent service-disabled veterans\" as proposed construction goals. That is enough to document the commitment/target as framed in the request. But the evidence still does not show actual Bronx construction workforce results meeting the 10% level.\nPromised scope: Promisor: Bally's. Intended beneficiaries: veteran or service-disabled veteran construction workers on the Bally's Bronx construction project workforce. Location: Bronx construction project. Benefit/action promised: create union construction jobs with 10% veteran/service-disabled veteran worker utilization, described as a workforce diversity target for the project.\nObserved scope: Observed evidence only documents Bally's proposed or sought construction workforce targets for the Bronx project; it does not show actual veteran or service-disabled veteran workers employed, actual workforce composition, or achieved 10% participation at the project site.\nEvidence gap: No cited evidence shows actual veteran or service-disabled veteran participation in the Bronx construction workforce or that the 10% target was achieved.\nPromise evidence: c1, c2, c3, c4\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “The following table illustrates the significant workforce diversity targets for the Bally’s Bronx construction project. We will create 15,000 union construction jobs, including 6,000 (40% utilization) minority workers, 1,500 women workers (10%) and 1,500 veteran workers (10%).”\nhttps://nycasinos.ny.gov/system/files/documents/2025/07/evaldiv6.ballys.mwbeconstructiongoals_redacted.pdf\n\nc2: “Drawing from our successful approach to construction workforce diversity in other markets such as Chicago where we have exceeded our stated goals, we have established clear diversity targets for our contractors and subcontractors that align with our overall project goals: 40% minority workers, 10% women workers and 10% veteran workers.”\nhttps://nycasinos.ny.gov/ballys-new-york-casino-diversity-framework-current-and-planned-diversity-efforts-mwbe-contracts\n\nc3: “In the construction phase, Bally’s seeks to achieve a workforce drawn primarily from the Bronx and made up of approximately 10 percent women, 10 percent service-disabled veterans, and 40 percent minority construction workers.”\nhttps://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf\n\nc4: “For Minority and Women-Owned Business Enterprises (MWBE) goals during construction, Bally’s proposed targets of 10 percent women, 40 percent minorities, and 10 percent service-disabled veterans.”\nhttps://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "verification_date": "2026-11-22"
+    },
+    "findings": [
+      {
+        "id": "finding-85de930c-224a-4612-bed5-390c02ebdb1c",
+        "claim": "Bally’s documented a construction workforce commitment for its Bronx project to create 15,000 union construction jobs, including 6,000 minority workers (40%), 1,500 women workers (10%), and 1,500 veteran workers (10%), as stated in its 2025 submission.",
+        "supports": [
+          {
+            "id": "support-e78a85ce-aad5-4d62-a014-6893fc91e97a",
+            "source": {
+              "id": "source-a7785dea-8795-4f3f-ac5a-2be3af5a6033",
+              "url": "https://nycasinos.ny.gov/ballys-new-york-casino-diversity-framework-current-and-planned-diversity-efforts-mwbe-contracts",
+              "title": "https://nycasinos.ny.gov/ballys-new-york-casino-diversity-framework-current-and-planned-diversity-efforts-mwbe-contracts",
+              "citation": "https://nycasinos.ny.gov/ballys-new-york-casino-diversity-framework-current-and-planned-diversity-efforts-mwbe-contracts",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Promise documented",
+            "excerpt": "Drawing from our successful approach to construction workforce diversity in other markets such as Chicago where we have exceeded our stated goals, we have established clear diversity targets for our contractors and subcontractors that align with our overall project goals: 40% minority workers, 10% women workers and 10% veteran workers.",
+            "locator": "Cited passage",
+            "summary": "Bally’s said it had established clear diversity targets for its contractors and subcontractors aligned with overall project goals: 40% minority workers, 10% women workers, and 10% veteran workers.",
+            "explanation": "This passage identifies the promising party, frames the targets as contractor and subcontractor goals, and specifies the three percentages.",
+            "retrieved_at": "2026-11-22T09:38:48.56291+00:00"
+          },
+          {
+            "id": "support-f7059bd8-73b4-4a46-a21d-9fbef9c363c3",
+            "source": {
+              "id": "source-8b368f83-cf4d-4049-b9c0-eccb4e5f4c86",
+              "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evaldiv6.ballys.mwbeconstructiongoals_redacted.pdf",
+              "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evaldiv6.ballys.mwbeconstructiongoals_redacted.pdf",
+              "citation": "https://nycasinos.ny.gov/system/files/documents/2025/07/evaldiv6.ballys.mwbeconstructiongoals_redacted.pdf",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Promise documented",
+            "excerpt": "The following table illustrates the significant workforce diversity targets for the Bally’s Bronx construction project. We will create 15,000 union construction jobs, including 6,000 (40% utilization) minority workers, 1,500 women workers (10%) and 1,500 veteran workers (10%).",
+            "locator": "Cited passage",
+            "summary": "For the Bally’s Bronx construction project, Bally’s said it would create 15,000 union construction jobs, including 6,000 minority workers (40% utilization), 1,500 women workers (10%), and 1,500 veteran workers (10%).",
+            "explanation": "This passage directly states Bally’s own workforce diversity targets for the Bronx construction project and quantifies them against an estimated 15,000 construction jobs.",
+            "retrieved_at": "2026-11-22T09:38:48.56291+00:00"
+          }
+        ]
+      },
+      {
+        "id": "finding-6144a8cf-83b8-4a2f-b034-b22c6d2f86dd",
+        "claim": "Bally’s also described the construction-phase workforce targets as approximately 40% minority workers, 10% women, and 10% service-disabled veterans, with the workforce drawn primarily from the Bronx, as reflected in late-2025 and March 2026 materials.",
+        "supports": [
+          {
+            "id": "support-460c9fdd-eb8d-4d0d-a893-a4237b7e83b5",
+            "source": {
+              "id": "source-b563271b-1b0d-4c62-a98d-d3bb198d8a13",
+              "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+              "title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+              "citation": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Context",
+            "excerpt": "For Minority and Women-Owned Business Enterprises (MWBE) goals during construction, Bally’s proposed targets of 10 percent women, 40 percent minorities, and 10 percent service-disabled veterans.",
+            "locator": "Cited passage",
+            "summary": "The New York Gaming Facility Location Board's final report said Bally’s proposed construction targets were 10 percent women, 40 percent minorities, and 10 percent service-disabled veterans.",
+            "explanation": "This independent summary confirms how the proposal was described in the state board's final report and uses the service-disabled veteran formulation.",
+            "retrieved_at": "2026-11-22T09:38:48.56291+00:00"
+          },
+          {
+            "id": "support-835a7c5c-046c-4bc6-b6d5-0a883340e9c8",
+            "source": {
+              "id": "source-a88fe0af-7a81-4d5e-b8bd-311d4d5f8de7",
+              "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+              "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+              "citation": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Qualification",
+            "excerpt": "In the construction phase, Bally’s seeks to achieve a workforce drawn primarily from the Bronx and made up of approximately 10 percent women, 10 percent service-disabled veterans, and 40 percent minority construction workers.",
+            "locator": "Cited passage",
+            "summary": "In the construction phase, Bally’s sought a workforce drawn primarily from the Bronx and made up of approximately 10 percent women, 10 percent service-disabled veterans, and 40 percent minority construction workers.",
+            "explanation": "This passage qualifies the targets by tying them specifically to the construction phase, describing them as approximate, and specifying service-disabled veterans rather than veterans generally, while adding the local-hiring context.",
+            "retrieved_at": "2026-11-22T09:38:48.56291+00:00"
+          }
+        ]
+      }
+    ],
+    "relations": [],
+    "assessment_trace": {
+      "not_yet_due": [],
+      "criteria": [
+        {
+          "criterion": "10% women workers in Bally's Bronx construction workforce",
+          "scope_criteria": [
+            "s1"
+          ],
+          "promise_scope": "Promisor: Bally's. Intended beneficiaries: women construction workers on the Bally's Bronx construction project workforce. Location: Bronx construction project. Benefit/action promised: create union construction jobs with 10% women worker utilization, described as a workforce diversity target for the project.",
+          "observed_scope": "Observed evidence only documents Bally's proposed or sought construction workforce targets for the Bronx project; it does not show actual women workers employed, actual workforce composition, or achieved 10% women participation at the project site.",
+          "promise_citation_ids": [
+            "c1",
+            "c2",
+            "c3",
+            "c4"
+          ],
+          "delivery_citation_ids": [],
+          "delivery_status": "UNVERIFIED",
+          "timing_requirement": "",
+          "explanation": "The cited records document the original target. c1 states, \"We will create 15,000 union construction jobs, including ... 1,500 women workers (10%).\" c2 says Bally's \"established clear diversity targets\" of \"10% women workers\" for contractors and subcontractors, and c3-c4 likewise describe Bally's construction-phase or proposed targets. But these excerpts are still statements of targets or proposals, not evidence that the Bronx construction workforce actually reached 10% women.",
+          "gap": "No cited evidence shows actual delivery for the requested population and location: no report of the actual Bronx construction workforce composition, no completed hiring results, and no proof that 10% women participation was achieved.",
+          "delivery_support": []
+        },
+        {
+          "criterion": "40% minority workers in Bally's Bronx construction workforce",
+          "scope_criteria": [
+            "s2"
+          ],
+          "promise_scope": "Promisor: Bally's. Intended beneficiaries: minority construction workers on the Bally's Bronx construction project workforce. Location: Bronx construction project. Benefit/action promised: create union construction jobs with 40% minority worker utilization, described as a workforce diversity target for the project.",
+          "observed_scope": "Observed evidence only documents Bally's proposed or sought construction workforce targets for the Bronx project; it does not show actual minority workers employed, actual workforce composition, or achieved 40% minority participation at the project site.",
+          "promise_citation_ids": [
+            "c1",
+            "c2",
+            "c3",
+            "c4"
+          ],
+          "delivery_citation_ids": [],
+          "delivery_status": "UNVERIFIED",
+          "timing_requirement": "",
+          "explanation": "The promise is documented. c1 says Bally's would create jobs \"including 6,000 (40% utilization) minority workers,\" and c2 says Bally's set contractor and subcontractor targets of \"40% minority workers.\" c3-c4 repeat that Bally's sought or proposed a 40% minority construction workforce target. None of these excerpts provides outcome evidence that the Bronx project's actual construction workforce reached that share.",
+          "gap": "No cited evidence establishes actual performance for the requested Bronx construction workforce—only proposed targets are shown, not achieved minority workforce participation.",
+          "delivery_support": []
+        },
+        {
+          "criterion": "10% service-disabled veterans/veteran workers in Bally's Bronx construction workforce",
+          "scope_criteria": [
+            "s3"
+          ],
+          "promise_scope": "Promisor: Bally's. Intended beneficiaries: veteran or service-disabled veteran construction workers on the Bally's Bronx construction project workforce. Location: Bronx construction project. Benefit/action promised: create union construction jobs with 10% veteran/service-disabled veteran worker utilization, described as a workforce diversity target for the project.",
+          "observed_scope": "Observed evidence only documents Bally's proposed or sought construction workforce targets for the Bronx project; it does not show actual veteran or service-disabled veteran workers employed, actual workforce composition, or achieved 10% participation at the project site.",
+          "promise_citation_ids": [
+            "c1",
+            "c2",
+            "c3",
+            "c4"
+          ],
+          "delivery_citation_ids": [],
+          "delivery_status": "UNVERIFIED",
+          "timing_requirement": "",
+          "explanation": "The cited sources document the target, though with slightly different wording. c1 refers to \"1,500 veteran workers (10%),\" while c3-c4 say \"10 percent service-disabled veterans\" or \"10 percent service-disabled veterans\" as proposed construction goals. That is enough to document the commitment/target as framed in the request. But the evidence still does not show actual Bronx construction workforce results meeting the 10% level.",
+          "gap": "No cited evidence shows actual veteran or service-disabled veteran participation in the Bronx construction workforce or that the 10% target was achieved.",
+          "delivery_support": []
+        }
+      ],
+      "label": "UNVERIFIED",
+      "verdict": "Delivery unverified for: 10% women workers in Bally's Bronx construction workforce; 40% minority workers in Bally's Bronx construction workforce; 10% service-disabled veterans/veteran workers in Bally's Bronx construction workforce",
+      "reasoning": "Requested scope: Bally's construction targets: 10 percent women, 40 percent minorities, 10 percent service-disabled veterans.\n\n10% women workers in Bally's Bronx construction workforce\nStatus: UNVERIFIED\nThe cited records document the original target. c1 states, \"We will create 15,000 union construction jobs, including ... 1,500 women workers (10%).\" c2 says Bally's \"established clear diversity targets\" of \"10% women workers\" for contractors and subcontractors, and c3-c4 likewise describe Bally's construction-phase or proposed targets. But these excerpts are still statements of targets or proposals, not evidence that the Bronx construction workforce actually reached 10% women.\nPromised scope: Promisor: Bally's. Intended beneficiaries: women construction workers on the Bally's Bronx construction project workforce. Location: Bronx construction project. Benefit/action promised: create union construction jobs with 10% women worker utilization, described as a workforce diversity target for the project.\nObserved scope: Observed evidence only documents Bally's proposed or sought construction workforce targets for the Bronx project; it does not show actual women workers employed, actual workforce composition, or achieved 10% women participation at the project site.\nEvidence gap: No cited evidence shows actual delivery for the requested population and location: no report of the actual Bronx construction workforce composition, no completed hiring results, and no proof that 10% women participation was achieved.\nPromise evidence: c1, c2, c3, c4\n\n40% minority workers in Bally's Bronx construction workforce\nStatus: UNVERIFIED\nThe promise is documented. c1 says Bally's would create jobs \"including 6,000 (40% utilization) minority workers,\" and c2 says Bally's set contractor and subcontractor targets of \"40% minority workers.\" c3-c4 repeat that Bally's sought or proposed a 40% minority construction workforce target. None of these excerpts provides outcome evidence that the Bronx project's actual construction workforce reached that share.\nPromised scope: Promisor: Bally's. Intended beneficiaries: minority construction workers on the Bally's Bronx construction project workforce. Location: Bronx construction project. Benefit/action promised: create union construction jobs with 40% minority worker utilization, described as a workforce diversity target for the project.\nObserved scope: Observed evidence only documents Bally's proposed or sought construction workforce targets for the Bronx project; it does not show actual minority workers employed, actual workforce composition, or achieved 40% minority participation at the project site.\nEvidence gap: No cited evidence establishes actual performance for the requested Bronx construction workforce—only proposed targets are shown, not achieved minority workforce participation.\nPromise evidence: c1, c2, c3, c4\n\n10% service-disabled veterans/veteran workers in Bally's Bronx construction workforce\nStatus: UNVERIFIED\nThe cited sources document the target, though with slightly different wording. c1 refers to \"1,500 veteran workers (10%),\" while c3-c4 say \"10 percent service-disabled veterans\" or \"10 percent service-disabled veterans\" as proposed construction goals. That is enough to document the commitment/target as framed in the request. But the evidence still does not show actual Bronx construction workforce results meeting the 10% level.\nPromised scope: Promisor: Bally's. Intended beneficiaries: veteran or service-disabled veteran construction workers on the Bally's Bronx construction project workforce. Location: Bronx construction project. Benefit/action promised: create union construction jobs with 10% veteran/service-disabled veteran worker utilization, described as a workforce diversity target for the project.\nObserved scope: Observed evidence only documents Bally's proposed or sought construction workforce targets for the Bronx project; it does not show actual veteran or service-disabled veteran workers employed, actual workforce composition, or achieved 10% participation at the project site.\nEvidence gap: No cited evidence shows actual veteran or service-disabled veteran participation in the Bronx construction workforce or that the 10% target was achieved.\nPromise evidence: c1, c2, c3, c4\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “The following table illustrates the significant workforce diversity targets for the Bally’s Bronx construction project. We will create 15,000 union construction jobs, including 6,000 (40% utilization) minority workers, 1,500 women workers (10%) and 1,500 veteran workers (10%).”\nhttps://nycasinos.ny.gov/system/files/documents/2025/07/evaldiv6.ballys.mwbeconstructiongoals_redacted.pdf\n\nc2: “Drawing from our successful approach to construction workforce diversity in other markets such as Chicago where we have exceeded our stated goals, we have established clear diversity targets for our contractors and subcontractors that align with our overall project goals: 40% minority workers, 10% women workers and 10% veteran workers.”\nhttps://nycasinos.ny.gov/ballys-new-york-casino-diversity-framework-current-and-planned-diversity-efforts-mwbe-contracts\n\nc3: “In the construction phase, Bally’s seeks to achieve a workforce drawn primarily from the Bronx and made up of approximately 10 percent women, 10 percent service-disabled veterans, and 40 percent minority construction workers.”\nhttps://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf\n\nc4: “For Minority and Women-Owned Business Enterprises (MWBE) goals during construction, Bally’s proposed targets of 10 percent women, 40 percent minorities, and 10 percent service-disabled veterans.”\nhttps://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "refutation": [],
+      "scope_anchors": {
+        "s1": "Bally’s Bronx construction workforce target of 10% women workers",
+        "s2": "Bally’s Bronx construction workforce target of 40% minority workers",
+        "s3": "Bally’s Bronx construction workforce target of 10% service-disabled veterans/veteran workers"
+      },
+      "citations": {
+        "c1": {
+          "source": {
+            "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evaldiv6.ballys.mwbeconstructiongoals_redacted.pdf",
+            "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evaldiv6.ballys.mwbeconstructiongoals_redacted.pdf",
+            "citation": "https://nycasinos.ny.gov/system/files/documents/2025/07/evaldiv6.ballys.mwbeconstructiongoals_redacted.pdf"
+          },
+          "excerpt": "The following table illustrates the significant workforce diversity targets for the Bally’s Bronx construction project. We will create 15,000 union construction jobs, including 6,000 (40% utilization) minority workers, 1,500 women workers (10%) and 1,500 veteran workers (10%).",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:38:48.562910+00:00",
+          "finding_id": "finding-85de930c-224a-4612-bed5-390c02ebdb1c",
+          "support_ids": [
+            "support-f7059bd8-73b4-4a46-a21d-9fbef9c363c3"
+          ]
+        },
+        "c2": {
+          "source": {
+            "title": "https://nycasinos.ny.gov/ballys-new-york-casino-diversity-framework-current-and-planned-diversity-efforts-mwbe-contracts",
+            "url": "https://nycasinos.ny.gov/ballys-new-york-casino-diversity-framework-current-and-planned-diversity-efforts-mwbe-contracts",
+            "citation": "https://nycasinos.ny.gov/ballys-new-york-casino-diversity-framework-current-and-planned-diversity-efforts-mwbe-contracts"
+          },
+          "excerpt": "Drawing from our successful approach to construction workforce diversity in other markets such as Chicago where we have exceeded our stated goals, we have established clear diversity targets for our contractors and subcontractors that align with our overall project goals: 40% minority workers, 10% women workers and 10% veteran workers.",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:38:48.562910+00:00",
+          "finding_id": "finding-85de930c-224a-4612-bed5-390c02ebdb1c",
+          "support_ids": [
+            "support-e78a85ce-aad5-4d62-a014-6893fc91e97a"
+          ]
+        },
+        "c3": {
+          "source": {
+            "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+            "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+            "citation": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf"
+          },
+          "excerpt": "In the construction phase, Bally’s seeks to achieve a workforce drawn primarily from the Bronx and made up of approximately 10 percent women, 10 percent service-disabled veterans, and 40 percent minority construction workers.",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:38:48.562910+00:00",
+          "finding_id": "finding-6144a8cf-83b8-4a2f-b034-b22c6d2f86dd",
+          "support_ids": [
+            "support-835a7c5c-046c-4bc6-b6d5-0a883340e9c8"
+          ]
+        },
+        "c4": {
+          "source": {
+            "title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+            "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+            "citation": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026"
+          },
+          "excerpt": "For Minority and Women-Owned Business Enterprises (MWBE) goals during construction, Bally’s proposed targets of 10 percent women, 40 percent minorities, and 10 percent service-disabled veterans.",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:38:48.562910+00:00",
+          "finding_id": "finding-6144a8cf-83b8-4a2f-b034-b22c6d2f86dd",
+          "support_ids": [
+            "support-460c9fdd-eb8d-4d0d-a893-a4237b7e83b5"
+          ]
+        }
+      },
+      "scope_gap": ""
+    }
+  },
+  "job_result": {
+    "run_id": null,
+    "outcome": "RESOLVED",
+    "commitment_id": "commitment-5742bacd-698c-4901-86e2-ae6a5fa31bc9",
+    "unmatched_records": [
+      {
+        "excerpt": "Bally’s Chicago has set a 46% MBE/WBE construction goal, exceeding city requirements.",
+        "source_url": "https://casinos.ballys.com/chicago/faq.htm",
+        "source_title": "https://casinos.ballys.com/chicago/faq.htm"
+      },
+      {
+        "excerpt": "And, we have met with nonprofit groups to discuss workforce development initiatives to help us meet our women, minority, veteran, and persons with disability hiring goals by reaching out to and recruiting Chicagoans who are seeking careers and job growth in this dynamic industry.",
+        "source_url": "https://casinos.ballys.com/chicago/about-ballys.htm",
+        "source_title": "https://casinos.ballys.com/chicago/about-ballys.htm"
+      },
+      {
+        "excerpt": "In addition to our business enterprise goals, we are establishing the following workforce diversity targets for the estimated 15,000 construction jobs that will be created:",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork4.ballys.mwbe_redacted.pdf",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork4.ballys.mwbe_redacted.pdf"
+      },
+      {
+        "excerpt": "Veterans 10% 1,500",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork4.ballys.mwbe_redacted.pdf",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork4.ballys.mwbe_redacted.pdf"
+      }
+    ]
+  },
+  "finished_at": "2026-11-22T09:40:06.885623+00:00"
+}

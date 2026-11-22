@@ -1,0 +1,110 @@
+{
+  "case_ids": [
+    "TG-GOLD-A001",
+    "TG-GOLD-A006",
+    "TG-GOLD-A034",
+    "TG-GOLD-A036",
+    "TG-GOLD-A061",
+    "TG-GOLD-H001",
+    "TG-GOLD-H002",
+    "TG-GOLD-H003",
+    "TG-GOLD-H005",
+    "TG-GOLD-H007",
+    "TG-GOLD-H008",
+    "TG-GOLD-H009",
+    "TG-GOLD-H010",
+    "TG-GOLD-H011",
+    "TG-GOLD-H012",
+    "TG-GOLD-H016",
+    "TG-GOLD-H017",
+    "TG-GOLD-H022",
+    "TG-GOLD-H023",
+    "TG-GOLD-H027",
+    "TG-GOLD-H030",
+    "TG-GOLD-H032"
+  ],
+  "arms": {
+    "control": {
+      "cases": 22,
+      "hits": 39,
+      "facts": 176,
+      "supported": 202,
+      "claims": 215,
+      "overclaims": 2,
+      "verdicts": 11,
+      "identity_match": 16,
+      "wins_ties_losses": [
+        0,
+        22,
+        0
+      ],
+      "gain_mechanisms": {},
+      "lost": 0,
+      "paired_sign_flip_two_sided_p": 1.0,
+      "added_findings": 0,
+      "cases_with_additions": 0,
+      "readable_docs": 0,
+      "document_attempts": 0,
+      "incremental_production": {
+        "requests": 0,
+        "web_searches": 0,
+        "estimated_usd": 0.0
+      },
+      "incremental_judge": {
+        "requests": 0,
+        "web_searches": 0,
+        "estimated_usd": 0.0
+      }
+    },
+    "discover": {
+      "cases": 22,
+      "hits": 54,
+      "facts": 176,
+      "supported": 302,
+      "claims": 316,
+      "overclaims": 2,
+      "verdicts": 11,
+      "identity_match": 19,
+      "wins_ties_losses": [
+        9,
+        12,
+        1
+      ],
+      "gain_mechanisms": {
+        "new_citation": 10,
+        "prior_fact_gated_by_identity": 5,
+        "reclassified_using_only_original_citations": 1
+      },
+      "lost": 1,
+      "paired_sign_flip_two_sided_p": 0.013671875,
+      "added_findings": 48,
+      "cases_with_additions": 15,
+      "readable_docs": 40,
+      "document_attempts": 66,
+      "incremental_production": {
+        "input_tokens": 375280,
+        "output_tokens": 23896,
+        "cached_input_tokens": 93184,
+        "requests": 43,
+        "web_searches": 56,
+        "estimated_usd": 1.6469759999999998
+      },
+      "incremental_judge": {
+        "input_tokens": 167706,
+        "output_tokens": 92928,
+        "cached_input_tokens": 46080,
+        "requests": 35,
+        "web_searches": 0,
+        "estimated_usd": 1.7095050000000003
+      }
+    }
+  },
+  "diagnostic_usage": {
+    "input_tokens": 29180,
+    "output_tokens": 5822,
+    "cached_input_tokens": 0,
+    "requests": 12,
+    "web_searches": 0,
+    "estimated_usd": 0.16028
+  }
+}

@@ -1,0 +1,2214 @@
+{
+  "input_sha256": "f7570c7f1e05bd03b20234b93b2e5ebd7c650846f1ff2e193ae75f25cb9c0a5b",
+  "judge_model": "gpt-5.4",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "judge_version": "tracegraph-nli-v4-owned-quotes",
+  "started_at": "2026-11-22T10:25:01.298994+00:00",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 48.85999999998603,
+      "request_id": "req_0f5cf430bb1d48e28b0ea94e3ef24cea",
+      "usage": {
+        "input_tokens": 4629,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 5817,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 10446
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 43.15600000007544,
+      "request_id": "req_cf5675f4b5774692b3a36d2467075742",
+      "usage": {
+        "input_tokens": 4667,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 3840
+        },
+        "output_tokens": 5535,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 10202
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 11.061999999918044,
+      "request_id": "req_d30eba8295054734b0327630867e4160",
+      "usage": {
+        "input_tokens": 10998,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 2816
+        },
+        "output_tokens": 1158,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 12156
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "invalid_responses": [
+    {
+      "stage": "evidence",
+      "response": {
+        "identity": {
+          "label": "MATCH",
+          "reason": "The returned commitment and question identify the same HRMP promise: $150 million to a community impact fund over a 30-year license term, directly stated in the cited board passage."
+        },
+        "findings": [
+          {
+            "finding_id": "finding-7847f7d1-6220-4079-ab3e-cc51830876fe",
+            "claims": [
+              {
+                "claim": "Board materials state the project includes $761 million in community benefits as part of project cost.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+                  "support-95a1eedf-0297-4916-97cc-3b1c8b717ad3"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+                    "quote": "the project includes $761 million in community benefits as part of the project cost",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote expressly states the $761 million community benefits amount and that it is part of project cost."
+                  },
+                  {
+                    "citation_id": "support-95a1eedf-0297-4916-97cc-3b1c8b717ad3",
+                    "quote": "the project includes $761 million in community benefits as part of the project cost",
+                    "label": "ENTAILMENT",
+                    "reason": "The duplicate passage also expressly states the $761 million community benefits amount and scope."
+                  }
+                ],
+                "reason": "Both attached excerpts verbatim state $761 million in community benefits as part of project cost."
+              },
+              {
+                "claim": "Board materials state a separate $150 million has been proposed in ongoing commitments to a community impact fund.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+                  "support-95a1eedf-0297-4916-97cc-3b1c8b717ad3"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+                    "quote": "Another $150 million has been proposed in ongoing commitments to a community impact fund",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states a separate proposed $150 million for the community impact fund."
+                  },
+                  {
+                    "citation_id": "support-95a1eedf-0297-4916-97cc-3b1c8b717ad3",
+                    "quote": "Another $150 million has been proposed in ongoing commitments to a community impact fund",
+                    "label": "ENTAILMENT",
+                    "reason": "The duplicate passage directly states the same separate proposed $150 million."
+                  }
+                ],
+                "reason": "Both excerpts expressly describe a separate proposed $150 million in ongoing commitments to the fund."
+              },
+              {
+                "claim": "Board materials state the applicant committed to this $150 million over a 30-year license term.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+                  "support-95a1eedf-0297-4916-97cc-3b1c8b717ad3"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+                    "quote": "The Applicant committed to this $150 million over a 30-year license term.",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the commitment, amount, and 30-year term."
+                  },
+                  {
+                    "citation_id": "support-95a1eedf-0297-4916-97cc-3b1c8b717ad3",
+                    "quote": "The Applicant committed to this $150 million over a 30-year license term.",
+                    "label": "ENTAILMENT",
+                    "reason": "The duplicate passage directly states the commitment, amount, and 30-year term."
+                  }
+                ],
+                "reason": "Both excerpts verbatim state the applicant committed to $150 million over a 30-year license term."
+              }
+            ]
+          },
+          {
+            "finding_id": "finding-bb478a7e-d0f6-4198-8a8a-76260808a2bb",
+            "claims": [
+              {
+                "claim": "In September 2025, HRMP stated that the Community Impact Fund as proposed in the application was valued at $163 million over the 30-year length of the license.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3",
+                    "quote": "The Community Impact Fund, as proposed in the Application, is valued at $163 million over the 30-year length of the license.",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the $163 million valuation and 30-year license length."
+                  }
+                ],
+                "reason": "The attached excerpt verbatim states the fund was valued at $163 million over the 30-year license length."
+              },
+              {
+                "claim": "In September 2025, HRMP stated that the commitments would be binding under the gaming license.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3",
+                    "quote": "Our commitments will be binding under the gaming license, ensuring accountability and delivery.",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote expressly states the commitments will be binding under the gaming license."
+                  }
+                ],
+                "reason": "The excerpt directly states the commitments will be binding under the gaming license."
+              }
+            ]
+          },
+          {
+            "finding_id": "finding-f3b4149b-e63e-4237-a0f3-38113cdb3239",
+            "claims": [
+              {
+                "claim": "In September 2025, HRMP stated the Community Impact Fund would be structured for annual disbursements.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-7b7dcaf8-d394-41e5-b878-03ca5505b6c1"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-7b7dcaf8-d394-41e5-b878-03ca5505b6c1",
+                    "quote": "The Fund is structured for annual disbursements",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states annual disbursements."
+                  }
+                ],
+                "reason": "The excerpt expressly says the fund is structured for annual disbursements."
+              },
+              {
+                "claim": "In September 2025, HRMP stated the annual disbursements would guarantee stable support for nonprofits, parks, and cultural institutions.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-7b7dcaf8-d394-41e5-b878-03ca5505b6c1"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-7b7dcaf8-d394-41e5-b878-03ca5505b6c1",
+                    "quote": "guaranteeing stable support for nonprofits, parks, and cultural institutions",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote expressly identifies the supported beneficiaries and the stated guarantee."
+                  }
+                ],
+                "reason": "The excerpt directly names nonprofits, parks, and cultural institutions as the supported beneficiaries."
+              }
+            ]
+          },
+          {
+            "finding_id": "finding-09a3a214-601e-4482-a795-037bcf117384",
+            "claims": [
+              {
+                "claim": "HRMP described another $25 million dedicated to three neighborhood projects: East Elmhurst health clinic, Corona/Jackson Heights senior/youth center, and Flushing addiction services.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-b5971bef-1cdf-4a7d-ae9d-549da341cd0e"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-b5971bef-1cdf-4a7d-ae9d-549da341cd0e",
+                    "quote": "There is another $25 million dedicated to three neighborhood projects: East Elmhurst health clinic, Corona/Jackson Heights senior/youth center, and Flushing addiction services.",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the $25 million amount and the three listed projects."
+                  }
+                ],
+                "reason": "The excerpt verbatim states the $25 million and the three neighborhood projects."
+              },
+              {
+                "claim": "HRMP described individual philanthropic commitments totaling approximately $2 million.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-b5971bef-1cdf-4a7d-ae9d-549da341cd0e"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-b5971bef-1cdf-4a7d-ae9d-549da341cd0e",
+                    "quote": "There are also individual philanthropic commitments totaling approximately $2 million",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states approximately $2 million in philanthropic commitments."
+                  }
+                ],
+                "reason": "The excerpt expressly states approximately $2 million in philanthropic commitments."
+              },
+              {
+                "claim": "These amounts were distinct from the Community Impact Fund.",
+                "label": "NEUTRAL",
+                "citation_ids": [
+                  "support-b5971bef-1cdf-4a7d-ae9d-549da341cd0e"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-b5971bef-1cdf-4a7d-ae9d-549da341cd0e",
+                    "quote": "There is another $25 million dedicated to three neighborhood projects... There are also individual philanthropic commitments totaling approximately $2 million",
+                    "label": "NEUTRAL",
+                    "reason": "The quote lists other amounts but does not expressly compare them to or distinguish them from the Community Impact Fund."
+                  }
+                ],
+                "reason": "The excerpt lists other amounts but does not expressly state they are distinct from the Community Impact Fund."
+              }
+            ]
+          },
+          {
+            "finding_id": "finding-2853e164-a606-492b-9b1a-a1da0f01717a",
+            "claims": [
+              {
+                "claim": "A March 2026 HRMP board report chart is titled 'HRMP Community Benefit during their 20-year Term of License.'",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-e3a1c4dc-a376-4654-8955-ef51c2566cf5"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-e3a1c4dc-a376-4654-8955-ef51c2566cf5",
+                    "quote": "Chart 5: HRMP Community Benefit during their 20-year Term of License",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly gives the chart title and the 20-year term wording."
+                  }
+                ],
+                "reason": "The citation verbatim provides the chart title."
+              },
+              {
+                "claim": "This creates a conflicting stated license-term scope with the same report text describing the Community Impact Fund commitment over 30 years.",
+                "label": "NEUTRAL",
+                "citation_ids": [
+                  "support-e3a1c4dc-a376-4654-8955-ef51c2566cf5"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-e3a1c4dc-a376-4654-8955-ef51c2566cf5",
+                    "quote": "Chart 5: HRMP Community Benefit during their 20-year Term of License",
+                    "label": "NEUTRAL",
+                    "reason": "This quote alone shows only a 20-year chart title; it does not itself establish the separate 30-year statement or the claimed conflict."
+                  }
+                ],
+                "reason": "The attached citation alone shows only the 20-year chart title, not the asserted conflict with other report text."
+              }
+            ]
+          },
+          {
+            "finding_id": "finding-4d7ddb26-bd01-491c-9afa-5974840ee805",
+            "claims": [
+              {
+                "claim": "A March 2026 chart entry for the Community Impact Fund lists the figures '13 150 163.'",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "support-1d012418-8307-41ba-aba2-59cb61c941ce"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-1d012418-8307-41ba-aba2-59cb61c941ce",
+                    "quote": "Community Impact Fund 13 150 163",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly shows the chart entry and the three figures."
+                  }
+                ],
+                "reason": "The excerpt verbatim shows the chart entry with the listed figures."
+              },
+              {
+                "claim": "The chart entry alone does not clearly define the figures or independently establish the commitment terms.",
+                "label": "NEUTRAL",
+                "citation_ids": [
+                  "support-1d012418-8307-41ba-aba2-59cb61c941ce"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "support-1d012418-8307-41ba-aba2-59cb61c941ce",
+                    "quote": "Community Impact Fund 13 150 163",
+                    "label": "NEUTRAL",
+                    "reason": "The quote shows the figures but does not itself state whether they are undefined or insufficient; that is an interpretation beyond the excerpt."
+                  }
+                ],
+                "reason": "The excerpt shows the figures but does not itself state that they are undefined or insufficient."
+              }
+            ]
+          },
+          {
+            "finding_id": "source-reread-1",
+            "claims": [
+              {
+                "claim": "The Queens Borough President's approval conditions described a $163 million Community Benefits Fund.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-1-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-1-s",
+                    "quote": "A $163 million Community Benefits Fund",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the fund amount and name."
+                  }
+                ],
+                "reason": "The excerpt expressly states a $163 million Community Benefits Fund."
+              },
+              {
+                "claim": "The fund was to be accessible for 30 years or until the funds are depleted.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-1-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-1-s",
+                    "quote": "to be accessible for 30 years (or until the funds are depleted)",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the duration and depletion qualifier."
+                  }
+                ],
+                "reason": "The excerpt directly states the 30-year-or-until-depleted availability."
+              },
+              {
+                "claim": "The fund was to be allocated across Queens Community Districts 3, 4, 6, 7, 8, and 9.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-1-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-1-s",
+                    "quote": "allocated across local Queens Community Districts 3, 4, 6, 7, 8, and 9",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly lists the covered districts."
+                  }
+                ],
+                "reason": "The excerpt expressly lists the districts for allocation."
+              }
+            ]
+          },
+          {
+            "finding_id": "source-reread-2",
+            "claims": [
+              {
+                "claim": "The Borough President tied oversight of promised community benefits to a Community Advisory Board.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-2-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-2-s",
+                    "quote": "A Community Advisory Board that will meet regularly and act as a watchdog for all promised community benefits",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly links the advisory board to oversight of promised community benefits."
+                  }
+                ],
+                "reason": "The excerpt directly states the advisory board would oversee promised community benefits."
+              },
+              {
+                "claim": "The Community Advisory Board would meet regularly and act as a watchdog.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-2-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-2-s",
+                    "quote": "will meet regularly and act as a watchdog",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the board's meeting pattern and watchdog role."
+                  }
+                ],
+                "reason": "The excerpt expressly states the board would meet regularly and act as a watchdog."
+              }
+            ]
+          },
+          {
+            "finding_id": "source-reread-3",
+            "claims": [
+              {
+                "claim": "Queens Community Board 6 approved the application with conditions by a vote of 32 in favor, 6 in opposition, and 0 abstentions.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-3-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-3-s",
+                    "quote": "Community Board 6 (CB6) voted to approve the application with conditions by a vote of thirty-two (32) in favor, six (6) in opposition and zero (0) abstentions",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the approval, conditions, and vote totals."
+                  }
+                ],
+                "reason": "The excerpt verbatim states the conditional approval and vote counts."
+              },
+              {
+                "claim": "CB6's condition was that funds allocated to the Community Fund be used for projects selected by the communities themselves.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-3-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-3-s",
+                    "quote": "their condition was to ensure that the funds allocated to the Community Fund are used to fund projects the communities themselves select",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the condition about community-selected projects."
+                  }
+                ],
+                "reason": "The excerpt expressly states the condition on use of Community Fund money."
+              }
+            ]
+          },
+          {
+            "finding_id": "source-reread-4",
+            "claims": [
+              {
+                "claim": "In Community Board 3 materials, the Community Impact Fund was described as $163 million.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-4-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-4-s",
+                    "quote": "$163 million for a Community Impact Fund",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the amount and fund name."
+                  }
+                ],
+                "reason": "The excerpt expressly states $163 million for a Community Impact Fund."
+              },
+              {
+                "claim": "The fund would provide grants to nonprofit organizations serving Queens communities and residents.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "source-reread-4-s"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "source-reread-4-s",
+                    "quote": "that will provide grants to non -profit organizations serving Queens communities and residents",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the grant purpose and beneficiaries."
+                  }
+                ],
+                "reason": "The excerpt directly states the grants would go to nonprofit organizations serving Queens communities and residents."
+              }
+            ]
+          }
+        ],
+        "coverage": [
+          {
+            "gold_id": "G1",
+            "finding_ids": [
+              "finding-7847f7d1-6220-4079-ab3e-cc51830876fe"
+            ],
+            "citation_ids": [
+              "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+              "support-95a1eedf-0297-4916-97cc-3b1c8b717ad3"
+            ],
+            "label": "ENTAILMENT",
+            "reason": "A returned finding states that the applicant committed $150 million to the community impact fund over a 30-year license term, and its attached excerpts verbatim establish that fact.",
+            "claim_links": [
+              {
+                "finding_id": "finding-7847f7d1-6220-4079-ab3e-cc51830876fe",
+                "claim_index": 2,
+                "label": "ENTAILMENT",
+                "reason": "This claim directly states the $150 million commitment over a 30-year license term."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+                "quote": "The Applicant committed to this $150 million over a 30-year license term.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly establishes $150 million over 30 years."
+              },
+              {
+                "citation_id": "support-95a1eedf-0297-4916-97cc-3b1c8b717ad3",
+                "quote": "The Applicant committed to this $150 million over a 30-year license term.",
+                "label": "ENTAILMENT",
+                "reason": "The duplicate quote directly establishes $150 million over 30 years."
+              }
+            ]
+          },
+          {
+            "gold_id": "G2",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No returned finding presents Board-proposed alternatives for commitments extending beyond the awarded term.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G3",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No returned finding presents the CAC schedule fact that the $150 million operating tranche sits inside a $163.2 million phased package.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G4",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No returned finding states the schedule's specific annual amount and years of $5 million from 2031 through 2060.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G5",
+            "finding_ids": [
+              "finding-2853e164-a606-492b-9b1a-a1da0f01717a"
+            ],
+            "citation_ids": [
+              "support-e3a1c4dc-a376-4654-8955-ef51c2566cf5"
+            ],
+            "label": "NEUTRAL",
+            "reason": "A returned finding mentions a 20-year term in a chart title, but it does not present the reference fact's issued license terms of an initial 20 years from operation certificate with possible ten-year renewal, and the attached quote does not establish those qualifiers.",
+            "claim_links": [
+              {
+                "finding_id": "finding-2853e164-a606-492b-9b1a-a1da0f01717a",
+                "claim_index": 0,
+                "label": "NEUTRAL",
+                "reason": "This claim gives only a chart title with '20-year Term of License,' not the issued license structure or renewal terms."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-e3a1c4dc-a376-4654-8955-ef51c2566cf5",
+                "quote": "Chart 5: HRMP Community Benefit during their 20-year Term of License",
+                "label": "NEUTRAL",
+                "reason": "The quote mentions a 20-year term but not an initial grant from the operation certificate or possible ten-year renewal."
+              }
+            ]
+          },
+          {
+            "gold_id": "G6",
+            "finding_ids": [
+              "finding-bb478a7e-d0f6-4198-8a8a-76260808a2bb"
+            ],
+            "citation_ids": [
+              "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3"
+            ],
+            "label": "NEUTRAL",
+            "reason": "A returned finding says commitments will be binding under the gaming license, but that is weaker than the reference fact that material changes require written Commission approval, which the excerpt does not state.",
+            "claim_links": [
+              {
+                "finding_id": "finding-bb478a7e-d0f6-4198-8a8a-76260808a2bb",
+                "claim_index": 1,
+                "label": "NEUTRAL",
+                "reason": "Binding commitments under the gaming license do not by themselves establish written Commission approval for material changes."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3",
+                "quote": "Our commitments will be binding under the gaming license, ensuring accountability and delivery.",
+                "label": "NEUTRAL",
+                "reason": "The quote does not mention material changes or written Commission approval."
+              }
+            ]
+          },
+          {
+            "gold_id": "G7",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No returned finding states a later operator fund page listed approximately $5 million annually from 2031 through 2050.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G8",
+            "finding_ids": [
+              "finding-09a3a214-601e-4482-a795-037bcf117384"
+            ],
+            "citation_ids": [
+              "support-b5971bef-1cdf-4a7d-ae9d-549da341cd0e"
+            ],
+            "label": "NEUTRAL",
+            "reason": "A returned finding mentions approximately $2 million in individual philanthropic commitments, but the reference fact is about reporting actual distribution of $2 million in 2026, which the excerpt does not establish.",
+            "claim_links": [
+              {
+                "finding_id": "finding-09a3a214-601e-4482-a795-037bcf117384",
+                "claim_index": 1,
+                "label": "NEUTRAL",
+                "reason": "A commitment total is not the same as actual distribution in 2026."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-b5971bef-1cdf-4a7d-ae9d-549da341cd0e",
+                "quote": "There are also individual philanthropic commitments totaling approximately $2 million",
+                "label": "NEUTRAL",
+                "reason": "The quote concerns commitments, not reported 2026 distributions."
+              }
+            ]
+          },
+          {
+            "gold_id": "G9",
+            "finding_ids": [
+              "finding-bb478a7e-d0f6-4198-8a8a-76260808a2bb",
+              "source-reread-1",
+              "source-reread-4"
+            ],
+            "citation_ids": [
+              "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3",
+              "source-reread-1-s",
+              "source-reread-4-s"
+            ],
+            "label": "NEUTRAL",
+            "reason": "Returned findings do state a $163 million fund valuation/package, but none presents the specific reference fact that the Metropolitan Park FAQ continued to advertise it.",
+            "claim_links": [
+              {
+                "finding_id": "finding-bb478a7e-d0f6-4198-8a8a-76260808a2bb",
+                "claim_index": 0,
+                "label": "NEUTRAL",
+                "reason": "This claim states a September 2025 valuation in a CAC response, not an FAQ advertisement."
+              },
+              {
+                "finding_id": "source-reread-1",
+                "claim_index": 0,
+                "label": "NEUTRAL",
+                "reason": "This claim concerns Borough President conditions, not the Metropolitan Park FAQ."
+              },
+              {
+                "finding_id": "source-reread-4",
+                "claim_index": 0,
+                "label": "NEUTRAL",
+                "reason": "This claim concerns Community Board 3 materials, not the FAQ."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3",
+                "quote": "The Community Impact Fund, as proposed in the Application, is valued at $163 million over the 30-year length of the license.",
+                "label": "NEUTRAL",
+                "reason": "The quote shows a CAC response valuation, not an FAQ advertisement."
+              },
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "A $163 million Community Benefits Fund",
+                "label": "NEUTRAL",
+                "reason": "The quote shows Borough President conditions, not the FAQ."
+              },
+              {
+                "citation_id": "source-reread-4-s",
+                "quote": "$163 million for a Community Impact Fund",
+                "label": "NEUTRAL",
+                "reason": "The quote shows Community Board 3 materials, not the FAQ."
+              }
+            ]
+          },
+          {
+            "gold_id": "G10",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No returned finding states that Queens Theatre publicly acknowledged support from the Metropolitan Park Community Impact Fund.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G11",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No returned finding states that Belongo identified the Metropolitan Park Community Impact Fund as a supporter.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G12",
+            "finding_ids": [
+              "source-reread-2"
+            ],
+            "citation_ids": [
+              "source-reread-2-s"
+            ],
+            "label": "NEUTRAL",
+            "reason": "A returned finding mentions a Community Advisory Board watchdog, but the reference fact specifically says the applicant proposed a seven-person fund advisory board, which the excerpt does not establish.",
+            "claim_links": [
+              {
+                "finding_id": "source-reread-2",
+                "claim_index": 0,
+                "label": "NEUTRAL",
+                "reason": "This claim concerns a Community Advisory Board oversight role, not a seven-person fund advisory board proposal."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-2-s",
+                "quote": "A Community Advisory Board that will meet regularly and act as a watchdog for all promised community benefits",
+                "label": "NEUTRAL",
+                "reason": "The quote does not mention a seven-person board or that it was specifically for the fund."
+              }
+            ]
+          }
+        ]
+      },
+      "error": "finding-09a3a214-601e-4482-a795-037bcf117384: quote check is outside its own citation excerpt"
+    }
+  ],
+  "evidence": {
+    "identity": {
+      "label": "MATCH",
+      "reason": "The returned commitment and the question identify the same HRMP promise: $150 million to a community impact fund over a 30-year license term, as stated in the cited board passage."
+    },
+    "findings": [
+      {
+        "finding_id": "finding-7847f7d1-6220-4079-ab3e-cc51830876fe",
+        "claims": [
+          {
+            "claim": "Board materials state the project includes $761 million in community benefits as part of project cost.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+              "support-95a1eedf-0297-4916-97cc-3b1c8b717ad3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+                "quote": "the project includes $761 million in community benefits as part of the project cost",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the $761 million project-cost community benefits amount."
+              },
+              {
+                "citation_id": "support-95a1eedf-0297-4916-97cc-3b1c8b717ad3",
+                "quote": "the project includes $761 million in community benefits as part of the project cost",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the same $761 million project-cost community benefits amount."
+              }
+            ],
+            "reason": "Both attached excerpts expressly state the $761 million community benefits figure as part of project cost."
+          },
+          {
+            "claim": "Board materials state another $150 million has been proposed in ongoing commitments to a community impact fund.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+              "support-95a1eedf-0297-4916-97cc-3b1c8b717ad3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+                "quote": "Another $150 million has been proposed in ongoing commitments to a community impact fund",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the proposed $150 million ongoing commitments to the fund."
+              },
+              {
+                "citation_id": "support-95a1eedf-0297-4916-97cc-3b1c8b717ad3",
+                "quote": "Another $150 million has been proposed in ongoing commitments to a community impact fund",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the proposed $150 million ongoing commitments to the fund."
+              }
+            ],
+            "reason": "Both attached excerpts directly state the proposed $150 million ongoing commitments to the community impact fund."
+          },
+          {
+            "claim": "Board materials state the Applicant committed to this $150 million over a 30-year license term.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+              "support-95a1eedf-0297-4916-97cc-3b1c8b717ad3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+                "quote": "The Applicant committed to this $150 million over a 30-year license term.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the commitment amount and 30-year term."
+              },
+              {
+                "citation_id": "support-95a1eedf-0297-4916-97cc-3b1c8b717ad3",
+                "quote": "The Applicant committed to this $150 million over a 30-year license term.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the commitment amount and 30-year term."
+              }
+            ],
+            "reason": "Both attached excerpts expressly state a $150 million commitment over a 30-year license term."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-bb478a7e-d0f6-4198-8a8a-76260808a2bb",
+        "claims": [
+          {
+            "claim": "In September 2025, HRMP stated the Community Impact Fund as proposed in the application was valued at $163 million over the 30-year length of the license.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3",
+                "quote": "The Community Impact Fund, as proposed in the Application, is valued at $163 million over the 30-year length of the license.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the $163 million value and 30-year license length."
+              }
+            ],
+            "reason": "The attached excerpt directly states the fund was valued at $163 million over the 30-year license length."
+          },
+          {
+            "claim": "In September 2025, HRMP stated the commitments would be binding under the gaming license.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3",
+                "quote": "Our commitments will be binding under the gaming license, ensuring accountability and delivery.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the commitments will be binding under the gaming license."
+              }
+            ],
+            "reason": "The attached excerpt expressly states the commitments will be binding under the gaming license."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-f3b4149b-e63e-4237-a0f3-38113cdb3239",
+        "claims": [
+          {
+            "claim": "In September 2025, HRMP stated the fund is structured for annual disbursements.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-7b7dcaf8-d394-41e5-b878-03ca5505b6c1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-7b7dcaf8-d394-41e5-b878-03ca5505b6c1",
+                "quote": "The Fund is structured for annual disbursements",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the annual-disbursement structure."
+              }
+            ],
+            "reason": "The excerpt directly states the fund is structured for annual disbursements."
+          },
+          {
+            "claim": "In September 2025, HRMP stated the fund would guarantee stable support for nonprofits, parks, and cultural institutions.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-7b7dcaf8-d394-41e5-b878-03ca5505b6c1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-7b7dcaf8-d394-41e5-b878-03ca5505b6c1",
+                "quote": "guaranteeing stable support for nonprofits, parks, and cultural institutions.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the beneficiaries and guaranteed stable support."
+              }
+            ],
+            "reason": "The excerpt directly states stable support for nonprofits, parks, and cultural institutions."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-09a3a214-601e-4482-a795-037bcf117384",
+        "claims": [
+          {
+            "claim": "HRMP described $25 million dedicated to three neighborhood projects.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-b5971bef-1cdf-4a7d-ae9d-549da341cd0e"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-b5971bef-1cdf-4a7d-ae9d-549da341cd0e",
+                "quote": "There is another $25 million dedicated to three neighborhood projects: East Elmhurst health clinic, Corona/Jackson Heights senior/youth center, and Flushing addiction services.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the $25 million and identifies the three projects."
+              }
+            ],
+            "reason": "The excerpt directly states another $25 million is dedicated to three neighborhood projects."
+          },
+          {
+            "claim": "HRMP described individual philanthropic commitments totaling approximately $2 million.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-b5971bef-1cdf-4a7d-ae9d-549da341cd0e"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-b5971bef-1cdf-4a7d-ae9d-549da341cd0e",
+                "quote": "There are also individual philanthropic commitments totaling approximately $2 million",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states approximately $2 million in individual philanthropic commitments."
+              }
+            ],
+            "reason": "The excerpt directly states approximately $2 million in individual philanthropic commitments."
+          },
+          {
+            "claim": "These amounts were distinct from the Community Impact Fund.",
+            "label": "NEUTRAL",
+            "citation_ids": [
+              "support-b5971bef-1cdf-4a7d-ae9d-549da341cd0e"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-b5971bef-1cdf-4a7d-ae9d-549da341cd0e",
+                "quote": "There is another $25 million dedicated to three neighborhood projects: East Elmhurst health clinic, Corona/Jackson Heights senior/youth center, and Flushing addiction services. There are also individual philanthropic commitments totaling approximately $2 million",
+                "label": "NEUTRAL",
+                "reason": "The quote lists other amounts but does not expressly compare them to or distinguish them from the Community Impact Fund."
+              }
+            ],
+            "reason": "The excerpt lists the $25 million and $2 million items but does not expressly say they are distinct from the Community Impact Fund."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-2853e164-a606-492b-9b1a-a1da0f01717a",
+        "claims": [
+          {
+            "claim": "A March 2026 HRMP board report chart is titled 'HRMP Community Benefit during their 20-year Term of License.'",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-e3a1c4dc-a376-4654-8955-ef51c2566cf5"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-e3a1c4dc-a376-4654-8955-ef51c2566cf5",
+                "quote": "Chart 5: HRMP Community Benefit during their 20-year Term of License",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly gives the chart title and 20-year term wording."
+              }
+            ],
+            "reason": "The attached excerpt directly gives the chart title with the 20-year license-term wording."
+          },
+          {
+            "claim": "This creates a conflicting stated license-term scope with the same report text describing the Community Impact Fund commitment over 30 years.",
+            "label": "NEUTRAL",
+            "citation_ids": [
+              "support-e3a1c4dc-a376-4654-8955-ef51c2566cf5"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-e3a1c4dc-a376-4654-8955-ef51c2566cf5",
+                "quote": "Chart 5: HRMP Community Benefit during their 20-year Term of License",
+                "label": "NEUTRAL",
+                "reason": "This quote alone shows only the 20-year chart title; it does not itself contain the separate 30-year statement needed to establish a conflict within this finding's allowed citations."
+              }
+            ],
+            "reason": "The attached excerpt shows only the 20-year chart title; the claimed conflict with a 30-year statement is not established by this finding's own citation."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-4d7ddb26-bd01-491c-9afa-5974840ee805",
+        "claims": [
+          {
+            "claim": "A March 2026 chart entry for the Community Impact Fund lists the figures '13 150 163.'",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-1d012418-8307-41ba-aba2-59cb61c941ce"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-1d012418-8307-41ba-aba2-59cb61c941ce",
+                "quote": "Community Impact Fund 13 150 163",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly shows the chart entry and the figures 13, 150, and 163."
+              }
+            ],
+            "reason": "The attached excerpt directly shows the chart entry and figures."
+          },
+          {
+            "claim": "The chart entry alone does not clearly define the figures or independently establish the commitment terms.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-1d012418-8307-41ba-aba2-59cb61c941ce"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-1d012418-8307-41ba-aba2-59cb61c941ce",
+                "quote": "Community Impact Fund 13 150 163",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt is just an unlabeled row entry, so it does not define what each number means or state any commitment terms."
+              }
+            ],
+            "reason": "The excerpt is only an unlabeled numerical row and does not define the figures or state commitment terms."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-1",
+        "claims": [
+          {
+            "claim": "The Queens Borough President's approval conditions described a $163 million Community Benefits Fund.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "A $163 million Community Benefits Fund",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the fund amount and name."
+              }
+            ],
+            "reason": "The excerpt directly states a $163 million Community Benefits Fund."
+          },
+          {
+            "claim": "The approval conditions said the fund was to be accessible for 30 years or until the funds are depleted.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "to be accessible for 30 years (or until the funds are depleted)",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the 30-year-or-until-depleted duration."
+              }
+            ],
+            "reason": "The excerpt directly states the 30-years-or-until-depleted accessibility period."
+          },
+          {
+            "claim": "The approval conditions said the fund would be allocated across Queens Community Districts 3, 4, 6, 7, 8, and 9.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "allocated across local Queens Community Districts 3, 4, 6, 7, 8, and 9",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly lists the covered community districts."
+              }
+            ],
+            "reason": "The excerpt directly lists the districts for allocation."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-2",
+        "claims": [
+          {
+            "claim": "The Borough President tied oversight of promised community benefits to a Community Advisory Board.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-2-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-2-s",
+                "quote": "A Community Advisory Board that will meet regularly and act as a watchdog for all promised community benefits",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states a Community Advisory Board overseeing promised community benefits."
+              }
+            ],
+            "reason": "The excerpt directly states a Community Advisory Board would oversee promised community benefits."
+          },
+          {
+            "claim": "The Community Advisory Board would meet regularly and act as a watchdog.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-2-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-2-s",
+                "quote": "will meet regularly and act as a watchdog",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the board's meeting frequency and watchdog role."
+              }
+            ],
+            "reason": "The excerpt directly states the board would meet regularly and act as a watchdog."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-3",
+        "claims": [
+          {
+            "claim": "Queens Community Board 6 voted to approve the application with conditions.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-3-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-3-s",
+                "quote": "Community Board 6 (CB6) voted to approve the application with conditions",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states CB6 approved the application with conditions."
+              }
+            ],
+            "reason": "The excerpt directly states CB6 approved with conditions."
+          },
+          {
+            "claim": "CB6's condition was that funds allocated to the Community Fund be used for projects the communities themselves select.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-3-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-3-s",
+                "quote": "their condition was to ensure that the funds allocated to the Community Fund are used to fund projects the communities themselves select",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the condition on community-selected projects."
+              }
+            ],
+            "reason": "The excerpt directly states the condition about projects selected by the communities."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-4",
+        "claims": [
+          {
+            "claim": "In Community Board 3 materials, the Community Impact Fund was described as $163 million.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-4-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-4-s",
+                "quote": "$163 million for a Community Impact Fund",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the $163 million amount for the Community Impact Fund."
+              }
+            ],
+            "reason": "The excerpt directly states a $163 million Community Impact Fund."
+          },
+          {
+            "claim": "In Community Board 3 materials, the Community Impact Fund was described as providing grants to nonprofit organizations serving Queens communities and residents.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-4-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-4-s",
+                "quote": "that will provide grants to non -profit organizations serving Queens communities and residents",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the grant purpose and beneficiaries."
+              }
+            ],
+            "reason": "The excerpt directly states the grant purpose and beneficiaries."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "finding-7847f7d1-6220-4079-ab3e-cc51830876fe"
+        ],
+        "citation_ids": [
+          "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+          "support-95a1eedf-0297-4916-97cc-3b1c8b717ad3"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding states $150 million over a 30-year license term, but the reference fact attributes that recording specifically to the Board; the cited passage instead says 'The Applicant committed' and does not expressly say the Board recorded it.",
+        "claim_links": [
+          {
+            "finding_id": "finding-7847f7d1-6220-4079-ab3e-cc51830876fe",
+            "claim_index": 2,
+            "label": "NEUTRAL",
+            "reason": "The claim conveys the amount and term but not that the Board recorded it."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+            "quote": "Another $150 million has been proposed in ongoing commitments to a community impact fund, as the table below illustrates. The Applicant committed to this $150 million over a 30-year license term.",
+            "label": "NEUTRAL",
+            "reason": "This establishes the amount and term, but attributes the commitment to the Applicant rather than expressly stating the Board recorded it."
+          },
+          {
+            "citation_id": "support-95a1eedf-0297-4916-97cc-3b1c8b717ad3",
+            "quote": "Another $150 million has been proposed in ongoing commitments to a community impact fund, as the table below illustrates. The Applicant committed to this $150 million over a 30-year license term.",
+            "label": "NEUTRAL",
+            "reason": "This establishes the amount and term, but not the specific reference-fact wording that the Board recorded it."
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents Board-proposed alternatives for commitments extending beyond the awarded term.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents a CAC schedule placing a $150 million operating tranche inside a $163.2 million phased package.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents the specific annual schedule of $5 million from 2031 through 2060.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G5",
+        "finding_ids": [
+          "finding-2853e164-a606-492b-9b1a-a1da0f01717a"
+        ],
+        "citation_ids": [
+          "support-e3a1c4dc-a376-4654-8955-ef51c2566cf5"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding shows only a chart title referring to a 20-year term of license; it does not state an issued Queens Future license, initial 20 years from the operation certificate, or possible ten-year renewal.",
+        "claim_links": [
+          {
+            "finding_id": "finding-2853e164-a606-492b-9b1a-a1da0f01717a",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "The claim mentions a 20-year term but lacks the issued-license, operation-certificate, and renewal details."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-e3a1c4dc-a376-4654-8955-ef51c2566cf5",
+            "quote": "Chart 5: HRMP Community Benefit during their 20-year Term of License",
+            "label": "NEUTRAL",
+            "reason": "This establishes only a 20-year term phrase in a chart title, not the full license grant structure in the reference fact."
+          }
+        ]
+      },
+      {
+        "gold_id": "G6",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states that material changes to commitments require written Commission approval.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G7",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents a later operator fund page listing approximately $5 million annually from 2031 through 2050.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G8",
+        "finding_ids": [
+          "finding-09a3a214-601e-4482-a795-037bcf117384"
+        ],
+        "citation_ids": [
+          "support-b5971bef-1cdf-4a7d-ae9d-549da341cd0e"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding states approximately $2 million in individual philanthropic commitments, not that the operator distributed $2 million in 2026.",
+        "claim_links": [
+          {
+            "finding_id": "finding-09a3a214-601e-4482-a795-037bcf117384",
+            "claim_index": 1,
+            "label": "NEUTRAL",
+            "reason": "The claim concerns philanthropic commitments totaling approximately $2 million, not a 2026 distribution."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-b5971bef-1cdf-4a7d-ae9d-549da341cd0e",
+            "quote": "There are also individual philanthropic commitments totaling approximately $2 million",
+            "label": "NEUTRAL",
+            "reason": "This establishes only an approximate commitment total, not an actual 2026 distribution."
+          }
+        ]
+      },
+      {
+        "gold_id": "G9",
+        "finding_ids": [
+          "source-reread-1",
+          "source-reread-4",
+          "finding-bb478a7e-d0f6-4198-8a8a-76260808a2bb"
+        ],
+        "citation_ids": [
+          "source-reread-1-s",
+          "source-reread-4-s",
+          "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3"
+        ],
+        "label": "NEUTRAL",
+        "reason": "Several findings state $163 million fund descriptions, but none says the Metropolitan Park FAQ continued to advertise a $163 million fund package.",
+        "claim_links": [
+          {
+            "finding_id": "source-reread-1",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "This claim states a Borough President approval condition, not a Metropolitan Park FAQ advertisement."
+          },
+          {
+            "finding_id": "source-reread-4",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "This claim states Community Board 3 materials, not a Metropolitan Park FAQ advertisement."
+          },
+          {
+            "finding_id": "finding-bb478a7e-d0f6-4198-8a8a-76260808a2bb",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "This claim states a September 2025 CAC response, not a Metropolitan Park FAQ advertisement."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "source-reread-1-s",
+            "quote": "A $163 million Community Benefits Fund",
+            "label": "NEUTRAL",
+            "reason": "This establishes a $163 million fund in approval conditions, not that a Metropolitan Park FAQ continued to advertise it."
+          },
+          {
+            "citation_id": "source-reread-4-s",
+            "quote": "$163 million for a Community Impact Fund",
+            "label": "NEUTRAL",
+            "reason": "This establishes the amount in Community Board 3 materials, not in a Metropolitan Park FAQ."
+          },
+          {
+            "citation_id": "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3",
+            "quote": "The Community Impact Fund, as proposed in the Application, is valued at $163 million over the 30-year length of the license.",
+            "label": "NEUTRAL",
+            "reason": "This establishes a September 2025 CAC response, not a Metropolitan Park FAQ continuing to advertise a package."
+          }
+        ]
+      },
+      {
+        "gold_id": "G10",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states that Queens Theatre publicly acknowledged support from the Metropolitan Park Community Impact Fund.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G11",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states that Belongo identified the Metropolitan Park Community Impact Fund as a supporter.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G12",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states that the applicant proposed a seven-person fund advisory board.",
+        "claim_links": [],
+        "quote_checks": []
+      }
+    ]
+  },
+  "verdict_protocol": "two-stage-owned-citations-v4",
+  "judgment": {
+    "identity": {
+      "label": "MATCH",
+      "reason": "The returned commitment and the question identify the same HRMP promise: $150 million to a community impact fund over a 30-year license term, as stated in the cited board passage."
+    },
+    "findings": [
+      {
+        "finding_id": "finding-7847f7d1-6220-4079-ab3e-cc51830876fe",
+        "claims": [
+          {
+            "claim": "Board materials state the project includes $761 million in community benefits as part of project cost.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+              "support-95a1eedf-0297-4916-97cc-3b1c8b717ad3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+                "quote": "the project includes $761 million in community benefits as part of the project cost",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the $761 million project-cost community benefits amount."
+              },
+              {
+                "citation_id": "support-95a1eedf-0297-4916-97cc-3b1c8b717ad3",
+                "quote": "the project includes $761 million in community benefits as part of the project cost",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the same $761 million project-cost community benefits amount."
+              }
+            ],
+            "reason": "Both attached excerpts expressly state the $761 million community benefits figure as part of project cost."
+          },
+          {
+            "claim": "Board materials state another $150 million has been proposed in ongoing commitments to a community impact fund.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+              "support-95a1eedf-0297-4916-97cc-3b1c8b717ad3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+                "quote": "Another $150 million has been proposed in ongoing commitments to a community impact fund",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the proposed $150 million ongoing commitments to the fund."
+              },
+              {
+                "citation_id": "support-95a1eedf-0297-4916-97cc-3b1c8b717ad3",
+                "quote": "Another $150 million has been proposed in ongoing commitments to a community impact fund",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the proposed $150 million ongoing commitments to the fund."
+              }
+            ],
+            "reason": "Both attached excerpts directly state the proposed $150 million ongoing commitments to the community impact fund."
+          },
+          {
+            "claim": "Board materials state the Applicant committed to this $150 million over a 30-year license term.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+              "support-95a1eedf-0297-4916-97cc-3b1c8b717ad3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+                "quote": "The Applicant committed to this $150 million over a 30-year license term.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the commitment amount and 30-year term."
+              },
+              {
+                "citation_id": "support-95a1eedf-0297-4916-97cc-3b1c8b717ad3",
+                "quote": "The Applicant committed to this $150 million over a 30-year license term.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the commitment amount and 30-year term."
+              }
+            ],
+            "reason": "Both attached excerpts expressly state a $150 million commitment over a 30-year license term."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-bb478a7e-d0f6-4198-8a8a-76260808a2bb",
+        "claims": [
+          {
+            "claim": "In September 2025, HRMP stated the Community Impact Fund as proposed in the application was valued at $163 million over the 30-year length of the license.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3",
+                "quote": "The Community Impact Fund, as proposed in the Application, is valued at $163 million over the 30-year length of the license.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the $163 million value and 30-year license length."
+              }
+            ],
+            "reason": "The attached excerpt directly states the fund was valued at $163 million over the 30-year license length."
+          },
+          {
+            "claim": "In September 2025, HRMP stated the commitments would be binding under the gaming license.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3",
+                "quote": "Our commitments will be binding under the gaming license, ensuring accountability and delivery.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the commitments will be binding under the gaming license."
+              }
+            ],
+            "reason": "The attached excerpt expressly states the commitments will be binding under the gaming license."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-f3b4149b-e63e-4237-a0f3-38113cdb3239",
+        "claims": [
+          {
+            "claim": "In September 2025, HRMP stated the fund is structured for annual disbursements.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-7b7dcaf8-d394-41e5-b878-03ca5505b6c1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-7b7dcaf8-d394-41e5-b878-03ca5505b6c1",
+                "quote": "The Fund is structured for annual disbursements",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the annual-disbursement structure."
+              }
+            ],
+            "reason": "The excerpt directly states the fund is structured for annual disbursements."
+          },
+          {
+            "claim": "In September 2025, HRMP stated the fund would guarantee stable support for nonprofits, parks, and cultural institutions.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-7b7dcaf8-d394-41e5-b878-03ca5505b6c1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-7b7dcaf8-d394-41e5-b878-03ca5505b6c1",
+                "quote": "guaranteeing stable support for nonprofits, parks, and cultural institutions.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the beneficiaries and guaranteed stable support."
+              }
+            ],
+            "reason": "The excerpt directly states stable support for nonprofits, parks, and cultural institutions."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-09a3a214-601e-4482-a795-037bcf117384",
+        "claims": [
+          {
+            "claim": "HRMP described $25 million dedicated to three neighborhood projects.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-b5971bef-1cdf-4a7d-ae9d-549da341cd0e"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-b5971bef-1cdf-4a7d-ae9d-549da341cd0e",
+                "quote": "There is another $25 million dedicated to three neighborhood projects: East Elmhurst health clinic, Corona/Jackson Heights senior/youth center, and Flushing addiction services.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the $25 million and identifies the three projects."
+              }
+            ],
+            "reason": "The excerpt directly states another $25 million is dedicated to three neighborhood projects."
+          },
+          {
+            "claim": "HRMP described individual philanthropic commitments totaling approximately $2 million.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-b5971bef-1cdf-4a7d-ae9d-549da341cd0e"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-b5971bef-1cdf-4a7d-ae9d-549da341cd0e",
+                "quote": "There are also individual philanthropic commitments totaling approximately $2 million",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states approximately $2 million in individual philanthropic commitments."
+              }
+            ],
+            "reason": "The excerpt directly states approximately $2 million in individual philanthropic commitments."
+          },
+          {
+            "claim": "These amounts were distinct from the Community Impact Fund.",
+            "label": "NEUTRAL",
+            "citation_ids": [
+              "support-b5971bef-1cdf-4a7d-ae9d-549da341cd0e"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-b5971bef-1cdf-4a7d-ae9d-549da341cd0e",
+                "quote": "There is another $25 million dedicated to three neighborhood projects: East Elmhurst health clinic, Corona/Jackson Heights senior/youth center, and Flushing addiction services. There are also individual philanthropic commitments totaling approximately $2 million",
+                "label": "NEUTRAL",
+                "reason": "The quote lists other amounts but does not expressly compare them to or distinguish them from the Community Impact Fund."
+              }
+            ],
+            "reason": "The excerpt lists the $25 million and $2 million items but does not expressly say they are distinct from the Community Impact Fund."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-2853e164-a606-492b-9b1a-a1da0f01717a",
+        "claims": [
+          {
+            "claim": "A March 2026 HRMP board report chart is titled 'HRMP Community Benefit during their 20-year Term of License.'",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-e3a1c4dc-a376-4654-8955-ef51c2566cf5"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-e3a1c4dc-a376-4654-8955-ef51c2566cf5",
+                "quote": "Chart 5: HRMP Community Benefit during their 20-year Term of License",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly gives the chart title and 20-year term wording."
+              }
+            ],
+            "reason": "The attached excerpt directly gives the chart title with the 20-year license-term wording."
+          },
+          {
+            "claim": "This creates a conflicting stated license-term scope with the same report text describing the Community Impact Fund commitment over 30 years.",
+            "label": "NEUTRAL",
+            "citation_ids": [
+              "support-e3a1c4dc-a376-4654-8955-ef51c2566cf5"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-e3a1c4dc-a376-4654-8955-ef51c2566cf5",
+                "quote": "Chart 5: HRMP Community Benefit during their 20-year Term of License",
+                "label": "NEUTRAL",
+                "reason": "This quote alone shows only the 20-year chart title; it does not itself contain the separate 30-year statement needed to establish a conflict within this finding's allowed citations."
+              }
+            ],
+            "reason": "The attached excerpt shows only the 20-year chart title; the claimed conflict with a 30-year statement is not established by this finding's own citation."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-4d7ddb26-bd01-491c-9afa-5974840ee805",
+        "claims": [
+          {
+            "claim": "A March 2026 chart entry for the Community Impact Fund lists the figures '13 150 163.'",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-1d012418-8307-41ba-aba2-59cb61c941ce"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-1d012418-8307-41ba-aba2-59cb61c941ce",
+                "quote": "Community Impact Fund 13 150 163",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly shows the chart entry and the figures 13, 150, and 163."
+              }
+            ],
+            "reason": "The attached excerpt directly shows the chart entry and figures."
+          },
+          {
+            "claim": "The chart entry alone does not clearly define the figures or independently establish the commitment terms.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-1d012418-8307-41ba-aba2-59cb61c941ce"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-1d012418-8307-41ba-aba2-59cb61c941ce",
+                "quote": "Community Impact Fund 13 150 163",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt is just an unlabeled row entry, so it does not define what each number means or state any commitment terms."
+              }
+            ],
+            "reason": "The excerpt is only an unlabeled numerical row and does not define the figures or state commitment terms."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-1",
+        "claims": [
+          {
+            "claim": "The Queens Borough President's approval conditions described a $163 million Community Benefits Fund.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "A $163 million Community Benefits Fund",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the fund amount and name."
+              }
+            ],
+            "reason": "The excerpt directly states a $163 million Community Benefits Fund."
+          },
+          {
+            "claim": "The approval conditions said the fund was to be accessible for 30 years or until the funds are depleted.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "to be accessible for 30 years (or until the funds are depleted)",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the 30-year-or-until-depleted duration."
+              }
+            ],
+            "reason": "The excerpt directly states the 30-years-or-until-depleted accessibility period."
+          },
+          {
+            "claim": "The approval conditions said the fund would be allocated across Queens Community Districts 3, 4, 6, 7, 8, and 9.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "allocated across local Queens Community Districts 3, 4, 6, 7, 8, and 9",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly lists the covered community districts."
+              }
+            ],
+            "reason": "The excerpt directly lists the districts for allocation."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-2",
+        "claims": [
+          {
+            "claim": "The Borough President tied oversight of promised community benefits to a Community Advisory Board.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-2-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-2-s",
+                "quote": "A Community Advisory Board that will meet regularly and act as a watchdog for all promised community benefits",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states a Community Advisory Board overseeing promised community benefits."
+              }
+            ],
+            "reason": "The excerpt directly states a Community Advisory Board would oversee promised community benefits."
+          },
+          {
+            "claim": "The Community Advisory Board would meet regularly and act as a watchdog.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-2-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-2-s",
+                "quote": "will meet regularly and act as a watchdog",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the board's meeting frequency and watchdog role."
+              }
+            ],
+            "reason": "The excerpt directly states the board would meet regularly and act as a watchdog."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-3",
+        "claims": [
+          {
+            "claim": "Queens Community Board 6 voted to approve the application with conditions.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-3-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-3-s",
+                "quote": "Community Board 6 (CB6) voted to approve the application with conditions",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states CB6 approved the application with conditions."
+              }
+            ],
+            "reason": "The excerpt directly states CB6 approved with conditions."
+          },
+          {
+            "claim": "CB6's condition was that funds allocated to the Community Fund be used for projects the communities themselves select.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-3-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-3-s",
+                "quote": "their condition was to ensure that the funds allocated to the Community Fund are used to fund projects the communities themselves select",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the condition on community-selected projects."
+              }
+            ],
+            "reason": "The excerpt directly states the condition about projects selected by the communities."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-4",
+        "claims": [
+          {
+            "claim": "In Community Board 3 materials, the Community Impact Fund was described as $163 million.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-4-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-4-s",
+                "quote": "$163 million for a Community Impact Fund",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the $163 million amount for the Community Impact Fund."
+              }
+            ],
+            "reason": "The excerpt directly states a $163 million Community Impact Fund."
+          },
+          {
+            "claim": "In Community Board 3 materials, the Community Impact Fund was described as providing grants to nonprofit organizations serving Queens communities and residents.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-4-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-4-s",
+                "quote": "that will provide grants to non -profit organizations serving Queens communities and residents",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the grant purpose and beneficiaries."
+              }
+            ],
+            "reason": "The excerpt directly states the grant purpose and beneficiaries."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "finding-7847f7d1-6220-4079-ab3e-cc51830876fe"
+        ],
+        "citation_ids": [
+          "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+          "support-95a1eedf-0297-4916-97cc-3b1c8b717ad3"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding states $150 million over a 30-year license term, but the reference fact attributes that recording specifically to the Board; the cited passage instead says 'The Applicant committed' and does not expressly say the Board recorded it.",
+        "claim_links": [
+          {
+            "finding_id": "finding-7847f7d1-6220-4079-ab3e-cc51830876fe",
+            "claim_index": 2,
+            "label": "NEUTRAL",
+            "reason": "The claim conveys the amount and term but not that the Board recorded it."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+            "quote": "Another $150 million has been proposed in ongoing commitments to a community impact fund, as the table below illustrates. The Applicant committed to this $150 million over a 30-year license term.",
+            "label": "NEUTRAL",
+            "reason": "This establishes the amount and term, but attributes the commitment to the Applicant rather than expressly stating the Board recorded it."
+          },
+          {
+            "citation_id": "support-95a1eedf-0297-4916-97cc-3b1c8b717ad3",
+            "quote": "Another $150 million has been proposed in ongoing commitments to a community impact fund, as the table below illustrates. The Applicant committed to this $150 million over a 30-year license term.",
+            "label": "NEUTRAL",
+            "reason": "This establishes the amount and term, but not the specific reference-fact wording that the Board recorded it."
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents Board-proposed alternatives for commitments extending beyond the awarded term.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents a CAC schedule placing a $150 million operating tranche inside a $163.2 million phased package.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents the specific annual schedule of $5 million from 2031 through 2060.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G5",
+        "finding_ids": [
+          "finding-2853e164-a606-492b-9b1a-a1da0f01717a"
+        ],
+        "citation_ids": [
+          "support-e3a1c4dc-a376-4654-8955-ef51c2566cf5"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding shows only a chart title referring to a 20-year term of license; it does not state an issued Queens Future license, initial 20 years from the operation certificate, or possible ten-year renewal.",
+        "claim_links": [
+          {
+            "finding_id": "finding-2853e164-a606-492b-9b1a-a1da0f01717a",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "The claim mentions a 20-year term but lacks the issued-license, operation-certificate, and renewal details."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-e3a1c4dc-a376-4654-8955-ef51c2566cf5",
+            "quote": "Chart 5: HRMP Community Benefit during their 20-year Term of License",
+            "label": "NEUTRAL",
+            "reason": "This establishes only a 20-year term phrase in a chart title, not the full license grant structure in the reference fact."
+          }
+        ]
+      },
+      {
+        "gold_id": "G6",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states that material changes to commitments require written Commission approval.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G7",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents a later operator fund page listing approximately $5 million annually from 2031 through 2050.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G8",
+        "finding_ids": [
+          "finding-09a3a214-601e-4482-a795-037bcf117384"
+        ],
+        "citation_ids": [
+          "support-b5971bef-1cdf-4a7d-ae9d-549da341cd0e"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding states approximately $2 million in individual philanthropic commitments, not that the operator distributed $2 million in 2026.",
+        "claim_links": [
+          {
+            "finding_id": "finding-09a3a214-601e-4482-a795-037bcf117384",
+            "claim_index": 1,
+            "label": "NEUTRAL",
+            "reason": "The claim concerns philanthropic commitments totaling approximately $2 million, not a 2026 distribution."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-b5971bef-1cdf-4a7d-ae9d-549da341cd0e",
+            "quote": "There are also individual philanthropic commitments totaling approximately $2 million",
+            "label": "NEUTRAL",
+            "reason": "This establishes only an approximate commitment total, not an actual 2026 distribution."
+          }
+        ]
+      },
+      {
+        "gold_id": "G9",
+        "finding_ids": [
+          "source-reread-1",
+          "source-reread-4",
+          "finding-bb478a7e-d0f6-4198-8a8a-76260808a2bb"
+        ],
+        "citation_ids": [
+          "source-reread-1-s",
+          "source-reread-4-s",
+          "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3"
+        ],
+        "label": "NEUTRAL",
+        "reason": "Several findings state $163 million fund descriptions, but none says the Metropolitan Park FAQ continued to advertise a $163 million fund package.",
+        "claim_links": [
+          {
+            "finding_id": "source-reread-1",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "This claim states a Borough President approval condition, not a Metropolitan Park FAQ advertisement."
+          },
+          {
+            "finding_id": "source-reread-4",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "This claim states Community Board 3 materials, not a Metropolitan Park FAQ advertisement."
+          },
+          {
+            "finding_id": "finding-bb478a7e-d0f6-4198-8a8a-76260808a2bb",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "This claim states a September 2025 CAC response, not a Metropolitan Park FAQ advertisement."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "source-reread-1-s",
+            "quote": "A $163 million Community Benefits Fund",
+            "label": "NEUTRAL",
+            "reason": "This establishes a $163 million fund in approval conditions, not that a Metropolitan Park FAQ continued to advertise it."
+          },
+          {
+            "citation_id": "source-reread-4-s",
+            "quote": "$163 million for a Community Impact Fund",
+            "label": "NEUTRAL",
+            "reason": "This establishes the amount in Community Board 3 materials, not in a Metropolitan Park FAQ."
+          },
+          {
+            "citation_id": "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3",
+            "quote": "The Community Impact Fund, as proposed in the Application, is valued at $163 million over the 30-year length of the license.",
+            "label": "NEUTRAL",
+            "reason": "This establishes a September 2025 CAC response, not a Metropolitan Park FAQ continuing to advertise a package."
+          }
+        ]
+      },
+      {
+        "gold_id": "G10",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states that Queens Theatre publicly acknowledged support from the Metropolitan Park Community Impact Fund.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G11",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states that Belongo identified the Metropolitan Park Community Impact Fund as a supporter.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G12",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states that the applicant proposed a seven-person fund advisory board.",
+        "claim_links": [],
+        "quote_checks": []
+      }
+    ],
+    "protocol": "owned-quotes-v1",
+    "verdict": {
+      "label": "JUSTIFIED",
+      "reason": "The final assessment correctly treats the record as proving the pledge but not actual delivery: no cited excerpt shows the fund actually received or disbursed money, and no cited excerpt shows payments meeting the original 30-year schedule or an approved revision.",
+      "conditions": [
+        {
+          "condition_id": "K1",
+          "label": "NEUTRAL",
+          "citation_ids": [
+            "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+            "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3",
+            "support-7b7dcaf8-d394-41e5-b878-03ca5505b6c1",
+            "support-b5971bef-1cdf-4a7d-ae9d-549da341cd0e",
+            "support-1d012418-8307-41ba-aba2-59cb61c941ce"
+          ],
+          "quote_checks": [
+            {
+              "citation_id": "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+              "quote": "Another $150 million has been proposed in ongoing commitments to a community impact fund, as the table below illustrates. The Applicant committed to this $150 million over a 30-year license term.",
+              "label": "NEUTRAL",
+              "reason": "This proves a proposed commitment, not that the fund actually received or disbursed money."
+            },
+            {
+              "citation_id": "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3",
+              "quote": "The Community Impact Fund, as proposed in the Application, is valued at $163 million over the 30-year length of the license. Our commitments will be binding under the gaming license, ensuring accountability and delivery.",
+              "label": "NEUTRAL",
+              "reason": "This describes the proposal and future binding status, not actual funding or disbursement."
+            },
+            {
+              "citation_id": "support-7b7dcaf8-d394-41e5-b878-03ca5505b6c1",
+              "quote": "The Fund is structured for annual disbursements, guaranteeing stable support for nonprofits, parks, and cultural institutions.",
+              "label": "NEUTRAL",
+              "reason": "A stated structure for disbursements does not establish that any money was actually disbursed."
+            },
+            {
+              "citation_id": "support-b5971bef-1cdf-4a7d-ae9d-549da341cd0e",
+              "quote": "There is another $25 million dedicated to three neighborhood projects: East Elmhurst health clinic, Corona/Jackson Heights senior/youth center, and Flushing addiction services. There are also individual philanthropic commitments totaling approximately $2 million",
+              "label": "NEUTRAL",
+              "reason": "This refers to dedicated projects and philanthropic commitments, not actual receipts or disbursements from the original $150 million operating tranche."
+            },
+            {
+              "citation_id": "support-1d012418-8307-41ba-aba2-59cb61c941ce",
+              "quote": "Community Impact Fund 13 150 163",
+              "label": "NEUTRAL",
+              "reason": "This unlabeled chart row does not show that money was actually paid into or out of the fund."
+            }
+          ],
+          "reason": "The excerpts show only proposed or planned commitments and structure; they do not document actual receipt or disbursement against the original $150 million tranche."
+        },
+        {
+          "condition_id": "K2",
+          "label": "NEUTRAL",
+          "citation_ids": [
+            "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+            "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3",
+            "support-7b7dcaf8-d394-41e5-b878-03ca5505b6c1",
+            "support-e3a1c4dc-a376-4654-8955-ef51c2566cf5"
+          ],
+          "quote_checks": [
+            {
+              "citation_id": "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+              "quote": "The Applicant committed to this $150 million over a 30-year license term.",
+              "label": "NEUTRAL",
+              "reason": "This states the original term of the commitment but not any actual payments or whether they met a schedule."
+            },
+            {
+              "citation_id": "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3",
+              "quote": "The Community Impact Fund, as proposed in the Application, is valued at $163 million over the 30-year length of the license.",
+              "label": "NEUTRAL",
+              "reason": "This gives a proposed 30-year valuation, not evidence that payments met an applicable schedule."
+            },
+            {
+              "citation_id": "support-7b7dcaf8-d394-41e5-b878-03ca5505b6c1",
+              "quote": "The Fund is structured for annual disbursements",
+              "label": "NEUTRAL",
+              "reason": "This indicates intended periodicity but does not show any actual payment timing or compliance with schedule."
+            },
+            {
+              "citation_id": "support-e3a1c4dc-a376-4654-8955-ef51c2566cf5",
+              "quote": "Chart 5: HRMP Community Benefit during their 20-year Term of License",
+              "label": "NEUTRAL",
+              "reason": "This introduces possible term ambiguity and still does not establish actual payments meeting the original 30-year schedule or any formally approved revision."
+            }
+          ],
+          "reason": "The record lacks evidence of actual payments and lacks proof of compliance with the original 30-year schedule or any formally approved revised schedule."
+        }
+      ]
+    }
+  },
+  "finished_at": "2026-11-22T10:26:44.547577+00:00"
+}

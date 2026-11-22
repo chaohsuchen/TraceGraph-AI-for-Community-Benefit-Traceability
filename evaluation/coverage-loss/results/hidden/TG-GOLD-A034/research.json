@@ -1,0 +1,128 @@
+{
+  "case_id": "TG-GOLD-A034",
+  "reference_sha256": "b122470fbb2365b7a1e0a684fbaaa947bea4ee02e2e6b7d122f541513cd1ed49",
+  "query": "Resorts World committed annually, for the license term, the lesser of 2 percent of incremental GGR above 2025 levels or $25 million to a workforce housing fund.",
+  "model": "gpt-5.4",
+  "web_search_model": "gpt-5.4",
+  "started_at": "2026-11-22T09:31:19.730210+00:00",
+  "outcome": "PARTIAL_RESEARCH",
+  "message": "Research is incomplete; no commitment was saved.",
+  "graph": null,
+  "job_result": {
+    "gaps": [
+      "The provided excerpts document a workforce housing fund and annual $25M figures, but do not document the queried formula \"lesser of 2 percent of incremental GGR above 2025 levels or $25 million\" or the duration \"for the license term.\"",
+      "The excerpts state \"$25M Delivered in 2026,\" but do not show the transaction details, whether delivery was to the same fund under the queried formula, or whether any recurring annual obligation has been met beyond 2026.",
+      "The citations show Resorts World's website reporting \"$25M Delivered in 2026\" with data as of September 2026, but they do not independently verify disbursement mechanics, recipient, or whether delivery satisfied a specific license-term formula.",
+      "The supplied passages do not document the queried commitment formula \"the lesser of 2 percent of incremental GGR above 2025 levels or $25 million\" or the duration \"for the license term.\" The verified text supports a Resorts World workforce housing initiative/fund, a stated \"$25M Annually\" commitment for up to 50,000 units, and a reported \"$25M Delivered in 2026\" as of September 2026, but not the specific GGR-based formula or license-term wording."
+    ],
+    "facts": [
+      {
+        "excerpt": "Resorts World's Workforce Housing Initiative, funded through the Cirrus Workforce Housing Fund, is a landmark partnership with organized labor to deliver tens of thousands of new homes for working families across New York City.",
+        "source_url": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+        "source_title": "https://rwnewyork.com/community/community-investments/workforce-housing/"
+      },
+      {
+        "excerpt": "Workforce Housing Fund LANDMARK JOINT VENTURE WITH ORGANIZED LABOR We aim to tackle the city’s affordability crisis head-on by delivering the largest injection of new workforce housing in decades. We are creating up to 50,000 units citywide that are union-financed and union-built. $25M Annually $25M Delivered in 2026 Data as of September 2026",
+        "source_url": "https://rwnewyork.com/community/community-investments/",
+        "source_title": "https://rwnewyork.com/community/community-investments/"
+      },
+      {
+        "excerpt": "$25M Annually for up to 50,000 units",
+        "source_url": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+        "source_title": "https://rwnewyork.com/community/community-investments/workforce-housing/"
+      },
+      {
+        "excerpt": "$25M Delivered in 2026",
+        "source_url": "https://rwnewyork.com/community/community-investments/",
+        "source_title": "https://rwnewyork.com/community/community-investments/"
+      },
+      {
+        "excerpt": "Data as of September 2026",
+        "source_url": "https://rwnewyork.com/community/community-investments/",
+        "source_title": "https://rwnewyork.com/community/community-investments/"
+      },
+      {
+        "excerpt": "Resorts World New York City has officially formed a joint venture with Cirrus to invest in this housing commitment, which will focus on large-scale projects across the five boroughs. The new partnership will begin to invest in new housing developments in the immediate term.",
+        "source_url": "https://rwnewyork.com/rws-next-chapter/resorts-world-new-york-city-cirrus-unveil-new-agreement-to-build-up-to-50000-units-of-workforce-housing/",
+        "source_title": "https://rwnewyork.com/rws-next-chapter/resorts-world-new-york-city-cirrus-unveil-new-agreement-to-build-up-to-50000-units-of-workforce-housing/"
+      },
+      {
+        "excerpt": "About 700 new homes could be coming to Downtown Jamaica on the site of what’s now a massive parking garage, as part of the agreement by Resorts World New York City and Cirrus Real Estate Partners to deliver nearly 50,000 units across the five boroughs. The joint venture has purchased the 1.8-acre development site and parking garage at 92-30 165th St. for $46.1 million with plans to turn the lot into housing, according to Cirrus and Ripco Real Estate, which brokered the deal.",
+        "source_url": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+        "source_title": "https://rwnewyork.com/community/community-investments/workforce-housing/"
+      },
+      {
+        "source_url": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+        "source_title": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+        "excerpt": "POWERED BY RESORTS WORLD'S $750M DIRECT INVESTMENT"
+      },
+      {
+        "source_url": "https://rwnewyork.com/rws-next-chapter/resorts-world-new-york-city-cirrus-unveil-new-agreement-to-build-up-to-50000-units-of-workforce-housing/",
+        "source_title": "https://rwnewyork.com/rws-next-chapter/resorts-world-new-york-city-cirrus-unveil-new-agreement-to-build-up-to-50000-units-of-workforce-housing/",
+        "excerpt": "Resorts World has made a down payment to build fair housing in a multi-million-dollar commitment not just for its employees but all working-class New Yorkers."
+      }
+    ],
+    "query": "Resorts World committed annually, for the license term, the lesser of 2 percent of incremental GGR above 2025 levels or $25 million to a workforce housing fund.",
+    "message": "Research is incomplete; no commitment was saved.",
+    "outcome": "PARTIAL_RESEARCH",
+    "suggestions": [
+      {
+        "kind": "WEB_LEAD",
+        "title": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+        "excerpt": "Resorts World's Workforce Housing Initiative, funded through the Cirrus Workforce Housing Fund, is a landmark partnership with organized labor to deliver tens of thousands of new homes for working families across New York City.",
+        "source_url": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+        "description": "Resorts World's Workforce Housing Initiative, funded through the Cirrus Workforce Housing Fund, is a landmark partnership with organized labor to deliver tens of thousands of new homes for working families across New York City.",
+        "source_title": "https://rwnewyork.com/community/community-investments/workforce-housing/"
+      },
+      {
+        "kind": "WEB_LEAD",
+        "title": "https://rwnewyork.com/community/community-investments/",
+        "excerpt": "Workforce Housing Fund LANDMARK JOINT VENTURE WITH ORGANIZED LABOR We aim to tackle the city’s affordability crisis head-on by delivering the largest injection of new workforce housing in decades. We are creating up to 50,000 units citywide that are union-financed and union-built. $25M Annually $25M Delivered in 2026 Data as of September 2026",
+        "source_url": "https://rwnewyork.com/community/community-investments/",
+        "description": "Workforce Housing Fund LANDMARK JOINT VENTURE WITH ORGANIZED LABOR We aim to tackle the city’s affordability crisis head-on by delivering the largest injection of new workforce housing in decades. We are creating up to 50,000 units citywide that are union-financed and union-built. $25M Annually $25M Delivered in 2026 Data as of September 2026",
+        "source_title": "https://rwnewyork.com/community/community-investments/"
+      },
+      {
+        "kind": "WEB_LEAD",
+        "title": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+        "excerpt": "$25M Annually for up to 50,000 units",
+        "source_url": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+        "description": "$25M Annually for up to 50,000 units",
+        "source_title": "https://rwnewyork.com/community/community-investments/workforce-housing/"
+      }
+    ],
+    "unmatched_records": [
+      {
+        "excerpt": "To meet this need, Resorts World has made a down payment to build fair housing in a multi-million-dollar commitment not just for its employees but all working-class New Yorkers.",
+        "source_url": "https://rwnewyork.com/rws-next-chapter/resorts-world-new-york-city-cirrus-unveil-new-agreement-to-build-up-to-50000-units-of-workforce-housing/",
+        "source_title": "https://rwnewyork.com/rws-next-chapter/resorts-world-new-york-city-cirrus-unveil-new-agreement-to-build-up-to-50000-units-of-workforce-housing/"
+      },
+      {
+        "excerpt": "Workforce Housing Fund",
+        "source_url": "https://rwnewyork.com/community/community-investments/",
+        "source_title": "https://rwnewyork.com/community/community-investments/"
+      },
+      {
+        "excerpt": "$25M Annually",
+        "source_url": "https://rwnewyork.com/community/community-investments/",
+        "source_title": "https://rwnewyork.com/community/community-investments/"
+      },
+      {
+        "excerpt": "Community Commitments We're investing in the places we call home. We’re putting real dollars behind real promises with meaningful community development in Queens because we’re more than just a business. We are a trusted community partner with purpose that continues to keep its promises.",
+        "source_url": "https://rwnewyork.com/community/community-investments/",
+        "source_title": "https://rwnewyork.com/community/community-investments/"
+      },
+      {
+        "excerpt": "Data as of September 2026",
+        "source_url": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+        "source_title": "https://rwnewyork.com/community/community-investments/workforce-housing/"
+      },
+      {
+        "excerpt": "POWERED BY RESORTS WORLD'S $750M DIRECT INVESTMENT",
+        "source_url": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+        "source_title": "https://rwnewyork.com/community/community-investments/workforce-housing/"
+      }
+    ]
+  },
+  "finished_at": "2026-11-22T09:33:21.524921+00:00"
+}

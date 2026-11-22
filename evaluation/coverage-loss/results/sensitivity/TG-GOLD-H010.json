@@ -1,0 +1,56 @@
+{
+  "fingerprint": "75d275dd9323ded570158053e83f9ec4662f38a5440b899cb4b35bc8f036601b",
+  "reversed_original_ids": [
+    "p10",
+    "p9",
+    "p8",
+    "p7",
+    "p6",
+    "p5",
+    "p4",
+    "p3",
+    "p2",
+    "p1"
+  ],
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 2.968999999924563,
+      "request_id": "req_e71ccbd5598d49649736eb191cb31551",
+      "usage": {
+        "input_tokens": 2544,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 185,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2729
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "decisions": [
+    {
+      "gold_id": "G1",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p6",
+        "p8",
+        "p9"
+      ],
+      "reason": "The passages show a plan to meet \"at least 10 percent renewable energy consumption\" using on-site solar plus NYSERDA-qualified procurement, but they do not state that Bally's aims to exceed a 10% renewable electricity share; \"at least 10 percent\" is compatible with exactly 10%."
+    }
+  ]
+}

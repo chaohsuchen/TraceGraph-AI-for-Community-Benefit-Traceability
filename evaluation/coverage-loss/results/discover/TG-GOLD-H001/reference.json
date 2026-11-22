@@ -1,0 +1,313 @@
+{
+  "case_id": "TG-GOLD-H001",
+  "query": "Bally's commits to a diverse 3,503-FTE permanent workforce, 70 percent from the Bronx, reflecting Bronx demographics.",
+  "facts": [
+    {
+      "id": "G1",
+      "text": "Bally's projected approximately 3,503 permanent full-time-equivalent Bronx positions.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H001",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H001",
+          "row": 10
+        }
+      ]
+    },
+    {
+      "id": "G2",
+      "text": "Bally's set a 70% Bronx-resident target for its permanent workforce.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H001",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H001",
+          "row": 10
+        }
+      ]
+    },
+    {
+      "id": "G3",
+      "text": "Bally's CAC answers describe the target population as Bronx residents or local underserved populations.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H001",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "G4",
+      "text": "Bally's promised quarterly reporting on hiring.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H001",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "G5",
+      "text": "The Bronx license requires public workforce demographic reporting as part of community-benefit reporting.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H001",
+          "row": 8
+        }
+      ]
+    },
+    {
+      "id": "G6",
+      "text": "The Board distinguished approximately 3,741 permanent positions from approximately 3,503 FTEs.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H001",
+          "row": 10
+        }
+      ]
+    },
+    {
+      "id": "G7",
+      "text": "The Bronx vacancies identified in the workforce review were at the existing golf course and restaurant.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H001",
+          "row": 13
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "K1",
+      "text": "Bally's actually employed about 3,503 permanent FTEs at the Bronx casino.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H001",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H001",
+          "row": 10
+        }
+      ]
+    },
+    {
+      "id": "K2",
+      "text": "Seventy percent of the Bronx casino's actual permanent workforce lived in the Bronx.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H001",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H001",
+          "row": 10
+        }
+      ]
+    },
+    {
+      "id": "K3",
+      "text": "The operating casino's permanent workforce reflected Bronx demographics.",
+      "source_refs": [
+        {
+          "sheet": "gold commitments",
+          "row": 16
+        },
+        {
+          "sheet": "TG-GOLD-H001",
+          "row": 5
+        }
+      ]
+    }
+  ],
+  "delivery_applicable": true,
+  "reference_verdict": {
+    "status": "not yet due",
+    "reasoning": "§5 decision order: (1) hiring outcomes can be evidenced; (2) the trigger (permanent operations, casino opening targeted 2030) is after the assessment date → not yet due. Every document restates the pledge or describes how it will be checked (quarterly hiring reports, license reporting, the CMT). None reports hiring. Re-assess when the casino opens. Searched: web/news, Gale OneFile: News (31 Bally's/Bronx articles since Dec 2025), Gaming Commission records, GFLB report. Label caveat (not status): 'commits' vs the Board's best-efforts reading.",
+    "delivery_applicable": true,
+    "source_refs": [
+      {
+        "sheet": "TG-GOLD-H001",
+        "row": 17
+      },
+      {
+        "sheet": "TG-GOLD-H001",
+        "row": 18
+      }
+    ]
+  },
+  "sources": [
+    {
+      "sheet": "TG-GOLD-H001",
+      "row": 5,
+      "title": "GFLB selection document, Bally's Bronx: Board Evaluation",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf  (GFLB-SEL-2025-12-01) — PDF p.12 (printed p.11)",
+      "publisher": "Gaming Facility Location Board (Dec 1, 2025)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf  (GFLB-SEL-2025-12-01) — PDF p.12 (printed p.11)",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "Source of the commitment (3,503 FTE; 70% Bronx).",
+      "notes": "Board elsewhere says no applicant made binding diversity commitments beyond best-efforts pledges (p.14)."
+    },
+    {
+      "sheet": "TG-GOLD-H001",
+      "row": 6,
+      "title": "Bally's CAC Q&A",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "publisher": "Bally's, via NY casino CAC process (Sep 12, 2025)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "Minimum target of 70% of employees from the Bronx or local underserved populations.",
+      "notes": "Restatement of the pledge."
+    },
+    {
+      "sheet": "TG-GOLD-H001",
+      "row": 7,
+      "title": "Bally's Bets on the Bronx' community benefits document",
+      "citation": "https://ballysbronx.com/wp-content/uploads/2026/03/Ballys-Bets-on-the-Bronx-03.06.26.pdf",
+      "publisher": "Bally's (posted on ballysbronx.com, Mar 2026)",
+      "url": "https://ballysbronx.com/wp-content/uploads/2026/03/Ballys-Bets-on-the-Bronx-03.06.26.pdf",
+      "url_origin": "workbook",
+      "locator": "https://ballysbronx.com/wp-content/uploads/2026/03/Ballys-Bets-on-the-Bronx-03.06.26.pdf",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "~70% Bronx residents; promises quarterly hiring transparency reporting.",
+      "notes": "Obligor's pledge, not a fulfillment claim. Names the future report to check."
+    },
+    {
+      "sheet": "TG-GOLD-H001",
+      "row": 8,
+      "title": "Bally's license document (executed)",
+      "citation": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "publisher": "NYS Gaming Commission (Dec 19, 2025)",
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "url_origin": "workbook",
+      "locator": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "Community-benefits conditions, including public workforce diversity and demographic reporting.",
+      "notes": "Accountability mechanism. Reporting condition taken to mirror RWNYC's Condition 3; verify page before citing."
+    },
+    {
+      "sheet": "TG-GOLD-H001",
+      "row": 9,
+      "title": "3 NYC casino plans win final OK -- 2 in Queens, 1 in Bronx'",
+      "citation": "https://gothamist.com/news/3-nyc-casino-plans-win-final-ok-2-in-queens-1-in-bronx ",
+      "publisher": "Gothamist (Dec 15, 2025)",
+      "url": "https://gothamist.com/news/3-nyc-casino-plans-win-final-ok-2-in-queens-1-in-bronx",
+      "url_origin": "workbook",
+      "locator": "https://gothamist.com/news/3-nyc-casino-plans-win-final-ok-2-in-queens-1-in-bronx ",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "Bally's said 70% of construction and permanent jobs would go to Bronx residents. Law professor Bennett Liebman doubts the monitor can enforce such promises.",
+      "notes": "Restatement (extends 70% to construction jobs, cf. H009). Method B."
+    },
+    {
+      "sheet": "TG-GOLD-H001",
+      "row": 10,
+      "title": "GFLB final report and findings",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "publisher": "Gaming Facility Location Board (Mar 2026)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "3,741 permanent positions (~3,503 FTE); 70% Bronx target; Board 'expects these goals to be met or exceeded' based on Bally's Chicago record. No formal hiring-report requirement recommended.",
+      "notes": "Regulator commentary. Method D."
+    },
+    {
+      "sheet": "TG-GOLD-H001",
+      "row": 11,
+      "title": "Gaming Commission meeting transcript, Mar 16, 2026",
+      "citation": "https://gaming.ny.gov/system/files/documents/2026/03/03.16.26.commissionmeetingtranscript.pdf",
+      "publisher": "NYS Gaming Commission",
+      "url": "https://gaming.ny.gov/system/files/documents/2026/03/03.16.26.commissionmeetingtranscript.pdf",
+      "url_origin": "workbook",
+      "locator": "https://gaming.ny.gov/system/files/documents/2026/03/03.16.26.commissionmeetingtranscript.pdf",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "Bally's was slower than RWNYC to retain its monitor and was given two weeks to submit a draft monitor contract.",
+      "notes": "Accountability mechanism. Method D."
+    },
+    {
+      "sheet": "TG-GOLD-H001",
+      "row": 12,
+      "title": "Gaming Commission meeting transcript, Oct 9, 2026",
+      "citation": "https://gaming.ny.gov/100926-meeting-transcript",
+      "publisher": "NYS Gaming Commission",
+      "url": "https://gaming.ny.gov/100926-meeting-transcript",
+      "url_origin": "workbook",
+      "locator": "https://gaming.ny.gov/100926-meeting-transcript",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "Monitors for all three licensees in place; Chair says community employment commitments should be fulfilled.",
+      "notes": "Method D."
+    },
+    {
+      "sheet": "TG-GOLD-H001",
+      "row": 13,
+      "title": "Bally's Bronx current job postings",
+      "citation": "https://ballysbronx.com  ; ZipRecruiter listings",
+      "publisher": "Bally's",
+      "url": "https://ballysbronx.com/",
+      "url_origin": "workbook",
+      "locator": "https://ballysbronx.com  ; ZipRecruiter listings",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "Current Bronx postings are for the existing golf course and restaurant only.",
+      "notes": "Different operation; casino hiring has not begun."
+    }
+  ],
+  "provenance": {
+    "workbook": "Golden Dataset (6).xlsx",
+    "sha256": "2da588b49b311957885ed7ff98bcd31c49e9d3ef8e99a761a3e9e5fcdb360099",
+    "identity": {
+      "sheet": "gold commitments",
+      "row": 16
+    },
+    "detail_sheet": "TG-GOLD-H001",
+    "detail_internal_id_cell": "B1",
+    "workbook_valid_flag": 1,
+    "workbook_split": "heldout_provisional",
+    "workbook_evidence_status": "not yet due",
+    "workbook_fields": {
+      "gold_id": "TG-GOLD-H001",
+      "document_id": "GFLB-SEL-2025-12-01",
+      "page_section": "pdf p.12; Bally’s Bronx: Board Evaluation",
+      "char_start": 24235.0,
+      "char_end": 24455.0,
+      "commitment_text": "For its permanent operations, Bally’s commits to building a diverse workforce of 3,503 full-time equivalent employees, with 70 percent of those workers coming from the Bronx, and reflecting the demographics of the Bronx.",
+      "normalized_statement": "Bally's commits to a diverse 3,503-FTE permanent workforce, 70 percent from the Bronx, reflecting Bronx demographics.",
+      "obligation_type": "Unresolved / ambiguous",
+      "responsible_entity": "Bally’s Corporation",
+      "amount_value": "3,503 FTE; 70 percent Bronx residents",
+      "term_periodicity": "permanent operations",
+      "geographic_scope": "Bronx",
+      "beneficiary_category": "workforce/jobs; local residents",
+      "beneficiary_named": "none named",
+      "condition_contingency": "none stated",
+      "milestone": "none stated",
+      "evidence_status": "not yet due",
+      "confidence": "Medium",
+      "adjudication_note": "commits' vs Board's statement that no Applicant made binding diversity commitments beyond best-efforts pledges (p.14). Competing: Contractual commitment vs Best effort.",
+      "duplicate_of": "none",
+      "notes": "none",
+      "evaluation_split": "heldout_provisional",
+      "manually annotated valid?": 1.0
+    },
+    "detail_research_cutoff": null,
+    "evaluation_use": "22-case annotated benchmark; development-exposed cases included",
+    "reference_preparation": "Locally curated factual hypotheses and delivery conditions from the cited Golden (6) cells; prior to research."
+  }
+}

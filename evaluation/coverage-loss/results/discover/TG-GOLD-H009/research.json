@@ -1,0 +1,247 @@
+{
+  "case_id": "TG-GOLD-H009",
+  "reference_sha256": "7aa58e7d86b919678174ecebf663dfa37b392288eca601f20aa9126ae93957b8",
+  "query": "Bally's committed that 70 percent of construction and facility jobs go to Bronx residents.",
+  "model": "gpt-5.4",
+  "web_search_model": "gpt-5.4",
+  "started_at": "2026-11-22T09:35:49.044840+00:00",
+  "outcome": "RESOLVED",
+  "graph": {
+    "commitment": {
+      "title": "Bally's commitment on Bronx resident hiring",
+      "description": "Bally's committed to ensure that 70 percent of construction and facility jobs go to Bronx residents.",
+      "original_text": "Bally’s has committed to ensuring that 70 percent of construction and facility jobs go to Bronx residents—a strong pledge that will require substantial and sustained effort from Bally’s and its contractors.",
+      "responsible_entity_raw": "Bally’s",
+      "beneficiary": {
+        "name": "Bronx residents",
+        "category": "Residents"
+      },
+      "obligation_type": "Hiring target",
+      "amount_value": "70 percent",
+      "term_periodicity": null,
+      "geographic_scope": "Bronx",
+      "condition_contingency": null,
+      "milestone": null,
+      "notes": "Commitment covers construction and facility jobs and identifies Bronx residents as the beneficiary group.",
+      "id": "commitment-b9321757-00b5-4dd7-bce6-dc1091fd9ab9",
+      "original_promise": {
+        "document_id": null,
+        "source": {
+          "id": "source-caeedff7-da77-4687-bdc8-91cc38d2eb70",
+          "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+          "title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+          "citation": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "locator": "Cited passage",
+        "char_start": null,
+        "char_end": null
+      }
+    },
+    "organization": {
+      "id": "org-34833fdb-1846-4562-bc5a-55faecc22310",
+      "name": "Bally's"
+    },
+    "assessment": {
+      "label": "UNVERIFIED",
+      "verdict": "Delivery unverified for: 70 percent of construction and facility jobs go to Bronx residents",
+      "reasoning": "Requested scope: Bally's committed that 70 percent of construction and facility jobs go to Bronx residents.\n\n70 percent of construction and facility jobs go to Bronx residents\nStatus: UNVERIFIED\nThe original commitment is documented by the board report stating Bally’s 'has committed to ensuring that 70 percent of construction and facility jobs go to Bronx residents,' and by Bally’s own statement that it 'committed to hiring at least 70%+ Bronx residents as a minimum target.' However, the provided citations only establish the promise/target. They do not provide direct evidence of actual hiring outcomes for construction or facility jobs, the denominator used, the share achieved, or which Bronx residents received those jobs.\nPromised scope: Bally’s promised that Bronx residents would receive 70 percent of the project’s construction and facility jobs. Actor: Bally’s (with effort from Bally’s and its contractors). Intended beneficiaries: Bronx residents. Location: the Bronx is specified for residents; the job site/project location is not further specified in the quoted promise. Benefit/action: ensuring that 70 percent of construction and facility jobs go to Bronx residents. Material conditions: the 70 percent share applies to construction and facility jobs.\nObserved scope: The cited evidence documents Bally’s repeating a minimum target of 70% Bronx-resident hiring, but it does not show any actual construction or facility jobs awarded to Bronx residents, any measured hiring results, or when/where such results occurred.\nEvidence gap: No cited evidence shows actual delivery of the promised result: that 70 percent of construction and facility jobs in fact went to Bronx residents.\nPromise evidence: c1, c2\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “Bally’s has committed to ensuring that 70 percent of construction and facility jobs go to Bronx residents—a strong pledge that will require substantial and sustained effort from Bally’s and its contractors.”\nhttps://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026\n\nc2: “elsewhere throughout this process, we have committed to hiring at least 70%+ Bronx residents as a minimum target.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf\n\nc3: “Our minimum goal for residents of New York State will be inclusive of our targets for Bronx based hiring. We anticipate that our minimum target goal will be that 70% of”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+      "verification_date": "2026-11-22"
+    },
+    "findings": [
+      {
+        "id": "finding-a05b588e-d3f3-4def-b836-449d8632d0d1",
+        "claim": "Bally’s committed that 70% of construction and facility jobs would go to Bronx residents, as documented in the New York casino siting board final report published in March 2026.",
+        "supports": [
+          {
+            "id": "support-2d477cbd-e590-4a71-b0a8-961a3bbcbd5d",
+            "source": {
+              "id": "source-caeedff7-da77-4687-bdc8-91cc38d2eb70",
+              "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+              "title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+              "citation": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Promise documented",
+            "excerpt": "Bally’s has committed to ensuring that 70 percent of construction and facility jobs go to Bronx residents—a strong pledge that will require substantial and sustained effort from Bally’s and its contractors.",
+            "locator": "Cited passage",
+            "summary": "The New York casino siting board’s final report states that Bally’s committed to ensuring that 70 percent of construction and facility jobs go to Bronx residents, and describes this as a pledge requiring substantial and sustained effort from Bally’s and its contractors.",
+            "explanation": "This passage directly attributes the commitment to Bally’s, specifies the scope as construction and facility jobs, sets the target at 70 percent, and adds contextual qualification about the effort required.",
+            "retrieved_at": "2026-11-22T09:36:28.428461+00:00"
+          }
+        ]
+      },
+      {
+        "id": "finding-51880e25-4bfa-4ab5-b3e4-8669efadeb36",
+        "claim": "In a September 2025 Bally’s response document, Bally’s stated it had committed to hiring at least 70% Bronx residents as a minimum target, without limiting the statement in that passage to construction and facility jobs.",
+        "supports": [
+          {
+            "id": "support-da862965-063b-4e8d-8075-f85147d6c171",
+            "source": {
+              "id": "source-2c490e98-8bbe-4221-bb1a-028dfd73f22e",
+              "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+              "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+              "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Promise documented",
+            "excerpt": "elsewhere throughout this process, we have committed to hiring at least 70%+ Bronx residents as a minimum target.",
+            "locator": "Cited passage",
+            "summary": "In a September 2025 response document, Bally’s said it had committed elsewhere in the process to hiring at least 70%+ Bronx residents as a minimum target.",
+            "explanation": "This passage is direct self-described commitment language from Bally’s, but it states the target more generally as hiring Bronx residents and does not itself specify construction and facility jobs.",
+            "retrieved_at": "2026-11-22T09:36:28.428461+00:00"
+          }
+        ]
+      },
+      {
+        "id": "finding-af43e099-2ff9-4fb4-b927-d5f6a0a15a16",
+        "claim": "In a September 28, 2025 amendment, Bally’s said its minimum New York State resident hiring goal would include Bronx-based hiring targets and that it anticipated a 70% minimum target goal, reframing the Bronx target within a broader state-resident goal.",
+        "supports": [
+          {
+            "id": "support-2802b308-aa23-4c66-9f64-9fb1b8f7f0d1",
+            "source": {
+              "id": "source-9577f7bc-4473-4348-9baf-676a111505c8",
+              "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+              "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+              "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Qualification",
+            "excerpt": "Our minimum goal for residents of New York State will be inclusive of our targets for Bronx based hiring. We anticipate that our minimum target goal will be that 70% of",
+            "locator": "Cited passage",
+            "summary": "In a September 28, 2025 amendment, Bally’s said its minimum goal for residents of New York State would be inclusive of its Bronx-based hiring targets and that it anticipated a minimum target goal of 70%, indicating the Bronx hiring target was being framed within a broader state-resident goal.",
+            "explanation": "This passage documents a later qualification or reframing: the Bronx hiring target was described as part of a broader New York State resident goal, and the 70% figure is stated as anticipated rather than as a firm completed outcome.",
+            "retrieved_at": "2026-11-22T09:36:28.428461+00:00"
+          }
+        ]
+      },
+      {
+        "id": "source-reread-1",
+        "claim": "In Bally’s October 21, 2025 response to GFLB questions, the residency table listed a 75% borough target for both construction FTEs and facility FTEs, not 70%.",
+        "supports": [
+          {
+            "id": "source-reread-1-s",
+            "excerpt": "FTE Residency Construction FTEs Facility FTEs Borough 75% 75% Outside the Borough but within NY City 13% 13% Outside NY City, but within NY State 7% 7% Outside NY State 5% 5% Total 100% 100% 3. Considering the proximity of potential facilities and the available job market, please clarify if the above percentages are a commitment or a goal/target?",
+            "source": {
+              "url": "https://nycasinos.ny.gov/ballys-bronx-response-gflb-questions-102125",
+              "title": "https://nycasinos.ny.gov/ballys-bronx-response-gflb-questions-102125"
+            }
+          }
+        ]
+      },
+      {
+        "id": "source-reread-2",
+        "claim": "Bally’s defined “local” for related community measures primarily as Bronx Community Boards 9, 10, and 11, while contemplating broader Bronx coverage under its CAC agreement.",
+        "supports": [
+          {
+            "id": "source-reread-2-s",
+            "excerpt": "We broadly define “local” as being located within Community Boards 9, 10 and 11 within the Bronx, but it is contemplated to include the Bronx catchment area broadly and is intended to radiate out to the rest of the Bronx based upon our agreement with our CAC.",
+            "source": {
+              "url": "https://nycasinos.ny.gov/ballys-bronx-response-gflb-questions-102125",
+              "title": "https://nycasinos.ny.gov/ballys-bronx-response-gflb-questions-102125"
+            }
+          }
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "kind": "PROGRESS",
+        "from_id": "finding-51880e25-4bfa-4ab5-b3e4-8669efadeb36",
+        "to_id": "finding-af43e099-2ff9-4fb4-b927-d5f6a0a15a16",
+        "reasoning": "The September 28, 2025 amendment explicitly follows the earlier September 2025 statement of a 70% Bronx-resident minimum target by revising how that target is framed: instead of a standalone Bronx hiring commitment, it says the minimum New York State resident goal will be inclusive of Bronx-based hiring targets and describes the 70% figure as anticipated. This is a direct follow-up on the same hiring target and schedule context within the same application process.",
+        "status": null,
+        "preferred_id": null
+      }
+    ],
+    "assessment_trace": {
+      "not_yet_due": [],
+      "criteria": [
+        {
+          "criterion": "70 percent of construction and facility jobs go to Bronx residents",
+          "scope_criteria": [
+            "s1"
+          ],
+          "promise_scope": "Bally’s promised that Bronx residents would receive 70 percent of the project’s construction and facility jobs. Actor: Bally’s (with effort from Bally’s and its contractors). Intended beneficiaries: Bronx residents. Location: the Bronx is specified for residents; the job site/project location is not further specified in the quoted promise. Benefit/action: ensuring that 70 percent of construction and facility jobs go to Bronx residents. Material conditions: the 70 percent share applies to construction and facility jobs.",
+          "observed_scope": "The cited evidence documents Bally’s repeating a minimum target of 70% Bronx-resident hiring, but it does not show any actual construction or facility jobs awarded to Bronx residents, any measured hiring results, or when/where such results occurred.",
+          "promise_citation_ids": [
+            "c1",
+            "c2"
+          ],
+          "delivery_citation_ids": [],
+          "delivery_status": "UNVERIFIED",
+          "timing_requirement": "No specific deadline or time window is stated in the cited promise excerpts; the obligation concerns the eventual distribution of construction and facility jobs.",
+          "explanation": "The original commitment is documented by the board report stating Bally’s 'has committed to ensuring that 70 percent of construction and facility jobs go to Bronx residents,' and by Bally’s own statement that it 'committed to hiring at least 70%+ Bronx residents as a minimum target.' However, the provided citations only establish the promise/target. They do not provide direct evidence of actual hiring outcomes for construction or facility jobs, the denominator used, the share achieved, or which Bronx residents received those jobs.",
+          "gap": "No cited evidence shows actual delivery of the promised result: that 70 percent of construction and facility jobs in fact went to Bronx residents.",
+          "delivery_support": []
+        }
+      ],
+      "label": "UNVERIFIED",
+      "verdict": "Delivery unverified for: 70 percent of construction and facility jobs go to Bronx residents",
+      "reasoning": "Requested scope: Bally's committed that 70 percent of construction and facility jobs go to Bronx residents.\n\n70 percent of construction and facility jobs go to Bronx residents\nStatus: UNVERIFIED\nThe original commitment is documented by the board report stating Bally’s 'has committed to ensuring that 70 percent of construction and facility jobs go to Bronx residents,' and by Bally’s own statement that it 'committed to hiring at least 70%+ Bronx residents as a minimum target.' However, the provided citations only establish the promise/target. They do not provide direct evidence of actual hiring outcomes for construction or facility jobs, the denominator used, the share achieved, or which Bronx residents received those jobs.\nPromised scope: Bally’s promised that Bronx residents would receive 70 percent of the project’s construction and facility jobs. Actor: Bally’s (with effort from Bally’s and its contractors). Intended beneficiaries: Bronx residents. Location: the Bronx is specified for residents; the job site/project location is not further specified in the quoted promise. Benefit/action: ensuring that 70 percent of construction and facility jobs go to Bronx residents. Material conditions: the 70 percent share applies to construction and facility jobs.\nObserved scope: The cited evidence documents Bally’s repeating a minimum target of 70% Bronx-resident hiring, but it does not show any actual construction or facility jobs awarded to Bronx residents, any measured hiring results, or when/where such results occurred.\nEvidence gap: No cited evidence shows actual delivery of the promised result: that 70 percent of construction and facility jobs in fact went to Bronx residents.\nPromise evidence: c1, c2\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “Bally’s has committed to ensuring that 70 percent of construction and facility jobs go to Bronx residents—a strong pledge that will require substantial and sustained effort from Bally’s and its contractors.”\nhttps://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026\n\nc2: “elsewhere throughout this process, we have committed to hiring at least 70%+ Bronx residents as a minimum target.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf\n\nc3: “Our minimum goal for residents of New York State will be inclusive of our targets for Bronx based hiring. We anticipate that our minimum target goal will be that 70% of”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+      "refutation": [],
+      "scope_anchors": {
+        "s1": "Bally's ensure 70 percent of construction and facility jobs go to Bronx residents"
+      },
+      "citations": {
+        "c1": {
+          "source": {
+            "title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+            "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+            "citation": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026"
+          },
+          "excerpt": "Bally’s has committed to ensuring that 70 percent of construction and facility jobs go to Bronx residents—a strong pledge that will require substantial and sustained effort from Bally’s and its contractors.",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:36:28.428461+00:00",
+          "finding_id": "finding-a05b588e-d3f3-4def-b836-449d8632d0d1",
+          "support_ids": [
+            "support-2d477cbd-e590-4a71-b0a8-961a3bbcbd5d"
+          ]
+        },
+        "c2": {
+          "source": {
+            "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+            "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+            "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf"
+          },
+          "excerpt": "elsewhere throughout this process, we have committed to hiring at least 70%+ Bronx residents as a minimum target.",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:36:28.428461+00:00",
+          "finding_id": "finding-51880e25-4bfa-4ab5-b3e4-8669efadeb36",
+          "support_ids": [
+            "support-da862965-063b-4e8d-8075-f85147d6c171"
+          ]
+        },
+        "c3": {
+          "source": {
+            "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+            "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+            "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf"
+          },
+          "excerpt": "Our minimum goal for residents of New York State will be inclusive of our targets for Bronx based hiring. We anticipate that our minimum target goal will be that 70% of",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:36:28.428461+00:00",
+          "finding_id": "finding-af43e099-2ff9-4fb4-b927-d5f6a0a15a16",
+          "support_ids": [
+            "support-2802b308-aa23-4c66-9f64-9fb1b8f7f0d1"
+          ]
+        }
+      },
+      "scope_gap": ""
+    }
+  },
+  "job_result": {
+    "run_id": null,
+    "outcome": "RESOLVED",
+    "commitment_id": "commitment-b9321757-00b5-4dd7-bce6-dc1091fd9ab9"
+  },
+  "finished_at": "2026-11-22T09:37:18.204937+00:00"
+}

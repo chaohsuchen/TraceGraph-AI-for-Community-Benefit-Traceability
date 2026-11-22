@@ -1,0 +1,387 @@
+{
+  "case_id": "TG-GOLD-H003",
+  "query": "Bally's is committed to paying for traffic mitigation, new bus stops, Ferry Point Park improvements and a ferry shuttle.",
+  "facts": [
+    {
+      "id": "G1",
+      "text": "Bally's committed to pay for traffic mitigation for its Bronx project.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H003",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H003",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "G2",
+      "text": "Bally's agreed to fund additional bus stops for the project.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H003",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H003",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "G3",
+      "text": "Bally's promised improvements to Ferry Point Park.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H003",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H003",
+          "row": 10
+        }
+      ]
+    },
+    {
+      "id": "G4",
+      "text": "Bally's committed to support a ferry shuttle for the project.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H003",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H003",
+          "row": 12
+        }
+      ]
+    },
+    {
+      "id": "G5",
+      "text": "The environmental findings require a construction traffic plan at least nine months before construction.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H003",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "G6",
+      "text": "The Board described at least one new bus stop in the park and two at the facility.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H003",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "G7",
+      "text": "A $160 million Ferry Point Park redesign was presented for community review.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H003",
+          "row": 8
+        },
+        {
+          "sheet": "TG-GOLD-H003",
+          "row": 9
+        }
+      ]
+    },
+    {
+      "id": "G8",
+      "text": "The Public Design Commission listed the park reconstruction for preliminary review.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H003",
+          "row": 10
+        }
+      ]
+    },
+    {
+      "id": "G9",
+      "text": "Bally's ferry shuttle service existed before this casino commitment.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H003",
+          "row": 8
+        }
+      ]
+    },
+    {
+      "id": "G10",
+      "text": "The land transaction included an approximately $4.6 million construction and infrastructure easement.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H003",
+          "row": 11
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "K1",
+      "text": "Bally's paid for the promised Bronx traffic mitigation.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H003",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H003",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "K2",
+      "text": "Bally's funded the promised new bus stops.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H003",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H003",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "K3",
+      "text": "Bally's funded the promised Ferry Point Park improvements.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H003",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H003",
+          "row": 10
+        }
+      ]
+    },
+    {
+      "id": "K4",
+      "text": "Bally's funded the promised ferry shuttle improvement beyond the existing service.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H003",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H003",
+          "row": 8
+        },
+        {
+          "sheet": "TG-GOLD-H003",
+          "row": 12
+        }
+      ]
+    }
+  ],
+  "delivery_applicable": true,
+  "reference_verdict": {
+    "status": "partially corroborated",
+    "reasoning": "§5 decision order: (1) deliverables can be evidenced; (2) the passage states no due date, so 'not yet due' does not apply to the row as a whole; (3) no source contradicts a delivery claim (the MTA statement shows no plan, not a dispute); (4) independent sources (Gothamist, Time Out, Public Design Commission) confirm one part of the chain: the park improvements are in design and public review. They do not confirm Bally's paid for them or that any work began → partially corroborated. Other parts: traffic is defined and enforceable but tied to construction (not yet due); no evidence of new bus stops; the ferry shuttle predates the commitment and no expansion was found. Competing reading: not yet due (the current gold label), since the Board expects this work before opening (~2030). Recommend splitting into four records: park → partially corroborated; traffic → not yet due; bus stops → no public evidence located; shuttle → partially corroborated (existing service, expansion unconfirmed).",
+    "delivery_applicable": true,
+    "source_refs": [
+      {
+        "sheet": "TG-GOLD-H003",
+        "row": 18
+      },
+      {
+        "sheet": "TG-GOLD-H003",
+        "row": 19
+      }
+    ]
+  },
+  "sources": [
+    {
+      "sheet": "TG-GOLD-H003",
+      "row": 5,
+      "title": "GFLB selection document, Bally's Bronx: Board Evaluation",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf  (GFLB-SEL-2025-12-01) — PDF p.12 (printed p.11)",
+      "publisher": "Gaming Facility Location Board (Dec 1, 2025)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf  (GFLB-SEL-2025-12-01) — PDF p.12 (printed p.11)",
+      "published_on": null,
+      "evidence_status": "no public evidence located",
+      "specific_evidence": "Source of the commitment (four deliverables, no amounts or dates).",
+      "notes": "Bundles four deliverables (guide §2 suggests splitting)."
+    },
+    {
+      "sheet": "TG-GOLD-H003",
+      "row": 6,
+      "title": "CEQR Statement of Findings, Bally's Bronx",
+      "citation": "https://a002-ceqraccess.nyc.gov/Handlers/ProjectFile.ashx?file=MjAyNFwyNERNRTAxMVhcZmluZGluZ3NcMjRETUUwMTFYX1N0YXRlbWVudF9PZl9GaW5kaW5nc18xMTE3MjAyNS5wZGY1&signature=7016b83ed72c7c76060b8283480728b92a12d1ec",
+      "publisher": "NYC Office of the Deputy Mayor for Housing, Economic Development and Workforce (Nov 17, 2025)",
+      "url": "https://a002-ceqraccess.nyc.gov/Handlers/ProjectFile.ashx?file=MjAyNFwyNERNRTAxMVhcZmluZGluZ3NcMjRETUUwMTFYX1N0YXRlbWVudF9PZl9GaW5kaW5nc18xMTE3MjAyNS5wZGY1&signature=7016b83ed72c7c76060b8283480728b92a12d1ec",
+      "url_origin": "workbook",
+      "locator": "https://a002-ceqraccess.nyc.gov/Handlers/ProjectFile.ashx?file=MjAyNFwyNERNRTAxMVhcZmluZGluZ3NcMjRETUUwMTFYX1N0YXRlbWVudF9PZl9GaW5kaW5nc18xMTE3MjAyNS5wZGY1&signature=7016b83ed72c7c76060b8283480728b92a12d1ec",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "Traffic measures defined: one-way Lafayette Ave overpass, signal changes, restriping, parking limits; Ring Road becomes a widened city street; Bally's duties go in the Contract of Sale with NYC Parks; construction traffic plan due to NYCDOT ≥9 months before construction. Bus stops and shuttle not addressed.",
+      "notes": "Traffic component: tied to construction, which has not started. Method D."
+    },
+    {
+      "sheet": "TG-GOLD-H003",
+      "row": 7,
+      "title": "GFLB final report and findings",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "publisher": "Gaming Facility Location Board (Mar 2026)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "Traffic improvements (Ring Road, sidewalks, overpass) expected before opening; at least 1 new bus stop in Ferry Point Park and 2 at the facility.",
+      "notes": "Gives the benchmark for bus stops. Method D."
+    },
+    {
+      "sheet": "TG-GOLD-H003",
+      "row": 8,
+      "title": "The Bronx is getting a new casino and a reimagined Ferry Point Park, too'",
+      "citation": "https://gothamist.com/news/the-bronx-is-getting-a-new-casino-and-a-reimagined-ferry-point-park-too  ; Gale doc GALE|A905598523",
+      "publisher": "Gothamist (Oct 14, 2026)",
+      "url": "https://gothamist.com/news/the-bronx-is-getting-a-new-casino-and-a-reimagined-ferry-point-park-too",
+      "url_origin": "workbook",
+      "locator": "https://gothamist.com/news/the-bronx-is-getting-a-new-casino-and-a-reimagined-ferry-point-park-too  ; Gale doc GALE|A905598523",
+      "published_on": null,
+      "evidence_status": "partially corroborated",
+      "specific_evidence": "$160M park redesign (Hargreaves Jones) presented to CB10's parks committee; CB10 vote on a support letter set for Oct 15; also under Public Design Commission review; park construction not before 2028. Nearest bus stop ~30-min walk; MTA: 'premature to evaluate demand for transportation to a facility that has yet to be built.' Bally's has run a free ferry shuttle since 2023.",
+      "notes": "Independent source. Confirms park design progress; indicates no bus-stop work; shuttle predates the commitment. Method A snippet + Method B full text."
+    },
+    {
+      "sheet": "TG-GOLD-H003",
+      "row": 9,
+      "title": "This waterfront Bronx park could get a $160 million makeover'",
+      "citation": "https://www.timeout.com/newyork/news/this-waterfront-bronx-park-could-get-a-160-million-makeover-including-the-boroughs-first-casino-101426",
+      "publisher": "Time Out New York (Oct 14, 2026)",
+      "url": "https://www.timeout.com/newyork/news/this-waterfront-bronx-park-could-get-a-160-million-makeover-including-the-boroughs-first-casino-101426",
+      "url_origin": "workbook",
+      "locator": "https://www.timeout.com/newyork/news/this-waterfront-bronx-park-could-get-a-160-million-makeover-including-the-boroughs-first-casino-101426",
+      "published_on": null,
+      "evidence_status": "partially corroborated",
+      "specific_evidence": "Same $160M Ferry Point Park redesign.",
+      "notes": "Independent; repeats Gothamist's facts."
+    },
+    {
+      "sheet": "TG-GOLD-H003",
+      "row": 10,
+      "title": "Public Design Commission public agenda, Oct 20, 2026",
+      "citation": "https://www.nyc.gov/assets/designcommission/downloads/pdf/agendas/10-20-26-PDC-Public-Agenda-REV.pdf",
+      "publisher": "NYC Public Design Commission",
+      "url": "https://www.nyc.gov/assets/designcommission/downloads/pdf/agendas/10-20-26-PDC-Public-Agenda-REV.pdf",
+      "url_origin": "workbook",
+      "locator": "https://www.nyc.gov/assets/designcommission/downloads/pdf/agendas/10-20-26-PDC-Public-Agenda-REV.pdf",
+      "published_on": null,
+      "evidence_status": "partially corroborated",
+      "specific_evidence": "Ferry Point Park reconstruction (western and northeastern portions) at preliminary review, sponsored by NYC Parks and DOT.",
+      "notes": "Independent. Bally's not named as funder, so the link to this commitment is inferred. Outcome not posted. Method D."
+    },
+    {
+      "sheet": "TG-GOLD-H003",
+      "row": 11,
+      "title": "Bally's land purchase coverage",
+      "citation": "https://ggbmagazine.com/articles/ballys-advances-156-6-million-land-purchase-bronx-casino/  ; https://www.connectcre.com/stories/ballys-acquires-site-for-future-bronx-casino/ ",
+      "publisher": "GGB Magazine (Mar 3, 2026); Connect CRE (2026)",
+      "url": "https://ggbmagazine.com/articles/ballys-advances-156-6-million-land-purchase-bronx-casino/",
+      "url_origin": "workbook",
+      "locator": "https://ggbmagazine.com/articles/ballys-advances-156-6-million-land-purchase-bronx-casino/  ; https://www.connectcre.com/stories/ballys-acquires-site-for-future-bronx-casino/ ",
+      "published_on": null,
+      "evidence_status": "no public evidence located",
+      "specific_evidence": "Land deal included a ~$4.6M easement for construction access and infrastructure work; Bally's to make capital improvements to Ferry Point Park and Ring Road.",
+      "notes": "Easement is payment for access rights, not a park improvement."
+    },
+    {
+      "sheet": "TG-GOLD-H003",
+      "row": 12,
+      "title": "Bally's Bets on the Bronx' community benefits document",
+      "citation": "https://ballysbronx.com/wp-content/uploads/2026/03/Ballys-Bets-on-the-Bronx-03.06.26.pdf",
+      "publisher": "Bally's (posted Mar 2026)",
+      "url": "https://ballysbronx.com/wp-content/uploads/2026/03/Ballys-Bets-on-the-Bronx-03.06.26.pdf",
+      "url_origin": "workbook",
+      "locator": "https://ballysbronx.com/wp-content/uploads/2026/03/Ballys-Bets-on-the-Bronx-03.06.26.pdf",
+      "published_on": null,
+      "evidence_status": "no public evidence located",
+      "specific_evidence": "Lists a new Lafayette Ave overpass, rebuilt Ring Road, added MTA bus stops, expanded shuttle ($75M upfront).",
+      "notes": "Obligor's pledge, not a claim of delivery. No evidence the $75M was paid."
+    },
+    {
+      "sheet": "TG-GOLD-H003",
+      "row": 13,
+      "title": "NYC Parks capital project tracker #10479, Ferry Point Playground Reconstruction",
+      "citation": "https://php1-84.nycgovparks.org/planning-and-building/capital-project-tracker/project/10479",
+      "publisher": "NYC Parks",
+      "url": "https://php1-84.nycgovparks.org/planning-and-building/capital-project-tracker/project/10479",
+      "url_origin": "workbook",
+      "locator": "https://php1-84.nycgovparks.org/planning-and-building/capital-project-tracker/project/10479",
+      "published_on": null,
+      "evidence_status": "no public evidence located",
+      "specific_evidence": "$3.12M, City Council-funded; construction 7% complete.",
+      "notes": "Different funder; do not count toward Bally's commitment (failure code F11). The $160M redesign is not yet in the tracker."
+    },
+    {
+      "sheet": "TG-GOLD-H003",
+      "row": 14,
+      "title": "Bronx CB10 minutes (Apr 2026) and Oct 2026 calendar",
+      "citation": "https://www.nyc.gov/assets/bronxcb10/downloads/pdf/minutes/2026/minutes_cb10_20261604.pdf ; https://www.nyc.gov/assets/bronxcb10/downloads/pdf/calendar/october_2026.pdf ",
+      "publisher": "Bronx Community Board 10",
+      "url": "https://www.nyc.gov/assets/bronxcb10/downloads/pdf/calendar/october_2026.pdf",
+      "url_origin": "workbook",
+      "locator": "https://www.nyc.gov/assets/bronxcb10/downloads/pdf/minutes/2026/minutes_cb10_20261604.pdf ; https://www.nyc.gov/assets/bronxcb10/downloads/pdf/calendar/october_2026.pdf ",
+      "published_on": null,
+      "evidence_status": "source unavailable",
+      "specific_evidence": "Minutes posted only through Apr 2026; no Ferry Point/Bally's items. Outcome of the Oct 15, 2026 vote not yet posted.",
+      "notes": "The vote outcome is a known record that isn't public yet. Asked in the librarian request."
+    }
+  ],
+  "provenance": {
+    "workbook": "Golden Dataset (6).xlsx",
+    "sha256": "2da588b49b311957885ed7ff98bcd31c49e9d3ef8e99a761a3e9e5fcdb360099",
+    "identity": {
+      "sheet": "gold commitments",
+      "row": 18
+    },
+    "detail_sheet": "TG-GOLD-H003",
+    "detail_internal_id_cell": "B1",
+    "workbook_valid_flag": 1,
+    "workbook_split": "heldout_provisional",
+    "workbook_evidence_status": "partially corroborated",
+    "workbook_fields": {
+      "gold_id": "TG-GOLD-H003",
+      "document_id": "GFLB-SEL-2025-12-01",
+      "page_section": "pdf p.12; Bally’s Bronx: Board Evaluation",
+      "char_start": 25391.0,
+      "char_end": 25571.0,
+      "commitment_text": "Bally’s is committed to bearing the cost of a number of traffic infrastructure mitigation measures, new bus stops, improvements to Ferry Point Park, and a shuttle to the Ferry stop",
+      "normalized_statement": "Bally's is committed to paying for traffic mitigation, new bus stops, Ferry Point Park improvements and a ferry shuttle.",
+      "obligation_type": "Unresolved / ambiguous",
+      "responsible_entity": "Bally’s Corporation",
+      "amount_value": "unspecified (\"a number of\")",
+      "term_periodicity": "unspecified",
+      "geographic_scope": "Bronx (Ferry Point)",
+      "beneficiary_category": "transportation; open space",
+      "beneficiary_named": "Ferry Point Park",
+      "condition_contingency": "none stated",
+      "milestone": "none stated",
+      "evidence_status": "partially corroborated",
+      "confidence": "Medium",
+      "adjudication_note": "is committed to' is an explicit ambiguity trigger in the guide; Board elsewhere treats these as promises it relied on.",
+      "duplicate_of": "none",
+      "notes": "none",
+      "evaluation_split": "heldout_provisional",
+      "manually annotated valid?": 1.0
+    },
+    "detail_research_cutoff": null,
+    "evaluation_use": "22-case annotated benchmark; development-exposed cases included",
+    "reference_preparation": "Locally curated factual hypotheses and delivery conditions from the cited Golden (6) cells; prior to research."
+  }
+}

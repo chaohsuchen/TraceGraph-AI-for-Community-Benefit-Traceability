@@ -1,0 +1,1142 @@
+{
+  "input_sha256": "ac8bcee9f94c49e9aa7e2c4ad8f8d41d863707c4e223b1c0505be45ea0899274",
+  "judge_model": "gpt-5.4",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "judge_version": "tracegraph-nli-v4-owned-quotes",
+  "started_at": "2026-11-22T10:15:33.139611+00:00",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 24.953000000095926,
+      "request_id": "req_28e6d0345bd54c35a2ce97e913f52f5d",
+      "usage": {
+        "input_tokens": 3671,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 3032,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 6703
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 6.906000000075437,
+      "request_id": "req_4af66199ed0d44c49e404901ebfc54f5",
+      "usage": {
+        "input_tokens": 2790,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 632,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3422
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "evidence": {
+    "identity": {
+      "label": "MATCH",
+      "reason": "The returned findings concern Bally’s transportation and park-related project commitments, including Ferry Point Park improvements and bus-stop funding, which semantically align with the questioned promise bundle."
+    },
+    "findings": [
+      {
+        "finding_id": "partial:f1",
+        "claims": [
+          {
+            "claim": "Bally's is allocating $100 million for parkland improvements, including the revitalization of Ferry Point Park.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "We are allocating $100 million for parkland improvements, including new walking paths, playgrounds, and the revitalization of Ferry Point Park",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states funding for parkland improvements including Ferry Point Park revitalization."
+              }
+            ],
+            "reason": "The excerpt directly states allocation for parkland improvements including Ferry Point Park revitalization."
+          },
+          {
+            "claim": "Bally's is allocating at least $75 million for transportation upgrades including enhanced public transit access via two new MTA bus stops.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "as well as at least $75 million for transportation upgrades such as a new Lafayette Avenue overpass, widened roads, and enhanced public transit access to the Project Site and Ferry Point Park via two new MTA bus stops",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states transportation funding and specifies two new MTA bus stops."
+              }
+            ],
+            "reason": "The excerpt directly states at least $75 million for transportation upgrades including two new bus stops."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f2",
+        "claims": [
+          {
+            "claim": "Bally's agreed it would be responsible for funding construction of bus stops and associated infrastructure required to meet MTA standards.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "we have agreed that Bally’s would be responsible for funding the construction of bus stops and any associated infrastructure required to meet MTA standards",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly says Bally's agreed to fund bus-stop construction and associated infrastructure."
+              }
+            ],
+            "reason": "The excerpt directly states Bally's agreed to fund bus-stop construction and associated infrastructure."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f3",
+        "claims": [
+          {
+            "claim": "Bally's existing shuttle service currently operates at 10 locations in its local catchment area.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "the existing Bally’s shuttle service, which currently operates at 10 locations throughout our local catchment area",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the shuttle already exists and currently operates at 10 locations."
+              }
+            ],
+            "reason": "The excerpt expressly describes a preexisting shuttle service operating at 10 locations."
+          },
+          {
+            "claim": "Bally's plans to expand its existing shuttle service based on usage and demand.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "We plan to expand this based on usage and demand.",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states a plan to expand the existing shuttle service."
+              }
+            ],
+            "reason": "The excerpt expressly states a plan to expand the shuttle service."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f4",
+        "claims": [
+          {
+            "claim": "Preliminary discussions were held with MTA about a potential extension of bus lines to the project site.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s4"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s4",
+                "quote": "Preliminary discussions have been held with MTA regarding potential extension of bus lines to the Project Site",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states only preliminary discussions about a potential extension."
+              }
+            ],
+            "reason": "The excerpt directly states preliminary discussions about potential bus-line extension."
+          },
+          {
+            "claim": "Preliminary discussions were held with NYCEDC about the potential for increased ferry service to the Ferry Point Park ferry landing.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s4"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s4",
+                "quote": "and with NYCEDC regarding potential for increased ferry service to the Ferry Point Park ferry landing",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states only preliminary discussions about a potential increase in ferry service."
+              }
+            ],
+            "reason": "The excerpt directly states preliminary discussions about potential increased ferry service; it does not state a commitment."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f5",
+        "claims": [
+          {
+            "claim": "Commitments for increased service for the MTA bus stops are in place.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s5"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s5",
+                "quote": "Commitments for increased service for the MTA bus stops are in place",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states commitments are in place for increased bus-stop service."
+              }
+            ],
+            "reason": "The excerpt expressly states commitments for increased MTA bus-stop service are in place."
+          },
+          {
+            "claim": "Specific details of the increased MTA bus-stop service still need to be further materialized.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s5"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s5",
+                "quote": "but specific details will need to be further materialized",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly says details remain unspecified."
+              }
+            ],
+            "reason": "The excerpt expressly states the details remain to be materialized."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f6",
+        "claims": [
+          {
+            "claim": "The proposed integrated facility would provide space for an on-site MTA bus stop.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s6"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s6",
+                "quote": "the proposed integrated facility would provide space for an MTA bus stop on-site",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the proposal would provide space for an on-site bus stop."
+              }
+            ],
+            "reason": "The excerpt directly states the proposal would provide space for an on-site bus stop."
+          },
+          {
+            "claim": "The proposed integrated facility would provide space for a bus stop along the reconstructed Ring Road in Ferry Point Park for park users.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s6"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s6",
+                "quote": "as well as a bus stop along the proposed reconstructed Ring Road in Ferry Point Park for Park users",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states a bus stop in the park along the reconstructed Ring Road."
+              }
+            ],
+            "reason": "The excerpt directly states the proposal would provide a bus stop in Ferry Point Park for park users."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f7",
+        "claims": [
+          {
+            "claim": "Bally's goal is to include an additional stop within Ferry Point Park.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s7"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s7",
+                "quote": "Our goal is to include additional stops (1) within Ferry Point Park",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states only a goal to include a stop within Ferry Point Park."
+              }
+            ],
+            "reason": "The excerpt expressly states a goal to include a stop within Ferry Point Park."
+          },
+          {
+            "claim": "Bally's goal is to include an additional stop within its site or at its entrance.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s7"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s7",
+                "quote": "and (2) within our site or at its entrance",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states only a goal to include a stop on-site or at the entrance."
+              }
+            ],
+            "reason": "The excerpt expressly states a goal to include a stop within the site or at its entrance."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "partial:f1"
+        ],
+        "citation_ids": [
+          "partial:s1"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding shows transportation funding but does not specifically state traffic mitigation for the Bronx project.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 1,
+            "label": "NEUTRAL",
+            "reason": "Transportation upgrades are broader than, and do not specifically establish, traffic mitigation."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s1",
+            "quote": "at least $75 million for transportation upgrades such as a new Lafayette Avenue overpass, widened roads, and enhanced public transit access",
+            "label": "NEUTRAL",
+            "reason": "Transportation upgrades may include traffic-related work, but the quote does not specifically say Bally's committed to pay for traffic mitigation."
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [
+          "partial:f2"
+        ],
+        "citation_ids": [
+          "partial:s2"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "The finding expressly states Bally's agreed to fund construction of bus stops and associated infrastructure.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f2",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim directly matches agreement to fund additional bus stops for the project."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s2",
+            "quote": "we have agreed that Bally’s would be responsible for funding the construction of bus stops and any associated infrastructure required to meet MTA standards",
+            "label": "ENTAILMENT",
+            "reason": "The quote directly states Bally's agreed to fund bus stops."
+          }
+        ]
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [
+          "partial:f1"
+        ],
+        "citation_ids": [
+          "partial:s1"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "The finding expressly states Bally's is allocating funding for revitalization of Ferry Point Park.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "Funding parkland improvements including Ferry Point Park revitalization conveys promised improvements to the park."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s1",
+            "quote": "We are allocating $100 million for parkland improvements, including new walking paths, playgrounds, and the revitalization of Ferry Point Park",
+            "label": "ENTAILMENT",
+            "reason": "The quote directly states funding for improvements and revitalization of Ferry Point Park."
+          }
+        ]
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [
+          "partial:f4",
+          "partial:f3"
+        ],
+        "citation_ids": [
+          "partial:s4",
+          "partial:s3"
+        ],
+        "label": "NEUTRAL",
+        "reason": "One finding mentions only preliminary discussions about increased ferry service, while another describes an existing shuttle service without identifying it as a ferry shuttle for the project.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f4",
+            "claim_index": 1,
+            "label": "NEUTRAL",
+            "reason": "Potential increased ferry service under preliminary discussion is not a commitment to support a ferry shuttle."
+          },
+          {
+            "finding_id": "partial:f3",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "An existing shuttle service is not shown to be a ferry shuttle for the project."
+          },
+          {
+            "finding_id": "partial:f3",
+            "claim_index": 1,
+            "label": "NEUTRAL",
+            "reason": "A plan to expand an existing shuttle service does not specify a ferry shuttle."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s4",
+            "quote": "Preliminary discussions have been held with MTA regarding potential extension of bus lines to the Project Site and with NYCEDC regarding potential for increased ferry service to the Ferry Point Park ferry landing.",
+            "label": "NEUTRAL",
+            "reason": "Preliminary discussions about potential increased ferry service do not establish a commitment to support a ferry shuttle."
+          },
+          {
+            "citation_id": "partial:s3",
+            "quote": "Our bus service commitments are centered around maintaining and enhancing the existing Bally’s shuttle service",
+            "label": "NEUTRAL",
+            "reason": "The quote identifies bus shuttle service, not a ferry shuttle."
+          }
+        ]
+      },
+      {
+        "gold_id": "G5",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents the environmental requirement for a construction traffic plan at least nine months before construction.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G6",
+        "finding_ids": [
+          "partial:f6"
+        ],
+        "citation_ids": [
+          "partial:s6"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding states one bus stop on-site and one in the park, not at least one in the park and two at the facility.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f6",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "This claim states one on-site stop only, not two at the facility."
+          },
+          {
+            "finding_id": "partial:f6",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "This claim does state a bus stop in Ferry Point Park."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s6",
+            "quote": "an MTA bus stop on-site, as well as a bus stop along the proposed reconstructed Ring Road in Ferry Point Park",
+            "label": "NEUTRAL",
+            "reason": "The quote establishes one on-site stop and one park stop, leaving unestablished the reference's two facility stops."
+          }
+        ]
+      },
+      {
+        "gold_id": "G7",
+        "finding_ids": [
+          "partial:f1"
+        ],
+        "citation_ids": [
+          "partial:s1"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding states $100 million allocated for parkland improvements, not a $160 million Ferry Point Park redesign presented for community review.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "The amount and described event differ from the reference fact."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s1",
+            "quote": "We are allocating $100 million for parkland improvements, including new walking paths, playgrounds, and the revitalization of Ferry Point Park",
+            "label": "NEUTRAL",
+            "reason": "The quote gives a different amount and does not mention community review of a $160 million redesign."
+          }
+        ]
+      },
+      {
+        "gold_id": "G8",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states that the Public Design Commission listed the park reconstruction for preliminary review.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G9",
+        "finding_ids": [
+          "partial:f3"
+        ],
+        "citation_ids": [
+          "partial:s3"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "The finding expressly describes an existing Bally's shuttle service already operating at 10 locations, showing it predated this commitment statement.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f3",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "The claim explicitly states the shuttle service already existed and currently operated."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s3",
+            "quote": "the existing Bally’s shuttle service, which currently operates at 10 locations throughout our local catchment area",
+            "label": "ENTAILMENT",
+            "reason": "The quote directly establishes that Bally's shuttle service already existed before the statement of commitments."
+          }
+        ]
+      },
+      {
+        "gold_id": "G10",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states that the land transaction included an approximately $4.6 million construction and infrastructure easement.",
+        "claim_links": [],
+        "quote_checks": []
+      }
+    ]
+  },
+  "verdict_protocol": "two-stage-owned-citations-v4",
+  "judgment": {
+    "identity": {
+      "label": "MATCH",
+      "reason": "The returned findings concern Bally’s transportation and park-related project commitments, including Ferry Point Park improvements and bus-stop funding, which semantically align with the questioned promise bundle."
+    },
+    "findings": [
+      {
+        "finding_id": "partial:f1",
+        "claims": [
+          {
+            "claim": "Bally's is allocating $100 million for parkland improvements, including the revitalization of Ferry Point Park.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "We are allocating $100 million for parkland improvements, including new walking paths, playgrounds, and the revitalization of Ferry Point Park",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states funding for parkland improvements including Ferry Point Park revitalization."
+              }
+            ],
+            "reason": "The excerpt directly states allocation for parkland improvements including Ferry Point Park revitalization."
+          },
+          {
+            "claim": "Bally's is allocating at least $75 million for transportation upgrades including enhanced public transit access via two new MTA bus stops.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "as well as at least $75 million for transportation upgrades such as a new Lafayette Avenue overpass, widened roads, and enhanced public transit access to the Project Site and Ferry Point Park via two new MTA bus stops",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states transportation funding and specifies two new MTA bus stops."
+              }
+            ],
+            "reason": "The excerpt directly states at least $75 million for transportation upgrades including two new bus stops."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f2",
+        "claims": [
+          {
+            "claim": "Bally's agreed it would be responsible for funding construction of bus stops and associated infrastructure required to meet MTA standards.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "we have agreed that Bally’s would be responsible for funding the construction of bus stops and any associated infrastructure required to meet MTA standards",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly says Bally's agreed to fund bus-stop construction and associated infrastructure."
+              }
+            ],
+            "reason": "The excerpt directly states Bally's agreed to fund bus-stop construction and associated infrastructure."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f3",
+        "claims": [
+          {
+            "claim": "Bally's existing shuttle service currently operates at 10 locations in its local catchment area.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "the existing Bally’s shuttle service, which currently operates at 10 locations throughout our local catchment area",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the shuttle already exists and currently operates at 10 locations."
+              }
+            ],
+            "reason": "The excerpt expressly describes a preexisting shuttle service operating at 10 locations."
+          },
+          {
+            "claim": "Bally's plans to expand its existing shuttle service based on usage and demand.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "We plan to expand this based on usage and demand.",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states a plan to expand the existing shuttle service."
+              }
+            ],
+            "reason": "The excerpt expressly states a plan to expand the shuttle service."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f4",
+        "claims": [
+          {
+            "claim": "Preliminary discussions were held with MTA about a potential extension of bus lines to the project site.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s4"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s4",
+                "quote": "Preliminary discussions have been held with MTA regarding potential extension of bus lines to the Project Site",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states only preliminary discussions about a potential extension."
+              }
+            ],
+            "reason": "The excerpt directly states preliminary discussions about potential bus-line extension."
+          },
+          {
+            "claim": "Preliminary discussions were held with NYCEDC about the potential for increased ferry service to the Ferry Point Park ferry landing.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s4"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s4",
+                "quote": "and with NYCEDC regarding potential for increased ferry service to the Ferry Point Park ferry landing",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states only preliminary discussions about a potential increase in ferry service."
+              }
+            ],
+            "reason": "The excerpt directly states preliminary discussions about potential increased ferry service; it does not state a commitment."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f5",
+        "claims": [
+          {
+            "claim": "Commitments for increased service for the MTA bus stops are in place.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s5"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s5",
+                "quote": "Commitments for increased service for the MTA bus stops are in place",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states commitments are in place for increased bus-stop service."
+              }
+            ],
+            "reason": "The excerpt expressly states commitments for increased MTA bus-stop service are in place."
+          },
+          {
+            "claim": "Specific details of the increased MTA bus-stop service still need to be further materialized.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s5"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s5",
+                "quote": "but specific details will need to be further materialized",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly says details remain unspecified."
+              }
+            ],
+            "reason": "The excerpt expressly states the details remain to be materialized."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f6",
+        "claims": [
+          {
+            "claim": "The proposed integrated facility would provide space for an on-site MTA bus stop.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s6"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s6",
+                "quote": "the proposed integrated facility would provide space for an MTA bus stop on-site",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the proposal would provide space for an on-site bus stop."
+              }
+            ],
+            "reason": "The excerpt directly states the proposal would provide space for an on-site bus stop."
+          },
+          {
+            "claim": "The proposed integrated facility would provide space for a bus stop along the reconstructed Ring Road in Ferry Point Park for park users.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s6"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s6",
+                "quote": "as well as a bus stop along the proposed reconstructed Ring Road in Ferry Point Park for Park users",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states a bus stop in the park along the reconstructed Ring Road."
+              }
+            ],
+            "reason": "The excerpt directly states the proposal would provide a bus stop in Ferry Point Park for park users."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f7",
+        "claims": [
+          {
+            "claim": "Bally's goal is to include an additional stop within Ferry Point Park.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s7"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s7",
+                "quote": "Our goal is to include additional stops (1) within Ferry Point Park",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states only a goal to include a stop within Ferry Point Park."
+              }
+            ],
+            "reason": "The excerpt expressly states a goal to include a stop within Ferry Point Park."
+          },
+          {
+            "claim": "Bally's goal is to include an additional stop within its site or at its entrance.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s7"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s7",
+                "quote": "and (2) within our site or at its entrance",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states only a goal to include a stop on-site or at the entrance."
+              }
+            ],
+            "reason": "The excerpt expressly states a goal to include a stop within the site or at its entrance."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "partial:f1"
+        ],
+        "citation_ids": [
+          "partial:s1"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding shows transportation funding but does not specifically state traffic mitigation for the Bronx project.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 1,
+            "label": "NEUTRAL",
+            "reason": "Transportation upgrades are broader than, and do not specifically establish, traffic mitigation."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s1",
+            "quote": "at least $75 million for transportation upgrades such as a new Lafayette Avenue overpass, widened roads, and enhanced public transit access",
+            "label": "NEUTRAL",
+            "reason": "Transportation upgrades may include traffic-related work, but the quote does not specifically say Bally's committed to pay for traffic mitigation."
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [
+          "partial:f2"
+        ],
+        "citation_ids": [
+          "partial:s2"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "The finding expressly states Bally's agreed to fund construction of bus stops and associated infrastructure.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f2",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim directly matches agreement to fund additional bus stops for the project."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s2",
+            "quote": "we have agreed that Bally’s would be responsible for funding the construction of bus stops and any associated infrastructure required to meet MTA standards",
+            "label": "ENTAILMENT",
+            "reason": "The quote directly states Bally's agreed to fund bus stops."
+          }
+        ]
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [
+          "partial:f1"
+        ],
+        "citation_ids": [
+          "partial:s1"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "The finding expressly states Bally's is allocating funding for revitalization of Ferry Point Park.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "Funding parkland improvements including Ferry Point Park revitalization conveys promised improvements to the park."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s1",
+            "quote": "We are allocating $100 million for parkland improvements, including new walking paths, playgrounds, and the revitalization of Ferry Point Park",
+            "label": "ENTAILMENT",
+            "reason": "The quote directly states funding for improvements and revitalization of Ferry Point Park."
+          }
+        ]
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [
+          "partial:f4",
+          "partial:f3"
+        ],
+        "citation_ids": [
+          "partial:s4",
+          "partial:s3"
+        ],
+        "label": "NEUTRAL",
+        "reason": "One finding mentions only preliminary discussions about increased ferry service, while another describes an existing shuttle service without identifying it as a ferry shuttle for the project.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f4",
+            "claim_index": 1,
+            "label": "NEUTRAL",
+            "reason": "Potential increased ferry service under preliminary discussion is not a commitment to support a ferry shuttle."
+          },
+          {
+            "finding_id": "partial:f3",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "An existing shuttle service is not shown to be a ferry shuttle for the project."
+          },
+          {
+            "finding_id": "partial:f3",
+            "claim_index": 1,
+            "label": "NEUTRAL",
+            "reason": "A plan to expand an existing shuttle service does not specify a ferry shuttle."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s4",
+            "quote": "Preliminary discussions have been held with MTA regarding potential extension of bus lines to the Project Site and with NYCEDC regarding potential for increased ferry service to the Ferry Point Park ferry landing.",
+            "label": "NEUTRAL",
+            "reason": "Preliminary discussions about potential increased ferry service do not establish a commitment to support a ferry shuttle."
+          },
+          {
+            "citation_id": "partial:s3",
+            "quote": "Our bus service commitments are centered around maintaining and enhancing the existing Bally’s shuttle service",
+            "label": "NEUTRAL",
+            "reason": "The quote identifies bus shuttle service, not a ferry shuttle."
+          }
+        ]
+      },
+      {
+        "gold_id": "G5",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents the environmental requirement for a construction traffic plan at least nine months before construction.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G6",
+        "finding_ids": [
+          "partial:f6"
+        ],
+        "citation_ids": [
+          "partial:s6"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding states one bus stop on-site and one in the park, not at least one in the park and two at the facility.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f6",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "This claim states one on-site stop only, not two at the facility."
+          },
+          {
+            "finding_id": "partial:f6",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "This claim does state a bus stop in Ferry Point Park."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s6",
+            "quote": "an MTA bus stop on-site, as well as a bus stop along the proposed reconstructed Ring Road in Ferry Point Park",
+            "label": "NEUTRAL",
+            "reason": "The quote establishes one on-site stop and one park stop, leaving unestablished the reference's two facility stops."
+          }
+        ]
+      },
+      {
+        "gold_id": "G7",
+        "finding_ids": [
+          "partial:f1"
+        ],
+        "citation_ids": [
+          "partial:s1"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding states $100 million allocated for parkland improvements, not a $160 million Ferry Point Park redesign presented for community review.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "The amount and described event differ from the reference fact."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s1",
+            "quote": "We are allocating $100 million for parkland improvements, including new walking paths, playgrounds, and the revitalization of Ferry Point Park",
+            "label": "NEUTRAL",
+            "reason": "The quote gives a different amount and does not mention community review of a $160 million redesign."
+          }
+        ]
+      },
+      {
+        "gold_id": "G8",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states that the Public Design Commission listed the park reconstruction for preliminary review.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G9",
+        "finding_ids": [
+          "partial:f3"
+        ],
+        "citation_ids": [
+          "partial:s3"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "The finding expressly describes an existing Bally's shuttle service already operating at 10 locations, showing it predated this commitment statement.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f3",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "The claim explicitly states the shuttle service already existed and currently operated."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s3",
+            "quote": "the existing Bally’s shuttle service, which currently operates at 10 locations throughout our local catchment area",
+            "label": "ENTAILMENT",
+            "reason": "The quote directly establishes that Bally's shuttle service already existed before the statement of commitments."
+          }
+        ]
+      },
+      {
+        "gold_id": "G10",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states that the land transaction included an approximately $4.6 million construction and infrastructure easement.",
+        "claim_links": [],
+        "quote_checks": []
+      }
+    ],
+    "protocol": "owned-quotes-v1",
+    "verdict": null
+  },
+  "capture_judgment": {
+    "facts": [
+      {
+        "gold_id": "G1",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "p4",
+          "p9"
+        ],
+        "reason": "The passages show at least $75 million for transportation upgrades such as roads, overpass, and bus-stop access, but none specifically says Bally's committed to pay for traffic mitigation for the Bronx project."
+      },
+      {
+        "gold_id": "G2",
+        "label": "ENTAILMENT",
+        "citation_ids": [
+          "p3"
+        ],
+        "reason": "Bally's states it agreed it would be responsible for funding construction of bus stops and associated infrastructure."
+      },
+      {
+        "gold_id": "G3",
+        "label": "ENTAILMENT",
+        "citation_ids": [
+          "p4",
+          "p9"
+        ],
+        "reason": "The excerpts say Bally's is allocating $100 million for parkland improvements including the revitalization of Ferry Point Park."
+      },
+      {
+        "gold_id": "G4",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "p1",
+          "p6"
+        ],
+        "reason": "The passages mention an existing Bally's shuttle service and only 'potential for increased ferry service' to the ferry landing, not a commitment to support a ferry shuttle for the project."
+      },
+      {
+        "gold_id": "G5",
+        "label": "NEUTRAL",
+        "citation_ids": [],
+        "reason": "No excerpt mentions an environmental finding requiring a construction traffic plan at least nine months before construction."
+      },
+      {
+        "gold_id": "G6",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "p2",
+          "p5",
+          "p9"
+        ],
+        "reason": "The excerpts mention a goal for additional stops and describe one stop in the park plus on-site access via two new MTA bus stops, but they do not show the Board described at least one stop in the park and two at the facility."
+      },
+      {
+        "gold_id": "G7",
+        "label": "NEUTRAL",
+        "citation_ids": [],
+        "reason": "No excerpt states that a $160 million Ferry Point Park redesign was presented for community review."
+      },
+      {
+        "gold_id": "G8",
+        "label": "NEUTRAL",
+        "citation_ids": [],
+        "reason": "No excerpt mentions the Public Design Commission or preliminary review of park reconstruction."
+      },
+      {
+        "gold_id": "G9",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "p1"
+        ],
+        "reason": "One passage says Bally's existing shuttle service currently operates at 10 locations, but it does not identify that service as a ferry shuttle or show it existed before this casino commitment."
+      },
+      {
+        "gold_id": "G10",
+        "label": "NEUTRAL",
+        "citation_ids": [],
+        "reason": "No excerpt mentions a land transaction or an approximately $4.6 million construction and infrastructure easement."
+      }
+    ],
+    "abstention": {
+      "label": "UNNECESSARY",
+      "reason": "The question asks whether Bally's was committed to paying for traffic mitigation, new bus stops, Ferry Point Park improvements, and a ferry shuttle. This capture documents commitments to fund bus stops and Ferry Point Park improvements through explicit funding language in p3, p4, and p9, so declining to save any commitment was not justified. However, the same passages do not clearly establish a commitment to traffic mitigation or to a ferry shuttle; p6 gives only 'potential' increased ferry service and p1 describes an existing shuttle service without identifying it as ferry service."
+    }
+  },
+  "finished_at": "2026-11-22T10:16:05.182105+00:00"
+}

@@ -1,0 +1,3169 @@
+[
+  {
+    "case": "TG-GOLD-A001",
+    "id": "G1",
+    "fact": "The New York gaming RFA says casino jobs must deliver livable wages.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "Passage p1 states verbatim that \"The jobs created by these casinos must deliver livable wages,\" which matches the claim about the New York gaming RFA.",
+    "passage_ids": [
+      "p1"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A001",
+    "id": "G2",
+    "fact": "The RFA's livable-wages language specifies no numerical wage floor.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "p1 contains the livable-wages requirement but gives no numerical wage floor, and no other excerpt addresses whether the RFA specifies one.",
+    "passage_ids": [
+      "p1"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A001",
+    "id": "G3",
+    "fact": "The RFA identifies a labor peace agreement as an ongoing material license condition.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "p6 only mentions \"Labor Peace Agreements\" in a materials title and does not establish that the RFA identifies such an agreement as an ongoing material license condition.",
+    "passage_ids": [
+      "p6"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A001",
+    "id": "G4",
+    "fact": "The Board's report projects a roughly $80,000 median wage for Bally's.",
+    "stage": "reference_url_seen_without_entailed_capture",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt provides a Board report projection of roughly $80,000 median wage for Bally's.",
+    "passage_ids": [],
+    "matched_reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+    ],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+    ],
+    "related_document_observations": [
+      [
+        "FETCH_UNAVAILABLE"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-A001",
+    "id": "G5",
+    "fact": "The Board's report projects a roughly $140,000 average wage for HRMP.",
+    "stage": "reference_url_seen_without_entailed_capture",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt provides a Board report projection of roughly $140,000 average wage for HRMP.",
+    "passage_ids": [],
+    "matched_reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+    ],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+    ],
+    "related_document_observations": [
+      [
+        "FETCH_UNAVAILABLE"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-A001",
+    "id": "G6",
+    "fact": "The Board's report projects a roughly $150,000 median wage for Resorts World.",
+    "stage": "reference_url_seen_without_entailed_capture",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "p3 says RWNYC's current median wage is more than $80,000 and median compensation is nearly $150,000, but it is not a Board report projection of a roughly $150,000 median wage.",
+    "passage_ids": [
+      "p3"
+    ],
+    "matched_reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+    ],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+    ],
+    "related_document_observations": [
+      [
+        "FETCH_UNAVAILABLE"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-A001",
+    "id": "G7",
+    "fact": "The three executed gaming licenses reviewed do not state a livable-wage floor.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt contains the text of the three executed gaming licenses or shows that they omit a livable-wage floor.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "https://gaming.ny.gov/hard-rock-metropolitan-park-commercial-casino-license"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A006",
+    "id": "G1",
+    "fact": "The RFA expects applicants' MWBE contract-utilization goals to meet or exceed the state's 30% target.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "NEUTRAL",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The passage says applicants acknowledge ESD’s 30% MWBE goal and that each project will get its own contract-specific goal that may be higher or lower than 30%, so it does not establish that applicants’ goals are expected to meet or exceed 30%.",
+    "passage_ids": [
+      "p5"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/request-applications-updated"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A006",
+    "id": "G2",
+    "fact": "RWNYC's license requires public community-benefits progress reports that include workforce diversity data.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No passage mentions RWNYC, a license requirement, public community-benefits progress reports, or workforce diversity data.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A006",
+    "id": "G3",
+    "fact": "Each licensee is required to post and update its community advisory committee commitments.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No passage addresses casino licensees, community advisory committee commitments, or any posting and update requirement.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://gaming.ny.gov/system/files/documents/2026/03/adopted-minutes-3-february-2026.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A006",
+    "id": "G4",
+    "fact": "In October 2026 the Commission chair reported that monitors for all three casino licensees were in place.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No passage mentions an October 2026 report by the Commission chair or monitors for three casino licensees.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://gaming.ny.gov/100926-meeting-transcript"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A006",
+    "id": "G5",
+    "fact": "The Board reported that RWNYC provided no specific MWBE contractor utilization goal.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No passage mentions RWNYC, the Board, or any statement that no specific MWBE contractor utilization goal was provided.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A006",
+    "id": "G6",
+    "fact": "RWNYC held a supplier outreach session for prospective MWBE contractors.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No passage mentions RWNYC or any supplier outreach session for prospective MWBE contractors.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://localcontent.com/article/resorts-world-new-york-city-expansion-puts-local-content-front-and-center"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A006",
+    "id": "G7",
+    "fact": "RWNYC broke ground on Phase II of its expansion in July 2026.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No passage mentions RWNYC, Phase II, an expansion, or a July 2026 groundbreaking.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://www.yogonet.com/international/news/2026/07/22/125515-resorts-world-new-york-city-adds-1-400-slots-as-55-billion-expansion-progresses"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A034",
+    "id": "G1",
+    "fact": "For the license term RWNYC promised the workforce housing fund the annual lesser of $25 million or 2% of incremental GGR above 2025 levels.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The passages show a Workforce Housing Fund with “$25M Annually,” but they do not state the license-term duration, the lesser-of formula, or the 2% of incremental GGR above 2025 levels.",
+    "passage_ids": [
+      "p4",
+      "p7"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A034",
+    "id": "G2",
+    "fact": "The Board proposed alternative ways of addressing benefits originally projected beyond the awarded license term.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No passage mentions Board proposals or benefits projected beyond the awarded license term.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A034",
+    "id": "G3",
+    "fact": "RWNYC's original license term is 15 years.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No passage states RWNYC’s original license term or that it is 15 years.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A034",
+    "id": "G4",
+    "fact": "The Cirrus partnership agreement defines annual commitments as calendar-year cash capital contributions.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No passage mentions a Cirrus partnership agreement defining annual commitments as calendar-year cash capital contributions.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A034",
+    "id": "G5",
+    "fact": "RWNYC's housing dashboard reported $25 million delivered in 2026 through September.",
+    "stage": "visible_identity_gate",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "The dashboard excerpts state “$25M Delivered in 2026” and “Data as of September 2026.”",
+    "passage_ids": [
+      "p5",
+      "p6",
+      "p7"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A034",
+    "id": "G6",
+    "fact": "Official records show a $46.125 million deed for the Jamaica acquisition dated May 29, 2026.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "NEUTRAL",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "One passage says the site was purchased “for $46.1 million,” but it does not provide official records, the exact $46.125 million amount, a deed, or the May 29, 2026 date.",
+    "passage_ids": [
+      "p13"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A034",
+    "id": "G7",
+    "fact": "Official records show a $24 million mortgage accompanying the Jamaica acquisition.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No passage mentions a $24 million mortgage accompanying the Jamaica acquisition.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A034",
+    "id": "G8",
+    "fact": "The recorded buyer of the Jamaica parcel was RWNYC ARCHER AVE LLC.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No passage identifies the recorded buyer as RWNYC ARCHER AVE LLC.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A034",
+    "id": "G9",
+    "fact": "The recorded parcel was Queens block 10151, lot 39, at 92-02 165 Street.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The passages mention a site at “92-30 165th St.” but do not give the recorded parcel identifiers Queens block 10151, lot 39, or the exact address 92-02 165 Street.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A034",
+    "id": "G10",
+    "fact": "Trade reporting links Cirrus WFHA Funding and Resorts World to the Jamaica acquisition.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "NEUTRAL",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The excerpt links the joint venture to a purchased Jamaica site, but it is not trade reporting about “Cirrus WFHA Funding,” nor does it establish that specific named entity’s link to the acquisition.",
+    "passage_ids": [
+      "p13"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A034",
+    "id": "G11",
+    "fact": "RWNYC described 700 Jamaica workforce housing units as proposed.",
+    "stage": "visible_identity_gate",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The passage says “About 700 new homes could be coming,” which is a tentative projection rather than RWNYC describing 700 Jamaica workforce housing units as proposed.",
+    "passage_ids": [
+      "p13"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A034",
+    "id": "G12",
+    "fact": "The August 2026 PLUTO record listed zero residential units on the Jamaica parcel.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No passage mentions an August 2026 PLUTO record or zero residential units on the Jamaica parcel.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A036",
+    "id": "G1",
+    "fact": "The Board recorded an immediate-term start for workforce housing investments without defining a calendar deadline.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "Both passages state the partnership will begin investing in new/workforce housing developments \"in the immediate term,\" which records an immediate-term start but gives no calendar deadline.",
+    "passage_ids": [
+      "p1",
+      "p3"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A036",
+    "id": "G2",
+    "fact": "RWNYC announced a multimillion-dollar down payment for the Cirrus housing initiative before the license award.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The passages describe a partnership and immediate-term investing, but do not mention a multimillion-dollar down payment, the amount, or that it occurred before the license award.",
+    "passage_ids": [
+      "p1",
+      "p3"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A036",
+    "id": "G3",
+    "fact": "RWNYC's application expressed hope for construction to start before the license award.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt says RWNYC's application expressed hope that construction would start before the license award.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A036",
+    "id": "G4",
+    "fact": "RWNYC's license requires milestones and budgets for community benefits.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt discusses license requirements, milestones, or budgets for community benefits.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A036",
+    "id": "G5",
+    "fact": "The public partnership agreement refers the investment-period start to section 3.1(b).",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The partnership agreement excerpt defines “Investments” but does not refer the investment-period start to section 3.1(b).",
+    "passage_ids": [
+      "p4"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A036",
+    "id": "G6",
+    "fact": "The $46.125 million deed for the Jamaica site was dated May 29 and recorded June 5, 2026.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt mentions a $46.125 million deed, the Jamaica site, or May 29/June 5, 2026 recording dates.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A036",
+    "id": "G7",
+    "fact": "RWNYC ARCHER AVE LLC is the recorded buyer of the Jamaica site.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt identifies RWNYC ARCHER AVE LLC as a recorded buyer.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A036",
+    "id": "G8",
+    "fact": "The deed and mortgage refer to Queens block 10151, lot 39.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt mentions Queens block 10151, lot 39, or deed and mortgage parcel references.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A036",
+    "id": "G9",
+    "fact": "RWNYC reported $25 million delivered in 2026 through September for the fund.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt reports $25 million delivered in 2026 through September for the fund.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A036",
+    "id": "G10",
+    "fact": "In September 2026 the operator still described the 700 Jamaica units as proposed.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt says that in September 2026 the operator still described 700 Jamaica units as proposed.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A061",
+    "id": "G1",
+    "fact": "The RWNYC license required cash or bond equal to 5% of total investment proposed in its application by December 31, 2025.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "The RWNYC license condition states that Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond an amount representing 5 percent of the total investment proposed in the Application.",
+    "passage_ids": [
+      "p4"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A061",
+    "id": "G2",
+    "fact": "The $500 million gaming license fee is a separate obligation from the completion security.",
+    "stage": "captured_not_credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "The license separately lists a $500,000,000 license fee and, in a different condition, a 5 percent cash-or-bond deposit, showing they are distinct obligations.",
+    "passage_ids": [
+      "p1",
+      "p4"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A061",
+    "id": "G3",
+    "fact": "The governing statute permits an approved deposit bond instead of cash.",
+    "stage": "captured_not_credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "NEUTRAL",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "The license condition expressly allows the required deposit to be made 'via cash or bond,' establishing that bond is permitted instead of cash.",
+    "passage_ids": [
+      "p4"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A061",
+    "id": "G4",
+    "fact": "The official Q&A says a deposit bond must guarantee payment upon default.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt states that a deposit bond must guarantee payment upon default.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A061",
+    "id": "G5",
+    "fact": "In February 2026 the Commission said two unnamed licensees had provided completion bonds and a third bond was being finalized.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "The February 3, 2026 Commission transcript says two of the three licensees had provided their completion bond and the third was being finalized shortly.",
+    "passage_ids": [
+      "p2",
+      "p5"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A061",
+    "id": "G6",
+    "fact": "The Board reported a recalculated standardized RWNYC capital investment figure of $3.3 billion.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt gives a recalculated standardized RWNYC capital investment figure of $3.3 billion.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A061",
+    "id": "G7",
+    "fact": "Monetary fields in RWNYC's public capital-investment submission are redacted.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt says monetary fields in RWNYC's public capital-investment submission are redacted.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A061",
+    "id": "G8",
+    "fact": "The compiled rules print a 10% deposit figure even though RWNYC's individual license states 5%.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt mentions compiled rules printing 10 percent or contrasts that with the 5 percent license term.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A061",
+    "id": "G9",
+    "fact": "Genting's audited report says GENNY financed the $500 million license fee in January 2026.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt mentions Genting, GENNY, audited reports, or financing of the $500 million fee in January 2026.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-A061",
+    "id": "G10",
+    "fact": "The June 2026 company report gives group restricted cash without attributing it to RWNYC's security.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt mentions a June 2026 company report or restricted cash attributed or unattributed to RWNYC's security.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H001",
+    "id": "G1",
+    "fact": "Bally's projected approximately 3,503 permanent full-time-equivalent Bronx positions.",
+    "stage": "captured_not_credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "NEUTRAL",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "p1 states Bally’s commits to a permanent workforce of 3,503 full-time equivalent employees, which matches approximately 3,503 permanent FTE positions.",
+    "passage_ids": [
+      "p1"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H001",
+    "id": "G2",
+    "fact": "Bally's set a 70% Bronx-resident target for its permanent workforce.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "p1 expressly says 70 percent of the 3,503 permanent workers would come from the Bronx.",
+    "passage_ids": [
+      "p1"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H001",
+    "id": "G3",
+    "fact": "Bally's CAC answers describe the target population as Bronx residents or local underserved populations.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "NEUTRAL",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "p1 mentions Bronx workers and reflecting Bronx demographics, but it does not describe the target population as Bronx residents or local underserved populations.",
+    "passage_ids": [
+      "p1"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H001",
+    "id": "G4",
+    "fact": "Bally's promised quarterly reporting on hiring.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No passage mentions quarterly reporting on hiring.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://ballysbronx.com/wp-content/uploads/2026/03/Ballys-Bets-on-the-Bronx-03.06.26.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H001",
+    "id": "G5",
+    "fact": "The Bronx license requires public workforce demographic reporting as part of community-benefit reporting.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No passage discusses any license requirement for public workforce demographic reporting or community-benefit reporting.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H001",
+    "id": "G6",
+    "fact": "The Board distinguished approximately 3,741 permanent positions from approximately 3,503 FTEs.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "p1 gives 3,503 full-time equivalent employees, but no passage shows the Board distinguishing that figure from approximately 3,741 permanent positions.",
+    "passage_ids": [
+      "p1"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H001",
+    "id": "G7",
+    "fact": "The Bronx vacancies identified in the workforce review were at the existing golf course and restaurant.",
+    "stage": "reference_url_seen_without_entailed_capture",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No passage mentions Bronx vacancies at the existing golf course and restaurant.",
+    "passage_ids": [],
+    "matched_reference_urls": [
+      "https://ballysbronx.com/"
+    ],
+    "reference_urls": [
+      "https://ballysbronx.com/"
+    ],
+    "related_document_observations": [
+      [
+        "captured",
+        "unmatched_records"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-H002",
+    "id": "G1",
+    "fact": "Bally's promised an annual Bronx community fund contribution of 1% of gross gaming revenue.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "The proposal states, “We commit to an annual contribution of 1% of gross gaming revenue,” which establishes Bally’s promised annual 1% GGR contribution to the Bronx Community Benefit Fund.",
+    "passage_ids": [
+      "p1",
+      "p3"
+    ],
+    "matched_reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf"
+    ],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "https://ballysbronx.com/wp-content/uploads/2026/03/Ballys-Bets-on-the-Bronx-03.06.26.pdf"
+    ],
+    "related_document_observations": [
+      [
+        "FETCH_UNAVAILABLE"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-H002",
+    "id": "G2",
+    "fact": "The Bronx fund contribution has a $15 million annual minimum.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "CONTRADICTION",
+    "capture_reason": "The cited commitment sets “a minimum of $12.5 million,” not a $15 million annual minimum.",
+    "passage_ids": [
+      "p1",
+      "p3"
+    ],
+    "matched_reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf"
+    ],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "https://ballysbronx.com/wp-content/uploads/2026/03/Ballys-Bets-on-the-Bronx-03.06.26.pdf"
+    ],
+    "related_document_observations": [
+      [
+        "FETCH_UNAVAILABLE"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-H002",
+    "id": "G3",
+    "fact": "Contributions are tied to casino opening rather than license award.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "The commitment is “from the time the gaming facility is opened,” and p3 contrasts this with a request to begin “at the time of licensure,” establishing that contributions are tied to opening rather than license award.",
+    "passage_ids": [
+      "p1",
+      "p3"
+    ],
+    "matched_reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "https://www.bxtimes.com/ballys-casino-boosts-investment-offer/"
+    ],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "https://www.bxtimes.com/ballys-casino-boosts-investment-offer/",
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+    ],
+    "related_document_observations": [
+      [
+        "FETCH_UNAVAILABLE"
+      ],
+      [
+        "captured",
+        "unmatched_records"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-H002",
+    "id": "G4",
+    "fact": "The Bronx community benefits fund was to be governed by an independent local board.",
+    "stage": "reference_url_seen_without_entailed_capture",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The passages show a Community Benefit Fund Board making funding decisions and reports, but they do not state that the board is independent or local as such.",
+    "passage_ids": [
+      "p2",
+      "p4",
+      "p5"
+    ],
+    "matched_reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys.pdf"
+    ],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys.pdf"
+    ],
+    "related_document_observations": [
+      [
+        "FETCH_UNAVAILABLE"
+      ],
+      [
+        "captured",
+        "unmatched_records"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-H002",
+    "id": "G5",
+    "fact": "The negotiated fund board was to have eleven members.",
+    "stage": "reference_url_seen_without_entailed_capture",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The excerpt only says Bally’s would “agree to establish a Community Benefit Fund Board composed of eleven voting” and is cut off before identifying eleven members.",
+    "passage_ids": [
+      "p8"
+    ],
+    "matched_reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys.pdf"
+    ],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys.pdf"
+    ],
+    "related_document_observations": [
+      [
+        "captured",
+        "unmatched_records"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-H002",
+    "id": "G6",
+    "fact": "The operator described appointments by local elected officials and Community Board 10.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No supplied excerpt states that appointments would be made by local elected officials and Community Board 10.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://ballysbronx.com/wp-content/uploads/2026/03/Ballys-Bets-on-the-Bronx-03.06.26.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H002",
+    "id": "G7",
+    "fact": "The Board questioned the benefits package's $765 million net present value because the fund pays nothing before opening.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "NEUTRAL",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "p3 supports only that the fund begins when the facility opens rather than at licensure; it does not mention a Board questioning a $765 million net present value package.",
+    "passage_ids": [
+      "p3"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H003",
+    "id": "G1",
+    "fact": "Bally's committed to pay for traffic mitigation for its Bronx project.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "NEUTRAL",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The passages show at least $75 million for transportation upgrades and two new MTA bus stops, but do not specifically state that Bally's committed to pay for traffic mitigation for the Bronx project.",
+    "passage_ids": [
+      "p4",
+      "p9"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "https://a002-ceqraccess.nyc.gov/Handlers/ProjectFile.ashx?file=MjAyNFwyNERNRTAxMVhcZmluZGluZ3NcMjRETUUwMTFYX1N0YXRlbWVudF9PZl9GaW5kaW5nc18xMTE3MjAyNS5wZGY1&signature=7016b83ed72c7c76060b8283480728b92a12d1ec"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H003",
+    "id": "G2",
+    "fact": "Bally's agreed to fund additional bus stops for the project.",
+    "stage": "visible_identity_gate",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "Bally's states it agreed to be responsible for funding construction of bus stops and associated infrastructure.",
+    "passage_ids": [
+      "p3"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H003",
+    "id": "G3",
+    "fact": "Bally's promised improvements to Ferry Point Park.",
+    "stage": "visible_identity_gate",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "The excerpts state Bally's is allocating $100 million for parkland improvements including the revitalization of Ferry Point Park.",
+    "passage_ids": [
+      "p4",
+      "p9"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "https://www.nyc.gov/assets/designcommission/downloads/pdf/agendas/10-20-26-PDC-Public-Agenda-REV.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H003",
+    "id": "G4",
+    "fact": "Bally's committed to support a ferry shuttle for the project.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "NEUTRAL",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The passages mention an existing Bally's shuttle service and only preliminary discussions about increased ferry service, not a commitment to support a ferry shuttle for the project.",
+    "passage_ids": [
+      "p1",
+      "p6"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "https://ballysbronx.com/wp-content/uploads/2026/03/Ballys-Bets-on-the-Bronx-03.06.26.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H003",
+    "id": "G5",
+    "fact": "The environmental findings require a construction traffic plan at least nine months before construction.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No passage mentions an environmental finding requiring a construction traffic plan at least nine months before construction.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://a002-ceqraccess.nyc.gov/Handlers/ProjectFile.ashx?file=MjAyNFwyNERNRTAxMVhcZmluZGluZ3NcMjRETUUwMTFYX1N0YXRlbWVudF9PZl9GaW5kaW5nc18xMTE3MjAyNS5wZGY1&signature=7016b83ed72c7c76060b8283480728b92a12d1ec"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H003",
+    "id": "G6",
+    "fact": "The Board described at least one new bus stop in the park and two at the facility.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "NEUTRAL",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The excerpts mention a goal for additional stops and describe one stop in Ferry Point Park plus one on-site or at the entrance, not at least one in the park and two at the facility as stated.",
+    "passage_ids": [
+      "p2",
+      "p5"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H003",
+    "id": "G7",
+    "fact": "A $160 million Ferry Point Park redesign was presented for community review.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "NEUTRAL",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No passage says a $160 million Ferry Point Park redesign was presented for community review.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://gothamist.com/news/the-bronx-is-getting-a-new-casino-and-a-reimagined-ferry-point-park-too",
+      "https://www.timeout.com/newyork/news/this-waterfront-bronx-park-could-get-a-160-million-makeover-including-the-boroughs-first-casino-101426"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H003",
+    "id": "G8",
+    "fact": "The Public Design Commission listed the park reconstruction for preliminary review.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "NEUTRAL",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No passage mentions the Public Design Commission or preliminary review of park reconstruction.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://www.nyc.gov/assets/designcommission/downloads/pdf/agendas/10-20-26-PDC-Public-Agenda-REV.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H003",
+    "id": "G9",
+    "fact": "Bally's ferry shuttle service existed before this casino commitment.",
+    "stage": "visible_identity_gate",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The excerpt shows an existing Bally's shuttle service at 10 locations, but it does not identify that service as a ferry shuttle or establish that it predated this casino commitment.",
+    "passage_ids": [
+      "p1"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://gothamist.com/news/the-bronx-is-getting-a-new-casino-and-a-reimagined-ferry-point-park-too"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H003",
+    "id": "G10",
+    "fact": "The land transaction included an approximately $4.6 million construction and infrastructure easement.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No passage mentions a land transaction or an approximately $4.6 million construction and infrastructure easement.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://ggbmagazine.com/articles/ballys-advances-156-6-million-land-purchase-bronx-casino/"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H005",
+    "id": "G1",
+    "fact": "Bally's projected that approximately 75% of the Bronx casino's capital expenditures would benefit Bronx-based firms.",
+    "stage": "reference_url_seen_without_entailed_capture",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The passage mentions reporting on 'benefits proposed in the Application or Bally’s other commitments' but does not state that Bally's projected approximately 75% of capital expenditures would benefit Bronx-based firms.",
+    "passage_ids": [
+      "p1"
+    ],
+    "matched_reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf"
+    ],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf"
+    ],
+    "related_document_observations": [
+      [
+        "FETCH_UNAVAILABLE"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-H005",
+    "id": "G2",
+    "fact": "Excavation and foundation permits were filed for the Bronx project.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No passage mentions excavation or foundation permits for the Bronx project.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://www.cityrealty.com/nyc/market-insight/features/future-nyc/ballys-bronx-casino-files-construction-permits-expansive-19-story-waterfront-complex/73084"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H005",
+    "id": "G3",
+    "fact": "Bally's obtained $400 million from a $560 million financing facility for preconstruction costs.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No passage mentions a $560 million financing facility or Bally's obtaining $400 million for preconstruction costs.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://www.morningstar.com/news/business-wire/20261002418405/ballys-corporation-closes-previously-announced-financing-to-support-the-development-of-the-ballys-bronx-project"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H005",
+    "id": "G4",
+    "fact": "The Board recommended that Bally's report at opening how much actual capital spending benefited Bronx-based firms.",
+    "stage": "reference_url_seen_without_entailed_capture",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "NEUTRAL",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The passage requires reports to include 'relevant budget and expenditure' and delays in delivering proposed benefits, but it does not say the Board recommended reporting at opening how much actual capital spending benefited Bronx-based firms.",
+    "passage_ids": [
+      "p1"
+    ],
+    "matched_reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+    ],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+    ],
+    "related_document_observations": [
+      [
+        "FETCH_UNAVAILABLE"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-H007",
+    "id": "G1",
+    "fact": "Bally's stated a 70% Bronx-resident target for permanent employees.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "The passages state Bally’s permanent operations commit to 70 percent of workers coming from the Bronx and that the applicant states 70 percent of employees will be Bronx residents.",
+    "passage_ids": [
+      "p7",
+      "p9"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H007",
+    "id": "G2",
+    "fact": "Bally's targeted 47% women in its workforce.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "The passage directly says the applicant states 47 percent of employees will be women.",
+    "passage_ids": [
+      "p9"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "https://nycasinos.ny.gov/ballys-bronx-response-gflb-questions-102125",
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H007",
+    "id": "G3",
+    "fact": "Bally's targeted 75% minority employees.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "One passage directly states 75 percent of employees will be minorities, and another gives a 75%+ minimum target of diverse employees.",
+    "passage_ids": [
+      "p9",
+      "p12"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "https://nycasinos.ny.gov/ballys-bronx-response-gflb-questions-102125",
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H007",
+    "id": "G4",
+    "fact": "A Bally's response gave a different Bronx residency figure of 75%.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No supplied excerpt gives a different Bronx residency figure of 75 percent.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/ballys-bronx-response-gflb-questions-102125"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H007",
+    "id": "G5",
+    "fact": "Bally's response defined local as Community Boards 9, 10 and 11.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No supplied excerpt defines local as Community Boards 9, 10, and 11.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/ballys-bronx-response-gflb-questions-102125"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H007",
+    "id": "G6",
+    "fact": "In that response the women's and minority shares were labeled goals or targets.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "NEUTRAL",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The excerpts show the figures are stated and that Bally’s established specific diversity goals, but they do not expressly label the 47 percent women and 75 percent minorities figures in that response as goals or targets.",
+    "passage_ids": [
+      "p9",
+      "p14"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/ballys-bronx-response-gflb-questions-102125"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H007",
+    "id": "G7",
+    "fact": "The Bronx gaming license requires public workforce diversity and demographic reporting.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No supplied excerpt states that the Bronx gaming license requires public workforce diversity and demographic reporting.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H008",
+    "id": "G1",
+    "fact": "Bally's promised a capital investment capped at $10 million for a new Bronx police substation.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "p1 states Bally’s committed an \"up to $10 million capital contribution\" toward constructing \"a new NYPD substation,\" matching a capital investment capped at $10 million for a new police substation.",
+    "passage_ids": [
+      "p1"
+    ],
+    "matched_reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf"
+    ],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf"
+    ],
+    "related_document_observations": [
+      [
+        "FETCH_UNAVAILABLE"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-H008",
+    "id": "G2",
+    "fact": "Bally's identified the NYPD's 45th Precinct as the precinct for the proposed substation.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "p1 identifies the substation as \"for the 45th Precinct,\" establishing the precinct named for the proposed substation.",
+    "passage_ids": [
+      "p1"
+    ],
+    "matched_reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf"
+    ],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf"
+    ],
+    "related_document_observations": [
+      [
+        "FETCH_UNAVAILABLE"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-H008",
+    "id": "G3",
+    "fact": "Bally's promised $5 million each year for public safety staffing and support in the Bronx.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The passages establish a $5 million annual public-safety-related commitment, but they describe staffing/support generally or NYPD needs tied to the substation and do not expressly state the scope \"in the Bronx.\"",
+    "passage_ids": [
+      "p2",
+      "p4",
+      "p5"
+    ],
+    "matched_reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf"
+    ],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf"
+    ],
+    "related_document_observations": [
+      [
+        "FETCH_UNAVAILABLE"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-H008",
+    "id": "G4",
+    "fact": "During the Community Advisory Committee process, Bally's increased the annual public safety pledge from $3 million to $5 million.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "p2 says Bally’s \"initially intended to fund up to $3 million dollars annually\" and, after hearing the CAC, would amend this to \"$5 million dollars annually\"; p6 confirms the increase occurred during the Community Advisory Committee process.",
+    "passage_ids": [
+      "p2",
+      "p6"
+    ],
+    "matched_reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf"
+    ],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf"
+    ],
+    "related_document_observations": [
+      [
+        "FETCH_UNAVAILABLE"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-H008",
+    "id": "G5",
+    "fact": "The executed Bronx gaming facility license requires public progress reports on community benefit milestones.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt states that an executed Bronx gaming facility license requires public progress reports on community benefit milestones.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf#page=3"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H008",
+    "id": "G6",
+    "fact": "The executed Bronx gaming facility license requires independent monitoring of community benefit milestones.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt states that an executed Bronx gaming facility license requires independent monitoring of community benefit milestones.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf#page=3"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H009",
+    "id": "G1",
+    "fact": "The Gaming Facility Location Board records Bally's pledge that 70% of construction and facility jobs at the Bronx project would go to Bronx residents.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "p1 states that Bally’s 'has committed to ensuring that 70 percent of construction and facility jobs go to Bronx residents,' matching the Board-recorded pledge at the Bronx project.",
+    "passage_ids": [
+      "p1"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf#page=14"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H009",
+    "id": "G2",
+    "fact": "The Board's March 2026 final report describes the 70% Bronx-resident hiring figure for construction and facility operating jobs as a goal.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "p1 calls the 70 percent figure a 'strong pledge' but does not show a March 2026 final report describing it specifically as a 'goal' for construction and facility operating jobs.",
+    "passage_ids": [
+      "p1"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H009",
+    "id": "G3",
+    "fact": "Bally's response to the Bronx Community Advisory Committee describes best-faith geographic hiring preferences.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "p2 describes a commitment to hire 'at least 70%+ Bronx residents as a minimum target,' but it does not mention best-faith geographic hiring preferences or identify the Bronx Community Advisory Committee in the excerpt.",
+    "passage_ids": [
+      "p2"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H009",
+    "id": "G4",
+    "fact": "Bally's agreed to share geographic hiring data for the Bronx project.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt says Bally’s agreed to share geographic hiring data for the Bronx project.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H009",
+    "id": "G5",
+    "fact": "The executed Bronx gaming facility license requires public progress reports on community benefit milestones.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt shows an executed Bronx gaming facility license requiring public progress reports on community benefit milestones.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf#page=3"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H009",
+    "id": "G6",
+    "fact": "The executed Bronx gaming facility license requires independent monitoring of community benefit milestones.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt shows an executed Bronx gaming facility license requiring independent monitoring of community benefit milestones.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf#page=3"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H009",
+    "id": "G7",
+    "fact": "The Bronx license's reporting requirement includes workforce diversity and demographic data.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt shows that a Bronx license reporting requirement includes workforce diversity and demographic data.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf#page=3"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H010",
+    "id": "G1",
+    "fact": "Bally's Bronx plan aims to exceed a 10% renewable electricity share.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The passages establish a plan to meet at least 10% renewable electricity consumption, but do not state that Bally's aims to exceed 10%; p5 says the target is \"at least 10 percent,\" which is compatible with exactly 10%.",
+    "passage_ids": [
+      "p1",
+      "p2",
+      "p5"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf#page=14"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H010",
+    "id": "G2",
+    "fact": "The plan includes on-site solar photovoltaics at the Bronx facility.",
+    "stage": "visible_identity_gate",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "The excerpts state Bally's plans to install on-site photovoltaic solar panels/rooftop and canopy-mounted PV systems at the resort facility.",
+    "passage_ids": [
+      "p3",
+      "p10"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf#page=14"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H010",
+    "id": "G3",
+    "fact": "Bally's Bronx plan includes off-site procurement of NYSERDA-qualified renewable energy.",
+    "stage": "visible_identity_gate",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "The plan says renewable energy needed beyond on-site generation will be procured from NYSERDA-qualified renewable sources, including NYSERDA Tier IV NYC-centric renewable energy.",
+    "passage_ids": [
+      "p2",
+      "p9"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf#page=14"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H010",
+    "id": "G4",
+    "fact": "Bally's Bronx electricity submission projects roughly 1.8 million kWh of annual on-site solar production.",
+    "stage": "visible_identity_gate",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "p3 states the photovoltaic areas are predicted to produce approximately 1.8 million kWh per year.",
+    "passage_ids": [
+      "p3"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-sustainable-development-principals-electricity#page=2"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H010",
+    "id": "G5",
+    "fact": "Bally's Bronx electricity submission specifies a renewable electricity minimum of 10% of annual facility electricity consumption.",
+    "stage": "visible_identity_gate",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "The excerpts repeatedly specify a target of at least 10% of the facility's annual electricity consumption from renewable energy.",
+    "passage_ids": [
+      "p1",
+      "p2",
+      "p5"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-sustainable-development-principals-electricity#page=2"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H011",
+    "id": "G1",
+    "fact": "Bally's promised direct pedestrian and bicycle connections among its Bronx facility, Ferry Point Park and the Ferry Point waterfront.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "p10 states Bally's is \"committed to providing direct pedestrian and bike connections between the gaming facility, Ferry Point Park, and the Ferry Point waterfront walking path,\" matching the promised connections.",
+    "passage_ids": [
+      "p10"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf#page=14"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H011",
+    "id": "G2",
+    "fact": "Bally's Bronx proposal calls for expansion of the existing ferry shuttle service.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The passages mention \"potential for increased ferry service\" and a bullet for \"Expanded Shuttle Services,\" but they do not specifically establish expansion of the existing ferry shuttle service.",
+    "passage_ids": [
+      "p5",
+      "p12",
+      "p13"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf#page=14",
+      "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-sustainable-development-principals-traffic#page=6"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H011",
+    "id": "G3",
+    "fact": "Bally's promised to fund at least one additional bus stop in Ferry Point Park.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The evidence shows a goal to include an additional stop within Ferry Point Park and that Bally's would fund bus stop construction, but it does not expressly state a promise to fund at least one additional bus stop in Ferry Point Park.",
+    "passage_ids": [
+      "p8",
+      "p15",
+      "p16"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf#page=14"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H011",
+    "id": "G4",
+    "fact": "Bally's promised to fund two new bus stops at the Bronx facility.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "NEUTRAL",
+    "capture_label": "CONTRADICTION",
+    "capture_reason": "The passages consistently describe stops in two locations—one within Ferry Point Park and one on-site or at the entrance—not two new bus stops at the Bronx facility.",
+    "passage_ids": [
+      "p3",
+      "p4",
+      "p11",
+      "p12",
+      "p15"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf#page=14"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H011",
+    "id": "G5",
+    "fact": "Bally's Bronx traffic submission describes coordination with the MTA.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "p3 says Bally's \"initiated preliminary discussions with the MTA regarding the expansion of their bus service routes,\" which documents coordination with the MTA in the traffic/transit submission context.",
+    "passage_ids": [
+      "p3"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-sustainable-development-principals-traffic#page=6"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H011",
+    "id": "G6",
+    "fact": "Bally's Bronx traffic submission documents a community shuttle launched in 2023.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "p11 says \"Since September 2023 Bally’s has offered shuttle service with 10 stops,\" documenting a community shuttle launched in 2023.",
+    "passage_ids": [
+      "p11"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-sustainable-development-principals-traffic#page=6"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H011",
+    "id": "G7",
+    "fact": "The City's Ferry Point environmental review docket lists a final environmental impact statement for Bally's project.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No passage mentions the City's Ferry Point environmental review docket listing a final environmental impact statement for Bally's project.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://a002-ceqraccess.nyc.gov/ceqr/Details?data=MjRETUUwMTFY0&signature=1c7557f385641122298923258ffa78cd2f1ddc67"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H011",
+    "id": "G8",
+    "fact": "NYC Ferry lists Ferry Point Park shuttle service with a schedule dating to October 2022.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No passage shows NYC Ferry listing Ferry Point Park shuttle service with a schedule dating to October 2022.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://www.ferry.nyc/routes-and-schedules/rockaway-soundview/"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H012",
+    "id": "G1",
+    "fact": "Bally's pledged to pay for Upwards memberships for its Bronx employees.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The passages show Bally’s committed to pay/fund Upwards memberships and mention Bronx employees, but they do not state that the paid memberships were specifically pledged for Bronx employees rather than employees generally.",
+    "passage_ids": [
+      "p1",
+      "p2",
+      "p4"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf#page=15",
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H012",
+    "id": "G2",
+    "fact": "The memberships promised to Bronx employees would give them priority childcare placement at Upwards' vetted facilities.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "NEUTRAL",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The evidence says Upwards membership would give priority placement and separately mentions Bronx employees, but it does not directly tie the priority-placement memberships specifically to Bronx employees.",
+    "passage_ids": [
+      "p1",
+      "p2",
+      "p3"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf#page=15",
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H012",
+    "id": "G3",
+    "fact": "The Gaming Facility Location Board recommended annual updates on participation in the Bronx childcare benefit.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "NEUTRAL",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The Board recommended annual updates on participation in the Upwards membership program, but the excerpt does not specify a Bronx childcare benefit.",
+    "passage_ids": [
+      "p5"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf#page=15"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H012",
+    "id": "G4",
+    "fact": "The Gaming Facility Location Board identified uncertainty about childcare capacity for the Bronx program.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "NEUTRAL",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The report notes uncertainty about what membership entails and whether network facilities are already at capacity, but it does not specify uncertainty about childcare capacity for a Bronx program.",
+    "passage_ids": [
+      "p1"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf#page=15"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H012",
+    "id": "G5",
+    "fact": "Upwards, formerly WeeCare, confirmed a company-wide Bally's partnership providing employees free access to its childcare network.",
+    "stage": "reference_url_seen_without_entailed_capture",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "NEUTRAL",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The passages indicate a Bally’s-Upwards partnership with funded memberships or childcare support, but none is a confirmation by Upwards itself or states it is company-wide and gives employees free access to the network at that exact scope.",
+    "passage_ids": [
+      "p2",
+      "p4",
+      "p7"
+    ],
+    "matched_reference_urls": [
+      "https://upwards.com/blog/posts/ballys-partners-with-weecare-to-provide-access-to-childcare-benefits-for-employees/"
+    ],
+    "reference_urls": [
+      "https://upwards.com/blog/posts/ballys-partners-with-weecare-to-provide-access-to-childcare-benefits-for-employees/"
+    ],
+    "related_document_observations": [
+      [
+        "FETCH_UNAVAILABLE"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-H016",
+    "id": "G1",
+    "fact": "Bally's Bronx targeted 10% women among construction workers.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "The passages expressly state Bally’s Bronx construction targets included 10% women workers/construction workers.",
+    "passage_ids": [
+      "p2",
+      "p3",
+      "p8"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H016",
+    "id": "G2",
+    "fact": "Bally's Bronx targeted 40% minorities among construction workers.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "The excerpts directly give a 40% minority construction workforce target for Bally’s Bronx.",
+    "passage_ids": [
+      "p2",
+      "p3",
+      "p8"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H016",
+    "id": "G3",
+    "fact": "The Board identified a 10% service-disabled-veteran construction workforce target.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "Both passages state a 10% service-disabled-veteran target for the construction workforce.",
+    "passage_ids": [
+      "p3",
+      "p8"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H016",
+    "id": "G4",
+    "fact": "The applicant's own construction workforce chart uses the broader category of veterans for its 10% target.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "Bally’s own workforce-target passages describe the 10% category as veterans, showing its chart uses the broader veterans category rather than service-disabled veterans.",
+    "passage_ids": [
+      "p1",
+      "p2",
+      "p7"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H016",
+    "id": "G5",
+    "fact": "Bally's application separately describes a 35% MWBE participation goal.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt mentions a separate 35% MWBE participation goal.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H016",
+    "id": "G6",
+    "fact": "Bally's application separately describes 5% spending with service-disabled-veteran-owned firms.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No passage states a separate 5% spending goal with service-disabled-veteran-owned firms.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H016",
+    "id": "G7",
+    "fact": "The Bronx license requires public progress reports on workforce diversity and demographic data.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt addresses any license requirement for public progress reports on workforce diversity or demographic data.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H016",
+    "id": "G8",
+    "fact": "The Bronx license requires independent monitoring of community benefit milestones.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No passage addresses any license requirement for independent monitoring of community benefit milestones.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H017",
+    "id": "G1",
+    "fact": "The Board valued the Metropolitan Park community benefits package at $761 million.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "Passage p1 explicitly states the community benefits were \"valued at $761 million.\"",
+    "passage_ids": [
+      "p1"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H017",
+    "id": "G2",
+    "fact": "The package includes traffic and roadway improvements.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "Passage p1 says the benefits include \"significant traffic and roadway improvements.\"",
+    "passage_ids": [
+      "p1"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H017",
+    "id": "G3",
+    "fact": "The package includes improvements to the MTA transit station.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "Passage p1 states the package includes \"improvements to the Metropolitan Transportation Authority (MTA)’s public transit station.\"",
+    "passage_ids": [
+      "p1"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H017",
+    "id": "G4",
+    "fact": "The package includes over 25 acres of new public open space.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "Passage p1 states the benefits include \"over 25 acres of new public open space.\"",
+    "passage_ids": [
+      "p1"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H017",
+    "id": "G5",
+    "fact": "The package includes a community impact fund.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "Passage p1 lists \"a Community Impact Fund\" among the community benefits.",
+    "passage_ids": [
+      "p1"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H017",
+    "id": "G6",
+    "fact": "The package includes funding for neighborhood social services.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "Passage p1 expressly includes \"funding for neighborhood social services.\"",
+    "passage_ids": [
+      "p1"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H017",
+    "id": "G7",
+    "fact": "The Board's chart itemizes $761 million upfront and another $150 million ongoing.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt mentions a Board chart itemizing $761 million upfront and $150 million ongoing.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H017",
+    "id": "G8",
+    "fact": "HRMP's executive summary advertises about $1 billion in community benefits.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt shows an executive summary advertising about $1 billion in community benefits.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/07/gi1.hardrock.executivesummary.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H017",
+    "id": "G9",
+    "fact": "HRMP's executive summary also uses $1.75 billion for investment into community needs.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt shows an executive summary using $1.75 billion for investment into community needs.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/07/gi1.hardrock.executivesummary.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H017",
+    "id": "G10",
+    "fact": "HRMP's license requires milestones and budgets for community benefits proposed in its application.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt mentions a license requirement for milestones and budgets for proposed community benefits.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://gaming.ny.gov/hard-rock-metropolitan-park-commercial-casino-license"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H017",
+    "id": "G11",
+    "fact": "The CAC submission schedules $150 million of fund payments during 2031–2060.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt schedules $150 million of fund payments during 2031–2060.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H017",
+    "id": "G12",
+    "fact": "The operator reported distributing $2 million in grants in 2026.",
+    "stage": "reference_url_seen_without_entailed_capture",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt reports distributing $2 million in grants in 2026.",
+    "passage_ids": [],
+    "matched_reference_urls": [
+      "https://www.metropolitanpark.com/fund"
+    ],
+    "reference_urls": [
+      "https://www.metropolitanpark.com/fund"
+    ],
+    "related_document_observations": [
+      [
+        "FETCH_UNAVAILABLE"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-H017",
+    "id": "G13",
+    "fact": "News coverage reported that MTA had yet to agree to the proposed station overhaul.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "NEUTRAL",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The retrieved passages discuss engagement with MTA, conceptual approval, and efforts to secure approvals, but do not say news coverage reported MTA had yet to agree to the overhaul.",
+    "passage_ids": [
+      "p5",
+      "p6"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://queenseagle.com/all/2026/2/25/construction-prep-underway-for-8-billion-metropolitan-park-casino-in-queens"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H022",
+    "id": "G1",
+    "fact": "The Board recorded $150 million for the community impact fund over 30 years.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "Both passages state that another $150 million was proposed for a community impact fund and that the applicant committed to this $150 million over a 30-year license term.",
+    "passage_ids": [
+      "p1",
+      "p6"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H022",
+    "id": "G2",
+    "fact": "The Board proposed alternatives for commitments extending beyond the awarded term.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The excerpt says funding of additional years should be resolved as previously indicated, but it does not state that the Board proposed alternatives for commitments extending beyond the awarded term.",
+    "passage_ids": [
+      "p10"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H022",
+    "id": "G3",
+    "fact": "The CAC schedule puts the $150 million operating tranche inside a $163.2 million phased package.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "NEUTRAL",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The passages show a $163 million fund and separately mention about $25 million for neighborhood projects and about $2 million in philanthropic commitments, but they do not establish a CAC schedule placing a $150 million operating tranche inside a $163.2 million phased package.",
+    "passage_ids": [
+      "p3",
+      "p5",
+      "p7",
+      "p9"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H022",
+    "id": "G4",
+    "fact": "The CAC schedule specifies $5 million annually from 2031 through 2060.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt specifies $5 million annually from 2031 through 2060.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H022",
+    "id": "G5",
+    "fact": "The issued Queens Future license grants an initial 20 years from the operation certificate with possible ten-year renewal.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "NEUTRAL",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The cited chart title refers to a 20-year term of license, but the passages do not mention an initial 20 years from the operation certificate or a possible ten-year renewal.",
+    "passage_ids": [
+      "p2",
+      "p4"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H022",
+    "id": "G6",
+    "fact": "Material changes to commitments require written Commission approval.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "NEUTRAL",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The excerpt says commitments will be binding under the gaming license, but it does not state that material changes require written Commission approval.",
+    "passage_ids": [
+      "p7"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H022",
+    "id": "G7",
+    "fact": "The operator's later fund page lists approximately $5 million annually from 2031 through 2050.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt is a later operator fund page listing approximately $5 million annually from 2031 through 2050.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H022",
+    "id": "G8",
+    "fact": "The operator reported distributing $2 million in 2026.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "NEUTRAL",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The passage mentions individual philanthropic commitments totaling approximately $2 million, not that the operator reported distributing $2 million in 2026.",
+    "passage_ids": [
+      "p9"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H022",
+    "id": "G9",
+    "fact": "The Metropolitan Park FAQ continued to advertise a $163 million fund package.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "NEUTRAL",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The excerpt says the fund is valued at $163 million over the 30-year length of the license, but it is not a Metropolitan Park FAQ and does not itself show continued advertising of a $163 million fund package.",
+    "passage_ids": [
+      "p7"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H022",
+    "id": "G10",
+    "fact": "Queens Theatre publicly acknowledged support from the Metropolitan Park Community Impact Fund.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt mentions Queens Theatre acknowledging support from the Metropolitan Park Community Impact Fund.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H022",
+    "id": "G11",
+    "fact": "Belongo identified the Metropolitan Park Community Impact Fund as a supporter.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt mentions Belongo identifying the Metropolitan Park Community Impact Fund as a supporter.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H022",
+    "id": "G12",
+    "fact": "The applicant proposed a seven-person fund advisory board.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt mentions a proposed seven-person fund advisory board.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H023",
+    "id": "G1",
+    "fact": "The Board expressed a belief that HRMP should complete Taste of Queens.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "The Board report explicitly says it 'strongly believes that HRMP has an obligation to complete the food hall,' which establishes the Board's belief that HRMP should complete Taste of Queens.",
+    "passage_ids": [
+      "p2"
+    ],
+    "matched_reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf"
+    ],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf"
+    ],
+    "related_document_observations": [
+      [
+        "FETCH_UNAVAILABLE"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-H023",
+    "id": "G2",
+    "fact": "The Board states the food hall was outside HRMP's commitments in its application.",
+    "stage": "reference_url_seen_without_entailed_capture",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The passages say certain projects 'were not considered in the Board’s evaluation' and were later raised in the CAC process, but they do not specifically state that the food hall was outside HRMP's commitments in its application.",
+    "passage_ids": [
+      "p3"
+    ],
+    "matched_reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf"
+    ],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf"
+    ],
+    "related_document_observations": [
+      [
+        "FETCH_UNAVAILABLE"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-H023",
+    "id": "G3",
+    "fact": "The Board's chart nevertheless includes $60 million for Taste of Queens buildout.",
+    "stage": "captured_not_credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "NEUTRAL",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "The Board material includes the line 'Taste of Queens Buildout 60 -- 60,' which documents a $60 million Board chart entry for Taste of Queens buildout.",
+    "passage_ids": [
+      "p11"
+    ],
+    "matched_reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+    ],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+    ],
+    "related_document_observations": [
+      [
+        "QUOTE_NOT_FOUND",
+        "captured",
+        "facts",
+        "suggestions"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-H023",
+    "id": "G4",
+    "fact": "HRMP described its role as delivering the parking podium for the food hall.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "HRMP states it 'will unlock further development potential ... by delivering a parking podium on which Queens Baseball Company ... will then build the Taste of Queens,' describing HRMP's role as delivering the podium for the food hall.",
+    "passage_ids": [
+      "p4"
+    ],
+    "matched_reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf"
+    ],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf"
+    ],
+    "related_document_observations": [
+      [
+        "QUOTE_NOT_FOUND",
+        "captured",
+        "facts",
+        "suggestions",
+        "unmatched_records"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-H023",
+    "id": "G5",
+    "fact": "A Mets-affiliated entity was expected to build the Taste of Queens food hall.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "The excerpt states the Taste of Queens food hall 'is being built by the New York Mets,' establishing that a Mets-affiliated entity was expected to build it.",
+    "passage_ids": [
+      "p1"
+    ],
+    "matched_reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf"
+    ],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "https://nycasinos.ny.gov/hard-rock-metropolitan-park-local-impact-siting-full-diversified-regional-tourism-local-business-0"
+    ],
+    "related_document_observations": [
+      [
+        "QUOTE_NOT_FOUND",
+        "captured",
+        "facts",
+        "suggestions",
+        "unmatched_records"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-H023",
+    "id": "G6",
+    "fact": "The proposed food hall was roughly 30,000 square feet.",
+    "stage": "reference_url_seen_without_entailed_capture",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No passage gives the food hall's square footage, so the claim that it was roughly 30,000 square feet is unestablished in this capture.",
+    "passage_ids": [],
+    "matched_reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf"
+    ],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf"
+    ],
+    "related_document_observations": [
+      [
+        "QUOTE_NOT_FOUND",
+        "captured",
+        "facts",
+        "suggestions",
+        "unmatched_records"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-H023",
+    "id": "G7",
+    "fact": "The license incorporates application and CAC commitments generally without expressly naming the food hall.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No supplied passage discusses license-incorporation language about the application and CAC commitments generally or whether the food hall is expressly named.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://gaming.ny.gov/hard-rock-metropolitan-park-commercial-casino-license"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H023",
+    "id": "G8",
+    "fact": "Press coverage attributed a June 1, 2030 target for food hall completion to Commission filings.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No passage contains press coverage or a June 1, 2030 completion target attributed to Commission filings.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://queenseagle.com/all/2026/5/15/metropolitan-park-casino-construction-running-months-behind-schedule"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H027",
+    "id": "G1",
+    "fact": "The Board described HRMP as the only applicant proposing both onsite daycare and tuition reimbursement.",
+    "stage": "reference_url_seen_without_entailed_capture",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The passages mention tuition reimbursement opportunities for employees, but none compares applicants or states HRMP was the only applicant proposing both onsite daycare and tuition reimbursement.",
+    "passage_ids": [
+      "p3",
+      "p5"
+    ],
+    "matched_reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+    ],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+    ],
+    "related_document_observations": [
+      [
+        "QUOTE_NOT_FOUND",
+        "suggestions"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-H027",
+    "id": "G2",
+    "fact": "HRMP's executive summary proposes on-site childcare as an employee benefit.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt mentions onsite daycare or on-site childcare as an employee benefit in HRMP's executive summary.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/07/gi1.hardrock.executivesummary.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H027",
+    "id": "G3",
+    "fact": "HRMP's executive summary proposes tuition reimbursement for employees.",
+    "stage": "visible_identity_gate",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "These excerpts state the company's workforce training programs include employee access to resources such as tuition reimbursement.",
+    "passage_ids": [
+      "p3",
+      "p5"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/07/gi1.hardrock.executivesummary.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H027",
+    "id": "G4",
+    "fact": "The HRMP license generally incorporates application and CAC commitments without naming these two benefits.",
+    "stage": "reference_url_seen_without_entailed_capture",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt discusses any license incorporation of application or CAC commitments, generally or with respect to these benefits.",
+    "passage_ids": [],
+    "matched_reference_urls": [
+      "https://gaming.ny.gov/hard-rock-metropolitan-park-commercial-casino-license"
+    ],
+    "reference_urls": [
+      "https://gaming.ny.gov/hard-rock-metropolitan-park-commercial-casino-license"
+    ],
+    "related_document_observations": [
+      [
+        "QUOTE_NOT_FOUND"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-H030",
+    "id": "G1",
+    "fact": "The Board reported a 6% service-disabled-veteran aspiration for Metropolitan Park's operational workforce.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NO_CAPTURE",
+    "capture_reason": null,
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H030",
+    "id": "G2",
+    "fact": "The Board reported 2% as HRMP's more realistic forecast for the operational service-disabled-veteran share.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NO_CAPTURE",
+    "capture_reason": null,
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H030",
+    "id": "G3",
+    "fact": "The applicant's anticipated workforce breakdown identifies approximately 6% as living with a disability.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NO_CAPTURE",
+    "capture_reason": null,
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H030",
+    "id": "G4",
+    "fact": "The applicant's anticipated workforce breakdown separately identifies approximately 2% veteran status.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NO_CAPTURE",
+    "capture_reason": null,
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H030",
+    "id": "G5",
+    "fact": "The March 2026 operational summary retains the 6% aim but omits the 2% realism clause.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NO_CAPTURE",
+    "capture_reason": null,
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H030",
+    "id": "G6",
+    "fact": "The HRMP license requires reporting on construction and operational workforce demographics.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NO_CAPTURE",
+    "capture_reason": null,
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H030",
+    "id": "G7",
+    "fact": "Regulatory review considers good-faith diversity efforts and allows reasonable deviations.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NO_CAPTURE",
+    "capture_reason": null,
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H030",
+    "id": "G8",
+    "fact": "The applicant reported 2% veteran identification at existing gaming locations in 2024.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NO_CAPTURE",
+    "capture_reason": null,
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H030",
+    "id": "G9",
+    "fact": "CPC publicized a September 2026 Metropolitan Park employment information session.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NO_CAPTURE",
+    "capture_reason": null,
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H030",
+    "id": "G10",
+    "fact": "HRMP's proposed community recruitment channels included service-disabled veterans.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NO_CAPTURE",
+    "capture_reason": null,
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H030",
+    "id": "G11",
+    "fact": "The applicant's construction participation metric uses FTE hours worked.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NO_CAPTURE",
+    "capture_reason": null,
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H030",
+    "id": "G12",
+    "fact": "The applicant separately made a 6% supplier utilization commitment for service-disabled-veteran-owned businesses.",
+    "stage": "reference_url_unavailable",
+    "formal_identity": "UNRESOLVED",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NO_CAPTURE",
+    "capture_reason": null,
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H032",
+    "id": "G1",
+    "fact": "HRMP pledged $25 million to develop and implement a small-business lending program.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "p5 states HRMP is \"backing this work with a $25 million MWBE lending program,\" which establishes a $25 million pledge/commitment for the lending program.",
+    "passage_ids": [
+      "p5"
+    ],
+    "matched_reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf"
+    ],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "https://nycasinos.ny.gov/hard-rock-metropolitan-park-local-impact-siting-full-diversified-regional-tourism-local-business-0"
+    ],
+    "related_document_observations": [
+      [
+        "FETCH_UNAVAILABLE"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-H032",
+    "id": "G2",
+    "fact": "HRMP presented MWBE firms as beneficiaries of the lending program.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "p1 describes the program as expanding capital access within MWBE capacity-building efforts, and p5 expressly calls it a \"$25 million MWBE lending program,\" identifying MWBE firms as beneficiaries.",
+    "passage_ids": [
+      "p1",
+      "p5"
+    ],
+    "matched_reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf"
+    ],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf"
+    ],
+    "related_document_observations": [
+      [
+        "FETCH_UNAVAILABLE"
+      ],
+      [
+        "captured",
+        "facts",
+        "suggestions",
+        "unmatched_records"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-H032",
+    "id": "G3",
+    "fact": "The Board highlighted HRMP's partnership with McKissack & McKissack alongside the lending proposal.",
+    "stage": "reference_url_seen_without_entailed_capture",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "p3 says McKissack is an equity partner overseeing MWBE data tracking, but it does not tie McKissack to the lending proposal specifically or show the Board highlighted that partnership alongside it.",
+    "passage_ids": [
+      "p3"
+    ],
+    "matched_reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf"
+    ],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf"
+    ],
+    "related_document_observations": [
+      [
+        "FETCH_UNAVAILABLE"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-H032",
+    "id": "G4",
+    "fact": "HRMP said the lending program would reduce lender risk.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "No excerpt says HRMP claimed the lending program would reduce lender risk.",
+    "passage_ids": [],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/hard-rock-metropolitan-park-local-impact-siting-full-diversified-regional-tourism-local-business-0"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H032",
+    "id": "G5",
+    "fact": "HRMP described technical assistance with MWBE certification.",
+    "stage": "credited",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "ENTAILMENT",
+    "capture_label": "ENTAILMENT",
+    "capture_reason": "p5 directly says HRMP provides \"technical assistance to help businesses gain MWBE certification.\"",
+    "passage_ids": [
+      "p5"
+    ],
+    "matched_reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf"
+    ],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf"
+    ],
+    "related_document_observations": [
+      [
+        "captured",
+        "facts",
+        "suggestions",
+        "unmatched_records"
+      ]
+    ]
+  },
+  {
+    "case": "TG-GOLD-H032",
+    "id": "G6",
+    "fact": "HRMP's executive summary describes subsidized lending to give firms access to working capital.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "NEUTRAL",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "The excerpts describe a $25 million lending program to expand capital access and mention technical assistance, but none is an executive summary or states subsidized lending to provide working capital.",
+    "passage_ids": [
+      "p1",
+      "p5"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://nycasinos.ny.gov/system/files/documents/2025/07/gi1.hardrock.executivesummary.pdf"
+    ],
+    "related_document_observations": []
+  },
+  {
+    "case": "TG-GOLD-H032",
+    "id": "G7",
+    "fact": "The HRMP license incorporates application and CAC commitments without expressly naming the lending program.",
+    "stage": "reference_url_not_in_archive",
+    "formal_identity": "MATCH",
+    "formal_visible_label": "MISSING",
+    "capture_label": "NEUTRAL",
+    "capture_reason": "p2 is only a licensure suitability excerpt and does not show that the license incorporates application and CAC commitments, with or without naming the lending program.",
+    "passage_ids": [
+      "p2"
+    ],
+    "matched_reference_urls": [],
+    "reference_urls": [
+      "https://gaming.ny.gov/hard-rock-metropolitan-park-commercial-casino-license"
+    ],
+    "related_document_observations": []
+  }
+]

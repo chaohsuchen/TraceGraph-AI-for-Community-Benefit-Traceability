@@ -1,0 +1,1533 @@
+{
+  "input_sha256": "3d8d10f278313940e9f5cb1cf0c04a60d19967db4030a269f4786148fcc8824d",
+  "judge_model": "gpt-5.4",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "judge_version": "tracegraph-nli-v4-owned-quotes",
+  "started_at": "2026-11-22T10:24:15.760208+00:00",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 38.59400000004098,
+      "request_id": "req_72c56e68d68b468496ab2ddf757b590e",
+      "usage": {
+        "input_tokens": 4877,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 4399,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 9276
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 6.48499999998603,
+      "request_id": "req_ab4fb117928e4bef8d2a09e47b19a658",
+      "usage": {
+        "input_tokens": 3748,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 481,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4229
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "evidence": {
+    "identity": {
+      "label": "MATCH",
+      "reason": "The returned findings concern Bally's Bronx Community Benefit Fund commitment: annual 1% of gross gaming revenue, a minimum annual payment tied to casino opening, and governance by a local board for Bronx benefits."
+    },
+    "findings": [
+      {
+        "finding_id": "partial:f1",
+        "claims": [
+          {
+            "claim": "Bally's committed to an annual contribution of 1% of gross gaming revenue to the Community Benefit Fund.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "We commit to an annual contribution of 1% of gross gaming revenue",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the annual 1% GGR commitment."
+              }
+            ],
+            "reason": "The excerpt explicitly says Bally's commits to an annual contribution of 1% of gross gaming revenue."
+          },
+          {
+            "claim": "Bally's committed to a minimum annual contribution of $12.5 million to the Community Benefit Fund.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "with a minimum of $12.5 million",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly gives the minimum annual amount as $12.5 million."
+              }
+            ],
+            "reason": "The excerpt explicitly states a minimum of $12.5 million."
+          },
+          {
+            "claim": "This annual contribution begins when the gaming facility is opened.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "from the time the gaming facility is opened",
+                "label": "ENTAILMENT",
+                "reason": "The quote fixes the start time at opening of the gaming facility."
+              }
+            ],
+            "reason": "The excerpt expressly ties the contribution start to facility opening."
+          },
+          {
+            "claim": "The minimum commitment is solely for the Community Benefit Fund and excludes additional commitments.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "this is a minimum commitment to fund solely the Community Benefit Fund, not inclusive of additional commitments",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly limits the minimum commitment to the Community Benefit Fund and excludes additional commitments."
+              }
+            ],
+            "reason": "The excerpt expressly says the minimum commitment is solely for the Community Benefit Fund and not inclusive of additional commitments."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f2",
+        "claims": [
+          {
+            "claim": "Bally's said the Community Benefit Fund Board will decide specific funding directives.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "Bally’s will leave the specific funding directives to be made by the Community Benefit Fund Board",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly assigns specific funding directives to the board."
+              }
+            ],
+            "reason": "The excerpt explicitly says specific funding directives are left to the Community Benefit Fund Board."
+          },
+          {
+            "claim": "The Community Benefit Fund Board will have discretion in selecting investments or other improvements throughout the community.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "including discretion in selecting investments or other improvements to be made throughout the community",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly gives the board discretion over investments or improvements throughout the community."
+              }
+            ],
+            "reason": "The excerpt explicitly gives the board discretion in selecting investments or improvements."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f3",
+        "claims": [
+          {
+            "claim": "Bally's said all distributions from the Community Benefit Fund will be conducted with full transparency.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "Yes, all distributions from the Community Benefit Fund will be conducted with full transparency.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states full transparency for all fund distributions."
+              }
+            ],
+            "reason": "The excerpt expressly states all distributions will be conducted with full transparency."
+          },
+          {
+            "claim": "Gaming revenue figures underlying the distributions are publicly reported.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "Gaming revenue figures, which form the basis for these distributions, are publicly reported",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly says the underlying gaming revenue figures are publicly reported."
+              }
+            ],
+            "reason": "The excerpt explicitly states the gaming revenue figures are publicly reported."
+          },
+          {
+            "claim": "The calculation methods for determining fund distributions are made public.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "The calculation methods for determining fund distributions are also made public",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly says the calculation methods are made public."
+              }
+            ],
+            "reason": "The excerpt explicitly states the calculation methods are made public."
+          },
+          {
+            "claim": "The Community Benefit Fund Board should provide annual reports and presentations about the fund and its impact.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "The Community Benefit Fund Board should provide comprehensive annual reports and presentations outlining the fund's financial performance, distribution outcomes, and the impact of the funded initiatives on the community.",
+                "label": "ENTAILMENT",
+                "reason": "The quote states the board should provide annual reports and presentations, with 'should' preserving the recommendation modality."
+              }
+            ],
+            "reason": "The excerpt states the board should provide annual reports and presentations; this supports a recommendation, not a mandatory requirement."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f4",
+        "claims": [
+          {
+            "claim": "Bally's said it should designate a hired company representative, ideally a CB10 resident with deep knowledge of the surrounding neighborhoods, to work with the board and the community.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s4"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s4",
+                "quote": "Bally’s should designate a hired company representative, ideally a CB10 resident with deep knowledge of the surrounding neighborhoods, to work with the board and the community.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states this recommended designation, preserving 'should' and 'ideally'."
+              }
+            ],
+            "reason": "The excerpt explicitly states Bally's should designate such a representative."
+          },
+          {
+            "claim": "Bally's said all functions for the Bronx Community Benefit Fund are intended to be funded by the Community Benefit Funds via Bally's Bronx.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s4"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s4",
+                "quote": "Our intention is for all functions for the Bronx Community Benefit Fund to be funded by the Community Benefit Funds via Bally’s Bronx.",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states an intention regarding funding of all functions, preserving the 'intention' qualifier."
+              }
+            ],
+            "reason": "The excerpt expressly states this as Bally's intention."
+          },
+          {
+            "claim": "The Bally's Foundation is a separate nonprofit and is not associated with the pledged Community Benefit Fund via Bally's Bronx.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s4"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s4",
+                "quote": "the Bally’s Foundation is an entirely separate entity (non-profit) and is not associated with the pledged Community Benefit Fund via Bally’s Bronx",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the foundation is separate and not associated with the pledged fund."
+              }
+            ],
+            "reason": "The excerpt explicitly says the foundation is separate and not associated with the pledged Community Benefit Fund."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f5",
+        "claims": [
+          {
+            "claim": "Upon award of a license, Bally's will explore and define the methodology for providing financial support for the Community Benefit Fund and associated commitments.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s5"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s5",
+                "quote": "Upon awarding of a license we will explore and define the appropriate methodology for providing the financial support for all Community Benefit Fund and associated commitments.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states Bally's will explore and define the methodology upon license award."
+              }
+            ],
+            "reason": "The excerpt explicitly states Bally's will explore and define the funding methodology upon license award."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f6",
+        "claims": [
+          {
+            "claim": "Bally's raised its minimum annual commitment to the CFTB from $12.5 million to $15 million.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s6"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s6",
+                "quote": "Bally's also raised its minimum annual commitment to the CFTB from $12.5 million to $15 million",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the minimum annual commitment was raised from $12.5 million to $15 million."
+              }
+            ],
+            "reason": "The excerpt explicitly states the minimum annual commitment was raised to $15 million from $12.5 million."
+          },
+          {
+            "claim": "The $15 million minimum annual commitment applies at the time of casino opening.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s6"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s6",
+                "quote": "at the time of the casino opening",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly ties the $15 million minimum commitment to casino opening."
+              }
+            ],
+            "reason": "The excerpt explicitly ties the $15 million minimum to casino opening."
+          },
+          {
+            "claim": "The annual contribution can exceed $15 million if 1% of gross gaming revenue exceeds $15 million.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s6"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s6",
+                "quote": "though that amount can be higher if 1% of its gross gaming revenue exceeds $15 million",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the amount can exceed $15 million when 1% of GGR is higher."
+              }
+            ],
+            "reason": "The excerpt explicitly states the amount can be higher if 1% of GGR exceeds $15 million."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f7",
+        "claims": [
+          {
+            "claim": "A Board of Directors will be appointed by four local elected officials: the Borough President, Senator, Assembly Member, and Council Member.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s7"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s7",
+                "quote": "A Board of Directors (“Board”) who will be appointed by our four local elected officials (Borrough President, Senator, Assembly Member and Council Member)",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly identifies the appointing officials for the board."
+              }
+            ],
+            "reason": "The excerpt explicitly states the board will be appointed by four named local elected officials."
+          },
+          {
+            "claim": "The Board will be able to allocate the three benefit funds as required.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s7"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s7",
+                "quote": "will have the ability to allocate the 3 benefit funds as required",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the board's allocation authority over the three benefit funds."
+              }
+            ],
+            "reason": "The excerpt explicitly states the board will have allocation authority over the three benefit funds."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f8",
+        "claims": [
+          {
+            "claim": "The fund will be backstopped by gaming revenues from the gaming facility licensee.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s8"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s8",
+                "quote": "Funds will be backstopped by gaming revenues from the gaming facility licensee",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the funds will be backstopped by gaming revenues from the licensee."
+              }
+            ],
+            "reason": "The excerpt explicitly states the funds will be backstopped by gaming revenues from the gaming facility licensee."
+          },
+          {
+            "claim": "The Community Benefit Fund will receive direct annual payment from the gaming facility.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s8"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s8",
+                "quote": "as direct annual payment from the gaming facility to the Community Benefit fund",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states direct annual payment from the gaming facility to the fund."
+              }
+            ],
+            "reason": "The excerpt explicitly states there will be direct annual payment from the gaming facility to the Community Benefit Fund."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f9",
+        "claims": [
+          {
+            "claim": "Board appointees by local public servants elected by the community are expected to work collaboratively with the Community Board and City agencies on necessary approvals or reviews for investments contemplated by the Community Benefit Fund Board.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s9"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s9",
+                "quote": "The expectation is that Board appointees by local public servants elected by the community will work collaboratively with the Community Board and City agencies on any necessary approvals or reviews required in order to make any investments as contemplated by the Board of the Community Benefit Fund.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states this expectation, preserving the 'expectation' qualifier."
+              }
+            ],
+            "reason": "The excerpt explicitly states this expectation for board appointees' collaboration."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f10",
+        "claims": [
+          {
+            "claim": "Bronx Benefit Fund directors are appointed by local elected officials and Bronx Community Board #10.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s10"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s10",
+                "quote": "Bronx Benefit Fund Directors Appointed by Local Elected Officials and Bronx Community Board #10",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly identifies the appointing bodies for the directors."
+              }
+            ],
+            "reason": "The excerpt explicitly states the directors are appointed by local elected officials and Bronx Community Board #10."
+          },
+          {
+            "claim": "These directors allocate funds among local schools/PTA funds, NYCHA/community housing, and Bronx community organizations with an emphasis on youth sports.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s10"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s10",
+                "quote": "to allocate amongst: ▪ Local Schools/PTA Funds ▪ NYCHA/ Community Housing ▪ Bronx Community Organizations with an emphasis on youth sports",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly lists the categories among which directors allocate funds."
+              }
+            ],
+            "reason": "The excerpt explicitly lists the categories for fund allocation."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "partial:f1",
+          "partial:f6"
+        ],
+        "citation_ids": [
+          "partial:s1",
+          "partial:s6"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Findings state an annual contribution of 1% of gross gaming revenue to the Community Benefit Fund, and one finding ties the higher-than-minimum amount to 1% of GGR.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim directly states Bally's committed to an annual 1% of gross gaming revenue contribution to the Community Benefit Fund."
+          },
+          {
+            "finding_id": "partial:f6",
+            "claim_index": 2,
+            "label": "ENTAILMENT",
+            "reason": "This claim confirms the operative annual amount can be driven by 1% of gross gaming revenue."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s1",
+            "quote": "We commit to an annual contribution of 1% of gross gaming revenue",
+            "label": "ENTAILMENT",
+            "reason": "This directly establishes the annual 1% GGR promise."
+          },
+          {
+            "citation_id": "partial:s6",
+            "quote": "that amount can be higher if 1% of its gross gaming revenue exceeds $15 million",
+            "label": "ENTAILMENT",
+            "reason": "This confirms the contribution formula is tied to 1% of gross gaming revenue."
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [
+          "partial:f6"
+        ],
+        "citation_ids": [
+          "partial:s6"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "The finding expressly states Bally's raised the minimum annual commitment to $15 million.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f6",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim directly states the minimum annual commitment was raised to $15 million."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s6",
+            "quote": "raised its minimum annual commitment to the CFTB from $12.5 million to $15 million",
+            "label": "ENTAILMENT",
+            "reason": "This directly establishes the $15 million annual minimum."
+          }
+        ]
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [
+          "partial:f1",
+          "partial:f6"
+        ],
+        "citation_ids": [
+          "partial:s1",
+          "partial:s6"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "The findings expressly tie contributions to the time the gaming facility/casino opens, not to license award.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 2,
+            "label": "ENTAILMENT",
+            "reason": "This claim states the contribution begins when the gaming facility is opened."
+          },
+          {
+            "finding_id": "partial:f6",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "This claim ties the $15 million minimum to casino opening."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s1",
+            "quote": "from the time the gaming facility is opened",
+            "label": "ENTAILMENT",
+            "reason": "This directly fixes the start at opening rather than licensure."
+          },
+          {
+            "citation_id": "partial:s6",
+            "quote": "at the time of the casino opening",
+            "label": "ENTAILMENT",
+            "reason": "This also directly ties the contribution timing to opening."
+          }
+        ]
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [
+          "partial:f2",
+          "partial:f7",
+          "partial:f10"
+        ],
+        "citation_ids": [
+          "partial:s2",
+          "partial:s7",
+          "partial:s10"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The findings show governance by a local board with funding discretion and local appointments, but none of the excerpts states the board is independent.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f2",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "This shows the board makes funding directives, but not that it is independent."
+          },
+          {
+            "finding_id": "partial:f7",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "This identifies appointing elected officials, but not independence."
+          },
+          {
+            "finding_id": "partial:f10",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "This identifies appointments by local elected officials and Community Board 10, but not independence."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s2",
+            "quote": "Bally’s will leave the specific funding directives to be made by the Community Benefit Fund Board",
+            "label": "NEUTRAL",
+            "reason": "This shows board authority but does not establish independence."
+          },
+          {
+            "citation_id": "partial:s7",
+            "quote": "appointed by our four local elected officials",
+            "label": "NEUTRAL",
+            "reason": "Appointment by local officials does not by itself establish that the board is independent."
+          },
+          {
+            "citation_id": "partial:s10",
+            "quote": "Appointed by Local Elected Officials and Bronx Community Board #10",
+            "label": "NEUTRAL",
+            "reason": "This identifies appointing bodies but does not say the board is independent."
+          }
+        ]
+      },
+      {
+        "gold_id": "G5",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states that the fund board was to have eleven members.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G6",
+        "finding_ids": [
+          "partial:f10",
+          "partial:f7"
+        ],
+        "citation_ids": [
+          "partial:s10",
+          "partial:s7"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "The findings state the operator described appointments by local elected officials, and one finding adds Bronx Community Board 10.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f10",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim directly states appointments by local elected officials and Bronx Community Board #10."
+          },
+          {
+            "finding_id": "partial:f7",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim identifies the local elected officials involved in appointments."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s10",
+            "quote": "Bronx Benefit Fund Directors Appointed by Local Elected Officials and Bronx Community Board #10",
+            "label": "ENTAILMENT",
+            "reason": "This directly states the described appointing bodies, including Community Board 10."
+          },
+          {
+            "citation_id": "partial:s7",
+            "quote": "appointed by our four local elected officials (Borrough President, Senator, Assembly Member and Council Member)",
+            "label": "ENTAILMENT",
+            "reason": "This directly identifies the local elected officials referenced by the operator."
+          }
+        ]
+      },
+      {
+        "gold_id": "G7",
+        "finding_ids": [
+          "partial:f1",
+          "partial:f6"
+        ],
+        "citation_ids": [
+          "partial:s1",
+          "partial:s6"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The findings establish that the fund pays from opening, but no finding states that the Board questioned a $765 million net present value or gives that valuation.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 2,
+            "label": "NEUTRAL",
+            "reason": "This addresses only that contributions begin at opening, not the Board's questioning of a $765 million net present value."
+          },
+          {
+            "finding_id": "partial:f6",
+            "claim_index": 1,
+            "label": "NEUTRAL",
+            "reason": "This also addresses only opening-tied timing, not the Board's valuation critique."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s1",
+            "quote": "from the time the gaming facility is opened",
+            "label": "NEUTRAL",
+            "reason": "This supports the 'nothing before opening' timing point only, not the Board's questioning of a $765 million net present value."
+          },
+          {
+            "citation_id": "partial:s6",
+            "quote": "at the time of the casino opening",
+            "label": "NEUTRAL",
+            "reason": "This supports the opening-based start only, not the valuation challenge or Board questioning."
+          }
+        ]
+      }
+    ]
+  },
+  "verdict_protocol": "two-stage-owned-citations-v4",
+  "judgment": {
+    "identity": {
+      "label": "MATCH",
+      "reason": "The returned findings concern Bally's Bronx Community Benefit Fund commitment: annual 1% of gross gaming revenue, a minimum annual payment tied to casino opening, and governance by a local board for Bronx benefits."
+    },
+    "findings": [
+      {
+        "finding_id": "partial:f1",
+        "claims": [
+          {
+            "claim": "Bally's committed to an annual contribution of 1% of gross gaming revenue to the Community Benefit Fund.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "We commit to an annual contribution of 1% of gross gaming revenue",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the annual 1% GGR commitment."
+              }
+            ],
+            "reason": "The excerpt explicitly says Bally's commits to an annual contribution of 1% of gross gaming revenue."
+          },
+          {
+            "claim": "Bally's committed to a minimum annual contribution of $12.5 million to the Community Benefit Fund.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "with a minimum of $12.5 million",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly gives the minimum annual amount as $12.5 million."
+              }
+            ],
+            "reason": "The excerpt explicitly states a minimum of $12.5 million."
+          },
+          {
+            "claim": "This annual contribution begins when the gaming facility is opened.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "from the time the gaming facility is opened",
+                "label": "ENTAILMENT",
+                "reason": "The quote fixes the start time at opening of the gaming facility."
+              }
+            ],
+            "reason": "The excerpt expressly ties the contribution start to facility opening."
+          },
+          {
+            "claim": "The minimum commitment is solely for the Community Benefit Fund and excludes additional commitments.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "this is a minimum commitment to fund solely the Community Benefit Fund, not inclusive of additional commitments",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly limits the minimum commitment to the Community Benefit Fund and excludes additional commitments."
+              }
+            ],
+            "reason": "The excerpt expressly says the minimum commitment is solely for the Community Benefit Fund and not inclusive of additional commitments."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f2",
+        "claims": [
+          {
+            "claim": "Bally's said the Community Benefit Fund Board will decide specific funding directives.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "Bally’s will leave the specific funding directives to be made by the Community Benefit Fund Board",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly assigns specific funding directives to the board."
+              }
+            ],
+            "reason": "The excerpt explicitly says specific funding directives are left to the Community Benefit Fund Board."
+          },
+          {
+            "claim": "The Community Benefit Fund Board will have discretion in selecting investments or other improvements throughout the community.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "including discretion in selecting investments or other improvements to be made throughout the community",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly gives the board discretion over investments or improvements throughout the community."
+              }
+            ],
+            "reason": "The excerpt explicitly gives the board discretion in selecting investments or improvements."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f3",
+        "claims": [
+          {
+            "claim": "Bally's said all distributions from the Community Benefit Fund will be conducted with full transparency.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "Yes, all distributions from the Community Benefit Fund will be conducted with full transparency.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states full transparency for all fund distributions."
+              }
+            ],
+            "reason": "The excerpt expressly states all distributions will be conducted with full transparency."
+          },
+          {
+            "claim": "Gaming revenue figures underlying the distributions are publicly reported.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "Gaming revenue figures, which form the basis for these distributions, are publicly reported",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly says the underlying gaming revenue figures are publicly reported."
+              }
+            ],
+            "reason": "The excerpt explicitly states the gaming revenue figures are publicly reported."
+          },
+          {
+            "claim": "The calculation methods for determining fund distributions are made public.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "The calculation methods for determining fund distributions are also made public",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly says the calculation methods are made public."
+              }
+            ],
+            "reason": "The excerpt explicitly states the calculation methods are made public."
+          },
+          {
+            "claim": "The Community Benefit Fund Board should provide annual reports and presentations about the fund and its impact.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "The Community Benefit Fund Board should provide comprehensive annual reports and presentations outlining the fund's financial performance, distribution outcomes, and the impact of the funded initiatives on the community.",
+                "label": "ENTAILMENT",
+                "reason": "The quote states the board should provide annual reports and presentations, with 'should' preserving the recommendation modality."
+              }
+            ],
+            "reason": "The excerpt states the board should provide annual reports and presentations; this supports a recommendation, not a mandatory requirement."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f4",
+        "claims": [
+          {
+            "claim": "Bally's said it should designate a hired company representative, ideally a CB10 resident with deep knowledge of the surrounding neighborhoods, to work with the board and the community.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s4"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s4",
+                "quote": "Bally’s should designate a hired company representative, ideally a CB10 resident with deep knowledge of the surrounding neighborhoods, to work with the board and the community.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states this recommended designation, preserving 'should' and 'ideally'."
+              }
+            ],
+            "reason": "The excerpt explicitly states Bally's should designate such a representative."
+          },
+          {
+            "claim": "Bally's said all functions for the Bronx Community Benefit Fund are intended to be funded by the Community Benefit Funds via Bally's Bronx.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s4"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s4",
+                "quote": "Our intention is for all functions for the Bronx Community Benefit Fund to be funded by the Community Benefit Funds via Bally’s Bronx.",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states an intention regarding funding of all functions, preserving the 'intention' qualifier."
+              }
+            ],
+            "reason": "The excerpt expressly states this as Bally's intention."
+          },
+          {
+            "claim": "The Bally's Foundation is a separate nonprofit and is not associated with the pledged Community Benefit Fund via Bally's Bronx.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s4"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s4",
+                "quote": "the Bally’s Foundation is an entirely separate entity (non-profit) and is not associated with the pledged Community Benefit Fund via Bally’s Bronx",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the foundation is separate and not associated with the pledged fund."
+              }
+            ],
+            "reason": "The excerpt explicitly says the foundation is separate and not associated with the pledged Community Benefit Fund."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f5",
+        "claims": [
+          {
+            "claim": "Upon award of a license, Bally's will explore and define the methodology for providing financial support for the Community Benefit Fund and associated commitments.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s5"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s5",
+                "quote": "Upon awarding of a license we will explore and define the appropriate methodology for providing the financial support for all Community Benefit Fund and associated commitments.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states Bally's will explore and define the methodology upon license award."
+              }
+            ],
+            "reason": "The excerpt explicitly states Bally's will explore and define the funding methodology upon license award."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f6",
+        "claims": [
+          {
+            "claim": "Bally's raised its minimum annual commitment to the CFTB from $12.5 million to $15 million.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s6"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s6",
+                "quote": "Bally's also raised its minimum annual commitment to the CFTB from $12.5 million to $15 million",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the minimum annual commitment was raised from $12.5 million to $15 million."
+              }
+            ],
+            "reason": "The excerpt explicitly states the minimum annual commitment was raised to $15 million from $12.5 million."
+          },
+          {
+            "claim": "The $15 million minimum annual commitment applies at the time of casino opening.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s6"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s6",
+                "quote": "at the time of the casino opening",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly ties the $15 million minimum commitment to casino opening."
+              }
+            ],
+            "reason": "The excerpt explicitly ties the $15 million minimum to casino opening."
+          },
+          {
+            "claim": "The annual contribution can exceed $15 million if 1% of gross gaming revenue exceeds $15 million.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s6"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s6",
+                "quote": "though that amount can be higher if 1% of its gross gaming revenue exceeds $15 million",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the amount can exceed $15 million when 1% of GGR is higher."
+              }
+            ],
+            "reason": "The excerpt explicitly states the amount can be higher if 1% of GGR exceeds $15 million."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f7",
+        "claims": [
+          {
+            "claim": "A Board of Directors will be appointed by four local elected officials: the Borough President, Senator, Assembly Member, and Council Member.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s7"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s7",
+                "quote": "A Board of Directors (“Board”) who will be appointed by our four local elected officials (Borrough President, Senator, Assembly Member and Council Member)",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly identifies the appointing officials for the board."
+              }
+            ],
+            "reason": "The excerpt explicitly states the board will be appointed by four named local elected officials."
+          },
+          {
+            "claim": "The Board will be able to allocate the three benefit funds as required.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s7"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s7",
+                "quote": "will have the ability to allocate the 3 benefit funds as required",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the board's allocation authority over the three benefit funds."
+              }
+            ],
+            "reason": "The excerpt explicitly states the board will have allocation authority over the three benefit funds."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f8",
+        "claims": [
+          {
+            "claim": "The fund will be backstopped by gaming revenues from the gaming facility licensee.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s8"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s8",
+                "quote": "Funds will be backstopped by gaming revenues from the gaming facility licensee",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states the funds will be backstopped by gaming revenues from the licensee."
+              }
+            ],
+            "reason": "The excerpt explicitly states the funds will be backstopped by gaming revenues from the gaming facility licensee."
+          },
+          {
+            "claim": "The Community Benefit Fund will receive direct annual payment from the gaming facility.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s8"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s8",
+                "quote": "as direct annual payment from the gaming facility to the Community Benefit fund",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly states direct annual payment from the gaming facility to the fund."
+              }
+            ],
+            "reason": "The excerpt explicitly states there will be direct annual payment from the gaming facility to the Community Benefit Fund."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f9",
+        "claims": [
+          {
+            "claim": "Board appointees by local public servants elected by the community are expected to work collaboratively with the Community Board and City agencies on necessary approvals or reviews for investments contemplated by the Community Benefit Fund Board.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s9"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s9",
+                "quote": "The expectation is that Board appointees by local public servants elected by the community will work collaboratively with the Community Board and City agencies on any necessary approvals or reviews required in order to make any investments as contemplated by the Board of the Community Benefit Fund.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states this expectation, preserving the 'expectation' qualifier."
+              }
+            ],
+            "reason": "The excerpt explicitly states this expectation for board appointees' collaboration."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f10",
+        "claims": [
+          {
+            "claim": "Bronx Benefit Fund directors are appointed by local elected officials and Bronx Community Board #10.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s10"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s10",
+                "quote": "Bronx Benefit Fund Directors Appointed by Local Elected Officials and Bronx Community Board #10",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly identifies the appointing bodies for the directors."
+              }
+            ],
+            "reason": "The excerpt explicitly states the directors are appointed by local elected officials and Bronx Community Board #10."
+          },
+          {
+            "claim": "These directors allocate funds among local schools/PTA funds, NYCHA/community housing, and Bronx community organizations with an emphasis on youth sports.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s10"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s10",
+                "quote": "to allocate amongst: ▪ Local Schools/PTA Funds ▪ NYCHA/ Community Housing ▪ Bronx Community Organizations with an emphasis on youth sports",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly lists the categories among which directors allocate funds."
+              }
+            ],
+            "reason": "The excerpt explicitly lists the categories for fund allocation."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "partial:f1",
+          "partial:f6"
+        ],
+        "citation_ids": [
+          "partial:s1",
+          "partial:s6"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Findings state an annual contribution of 1% of gross gaming revenue to the Community Benefit Fund, and one finding ties the higher-than-minimum amount to 1% of GGR.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim directly states Bally's committed to an annual 1% of gross gaming revenue contribution to the Community Benefit Fund."
+          },
+          {
+            "finding_id": "partial:f6",
+            "claim_index": 2,
+            "label": "ENTAILMENT",
+            "reason": "This claim confirms the operative annual amount can be driven by 1% of gross gaming revenue."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s1",
+            "quote": "We commit to an annual contribution of 1% of gross gaming revenue",
+            "label": "ENTAILMENT",
+            "reason": "This directly establishes the annual 1% GGR promise."
+          },
+          {
+            "citation_id": "partial:s6",
+            "quote": "that amount can be higher if 1% of its gross gaming revenue exceeds $15 million",
+            "label": "ENTAILMENT",
+            "reason": "This confirms the contribution formula is tied to 1% of gross gaming revenue."
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [
+          "partial:f6"
+        ],
+        "citation_ids": [
+          "partial:s6"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "The finding expressly states Bally's raised the minimum annual commitment to $15 million.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f6",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim directly states the minimum annual commitment was raised to $15 million."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s6",
+            "quote": "raised its minimum annual commitment to the CFTB from $12.5 million to $15 million",
+            "label": "ENTAILMENT",
+            "reason": "This directly establishes the $15 million annual minimum."
+          }
+        ]
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [
+          "partial:f1",
+          "partial:f6"
+        ],
+        "citation_ids": [
+          "partial:s1",
+          "partial:s6"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "The findings expressly tie contributions to the time the gaming facility/casino opens, not to license award.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 2,
+            "label": "ENTAILMENT",
+            "reason": "This claim states the contribution begins when the gaming facility is opened."
+          },
+          {
+            "finding_id": "partial:f6",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "This claim ties the $15 million minimum to casino opening."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s1",
+            "quote": "from the time the gaming facility is opened",
+            "label": "ENTAILMENT",
+            "reason": "This directly fixes the start at opening rather than licensure."
+          },
+          {
+            "citation_id": "partial:s6",
+            "quote": "at the time of the casino opening",
+            "label": "ENTAILMENT",
+            "reason": "This also directly ties the contribution timing to opening."
+          }
+        ]
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [
+          "partial:f2",
+          "partial:f7",
+          "partial:f10"
+        ],
+        "citation_ids": [
+          "partial:s2",
+          "partial:s7",
+          "partial:s10"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The findings show governance by a local board with funding discretion and local appointments, but none of the excerpts states the board is independent.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f2",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "This shows the board makes funding directives, but not that it is independent."
+          },
+          {
+            "finding_id": "partial:f7",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "This identifies appointing elected officials, but not independence."
+          },
+          {
+            "finding_id": "partial:f10",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "This identifies appointments by local elected officials and Community Board 10, but not independence."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s2",
+            "quote": "Bally’s will leave the specific funding directives to be made by the Community Benefit Fund Board",
+            "label": "NEUTRAL",
+            "reason": "This shows board authority but does not establish independence."
+          },
+          {
+            "citation_id": "partial:s7",
+            "quote": "appointed by our four local elected officials",
+            "label": "NEUTRAL",
+            "reason": "Appointment by local officials does not by itself establish that the board is independent."
+          },
+          {
+            "citation_id": "partial:s10",
+            "quote": "Appointed by Local Elected Officials and Bronx Community Board #10",
+            "label": "NEUTRAL",
+            "reason": "This identifies appointing bodies but does not say the board is independent."
+          }
+        ]
+      },
+      {
+        "gold_id": "G5",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states that the fund board was to have eleven members.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G6",
+        "finding_ids": [
+          "partial:f10",
+          "partial:f7"
+        ],
+        "citation_ids": [
+          "partial:s10",
+          "partial:s7"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "The findings state the operator described appointments by local elected officials, and one finding adds Bronx Community Board 10.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f10",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim directly states appointments by local elected officials and Bronx Community Board #10."
+          },
+          {
+            "finding_id": "partial:f7",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim identifies the local elected officials involved in appointments."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s10",
+            "quote": "Bronx Benefit Fund Directors Appointed by Local Elected Officials and Bronx Community Board #10",
+            "label": "ENTAILMENT",
+            "reason": "This directly states the described appointing bodies, including Community Board 10."
+          },
+          {
+            "citation_id": "partial:s7",
+            "quote": "appointed by our four local elected officials (Borrough President, Senator, Assembly Member and Council Member)",
+            "label": "ENTAILMENT",
+            "reason": "This directly identifies the local elected officials referenced by the operator."
+          }
+        ]
+      },
+      {
+        "gold_id": "G7",
+        "finding_ids": [
+          "partial:f1",
+          "partial:f6"
+        ],
+        "citation_ids": [
+          "partial:s1",
+          "partial:s6"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The findings establish that the fund pays from opening, but no finding states that the Board questioned a $765 million net present value or gives that valuation.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 2,
+            "label": "NEUTRAL",
+            "reason": "This addresses only that contributions begin at opening, not the Board's questioning of a $765 million net present value."
+          },
+          {
+            "finding_id": "partial:f6",
+            "claim_index": 1,
+            "label": "NEUTRAL",
+            "reason": "This also addresses only opening-tied timing, not the Board's valuation critique."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s1",
+            "quote": "from the time the gaming facility is opened",
+            "label": "NEUTRAL",
+            "reason": "This supports the 'nothing before opening' timing point only, not the Board's questioning of a $765 million net present value."
+          },
+          {
+            "citation_id": "partial:s6",
+            "quote": "at the time of the casino opening",
+            "label": "NEUTRAL",
+            "reason": "This supports the opening-based start only, not the valuation challenge or Board questioning."
+          }
+        ]
+      }
+    ],
+    "protocol": "owned-quotes-v1",
+    "verdict": null
+  },
+  "capture_judgment": {
+    "facts": [
+      {
+        "gold_id": "G1",
+        "label": "ENTAILMENT",
+        "citation_ids": [
+          "p1",
+          "p3"
+        ],
+        "reason": "Bally’s states, “We commit to an annual contribution of 1% of gross gaming revenue,” establishing the promised annual 1% GGR contribution to the community fund."
+      },
+      {
+        "gold_id": "G2",
+        "label": "CONTRADICTION",
+        "citation_ids": [
+          "p1",
+          "p3"
+        ],
+        "reason": "The quoted commitment sets “a minimum of $12.5 million,” not a $15 million annual minimum."
+      },
+      {
+        "gold_id": "G3",
+        "label": "ENTAILMENT",
+        "citation_ids": [
+          "p1",
+          "p3"
+        ],
+        "reason": "The commitment is “from the time the gaming facility is opened,” and p3 contrasts this with a request to begin “at the time of licensure,” showing contributions are tied to opening rather than license award."
+      },
+      {
+        "gold_id": "G4",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "p4",
+          "p5",
+          "p6",
+          "p7"
+        ],
+        "reason": "These passages show the Community Benefit Fund Board has discretion over funding decisions, but they do not state that the board is independent or local."
+      },
+      {
+        "gold_id": "G5",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "p8"
+        ],
+        "reason": "The excerpt only says Bally’s would “establish a Community Benefit Fund Board composed of eleven voting” and is cut off before specifying members or final board terms."
+      },
+      {
+        "gold_id": "G6",
+        "label": "NEUTRAL",
+        "citation_ids": [],
+        "reason": "No supplied excerpt states that local elected officials and Community Board 10 would make appointments."
+      },
+      {
+        "gold_id": "G7",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "p3"
+        ],
+        "reason": "p3 supports only that the fund begins when the facility opens, not that a Board questioned a $765 million net present value package or specifically criticized payments before opening."
+      }
+    ],
+    "abstention": {
+      "label": "JUSTIFIED",
+      "reason": "On this capture alone, the passages document a Bally’s promise to contribute 1% of gross gaming revenue beginning when the facility opens, but they do not establish the question’s full original promise as stated because the minimum shown in the direct Bally’s commitment is $12.5 million rather than $15 million, and the supplied excerpts do not clearly establish administration by an independent local board."
+    }
+  },
+  "finished_at": "2026-11-22T10:25:01.172092+00:00"
+}

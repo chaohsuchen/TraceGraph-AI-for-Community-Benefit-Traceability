@@ -1,0 +1,99 @@
+{
+  "fingerprint": "e96e1088cd1f3205d9146cd14e2872e2a7fbe97e7d31a8dd8a90ed4289b8078f",
+  "reversed_original_ids": [
+    "p9",
+    "p8",
+    "p7",
+    "p6",
+    "p5",
+    "p4",
+    "p3",
+    "p2",
+    "p1"
+  ],
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 6.359000000054948,
+      "request_id": "req_8396a587a6e44946b672762a1264f10c",
+      "usage": {
+        "input_tokens": 2710,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 480,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3190
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "decisions": [
+    {
+      "gold_id": "G1",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p1",
+        "p6"
+      ],
+      "reason": "The passages show Bally’s allocating at least $75 million for transportation upgrades including roads and bus stops, but they do not specifically state a commitment to pay for traffic mitigation as such for the Bronx project."
+    },
+    {
+      "gold_id": "G4",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p4",
+        "p9"
+      ],
+      "reason": "The evidence mentions only preliminary discussions about increased ferry service and separately describes Bally’s existing bus shuttle, not a commitment to support a ferry shuttle for the project."
+    },
+    {
+      "gold_id": "G5",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage states that environmental findings require a construction traffic plan at least nine months before construction."
+    },
+    {
+      "gold_id": "G6",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p5",
+        "p8"
+      ],
+      "reason": "The excerpts describe one bus stop in Ferry Point Park and one on-site or at the entrance, with additional stops as a goal, not at least one in the park and two at the facility as stated."
+    },
+    {
+      "gold_id": "G7",
+      "label": "CONTRADICTION",
+      "citation_ids": [
+        "p1",
+        "p6"
+      ],
+      "reason": "The retrieved passages present Bally’s allocating $100 million for parkland improvements including Ferry Point Park, which is incompatible with a presented $160 million Ferry Point Park redesign."
+    },
+    {
+      "gold_id": "G8",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage mentions the Public Design Commission or preliminary review of park reconstruction."
+    },
+    {
+      "gold_id": "G10",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage mentions a land transaction or an approximately $4.6 million construction and infrastructure easement."
+    }
+  ]
+}
