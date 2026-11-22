@@ -2261,4 +2261,7 @@ class ClaudeReconciliationJudge:
             return False
         data = {"target": _assessment_target(context), "basis": verified_basis, **passage}
         data.update(_public_text_fields(context, ("requested_query",)))
-        return _structured(self._client, _VERIFY_REFUTATION_SYSTEM, data, _REFUTATION_CHECK_SCHEMA, 512)["directly_refutes"]
+        confirmed = _structured(self._client, _VERIFY_REFUTATION_SYSTEM, data, _REFUTATION_CHECK_SCHEMA, 512)["directly_refutes"]
+        if confirmed is True:
+            return verified_basis
+        return False if confirmed is False else None

@@ -566,6 +566,56 @@ class DeliveryGroundingTests(unittest.TestCase):
                 else:
                     self.assertNotIn("rejected_refutation_review", captured[0])
 
+    def test_verified_withdrawal_reports_only_what_it_establishes_and_preserves_separate_delivery(self):
+        pledge = "The city promised two grants to the Harbor Fund."
+        notice = "The city formally withdraws its commitment to issue the two Harbor Fund grants."
+        first_grant = "The Harbor Fund received its first grant payment from the city."
+        final_audit = "The ledger confirms that no payment reached the Harbor Fund by the required date."
+        query = "Did the city issue the grants it promised to the Harbor Fund?"
+        ctx = {"requested_query": query, "commitment": {"description": pledge}}
+        for verified_basis, prior_payment in (("OFFICIAL_WITHDRAWAL", False), ("OFFICIAL_WITHDRAWAL", True),
+                                             ("DIRECT_DISPROOF", False)):
+            with self.subTest(actual_basis=verified_basis, prior_payment=prior_payment):
+                withdrawal = verified_basis == "OFFICIAL_WITHDRAWAL"
+                proposed = "DIRECT_DISPROOF" if withdrawal else "OFFICIAL_WITHDRAWAL"
+                passage = notice if withdrawal else final_audit
+                supports = [_support("terms", pledge), _support("decision", passage)]
+                criteria = [_criterion("Issue the grants", status="REFUTED", promise=("c1",))]
+                reads = []
+                if prior_payment:
+                    supports.append(_support("receipt", first_grant))
+                    criteria.append(_criterion("Issue the first grant", status="DELIVERED", promise=("c1",), delivery=("c3",)))
+                    reads = [_observed_outcomes(("c3", first_grant)),
+                             _delivery_review(_delivery_check("Issue the first grant", first_grant, support=[("c3", first_grant)])),
+                             _delivery_challenge(_outcome_read(first_grant, "c3"))]
+                snapshot = _snapshot(*[{"id": f"f{i}", "claim": s["excerpt"], "supports": [s]}
+                                       for i, s in enumerate(supports, 1)])
+                initial = _final_assessment(*criteria, label="REFUTED")
+                initial.update(verdict="No grants were ever issued.", reasoning="There was no past delivery.",
+                               refutation=[{"basis": proposed, "finding_id": "f2", "quote": passage}])
+                client, captured = Mock(), []
+                client.create.side_effect = [_json_message(initial), *reads, _json_message({"basis": verified_basis}),
+                                             _json_message({"directly_refutes": True})]
+                judge = ClaudeReconciliationJudge(client)
+                graph = EvidenceReconciler(Mock(return_value=_plan()), assessor=judge.assess, verify_refutation=judge.verify_refutation,
+                                           on_assessment=captured.append).reconcile(ctx, snapshot, _research())
+                self.assertEqual(client.create.call_count, 3 + len(reads))
+                self.assertEqual(graph["label"], "REFUTED")
+                self.assertEqual(captured[0]["verified_refutation"]["basis"], verified_basis)
+                self.assertIn(passage, graph["reasoning"])
+                self.assertIn(supports[1]["source"]["url"], graph["reasoning"])
+                if withdrawal:
+                    self.assertIn("withdrawn", graph["verdict"])
+                    self.assertIn("notice alone", graph["verdict"])
+                    for rejected in (initial["verdict"], initial["reasoning"]):
+                        self.assertNotIn(rejected, graph["verdict"] + graph["reasoning"])
+                    self.assertEqual(first_grant in graph["reasoning"], prior_payment)
+                    if prior_payment:
+                        self.assertIn(supports[2]["source"]["url"], graph["reasoning"])
+                else:
+                    self.assertEqual(graph["verdict"], initial["verdict"])
+                    self.assertIn("Direct evidence from", graph["reasoning"])
+
     def test_recorded_wider_opening_is_displayed_without_certifying_platform_or_date(self):
         pledge = "The city promised to reopen North Pier lower level by 2024."
         opened = "On opening day North Pier recorded over 400 passengers."

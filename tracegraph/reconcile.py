@@ -222,11 +222,17 @@ class EvidenceReconciler:
                 if support is None:
                     continue
                 verified = self._verify_refutation(context, support, proof["basis"], quote)
-                if verified is not True:
+                # Legacy callbacks certify the basis passed to them. The live
+                # verifier can independently reclassify and certify another basis.
+                verified_basis = proof["basis"] if verified is True else verified
+                if verified_basis not in REFUTATION_BASES:
                     rejected |= verified is False
                     continue
                 source = support["source"]
                 reference = source.get("url") or source["citation"]
+                value["verified_refutation"] = {**proof, "basis": verified_basis}
+                if verified_basis == "OFFICIAL_WITHDRAWAL":
+                    return _withdrawal_assessment(quote, reference, value, findings)
                 assessment["reasoning"] += f'\n\nDirect evidence from {reference}. “{quote.strip()}”'
                 return assessment
         fallback = value.get("delivery_fallback")
@@ -416,6 +422,28 @@ def _review_citations(ids, assignments, preferred):
 
 def _unverified(reasoning):
     return {"label": "UNVERIFIED", "verdict": "Delivery has not been verified.", "reasoning": reasoning}
+
+
+def _withdrawal_assessment(quote, reference, assessment, findings):
+    verdict = "The commitment was officially withdrawn. The notice alone does not establish what was delivered before withdrawal."
+    reasoning = f'Official withdrawal: “{quote.strip()}”\n{reference}'
+    delivery = []
+    for row in assessment.get("criteria", []):
+        if row["delivery_status"] not in ("DELIVERED", "PARTIAL"):
+            continue
+        for item in row.get("delivery_support", []):
+            cid, span = item["citation_id"], item["quote"]
+            citation = assessment.get("citations", {}).get(cid, {})
+            finding = findings.get(citation.get("finding_id"))
+            if cid in row["delivery_citation_ids"] and finding:
+                support = _cited_support(finding, span)
+                if support:
+                    source = support["source"]
+                    delivery.append(f'{cid}: “{span}”\n{source.get("url") or source["citation"]}')
+    if delivery:
+        verdict += " Separate evidence documents some performance of the commitment."
+        reasoning += "\n\nIndependently supported delivery:\n" + "\n\n".join(dict.fromkeys(delivery))
+    return {"label": "REFUTED", "verdict": verdict, "reasoning": reasoning}
 
 
 def _context_verdict(rows, excerpts):
