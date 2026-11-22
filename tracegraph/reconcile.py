@@ -232,7 +232,8 @@ class EvidenceReconciler:
         fallback = value.get("delivery_fallback")
         if isinstance(fallback, dict) and fallback.get("label") == "PARTIALLY_CORROBORATED":
             return _assessment(fallback, state["relations"], checked_conflicts=self._verify_conflicts is not None)
-        if (rejected and self._recover_delivery is not None
+        recovery = {}
+        if (rejected and value.get("scope_validation") != "UNAVAILABLE" and self._recover_delivery is not None
                 and any(row["delivery_status"] == "REFUTED" for row in value.get("criteria", []))):
             if "rejected_refutation_review" not in value:
                 value["rejected_refutation_review"] = self._recover_delivery(context, state, value)
@@ -240,16 +241,20 @@ class EvidenceReconciler:
             if recovery.get("status") == "COMPLETED" and recovery.get("label") in ("PARTIALLY_CORROBORATED", "CORROBORATED"):
                 return _assessment(recovery, state["relations"], checked_conflicts=self._verify_conflicts is not None)
         reason = "The available evidence does not directly establish withdrawal or disproof of this commitment."
-        excerpts = []
+        excerpts = {}
         for finding in state["findings"]:
             for support in finding["supports"]:
                 quote, source = support.get("excerpt"), support["source"]
                 reference = source.get("url") or source.get("citation")
                 if isinstance(quote, str) and quote.strip() and reference:
-                    excerpts.append(f'c{len(excerpts) + 1}: “{quote}”\n{reference}')
+                    excerpts[f"c{len(excerpts) + 1}"] = (quote, reference)
         if excerpts:
-            reason += "\n\nSource excerpts for context:\n" + "\n\n".join(excerpts)
-        return _unverified(reason)
+            reason += "\n\nSource excerpts for context:\n" + "\n\n".join(
+                f'{cid}: “{quote}”\n{reference}' for cid, (quote, reference) in excerpts.items())
+        public = _unverified(reason)
+        if recovery.get("label") == "UNVERIFIED" and recovery.get("status") == "COMPLETED":
+            public["verdict"] = _context_verdict(recovery["criteria"], excerpts) or public["verdict"]
+        return public
 
     @staticmethod
     def _pairs(state, pending, snapshot):
@@ -411,6 +416,31 @@ def _review_citations(ids, assignments, preferred):
 
 def _unverified(reasoning):
     return {"label": "UNVERIFIED", "verdict": "Delivery has not been verified.", "reasoning": reasoning}
+
+
+def _context_verdict(rows, excerpts):
+    """Summarize the recorded observation without certifying a different scope."""
+    observations, missing = [], []
+    for row in rows:
+        ids = [cid for cid in row.get("context_citation_ids", []) if cid in excerpts]
+        witness = row.get("entailment_check", {}).get("occurrence_witness", {})
+        cid, span = witness.get("action_citation_id"), witness.get("action_quote", "")
+        if cid in ids and span and span in excerpts[cid][0]:
+            observations.append(f'“{span}” ({cid})')
+        elif ids:
+            observations.append(f'“{excerpts[ids[0]][0]}” ({ids[0]})')
+        scopes = [check["locked_phrase"] for check in row.get("scope_expression_checks", [])
+                  if check["decision"] != "EQUIVALENT"]
+        missing.extend(f'the precise promised scope (“{scope}”)' for scope in scopes)
+        if not scopes:
+            missing.append(f'the full condition (“{row["criterion"]}”)')
+        timing = row.get("timing_requirement", "").strip().rstrip(".")
+        if timing:
+            missing.append(f'the promised timing (“{timing}”)')
+    if not observations:
+        return None
+    return ("The cited record reports " + " and ".join(dict.fromkeys(observations))
+            + ". The available evidence leaves " + " and ".join(dict.fromkeys(missing)) + " unverified.")
 
 
 def _assessment(value, relations, *, checked_conflicts=False):

@@ -2073,7 +2073,17 @@ class ClaudeReconciliationJudge:
             system = f"{_ASSESS_SYSTEM}\n\nThe previous response did not meet the assessment contract. {error}"
             result = _structured(self._client, system, assessment_input, schema, 4096)
             _validate_assessment_criteria(result, citations, requested)
-            locks = _condition_scope_locks(result, citations)
+            try:
+                locks = _condition_scope_locks(result, citations)
+            except ProviderError:
+                # An invalid scope blocks affirmative delivery credit. It does not
+                # invalidate a separate source-owned withdrawal awaiting verification.
+                locks = [[] for _ in result["criteria"]]
+                result.update(scope_locks=[], scope_validation="UNAVAILABLE")
+                for row in result["criteria"]:
+                    if row["delivery_status"] in _POSITIVE_DELIVERY:
+                        row.update(_unverified_delivery("The original scope could not be bound to a source."),
+                                   observed_scope="In-scope delivery remains unverified.")
 
         rows = [{**row, "criterion": row["criterion"].strip(), "locked_scopes": scope_locks,
                  "scope_criteria": row["scope_criteria"] if requested else []}

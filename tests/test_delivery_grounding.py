@@ -566,6 +566,72 @@ class DeliveryGroundingTests(unittest.TestCase):
                 else:
                     self.assertNotIn("rejected_refutation_review", captured[0])
 
+    def test_recorded_wider_opening_is_displayed_without_certifying_platform_or_date(self):
+        pledge = "The city promised to reopen North Pier lower level by 2024."
+        opened = "On opening day North Pier recorded over 400 passengers."
+        supports = [_support("terms", pledge), _support("counts", opened)]
+        snapshot = _snapshot(*[{"id": f"f{i}", "claim": s["excerpt"], "supports": [s]} for i, s in enumerate(supports, 1)])
+        query = "Did the lower level at North Pier reopen by 2024?"
+        context = {"requested_query": query, "commitment": {"description": pledge}}
+        row = _criterion(query, status="REFUTED", promise=("c1",), timing="By 2024",
+                         elements=("Reopened to passengers", "Lower level", "Opened by 2024"))
+        initial = _final_assessment(row, label="REFUTED")
+        initial.update(verdict="The lower level never reopened.",
+                       scope_locks=[{"mention": "North Pier lower level", "citation_id": "c1", "aliases": [], "condition_numbers": []}],
+                       refutation=[{"basis": "DIRECT_DISPROOF", "finding_id": "f2", "quote": opened}])
+        client = Mock()
+        witness = _direct_witness("c2", opened, "North Pier")
+        optimistic = "Lower-level passengers were served on schedule."
+        client.create.side_effect = [
+            _json_message(initial), _observed_outcomes(("c2", opened)),
+            _delivery_review(_delivery_check(query, opened, support=[("c2", opened)],
+                                             element_support={"e1": ["c2"], "e2": [], "e3": []})),
+            _delivery_challenge(_outcome_read(optimistic, "c2", incomplete="The opening date is unknown.", witness=witness)),
+            _json_message({"p1": "DIFFERENT"}),
+        ]
+        judge = ClaudeReconciliationJudge(client)
+        graph = EvidenceReconciler(Mock(return_value=_plan()), assessor=judge.assess, verify_refutation=Mock(return_value=False),
+                                   recover_delivery=judge.recover_delivery).reconcile(context, snapshot, _research())
+        self.assertEqual(graph["label"], "UNVERIFIED")
+        self.assertIn(opened, graph["verdict"])
+        self.assertIn("c2", graph["verdict"])
+        self.assertIn("North Pier lower level", graph["verdict"])
+        self.assertIn("By 2024", graph["verdict"])
+        self.assertIn("unverified", graph["verdict"])
+        self.assertNotIn(optimistic, graph["verdict"] + graph["reasoning"])
+        self.assertNotIn(initial["verdict"], graph["verdict"] + graph["reasoning"])
+
+    def test_invalid_scope_responses_block_positive_but_leave_owned_withdrawal_for_verification(self):
+        pledge = "The Estuary Transit Authority commits to provide five overnight shuttle routes."
+        notice = "The authority has withdrawn its commitment to provide five overnight shuttle routes."
+        supports = [_support("agreement", pledge), _support("board-notice", notice)]
+        snapshot = _snapshot(*[{"id": f"f{i}", "claim": s["excerpt"], "supports": [s]} for i, s in enumerate(supports, 1)])
+        query = "Did the authority provide the five overnight shuttle routes?"
+        context = {"requested_query": query, "commitment": {"description": pledge}}
+        for proposed, verified, expected in (("REFUTED", True, "REFUTED"), ("REFUTED", False, "UNVERIFIED"),
+                                             ("DELIVERED", False, "UNVERIFIED")):
+            with self.subTest(proposed=proposed, verifier=verified):
+                row = _criterion(query, status=proposed, promise=("c1",))
+                initial = _final_assessment(row, label="CORROBORATED" if proposed == "DELIVERED" else "REFUTED")
+                initial["scope_locks"] = [{"mention": "Five named downtown lines", "citation_id": "c1",
+                                           "aliases": [], "condition_numbers": []}]
+                if proposed == "REFUTED":
+                    initial["refutation"] = [{"basis": "OFFICIAL_WITHDRAWAL", "finding_id": "f2", "quote": notice}]
+                client, verifier, recover, capture = Mock(), Mock(return_value=verified), Mock(), []
+                client.create.side_effect = [_json_message(initial), _json_message(initial)]
+                graph = EvidenceReconciler(Mock(return_value=_plan()), assessor=ClaudeReconciliationJudge(client).assess,
+                                           verify_refutation=verifier, recover_delivery=recover,
+                                           on_assessment=capture.append).reconcile(context, snapshot, _research())
+                self.assertEqual(graph["label"], expected)
+                self.assertEqual(client.create.call_count, 2)
+                self.assertEqual(capture[0]["scope_validation"], "UNAVAILABLE")
+                recover.assert_not_called()
+                if proposed == "REFUTED":
+                    verifier.assert_called_once_with(context, supports[1], "OFFICIAL_WITHDRAWAL", notice)
+                else:
+                    verifier.assert_not_called()
+                    self.assertEqual(capture[0]["criteria"][0]["delivery_status"], "UNVERIFIED")
+
     def test_rejected_refutation_preserves_independently_verified_delivery_in_the_public_result(self):
         pledge = "The authority pledged to begin east and west overnight services."
         opened = "The east overnight service began operating."
