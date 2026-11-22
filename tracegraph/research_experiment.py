@@ -146,7 +146,7 @@ def _run_job(record, dsn, key_file, strategy, mode, checkpoint):
         record["failure_stage"] = "setup"
         with evaluation_catalog(dsn) as scoped:
             app = create_application(
-                scoped, "live", key_file=key_file, model=MODEL, search_strategy=strategy,
+                scoped, "live", key_file=key_file, model=MODEL, provider="anthropic", search_strategy=strategy,
                 emit=emit, deadline=started + DEADLINE_SECONDS,
                 enable_conflict_review=mode == "live",
                 allow_web_search=mode == "live",
@@ -297,7 +297,7 @@ def main(argv=None):
     if (args.mode == "replay") != bool(args.captures):
         parser.error("--captures is required for replay and allowed only in replay mode.")
     try:
-        read_credential(args.key_file)
+        read_credential(args.key_file, provider="anthropic")
         run_experiment(
             mode=args.mode, output=args.output, dsn=args.database_url, key_file=args.key_file,
             roots={"prompt": args.prompt_root, "langgraph": args.langgraph_root},
