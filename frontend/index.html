@@ -44,6 +44,19 @@
           <button class="quiet" id="conversation-quit" type="button">Quit</button>
         </header>
         <div class="conversation-log" id="conversation-log" role="log" aria-label="Search conversation"></div>
+        <section id="research-results" hidden aria-label="Located evidence and gaps">
+          <a href="#workspace-title" id="view-research-graph" hidden>View evidence graph</a>
+          <h3>Located source excerpts</h3>
+          <p id="research-empty" hidden>No relevant source excerpts were verified in this attempt.</p>
+          <ul id="research-facts" class="conversation-choices"></ul>
+          <details id="research-unmatched" hidden>
+            <summary>Other located excerpts (target link unverified)</summary>
+            <ul id="research-unmatched-records" class="conversation-choices"></ul>
+          </details>
+          <h3>Evidence still needed</h3>
+          <ul id="research-gaps"></ul>
+          <button type="button" class="quiet" id="continue-research">Continue research</button>
+        </section>
         <div id="conversation-options" hidden>
           <h3 id="conversation-options-title">Related options</h3>
           <ul class="conversation-choices" id="conversation-choices" aria-labelledby="conversation-options-title"></ul>

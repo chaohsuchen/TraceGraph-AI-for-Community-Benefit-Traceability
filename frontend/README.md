@@ -14,3 +14,9 @@ Set TRACEGRAPH_BACKEND to the Data/API server origin, then open [the live API vi
 Run the HTTP client and demo tests.
 
     node --test frontend/api.test.mjs
+
+When a research job returns source-backed facts before a commitment can be saved, the live view offers a **Research evidence graph** rooted at the user's question. Selecting an excerpt shows its original text and source. The question inspector lists the unresolved terms. The existing search conversation supports adding a detail, following a lead, continuing the same search, or quitting. A response containing only links keeps those links in the conversation.
+
+Run the partial-research browser test with Playwright Chromium or set `TRACEGRAPH_CHROME` to a local Chrome executable. Optionally set `TRACEGRAPH_PARTIAL_CASE` to the path of a frozen partial `research.json` to replay its actual excerpts through the same interface.
+
+    node --test tests/browser_partial_e2e.mjs

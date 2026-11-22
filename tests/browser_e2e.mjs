@@ -230,10 +230,10 @@ test('uncertain lookup and research share a continuing search conversation', { s
     page.on('pageerror', error => errors.push(error));
     await page.goto(base);
     const first = await search(page, fixtureQuery);
-    const panel = page.getByRole('region', { name: 'Commitment search' });
+    const panel = page.locator('#conversation');
     const log = panel.getByRole('log');
     const related = panel.getByRole('list', { name: 'Related options' });
-    const hint = panel.getByRole('textbox', { name: 'Add a detail or source' });
+    const hint = panel.locator('#conversation-input');
     const saved = 'Use this commitment ' + first.commitment.title;
     const lead = related.getByRole('button', { name: /^Research this lead/ });
 
@@ -248,6 +248,7 @@ test('uncertain lookup and research share a continuing search conversation', { s
     await page.getByRole('searchbox').fill(weekend);
     await page.getByRole('button', { name: 'Search', exact: true }).click();
     await lead.waitFor();
+    assert.equal(await panel.getByRole('heading', { name: 'Research results', exact: true }).isVisible(), true);
     assert.equal(await related.getByRole('button', { name: saved, exact: true }).count(), 1);
     assert.equal(await related.getByRole('link', { name: 'Open source' }).getAttribute('href'),
       'https://example.org/tracegraph-fixture/promise');
@@ -260,7 +261,7 @@ test('uncertain lookup and research share a continuing search conversation', { s
     assert.ok(query.startsWith(weekend) && query.includes(detail));
     await lead.waitFor();
     assert.equal(await log.getByText(detail, { exact: true }).count(), 1);
-    assert.equal(await log.getByText('No publicly documented original promise could be located.', { exact: true }).count(), 2);
+    assert.equal(await log.getByText('Research is incomplete; no commitment was saved.', { exact: true }).count(), 2);
     const leadName = await lead.getAttribute('aria-label');
     assert.equal((await clickForGraph(page, leadName)).commitment.id, first.commitment.id);
     await log.getByText(`Opened ${first.commitment.title}.`, { exact: true }).last().waitFor();
@@ -280,6 +281,71 @@ test('uncertain lookup and research share a continuing search conversation', { s
     await log.getByText('Opened Local operations jobs.', { exact: true }).waitFor();
     assert.equal(await panel.isVisible(), true);
     assert.deepEqual(errors, []);
+  } finally {
+    await browser.close();
+  }
+});
+
+test('same-document object choices retain their exact clause and partial research stays optional', { skip: publicLive, timeout: 30_000 }, async () => {
+  const browser = await chromium.launch({ executablePath: process.env.TRACEGRAPH_CHROME || undefined, headless: true });
+  try {
+    const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
+    const url = 'https://example.org/official-board-report.pdf';
+    const first = 'The board proposed an annual community fund of $15 million.';
+    const second = 'The board proposed an annual workforce housing fund capped at $25 million.';
+    const query = 'Which board fund commitment should I trace?';
+    const sent = [];
+    await page.route('**/api/v1/**', async route => {
+      const request = route.request();
+      if (request.method() === 'POST') {
+        sent.push(request.postDataJSON().query);
+        return route.fulfill({ status: 202, json: { job_id: `job-${sent.length}` } });
+      }
+      const result = sent.length === 1 ? {
+        outcome: 'AMBIGUOUS', question: 'Do you mean the community fund or the workforce housing fund?',
+        suggestions: [first, second].map(excerpt => ({ kind: 'WEB_LEAD', title: 'Generated claim that all contributions were paid',
+          source_url: url, description: excerpt, excerpt })),
+      } : {
+        outcome: 'PARTIAL_RESEARCH', query: sent.at(-1), message: 'Research is incomplete; no commitment was saved.',
+        facts: [{ source_title: 'Official board report', source_url: url, excerpt: second }],
+        unmatched_records: [{ source_title: 'Other agency road record', source_url: 'https://example.org/other-road',
+          excerpt: 'Other Agency approved a road project in South District.' }],
+        gaps: ['The actual annual contribution and its conditions still need a primary record.'],
+        suggestions: [{ kind: 'WEB_LEAD', title: 'Official board report', source_url: url,
+          excerpt: '', description: 'Located source; no excerpt could be verified.' }],
+      };
+      return route.fulfill({ json: { job_id: `job-${sent.length}`, status: 'COMPLETED', result } });
+    });
+    await page.goto(base);
+    await page.getByRole('searchbox').fill(query);
+    await page.getByRole('button', { name: 'Search', exact: true }).click();
+    const panel = page.locator('#conversation');
+    const cards = panel.locator('#conversation-choices > li');
+    await cards.filter({ hasText: second }).waitFor();
+    assert.equal(await cards.count(), 2);
+    assert.deepEqual(await cards.locator('strong').allTextContents(), [url, url]);
+    await cards.filter({ hasText: second }).getByRole('button', { name: /^Research this lead/ }).click();
+    await panel.getByRole('heading', { name: 'Research results', exact: true }).waitFor();
+    assert.ok(sent[1].startsWith(query));
+    assert.ok(sent[1].includes(url) && sent[1].includes(second));
+    assert.ok(!sent[1].includes(first));
+    assert.equal(await panel.locator('#research-facts blockquote').textContent(), second);
+    assert.ok(!(await panel.locator('#research-facts').textContent()).includes('Other Agency'));
+    await panel.locator('#research-unmatched summary').click();
+    await panel.locator('#research-unmatched-records').getByText('Other Agency approved a road project in South District.').waitFor();
+    assert.ok((await panel.locator('#research-gaps').textContent()).includes('actual annual contribution'));
+    assert.equal(await page.getByRole('heading', { name: 'Research evidence graph' }).isVisible(), true);
+    assert.equal(await page.locator('#refresh').isVisible(), false);
+    assert.equal(await panel.locator('#conversation-choices blockquote').count(), 0);
+    assert.equal(await panel.locator('#conversation-input').inputValue(), '');
+    assert.equal(await panel.locator('#conversation-input').evaluate(element => element === document.activeElement), false);
+    await panel.getByRole('button', { name: 'Continue research', exact: true }).click();
+    await page.waitForFunction(() => document.querySelectorAll('#conversation-log [data-author="system"]').length >= 3);
+    assert.equal(sent[2], sent[1]);
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
+    if (process.env.TRACEGRAPH_ROUTE_SCREENSHOT) await page.screenshot({ path: process.env.TRACEGRAPH_ROUTE_SCREENSHOT, fullPage: true });
+    await panel.getByRole('button', { name: 'Quit', exact: true }).click();
+    await panel.waitFor({ state: 'hidden' });
   } finally {
     await browser.close();
   }

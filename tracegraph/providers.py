@@ -541,13 +541,15 @@ def _assessment_target(context, *, include_scope_hint=False):
 
 class ClaudeWebResearcher:
     def __init__(self, client, *, clock=None, search_strategy=None, emit=None, source_loader=None,
-                 allow_source_recovery=True):
+                 allow_source_recovery=True, evidence_synthesizer=None, evidence_followup=True):
         self._client = client
         self._clock = clock or (lambda: datetime.now(timezone.utc))
         self._search_strategy = search_strategy
         self._emit = emit or (lambda _event: None)
         self._load_source = source_loader or load_public_text
         self._allow_source_recovery = allow_source_recovery
+        self.evidence_synthesizer = evidence_synthesizer
+        self.evidence_followup = evidence_followup
         self._remaining_search_uses = 6
         self._source_reads = 0
         self._attempted_source_urls = set()

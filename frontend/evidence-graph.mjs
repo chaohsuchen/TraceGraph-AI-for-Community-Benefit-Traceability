@@ -1,4 +1,5 @@
 import cytoscape from '/vendor/cytoscape.mjs';
+import { graphRoot } from './graph-view.mjs';
 
 export { evidenceBranch } from './graph-view.mjs';
 
@@ -57,16 +58,17 @@ function shortLabel(text) {
 }
 
 function model(graph, root) {
-  const commitmentId = 'commitment:' + graph.commitment.id;
+  const center = graphRoot(graph);
+  const commitmentId = center.id;
   const organizationId = 'organization:' + (graph.organization?.id ?? 'unresolved');
   const organizationRoot = root?.kind === 'organization';
   const findingRoot = root?.kind === 'finding' ? root.key : null;
-  const showOrganization = !root || organizationRoot;
+  const showOrganization = !graph.question && (!root || organizationRoot);
   const showCommitment = root?.kind !== 'finding';
   const commitmentY = organizationRoot ? 142 : 0;
   const findingsY = showCommitment ? commitmentY + 142 : 0;
-  const title = graph.commitment.title ?? graph.commitment.description;
-  const organization = graph.organization?.name ?? graph.commitment.responsible_entity_raw ?? 'Organization unresolved';
+  const title = center.title;
+  const organization = graph.organization?.name ?? graph.commitment?.responsible_entity_raw ?? 'Organization unresolved';
   const progress = graph.relations.filter(edge => edge.kind === 'PROGRESS');
   const findings = graph.findings;
   const known = new Set(findings.map(item => item.id));
@@ -101,7 +103,7 @@ function model(graph, root) {
   }
   if (showCommitment) {
     nodes.push({
-      data: { id: commitmentId, label: shortLabel(title), kind: 'commitment' },
+      data: { id: commitmentId, label: shortLabel(title), kind: center.kind },
       classes: 'commitment', position: { x: 0, y: commitmentY },
     });
     for (const finding of findings) {

@@ -121,11 +121,72 @@ def discover(researcher, request, citations, retrieved_at):
     working = dict(citations)
     matched = set()
     try:
-        return _discover(researcher, request, working, retrieved_at, matched)
+        result = _discover(researcher, request, working, retrieved_at, matched)
     except ProviderError as exc:
         # A rejected model reference supplies no facts. The independently
         # captured or fetched quotations are still safe to retain as records.
-        return _interrupted(researcher, working, retrieved_at, "source_reference_validation", matched, exc)
+        result = _interrupted(researcher, working, retrieved_at, "source_reference_validation", matched, exc)
+    synthesize = getattr(researcher, "evidence_synthesizer", None)
+    if synthesize and result.get("target_status", "IDENTIFIED") == "IDENTIFIED":
+        result = _enrich(researcher, request, working, retrieved_at, result, synthesize)
+    return result
+
+
+def _enrich(researcher, request, citations, retrieved_at, result, synthesize):
+    """Save a grounded first pass; make one optional search for an actionable remaining gap."""
+    from tracegraph.evidence_synthesis import observations
+
+    candidate = result.get("draft")
+    retained_ids = set()
+    for phase in ("initial", "after_gap_search"):
+        try:
+            selected = synthesize(researcher._client, request["target"], citations,
+                                  commitment=candidate, gaps=result.get("gaps", []))
+            facts = observations(selected, citations, retrieved_at)
+        except (ProviderError, KeyError, ValueError, TypeError) as exc:
+            researcher._emit({"type": "research_interrupted", "stage": "evidence_synthesis",
+                              "phase": phase, "reason": type(exc).__name__})
+            break
+        # Keep the last successful synthesis if a follow-up yields no usable new facts.
+        if facts:
+            if phase == "after_gap_search":
+                field = "evidence" if candidate else "related_evidence"
+                prior = result["result"][field] if candidate else result[field]
+                # Later synthesis has the entire capture; append missed earlier observations
+                # so an optional later step cannot erase previously selected facts.
+                covered = {(item["source"]["url"], item["excerpt"]) for item in facts}
+                facts.extend(item for item in prior if (item["source"]["url"], item["excerpt"]) not in covered)
+            if candidate:
+                result["result"]["evidence"] = facts
+            else:
+                result["related_evidence"] = facts
+            retained_ids.update(row["citation_id"] for row in selected["findings"])
+            result["unmatched_evidence"] = list(_records(
+                {cid: source for cid, source in citations.items() if cid not in retained_ids}, retrieved_at).values())
+        if selected["gap"] and not candidate:
+            result["gaps"] = list(dict.fromkeys([*result.get("gaps", []), selected["gap"]]))
+        researcher._emit({"type": "evidence_synthesis", "phase": phase, "capture_count": len(citations),
+                          "selection": selected, "canonical": bool(candidate)})
+        if phase == "after_gap_search":
+            break
+        query = selected["followup_query"]
+        recommended = bool(selected["gap"] and query)
+        perform = bool(candidate and recommended and researcher.evidence_followup
+                       and researcher._allow_source_recovery and researcher._remaining_search_uses > 0)
+        event = {"type": "evidence_gap_search", "recommended": recommended, "performed": perform,
+                 "query": query, "gap": selected["gap"], "new_verified_excerpts": 0}
+        if perform:
+            try:
+                _, found = researcher._search({**request, "evidence_gap": query,
+                                               "missing_evidence": [selected["gap"]]}, max_uses=2)
+                event["new_verified_excerpts"] = _merge(citations, found.values())
+            except Exception as exc:
+                event["error"] = type(exc).__name__
+        researcher._emit(event)
+        if not event["new_verified_excerpts"]:
+            break
+        researcher._emit({"type": "research_recovery_capture", "citations": dict(citations)})
+    return result
 
 
 def _discover(researcher, request, citations, retrieved_at, matched):

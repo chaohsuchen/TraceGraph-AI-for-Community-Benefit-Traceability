@@ -1,6 +1,7 @@
 import { createHttpApi, waitForJob } from './api.mjs';
 import { createDemoApi, DEMO_COMMITMENT_ID } from './demo.mjs';
 import { createEvidenceGraph, evidenceBranch, findingNodeId, relationEdgeId } from './evidence-graph.mjs';
+import { graphRoot, partialGraph } from './graph-view.mjs';
 
 const $ = id => document.getElementById(id);
 const demo = new URLSearchParams(location.search);
@@ -36,6 +37,7 @@ function notice(message = '', kind = 'info', retry) {
 function updateBusy() {
   $('refresh').disabled = state.request !== null;
   $('conversation-submit').disabled = state.request !== null;
+  $('continue-research').disabled = state.request !== null;
   $('workspace').setAttribute('aria-busy', String(state.request !== null));
 }
 
@@ -66,7 +68,7 @@ async function loadGraph(id, signal) {
     state.organizationExpanded = false;
   }
   let previous;
-  if (state.graph?.commitment.id !== id) {
+  if (state.graph?.commitment?.id !== id) {
     state.selected = null;
     state.branchRoot = null;
     state.branchHistory = [];
@@ -95,14 +97,15 @@ function showRelatedOptions(suggestions) {
   const seen = new Set();
   for (const suggestion of suggestions) {
     const saved = suggestion.kind === 'SAVED_COMMITMENT';
-    const id = saved ? suggestion.commitment_id : suggestion.source_url;
+    const id = saved ? suggestion.commitment_id : suggestion.source_url + '\n' + suggestion.description;
     if (!id || seen.has(id)) continue;
     seen.add(id);
     const option = element('li');
+    const title = saved ? suggestion.title : suggestion.source_title || suggestion.source_url;
     const category = saved ? ['Saved commitment', suggestion.organization_name].filter(Boolean).join(' · ') : 'Web research lead';
-    option.append(element('span', category, 'muted'), element('strong', suggestion.title));
+    option.append(element('span', category, 'muted'), element('strong', title));
     if (suggestion.description && suggestion.description !== suggestion.title) {
-      option.append(element('p', suggestion.description));
+      option.append(element(saved || suggestion.excerpt === '' ? 'p' : 'blockquote', suggestion.description));
     }
     if (!saved) {
       const link = sourceLink({ url: suggestion.source_url });
@@ -110,14 +113,14 @@ function showRelatedOptions(suggestions) {
     }
     const label = saved ? 'Use this commitment' : 'Research this lead';
     const choose = button(label, () => chooseSuggestion(suggestion));
-    choose.setAttribute('aria-label', `${label} ${suggestion.title}`);
+    choose.setAttribute('aria-label', `${label} ${title}`);
     option.append(choose);
     choices.append(option);
   }
   $('conversation-options').hidden = !choices.children.length;
 }
 
-function continueConversation(query, message, suggestions = []) {
+function continueConversation(query, message, suggestions = [], results = null, jobId = null) {
   if (!state.conversation) {
     state.conversation = { query, request: null };
     $('conversation').hidden = false;
@@ -125,12 +128,48 @@ function continueConversation(query, message, suggestions = []) {
     addConversationMessage('user', query);
   }
   notice();
+  $('conversation-title').textContent = results ? 'Research results' : 'Commitment search';
+  $('conversation-form').querySelector('label').textContent = results ? 'Continue research (optional)' : 'Add a detail or source';
+  $('research-results').hidden = !results;
+  $('research-facts').replaceChildren();
+  $('research-gaps').replaceChildren();
+  $('research-unmatched-records').replaceChildren();
+  $('research-unmatched').hidden = !results?.unmatched_records?.length;
+  if (results) {
+    for (const fact of results.facts ?? []) {
+      const item = element('li');
+      item.append(element('strong', fact.source_title), element('blockquote', fact.excerpt));
+      const link = sourceLink({ url: fact.source_url });
+      if (link) item.append(link);
+      $('research-facts').append(item);
+    }
+    for (const gap of results.gaps ?? []) $('research-gaps').append(element('li', gap));
+    for (const record of results.unmatched_records ?? []) {
+      const item = element('li');
+      item.append(element('strong', record.source_title), element('blockquote', record.excerpt));
+      const link = sourceLink({ url: record.source_url });
+      if (link) item.append(link);
+      $('research-unmatched-records').append(item);
+    }
+    $('research-empty').hidden = Boolean(results.facts?.length);
+  }
+  if (results || state.graph?.question) {
+    state.graph = results && jobId ? partialGraph(jobId, query, results) : null;
+    state.branchRoot = state.selected = null;
+    state.branchHistory = [];
+    render();
+  }
+  $('view-research-graph').hidden = !state.graph?.question;
   addConversationMessage('system', message);
   showRelatedOptions(suggestions);
-  $('conversation-input').focus();
+  if (!results) $('conversation-input').focus();
 }
 
 function quitConversation() {
+  if (state.graph?.question) {
+    state.graph = null;
+    render();
+  }
   if (state.conversation?.request && state.conversation.request === state.request) {
     state.request.abort();
     state.request = null;
@@ -149,6 +188,9 @@ function quitConversation() {
 function announceGraph(conversation) {
   notice();
   if (!conversation) return;
+  $('research-results').hidden = true;
+  $('conversation-title').textContent = 'Commitment search';
+  showRelatedOptions([]);
   const commitment = state.graph.commitment;
   addConversationMessage('system', `Opened ${commitment.title || commitment.description}.`);
   $('conversation-input').focus();
@@ -168,7 +210,14 @@ function chooseSuggestion(suggestion) {
     select();
   } else {
     addConversationMessage('user', `Research this lead: ${suggestion.title}`);
-    conversation.query = `Research the public commitment described in this lead.\n${suggestion.description}\nSource: ${suggestion.source_url}`;
+    const excerpt = suggestion.excerpt ?? suggestion.description;
+    const nextQuery = `${conversation.query}\nAdditional source lead (verify against the original question): ${suggestion.source_url}`
+      + (excerpt ? `\nSelected source excerpt:\n${excerpt}` : '');
+    if (nextQuery.length > 4000) {
+      notice('The combined query is too long. Enter a shorter query in the main search box to continue.', 'error');
+      return;
+    }
+    conversation.query = nextQuery;
     lookup(conversation.query);
   }
 }
@@ -199,8 +248,8 @@ async function followJob(id, signal, { query, suggestions = [], retry, isRefresh
     else announceGraph(state.conversation);
   } else if (!isRefresh && job.result.outcome === 'AMBIGUOUS') {
     continueConversation(query, job.result.question, job.result.suggestions ?? suggestions);
-  } else if (!isRefresh && job.result.outcome === 'NO_PUBLIC_PROMISE') {
-    continueConversation(query, job.result.message, [...suggestions, ...(job.result.suggestions ?? [])]);
+  } else if (!isRefresh && ['PARTIAL_RESEARCH', 'NO_PUBLIC_PROMISE'].includes(job.result.outcome)) {
+    continueConversation(query, job.result.message, [...suggestions, ...(job.result.suggestions ?? [])], job.result, id);
   } else {
     notice(job.result.message);
   }
@@ -256,7 +305,7 @@ function toggleOrganization() {
 }
 
 function commitmentItem(graph) {
-  return { id: 'commitment:' + graph.commitment.id, kind: 'commitment', label: 'Current commitment' };
+  return graphRoot(graph);
 }
 
 function organizationItem(graph) {
@@ -268,7 +317,7 @@ function organizationItem(graph) {
 
 function canRootBranch(graph, item) {
   if (item.kind === 'finding') return graph.findings.some(finding => finding.id === item.key);
-  if (item.kind === 'commitment') return item.id === commitmentItem(graph).id;
+  if (item.kind === 'commitment' || item.kind === 'question') return item.id === commitmentItem(graph).id;
   return item.kind === 'organization' && item.id === organizationItem(graph).id;
 }
 
@@ -316,7 +365,7 @@ function openFullGraphConflict(edge) {
 }
 
 function renderGraph(graph) {
-  const id = graph.commitment.id;
+  const id = graphRoot(graph).id;
   if (evidenceView?.id !== id) {
     evidenceView?.renderer.destroy();
     const canvas = element('div', '', 'evidence-canvas');
@@ -340,8 +389,10 @@ function renderGraph(graph) {
     const items = element('ul', '', 'evidence-list');
     details.append(element('summary', 'Evidence and relations'), items);
     const legend = element('div', '', 'graph-legend');
-    legend.append(element('span', '— Related'), element('span', '→ Progress', 'legend-progress'),
-      element('span', '┄ Conflict', 'legend-conflict'), element('span', 'Double-click a node to focus'));
+    legend.append(element('span', '— Related'));
+    if (!graph.question) legend.append(element('span', '→ Progress', 'legend-progress'),
+      element('span', '┄ Conflict', 'legend-conflict'));
+    legend.append(element('span', 'Double-click a node to focus'));
     $('graph').replaceChildren(navigation, controls, canvas, legend, details);
     evidenceView = {
       id, renderer: createEvidenceGraph(canvas, selectGraphItem, focusBranch),
@@ -359,7 +410,7 @@ function renderGraph(graph) {
     (conflicts.length ? ' · ' + conflicts.length + (conflicts.length === 1 ? ' conflict' : ' conflicts') : '');
   const options = [
     ...(root?.kind !== 'finding' ? [commitmentItem(graph)] : []),
-    ...(!root || root.kind === 'organization' ? [organizationItem(graph)] : []),
+    ...(!graph.question && (!root || root.kind === 'organization') ? [organizationItem(graph)] : []),
     ...branch.findings.map(finding => ({
       id: findingNodeId(finding.id), kind: 'finding', key: finding.id, label: finding.claim,
     })),
@@ -370,8 +421,8 @@ function renderGraph(graph) {
   ];
   const rootOption = options.find(option => option.id === root?.id);
   evidenceView.navigation.hidden = !root;
-  evidenceView.branchTitle.textContent = root?.kind === 'commitment'
-    ? graph.commitment.title ?? graph.commitment.description
+  evidenceView.branchTitle.textContent = ['question', 'commitment'].includes(root?.kind)
+    ? graphRoot(graph).title
     : rootOption?.label ?? '';
   if (state.selected && !options.some(option => option.id === state.selected.id)) state.selected = root;
   evidenceView.items.replaceChildren(...options.map(option => {
@@ -443,6 +494,23 @@ function sourceLink(source) {
   }
 }
 
+function assessmentReasoning(text, graph) {
+  const paragraph = element('p', '', 'assessment-reasoning');
+  const sources = new Map(graph.findings.flatMap(finding => finding.supports)
+    .map(support => [support.source.url, support.source]));
+  let start = 0;
+  for (const match of text.matchAll(/https?:\/\/[^\s]+/g)) {
+    const link = sourceLink(sources.get(match[0]));
+    if (!link) continue;
+    paragraph.append(document.createTextNode(text.slice(start, match.index)));
+    link.textContent = match[0];
+    paragraph.append(link);
+    start = match.index + match[0].length;
+  }
+  paragraph.append(document.createTextNode(text.slice(start)));
+  return paragraph;
+}
+
 function renderInspector(graph) {
   const aside = $('inspector');
   const selected = state.selected;
@@ -499,6 +567,16 @@ function renderInspector(graph) {
       return;
     }
   }
+  if (graph.question) {
+    aside.replaceChildren(element('p', 'Research question', 'eyebrow'), element('h3', graph.question));
+    appendFocusButton(aside, graphRoot(graph));
+    if (graph.gaps.length) {
+      const list = element('ul');
+      for (const gap of graph.gaps) list.append(element('li', gap));
+      aside.append(element('h4', 'Evidence still needed'), list);
+    }
+    return;
+  }
   const { commitment, assessment } = graph;
   const title = commitment.title || commitment.description;
   aside.replaceChildren(element('p', 'Commitment detail', 'eyebrow'), element('h3', title));
@@ -507,8 +585,8 @@ function renderInspector(graph) {
   for (const [label, value] of [
     ['Amount', commitment.amount_value],
     ['Timing', commitment.term_periodicity],
-    ['Scope', commitment.geographic_scope],
-    ['Beneficiary', commitment.beneficiary?.name ?? commitment.beneficiary?.category],
+    ['Recorded promise scope', commitment.geographic_scope],
+    ['Intended beneficiary', commitment.beneficiary?.name ?? commitment.beneficiary?.category],
   ]) {
     if (value) facts.append(element('dt', label), element('dd', value));
   }
@@ -516,14 +594,15 @@ function renderInspector(graph) {
   const original = commitment.original_promise;
   if (original) {
     aside.append(element('h4', 'Original promise'));
+    if (commitment.original_text) aside.append(element('p', commitment.original_text));
     if (original.locator) aside.append(element('p', original.locator, 'muted'));
     const link = sourceLink(original.source);
     if (link) aside.append(link);
   }
   if (assessment) {
+    aside.append(element('p', assessment.verdict, 'verdict'));
     const details = element('details', '', 'inspector-disclosure');
-    details.append(element('summary', 'Assessment details'), element('p', assessment.verdict, 'verdict'),
-      element('p', assessment.reasoning));
+    details.append(element('summary', 'Assessment details'), assessmentReasoning(assessment.reasoning, graph));
     aside.append(details);
   }
   const record = element('details', '', 'inspector-disclosure');
@@ -553,7 +632,24 @@ function render() {
   const graph = state.graph;
   $('workspace').hidden = !graph;
   $('empty').hidden = Boolean(graph);
-  if (!graph) return;
+  if (!graph) {
+    evidenceView?.renderer.destroy();
+    evidenceView = null;
+    $('graph').replaceChildren();
+    $('inspector').replaceChildren();
+    return;
+  }
+  $('workspace-title').textContent = graph.question ? 'Research evidence graph' : 'Commitment graph';
+  $('graph').setAttribute('aria-label', graph.question ? 'Research question and cited findings'
+    : 'Organization, commitment, evidence and relations');
+  $('refresh').hidden = Boolean(graph.question);
+  if (graph.question) {
+    $('verdict').replaceChildren(element('span', 'Partial research', 'assessment-label'),
+      element('span', 'Delivery verdict unavailable.', 'muted'));
+    renderGraph(graph);
+    renderInspector(graph);
+    return;
+  }
   const latest = graph.assessment;
   const label = latest?.label?.toLowerCase().replaceAll('_', ' ');
   const status = label ? label[0].toUpperCase() + label.slice(1) :
@@ -594,6 +690,11 @@ async function init() {
     lookup(query);
   });
   $('conversation-quit').addEventListener('click', quitConversation);
+  $('continue-research').addEventListener('click', () => {
+    if (!state.conversation || state.request) return;
+    addConversationMessage('user', 'Continue research with the same target.');
+    lookup(state.conversation.query);
+  });
   for (const example of document.querySelectorAll('[data-query]')) {
     example.addEventListener('click', () => {
       $('query').value = example.dataset.query;

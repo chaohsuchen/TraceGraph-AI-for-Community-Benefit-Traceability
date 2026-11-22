@@ -106,6 +106,7 @@ h2 { font-size: clamp(1.55rem, 3vw, 2.25rem); line-height: 1.15; }
 .conversation-choices li { display: grid; gap: .25rem; padding: .6rem .7rem; border: 1px solid var(--line); border-radius: .35rem; overflow-wrap: anywhere; }
 .conversation-choices .quiet { width: fit-content; }
 .conversation-choices a { width: fit-content; }
+.conversation blockquote { margin: .25rem 0; padding-left: .65rem; border-left: 2px solid var(--line); white-space: pre-line; }
 .conversation .notice { margin-top: 0; }
 #conversation-form label { display: block; margin-bottom: .3rem; color: var(--green); font-weight: 650; }
 #conversation-input { flex: 1; min-width: 0; padding: .55rem .65rem; border: 1px solid #aebcaf; border-radius: .35rem; background: white; color: var(--ink); }
@@ -123,6 +124,7 @@ h2 { font-size: clamp(1.55rem, 3vw, 2.25rem); line-height: 1.15; }
 .verdict-strip { border-block: 1px solid var(--line); background: #edf2e7; }
 .verdict { color: var(--green); font-weight: 750; }
 .assessment-label { border-radius: 1rem; padding: .22rem .58rem; background: #dce9d9; color: var(--green); font-size: .76rem; font-weight: 700; }
+.assessment-reasoning { white-space: pre-line; overflow-wrap: anywhere; }
 .muted { color: var(--muted); font-size: .83rem; }
 .workspace-body { display: grid; grid-template-columns: minmax(0, 2.55fr) minmax(240px, 1fr); }
 .graph {

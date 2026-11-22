@@ -19,7 +19,15 @@
 - POST /api/v1/commitments/{commitment_id}/research-runs 保留已有路径。它启动一次刷新任务，成功后更新同一条承诺的累积证据。
 - GET /api/v1/research-jobs/{job_id} 查询任务。RESOLVED 包含 commitment_id，run_id 是兼容字段，当前返回 null。
 
-AMBIGUOUS、待研究的查询和 NO_PUBLIC_PROMISE 可以带上 suggestions。SAVED_COMMITMENT 指向已有承诺，WEB_LEAD 提供待核实的网页摘录。用户选择已有承诺时直接加载图谱，选择网页线索或补充信息时发起新查询。浏览器保留对话上下文，直到用户退出。
+AMBIGUOUS 只表示用户的选择会改变组织、项目或义务等研究对象，由 LLM 判定并返回一个区分对象的问题。明确对象的证据缺口、原文截断或无关搜索命中不构成对象歧义。
+
+DISCOVER 在原始条款仍不完整或来源复核中断时返回 PARTIAL_RESEARCH，不保存承诺、不生成 commitment_id 或履约结论。它包含 query、message、facts（与目标有关的来源原文）和 gaps（尚需核实的内容）。可选 unmatched_records 保存关联尚未经确认的原文，单独呈现，不能作为目标事实。facts 与 unmatched_records 的每项都包含 source_title、source_url 和 excerpt。成功搜索但未能验证任何摘录时，facts 为空；仍可返回明确标注未验证摘录的来源链接。后续搜索是可选操作，用户可原样继续，不必补充一个已经明确的对象。旧版 NO_PUBLIC_PROMISE 结果仍可读取。
+
+建图前的独立条款复核会再次确认对象是否需要用户选择。最多六条额外候选事实各自只用本条引用进行独立语义复核。未通过或超出预算的候选保留原文，不进入图谱；成功的 RESOLVED 任务也可带 unmatched_records。它们存于任务结果，不构成图谱事实或履约依据。
+
+AMBIGUOUS、待研究的查询和 PARTIAL_RESEARCH 可以带上 suggestions。SAVED_COMMITMENT 指向已有承诺；WEB_LEAD 的 source_title 是来源元数据，title 为兼容字段，不能用生成摘要充当来源标题。description 与非空 excerpt 保留来源原文。只有链接而没有已验证引文时，excerpt 为空字符串，description 明示未验证。浏览器读取旧 WEB_LEAD 而缺少 source_title 时用 URL 作标题，不显示旧的生成式标题。
+
+同一 URL 的不同摘录按 URL 与摘录共同去重，可作为不同条款供选择。用户选择已有承诺时直接加载图谱；选择网页线索时，新查询包含当前目标、来源 URL 和选中的完整摘录；补充信息时保留已有对话上下文。用户可以随时退出。
 
 两个 POST 都使用 Idempotency-Key。网络重试复用同一键，独立刷新生成新键。相同键搭配不同请求会返回 409。失败或尚未完成的任务保留当前图谱。
 

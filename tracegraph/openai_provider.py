@@ -13,6 +13,7 @@ from tracegraph.providers import (
     _TEXT, _json_user, _object,
 )
 from tracegraph.public_excerpt import load_public_text, normalize_excerpt
+from tracegraph.source_passages import recover_passages
 
 
 _RESPONSES_URL = "https://api.openai.com/v1/responses"
@@ -242,9 +243,10 @@ class OpenAIWebResearcher(ClaudeWebResearcher):
     """Reuse research and reconciliation inputs with a verified OpenAI capture."""
 
     def __init__(self, client, *, clock=None, search_strategy=None, emit=None, source_loader=None, search_client=None,
-                 allow_source_recovery=True):
+                 allow_source_recovery=True, evidence_synthesizer=None, evidence_followup=True):
         super().__init__(client, clock=clock, search_strategy=search_strategy, emit=emit,
-                         source_loader=source_loader, allow_source_recovery=allow_source_recovery)
+                         source_loader=source_loader, allow_source_recovery=allow_source_recovery,
+                         evidence_synthesizer=evidence_synthesizer, evidence_followup=evidence_followup)
         self._search_client = search_client or client
         self._load_source = source_loader or load_public_text
 
@@ -288,6 +290,24 @@ class OpenAIWebResearcher(ClaudeWebResearcher):
             citations[f"c{len(citations) + 1}"] = {
                 "url": url, "title": sources[url], "excerpt": verified, "context": verified,
             }
+        if (sources and not citations and request.get("kind") == "DISCOVER"
+                and "evidence_gap" not in request and self._allow_source_recovery):
+            if not any(pages.values()):
+                for url in sources:
+                    if self._source_reads >= 2:
+                        break
+                    if url in pages or url in self._attempted_source_urls:
+                        continue
+                    self._attempted_source_urls.add(url)
+                    self._source_reads += 1
+                    try:
+                        pages[url] = self._load_source(url, timeout=self._search_client._timeout_for(8))
+                    except (OSError, ValueError, ProviderError):
+                        continue
+            recovered = recover_passages(self._client, request.get("target"), pages, sources, rows[:_MAX_PASSAGES])
+            citations = {f"c{i}": citation for i, citation in enumerate(recovered, 1)}
+            self._emit({"type": "source_span_recovery", "readable_pages": sum(bool(p) for p in pages.values()),
+                        "verified_count": len(citations)})
         if sources and not citations:
             self._emit({"type": "source_validation", "status": "NO_VERIFIED_EXCERPTS", "located_sources": len(sources)})
         lines = [f"[{key}] {citation['excerpt']}" for key, citation in citations.items()]

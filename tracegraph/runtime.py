@@ -164,6 +164,7 @@ def create_application(
         judge, researcher = fixture_judge, fixture_research
         reconciler = EvidenceReconciler(fixture_reconcile, followup=fixture_review)
     else:
+        from tracegraph.evidence_synthesis import synthesize
         from tracegraph.providers import AnthropicClient, ClaudeIdentityJudge, ClaudeReconciliationJudge, ClaudeWebResearcher
 
         if provider == "openai":
@@ -183,6 +184,8 @@ def create_application(
         judge = ClaudeIdentityJudge(client)
         researcher = researcher_type(client, search_strategy=search_strategy, emit=emit,
                                      allow_source_recovery=allow_web_search if allow_source_recovery is None else allow_source_recovery,
+                                     evidence_synthesizer=synthesize,
+                                     evidence_followup=os.environ.get("TRACEGRAPH_EVIDENCE_FOLLOWUP", "1") != "0",
                                      **research_options)
         reconciliation_judge = ClaudeReconciliationJudge(client)
         assessment_client = client_type(model=model, reasoning_effort="low", **options) if provider == "openai" else client
