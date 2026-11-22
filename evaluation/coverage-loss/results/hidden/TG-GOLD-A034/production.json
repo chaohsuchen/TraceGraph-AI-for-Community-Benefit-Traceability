@@ -1,0 +1,87 @@
+{
+  "arm": "hidden",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 2.25,
+      "request_id": "req_db251e6ff5624ae39e6b448a951ebe2a",
+      "usage": {
+        "input_tokens": 973,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 130,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 1103
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "documents": [],
+  "shortlist": [
+    {
+      "url": "https://rwnewyork.com/rws-next-chapter/resorts-world-new-york-city-cirrus-unveil-new-agreement-to-build-up-to-50000-units-of-workforce-housing/",
+      "title": "https://rwnewyork.com/rws-next-chapter/resorts-world-new-york-city-cirrus-unveil-new-agreement-to-build-up-to-50000-units-of-workforce-housing/",
+      "excerpt": "To meet this need, Resorts World has made a down payment to build fair housing in a multi-million-dollar commitment not just for its employees but all working-class New Yorkers."
+    },
+    {
+      "url": "https://rwnewyork.com/community/community-investments/",
+      "title": "https://rwnewyork.com/community/community-investments/",
+      "excerpt": "Community Commitments We're investing in the places we call home. We’re putting real dollars behind real promises with meaningful community development in Queens because we’re more than just a business. We are a trusted community partner with purpose that continues to keep its promises."
+    },
+    {
+      "url": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+      "title": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+      "excerpt": "Data as of September 2026"
+    },
+    {
+      "url": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+      "title": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+      "excerpt": "POWERED BY RESORTS WORLD'S $750M DIRECT INVESTMENT"
+    }
+  ],
+  "selection": {
+    "findings": [
+      {
+        "id": "W4",
+        "claim": "Resorts World's workforce housing commitment is described as being funded by a $750 million direct investment from Resorts World.",
+        "quote": "POWERED BY RESORTS WORLD'S $750M DIRECT INVESTMENT"
+      },
+      {
+        "id": "W1",
+        "claim": "Resorts World characterized the workforce housing undertaking as a multi-million-dollar down payment to build fair housing for both its employees and all working-class New Yorkers.",
+        "quote": "Resorts World has made a down payment to build fair housing in a multi-million-dollar commitment not just for its employees but all working-class New Yorkers."
+      }
+    ]
+  },
+  "additions": [
+    {
+      "url": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+      "title": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+      "quote": "POWERED BY RESORTS WORLD'S $750M DIRECT INVESTMENT",
+      "claim": "Resorts World's workforce housing commitment is described as being funded by a $750 million direct investment from Resorts World.",
+      "start": 0,
+      "end": 50
+    },
+    {
+      "url": "https://rwnewyork.com/rws-next-chapter/resorts-world-new-york-city-cirrus-unveil-new-agreement-to-build-up-to-50000-units-of-workforce-housing/",
+      "title": "https://rwnewyork.com/rws-next-chapter/resorts-world-new-york-city-cirrus-unveil-new-agreement-to-build-up-to-50000-units-of-workforce-housing/",
+      "quote": "Resorts World has made a down payment to build fair housing in a multi-million-dollar commitment not just for its employees but all working-class New Yorkers.",
+      "claim": "Resorts World characterized the workforce housing undertaking as a multi-million-dollar down payment to build fair housing for both its employees and all working-class New Yorkers.",
+      "start": 19,
+      "end": 177
+    }
+  ]
+}

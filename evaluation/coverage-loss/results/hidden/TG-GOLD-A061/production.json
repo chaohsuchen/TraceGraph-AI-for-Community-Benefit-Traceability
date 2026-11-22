@@ -1,0 +1,59 @@
+{
+  "arm": "hidden",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 1.0,
+      "request_id": "req_a32e2d4c28d64bbb85345d3748b04a1a",
+      "usage": {
+        "input_tokens": 822,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 13,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 835
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "documents": [],
+  "shortlist": [
+    {
+      "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "excerpt": "BE IT FURTHER RESOLVED, that the Board hereby adopts as its initial findings, the attached “Selection of the New York Gaming Facility Location Board” dated December 1, 2025 which summarizes the Board’s evaluation and selection of Applicants to apply to the Commission for a gaming facility license; and"
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2026/02/transcript-2.3.2026.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2026/02/transcript-2.3.2026.pdf",
+      "excerpt": "Additionally, two of the three licensees have provided their completion bond for their respective project, with the third being finalized shortly."
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2026/02/transcript-2.3.2026.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2026/02/transcript-2.3.2026.pdf",
+      "excerpt": "First, all three licensees have remitted their $500M license fee, which has, consistent with state law, in turn been remitted to the Metropolitan Transit Authority."
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2026/05/final-minutes-16-march-2026.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2026/05/final-minutes-16-march-2026.pdf",
+      "excerpt": "The executive director provided an update regarding the progress of the Resorts World commercial casino development and an update on the State Budget process."
+    }
+  ],
+  "selection": {
+    "findings": []
+  },
+  "additions": []
+}

@@ -1,0 +1,100 @@
+{
+  "fingerprint": "26b839ae780bb03c651838120bbe838bac5c82a2dff9d7a8cd99978e1ce435b2",
+  "origin": "new_tool_free_v4",
+  "passages": {
+    "p1": {
+      "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "excerpt": "Bally’s has committed to ensuring that 70 percent of construction and facility jobs go to Bronx residents—a strong pledge that will require substantial and sustained effort from Bally’s and its contractors."
+    },
+    "p2": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+      "excerpt": "elsewhere throughout this process, we have committed to hiring at least 70%+ Bronx residents as a minimum target."
+    },
+    "p3": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+      "excerpt": "Our minimum goal for residents of New York State will be inclusive of our targets for Bronx based hiring. We anticipate that our minimum target goal will be that 70% of"
+    }
+  },
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 5.0,
+      "request_id": "req_0ecb256bb070446693fdbd6227d04600",
+      "usage": {
+        "input_tokens": 1864,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 404,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2268
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "decisions": [
+    {
+      "gold_id": "G1",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p1"
+      ],
+      "reason": "p1 states that Bally’s 'has committed to ensuring that 70 percent of construction and facility jobs go to Bronx residents,' matching the Board-recorded pledge at the Bronx project."
+    },
+    {
+      "gold_id": "G2",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p1"
+      ],
+      "reason": "p1 calls the 70 percent figure a 'strong pledge' but does not show a March 2026 final report describing it specifically as a 'goal' for construction and facility operating jobs."
+    },
+    {
+      "gold_id": "G3",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p2"
+      ],
+      "reason": "p2 describes a commitment to hire 'at least 70%+ Bronx residents as a minimum target,' but it does not mention best-faith geographic hiring preferences or identify the Bronx Community Advisory Committee in the excerpt."
+    },
+    {
+      "gold_id": "G4",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt says Bally’s agreed to share geographic hiring data for the Bronx project."
+    },
+    {
+      "gold_id": "G5",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt shows an executed Bronx gaming facility license requiring public progress reports on community benefit milestones."
+    },
+    {
+      "gold_id": "G6",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt shows an executed Bronx gaming facility license requiring independent monitoring of community benefit milestones."
+    },
+    {
+      "gold_id": "G7",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt shows that a Bronx license reporting requirement includes workforce diversity and demographic data."
+    }
+  ]
+}

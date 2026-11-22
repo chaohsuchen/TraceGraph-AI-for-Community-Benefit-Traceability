@@ -1,0 +1,207 @@
+{
+  "arm": "reread",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 2.344000000040978,
+      "request_id": "req_ef45dc4b06f7421b8a9020959ae5c33a",
+      "usage": {
+        "input_tokens": 3299,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 123,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3422
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "documents": [
+    {
+      "url": "https://esd.ny.gov/sites/default/files/media/document/071824-ESD-Board-Materials.pdf",
+      "status": "readable",
+      "characters": 97852,
+      "sha256": "c3d4bbbec06bbfeb6c9888a8b6136795b199ce5a7bc5fffb6ecaf96fed1aae9a"
+    },
+    {
+      "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+      "status": "readable",
+      "characters": 40582,
+      "sha256": "bcbaf9ebab513305b570a2aa413aa7e07609628bda9f425aee6e17965799fb74"
+    }
+  ],
+  "shortlist": [
+    {
+      "url": "https://esd.ny.gov/sites/default/files/media/document/071824-ESD-Board-Materials.pdf",
+      "title": "https://esd.ny.gov/sites/default/files/media/document/071824-ESD-Board-Materials.pdf",
+      "excerpt": "to be used to sponsor three annual events and provide new training opportunities to its minority and women-owned business members. Ms.",
+      "start": 96447,
+      "end": 96581
+    },
+    {
+      "url": "https://esd.ny.gov/sites/default/files/media/document/071824-ESD-Board-Materials.pdf",
+      "title": "https://esd.ny.gov/sites/default/files/media/document/071824-ESD-Board-Materials.pdf",
+      "excerpt": "Chair Law asked about the percent of funding ESD is providing for the project and Ms. Madmoune explained that because there are two grant awards, ESD’s participation is 86 percent.",
+      "start": 56120,
+      "end": 56300
+    },
+    {
+      "url": "https://esd.ny.gov/sites/default/files/media/document/071824-ESD-Board-Materials.pdf",
+      "title": "https://esd.ny.gov/sites/default/files/media/document/071824-ESD-Board-Materials.pdf",
+      "excerpt": "Contract for Marketing and Promotion Services of the New York State Apple Industry through New York Apple Association, Inc. Authorization to Enter into a Contract for Marketing and Promotion Services of the New York State Apple Industry Relating to the Apple Marketing Order Program; and Authorization to Take Related Actions VI.",
+      "start": 8159,
+      "end": 8488
+    },
+    {
+      "url": "https://esd.ny.gov/sites/default/files/media/document/071824-ESD-Board-Materials.pdf",
+      "title": "https://esd.ny.gov/sites/default/files/media/document/071824-ESD-Board-Materials.pdf",
+      "excerpt": "Contract for Research and Development Services for the New York State Apple Industry through Cornell University Authorization to Enter into a Contract with Cornell University for Research and Development Services for the New York State Apple Industry Relating to the Apple Research and Development Program; and Authorization to Take Related Actions VI. B.",
+      "start": 8541,
+      "end": 8896
+    },
+    {
+      "url": "https://esd.ny.gov/sites/default/files/media/document/071824-ESD-Board-Materials.pdf",
+      "title": "https://esd.ny.gov/sites/default/files/media/document/071824-ESD-Board-Materials.pdf",
+      "excerpt": "designee(s) be, and each of them hereby is, authorized to make to Community Service for Every1, Inc.",
+      "start": 18960,
+      "end": 19060
+    },
+    {
+      "url": "https://esd.ny.gov/sites/default/files/media/document/071824-ESD-Board-Materials.pdf",
+      "title": "https://esd.ny.gov/sites/default/files/media/document/071824-ESD-Board-Materials.pdf",
+      "excerpt": "Ms. Bethune explained that the At the Direction Of grants refer to those commitments listed in the New York State Budget that enhance the State’s communities through cultural, educational, research and development and civic organizations.",
+      "start": 95664,
+      "end": 95902
+    },
+    {
+      "url": "https://esd.ny.gov/sites/default/files/media/document/071824-ESD-Board-Materials.pdf",
+      "title": "https://esd.ny.gov/sites/default/files/media/document/071824-ESD-Board-Materials.pdf",
+      "excerpt": "New York City (New York County) – Pennsylvania Station Area Civic and Land Use Improvement Project Authorization to Amend the Contract with Bryan Cave Leighton Paisner for Legal Services and Authorization to Take Related Actions VI. E.",
+      "start": 9707,
+      "end": 9942
+    },
+    {
+      "url": "https://esd.ny.gov/sites/default/files/media/document/071824-ESD-Board-Materials.pdf",
+      "title": "https://esd.ny.gov/sites/default/files/media/document/071824-ESD-Board-Materials.pdf",
+      "excerpt": "Madmoune explained that because there are two grant awards, ESD’s participation is 86 percent. She further explained that ESD’s grant is for $100,000 and the remaining balance of $551,600 is funded through the Department of State from a DRI award that ESD helps administer.",
+      "start": 56206,
+      "end": 56479
+    },
+    {
+      "url": "https://esd.ny.gov/sites/default/files/media/document/071824-ESD-Board-Materials.pdf",
+      "title": "https://esd.ny.gov/sites/default/files/media/document/071824-ESD-Board-Materials.pdf",
+      "excerpt": "Commercialization Academy - Working Capital Local Asst 22-23 Innovation Venture Competition Program (Working Capital Grant) Project (the “Project”), the Corporation hereby determines pursuant to Section 10(g) of the New York State Urban Development Corporation Act of 1968, as amended (the “Act”), that there are no families or individuals to be displaced from the project area; and be it further RESOLVED, that the President and Chief Executive Officer of the Corporation or her designee(s) be, and each of them hereby is, authorized to make to the Griffiss Institute a grant for a total amount not to exceed Two Million, One Hundred and Thirty-Five Thousand Dollars ($2,135,000) Master Page # 18",
+      "start": 43623,
+      "end": 44320
+    },
+    {
+      "url": "https://esd.ny.gov/sites/default/files/media/document/071824-ESD-Board-Materials.pdf",
+      "title": "https://esd.ny.gov/sites/default/files/media/document/071824-ESD-Board-Materials.pdf",
+      "excerpt": "Ms. Bethune noted that two appropriations in the amount of $5 million each were included in the Fiscal Year 2022-2023 and 2023-2024 New York State Budgets with the State expected to commit to three additional $5 million appropriations in the 2024-2025, 2025-2026 and 2026-2027 Fiscal Years for a total appropriation of $25 million.",
+      "start": 97351,
+      "end": 97682
+    },
+    {
+      "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+      "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+      "excerpt": "You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%. Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively.",
+      "start": 39415,
+      "end": 39801
+    },
+    {
+      "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+      "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+      "excerpt": "Q_2365 By entering your name in the box below, you are acknowledging that ESD’s Contractor & Supplier Diversity policy will apply to this project. You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%.",
+      "start": 39268,
+      "end": 39652
+    },
+    {
+      "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+      "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+      "excerpt": "Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively. Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced.",
+      "start": 39653,
+      "end": 40097
+    },
+    {
+      "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+      "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+      "excerpt": "Percentage of Employees that are residents of New York State Project Location Only Q_1366 D. Total Contract Employees/Jobs Only Project Location Only Q_2372 K.",
+      "start": 11216,
+      "end": 11375
+    },
+    {
+      "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+      "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+      "excerpt": "obtaining permits, licenses, hiring staff, etc.) Q_12654 Has the applicant applied for and/or been awarded funding from other New York State or local entities for this project? This is a conditional question.",
+      "start": 20282,
+      "end": 20490
+    },
+    {
+      "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+      "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+      "excerpt": "Include an estimated project timeline containing project start/completion dates, estimates for design, permitting and construction or other major steps. Q_15024 Describe the specific outcomes and goals of the project and how you will measure progress made towards these goals.",
+      "start": 18785,
+      "end": 19061
+    },
+    {
+      "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+      "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+      "excerpt": "For information on the State Climate Impacts Assessment visit: https://nysclimateimpacts.org/about-the-assessment/what-is-the-assessment/ For information on implementation of the Community Risk and Resiliency Act visit: https://dec.ny.gov/environmental-protection/climate-change/new-york-response/crra This is a conditional question based on the answer to Q_13611. This question displays when selecting the answer: \"Yes\" Q_19123 By entering your name in the box below, you certify that you are authorized on behalf of the applicant and its governing body to submit this letter of intent.",
+      "start": 32916,
+      "end": 33503
+    },
+    {
+      "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+      "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+      "excerpt": "Q_580 Provide a list of all federal, state, and local reviews, approvals, or permits needed or completed, including the dates when they are expected to be completed or were completed. If Not Applicable, indicate \"NA\".",
+      "start": 9327,
+      "end": 9544
+    },
+    {
+      "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+      "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+      "excerpt": "This question displays when selecting the answer: \"Yes\" Q_18182 Is this project subject to National Environmental Policy Act (NEPA)? Q_18918 Explain your strategy for proceeding if the full amount of requested funding, required matching funds, and/or temporary financing are not secured as expected, or committed sources become unavailable.",
+      "start": 2626,
+      "end": 2966
+    },
+    {
+      "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+      "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+      "excerpt": "Q_2334 Provide a list of all other federal, state, and local reviews, approvals, or permits needed or completed, including the dates when they are expected to be completed or were completed. If Not Applicable, please upload an attachment that indicates \"NA\".",
+      "start": 17282,
+      "end": 17540
+    }
+  ],
+  "selection": {
+    "findings": [
+      {
+        "id": "W13",
+        "claim": "If the project receives a funding award, the applicant must use good faith efforts to achieve the project’s assigned MWBE and SDVOB goals, and failure to attain those goals could reduce the grant amount.",
+        "quote": "Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced."
+      }
+    ]
+  },
+  "additions": [
+    {
+      "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+      "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+      "quote": "Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced.",
+      "claim": "If the project receives a funding award, the applicant must use good faith efforts to achieve the project’s assigned MWBE and SDVOB goals, and failure to attain those goals could reduce the grant amount.",
+      "start": 39802,
+      "end": 40097
+    }
+  ]
+}

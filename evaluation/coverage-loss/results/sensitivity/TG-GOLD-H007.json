@@ -1,0 +1,82 @@
+{
+  "fingerprint": "d5c0e238055d4fd415456397900855e361dc0588df2b9cbc45d6faede370ba83",
+  "reversed_original_ids": [
+    "p15",
+    "p14",
+    "p13",
+    "p12",
+    "p11",
+    "p10",
+    "p9",
+    "p8",
+    "p7",
+    "p6",
+    "p5",
+    "p4",
+    "p3",
+    "p2",
+    "p1"
+  ],
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 4.046999999904074,
+      "request_id": "req_e244f9a93f7f4e44bc782372fc0b59b4",
+      "usage": {
+        "input_tokens": 3244,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 259,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3503
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "decisions": [
+    {
+      "gold_id": "G4",
+      "label": "CONTRADICTION",
+      "citation_ids": [
+        "p7"
+      ],
+      "reason": "The passage says Bally’s stated 70 percent of employees will be Bronx residents, not 75 percent."
+    },
+    {
+      "gold_id": "G5",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt defines local as Community Boards 9, 10 and 11."
+    },
+    {
+      "gold_id": "G6",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p2",
+        "p4",
+        "p10",
+        "p11"
+      ],
+      "reason": "The excerpts describe these workforce shares as diversity goals, commitments, or minimum targets rather than guaranteed outcomes."
+    },
+    {
+      "gold_id": "G7",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt states that the Bronx gaming license requires public workforce diversity and demographic reporting."
+    }
+  ]
+}

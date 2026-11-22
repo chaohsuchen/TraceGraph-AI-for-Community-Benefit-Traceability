@@ -1,0 +1,65 @@
+{
+  "fingerprint": "dd0d1a865ddda4f7c64dc8620c8ef66b3476cd5d6f53f7c8e8284307812c8fa9",
+  "reversed_original_ids": [
+    "p1"
+  ],
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 4.047000000020489,
+      "request_id": "req_ec8cb608c03045929560ea8697f9581c",
+      "usage": {
+        "input_tokens": 1502,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 295,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 1797
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "decisions": [
+    {
+      "gold_id": "G1",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p1"
+      ],
+      "reason": "The passage mentions reports on 'benefits proposed in the Application or Bally’s other commitments' but does not quote any projection that approximately 75% of capital expenditures would benefit Bronx-based firms."
+    },
+    {
+      "gold_id": "G2",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage mentions excavation, foundation permits, or permit filings for the Bronx project."
+    },
+    {
+      "gold_id": "G3",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage mentions a $560 million financing facility, $400 million obtained, or preconstruction costs."
+    },
+    {
+      "gold_id": "G4",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p1"
+      ],
+      "reason": "The passage requires reports to detail progress and budget/expenditure and explain delays, but it does not state that the Board recommended reporting at opening how much actual capital spending benefited Bronx-based firms."
+    }
+  ]
+}

@@ -1,0 +1,363 @@
+{
+  "case_id": "TG-GOLD-A034",
+  "query": "Resorts World committed annually, for the license term, the lesser of 2 percent of incremental GGR above 2025 levels or $25 million to a workforce housing fund.",
+  "facts": [
+    {
+      "id": "G1",
+      "text": "For the license term RWNYC promised the workforce housing fund the annual lesser of $25 million or 2% of incremental GGR above 2025 levels.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A034",
+          "row": 5
+        },
+        {
+          "sheet": "gold commitments",
+          "row": 76
+        }
+      ]
+    },
+    {
+      "id": "G2",
+      "text": "The Board proposed alternative ways of addressing benefits originally projected beyond the awarded license term.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A034",
+          "row": 5
+        }
+      ]
+    },
+    {
+      "id": "G3",
+      "text": "RWNYC's original license term is 15 years.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A034",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "G4",
+      "text": "The Cirrus partnership agreement defines annual commitments as calendar-year cash capital contributions.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A034",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "G5",
+      "text": "RWNYC's housing dashboard reported $25 million delivered in 2026 through September.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A034",
+          "row": 8
+        }
+      ]
+    },
+    {
+      "id": "G6",
+      "text": "Official records show a $46.125 million deed for the Jamaica acquisition dated May 29, 2026.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A034",
+          "row": 9
+        }
+      ]
+    },
+    {
+      "id": "G7",
+      "text": "Official records show a $24 million mortgage accompanying the Jamaica acquisition.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A034",
+          "row": 9
+        }
+      ]
+    },
+    {
+      "id": "G8",
+      "text": "The recorded buyer of the Jamaica parcel was RWNYC ARCHER AVE LLC.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A034",
+          "row": 10
+        }
+      ]
+    },
+    {
+      "id": "G9",
+      "text": "The recorded parcel was Queens block 10151, lot 39, at 92-02 165 Street.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A034",
+          "row": 11
+        }
+      ]
+    },
+    {
+      "id": "G10",
+      "text": "Trade reporting links Cirrus WFHA Funding and Resorts World to the Jamaica acquisition.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A034",
+          "row": 12
+        }
+      ]
+    },
+    {
+      "id": "G11",
+      "text": "RWNYC described 700 Jamaica workforce housing units as proposed.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A034",
+          "row": 13
+        }
+      ]
+    },
+    {
+      "id": "G12",
+      "text": "The August 2026 PLUTO record listed zero residential units on the Jamaica parcel.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A034",
+          "row": 14
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "K1",
+      "text": "RWNYC actually transferred the qualifying housing-fund contribution for the license year under review.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A034",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-A034",
+          "row": 7
+        },
+        {
+          "sheet": "TG-GOLD-A034",
+          "row": 8
+        }
+      ]
+    },
+    {
+      "id": "K2",
+      "text": "The transferred amount matched the annual lesser-of formula using the relevant increment above 2025 GGR.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A034",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-A034",
+          "row": 8
+        }
+      ]
+    }
+  ],
+  "delivery_applicable": true,
+  "reference_verdict": {
+    "status": "partially corroborated",
+    "reasoning": "Retain partially corroborated, Medium confidence and pending human review. City indexes independently establish acquisition and financing metadata, including the legal buyer; they do not trace RWNYC cash into the property. RWNYC explicitly claims $25M delivered in 2026 through September, but no dated recipient receipt, capital ledger or GGR reconciliation verifies annual compliance. Keep the Cirrus platform, partnership and title SPV separate. The 700 homes remain proposed. Term treatment, contribution timing, affordability conditions and the cash chain require further records; missing evidence does not establish nonpayment.",
+    "delivery_applicable": true,
+    "source_refs": [
+      {
+        "sheet": "TG-GOLD-A034",
+        "row": 17
+      },
+      {
+        "sheet": "TG-GOLD-A034",
+        "row": 18
+      }
+    ]
+  },
+  "sources": [
+    {
+      "sheet": "TG-GOLD-A034",
+      "row": 5,
+      "title": "GFLB Selection Document December 2025",
+      "citation": "GFLB, 1 December 2025, PDF p.25 / printed p.24; PDF p.10 / printed p.9, footnote 5",
+      "publisher": "New York State Gaming Facility Location Board",
+      "url": null,
+      "url_origin": null,
+      "locator": "GFLB, 1 December 2025, PDF p.25 / printed p.24; PDF p.10 / printed p.9, footnote 5",
+      "published_on": null,
+      "evidence_status": "Verified commitment wording",
+      "specific_evidence": "The regulator records the annual lesser-of formula. Footnote 5 offers proportional reduction or funding within awarded years for commitments beyond the awarded term; the reviewed record does not establish which option the Commission adopted.",
+      "notes": "Independent regulatory record of an applicant pledge, not payment evidence. No verified installment schedule, zero floor, or fixed $375M/$750M total follows from this passage."
+    },
+    {
+      "sheet": "TG-GOLD-A034",
+      "row": 6,
+      "title": "RWNYC Gaming Facility License",
+      "citation": "NYS Gaming Commission, 19 December 2025, PDF pp.1, 3-5; Conditions 3, 5 and 10",
+      "publisher": "New York State Gaming Commission",
+      "url": null,
+      "url_origin": null,
+      "locator": "NYS Gaming Commission, 19 December 2025, PDF pp.1, 3-5; Conditions 3, 5 and 10",
+      "published_on": null,
+      "evidence_status": "Governing context",
+      "specific_evidence": "The actual license establishes an initial 15-year term and requires community benefit budgets, progress reporting and independent monitoring. These requirements identify records that could test A034 performance but do not themselves establish a housing payment or resolve longer package projections.",
+      "notes": "Independent governing instrument. The selected public meeting materials reviewed supplied no housing payment reconciliation; this is a bounded search finding, not evidence of nonpayment."
+    },
+    {
+      "sheet": "TG-GOLD-A034",
+      "row": 7,
+      "title": "Exhibit 175 Resorts World Cirrus WFH Partnership Agreement",
+      "citation": "2025-05-15 execution version; posted 2026-05-05; PDF pp.4, 10-11, 17; Article III pp.19-26",
+      "publisher": "RWNYC application, hosted by New York State",
+      "url": null,
+      "url_origin": null,
+      "locator": "2025-05-15 execution version; posted 2026-05-05; PDF pp.4, 10-11, 17; Article III pp.19-26",
+      "published_on": null,
+      "evidence_status": "Partial contractual structure",
+      "specific_evidence": "The agreement identifies Genting New York LLC, Resorts World Cirrus WFH, LP and general partner Cirrus WFH RW GP, LLC. Annual commitments are defined as calendar-year cash capital contributions, but operative capital details were unavailable in the retrieved public text.",
+      "notes": "Party-authored document; hosting does not verify funding. PDF images and signatures were not authenticated. No receiving account, capital call or 2026 cash receipt was established."
+    },
+    {
+      "sheet": "TG-GOLD-A034",
+      "row": 8,
+      "title": "RWNYC Community Investments Dashboard",
+      "citation": "Workforce Housing Fund card, web lines 159-170; data as of September 2026; reviewed by 4 November 2026",
+      "publisher": "Resorts World New York City",
+      "url": null,
+      "url_origin": null,
+      "locator": "Workforce Housing Fund card, web lines 159-170; data as of September 2026; reviewed by 4 November 2026",
+      "published_on": null,
+      "evidence_status": "Self-reported contribution",
+      "specific_evidence": "RWNYC reports $25 million delivered in 2026 under its Workforce Housing Fund program, with data through September. The card provides an explicit annual program claim but no payee, transfer date, capital account acknowledgment or reconciliation to the GGR formula.",
+      "notes": "Company self-report, not independent cash verification. Keep separate from the acquisition price and historical down payment; do not code full annual compliance as verified."
+    },
+    {
+      "sheet": "TG-GOLD-A034",
+      "row": 9,
+      "title": "NYC ACRIS Real Property Master Deed and Mortgage Index",
+      "citation": "Documents 2026060200718001/002; CRFNs 2026000156049/050; dated 29 May, recorded 5 June 2026; rows through 30 June",
+      "publisher": "New York City Department of Finance via NYC Open Data",
+      "url": null,
+      "url_origin": null,
+      "locator": "Documents 2026060200718001/002; CRFNs 2026000156049/050; dated 29 May, recorded 5 June 2026; rows through 30 June",
+      "published_on": null,
+      "evidence_status": "Independently corroborated transaction metadata",
+      "specific_evidence": "The city index records a $46.125 million deed and a $24 million mortgage, both dated 29 May and recorded 5 June 2026. These independently corroborate transaction amounts and dates, without establishing RWNYC's cash contribution or annual fund credit.",
+      "notes": "Government index, not instrument images or settlement audit. Do not subtract mortgage face value to infer equity, or add debt to the purchase as community spending."
+    },
+    {
+      "sheet": "TG-GOLD-A034",
+      "row": 10,
+      "title": "NYC ACRIS Real Property Parties Index",
+      "citation": "Document IDs 2026060200718001/002; deed and mortgage party roles; recorded 5 June 2026; rows through 30 June",
+      "publisher": "New York City Department of Finance via NYC Open Data",
+      "url": null,
+      "url_origin": null,
+      "locator": "Document IDs 2026060200718001/002; deed and mortgage party roles; recorded 5 June 2026; rows through 30 June",
+      "published_on": null,
+      "evidence_status": "Independently corroborated legal parties",
+      "specific_evidence": "Joined city party records name RWNYC ARCHER AVE LLC as deed buyer and mortgage borrower, and JAMAICA FIRST PARKING LLC as seller and lender. Official document-role codes support those roles; ultimate ownership and the fund-to-property cash chain remain unresolved.",
+      "notes": "Same government record family as Master and Legals. Preserve the recorded buyer separately from Cirrus WFHA Funding LLC; no ownership schedule links the entities conclusively."
+    },
+    {
+      "sheet": "TG-GOLD-A034",
+      "row": 11,
+      "title": "NYC ACRIS Real Property Legals Index",
+      "citation": "Document IDs 2026060200718001/002; Queens block 10151, lot 39; BBL 4101510039; rows through 30 June 2026",
+      "publisher": "New York City Department of Finance via NYC Open Data",
+      "url": null,
+      "url_origin": null,
+      "locator": "Document IDs 2026060200718001/002; Queens block 10151, lot 39; BBL 4101510039; rows through 30 June 2026",
+      "published_on": null,
+      "evidence_status": "Independently corroborated parcel identity",
+      "specific_evidence": "Joining Legals to Master and Parties by document ID locates both instruments on Queens block 10151, lot 39, BBL 4101510039, at the official 92-02 165 STREET address. This establishes parcel identity, not housing completion or the source of acquisition cash.",
+      "notes": "Dataset updated 8 October 2026, but returned rows are good through 30 June. Newly discovered older records do not establish a post-baseline acquisition or delivery."
+    },
+    {
+      "sheet": "TG-GOLD-A034",
+      "row": 12,
+      "title": "Cirrus WFHA Funding and Resorts World NYC Jamaica Acquisition Report",
+      "citation": "New York Real Estate Journal, 28 July 2026, opening acquisition paragraphs and participant quotations",
+      "publisher": "New York Real Estate Journal",
+      "url": null,
+      "url_origin": null,
+      "locator": "New York Real Estate Journal, 28 July 2026, opening acquisition paragraphs and participant quotations",
+      "published_on": null,
+      "evidence_status": "Participant-based project attribution",
+      "specific_evidence": "Trade coverage identifies Cirrus WFHA Funding LLC as an investment platform acting with Resorts World NYC on the Jamaica acquisition. It supports the project's association with the initiative, while the recorded title buyer is the separate entity RWNYC ARCHER AVE LLC.",
+      "notes": "External publication relaying transaction participants, not an independent fund audit. Acquisition association does not establish SPV ownership, annual contribution amount or the receiving legal entity."
+    },
+    {
+      "sheet": "TG-GOLD-A034",
+      "row": 13,
+      "title": "RWNYC Workforce Housing Program Detail",
+      "citation": "Impact card and Jamaica acquisition paragraph; data as of September 2026; reviewed by 4 November 2026",
+      "publisher": "Resorts World New York City",
+      "url": null,
+      "url_origin": null,
+      "locator": "Impact card and Jamaica acquisition paragraph; data as of September 2026; reviewed by 4 November 2026",
+      "published_on": null,
+      "evidence_status": "Self-reported proposed housing",
+      "specific_evidence": "The operator labels 700 Jamaica workforce housing units as proposed and describes acquiring a parking garage for redevelopment. This supports a planned project stage as of September 2026; the page's breaking-ground heading does not establish construction or completed homes.",
+      "notes": "Same corporate source family as the dashboard. No project-specific affordability covenant, regulated unit count, construction milestone or occupancy evidence was established by the completed review."
+    },
+    {
+      "sheet": "TG-GOLD-A034",
+      "row": 14,
+      "title": "DCP PLUTO 26v2 Parcel Snapshot",
+      "citation": "PLUTO 26v2, released 24 August 2026; BBL 4101510039; ownername, unitsres and resarea fields",
+      "publisher": "NYC Department of City Planning via NYC Open Data",
+      "url": null,
+      "url_origin": null,
+      "locator": "PLUTO 26v2, released 24 August 2026; BBL 4101510039; ownername, unitsres and resarea fields",
+      "published_on": null,
+      "evidence_status": "Independent dated administrative snapshot",
+      "specific_evidence": "The August 2026 PLUTO parcel record names RWNYC Archer as owner and lists zero residential units and zero residential area. It corroborates the existing nonresidential asset at that snapshot, without establishing conditions on the November research cutoff date.",
+      "notes": "Independent administrative data, not a site inspection. Do not infer universal absence of approvals or later work, or treat 700 proposed units as delivered homes."
+    }
+  ],
+  "provenance": {
+    "workbook": "Golden Dataset (6).xlsx",
+    "sha256": "2da588b49b311957885ed7ff98bcd31c49e9d3ef8e99a761a3e9e5fcdb360099",
+    "identity": {
+      "sheet": "gold commitments",
+      "row": 76
+    },
+    "detail_sheet": "TG-GOLD-A034",
+    "detail_internal_id_cell": "B1",
+    "workbook_valid_flag": 1,
+    "workbook_split": "anchor_dev",
+    "workbook_evidence_status": "partially corroborated",
+    "workbook_fields": {
+      "gold_id": "TG-GOLD-A034",
+      "document_id": "GFLB-SEL-2025-12-01",
+      "page_section": "pdf p.25; Resorts World: Local Impact Siting",
+      "char_start": 60237.0,
+      "char_end": 60501.0,
+      "commitment_text": "Resorts World has offered a community benefits package consisting of an annual commitment, for the duration of the license term, of the lesser of 2 percent of incremental gross gaming revenue above 2025 levels, or $25 million per year for a workforce housing fund.",
+      "normalized_statement": "Resorts World committed annually, for the license term, the lesser of 2 percent of incremental GGR above 2025 levels or $25 million to a workforce housing fund.",
+      "obligation_type": "Contingent commitment",
+      "responsible_entity": "Genting New York LLC d/b/a Resorts World New York City",
+      "amount_value": "lesser of 2 percent of incremental gross gaming revenue above 2025 levels, or $25 million per year",
+      "term_periodicity": "annual; for the duration of the license term",
+      "geographic_scope": "unspecified",
+      "beneficiary_category": "housing (workforce housing)",
+      "beneficiary_named": "workforce housing fund (unnamed fund)",
+      "condition_contingency": "amount depends on incremental gross gaming revenue above 2025 levels (zero if none)",
+      "milestone": "investments to begin \"in the immediate term\" (undated)",
+      "evidence_status": "partially corroborated",
+      "confidence": "Medium",
+      "adjudication_note": "Firm 'annual commitment' but amount is revenue-contingent; competing label Contractual commitment. Commitment assumed a 30-year term vs 15-year license (see conflict row).",
+      "duplicate_of": "none",
+      "notes": "Formula transcribed, not computed. Board urges Commission and CAC officials to monitor implementation. | Web evidence 2026-10-14 (no public evidence located -> partially corroborated): First project under the RW-Cirrus initiative: 92-30 165th St, Jamaica (~700 units) acquired for $46.125M by Cirrus WFHA Funding 'in partnership with Resorts World' [S12, S13]. No source ties the purchase to the annual 2%/$25M fund, and RW's supplement frames it as '$750 million ... up to $25 million per year' [S05].",
+      "evaluation_split": "anchor_dev",
+      "manually annotated valid?": 1.0
+    },
+    "detail_research_cutoff": "2026-11-04",
+    "evaluation_use": "22-case annotated benchmark; development-exposed cases included",
+    "reference_preparation": "Locally curated factual hypotheses and delivery conditions from the cited Golden (6) cells; prior to research."
+  }
+}

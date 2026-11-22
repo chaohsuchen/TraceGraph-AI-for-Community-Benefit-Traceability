@@ -1,0 +1,129 @@
+{
+  "fingerprint": "afd66271010bc2b9b40e9deed3d7bdac30d19a142279397ee1985b26457607e2",
+  "origin": "new_tool_free_v4",
+  "passages": {
+    "p1": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+      "excerpt": "A key component of this commitment is our up to $10 million capital contribution towards the construction of a new NYPD substation for the 45th Precinct."
+    },
+    "p2": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+      "excerpt": "This was outlined in our Community Benefits Agreement, where we initially intended to fund up to $3 million dollars annually for purposes of staffing. Hearing the request from the CAC, we will amend our commitment to provide $5 million dollars annually for the purposes of staffing and support."
+    },
+    "p3": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf",
+      "excerpt": "Yes, we will host an NYPD substation within the property."
+    },
+    "p4": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf",
+      "excerpt": "Bally’s has agreed to dedicate $5 million annually for NYPD overtime or Paid Detail programs."
+    },
+    "p5": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf",
+      "excerpt": "Confirming that the $5 million annually is for all NYPD associated needs in conjunction with the NYPD substation we will house."
+    },
+    "p6": {
+      "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "excerpt": "The Board notes that Bally’s agreed to increase this amount from $3 million to $5 million during the Community Advisory Committee process."
+    },
+    "p7": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+      "excerpt": "Upon awarding of a license we will explore and define the appropriate methodology for providing the financial support for all Community Benefit Fund and associated commitments related to the above commitments."
+    },
+    "p8": {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "title": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "excerpt": "Updated records are being uploaded adjacent to (not replacing) existing redacted records on each project’s Application Materials page as they become available."
+    },
+    "p9": {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "title": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "excerpt": "As of May 5, 2026, the following Bally's records denoted with “REVISED REDACTIONS” suffixes have undergone the statutory review process, are considered final, and are posted below."
+    }
+  },
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 6.047000000020489,
+      "request_id": "req_63fc148a773d4a7bae91f5104fad1c88",
+      "usage": {
+        "input_tokens": 2472,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 463,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2935
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "decisions": [
+    {
+      "gold_id": "G1",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p1"
+      ],
+      "reason": "p1 states Bally’s committed an \"up to $10 million capital contribution\" toward constructing \"a new NYPD substation,\" matching a capital investment capped at $10 million for a new police substation."
+    },
+    {
+      "gold_id": "G2",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p1"
+      ],
+      "reason": "p1 identifies the substation as \"for the 45th Precinct,\" establishing the precinct named for the proposed substation."
+    },
+    {
+      "gold_id": "G3",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p2",
+        "p4",
+        "p5"
+      ],
+      "reason": "The passages establish a $5 million annual public-safety-related commitment, but they describe staffing/support generally or NYPD needs tied to the substation and do not expressly state the scope \"in the Bronx.\""
+    },
+    {
+      "gold_id": "G4",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p2",
+        "p6"
+      ],
+      "reason": "p2 says Bally’s \"initially intended to fund up to $3 million dollars annually\" and, after hearing the CAC, would amend this to \"$5 million dollars annually\"; p6 confirms the increase occurred during the Community Advisory Committee process."
+    },
+    {
+      "gold_id": "G5",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt states that an executed Bronx gaming facility license requires public progress reports on community benefit milestones."
+    },
+    {
+      "gold_id": "G6",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt states that an executed Bronx gaming facility license requires independent monitoring of community benefit milestones."
+    }
+  ]
+}

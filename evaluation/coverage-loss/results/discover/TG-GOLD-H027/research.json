@@ -1,0 +1,78 @@
+{
+  "case_id": "TG-GOLD-H027",
+  "reference_sha256": "3dc1ba35c9b72a0617d7ca556aafa9a01a4de3af354c08f1282fd1fbbdbe8166",
+  "query": "HRMP proposes onsite daycare and tuition reimbursement for employees.",
+  "model": "gpt-5.4",
+  "web_search_model": "gpt-5.4",
+  "started_at": "2026-11-22T09:40:26.320638+00:00",
+  "outcome": "PARTIAL_RESEARCH",
+  "message": "Research is incomplete; no commitment was saved.",
+  "graph": null,
+  "job_result": {
+    "gaps": [
+      "The cited excerpts describe workforce training programs that include employee access to resources such as tuition reimbursement, but they do not show implementation or actual employee receipt of the benefit.",
+      "No provided excerpt from Hard Rock Metropolitan Park or an official record mentions daycare, childcare, or onsite daycare.",
+      "No provided evidence shows creation or operation of onsite daycare for employees.",
+      "No provided passage mentions daycare, childcare, or onsite daycare for employees. The supplied evidence only documents a proposal that workforce training programs include opportunities for employee access to resources such as tuition reimbursement; it does not show that tuition reimbursement was implemented or delivered."
+    ],
+    "facts": [
+      {
+        "excerpt": "Hard Rock believes promoting from within benefits the company and the employees, and it strives to offer a stable and long-term career path for each employee. Thus, Hard Rock Metropolitan Park will assist employees with access to promotion opportunities and will establish transparent career paths with measurable criteria leading to increased responsibility and higher pay grades designed to allow and encourage employees to pursue career advancement within the company. The company workforce training programs also include opportunities for employee access to additional resources, such as tuition reimbursement, that will enable employees to acquire education or job training needed to advance their career paths through increased responsibility and paygrades.",
+        "source_url": "https://nycasinos.ny.gov/metropolitan-park-workforce-enhancement-job-opportunities",
+        "source_title": "https://nycasinos.ny.gov/metropolitan-park-workforce-enhancement-job-opportunities"
+      }
+    ],
+    "query": "HRMP proposes onsite daycare and tuition reimbursement for employees.",
+    "message": "Research is incomplete; no commitment was saved.",
+    "outcome": "PARTIAL_RESEARCH",
+    "suggestions": [
+      {
+        "kind": "WEB_LEAD",
+        "title": "https://nycasinos.ny.gov/metropolitan-park-workforce-enhancement-job-opportunities",
+        "excerpt": "Hard Rock believes promoting from within benefits the company and the employees, and it strives to offer a stable and long-term career path for each employee. Thus, Hard Rock Metropolitan Park will assist employees with access to promotion opportunities and will establish transparent career paths with measurable criteria leading to increased responsibility and higher pay grades designed to allow and encourage employees to pursue career advancement within the company. The company workforce training programs also include opportunities for employee access to additional resources, such as tuition reimbursement, that will enable employees to acquire education or job training needed to advance their career paths through increased responsibility and paygrades.",
+        "source_url": "https://nycasinos.ny.gov/metropolitan-park-workforce-enhancement-job-opportunities",
+        "description": "Hard Rock believes promoting from within benefits the company and the employees, and it strives to offer a stable and long-term career path for each employee. Thus, Hard Rock Metropolitan Park will assist employees with access to promotion opportunities and will establish transparent career paths with measurable criteria leading to increased responsibility and higher pay grades designed to allow and encourage employees to pursue career advancement within the company. The company workforce training programs also include opportunities for employee access to additional resources, such as tuition reimbursement, that will enable employees to acquire education or job training needed to advance their career paths through increased responsibility and paygrades.",
+        "source_title": "https://nycasinos.ny.gov/metropolitan-park-workforce-enhancement-job-opportunities"
+      },
+      {
+        "kind": "WEB_LEAD",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+        "excerpt": "",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+        "description": "Located source; no excerpt could be verified.",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+      },
+      {
+        "kind": "WEB_LEAD",
+        "title": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+        "excerpt": "",
+        "source_url": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+        "description": "Located source; no excerpt could be verified.",
+        "source_title": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf"
+      }
+    ],
+    "unmatched_records": [
+      {
+        "excerpt": "The Commission conservatively estimates to be complete with the review of all Applicants’ material by mid-Summer 2026.",
+        "source_url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+        "source_title": "https://nycasinos.ny.gov/metropolitan-park-application-materials"
+      },
+      {
+        "excerpt": "As of May 5, 2026, the following Hard Rock Metropolitan Park records denoted with “REVISED REDACTIONS” suffixes have undergone the statutory review process, are considered final, and are posted below.",
+        "source_url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+        "source_title": "https://nycasinos.ny.gov/metropolitan-park-application-materials"
+      },
+      {
+        "excerpt": "The company workforce training programs also include opportunities for employee access to additional resources, such as tuition reimbursement, that will enable employees to acquire education or job training needed to advance their career paths through increased responsibility and paygrades.",
+        "source_url": "https://nycasinos.ny.gov/metropolitan-park-workforce-enhancement-job-opportunities",
+        "source_title": "https://nycasinos.ny.gov/metropolitan-park-workforce-enhancement-job-opportunities"
+      },
+      {
+        "excerpt": "Hard Rock Metropolitan Park will assist employees with access to promotion opportunities and will establish transparent career paths with measurable criteria leading to increased responsibility and higher pay grades designed to allow and encourage employees to pursue career advancement within the company.",
+        "source_url": "https://nycasinos.ny.gov/metropolitan-park-workforce-enhancement-job-opportunities",
+        "source_title": "https://nycasinos.ny.gov/metropolitan-park-workforce-enhancement-job-opportunities"
+      }
+    ]
+  },
+  "finished_at": "2026-11-22T09:41:44.357322+00:00"
+}

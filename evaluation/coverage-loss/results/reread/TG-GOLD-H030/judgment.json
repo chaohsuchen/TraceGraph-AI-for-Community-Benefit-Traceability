@@ -1,0 +1,726 @@
+{
+  "input_sha256": "32491b22c8fa25c36a11add5af86c253e553c25ebef8a09ec0f108a91ad38ba3",
+  "judge_model": "gpt-5.4",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "judge_version": "tracegraph-nli-v4-owned-quotes",
+  "started_at": "2026-11-22T10:18:51.334836+00:00",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 18.625,
+      "request_id": "req_a423d9bf64034ddfba243eba9b123944",
+      "usage": {
+        "input_tokens": 2778,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 2143,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4921
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "evidence": {
+    "identity": {
+      "label": "UNRESOLVED",
+      "reason": "The returned findings concern HRMP and a 6% service-disabled-veteran goal, but none mention the question’s distinct '2 percent more realistic' component, so the exact same promise/object cannot be confirmed."
+    },
+    "findings": [
+      {
+        "finding_id": "partial:f1",
+        "claims": [
+          {
+            "claim": "HRMP aims for the minimum 6 percent utilization of service-disabled veterans.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "HRMP aims for the minimum 6 percent utilization of service-disabled veterans.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states HRMP's 6% aim for service-disabled veterans."
+              }
+            ],
+            "reason": "The cited excerpt verbatim states HRMP aims for 6% service-disabled-veteran utilization."
+          },
+          {
+            "claim": "HRMP notes that bringing current experienced employees from other states may impact reaching these workforce composition goals.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "HRMP notes that the Applicant may have to bring current experienced employees from other states to work at the facility, and this may impact reaching these workforce composition goals.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the possible use of out-of-state experienced employees may affect reaching the goals."
+              }
+            ],
+            "reason": "The excerpt expressly states this potential impact on reaching workforce composition goals."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f2",
+        "claims": [
+          {
+            "claim": "For MWBE participation in the construction of the project, HRMP established goals of 8 percent women and 30 - 63 percent minorities.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "For MWBE participation in the construction of the project, HRMP established goals of 8 percent women and 30 - 63 percent minorities",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states these MWBE construction participation goals."
+              }
+            ],
+            "reason": "The excerpt verbatim gives these construction MWBE percentage goals."
+          },
+          {
+            "claim": "For MWBE participation in the construction of the project, HRMP aims for 6 percent SDV.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "and aims for 6 percent SDV.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states a 6% SDV aim in this construction-participation context."
+              }
+            ],
+            "reason": "The excerpt expressly states a 6% SDV aim in the construction participation sentence."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f3",
+        "claims": [
+          {
+            "claim": "All Applicants are expected to track and report service-disabled veteran employment.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "All Applicants are expected to track and report service-disabled veteran employment",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the reporting expectation."
+              }
+            ],
+            "reason": "The excerpt verbatim states applicants are expected to track and report SDV employment."
+          },
+          {
+            "claim": "All Applicants are expected to meet the RFA-articulated 6 percent goal requirement.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "and meet the RFA-articulated 6 percent goal requirement.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the 6% goal expectation."
+              }
+            ],
+            "reason": "The excerpt expressly states applicants are expected to meet the RFA 6% goal requirement."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "partial:f1"
+        ],
+        "citation_ids": [
+          "partial:s1"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding states HRMP aims for 6% service-disabled veterans, but it does not establish the reference’s specific attribution to a Board report, Metropolitan Park, or the operational workforce scope.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "The claim matches the 6% SDV aspiration generally, but not the Board-report attribution or operational-workforce/Metropolitan Park qualifiers."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s1",
+            "quote": "HRMP aims for the minimum 6 percent utilization of service-disabled veterans.",
+            "label": "NEUTRAL",
+            "reason": "This establishes a 6% HRMP aim, but not that a Board reported it for Metropolitan Park's operational workforce."
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents the separate 2% more realistic forecast for the operational service-disabled-veteran share.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents the applicant's anticipated workforce breakdown with approximately 6% living with a disability.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents the applicant's anticipated workforce breakdown identifying approximately 2% veteran status.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G5",
+        "finding_ids": [
+          "partial:f1"
+        ],
+        "citation_ids": [
+          "partial:s1"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding supports a retained 6% aim, but it does not establish the March 2026 operational summary context or that the 2% realism clause was omitted.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "The claim gives a 6% aim only; it does not address omission of a 2% realism clause in a March 2026 operational summary."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s1",
+            "quote": "HRMP aims for the minimum 6 percent utilization of service-disabled veterans.",
+            "label": "NEUTRAL",
+            "reason": "This supports a 6% aim but not the specific summary document context or omission of the 2% clause."
+          }
+        ]
+      },
+      {
+        "gold_id": "G6",
+        "finding_ids": [
+          "partial:f3"
+        ],
+        "citation_ids": [
+          "partial:s3"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding addresses tracking and reporting service-disabled-veteran employment only, not the license requirement or the broader construction-and-operational workforce demographics scope.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f3",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "The claim mentions tracking and reporting SDV employment, but not an HRMP license requirement covering construction and operational workforce demographics."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s3",
+            "quote": "All Applicants are expected to track and report service-disabled veteran employment",
+            "label": "NEUTRAL",
+            "reason": "This states an expectation to report SDV employment, not a license requirement for construction and operational workforce demographics."
+          }
+        ]
+      },
+      {
+        "gold_id": "G7",
+        "finding_ids": [
+          "partial:f1"
+        ],
+        "citation_ids": [
+          "partial:s1"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding notes one possible reason goals may be impacted, but it does not state the regulatory review standard of good-faith efforts or allowance for reasonable deviations.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 1,
+            "label": "NEUTRAL",
+            "reason": "The claim concerns possible impact from bringing experienced workers, not the regulatory standard described in the reference fact."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s1",
+            "quote": "the Applicant may have to bring current experienced employees from other states to work at the facility, and this may impact reaching these workforce composition goals.",
+            "label": "NEUTRAL",
+            "reason": "This explains a practical challenge, not that review considers good-faith efforts and permits reasonable deviations."
+          }
+        ]
+      },
+      {
+        "gold_id": "G8",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents the applicant's reported 2% veteran identification at existing gaming locations in 2024.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G9",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents CPC's September 2026 Metropolitan Park employment information session.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G10",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents proposed community recruitment channels that included service-disabled veterans.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G11",
+        "finding_ids": [
+          "partial:f2"
+        ],
+        "citation_ids": [
+          "partial:s2"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding concerns construction participation goals, but it does not state that the construction participation metric uses FTE hours worked.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f2",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "The claim gives demographic percentage goals only, not the metric basis of FTE hours worked."
+          },
+          {
+            "finding_id": "partial:f2",
+            "claim_index": 1,
+            "label": "NEUTRAL",
+            "reason": "The claim gives a 6% SDV aim only, not the construction participation metric."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s2",
+            "quote": "For MWBE participation in the construction of the project, HRMP established goals of 8 percent women and 30 - 63 percent minorities and aims for 6 percent SDV.",
+            "label": "NEUTRAL",
+            "reason": "This excerpt states construction participation goals, not that the metric is FTE hours worked."
+          }
+        ]
+      },
+      {
+        "gold_id": "G12",
+        "finding_ids": [
+          "partial:f2"
+        ],
+        "citation_ids": [
+          "partial:s2"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding mentions a 6% SDV aim in a construction participation context, but it does not establish the separate supplier-utilization commitment for service-disabled-veteran-owned businesses.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f2",
+            "claim_index": 1,
+            "label": "NEUTRAL",
+            "reason": "The claim states a 6% SDV aim, but not the distinct supplier-utilization commitment for SDV-owned businesses."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s2",
+            "quote": "aims for 6 percent SDV.",
+            "label": "NEUTRAL",
+            "reason": "This shows a 6% SDV aim, but not that it is a separate supplier-utilization commitment for SDV-owned businesses."
+          }
+        ]
+      }
+    ]
+  },
+  "verdict_protocol": "two-stage-owned-citations-v4",
+  "judgment": {
+    "identity": {
+      "label": "UNRESOLVED",
+      "reason": "The returned findings concern HRMP and a 6% service-disabled-veteran goal, but none mention the question’s distinct '2 percent more realistic' component, so the exact same promise/object cannot be confirmed."
+    },
+    "findings": [
+      {
+        "finding_id": "partial:f1",
+        "claims": [
+          {
+            "claim": "HRMP aims for the minimum 6 percent utilization of service-disabled veterans.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "HRMP aims for the minimum 6 percent utilization of service-disabled veterans.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states HRMP's 6% aim for service-disabled veterans."
+              }
+            ],
+            "reason": "The cited excerpt verbatim states HRMP aims for 6% service-disabled-veteran utilization."
+          },
+          {
+            "claim": "HRMP notes that bringing current experienced employees from other states may impact reaching these workforce composition goals.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "HRMP notes that the Applicant may have to bring current experienced employees from other states to work at the facility, and this may impact reaching these workforce composition goals.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the possible use of out-of-state experienced employees may affect reaching the goals."
+              }
+            ],
+            "reason": "The excerpt expressly states this potential impact on reaching workforce composition goals."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f2",
+        "claims": [
+          {
+            "claim": "For MWBE participation in the construction of the project, HRMP established goals of 8 percent women and 30 - 63 percent minorities.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "For MWBE participation in the construction of the project, HRMP established goals of 8 percent women and 30 - 63 percent minorities",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states these MWBE construction participation goals."
+              }
+            ],
+            "reason": "The excerpt verbatim gives these construction MWBE percentage goals."
+          },
+          {
+            "claim": "For MWBE participation in the construction of the project, HRMP aims for 6 percent SDV.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "and aims for 6 percent SDV.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states a 6% SDV aim in this construction-participation context."
+              }
+            ],
+            "reason": "The excerpt expressly states a 6% SDV aim in the construction participation sentence."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f3",
+        "claims": [
+          {
+            "claim": "All Applicants are expected to track and report service-disabled veteran employment.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "All Applicants are expected to track and report service-disabled veteran employment",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the reporting expectation."
+              }
+            ],
+            "reason": "The excerpt verbatim states applicants are expected to track and report SDV employment."
+          },
+          {
+            "claim": "All Applicants are expected to meet the RFA-articulated 6 percent goal requirement.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "and meet the RFA-articulated 6 percent goal requirement.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the 6% goal expectation."
+              }
+            ],
+            "reason": "The excerpt expressly states applicants are expected to meet the RFA 6% goal requirement."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "partial:f1"
+        ],
+        "citation_ids": [
+          "partial:s1"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding states HRMP aims for 6% service-disabled veterans, but it does not establish the reference’s specific attribution to a Board report, Metropolitan Park, or the operational workforce scope.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "The claim matches the 6% SDV aspiration generally, but not the Board-report attribution or operational-workforce/Metropolitan Park qualifiers."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s1",
+            "quote": "HRMP aims for the minimum 6 percent utilization of service-disabled veterans.",
+            "label": "NEUTRAL",
+            "reason": "This establishes a 6% HRMP aim, but not that a Board reported it for Metropolitan Park's operational workforce."
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents the separate 2% more realistic forecast for the operational service-disabled-veteran share.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents the applicant's anticipated workforce breakdown with approximately 6% living with a disability.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents the applicant's anticipated workforce breakdown identifying approximately 2% veteran status.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G5",
+        "finding_ids": [
+          "partial:f1"
+        ],
+        "citation_ids": [
+          "partial:s1"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding supports a retained 6% aim, but it does not establish the March 2026 operational summary context or that the 2% realism clause was omitted.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "The claim gives a 6% aim only; it does not address omission of a 2% realism clause in a March 2026 operational summary."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s1",
+            "quote": "HRMP aims for the minimum 6 percent utilization of service-disabled veterans.",
+            "label": "NEUTRAL",
+            "reason": "This supports a 6% aim but not the specific summary document context or omission of the 2% clause."
+          }
+        ]
+      },
+      {
+        "gold_id": "G6",
+        "finding_ids": [
+          "partial:f3"
+        ],
+        "citation_ids": [
+          "partial:s3"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding addresses tracking and reporting service-disabled-veteran employment only, not the license requirement or the broader construction-and-operational workforce demographics scope.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f3",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "The claim mentions tracking and reporting SDV employment, but not an HRMP license requirement covering construction and operational workforce demographics."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s3",
+            "quote": "All Applicants are expected to track and report service-disabled veteran employment",
+            "label": "NEUTRAL",
+            "reason": "This states an expectation to report SDV employment, not a license requirement for construction and operational workforce demographics."
+          }
+        ]
+      },
+      {
+        "gold_id": "G7",
+        "finding_ids": [
+          "partial:f1"
+        ],
+        "citation_ids": [
+          "partial:s1"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding notes one possible reason goals may be impacted, but it does not state the regulatory review standard of good-faith efforts or allowance for reasonable deviations.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 1,
+            "label": "NEUTRAL",
+            "reason": "The claim concerns possible impact from bringing experienced workers, not the regulatory standard described in the reference fact."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s1",
+            "quote": "the Applicant may have to bring current experienced employees from other states to work at the facility, and this may impact reaching these workforce composition goals.",
+            "label": "NEUTRAL",
+            "reason": "This explains a practical challenge, not that review considers good-faith efforts and permits reasonable deviations."
+          }
+        ]
+      },
+      {
+        "gold_id": "G8",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents the applicant's reported 2% veteran identification at existing gaming locations in 2024.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G9",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents CPC's September 2026 Metropolitan Park employment information session.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G10",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents proposed community recruitment channels that included service-disabled veterans.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G11",
+        "finding_ids": [
+          "partial:f2"
+        ],
+        "citation_ids": [
+          "partial:s2"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding concerns construction participation goals, but it does not state that the construction participation metric uses FTE hours worked.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f2",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "The claim gives demographic percentage goals only, not the metric basis of FTE hours worked."
+          },
+          {
+            "finding_id": "partial:f2",
+            "claim_index": 1,
+            "label": "NEUTRAL",
+            "reason": "The claim gives a 6% SDV aim only, not the construction participation metric."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s2",
+            "quote": "For MWBE participation in the construction of the project, HRMP established goals of 8 percent women and 30 - 63 percent minorities and aims for 6 percent SDV.",
+            "label": "NEUTRAL",
+            "reason": "This excerpt states construction participation goals, not that the metric is FTE hours worked."
+          }
+        ]
+      },
+      {
+        "gold_id": "G12",
+        "finding_ids": [
+          "partial:f2"
+        ],
+        "citation_ids": [
+          "partial:s2"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding mentions a 6% SDV aim in a construction participation context, but it does not establish the separate supplier-utilization commitment for service-disabled-veteran-owned businesses.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f2",
+            "claim_index": 1,
+            "label": "NEUTRAL",
+            "reason": "The claim states a 6% SDV aim, but not the distinct supplier-utilization commitment for SDV-owned businesses."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s2",
+            "quote": "aims for 6 percent SDV.",
+            "label": "NEUTRAL",
+            "reason": "This shows a 6% SDV aim, but not that it is a separate supplier-utilization commitment for SDV-owned businesses."
+          }
+        ]
+      }
+    ],
+    "protocol": "owned-quotes-v1",
+    "verdict": null
+  },
+  "finished_at": "2026-11-22T10:19:10.195170+00:00"
+}

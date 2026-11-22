@@ -1,0 +1,120 @@
+{
+  "fingerprint": "b47fdf831803fe07ffacff85f7b1781025ea7ca3e8dfedbf072a5f497c00be4e",
+  "reversed_original_ids": [
+    "p13",
+    "p12",
+    "p11",
+    "p10",
+    "p9",
+    "p8",
+    "p7",
+    "p6",
+    "p5",
+    "p4",
+    "p3",
+    "p2",
+    "p1"
+  ],
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 7.468999999924563,
+      "request_id": "req_2f70a54bfc0c45f1987f64bc85892c16",
+      "usage": {
+        "input_tokens": 2732,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 670,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3402
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "decisions": [
+    {
+      "gold_id": "G1",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p5",
+        "p7",
+        "p10"
+      ],
+      "reason": "The passages say \"$25M Annually\" for the Workforce Housing Fund, but they do not establish the added qualifiers \"for the license term\" or \"the lesser of $25 million or 2% of incremental GGR above 2025 levels.\""
+    },
+    {
+      "gold_id": "G2",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage mentions Board-proposed alternatives, originally projected benefits, or anything beyond an awarded license term."
+    },
+    {
+      "gold_id": "G3",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage states that RWNYC's original license term is 15 years."
+    },
+    {
+      "gold_id": "G4",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage describes a Cirrus partnership agreement or defines annual commitments as calendar-year cash capital contributions."
+    },
+    {
+      "gold_id": "G6",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p1"
+      ],
+      "reason": "One passage reports the site was purchased \"for $46.1 million,\" but it does not establish official records, the exact $46.125 million deed amount, or the May 29, 2026 deed date."
+    },
+    {
+      "gold_id": "G7",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage mentions a $24 million mortgage tied to the Jamaica acquisition."
+    },
+    {
+      "gold_id": "G8",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "The passages discuss Resorts World and Cirrus purchasing the site, but none identifies the recorded buyer as RWNYC ARCHER AVE LLC."
+    },
+    {
+      "gold_id": "G9",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p1"
+      ],
+      "reason": "A passage gives the address as \"92-30 165th St.,\" which does not establish the specific recorded parcel identifiers Queens block 10151, lot 39, at 92-02 165 Street."
+    },
+    {
+      "gold_id": "G10",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p1",
+        "p2"
+      ],
+      "reason": "The passages link Resorts World, Cirrus, and workforce housing generally, but they do not establish trade reporting specifically linking \"Cirrus WFHA Funding\" and Resorts World to the Jamaica acquisition."
+    },
+    {
+      "gold_id": "G12",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage mentions an August 2026 PLUTO record or zero residential units on the Jamaica parcel."
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "fingerprint": "765604e7c03dfbb7a74d22f33bed16707acbeb01a75594236cd0770ec5a91636",
+  "reversed_original_ids": [
+    "p8",
+    "p7",
+    "p6",
+    "p5",
+    "p4",
+    "p3",
+    "p2",
+    "p1"
+  ],
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 4.125,
+      "request_id": "req_90bf67c3db6a400381fc45f64a0fccc8",
+      "usage": {
+        "input_tokens": 2290,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 333,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2623
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "decisions": [
+    {
+      "gold_id": "G5",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p1",
+        "p3",
+        "p7",
+        "p8"
+      ],
+      "reason": "The passages support workforce diversity targets of 10% women, 40% minorities, and 10% veterans for construction jobs, but do not state a separate 35% MWBE participation goal."
+    },
+    {
+      "gold_id": "G6",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p1",
+        "p3",
+        "p7",
+        "p8"
+      ],
+      "reason": "The evidence discusses workforce targets including 10% service-disabled/veteran workers, not a separate 5% spending goal with service-disabled-veteran-owned firms."
+    },
+    {
+      "gold_id": "G7",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt mentions a Bronx license requirement for public progress reports on workforce diversity or demographic data."
+    },
+    {
+      "gold_id": "G8",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt mentions a Bronx license requirement for independent monitoring of community benefit milestones."
+    }
+  ]
+}

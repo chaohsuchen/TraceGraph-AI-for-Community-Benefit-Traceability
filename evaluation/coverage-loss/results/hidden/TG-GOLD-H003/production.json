@@ -1,0 +1,87 @@
+{
+  "arm": "hidden",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 3.077999999979511,
+      "request_id": "req_004dd78976d040c3b46d93c45dc69d43",
+      "usage": {
+        "input_tokens": 1101,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 185,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 1286
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "documents": [],
+  "shortlist": [
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "excerpt": "Our goal is to include additional stops (1) within Ferry Point Park and (2) within our site or at its entrance, which would enhance transit access for our employees and visitors."
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+      "excerpt": "the proposed integrated facility would provide space for an MTA bus stop on-site, as well as a bus stop along the proposed reconstructed Ring Road in Ferry Point Park for Park users."
+    },
+    {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean",
+      "title": "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean",
+      "excerpt": "In collaboration with elected officials, community organizations, and local stakeholders, Bally’s has pledged approximately $765 million in net present value for an array of community benefits—in addition to the direct project scope and equity investment opportunities. This unprecedented commitment includes direct financial support for local schools, housing, mental health, public safety, transportation upgrades, parkland enhancements and community organizations."
+    },
+    {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean",
+      "title": "https://nycasinos.ny.gov/ballys-bronx-supplement-executive-summary-clean",
+      "excerpt": "Bally’s Bronx is also investing heavily in the area’s infrastructure and quality of life. We are allocating $100 million for parkland improvements, including new walking paths, playgrounds, and the revitalization of Ferry Point Park, as well as at least $75 million for transportation upgrades such as a new Lafayette Avenue overpass, widened roads, and enhanced public transit access to the Project Site and Ferry Point Park via two new MTA bus stops."
+    }
+  ],
+  "selection": {
+    "findings": [
+      {
+        "id": "W2",
+        "claim": "Bally’s says the proposed facility would include space for two specific bus stops tied to the project: one MTA stop on-site and one on the reconstructed Ring Road in Ferry Point Park for park users.",
+        "quote": "the proposed integrated facility would provide space for an MTA bus stop on-site, as well as a bus stop along the proposed reconstructed Ring Road in Ferry Point Park for Park users."
+      },
+      {
+        "id": "W1",
+        "claim": "Bally’s describes the additional transit stops for the project as a goal, specifically identifying one within Ferry Point Park and one within or at the entrance to the site for employees and visitors.",
+        "quote": "Our goal is to include additional stops (1) within Ferry Point Park and (2) within our site or at its entrance, which would enhance transit access for our employees and visitors."
+      }
+    ]
+  },
+  "additions": [
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+      "quote": "the proposed integrated facility would provide space for an MTA bus stop on-site, as well as a bus stop along the proposed reconstructed Ring Road in Ferry Point Park for Park users.",
+      "claim": "Bally’s says the proposed facility would include space for two specific bus stops tied to the project: one MTA stop on-site and one on the reconstructed Ring Road in Ferry Point Park for park users.",
+      "start": 0,
+      "end": 182
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "quote": "Our goal is to include additional stops (1) within Ferry Point Park and (2) within our site or at its entrance, which would enhance transit access for our employees and visitors.",
+      "claim": "Bally’s describes the additional transit stops for the project as a goal, specifically identifying one within Ferry Point Park and one within or at the entrance to the site for employees and visitors.",
+      "start": 0,
+      "end": 178
+    }
+  ]
+}

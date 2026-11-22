@@ -1,0 +1,18 @@
+{
+  "case": "TG-GOLD-H022",
+  "selected_distinct_urls": 1,
+  "review": {
+    "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf": {
+      "relationship": "different_host_independence_unestablished",
+      "identical_content_urls": [],
+      "old_passages_repeated": [],
+      "snapshot_consistent": true,
+      "original_status": {
+        "status": "readable",
+        "characters": 56308,
+        "sha256": "682c84bb71938c09af276954ad416419f436059ff4be91d0c91db1150d6520e3"
+      },
+      "same_host_or_filename_compared": []
+    }
+  }
+}

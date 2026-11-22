@@ -1,0 +1,505 @@
+[
+  {
+    "type": "research_start"
+  },
+  {
+    "phase": "search",
+    "event": "started"
+  },
+  {
+    "type": "search_budget",
+    "allocated": 4,
+    "remaining": 2,
+    "limit": 6
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 9.687999999965541,
+    "request_id": "req_46bfb030a61f460f8bff143fccf4f75e",
+    "usage": {
+      "input_tokens": 17712,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 4608
+      },
+      "output_tokens": 564,
+      "output_tokens_details": {
+        "reasoning_tokens": 196
+      },
+      "total_tokens": 18276
+    },
+    "search_enabled": true,
+    "web_search_ids": [
+      "ws_0319014c1245bb31016b02b8adbe0c87d2830dd9e96843707c",
+      "ws_0319014c1245bb31016b02b8afa7a087d291ecc6a0b25935b9",
+      "ws_0319014c1245bb31016b02b8b1026887d2a0810d20c78d7a4c"
+    ],
+    "stop_reason": "completed",
+    "web_search_statuses": [
+      "completed",
+      "completed",
+      "completed"
+    ]
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+    "status": "QUOTE_NOT_FOUND"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+    "status": "QUOTE_NOT_FOUND"
+  },
+  {
+    "phase": "search",
+    "event": "completed",
+    "source": "self_reported",
+    "stop_reason": "NO_ACTIONABLE_LEAD",
+    "stop_reason_status": "reported"
+  },
+  {
+    "type": "research_capture",
+    "brief": "[c1] We have already launched MWBE capacity-building efforts, including two contracting sessions at Citi Field, a $25 million lending program to expand capital access, and robust prequalification processes.\n[c2] On December 15, 2025, the New York State Gaming Commission having determined that Queens Future, LLC doing business as Hard Rock Metropolitan Park (herein “Hard Rock”), is suitable and not disqualified for licensure pursuant to New York Racing, Pari-Mutuel Wagering and Breeding Law\nSTOP_REASON=NO_ACTIONABLE_LEAD",
+    "citations": {
+      "c1": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+        "excerpt": "We have already launched MWBE capacity-building efforts, including two contracting sessions at Citi Field, a $25 million lending program to expand capital access, and robust prequalification processes.",
+        "context": "We have already launched MWBE capacity-building efforts, including two contracting sessions at Citi Field, a $25 million lending program to expand capital access, and robust prequalification processes."
+      },
+      "c2": {
+        "url": "https://gaming.ny.gov/system/files/documents/2025/12/hrmp-license-document-executed-12.22.25-c.pdf",
+        "title": "https://gaming.ny.gov/system/files/documents/2025/12/hrmp-license-document-executed-12.22.25-c.pdf",
+        "excerpt": "On December 15, 2025, the New York State Gaming Commission having determined that Queens Future, LLC doing business as Hard Rock Metropolitan Park (herein “Hard Rock”), is suitable and not disqualified for licensure pursuant to New York Racing, Pari-Mutuel Wagering and Breeding Law",
+        "context": "On December 15, 2025, the New York State Gaming Commission having determined that Queens Future, LLC doing business as Hard Rock Metropolitan Park (herein “Hard Rock”), is suitable and not disqualified for licensure pursuant to New York Racing, Pari-Mutuel Wagering and Breeding Law"
+      }
+    }
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 7.14000000001397,
+    "request_id": "req_7f8b5a21c8864547834d634c23741b13",
+    "usage": {
+      "input_tokens": 1975,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 541,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2516
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 2.0619999999180436,
+    "request_id": "req_102dbde5e4d347209c979299ca32bd0c",
+    "usage": {
+      "input_tokens": 773,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 115,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 888
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "research_scope_review",
+    "checks": [
+      {
+        "criterion_id": "1",
+        "explanation": "Excerpt c1 documents the term of the program: \"a $25 million lending program to expand capital access.\" It appears in a description of \"MWBE capacity-building efforts,\" which supports the MWBE scope. However, the excerpt does not state the criterion's term \"for MWBE firms\" with that same specificity, and c2 is unrelated to the lending-program terms.",
+        "original_citation_ids": [
+          "c1"
+        ],
+        "missing_original_terms": [
+          "for MWBE firms"
+        ]
+      }
+    ],
+    "missing_scope": [
+      "HRMP to provide a $25 million lending program to expand capital access for MWBE firms"
+    ]
+  },
+  {
+    "type": "source_recovery",
+    "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+    "status": "READ",
+    "text_sha256": "279959cdb860744d9cf1cc3b47a719682ff45e1521d38623820f203275146ac9",
+    "source_reads": 1,
+    "source_read_limit": 2
+  },
+  {
+    "type": "source_recovery",
+    "url": "https://gaming.ny.gov/system/files/documents/2025/12/hrmp-license-document-executed-12.22.25-c.pdf",
+    "status": "READ",
+    "text_sha256": "34d4846a1730c5cf2ea9c50ab407ffe728c9a8b9af6081c5bd194e0f90ed989a",
+    "source_reads": 2,
+    "source_read_limit": 2
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 3.64000000001397,
+    "request_id": "req_f211091c4e7a4195a2a93e6c438d9e45",
+    "usage": {
+      "input_tokens": 3105,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 402,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3507
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "research_recovery_capture",
+    "citations": {
+      "c1": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+        "excerpt": "We have already launched MWBE capacity-building efforts, including two contracting sessions at Citi Field, a $25 million lending program to expand capital access, and robust prequalification processes.",
+        "context": "We have already launched MWBE capacity-building efforts, including two contracting sessions at Citi Field, a $25 million lending program to expand capital access, and robust prequalification processes."
+      },
+      "c2": {
+        "url": "https://gaming.ny.gov/system/files/documents/2025/12/hrmp-license-document-executed-12.22.25-c.pdf",
+        "title": "https://gaming.ny.gov/system/files/documents/2025/12/hrmp-license-document-executed-12.22.25-c.pdf",
+        "excerpt": "On December 15, 2025, the New York State Gaming Commission having determined that Queens Future, LLC doing business as Hard Rock Metropolitan Park (herein “Hard Rock”), is suitable and not disqualified for licensure pursuant to New York Racing, Pari-Mutuel Wagering and Breeding Law",
+        "context": "On December 15, 2025, the New York State Gaming Commission having determined that Queens Future, LLC doing business as Hard Rock Metropolitan Park (herein “Hard Rock”), is suitable and not disqualified for licensure pursuant to New York Racing, Pari-Mutuel Wagering and Breeding Law"
+      },
+      "c3": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+        "excerpt": "As a majority-minority owned joint venture, HRMP takes our MWBE goals and commitments seriously and is fully aligned with our community partners goals. We anticipate utilizing centralized data tracking for MWBE utilization in all respects. Our equity partner McKissack will oversee maintenance of data tracking in order for HRMP to meet all of our commitments. We expressly pledged to Borough President Richards, as part of his review of our previous land use action, that we would provide quarterly reporting on local hiring and MWBE utilization, and hold quarterly meetings with all local elected officials to provide them updates on MWBE and local hiring goals.",
+        "context": "As a majority-minority owned joint venture, HRMP takes our MWBE goals and commitments seriously and is fully aligned with our community partners goals. We anticipate utilizing centralized data tracking for MWBE utilization in all respects. Our equity partner McKissack will oversee maintenance of data tracking in order for HRMP to meet all of our commitments. We expressly pledged to Borough President Richards, as part of his review of our previous land use action, that we would provide quarterly reporting on local hiring and MWBE utilization, and hold quarterly meetings with all local elected officials to provide them updates on MWBE and local hiring goals."
+      },
+      "c4": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+        "excerpt": "Yes. Hard Rock Metropolitan Park (“HRMP”) will proudly host a minimum of five MWBE vendor and procurement fairs at Citi Field over the next year, creating direct access for minority- and women-owned businesses to contracting opportunities.",
+        "context": "Yes. Hard Rock Metropolitan Park (“HRMP”) will proudly host a minimum of five MWBE vendor and procurement fairs at Citi Field over the next year, creating direct access for minority- and women-owned businesses to contracting opportunities."
+      },
+      "c5": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+        "excerpt": "We also provide technical assistance to help businesses gain MWBE certification and are backing this work with a $25 million MWBE lending program.",
+        "context": "We also provide technical assistance to help businesses gain MWBE certification and are backing this work with a $25 million MWBE lending program."
+      }
+    }
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 8.375,
+    "request_id": "req_9b2ef050685c4e19b2b72db577358db1",
+    "usage": {
+      "input_tokens": 2188,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 1792
+      },
+      "output_tokens": 676,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2864
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "search_budget",
+    "allocated": 2,
+    "remaining": 0,
+    "limit": 6
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 8.141000000061467,
+    "request_id": "req_c85d7cbce11a44d99b974ad502a3fc6a",
+    "usage": {
+      "input_tokens": 13189,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 4608
+      },
+      "output_tokens": 680,
+      "output_tokens_details": {
+        "reasoning_tokens": 134
+      },
+      "total_tokens": 13869
+    },
+    "search_enabled": true,
+    "web_search_ids": [
+      "ws_039ec8831bf32034016b02b8da0b2887d2af13cd44b5ea2bd6",
+      "ws_039ec8831bf32034016b02b8dc404487d287edfd38c60130d8"
+    ],
+    "stop_reason": "completed",
+    "web_search_statuses": [
+      "completed",
+      "completed"
+    ]
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+    "status": "QUOTE_NOT_FOUND"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+    "status": "QUOTE_NOT_FOUND"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "research_recovery_capture",
+    "citations": {
+      "c1": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+        "excerpt": "We have already launched MWBE capacity-building efforts, including two contracting sessions at Citi Field, a $25 million lending program to expand capital access, and robust prequalification processes.",
+        "context": "We have already launched MWBE capacity-building efforts, including two contracting sessions at Citi Field, a $25 million lending program to expand capital access, and robust prequalification processes."
+      },
+      "c2": {
+        "url": "https://gaming.ny.gov/system/files/documents/2025/12/hrmp-license-document-executed-12.22.25-c.pdf",
+        "title": "https://gaming.ny.gov/system/files/documents/2025/12/hrmp-license-document-executed-12.22.25-c.pdf",
+        "excerpt": "On December 15, 2025, the New York State Gaming Commission having determined that Queens Future, LLC doing business as Hard Rock Metropolitan Park (herein “Hard Rock”), is suitable and not disqualified for licensure pursuant to New York Racing, Pari-Mutuel Wagering and Breeding Law",
+        "context": "On December 15, 2025, the New York State Gaming Commission having determined that Queens Future, LLC doing business as Hard Rock Metropolitan Park (herein “Hard Rock”), is suitable and not disqualified for licensure pursuant to New York Racing, Pari-Mutuel Wagering and Breeding Law"
+      },
+      "c3": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+        "excerpt": "As a majority-minority owned joint venture, HRMP takes our MWBE goals and commitments seriously and is fully aligned with our community partners goals. We anticipate utilizing centralized data tracking for MWBE utilization in all respects. Our equity partner McKissack will oversee maintenance of data tracking in order for HRMP to meet all of our commitments. We expressly pledged to Borough President Richards, as part of his review of our previous land use action, that we would provide quarterly reporting on local hiring and MWBE utilization, and hold quarterly meetings with all local elected officials to provide them updates on MWBE and local hiring goals.",
+        "context": "As a majority-minority owned joint venture, HRMP takes our MWBE goals and commitments seriously and is fully aligned with our community partners goals. We anticipate utilizing centralized data tracking for MWBE utilization in all respects. Our equity partner McKissack will oversee maintenance of data tracking in order for HRMP to meet all of our commitments. We expressly pledged to Borough President Richards, as part of his review of our previous land use action, that we would provide quarterly reporting on local hiring and MWBE utilization, and hold quarterly meetings with all local elected officials to provide them updates on MWBE and local hiring goals."
+      },
+      "c4": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+        "excerpt": "Yes. Hard Rock Metropolitan Park (“HRMP”) will proudly host a minimum of five MWBE vendor and procurement fairs at Citi Field over the next year, creating direct access for minority- and women-owned businesses to contracting opportunities.",
+        "context": "Yes. Hard Rock Metropolitan Park (“HRMP”) will proudly host a minimum of five MWBE vendor and procurement fairs at Citi Field over the next year, creating direct access for minority- and women-owned businesses to contracting opportunities."
+      },
+      "c5": {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+        "excerpt": "We also provide technical assistance to help businesses gain MWBE certification and are backing this work with a $25 million MWBE lending program.",
+        "context": "We also provide technical assistance to help businesses gain MWBE certification and are backing this work with a $25 million MWBE lending program."
+      }
+    }
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 6.406000000075437,
+    "request_id": "req_85f2d618c7e841db97b3df33c73c4aae",
+    "usage": {
+      "input_tokens": 2430,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 1792
+      },
+      "output_tokens": 510,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2940
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "research_extracted",
+    "draft": null,
+    "evidence": [
+      {
+        "source": {
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+          "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "excerpt": "We have already launched MWBE capacity-building efforts, including two contracting sessions at Citi Field, a $25 million lending program to expand capital access, and robust prequalification processes.",
+        "status": "supports claimed implementation in part",
+        "explanation": "This excerpt states that HRMP had 'already launched' 'a $25 million lending program to expand capital access,' which is evidence of claimed implementation beyond a mere pledge. It does not identify recipients, lender partners, or completed lending.",
+        "summary": "HRMP said it had already launched a $25 million lending program to expand capital access as part of MWBE capacity-building efforts.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:41:20.317844+00:00"
+      },
+      {
+        "source": {
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+          "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "excerpt": "We also provide technical assistance to help businesses gain MWBE certification and are backing this work with a $25 million MWBE lending program.",
+        "status": "supports original promise in part",
+        "explanation": "This HRMP excerpt directly states that it is 'backing this work with a $25 million MWBE lending program,' which supports an original commitment/proposal for a program of that amount aimed at MWBE businesses.",
+        "summary": "HRMP said it was backing technical assistance efforts with a $25 million MWBE lending program.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:41:20.317844+00:00"
+      }
+    ],
+    "coverage": [
+      {
+        "kind": "PROMISE",
+        "criterion": "HRMP to back a $25 million MWBE lending program supporting minority- and women-owned businesses",
+        "promise_gap": "Available excerpts document the existence and amount of a $25 million MWBE lending program, but do not identify the lender structure, formal program terms, or whether 'small-business lender program' is the source's wording.",
+        "promise_citation_ids": [
+          "c5"
+        ],
+        "delivery_gap": "One excerpt says the lending program has 'already launched' and is intended to expand capital access, but the excerpts do not show disbursements, participating lenders, or which firms actually received support.",
+        "delivery_citation_ids": [
+          "c1"
+        ]
+      }
+    ],
+    "target_status": "IDENTIFIED",
+    "gaps": [
+      "Available excerpts document the existence and amount of a $25 million MWBE lending program, but do not identify the lender structure, formal program terms, or whether 'small-business lender program' is the source's wording.",
+      "One excerpt says the lending program has 'already launched' and is intended to expand capital access, but the excerpts do not show disbursements, participating lenders, or which firms actually received support."
+    ]
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 3.6709999999729916,
+    "request_id": "req_2292fba0427c496f8682c3acaa3efcb1",
+    "usage": {
+      "input_tokens": 1627,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 302,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1929
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "evidence_synthesis",
+    "phase": "initial",
+    "capture_count": 5,
+    "selection": {
+      "findings": [
+        {
+          "citation_id": "c5",
+          "summary": "HRMP stated, \"We also provide technical assistance to help businesses gain MWBE certification and are backing this work with a $25 million MWBE lending program.\"",
+          "status": "Promise documented",
+          "explanation": "This directly documents HRMP's stated commitment to a $25 million MWBE lending program and ties it to support for businesses seeking MWBE certification.",
+          "excerpt": "We also provide technical assistance to help businesses gain MWBE certification and are backing this work with a $25 million MWBE lending program.",
+          "locator": ""
+        },
+        {
+          "citation_id": "c1",
+          "summary": "HRMP stated, \"We have already launched MWBE capacity-building efforts, including two contracting sessions at Citi Field, a $25 million lending program to expand capital access, and robust prequalification processes.\"",
+          "status": "Implementation evidence",
+          "explanation": "This is evidence that HRMP represented the $25 million lending program as already launched and described its purpose as expanding capital access, though it does not identify lenders, recipients, or disbursements.",
+          "excerpt": "We have already launched MWBE capacity-building efforts, including two contracting sessions at Citi Field, a $25 million lending program to expand capital access, and robust prequalification processes.",
+          "locator": ""
+        }
+      ],
+      "gap": "The passages support a $25 million MWBE lending program and state it had already launched to expand capital access, but they do not show the formal program terms, whether \"small-business lender program\" is the source's wording, the lender structure, participating lenders, or any actual loans or beneficiaries.",
+      "followup_query": "site:nycasinos.ny.gov OR site:gaming.ny.gov HRMP \"$25 million\" MWBE lending program lender terms capital access"
+    },
+    "canonical": false
+  },
+  {
+    "type": "evidence_gap_search",
+    "recommended": true,
+    "performed": false,
+    "query": "site:nycasinos.ny.gov OR site:gaming.ny.gov HRMP \"$25 million\" MWBE lending program lender terms capital access",
+    "gap": "The passages support a $25 million MWBE lending program and state it had already launched to expand capital access, but they do not show the formal program terms, whether \"small-business lender program\" is the source's wording, the lender structure, participating lenders, or any actual loans or beneficiaries.",
+    "new_verified_excerpts": 0
+  }
+]

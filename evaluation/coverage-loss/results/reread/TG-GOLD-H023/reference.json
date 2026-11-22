@@ -1,0 +1,248 @@
+{
+  "case_id": "TG-GOLD-H023",
+  "query": "The Board believes HRMP is obligated to complete the Taste of Queens food hall.",
+  "facts": [
+    {
+      "id": "G1",
+      "text": "The Board expressed a belief that HRMP should complete Taste of Queens.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H023",
+          "row": 5
+        }
+      ]
+    },
+    {
+      "id": "G2",
+      "text": "The Board states the food hall was outside HRMP's commitments in its application.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H023",
+          "row": 5
+        }
+      ]
+    },
+    {
+      "id": "G3",
+      "text": "The Board's chart nevertheless includes $60 million for Taste of Queens buildout.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H023",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "G4",
+      "text": "HRMP described its role as delivering the parking podium for the food hall.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H023",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "G5",
+      "text": "A Mets-affiliated entity was expected to build the Taste of Queens food hall.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H023",
+          "row": 7
+        },
+        {
+          "sheet": "TG-GOLD-H023",
+          "row": 8
+        }
+      ]
+    },
+    {
+      "id": "G6",
+      "text": "The proposed food hall was roughly 30,000 square feet.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H023",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "G7",
+      "text": "The license incorporates application and CAC commitments generally without expressly naming the food hall.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H023",
+          "row": 9
+        }
+      ]
+    },
+    {
+      "id": "G8",
+      "text": "Press coverage attributed a June 1, 2030 target for food hall completion to Commission filings.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H023",
+          "row": 11
+        }
+      ]
+    }
+  ],
+  "conditions": [],
+  "delivery_applicable": false,
+  "reference_verdict": {
+    "status": "not applicable",
+    "reasoning": "The sentence is the Board's belief, not a finding, a recommended license condition or an HRMP undertaking. The license does not name the food hall; it binds only through the general CAC-commitments clause, and the Commission has not said whether that covers it. The builder is the Mets entity; HRMP's part is the podium. Delivery is scheduled for 2030, so if the CAC-clause reading is adopted the status would be 'not yet due'.",
+    "delivery_applicable": false,
+    "source_refs": [
+      {
+        "sheet": "TG-GOLD-H023",
+        "row": 17
+      },
+      {
+        "sheet": "TG-GOLD-H023",
+        "row": 18
+      }
+    ]
+  },
+  "sources": [
+    {
+      "sheet": "TG-GOLD-H023",
+      "row": 5,
+      "title": "GFLB Selection document (1 Dec 2025)",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "publisher": "NY Gaming Facility Location Board (regulator)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "published_on": null,
+      "evidence_status": "not applicable",
+      "specific_evidence": "pdf p.20: \"the Board strongly believes that HRMP has an obligation to complete the food hall.\" Also: the food hall \"was not part of HRMP's commitments in its application\" and is \"being built by the New York Mets\" on a ~$60M garage overbuild.",
+      "notes": "Quote verified verbatim against project source text (char 44895-44977)."
+    },
+    {
+      "sheet": "TG-GOLD-H023",
+      "row": 6,
+      "title": "GFLB Report and Findings (Mar 2026)",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "publisher": "NY Gaming Facility Location Board (regulator)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "published_on": null,
+      "evidence_status": "conflicting",
+      "specific_evidence": "Same sentence (printed pp.30-31). Chart 5 counts \"Taste of Queens Buildout $60\" million inside the $761M community benefits, although the text says the hall was not considered.",
+      "notes": "Internal tension: excluded from deliberations but counted in the benefits total."
+    },
+    {
+      "sheet": "TG-GOLD-H023",
+      "row": 7,
+      "title": "HRMP responses to CAC inquiries (29 Sep 2025)",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "publisher": "Hard Rock Metropolitan Park (obligor)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "published_on": null,
+      "evidence_status": "self-reported only",
+      "specific_evidence": "\"HRMP will unlock further development potential ... by delivering a parking podium on which Queens Baseball Company (i.e., the New York Mets) will then build the Taste of Queens.\" ~30,000 sq ft, ~20 local vendors.",
+      "notes": "HRMP's own undertaking is the podium; the Mets entity builds the hall."
+    },
+    {
+      "sheet": "TG-GOLD-H023",
+      "row": 8,
+      "title": "HRMP application: Local Impact Siting, Local Business (Jun 2025)",
+      "citation": "https://nycasinos.ny.gov/hard-rock-metropolitan-park-local-impact-siting-full-diversified-regional-tourism-local-business-0",
+      "publisher": "Hard Rock Metropolitan Park (obligor)",
+      "url": "https://nycasinos.ny.gov/hard-rock-metropolitan-park-local-impact-siting-full-diversified-regional-tourism-local-business-0",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/hard-rock-metropolitan-park-local-impact-siting-full-diversified-regional-tourism-local-business-0",
+      "published_on": null,
+      "evidence_status": "self-reported only",
+      "specific_evidence": "HRMP \"understands that an entity affiliated with the New York Mets expects to build Taste of Queens.\"",
+      "notes": "none"
+    },
+    {
+      "sheet": "TG-GOLD-H023",
+      "row": 9,
+      "title": "HRMP license award and Exhibit 1 License Conditions (19 Dec 2025; effective 15 Dec 2025)",
+      "citation": "https://gaming.ny.gov/hard-rock-metropolitan-park-commercial-casino-license",
+      "publisher": "NYS Gaming Commission (regulator)",
+      "url": "https://gaming.ny.gov/hard-rock-metropolitan-park-commercial-casino-license",
+      "url_origin": "workbook",
+      "locator": "https://gaming.ny.gov/hard-rock-metropolitan-park-commercial-casino-license",
+      "published_on": null,
+      "evidence_status": "not applicable",
+      "specific_evidence": "Does not name this item. Exhibit 1: \"Hard Rock shall materially perform consistent with the content of its Application and commitments expressed during the Community Advisory Committee evaluative process, as determined or otherwise approved by the Commission.\"",
+      "notes": "Food hall, overbuild and Mets not mentioned. CAC clause is the only plausible binding route."
+    },
+    {
+      "sheet": "TG-GOLD-H023",
+      "row": 10,
+      "title": "Gaming Commission public meeting transcript (15 Dec 2025)",
+      "citation": "https://gaming.ny.gov/system/files/documents/2025/12/transcript-12.15.2025.pdf",
+      "publisher": "NYS Gaming Commission (regulator)",
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/transcript-12.15.2025.pdf",
+      "url_origin": "workbook",
+      "locator": "https://gaming.ny.gov/system/files/documents/2025/12/transcript-12.15.2025.pdf",
+      "published_on": null,
+      "evidence_status": "no public evidence located",
+      "specific_evidence": "Food hall not discussed. Only stated condition: an independent monitor for at least 5 years.",
+      "notes": "none"
+    },
+    {
+      "sheet": "TG-GOLD-H023",
+      "row": 11,
+      "title": "Queens Daily Eagle, 'Metropolitan Park casino construction running months behind schedule' (15 May 2026)",
+      "citation": "https://queenseagle.com/all/2026/5/15/metropolitan-park-casino-construction-running-months-behind-schedule",
+      "publisher": "Queens Daily Eagle (independent press)",
+      "url": "https://queenseagle.com/all/2026/5/15/metropolitan-park-casino-construction-running-months-behind-schedule",
+      "url_origin": "workbook",
+      "locator": "https://queenseagle.com/all/2026/5/15/metropolitan-park-casino-construction-running-months-behind-schedule",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "Commission filings say \"the construction of the casino, a food hall, open space areas, and improvements to the Mets-Willets Point 7 train station will conclude by June 1, 2030\"; project ~5.5 months behind.",
+      "notes": "none"
+    }
+  ],
+  "provenance": {
+    "workbook": "Golden Dataset (6).xlsx",
+    "sha256": "2da588b49b311957885ed7ff98bcd31c49e9d3ef8e99a761a3e9e5fcdb360099",
+    "identity": {
+      "sheet": "gold commitments",
+      "row": 86
+    },
+    "detail_sheet": "TG-GOLD-H023",
+    "detail_internal_id_cell": "B1",
+    "workbook_valid_flag": 1,
+    "workbook_split": "heldout_provisional",
+    "workbook_evidence_status": "not applicable",
+    "workbook_fields": {
+      "gold_id": "TG-GOLD-H023",
+      "document_id": "GFLB-SEL-2025-12-01",
+      "page_section": "pdf p.20; Hard Rock Metropolitan Park: Local Impact Siting",
+      "char_start": 44895.0,
+      "char_end": 44977.0,
+      "commitment_text": "the Board strongly believes that HRMP has an obligation to complete the food hall.",
+      "normalized_statement": "The Board believes HRMP is obligated to complete the Taste of Queens food hall.",
+      "obligation_type": "Unresolved / ambiguous",
+      "responsible_entity": "Queens Future, LLC d/b/a Hard Rock Metropolitan Park",
+      "amount_value": "approximately $60 million overbuild (preceding sentence)",
+      "term_periodicity": "unspecified",
+      "geographic_scope": "Queens (Citi Field area)",
+      "beneficiary_category": "local businesses / community amenity",
+      "beneficiary_named": "Taste of Queens food hall (built by the New York Mets)",
+      "condition_contingency": "none stated",
+      "milestone": "none stated",
+      "evidence_status": "not applicable",
+      "confidence": "Low",
+      "adjudication_note": "Not part of the application; Board's belief rests on community presentations. Obligation source unresolved.",
+      "duplicate_of": "none",
+      "notes": "none",
+      "evaluation_split": "heldout_provisional",
+      "manually annotated valid?": 1.0
+    },
+    "detail_research_cutoff": null,
+    "evaluation_use": "22-case annotated benchmark; development-exposed cases included",
+    "reference_preparation": "Locally curated factual hypotheses and delivery conditions from the cited Golden (6) cells; prior to research."
+  }
+}

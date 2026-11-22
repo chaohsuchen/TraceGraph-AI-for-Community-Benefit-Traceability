@@ -1,0 +1,293 @@
+{
+  "case_id": "TG-GOLD-H011",
+  "query": "Bally's promised pedestrian/bicycle connections to Ferry Point Park and waterfront, expanded ferry shuttle service, and at least three new bus stops.",
+  "facts": [
+    {
+      "id": "G1",
+      "text": "Bally's promised direct pedestrian and bicycle connections among its Bronx facility, Ferry Point Park and the Ferry Point waterfront.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H011",
+          "row": 5
+        },
+        {
+          "sheet": "gold commitments",
+          "row": 25
+        }
+      ]
+    },
+    {
+      "id": "G2",
+      "text": "Bally's Bronx proposal calls for expansion of the existing ferry shuttle service.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H011",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H011",
+          "row": 6
+        },
+        {
+          "sheet": "gold commitments",
+          "row": 25
+        }
+      ]
+    },
+    {
+      "id": "G3",
+      "text": "Bally's promised to fund at least one additional bus stop in Ferry Point Park.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H011",
+          "row": 5
+        },
+        {
+          "sheet": "gold commitments",
+          "row": 25
+        }
+      ]
+    },
+    {
+      "id": "G4",
+      "text": "Bally's promised to fund two new bus stops at the Bronx facility.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H011",
+          "row": 5
+        },
+        {
+          "sheet": "gold commitments",
+          "row": 25
+        }
+      ]
+    },
+    {
+      "id": "G5",
+      "text": "Bally's Bronx traffic submission describes coordination with the MTA.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H011",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "G6",
+      "text": "Bally's Bronx traffic submission documents a community shuttle launched in 2023.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H011",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "G7",
+      "text": "The City's Ferry Point environmental review docket lists a final environmental impact statement for Bally's project.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H011",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "G8",
+      "text": "NYC Ferry lists Ferry Point Park shuttle service with a schedule dating to October 2022.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H011",
+          "row": 8
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "K1",
+      "text": "Bally's delivered direct pedestrian connections linking the Bronx facility, Ferry Point Park and the Ferry Point waterfront.",
+      "source_refs": [
+        {
+          "sheet": "gold commitments",
+          "row": 25
+        },
+        {
+          "sheet": "TG-GOLD-H011",
+          "row": 18
+        }
+      ]
+    },
+    {
+      "id": "K2",
+      "text": "Bally's delivered direct bicycle connections linking the Bronx facility, Ferry Point Park and the Ferry Point waterfront.",
+      "source_refs": [
+        {
+          "sheet": "gold commitments",
+          "row": 25
+        },
+        {
+          "sheet": "TG-GOLD-H011",
+          "row": 18
+        }
+      ]
+    },
+    {
+      "id": "K3",
+      "text": "Bally's project expanded the ferry shuttle service beyond its existing level in practice.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H011",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H011",
+          "row": 18
+        }
+      ]
+    },
+    {
+      "id": "K4",
+      "text": "Bally's provided funding for at least one additional bus stop in Ferry Point Park.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H011",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H011",
+          "row": 18
+        }
+      ]
+    },
+    {
+      "id": "K5",
+      "text": "Bally's provided funding for two additional bus stops at the Bronx facility.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H011",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H011",
+          "row": 18
+        }
+      ]
+    }
+  ],
+  "delivery_applicable": true,
+  "reference_verdict": {
+    "status": "Commitment confirmed. Delivery unverified.",
+    "reasoning": "Use City acceptance or as-built records for the links, before-and-after service schedules for the shuttle, and Bally’s payment or agency records for the bus stops at the promised locations.",
+    "delivery_applicable": true,
+    "source_refs": [
+      {
+        "sheet": "TG-GOLD-H011",
+        "row": 17
+      },
+      {
+        "sheet": "TG-GOLD-H011",
+        "row": 18
+      }
+    ]
+  },
+  "sources": [
+    {
+      "sheet": "TG-GOLD-H011",
+      "row": 5,
+      "title": "GFLB Selection Report",
+      "citation": "Dec. 1, 2025, PDF p. 14",
+      "publisher": "Gaming Facility Location Board",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf#page=14",
+      "url_origin": "unchanged pilot source cross-reference",
+      "locator": "PDF p. 14",
+      "published_on": "2025-12-01",
+      "evidence_status": "Commitment documented",
+      "specific_evidence": "Specifies links among the facility, park and waterfront, shuttle expansion, and funding for at least one additional park bus stop and two at the facility.",
+      "notes": "H011 adds location detail to H003."
+    },
+    {
+      "sheet": "TG-GOLD-H011",
+      "row": 6,
+      "title": "Bally’s Bronx Application, Traffic",
+      "citation": "Traffic submission, PDF p. 6",
+      "publisher": "Bally’s Corporation",
+      "url": "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-sustainable-development-principals-traffic#page=6",
+      "url_origin": "unchanged pilot source cross-reference",
+      "locator": "Traffic submission, PDF p. 6",
+      "published_on": null,
+      "evidence_status": "Plan and baseline documented",
+      "specific_evidence": "Describes an enhanced ferry-terminal shuttle and MTA coordination. It separately documents a community shuttle launched in 2023.",
+      "notes": "Existing community service provides context for later comparisons."
+    },
+    {
+      "sheet": "TG-GOLD-H011",
+      "row": 7,
+      "title": "Bally’s Ferry Point Environmental Review",
+      "citation": "CEQR project 24DME011X",
+      "publisher": "NYC Mayor’s Office of Environmental Coordination",
+      "url": "https://a002-ceqraccess.nyc.gov/ceqr/Details?data=MjRETUUwMTFY0&signature=1c7557f385641122298923258ffa78cd2f1ddc67",
+      "url_origin": "unchanged pilot source cross-reference",
+      "locator": "CEQR project 24DME011X",
+      "published_on": null,
+      "evidence_status": "Environmental review",
+      "specific_evidence": "Lists the final environmental impact statement and later findings.",
+      "notes": "Useful for tracing approved designs and mitigation."
+    },
+    {
+      "sheet": "TG-GOLD-H011",
+      "row": 8,
+      "title": "NYC Ferry Rockaway–Soundview Route",
+      "citation": "Route and schedule",
+      "publisher": "NYC Ferry",
+      "url": "https://www.ferry.nyc/routes-and-schedules/rockaway-soundview/",
+      "url_origin": "unchanged pilot source cross-reference",
+      "locator": "Route and schedule",
+      "published_on": null,
+      "evidence_status": "Existing service baseline",
+      "specific_evidence": "Lists Ferry Point Park shuttle service, including a schedule dating to October 2022.",
+      "notes": "Look for a dated Bally’s project service change."
+    }
+  ],
+  "provenance": {
+    "workbook": "Golden Dataset (6).xlsx",
+    "sha256": "2da588b49b311957885ed7ff98bcd31c49e9d3ef8e99a761a3e9e5fcdb360099",
+    "identity": {
+      "sheet": "gold commitments",
+      "row": 25
+    },
+    "detail_sheet": "TG-GOLD-H011",
+    "detail_internal_id_cell": "B1",
+    "workbook_valid_flag": 1,
+    "workbook_split": "heldout_provisional",
+    "workbook_evidence_status": "not yet due",
+    "workbook_fields": {
+      "gold_id": "TG-GOLD-H011",
+      "document_id": "GFLB-SEL-2025-12-01",
+      "page_section": "pdf p.14; Bally’s Bronx: Workforce Enhancement",
+      "char_start": 32038.0,
+      "char_end": 32336.0,
+      "commitment_text": "The Board also relied upon Bally’s promises to deliver direct pedestrian and bicycle connections between the facility, Ferry Point Park, and the Ferry Point waterfront; expand the existing ferry shuttle service; and fund at least one additional bus stop in Ferry Point Park and two at the facility.",
+      "normalized_statement": "Bally's promised pedestrian/bicycle connections to Ferry Point Park and waterfront, expanded ferry shuttle service, and at least three new bus stops.",
+      "obligation_type": "Contractual commitment",
+      "responsible_entity": "Bally’s Corporation",
+      "amount_value": "at least one additional bus stop in Ferry Point Park and two at the facility",
+      "term_periodicity": "unspecified",
+      "geographic_scope": "Bronx (Ferry Point)",
+      "beneficiary_category": "transportation; open space",
+      "beneficiary_named": "Ferry Point Park",
+      "condition_contingency": "none stated",
+      "milestone": "none stated",
+      "evidence_status": "not yet due",
+      "confidence": "High",
+      "adjudication_note": "none",
+      "duplicate_of": "TG-GOLD-H003",
+      "notes": "duplicate/restatement with more specific deliverables.",
+      "evaluation_split": "heldout_provisional",
+      "manually annotated valid?": 1.0
+    },
+    "detail_research_cutoff": null,
+    "evaluation_use": "22-case annotated benchmark; development-exposed cases included",
+    "reference_preparation": "Previously frozen fact and condition wording; A1:F18 and the master query verified against Golden (6)."
+  }
+}

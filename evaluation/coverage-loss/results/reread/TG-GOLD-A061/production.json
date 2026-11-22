@@ -1,0 +1,233 @@
+{
+  "arm": "reread",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 4.092999999993481,
+      "request_id": "req_dda11e7c29b24e82966abdd7e093686c",
+      "usage": {
+        "input_tokens": 3270,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 304,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3574
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "documents": [
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "status": "readable",
+      "characters": 10136,
+      "sha256": "a544429d40ed7014ef5eebdea444bac752b4e10a69e568a1e446b4b584816e9a"
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2026/02/minutes-15-december-2025-final.pdf",
+      "status": "readable",
+      "characters": 9464,
+      "sha256": "ec1d2c2edeb12563493f096185336c1df4456e927c6b6a1f4b816952c3966cd4"
+    }
+  ],
+  "shortlist": [
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "excerpt": "2. Bond Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application, in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 ).",
+      "start": 5167,
+      "end": 5433
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "excerpt": "License Fee Resorts World New York City shall pay, on or before December 31, 2025, a $500,000,000 gaming facility license fee by electronic funds transfer in accordance with Racing, Pari-Mutuel Wagering and Breeding Law§ 1321-e(3) and 9 NYC RR § 601.1 (b ). 2.",
+      "start": 4909,
+      "end": 5169
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "excerpt": "5. Compliance with Agreements Resorts World New York City shall comply in all material respects with third-party agreements included and/or proposed within the Application.",
+      "start": 6571,
+      "end": 6743
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "excerpt": "Resorts World New York City shall post on its public website and submit to the Commission, for public dissemination without redaction, a community benefits progress report, including, without limitation, construction and operational workforce diversity and demographic data, at a frequency determined by the Commission. Each such report shall detail progress, set forth relevant budget and expenditure, and explain actual or anticipated delays in delivery of benefits proposed in the Application or Resorts World New York City's other commitments.",
+      "start": 5671,
+      "end": 6218
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "excerpt": "Resorts World New York City shall materially perform consistent with the content of its Application and commitments expressed during the Community Advisory Committee evaluative process, as determined or otherwise approved by the Commission. General Conditions 1.",
+      "start": 4646,
+      "end": 4908
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "excerpt": "Community Benefits Resorts World New York City shall establish milestones and budgets concerning the community benefits proposed in the Application and commitments expressed during the Community Advisory Committee evaluative process. Resorts World New York City shall post on its public website and submit to the Commission, for public dissemination without redaction, a community benefits progress report, including, without limitation, construction and operational workforce diversity and demographic data, at a frequency determined by the Commission.",
+      "start": 5437,
+      "end": 5990
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "excerpt": "To satisfy Resorts World New York City's obligation to accomplish the foregoing, Resorts World New York City shall contract promptly with and compensate appropriately an independent third-party CMT firm, proposed by Resorts World New York City and approved by the Commission, to monitor and report to the Commission, with notice to the board of directors of Resorts World New York City, as frequently as the Commission may request, on the ongoing compliance of Resorts World New York City with each of the elements of the Application and the regulatory obligations of Resorts World New York City, including, without limitation, the following topics, with the specifics and scope of the reporting",
+      "start": 8024,
+      "end": 8719
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "excerpt": "Amendment or modification of conditions Nothing shall prevent the Commission from amending or modifying the License Conditions upon a request by Resorts World New York City or upon the initiative of the Commission. Likewise, the Commission is not obligated to amend or modify the License Conditions based upon a request from Resorts World New York City seeking such a change.",
+      "start": 7054,
+      "end": 7429
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "excerpt": "License Award Effective Date: The License is awarded effective as of December 15, 2025. License Duration: 15 years from the Commission's issuance of an operation certificate to Resorts World New York City pursuant to Racing, Pari-Mutuel Wagering and Breeding Law § 1331, renewable thereafter for a period of 10 years.",
+      "start": 3378,
+      "end": 3695
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "excerpt": "Rowland: On December 15, 2025, the New York State Gaming Commission having determined that Genting New York LLC (herein \"Resorts World New York City\"), is suitable and not disqualified for licensure pursuant to New York Racing, Pari-Mutuel Wagering and Breeding Law (\"PML\") §§ 1321-g and 1321-h (incorporating§§ 1317 and 1318, respectively) and meets the minimum license thresholds set forth in PML § 1321-f (incorporating§ 1316) and Resorts World New York City having agreed to execute a monitoring agreement as set forth in the Commission's motion of December 15, 2025, has issued the enclosed Gaming Facility License Award.",
+      "start": 302,
+      "end": 928
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2026/02/minutes-15-december-2025-final.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2026/02/minutes-15-december-2025-final.pdf",
+      "excerpt": "Adopted 3 February 2026 1 Meeting of 15 December 2025 A meeting of the Commission was conducted in New York, New York. 1.",
+      "start": 0,
+      "end": 121
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2026/02/minutes-15-december-2025-final.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2026/02/minutes-15-december-2025-final.pdf",
+      "excerpt": "To find Genting New York, LLC doing business as Resorts World New York City suitable for gaming facility licensing per standards contained with sections 1317 and 1318 of the N.Y.S. Racing, Pari-Mutuel Wagering and Adopted 3 February 2026 5 Breeding Law, incorporated by sections 1321-g and 1321- h.",
+      "start": 6837,
+      "end": 7135
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2026/02/minutes-15-december-2025-final.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2026/02/minutes-15-december-2025-final.pdf",
+      "excerpt": "ON A MOTION BY: Commissioner Crotty APPROVED: 7-0 4. To grant a Gaming Facility License to Genting New York, LLC doing business as Resorts World New York City pursuant to section 1321-a of the N.Y.S.",
+      "start": 7869,
+      "end": 8068
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2026/02/minutes-15-december-2025-final.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2026/02/minutes-15-december-2025-final.pdf",
+      "excerpt": "5. New and Old Business There was no New or Old Business considered.",
+      "start": 9021,
+      "end": 9089
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2026/02/minutes-15-december-2025-final.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2026/02/minutes-15-december-2025-final.pdf",
+      "excerpt": "ON A MOTION BY: Commissioner Moschetti APPROVED: 7-0 2. To find the application, as amended, by submitted Genting New York, LLC doing business as Resorts World New York City as meeting the minimum licensing thresholds set forth in section 1316 of the N.Y.S.",
+      "start": 7136,
+      "end": 7393
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2026/02/minutes-15-december-2025-final.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2026/02/minutes-15-december-2025-final.pdf",
+      "excerpt": "Genting New York, LLC doing business as Resorts World New York City Following acknowledgement of receipt and consideration of the applicant’s response to the Gaming Facility Location Board’s Request for Applications to Develop and Operate a Gaming Facility in New York State, all application amendments, supplemental filings, and Continuing Duty to Update materials, a summary of the New York State Police Investigative Report regarding the applicant, its affiliated companies and principal management personnel, a memorandum identifying the statutory Minimum Licensing Threshold Requirements, and an Involved Agency State Environmental Quality Review Act Statement of Findings for Gaming Facility",
+      "start": 6054,
+      "end": 6751
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2026/02/minutes-15-december-2025-final.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2026/02/minutes-15-december-2025-final.pdf",
+      "excerpt": "2. Consideration of Minutes for the Meeting of 18 November 2025 The Commission considered previously circulated draft minutes of the meeting conducted on 18 November 2025.",
+      "start": 458,
+      "end": 629
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2026/02/minutes-15-december-2025-final.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2026/02/minutes-15-december-2025-final.pdf",
+      "excerpt": "He also suggested the Commission Adopted 3 February 2026 6 was likely to consider the employment of an engineering and environmental consultant to act in a Management Representative-like capacity, to provide an independent review of project progression. 5.",
+      "start": 8767,
+      "end": 9023
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2026/02/minutes-15-december-2025-final.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2026/02/minutes-15-december-2025-final.pdf",
+      "excerpt": "Bally’s Corporation, doing business as Bally’s Bronx Following acknowledgement of receipt and consideration of the applicant’s response to the Gaming Facility Location Board’s Request for Applications to Develop and Operate a Gaming Facility in New York State, all application amendments, supplemental filings, and Continuing Duty to Update materials, a summary of the New York State Police Investigative Report regarding the applicant, its affiliated companies and principal management personnel, a memorandum identifying the statutory Minimum Licensing Threshold Requirements, and an Involved Agency State Environmental Quality Review Act Statement of Findings for Gaming Facility License",
+      "start": 1516,
+      "end": 2206
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2026/02/minutes-15-december-2025-final.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2026/02/minutes-15-december-2025-final.pdf",
+      "excerpt": "Queens Future, LLC doing business as Hard Rock Metropolitan Park Following acknowledgement of receipt and consideration of the applicant’s response to the Gaming Facility Location Board’s Request for Applications to Develop and Operate a Gaming Facility in New York State, all application amendments, supplemental filings, and Continuing Duty to Update materials, a summary of the New York State Police Investigative Report regarding the applicant, its affiliated companies and principal management personnel, a memorandum identifying the statutory Minimum Licensing Threshold Requirements, and an Involved Agency State Environmental Quality Review Act Statement of Findings for Gaming Facility",
+      "start": 3759,
+      "end": 4453
+    }
+  ],
+  "selection": {
+    "findings": [
+      {
+        "id": "W1",
+        "claim": "The 5 percent cash-or-bond deposit condition for Resorts World New York City is expressly tied to Racing, Pari-Mutuel Wagering and Breeding Law § 1321-e(1).",
+        "quote": "Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application, in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 )."
+      },
+      {
+        "id": "W8",
+        "claim": "The Commission retained authority to amend or modify Resorts World New York City's license conditions, including on its own initiative or at the company's request, but was not required to grant a requested change.",
+        "quote": "Nothing shall prevent the Commission from amending or modifying the License Conditions upon a request by Resorts World New York City or upon the initiative of the Commission. Likewise, the Commission is not obligated to amend or modify the License Conditions based upon a request from Resorts World New York City seeking such a change."
+      },
+      {
+        "id": "W9",
+        "claim": "Resorts World New York City's license award became effective on December 15, 2025, shortly before the December 31, 2025 deadline for the 5 percent deposit condition.",
+        "quote": "License Award Effective Date: The License is awarded effective as of December 15, 2025."
+      }
+    ]
+  },
+  "additions": [
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "quote": "Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application, in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 ).",
+      "claim": "The 5 percent cash-or-bond deposit condition for Resorts World New York City is expressly tied to Racing, Pari-Mutuel Wagering and Breeding Law § 1321-e(1).",
+      "start": 5175,
+      "end": 5433
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "quote": "Nothing shall prevent the Commission from amending or modifying the License Conditions upon a request by Resorts World New York City or upon the initiative of the Commission. Likewise, the Commission is not obligated to amend or modify the License Conditions based upon a request from Resorts World New York City seeking such a change.",
+      "claim": "The Commission retained authority to amend or modify Resorts World New York City's license conditions, including on its own initiative or at the company's request, but was not required to grant a requested change.",
+      "start": 7094,
+      "end": 7429
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "quote": "License Award Effective Date: The License is awarded effective as of December 15, 2025.",
+      "claim": "Resorts World New York City's license award became effective on December 15, 2025, shortly before the December 31, 2025 deadline for the 5 percent deposit condition.",
+      "start": 3378,
+      "end": 3465
+    }
+  ]
+}

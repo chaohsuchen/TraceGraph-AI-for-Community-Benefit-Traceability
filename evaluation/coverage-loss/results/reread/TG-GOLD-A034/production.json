@@ -1,0 +1,20 @@
+{
+  "arm": "reread",
+  "calls": [],
+  "documents": [
+    {
+      "url": "https://nycasinos.ny.gov/resorts-world-new-york-city-local-impact-siting-mitigating-potential-impacts-communities-measures-0",
+      "status": "TimeoutError",
+      "characters": 0,
+      "sha256": null
+    },
+    {
+      "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "status": "TimeoutError",
+      "characters": 0,
+      "sha256": null
+    }
+  ],
+  "shortlist": [],
+  "additions": []
+}

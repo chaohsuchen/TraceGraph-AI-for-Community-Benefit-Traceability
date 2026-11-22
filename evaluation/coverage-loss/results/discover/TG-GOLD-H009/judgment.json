@@ -1,0 +1,793 @@
+{
+  "input_sha256": "58c6150fe4249131437d7abbbb4485fa42003ea3424dcb1e667100f4180d3c93",
+  "judge_model": "gpt-5.4",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "judge_version": "tracegraph-nli-v4-owned-quotes",
+  "started_at": "2026-11-22T10:24:49.327120+00:00",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 28.78200000000652,
+      "request_id": "req_57f2b0f7607849738648b9c0bf9c3b28",
+      "usage": {
+        "input_tokens": 3368,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 2987,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 6355
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 8.155999999959022,
+      "request_id": "req_95d37ba7357a432c8d8e557b1adca3c9",
+      "usage": {
+        "input_tokens": 6544,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 647,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 7191
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "evidence": {
+    "identity": {
+      "label": "MATCH",
+      "reason": "The returned commitment and question identify the same Bally’s promise: 70 percent of construction and facility jobs for Bronx residents."
+    },
+    "findings": [
+      {
+        "finding_id": "finding-a05b588e-d3f3-4def-b836-449d8632d0d1",
+        "claims": [
+          {
+            "claim": "Bally’s committed that 70 percent of construction and facility jobs would go to Bronx residents.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-2d477cbd-e590-4a71-b0a8-961a3bbcbd5d"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-2d477cbd-e590-4a71-b0a8-961a3bbcbd5d",
+                "quote": "Bally’s has committed to ensuring that 70 percent of construction and facility jobs go to Bronx residents",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states Bally’s commitment, the 70 percent figure, the job categories, and Bronx-resident beneficiaries."
+              }
+            ],
+            "reason": "The cited passage directly states the commitment with the same percentage, job scope, and beneficiaries."
+          },
+          {
+            "claim": "This commitment was documented in the New York casino siting board final report published in March 2026.",
+            "label": "NEUTRAL",
+            "citation_ids": [
+              "support-2d477cbd-e590-4a71-b0a8-961a3bbcbd5d"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-2d477cbd-e590-4a71-b0a8-961a3bbcbd5d",
+                "quote": "Bally’s has committed to ensuring that 70 percent of construction and facility jobs go to Bronx residents—a strong pledge that will require substantial and sustained effort from Bally’s and its contractors.",
+                "label": "NEUTRAL",
+                "reason": "The excerpt states the pledge but does not mention the report name or publication month."
+              }
+            ],
+            "reason": "The excerpt proves the pledge itself but not that it appeared in a March 2026 final report."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-51880e25-4bfa-4ab5-b3e4-8669efadeb36",
+        "claims": [
+          {
+            "claim": "In a September 2025 Bally’s response document, Bally’s stated it had committed to hiring at least 70%+ Bronx residents as a minimum target.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-da862965-063b-4e8d-8075-f85147d6c171"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-da862965-063b-4e8d-8075-f85147d6c171",
+                "quote": "we have committed to hiring at least 70%+ Bronx residents as a minimum target",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly says Bally’s committed to at least 70%+ Bronx residents as a minimum target."
+              }
+            ],
+            "reason": "The excerpt directly states a commitment to at least 70%+ Bronx residents as a minimum target."
+          },
+          {
+            "claim": "That passage did not limit the statement to construction and facility jobs.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-da862965-063b-4e8d-8075-f85147d6c171"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-da862965-063b-4e8d-8075-f85147d6c171",
+                "quote": "we have committed to hiring at least 70%+ Bronx residents as a minimum target.",
+                "label": "ENTAILMENT",
+                "reason": "The quoted sentence mentions Bronx-resident hiring generally and contains no construction-or-facility limitation."
+              }
+            ],
+            "reason": "The cited sentence is general and does not mention construction or facility jobs."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-af43e099-2ff9-4fb4-b927-d5f6a0a15a16",
+        "claims": [
+          {
+            "claim": "In a September 28, 2025 amendment, Bally’s said its minimum New York State resident hiring goal would be inclusive of its Bronx-based hiring targets.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-2802b308-aa23-4c66-9f64-9fb1b8f7f0d1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-2802b308-aa23-4c66-9f64-9fb1b8f7f0d1",
+                "quote": "Our minimum goal for residents of New York State will be inclusive of our targets for Bronx based hiring.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the New York State resident goal includes Bronx-based hiring targets."
+              }
+            ],
+            "reason": "The excerpt expressly says the New York State resident goal is inclusive of Bronx-based hiring targets."
+          },
+          {
+            "claim": "In that amendment, Bally’s said it anticipated a 70% minimum target goal.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-2802b308-aa23-4c66-9f64-9fb1b8f7f0d1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-2802b308-aa23-4c66-9f64-9fb1b8f7f0d1",
+                "quote": "We anticipate that our minimum target goal will be that 70% of",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt explicitly states Bally’s anticipated a 70% minimum target goal, though the object of '70% of' is truncated."
+              }
+            ],
+            "reason": "The excerpt expressly says Bally’s anticipated a 70% minimum target goal."
+          },
+          {
+            "claim": "This amendment reframed the Bronx target within a broader state-resident goal.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-2802b308-aa23-4c66-9f64-9fb1b8f7f0d1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-2802b308-aa23-4c66-9f64-9fb1b8f7f0d1",
+                "quote": "Our minimum goal for residents of New York State will be inclusive of our targets for Bronx based hiring. We anticipate that our minimum target goal will be that 70% of",
+                "label": "ENTAILMENT",
+                "reason": "The passage places Bronx-based hiring targets inside a broader New York State resident goal."
+              }
+            ],
+            "reason": "The excerpt presents Bronx-based hiring as part of a broader New York State resident goal."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-1",
+        "claims": [
+          {
+            "claim": "In Bally’s October 21, 2025 response to GFLB questions, the residency table listed a 75% borough target for construction FTEs and a 75% borough target for facility FTEs.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "FTE Residency Construction FTEs Facility FTEs Borough 75% 75%",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly gives 75% for borough residents for both construction and facility FTEs."
+              }
+            ],
+            "reason": "The excerpt explicitly lists 75% borough targets for both construction and facility FTEs."
+          },
+          {
+            "claim": "That table listed 75%, not 70%.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "Borough 75% 75%",
+                "label": "ENTAILMENT",
+                "reason": "The table shows 75% as the borough figure, which is not 70%."
+              }
+            ],
+            "reason": "The cited table shows 75% rather than 70%."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-2",
+        "claims": [
+          {
+            "claim": "Bally’s broadly defined “local” as located within Bronx Community Boards 9, 10, and 11.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-2-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-2-s",
+                "quote": "We broadly define “local” as being located within Community Boards 9, 10 and 11 within the Bronx",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly defines 'local' by those Bronx community boards."
+              }
+            ],
+            "reason": "The excerpt expressly defines 'local' as Community Boards 9, 10, and 11."
+          },
+          {
+            "claim": "Bally’s contemplated broader Bronx coverage under its CAC agreement.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-2-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-2-s",
+                "quote": "but it is contemplated to include the Bronx catchment area broadly and is intended to radiate out to the rest of the Bronx based upon our agreement with our CAC.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly says the contemplated scope extends broadly into the Bronx under the CAC agreement."
+              }
+            ],
+            "reason": "The excerpt states broader Bronx coverage was contemplated under the CAC agreement."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "finding-a05b588e-d3f3-4def-b836-449d8632d0d1"
+        ],
+        "citation_ids": [
+          "support-2d477cbd-e590-4a71-b0a8-961a3bbcbd5d"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "A finding states Bally’s committed that 70 percent of construction and facility jobs would go to Bronx residents, and its cited excerpt directly says so.",
+        "claim_links": [
+          {
+            "finding_id": "finding-a05b588e-d3f3-4def-b836-449d8632d0d1",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim matches the pledged 70% for construction and facility jobs to Bronx residents."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-2d477cbd-e590-4a71-b0a8-961a3bbcbd5d",
+            "quote": "Bally’s has committed to ensuring that 70 percent of construction and facility jobs go to Bronx residents",
+            "label": "ENTAILMENT",
+            "reason": "The excerpt directly records the pledge with the same percentage, job categories, and beneficiaries."
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [
+          "finding-a05b588e-d3f3-4def-b836-449d8632d0d1"
+        ],
+        "citation_ids": [
+          "support-2d477cbd-e590-4a71-b0a8-961a3bbcbd5d"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding conveys a commitment, but the attached excerpt calls it a 'committed' 'pledge' and does not establish the report described the figure specifically as a goal or that the report was March 2026.",
+        "claim_links": [
+          {
+            "finding_id": "finding-a05b588e-d3f3-4def-b836-449d8632d0d1",
+            "claim_index": 1,
+            "label": "NEUTRAL",
+            "reason": "The claim about report timing is unsupported by the excerpt, and the excerpt does not use 'goal'."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-2d477cbd-e590-4a71-b0a8-961a3bbcbd5d",
+            "quote": "Bally’s has committed to ensuring that 70 percent of construction and facility jobs go to Bronx residents—a strong pledge",
+            "label": "NEUTRAL",
+            "reason": "This proves a pledge, not that the report described it as a goal in March 2026."
+          }
+        ]
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [
+          "finding-51880e25-4bfa-4ab5-b3e4-8669efadeb36",
+          "finding-af43e099-2ff9-4fb4-b927-d5f6a0a15a16"
+        ],
+        "citation_ids": [
+          "support-da862965-063b-4e8d-8075-f85147d6c171",
+          "support-2802b308-aa23-4c66-9f64-9fb1b8f7f0d1"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The findings discuss Bronx-resident hiring commitments and goals, but the attached excerpts do not mention best-faith geographic hiring preferences.",
+        "claim_links": [
+          {
+            "finding_id": "finding-51880e25-4bfa-4ab5-b3e4-8669efadeb36",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "A minimum target is not the same as best-faith geographic preferences."
+          },
+          {
+            "finding_id": "finding-af43e099-2ff9-4fb4-b927-d5f6a0a15a16",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "Inclusive goals for New York State and Bronx hiring do not establish best-faith preferences."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-da862965-063b-4e8d-8075-f85147d6c171",
+            "quote": "we have committed to hiring at least 70%+ Bronx residents as a minimum target.",
+            "label": "NEUTRAL",
+            "reason": "This states a target, not best-faith geographic preferences."
+          },
+          {
+            "citation_id": "support-2802b308-aa23-4c66-9f64-9fb1b8f7f0d1",
+            "quote": "Our minimum goal for residents of New York State will be inclusive of our targets for Bronx based hiring.",
+            "label": "NEUTRAL",
+            "reason": "This discusses goals and inclusion, not best-faith hiring preferences."
+          }
+        ]
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents Bally’s agreement to share geographic hiring data for the Bronx project.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G5",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents a license requirement for public progress reports on community benefit milestones.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G6",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents a license requirement for independent monitoring of community benefit milestones.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G7",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents that the license reporting requirement includes workforce diversity and demographic data.",
+        "claim_links": [],
+        "quote_checks": []
+      }
+    ]
+  },
+  "verdict_protocol": "two-stage-owned-citations-v4",
+  "judgment": {
+    "identity": {
+      "label": "MATCH",
+      "reason": "The returned commitment and question identify the same Bally’s promise: 70 percent of construction and facility jobs for Bronx residents."
+    },
+    "findings": [
+      {
+        "finding_id": "finding-a05b588e-d3f3-4def-b836-449d8632d0d1",
+        "claims": [
+          {
+            "claim": "Bally’s committed that 70 percent of construction and facility jobs would go to Bronx residents.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-2d477cbd-e590-4a71-b0a8-961a3bbcbd5d"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-2d477cbd-e590-4a71-b0a8-961a3bbcbd5d",
+                "quote": "Bally’s has committed to ensuring that 70 percent of construction and facility jobs go to Bronx residents",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states Bally’s commitment, the 70 percent figure, the job categories, and Bronx-resident beneficiaries."
+              }
+            ],
+            "reason": "The cited passage directly states the commitment with the same percentage, job scope, and beneficiaries."
+          },
+          {
+            "claim": "This commitment was documented in the New York casino siting board final report published in March 2026.",
+            "label": "NEUTRAL",
+            "citation_ids": [
+              "support-2d477cbd-e590-4a71-b0a8-961a3bbcbd5d"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-2d477cbd-e590-4a71-b0a8-961a3bbcbd5d",
+                "quote": "Bally’s has committed to ensuring that 70 percent of construction and facility jobs go to Bronx residents—a strong pledge that will require substantial and sustained effort from Bally’s and its contractors.",
+                "label": "NEUTRAL",
+                "reason": "The excerpt states the pledge but does not mention the report name or publication month."
+              }
+            ],
+            "reason": "The excerpt proves the pledge itself but not that it appeared in a March 2026 final report."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-51880e25-4bfa-4ab5-b3e4-8669efadeb36",
+        "claims": [
+          {
+            "claim": "In a September 2025 Bally’s response document, Bally’s stated it had committed to hiring at least 70%+ Bronx residents as a minimum target.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-da862965-063b-4e8d-8075-f85147d6c171"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-da862965-063b-4e8d-8075-f85147d6c171",
+                "quote": "we have committed to hiring at least 70%+ Bronx residents as a minimum target",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly says Bally’s committed to at least 70%+ Bronx residents as a minimum target."
+              }
+            ],
+            "reason": "The excerpt directly states a commitment to at least 70%+ Bronx residents as a minimum target."
+          },
+          {
+            "claim": "That passage did not limit the statement to construction and facility jobs.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-da862965-063b-4e8d-8075-f85147d6c171"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-da862965-063b-4e8d-8075-f85147d6c171",
+                "quote": "we have committed to hiring at least 70%+ Bronx residents as a minimum target.",
+                "label": "ENTAILMENT",
+                "reason": "The quoted sentence mentions Bronx-resident hiring generally and contains no construction-or-facility limitation."
+              }
+            ],
+            "reason": "The cited sentence is general and does not mention construction or facility jobs."
+          }
+        ]
+      },
+      {
+        "finding_id": "finding-af43e099-2ff9-4fb4-b927-d5f6a0a15a16",
+        "claims": [
+          {
+            "claim": "In a September 28, 2025 amendment, Bally’s said its minimum New York State resident hiring goal would be inclusive of its Bronx-based hiring targets.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-2802b308-aa23-4c66-9f64-9fb1b8f7f0d1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-2802b308-aa23-4c66-9f64-9fb1b8f7f0d1",
+                "quote": "Our minimum goal for residents of New York State will be inclusive of our targets for Bronx based hiring.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly states the New York State resident goal includes Bronx-based hiring targets."
+              }
+            ],
+            "reason": "The excerpt expressly says the New York State resident goal is inclusive of Bronx-based hiring targets."
+          },
+          {
+            "claim": "In that amendment, Bally’s said it anticipated a 70% minimum target goal.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-2802b308-aa23-4c66-9f64-9fb1b8f7f0d1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-2802b308-aa23-4c66-9f64-9fb1b8f7f0d1",
+                "quote": "We anticipate that our minimum target goal will be that 70% of",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt explicitly states Bally’s anticipated a 70% minimum target goal, though the object of '70% of' is truncated."
+              }
+            ],
+            "reason": "The excerpt expressly says Bally’s anticipated a 70% minimum target goal."
+          },
+          {
+            "claim": "This amendment reframed the Bronx target within a broader state-resident goal.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "support-2802b308-aa23-4c66-9f64-9fb1b8f7f0d1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "support-2802b308-aa23-4c66-9f64-9fb1b8f7f0d1",
+                "quote": "Our minimum goal for residents of New York State will be inclusive of our targets for Bronx based hiring. We anticipate that our minimum target goal will be that 70% of",
+                "label": "ENTAILMENT",
+                "reason": "The passage places Bronx-based hiring targets inside a broader New York State resident goal."
+              }
+            ],
+            "reason": "The excerpt presents Bronx-based hiring as part of a broader New York State resident goal."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-1",
+        "claims": [
+          {
+            "claim": "In Bally’s October 21, 2025 response to GFLB questions, the residency table listed a 75% borough target for construction FTEs and a 75% borough target for facility FTEs.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "FTE Residency Construction FTEs Facility FTEs Borough 75% 75%",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly gives 75% for borough residents for both construction and facility FTEs."
+              }
+            ],
+            "reason": "The excerpt explicitly lists 75% borough targets for both construction and facility FTEs."
+          },
+          {
+            "claim": "That table listed 75%, not 70%.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-1-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-1-s",
+                "quote": "Borough 75% 75%",
+                "label": "ENTAILMENT",
+                "reason": "The table shows 75% as the borough figure, which is not 70%."
+              }
+            ],
+            "reason": "The cited table shows 75% rather than 70%."
+          }
+        ]
+      },
+      {
+        "finding_id": "source-reread-2",
+        "claims": [
+          {
+            "claim": "Bally’s broadly defined “local” as located within Bronx Community Boards 9, 10, and 11.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-2-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-2-s",
+                "quote": "We broadly define “local” as being located within Community Boards 9, 10 and 11 within the Bronx",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly defines 'local' by those Bronx community boards."
+              }
+            ],
+            "reason": "The excerpt expressly defines 'local' as Community Boards 9, 10, and 11."
+          },
+          {
+            "claim": "Bally’s contemplated broader Bronx coverage under its CAC agreement.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "source-reread-2-s"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "source-reread-2-s",
+                "quote": "but it is contemplated to include the Bronx catchment area broadly and is intended to radiate out to the rest of the Bronx based upon our agreement with our CAC.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt directly says the contemplated scope extends broadly into the Bronx under the CAC agreement."
+              }
+            ],
+            "reason": "The excerpt states broader Bronx coverage was contemplated under the CAC agreement."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "finding-a05b588e-d3f3-4def-b836-449d8632d0d1"
+        ],
+        "citation_ids": [
+          "support-2d477cbd-e590-4a71-b0a8-961a3bbcbd5d"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "A finding states Bally’s committed that 70 percent of construction and facility jobs would go to Bronx residents, and its cited excerpt directly says so.",
+        "claim_links": [
+          {
+            "finding_id": "finding-a05b588e-d3f3-4def-b836-449d8632d0d1",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim matches the pledged 70% for construction and facility jobs to Bronx residents."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-2d477cbd-e590-4a71-b0a8-961a3bbcbd5d",
+            "quote": "Bally’s has committed to ensuring that 70 percent of construction and facility jobs go to Bronx residents",
+            "label": "ENTAILMENT",
+            "reason": "The excerpt directly records the pledge with the same percentage, job categories, and beneficiaries."
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [
+          "finding-a05b588e-d3f3-4def-b836-449d8632d0d1"
+        ],
+        "citation_ids": [
+          "support-2d477cbd-e590-4a71-b0a8-961a3bbcbd5d"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The finding conveys a commitment, but the attached excerpt calls it a 'committed' 'pledge' and does not establish the report described the figure specifically as a goal or that the report was March 2026.",
+        "claim_links": [
+          {
+            "finding_id": "finding-a05b588e-d3f3-4def-b836-449d8632d0d1",
+            "claim_index": 1,
+            "label": "NEUTRAL",
+            "reason": "The claim about report timing is unsupported by the excerpt, and the excerpt does not use 'goal'."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-2d477cbd-e590-4a71-b0a8-961a3bbcbd5d",
+            "quote": "Bally’s has committed to ensuring that 70 percent of construction and facility jobs go to Bronx residents—a strong pledge",
+            "label": "NEUTRAL",
+            "reason": "This proves a pledge, not that the report described it as a goal in March 2026."
+          }
+        ]
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [
+          "finding-51880e25-4bfa-4ab5-b3e4-8669efadeb36",
+          "finding-af43e099-2ff9-4fb4-b927-d5f6a0a15a16"
+        ],
+        "citation_ids": [
+          "support-da862965-063b-4e8d-8075-f85147d6c171",
+          "support-2802b308-aa23-4c66-9f64-9fb1b8f7f0d1"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The findings discuss Bronx-resident hiring commitments and goals, but the attached excerpts do not mention best-faith geographic hiring preferences.",
+        "claim_links": [
+          {
+            "finding_id": "finding-51880e25-4bfa-4ab5-b3e4-8669efadeb36",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "A minimum target is not the same as best-faith geographic preferences."
+          },
+          {
+            "finding_id": "finding-af43e099-2ff9-4fb4-b927-d5f6a0a15a16",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "Inclusive goals for New York State and Bronx hiring do not establish best-faith preferences."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-da862965-063b-4e8d-8075-f85147d6c171",
+            "quote": "we have committed to hiring at least 70%+ Bronx residents as a minimum target.",
+            "label": "NEUTRAL",
+            "reason": "This states a target, not best-faith geographic preferences."
+          },
+          {
+            "citation_id": "support-2802b308-aa23-4c66-9f64-9fb1b8f7f0d1",
+            "quote": "Our minimum goal for residents of New York State will be inclusive of our targets for Bronx based hiring.",
+            "label": "NEUTRAL",
+            "reason": "This discusses goals and inclusion, not best-faith hiring preferences."
+          }
+        ]
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents Bally’s agreement to share geographic hiring data for the Bronx project.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G5",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents a license requirement for public progress reports on community benefit milestones.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G6",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents a license requirement for independent monitoring of community benefit milestones.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G7",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents that the license reporting requirement includes workforce diversity and demographic data.",
+        "claim_links": [],
+        "quote_checks": []
+      }
+    ],
+    "protocol": "owned-quotes-v1",
+    "verdict": {
+      "label": "JUSTIFIED",
+      "reason": "The final assessment correctly treats the record as proving only Bally’s pledge/targets and not actual delivered hiring outcomes meeting the 70% Bronx-resident threshold for construction and facility jobs; no supplied excerpt provides residency-verified performance, denominator, contractor coverage, or period/phase results.",
+      "conditions": [
+        {
+          "condition_id": "K1",
+          "label": "NEUTRAL",
+          "citation_ids": [
+            "support-2d477cbd-e590-4a71-b0a8-961a3bbcbd5d",
+            "support-da862965-063b-4e8d-8075-f85147d6c171",
+            "support-2802b308-aa23-4c66-9f64-9fb1b8f7f0d1",
+            "source-reread-1-s"
+          ],
+          "quote_checks": [
+            {
+              "citation_id": "support-2d477cbd-e590-4a71-b0a8-961a3bbcbd5d",
+              "quote": "Bally’s has committed to ensuring that 70 percent of construction and facility jobs go to Bronx residents—a strong pledge that will require substantial and sustained effort from Bally’s and its contractors.",
+              "label": "NEUTRAL",
+              "reason": "This establishes the pledge, not that actual hiring met it."
+            },
+            {
+              "citation_id": "support-da862965-063b-4e8d-8075-f85147d6c171",
+              "quote": "elsewhere throughout this process, we have committed to hiring at least 70%+ Bronx residents as a minimum target.",
+              "label": "NEUTRAL",
+              "reason": "This is a stated minimum target, not evidence of achieved hiring results for the covered jobs."
+            },
+            {
+              "citation_id": "support-2802b308-aa23-4c66-9f64-9fb1b8f7f0d1",
+              "quote": "Our minimum goal for residents of New York State will be inclusive of our targets for Bronx based hiring. We anticipate that our minimum target goal will be that 70% of",
+              "label": "NEUTRAL",
+              "reason": "This discusses an anticipated goal and is truncated; it does not show performance meeting the condition."
+            },
+            {
+              "citation_id": "source-reread-1-s",
+              "quote": "FTE Residency Construction FTEs Facility FTEs Borough 75% 75% Outside the Borough but within NY City 13% 13% Outside NY City, but within NY State 7% 7% Outside NY State 5% 5% Total 100% 100% 3. Considering the proximity of potential facilities and the available job market, please clarify if the above percentages are a commitment or a goal/target?",
+              "label": "NEUTRAL",
+              "reason": "This table gives prospective percentages/targets and even asks whether they are commitments or goals; it does not report actual residency-verified hiring outcomes."
+            }
+          ],
+          "reason": "The cited record shows commitments/goals (including a 70% pledge and a later 75% borough target table) but no evidence that actual construction and facility hiring, with the relevant denominator, contractor inclusion, period, and phase accounting, reached 70% Bronx residents."
+        }
+      ]
+    }
+  },
+  "finished_at": "2026-11-22T10:25:26.409231+00:00"
+}

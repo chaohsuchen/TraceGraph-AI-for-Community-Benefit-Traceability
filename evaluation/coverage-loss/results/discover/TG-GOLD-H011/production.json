@@ -1,0 +1,141 @@
+{
+  "arm": "discover",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 14.405999999959022,
+      "request_id": "req_486a24b62af0451da468b3951cf72d3f",
+      "usage": {
+        "input_tokens": 14113,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 4608
+        },
+        "output_tokens": 1224,
+        "output_tokens_details": {
+          "reasoning_tokens": 145
+        },
+        "total_tokens": 15337
+      },
+      "search_enabled": true,
+      "web_search_ids": [
+        "ws_075943b2dbfd22ba016b02c28a628887d2b1c7a9488afc34b3",
+        "ws_075943b2dbfd22ba016b02c28ce41487d2bb3b24253477ead9",
+        "ws_075943b2dbfd22ba016b02c28e31cc87d29f2896ed9ce10f51"
+      ],
+      "stop_reason": "completed",
+      "web_search_statuses": [
+        "completed",
+        "completed",
+        "searching"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "url": "https://ballysbronx.com/wp-content/uploads/2025/08/Ballys-CAC-Meeting-Materials-08-08-25-vFINAL4.pdf",
+      "status": "TimeoutError",
+      "characters": 0,
+      "sha256": null
+    },
+    {
+      "url": "https://bronxboropres.nyc.gov/Documents/Services/Planning%20and%20Development/ULURP/Ballys-Ferry-Point-Map-Amendment-Bronx-Borough-President-Gibson-Recommendation-4.21.25.pdf?t=202510141212260",
+      "status": "unreadable",
+      "characters": 0,
+      "sha256": null
+    },
+    {
+      "url": "https://www.nyc.gov/assets/oer/downloads/pdf/e-des_documents/E-824_24DME011X.pdf",
+      "status": "TimeoutError",
+      "characters": 0,
+      "sha256": null
+    }
+  ],
+  "search": {
+    "stop": "SUFFICIENT",
+    "proposals": [
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+        "quote": "Since September 2023 Bally’s has offered shuttle service with 10 stops, including to local schools, shopping areas and transit centers. We have also coordinated with NYC Ferry to support the potential for increased ferry service to the Ferry Point Park ferry landing."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+        "quote": "Further, the proposed integrated facility would provide space for an MTA bus stop on-site, as well as a bus stop along the proposed reconstructed Ring Road in Ferry Point Park for Park users."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "quote": "To the extent practicable, we are committed to providing direct pedestrian and bike connections between the gaming facility, Ferry Point Park, and the Ferry Point waterfront walking path."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "quote": "In addition to our shuttle service, we have initiated preliminary discussions with the MTA regarding the expansion of their bus service routes. Our goal is to include additional stops (1) within Ferry Point Park and (2) within our site or at its entrance, which would enhance transit access for our employees and visitors."
+      },
+      {
+        "url": "https://ballysbronx.com/wp-content/uploads/2025/08/Ballys-CAC-Meeting-Materials-08-08-25-vFINAL4.pdf",
+        "quote": "Transit Improvements\n- New Lafayette Avenue Overpass\n- Ferry Point Ring Road Rebuilt\n- Added MTA Bus Stops\n- Expanded Shuttle Services\n- Parking Accommodations at Bally’s"
+      },
+      {
+        "url": "https://ballysbronx.com/wp-content/uploads/2025/08/Ballys-CAC-Meeting-Materials-08-08-25-vFINAL4.pdf",
+        "quote": "Parkland Improvements\n▪ Improved Access, Parking & Facilities at Ferry Point Park\n▪ Pedestrian & Bicycle Safety Improvements\n▪ Assume Certain Maintenance Obligations from NYC Parks\n▪ Summer Concert Series"
+      },
+      {
+        "url": "https://ballysbronx.com/wp-content/uploads/2025/08/Ballys-CAC-Meeting-Materials-08-08-25-vFINAL4.pdf",
+        "quote": "Traffic & Transit Improvements\n▪ New Lafayette Ave Overpass\n▪ Ferry Point Ring Road Rebuilt\n▪ Added MTA Bus Stops\n▪ Expanded Shuttle Services\n▪ Parking Accommodations at Bally’s"
+      },
+      {
+        "url": "https://bronxboropres.nyc.gov/Documents/Services/Planning%20and%20Development/ULURP/Ballys-Ferry-Point-Map-Amendment-Bronx-Borough-President-Gibson-Recommendation-4.21.25.pdf?t=202510141212260",
+        "quote": "Shuttle service from between the #6 Middletown Road Subway station and the Bally’s Golf Course is currently provided by Bally’s."
+      },
+      {
+        "url": "https://bronxboropres.nyc.gov/Documents/Services/Planning%20and%20Development/ULURP/Ballys-Ferry-Point-Map-Amendment-Bronx-Borough-President-Gibson-Recommendation-4.21.25.pdf?t=202510141212260",
+        "quote": "Commutation via the East River is provided by ferry with stops at Ferry Point Park, Clason Point in The Bronx and in Manhattan at East 90th Street, East 34th Street, Stuyvesant Cove, and Pier 11."
+      },
+      {
+        "url": "https://bronxboropres.nyc.gov/Documents/Services/Planning%20and%20Development/ULURP/Ballys-Ferry-Point-Map-Amendment-Bronx-Borough-President-Gibson-Recommendation-4.21.25.pdf?t=202510141212260",
+        "quote": "Consultation with the MTA may also yield additional bus stops and direct bus service within Ferry Point Park."
+      },
+      {
+        "url": "https://www.nyc.gov/assets/oer/downloads/pdf/e-des_documents/E-824_24DME011X.pdf",
+        "quote": "In connection with the Proposed Facility, the uninterrupted circular roadway within Ferry Point Park (the “Park”) that connects the southbound and northbound Hutchinson River Expressway service roads (the “Ring Road”) would be widened and improved in coordination with the New York City Department of Transportation (NYCDOT)."
+      },
+      {
+        "url": "https://www.nyc.gov/assets/oer/downloads/pdf/e-des_documents/E-824_24DME011X.pdf",
+        "quote": "The Proposed Actions would introduce new noise-sensitive receptors to the Development Site, consisting of hotel rooms, public meeting facilities (event center and conference space), a replacement golf clubhouse, and pedestrian connections to Ferry Point Park."
+      }
+    ],
+    "located": {
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+      "https://bronxboropres.nyc.gov/Documents/Services/Planning%20and%20Development/ULURP/Ballys-Ferry-Point-Map-Amendment-Bronx-Borough-President-Gibson-Recommendation-4.21.25.pdf?t=202510141212260": "https://bronxboropres.nyc.gov/Documents/Services/Planning%20and%20Development/ULURP/Ballys-Ferry-Point-Map-Amendment-Bronx-Borough-President-Gibson-Recommendation-4.21.25.pdf?t=202510141212260",
+      "https://ballysbronx.com/wp-content/uploads/2025/08/Ballys-CAC-Meeting-Materials-08-08-25-vFINAL4.pdf": "https://ballysbronx.com/wp-content/uploads/2025/08/Ballys-CAC-Meeting-Materials-08-08-25-vFINAL4.pdf",
+      "https://www.nyc.gov/assets/oer/downloads/pdf/e-des_documents/E-824_24DME011X.pdf": "https://www.nyc.gov/assets/oer/downloads/pdf/e-des_documents/E-824_24DME011X.pdf",
+      "https://tollbit.gothamist.com/news/the-bronx-is-getting-a-new-casino-and-a-reimagined-ferry-point-park-too": "https://tollbit.gothamist.com/news/the-bronx-is-getting-a-new-casino-and-a-reimagined-ferry-point-park-too",
+      "https://www.yogonet.com/international/news/2025/09/23/115469-ballys-responds-to-cac-amendments-on-4-billion-bronx-casino-plan": "https://www.yogonet.com/international/news/2025/09/23/115469-ballys-responds-to-cac-amendments-on-4-billion-bronx-casino-plan",
+      "https://nygamingreview.com/news/bronx-board-reviews-ferry-point-redesign/": "https://nygamingreview.com/news/bronx-board-reviews-ferry-point-redesign/",
+      "https://bronx.news12.com/2025/03/20/exclusive-ballys-unveils-latest-renderings-of-proposed-casino-at-ferry-point-park/36aDhcR168NRWPIfbLvLtl": "https://bronx.news12.com/2025/03/20/exclusive-ballys-unveils-latest-renderings-of-proposed-casino-at-ferry-point-park/36aDhcR168NRWPIfbLvLtl",
+      "https://www.savethesound.org/about-us/projects/ballys-bronx-casino-in-ferry-point-park/": "https://www.savethesound.org/about-us/projects/ballys-bronx-casino-in-ferry-point-park/",
+      "https://www.bxtimes.com/plans-ballys-shuttle-unclear-fernandez/": "https://www.bxtimes.com/plans-ballys-shuttle-unclear-fernandez/",
+      "https://www.yogonet.com/international/news/2023/09/19/68831-bally-39s-seeking-to-boost-nyc-casino-bid-by-launching-free-shuttle-bus-service-to-ferry-point": "https://www.yogonet.com/international/news/2023/09/19/68831-bally-39s-seeking-to-boost-nyc-casino-bid-by-launching-free-shuttle-bus-service-to-ferry-point",
+      "https://ballysbronx.com/": "https://ballysbronx.com/",
+      "https://www.bxtimes.com/ballys-community-partner-bronx/": "https://www.bxtimes.com/ballys-community-partner-bronx/",
+      "https://www.bxtimes.com/draft-environmental-impact-statement-deis-ballys-bronx-project/": "https://www.bxtimes.com/draft-environmental-impact-statement-deis-ballys-bronx-project/",
+      "https://www.nysenate.gov/legislation/bills/2025/S7049/amendment/original": "https://www.nysenate.gov/legislation/bills/2025/S7049/amendment/original",
+      "https://www.youtube.com/watch?v=T0D8nRv5dUU": "https://www.youtube.com/watch?v=T0D8nRv5dUU",
+      "https://www.youtube.com/watch?v=sPuqjvUDL3w": "https://www.youtube.com/watch?v=sPuqjvUDL3w",
+      "https://apnews.com/article/af489ecc87ccaade7e0f01e7ef6c198d": "https://apnews.com/article/af489ecc87ccaade7e0f01e7ef6c198d",
+      "https://apnews.com/article/ec7b3c27324c2aa210ce43877f528231": "https://apnews.com/article/ec7b3c27324c2aa210ce43877f528231",
+      "https://apnews.com/article/252cc3bafd1b097adf7a8afd516f1859": "https://apnews.com/article/252cc3bafd1b097adf7a8afd516f1859",
+      "https://apnews.com/article/4ad140651214d5a412c8bf04a7dbbd40": "https://apnews.com/article/4ad140651214d5a412c8bf04a7dbbd40"
+    },
+    "requested_actions": 2
+  },
+  "shortlist": [],
+  "additions": []
+}

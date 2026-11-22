@@ -1,0 +1,233 @@
+{
+  "arm": "reread",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 3.780999999959022,
+      "request_id": "req_9881aa0e29234dd19e014b2047b65724",
+      "usage": {
+        "input_tokens": 3748,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 281,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4029
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "documents": [
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "status": "readable",
+      "characters": 92779,
+      "sha256": "5a1747a5c17b9cb580ed17fe93456dd627dee46822e162066f2c620c7065114a"
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "status": "readable",
+      "characters": 8280,
+      "sha256": "d58f398141d137855778184a3689f2cc36936ec8d8b4aa30139046ea8a690da4"
+    }
+  ],
+  "shortlist": [
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "excerpt": "That food hall was not part of HRMP’s commitments in its application for the casino license and therefore was not 30 considered in the Board’s deliberations. Because the Applicant repeatedly referred to the Taste of Queens as a core project element in its presentations to the community, however, the Board strongly believes that HRMP has an obligation to complete the food hall.",
+      "start": 64458,
+      "end": 64837
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "excerpt": "Because the Applicant repeatedly referred to the Taste of Queens as a core project element in its presentations to the community, however, the Board strongly believes that HRMP has an obligation to complete the food hall. Similarly, HRMP did not include in its application any commitments to fund the development of 450 fully affordable housing units in Corona that it discussed with the community as part of the benefits the project would provide.",
+      "start": 64616,
+      "end": 65064
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "excerpt": "Further, HRMP plans to construct an overbuild with a construction cost of approximately $60 million as part of one of the casino’s garages, to serve as the platform for a Taste of Queens food hall that is being built by the New York Mets. That food hall was not part of HRMP’s commitments in its application for the casino license and therefore was not 30 considered in the Board’s deliberations.",
+      "start": 64219,
+      "end": 64615
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "excerpt": "The Board views HRMP’s $25 million commitment to a small-business lender program - supporting 32 MWBE firms - and its partnership with McKissack & McKissack, expected to be part of the ownership group, as a strength.8 The Board believes HRMP must fully execute the “soft agreements” made with a wide range of community organizations and local partners, and is concerned - across all Applicants, including HRMP - about the feasibility of meeting construction workforce MWBE goals, given disparities between union labor demographics and the stated targets.",
+      "start": 69653,
+      "end": 70207
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "excerpt": "The Board consultants found HRMP’s renewable energy strategy well-rounded and adaptive, meeting and exceeding local requirements. Project Ongoing Total Item ($ in millions) Cost Cost Cost Park Space $299 $-- $299 Transit Infrastructure and Resiliency 348 -- 348 Taste of Queens Buildout 60 -- 60 Neighborhood Projects 41 -- 41 Community Impact Fund 13 150 163 Total $761 $150 $911 31 The Board remains concerned about traffic and parking.",
+      "start": 66739,
+      "end": 67177
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "excerpt": "Conclusion HRMP has proposed an ambitious entertainment destination that promises to bring many thousands of well-paying construction and permanent jobs to Queens. It has committed to working with the Queens community to recruit and train local residents to fill the majority of those jobs.",
+      "start": 70726,
+      "end": 71016
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "excerpt": "Chart 5: HRMP Community Benefit during their 20-year Term of License Workforce Enhancement HRMP estimates 3,420 average annual FTE and 17,100 total FTEs during construction, with projected average wages of $60.11 per hour, or $110.84 with benefits. Construction hiring is projected to be 58 percent Queens residents, 17 percent residents of the City’s other boroughs, 15 percent residents of other parts of the State, and 10 percent from outside the state.",
+      "start": 65690,
+      "end": 66146
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "excerpt": "Diversity Framework The Board appreciated HRMP’s goal of building an operational workforce that reflects the demographics of Queens: 51 percent women and 83 percent minorities. HRMP aims for the minimum 6 percent utilization of service-disabled veterans.",
+      "start": 68462,
+      "end": 68716
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "excerpt": "It has committed to working with the Queens community to recruit and train local residents to fill the majority of those jobs. The project will transform an area already rich in entertainment options into a more coherent and accessible destination for people wanting to attend sporting events, enjoy local food and beverage options, linger in an inviting outdoor park, and take in the events or gamble at the casino.",
+      "start": 70890,
+      "end": 71306
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "excerpt": "Proposed Gaming Facility Queens Future, LLC, doing business as Hard Rock Metropolitan Park (“HRMP”), proposes a single-phase, integrated casino resort and entertainment district in Queens, adjacent to Citi Field, with a total capital investment of $5.3 billion and a projected opening in June 2030.",
+      "start": 57353,
+      "end": 57651
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "excerpt": "Detailed design for the interior of the Taste of Queens is still underway. We currently anticipate that the market (“food hall”) will be located on the elevated first floor, directly accessible and visible from the MTA gateway plaza as well as the open space.",
+      "start": 5085,
+      "end": 5344
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "excerpt": "The Taste of Queens is one of the community-inspired signature elements of Metropolitan Park. Envisioned during our conversations with neighbor s, this community-driven space will include approximately 30,000-square-feet open to the public for a Queens-centric food hall and gathering space that will showcase Queens’ world-renow ned cuisines, provide affordable dining options, and create a year-round community hub with space for use by local community groups.",
+      "start": 4149,
+      "end": 4611
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "excerpt": "Page 3 of 5 As discussed in our Application (see EvalEconCaliber5.HardRock.RetailRecOther), HRMP will unlock further development potential within Metropolitan Park by delivering a parking podium on which Queens Baseball Company (i.e., the New York Mets) will then build the Taste of Queens. Detailed design for the interior of the Taste of Queens is still underway.",
+      "start": 4794,
+      "end": 5159
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "excerpt": "Please share the full plan for the “Taste of Queens” and include the number of anticipated street vendors to be included. The Taste of Queens is one of the community-inspired signature elements of Metropolitan Park.",
+      "start": 4027,
+      "end": 4242
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "excerpt": "Our workforce development strategy is rooted in outreach through nearly two dozen community partners, and so we see NYCHA-focused events as a natural extension of our local hiring preference. Queens residents, including NYCHA tenants, will have direct, prioritized access to the thousands of union jobs HRMP will create.",
+      "start": 3062,
+      "end": 3382
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "excerpt": "Our commitment is unequivocal: 100% of the Community Impact Fund will support non-profit organizations and community priorities that directly serve Corona, East Elmhurst, Flushing, and Jackson Heights – the neighborhoods closest to Metropolitan Park. Beginning in 2026, our seven- member advisory board will oversee all char itable giving from the Community Impact Fund and ensure resources are directed to local needs.",
+      "start": 813,
+      "end": 1232
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "excerpt": "Their plan is to deliver 479 units of 100% affordable housing in the heart of Corona. While HRMP is not the developer, we are a financial backer and community partner, and we are confident this project will advance rapidly once financing is finalized.",
+      "start": 7973,
+      "end": 8224
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "excerpt": "Beginning in 2026, our seven- member advisory board will oversee all char itable giving from the Community Impact Fund and ensure resources are directed to local needs. We will also provide regular public updates on allocations so the community sees how these dollars are being invested in the communities that will neighbor Metropolitan Park.",
+      "start": 1064,
+      "end": 1407
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "excerpt": "Our team continues to speak at Queens MWBE expos, and we view these fairs as a core part of our promise to create wealth-building opportunities for our neighbors. As community engagement is a core guiding principle on our project, we are eager to ensure direct access to contracting opportunities with our neighbors.",
+      "start": 2415,
+      "end": 2731
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "excerpt": "The market will accommodate approximately 20 local food vendors, and we plan to partner with local groups to ensure that includes a mix of operators coming from both brick-and-mortar and street vendor origins. We look forward to working with our community partners on further programmatic details in the years ahead before grand opening.",
+      "start": 5345,
+      "end": 5682
+    }
+  ],
+  "selection": {
+    "findings": [
+      {
+        "id": "W1",
+        "claim": "The Board states that the Taste of Queens food hall was not part of HRMP’s casino-license application commitments and therefore was not considered in the Board’s deliberations.",
+        "quote": "That food hall was not part of HRMP’s commitments in its application for the casino license and therefore was not 30 considered in the Board’s deliberations."
+      },
+      {
+        "id": "W3",
+        "claim": "The report says HRMP’s role on the Taste of Queens undertaking is to build an approximately $60 million overbuild platform as part of a casino garage, while the New York Mets are building the food hall itself.",
+        "quote": "Further, HRMP plans to construct an overbuild with a construction cost of approximately $60 million as part of one of the casino’s garages, to serve as the platform for a Taste of Queens food hall that is being built by the New York Mets."
+      },
+      {
+        "id": "W5",
+        "claim": "The Board’s cost table lists a $60 million Taste of Queens buildout with no ongoing cost attached.",
+        "quote": "Project Ongoing Total Item ($ in millions) Cost Cost Cost Park Space $299 $-- $299 Transit Infrastructure and Resiliency 348 -- 348 Taste of Queens Buildout 60 -- 60 Neighborhood Projects 41 -- 41 Community Impact Fund 13 150 163"
+      }
+    ]
+  },
+  "additions": [
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "quote": "That food hall was not part of HRMP’s commitments in its application for the casino license and therefore was not 30 considered in the Board’s deliberations.",
+      "claim": "The Board states that the Taste of Queens food hall was not part of HRMP’s casino-license application commitments and therefore was not considered in the Board’s deliberations.",
+      "start": 64458,
+      "end": 64615
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "quote": "Further, HRMP plans to construct an overbuild with a construction cost of approximately $60 million as part of one of the casino’s garages, to serve as the platform for a Taste of Queens food hall that is being built by the New York Mets.",
+      "claim": "The report says HRMP’s role on the Taste of Queens undertaking is to build an approximately $60 million overbuild platform as part of a casino garage, while the New York Mets are building the food hall itself.",
+      "start": 64219,
+      "end": 64457
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "quote": "Project Ongoing Total Item ($ in millions) Cost Cost Cost Park Space $299 $-- $299 Transit Infrastructure and Resiliency 348 -- 348 Taste of Queens Buildout 60 -- 60 Neighborhood Projects 41 -- 41 Community Impact Fund 13 150 163",
+      "claim": "The Board’s cost table lists a $60 million Taste of Queens buildout with no ongoing cost attached.",
+      "start": 66869,
+      "end": 67098
+    }
+  ]
+}

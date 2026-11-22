@@ -1,0 +1,191 @@
+{
+  "case_id": "TG-GOLD-H005",
+  "query": "Bally's anticipates about 75 percent of capital expenditures will benefit Bronx-based firms.",
+  "facts": [
+    {
+      "id": "G1",
+      "text": "Bally's projected that approximately 75% of the Bronx casino's capital expenditures would benefit Bronx-based firms.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H005",
+          "row": 5
+        }
+      ]
+    },
+    {
+      "id": "G2",
+      "text": "Excavation and foundation permits were filed for the Bronx project.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H005",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "G3",
+      "text": "Bally's obtained $400 million from a $560 million financing facility for preconstruction costs.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H005",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "G4",
+      "text": "The Board recommended that Bally's report at opening how much actual capital spending benefited Bronx-based firms.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H005",
+          "row": 9
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "K1",
+      "text": "Approximately 75% of actual Bronx casino capital spending benefited Bronx-based firms.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H005",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H005",
+          "row": 9
+        }
+      ]
+    }
+  ],
+  "delivery_applicable": true,
+  "reference_verdict": {
+    "status": "not yet due",
+    "reasoning": "§5 decision order: (1) a forecast is compared with actual outcomes, so not 'not applicable'; (2) the forecast concerns construction spending, and construction has not started (permits filed Jul 2026, pre-construction financing Oct 2026) → not yet due. The Board's recommended check is a final report at opening. No contractor awards or spend-by-location data found in web, Gale (31 Bally's/Bronx articles) or government records. Competing reading: no public evidence located, if pre-construction design and permitting spending counts as capital expenditure.",
+    "delivery_applicable": true,
+    "source_refs": [
+      {
+        "sheet": "TG-GOLD-H005",
+        "row": 18
+      },
+      {
+        "sheet": "TG-GOLD-H005",
+        "row": 19
+      }
+    ]
+  },
+  "sources": [
+    {
+      "sheet": "TG-GOLD-H005",
+      "row": 5,
+      "title": "GFLB selection document, Bally's Bronx: Economic Activity and Business Development",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf  (GFLB-SEL-2025-12-01) — PDF p.12 (printed p.11)",
+      "publisher": "Gaming Facility Location Board (Dec 1, 2025)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf  (GFLB-SEL-2025-12-01) — PDF p.12 (printed p.11)",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "Source of the forecast (~75% of capex to Bronx-based firms).",
+      "notes": "Forecast: compare with actual outcomes later; never 'not applicable' (guide §5)."
+    },
+    {
+      "sheet": "TG-GOLD-H005",
+      "row": 6,
+      "title": "Bally's Bronx casino files construction permits'",
+      "citation": "https://www.cityrealty.com/nyc/market-insight/features/future-nyc/ballys-bronx-casino-files-construction-permits-expansive-19-story-waterfront-complex/73084",
+      "publisher": "CityRealty (Jul 21, 2026)",
+      "url": "https://www.cityrealty.com/nyc/market-insight/features/future-nyc/ballys-bronx-casino-files-construction-permits-expansive-19-story-waterfront-complex/73084",
+      "url_origin": "workbook",
+      "locator": "https://www.cityrealty.com/nyc/market-insight/features/future-nyc/ballys-bronx-casino-files-construction-permits-expansive-19-story-waterfront-complex/73084",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "Construction permits filed, including excavation and foundation work; Gensler architect of record.",
+      "notes": "Milestone toward construction; construction itself not confirmed started."
+    },
+    {
+      "sheet": "TG-GOLD-H005",
+      "row": 7,
+      "title": "Bally's closes financing for Bally's Bronx",
+      "citation": "https://www.morningstar.com/news/business-wire/20261002418405/ballys-corporation-closes-previously-announced-financing-to-support-the-development-of-the-ballys-bronx-project",
+      "publisher": "Bally's Corporation via Business Wire (Oct 2, 2026)",
+      "url": "https://www.morningstar.com/news/business-wire/20261002418405/ballys-corporation-closes-previously-announced-financing-to-support-the-development-of-the-ballys-bronx-project",
+      "url_origin": "workbook",
+      "locator": "https://www.morningstar.com/news/business-wire/20261002418405/ballys-corporation-closes-previously-announced-financing-to-support-the-development-of-the-ballys-bronx-project",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "$400M of a $560M WhiteHawk facility funded for pre-construction costs.",
+      "notes": "Money borrowed by Bally's, not spending with Bronx firms."
+    },
+    {
+      "sheet": "TG-GOLD-H005",
+      "row": 8,
+      "title": "Bally's Bets on the Bronx' community benefits document",
+      "citation": "https://ballysbronx.com/wp-content/uploads/2026/03/Ballys-Bets-on-the-Bronx-03.06.26.pdf",
+      "publisher": "Bally's (posted Mar 2026)",
+      "url": "https://ballysbronx.com/wp-content/uploads/2026/03/Ballys-Bets-on-the-Bronx-03.06.26.pdf",
+      "url_origin": "workbook",
+      "locator": "https://ballysbronx.com/wp-content/uploads/2026/03/Ballys-Bets-on-the-Bronx-03.06.26.pdf",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "Mentions local sourcing and contracting goals; no percentage.",
+      "notes": "Obligor's pledge."
+    },
+    {
+      "sheet": "TG-GOLD-H005",
+      "row": 9,
+      "title": "GFLB final report and findings",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "publisher": "Gaming Facility Location Board (Mar 2026)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "Recommends the Commission require Bally's to file a final report at opening with actual capital investment and the amount benefiting Bronx-based firms.",
+      "notes": "Sets the designed check point at opening. Adoption by the Commission not confirmed. Method D."
+    }
+  ],
+  "provenance": {
+    "workbook": "Golden Dataset (6).xlsx",
+    "sha256": "2da588b49b311957885ed7ff98bcd31c49e9d3ef8e99a761a3e9e5fcdb360099",
+    "identity": {
+      "sheet": "gold commitments",
+      "row": 20
+    },
+    "detail_sheet": "TG-GOLD-H005",
+    "detail_internal_id_cell": "B1",
+    "workbook_valid_flag": 1,
+    "workbook_split": "heldout_provisional",
+    "workbook_evidence_status": "not yet due",
+    "workbook_fields": {
+      "gold_id": "TG-GOLD-H005",
+      "document_id": "GFLB-SEL-2025-12-01",
+      "page_section": "pdf p.12; Bally’s Bronx: Economic Activity and Business Development",
+      "char_start": 26179.0,
+      "char_end": 26282.0,
+      "commitment_text": "It anticipates that approximately 75 percent of the capital expenditures will benefit Bronxbased firms.",
+      "normalized_statement": "Bally's anticipates about 75 percent of capital expenditures will benefit Bronx-based firms.",
+      "obligation_type": "Forecast / projection",
+      "responsible_entity": "Bally’s Corporation",
+      "amount_value": "approximately 75 percent of capital expenditures",
+      "term_periodicity": "construction",
+      "geographic_scope": "Bronx",
+      "beneficiary_category": "local businesses",
+      "beneficiary_named": "none named",
+      "condition_contingency": "none stated",
+      "milestone": "none stated",
+      "evidence_status": "not yet due",
+      "confidence": "Medium",
+      "adjudication_note": "anticipates' is listed as an ambiguity trigger; labeled Forecast because it is a quantified estimate, not an undertaking.",
+      "duplicate_of": "none",
+      "notes": "Bronxbased' verbatim from extraction.",
+      "evaluation_split": "heldout_provisional",
+      "manually annotated valid?": 1.0
+    },
+    "detail_research_cutoff": null,
+    "evaluation_use": "22-case annotated benchmark; development-exposed cases included",
+    "reference_preparation": "Locally curated factual hypotheses and delivery conditions from the cited Golden (6) cells; prior to research."
+  }
+}

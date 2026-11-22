@@ -1,0 +1,846 @@
+{
+  "input_sha256": "c32904059257da7b49f56e6aed47a645e1bcc767d6af3fe5d74a2b1b64423bdb",
+  "judge_model": "gpt-5.4",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "judge_version": "tracegraph-nli-v4-owned-quotes",
+  "started_at": "2026-11-22T10:25:26.519533+00:00",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 17.79700000002049,
+      "request_id": "req_014559f29a66467d921bb722ee1aaf6c",
+      "usage": {
+        "input_tokens": 2779,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 1909,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4688
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 6.76500000001397,
+      "request_id": "req_92d1e0befd7b4b37bf708017a22eb860",
+      "usage": {
+        "input_tokens": 2216,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 513,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2729
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "evidence": {
+    "identity": {
+      "label": "MATCH",
+      "reason": "The returned findings concern HRMP/Hard Rock Metropolitan Park and the same $25 million small-business/MWBE lending program described in the question."
+    },
+    "findings": [
+      {
+        "finding_id": "partial:f1",
+        "claims": [
+          {
+            "claim": "HRMP provides technical assistance to help businesses gain MWBE certification.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "We also provide technical assistance to help businesses gain MWBE certification",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states technical assistance for MWBE certification."
+              }
+            ],
+            "reason": "The excerpt expressly states technical assistance to gain MWBE certification."
+          },
+          {
+            "claim": "HRMP is backing that work with a $25 million MWBE lending program.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "are backing this work with a $25 million MWBE lending program",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states a $25 million MWBE lending program backs the work."
+              }
+            ],
+            "reason": "The excerpt directly states backing the work with a $25 million MWBE lending program."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f2",
+        "claims": [
+          {
+            "claim": "HRMP has already launched MWBE capacity-building efforts.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "We have already launched MWBE capacity-building efforts",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly says the MWBE capacity-building efforts have already launched."
+              }
+            ],
+            "reason": "The excerpt expressly says these MWBE capacity-building efforts have already launched."
+          },
+          {
+            "claim": "Those efforts include two contracting sessions at Citi Field.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "including two contracting sessions at Citi Field",
+                "label": "ENTAILMENT",
+                "reason": "The quote explicitly lists two contracting sessions at Citi Field as part of the efforts."
+              }
+            ],
+            "reason": "The excerpt explicitly includes two contracting sessions at Citi Field."
+          },
+          {
+            "claim": "Those efforts include a $25 million lending program to expand capital access.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "a $25 million lending program to expand capital access",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states a $25 million lending program with the purpose of expanding capital access."
+              }
+            ],
+            "reason": "The excerpt directly lists a $25 million lending program to expand capital access."
+          },
+          {
+            "claim": "Those efforts include robust prequalification processes.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "robust prequalification processes",
+                "label": "ENTAILMENT",
+                "reason": "The quote explicitly includes robust prequalification processes."
+              }
+            ],
+            "reason": "The excerpt expressly includes robust prequalification processes."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f3",
+        "claims": [
+          {
+            "claim": "Hard Rock Metropolitan Park has committed $25 million to developing and implementing a small business lending program.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "Hard Rock Metropolitan Park has committed $25 million to developing and implementing a small business lending program.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the commitment, amount, and program scope."
+              }
+            ],
+            "reason": "The excerpt directly states HRMP committed $25 million to develop and implement a small business lending program."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f4",
+        "claims": [
+          {
+            "claim": "The program will assist small businesses in receiving loans.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s4"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s4",
+                "quote": "This program will assist small businesses in receiving loans",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states assistance to small businesses in receiving loans."
+              }
+            ],
+            "reason": "The excerpt expressly states the program will assist small businesses in receiving loans."
+          },
+          {
+            "claim": "The program will reduce lender risk.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s4"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s4",
+                "quote": "reducing lender risk",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the program will reduce lender risk."
+              }
+            ],
+            "reason": "The excerpt directly states reducing lender risk."
+          },
+          {
+            "claim": "The program aims to maximize the potential for success for small businesses in surrounding communities.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s4"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s4",
+                "quote": "ultimately maximizing the potential for success for small businesses in the surrounding communities",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states that stated aim and beneficiary scope."
+              }
+            ],
+            "reason": "The excerpt expressly states that aim for small businesses in surrounding communities."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "partial:f3"
+        ],
+        "citation_ids": [
+          "partial:s3"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Finding partial:f3 states and cites that HRMP committed $25 million to developing and implementing a small business lending program.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f3",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim matches the pledge, amount, and program scope."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s3",
+            "quote": "Hard Rock Metropolitan Park has committed $25 million to developing and implementing a small business lending program.",
+            "label": "ENTAILMENT",
+            "reason": "The quote directly establishes the pledge, amount, and purpose."
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [
+          "partial:f1"
+        ],
+        "citation_ids": [
+          "partial:s1"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Finding partial:f1 states and cites a $25 million MWBE lending program, presenting MWBE firms/businesses as beneficiaries.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "The claim identifies the program as an MWBE lending program, indicating MWBE beneficiaries."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s1",
+            "quote": "a $25 million MWBE lending program",
+            "label": "ENTAILMENT",
+            "reason": "Calling it an MWBE lending program presents MWBE businesses as the program's beneficiaries."
+          }
+        ]
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents the Board highlighting HRMP's partnership with McKissack & McKissack alongside the lending proposal.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [
+          "partial:f4"
+        ],
+        "citation_ids": [
+          "partial:s4"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Finding partial:f4 states and cites that the program will reduce lender risk.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f4",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "This claim directly matches the reference fact."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s4",
+            "quote": "reducing lender risk",
+            "label": "ENTAILMENT",
+            "reason": "The quote directly states the lender-risk reduction point."
+          }
+        ]
+      },
+      {
+        "gold_id": "G5",
+        "finding_ids": [
+          "partial:f1"
+        ],
+        "citation_ids": [
+          "partial:s1"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Finding partial:f1 states and cites technical assistance to help businesses gain MWBE certification.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim directly matches the technical-assistance fact."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s1",
+            "quote": "provide technical assistance to help businesses gain MWBE certification",
+            "label": "ENTAILMENT",
+            "reason": "The quote directly states technical assistance with MWBE certification."
+          }
+        ]
+      },
+      {
+        "gold_id": "G6",
+        "finding_ids": [
+          "partial:f2",
+          "partial:f4"
+        ],
+        "citation_ids": [
+          "partial:s2",
+          "partial:s4"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The findings support lending to expand capital access and assisting businesses in receiving loans, but do not expressly establish subsidized lending or working capital.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f2",
+            "claim_index": 2,
+            "label": "NEUTRAL",
+            "reason": "Expanding capital access is related but does not expressly establish subsidized lending or working capital."
+          },
+          {
+            "finding_id": "partial:f4",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "Assisting businesses in receiving loans is related but does not expressly establish subsidized lending or working capital."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s2",
+            "quote": "a $25 million lending program to expand capital access",
+            "label": "NEUTRAL",
+            "reason": "This supports expanded capital access but not the missing qualifier of subsidized lending or the specific working-capital use."
+          },
+          {
+            "citation_id": "partial:s4",
+            "quote": "This program will assist small businesses in receiving loans",
+            "label": "NEUTRAL",
+            "reason": "This supports loan assistance but not subsidized lending or access to working capital."
+          }
+        ]
+      },
+      {
+        "gold_id": "G7",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents that the HRMP license incorporates application and CAC commitments without expressly naming the lending program.",
+        "claim_links": [],
+        "quote_checks": []
+      }
+    ]
+  },
+  "verdict_protocol": "two-stage-owned-citations-v4",
+  "judgment": {
+    "identity": {
+      "label": "MATCH",
+      "reason": "The returned findings concern HRMP/Hard Rock Metropolitan Park and the same $25 million small-business/MWBE lending program described in the question."
+    },
+    "findings": [
+      {
+        "finding_id": "partial:f1",
+        "claims": [
+          {
+            "claim": "HRMP provides technical assistance to help businesses gain MWBE certification.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "We also provide technical assistance to help businesses gain MWBE certification",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states technical assistance for MWBE certification."
+              }
+            ],
+            "reason": "The excerpt expressly states technical assistance to gain MWBE certification."
+          },
+          {
+            "claim": "HRMP is backing that work with a $25 million MWBE lending program.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "are backing this work with a $25 million MWBE lending program",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states a $25 million MWBE lending program backs the work."
+              }
+            ],
+            "reason": "The excerpt directly states backing the work with a $25 million MWBE lending program."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f2",
+        "claims": [
+          {
+            "claim": "HRMP has already launched MWBE capacity-building efforts.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "We have already launched MWBE capacity-building efforts",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly says the MWBE capacity-building efforts have already launched."
+              }
+            ],
+            "reason": "The excerpt expressly says these MWBE capacity-building efforts have already launched."
+          },
+          {
+            "claim": "Those efforts include two contracting sessions at Citi Field.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "including two contracting sessions at Citi Field",
+                "label": "ENTAILMENT",
+                "reason": "The quote explicitly lists two contracting sessions at Citi Field as part of the efforts."
+              }
+            ],
+            "reason": "The excerpt explicitly includes two contracting sessions at Citi Field."
+          },
+          {
+            "claim": "Those efforts include a $25 million lending program to expand capital access.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "a $25 million lending program to expand capital access",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states a $25 million lending program with the purpose of expanding capital access."
+              }
+            ],
+            "reason": "The excerpt directly lists a $25 million lending program to expand capital access."
+          },
+          {
+            "claim": "Those efforts include robust prequalification processes.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "robust prequalification processes",
+                "label": "ENTAILMENT",
+                "reason": "The quote explicitly includes robust prequalification processes."
+              }
+            ],
+            "reason": "The excerpt expressly includes robust prequalification processes."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f3",
+        "claims": [
+          {
+            "claim": "Hard Rock Metropolitan Park has committed $25 million to developing and implementing a small business lending program.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "Hard Rock Metropolitan Park has committed $25 million to developing and implementing a small business lending program.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the commitment, amount, and program scope."
+              }
+            ],
+            "reason": "The excerpt directly states HRMP committed $25 million to develop and implement a small business lending program."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f4",
+        "claims": [
+          {
+            "claim": "The program will assist small businesses in receiving loans.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s4"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s4",
+                "quote": "This program will assist small businesses in receiving loans",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states assistance to small businesses in receiving loans."
+              }
+            ],
+            "reason": "The excerpt expressly states the program will assist small businesses in receiving loans."
+          },
+          {
+            "claim": "The program will reduce lender risk.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s4"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s4",
+                "quote": "reducing lender risk",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the program will reduce lender risk."
+              }
+            ],
+            "reason": "The excerpt directly states reducing lender risk."
+          },
+          {
+            "claim": "The program aims to maximize the potential for success for small businesses in surrounding communities.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s4"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s4",
+                "quote": "ultimately maximizing the potential for success for small businesses in the surrounding communities",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states that stated aim and beneficiary scope."
+              }
+            ],
+            "reason": "The excerpt expressly states that aim for small businesses in surrounding communities."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "partial:f3"
+        ],
+        "citation_ids": [
+          "partial:s3"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Finding partial:f3 states and cites that HRMP committed $25 million to developing and implementing a small business lending program.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f3",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim matches the pledge, amount, and program scope."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s3",
+            "quote": "Hard Rock Metropolitan Park has committed $25 million to developing and implementing a small business lending program.",
+            "label": "ENTAILMENT",
+            "reason": "The quote directly establishes the pledge, amount, and purpose."
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [
+          "partial:f1"
+        ],
+        "citation_ids": [
+          "partial:s1"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Finding partial:f1 states and cites a $25 million MWBE lending program, presenting MWBE firms/businesses as beneficiaries.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "The claim identifies the program as an MWBE lending program, indicating MWBE beneficiaries."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s1",
+            "quote": "a $25 million MWBE lending program",
+            "label": "ENTAILMENT",
+            "reason": "Calling it an MWBE lending program presents MWBE businesses as the program's beneficiaries."
+          }
+        ]
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents the Board highlighting HRMP's partnership with McKissack & McKissack alongside the lending proposal.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [
+          "partial:f4"
+        ],
+        "citation_ids": [
+          "partial:s4"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Finding partial:f4 states and cites that the program will reduce lender risk.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f4",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "This claim directly matches the reference fact."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s4",
+            "quote": "reducing lender risk",
+            "label": "ENTAILMENT",
+            "reason": "The quote directly states the lender-risk reduction point."
+          }
+        ]
+      },
+      {
+        "gold_id": "G5",
+        "finding_ids": [
+          "partial:f1"
+        ],
+        "citation_ids": [
+          "partial:s1"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Finding partial:f1 states and cites technical assistance to help businesses gain MWBE certification.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim directly matches the technical-assistance fact."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s1",
+            "quote": "provide technical assistance to help businesses gain MWBE certification",
+            "label": "ENTAILMENT",
+            "reason": "The quote directly states technical assistance with MWBE certification."
+          }
+        ]
+      },
+      {
+        "gold_id": "G6",
+        "finding_ids": [
+          "partial:f2",
+          "partial:f4"
+        ],
+        "citation_ids": [
+          "partial:s2",
+          "partial:s4"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The findings support lending to expand capital access and assisting businesses in receiving loans, but do not expressly establish subsidized lending or working capital.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f2",
+            "claim_index": 2,
+            "label": "NEUTRAL",
+            "reason": "Expanding capital access is related but does not expressly establish subsidized lending or working capital."
+          },
+          {
+            "finding_id": "partial:f4",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "Assisting businesses in receiving loans is related but does not expressly establish subsidized lending or working capital."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s2",
+            "quote": "a $25 million lending program to expand capital access",
+            "label": "NEUTRAL",
+            "reason": "This supports expanded capital access but not the missing qualifier of subsidized lending or the specific working-capital use."
+          },
+          {
+            "citation_id": "partial:s4",
+            "quote": "This program will assist small businesses in receiving loans",
+            "label": "NEUTRAL",
+            "reason": "This supports loan assistance but not subsidized lending or access to working capital."
+          }
+        ]
+      },
+      {
+        "gold_id": "G7",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents that the HRMP license incorporates application and CAC commitments without expressly naming the lending program.",
+        "claim_links": [],
+        "quote_checks": []
+      }
+    ],
+    "protocol": "owned-quotes-v1",
+    "verdict": null
+  },
+  "capture_judgment": {
+    "facts": [
+      {
+        "gold_id": "G1",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "p1",
+          "p5"
+        ],
+        "reason": "The passages say HRMP has or is backing 'a $25 million lending program' and a '$25 million MWBE lending program,' but they do not state the stricter reference wording that HRMP pledged $25 million specifically 'to develop and implement' the program."
+      },
+      {
+        "gold_id": "G2",
+        "label": "ENTAILMENT",
+        "citation_ids": [
+          "p1",
+          "p5"
+        ],
+        "reason": "The lending program is presented in MWBE-focused context: HRMP cites MWBE capacity-building efforts including the '$25 million lending program to expand capital access' and says it is 'backing this work with a $25 million MWBE lending program.'"
+      },
+      {
+        "gold_id": "G3",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "p3"
+        ],
+        "reason": "McKissack & McKissack is mentioned with MWBE data tracking and commitments, but no passage links that partnership specifically to the lending proposal."
+      },
+      {
+        "gold_id": "G4",
+        "label": "NEUTRAL",
+        "citation_ids": [],
+        "reason": "No supplied excerpt says HRMP stated the lending program would reduce lender risk."
+      },
+      {
+        "gold_id": "G5",
+        "label": "ENTAILMENT",
+        "citation_ids": [
+          "p5"
+        ],
+        "reason": "HRMP states, 'We also provide technical assistance to help businesses gain MWBE certification.'"
+      },
+      {
+        "gold_id": "G6",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "p1",
+          "p5"
+        ],
+        "reason": "The excerpts describe a lending program 'to expand capital access' and an 'MWBE lending program,' but none is identified as an executive summary or states subsidized lending for working capital."
+      },
+      {
+        "gold_id": "G7",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "p2"
+        ],
+        "reason": "The license excerpt only identifies the licensure determination for Queens Future/Hard Rock and does not address incorporation of application or CAC commitments."
+      }
+    ],
+    "abstention": {
+      "label": "UNNECESSARY",
+      "reason": "The question asks whether HRMP committed $25 million to a small-business lender program supporting MWBE firms. The passages directly attribute to HRMP a '$25 million lending program to expand capital access' within 'MWBE capacity-building efforts' and say HRMP is 'backing this work with a $25 million MWBE lending program,' which sufficiently documents the promise’s amount, promisor, program nature, and MWBE support, even if finer implementation terms are not shown."
+    }
+  },
+  "finished_at": "2026-11-22T10:25:51.256633+00:00"
+}

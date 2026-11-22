@@ -1,0 +1,1687 @@
+{
+  "input_sha256": "3328abbecf5b5b3711bb4fc4ee11c47f43bc1d767b97340d43a8177e740f8d78",
+  "judge_model": "gpt-5.4",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "judge_version": "tracegraph-nli-v4-owned-quotes",
+  "started_at": "2026-11-22T10:14:54.970360+00:00",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 23.5,
+      "request_id": "req_042b0e3d858843c0bb0b404bcf9d3df3",
+      "usage": {
+        "input_tokens": 3507,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 2883,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 6390
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 22.233999999938533,
+      "request_id": "req_cbf42f64a6b44748af97e9e5085b53d4",
+      "usage": {
+        "input_tokens": 3524,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 2816
+        },
+        "output_tokens": 2926,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 6450
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 16.60999999998603,
+      "request_id": "req_6cc0bd95facb4a04866cedbb7e293e7e",
+      "usage": {
+        "input_tokens": 3747,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 2127,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 5874
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 4.765999999945052,
+      "request_id": "req_dd7d50d37fc8453782f5b42c87fb2e48",
+      "usage": {
+        "input_tokens": 3079,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 430,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3509
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "invalid_responses": [
+    {
+      "stage": "evidence",
+      "response": {
+        "identity": {
+          "label": "UNRESOLVED",
+          "reason": "The returned findings discuss ESD MWBE/SDVOB application and compliance requirements, but no quoted evidence identifies the same RFA or the specific statement that applicants’ goals are expected to meet or exceed New York State’s 30% target."
+        },
+        "findings": [
+          {
+            "finding_id": "partial:f1",
+            "claims": [
+              {
+                "claim": "ESD’s Contractor & Supplier Diversity policy will apply to this project.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s1"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s1",
+                    "quote": "ESD’s Contractor & Supplier Diversity policy will apply to this project.",
+                    "label": "ENTAILMENT",
+                    "reason": "The excerpt states the policy applies to the project."
+                  }
+                ],
+                "reason": "The excerpt expressly says the policy will apply to the project."
+              },
+              {
+                "claim": "The applicant acknowledges awareness of ESD’s agency-wide MWBE utilization goal of 30%.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s1"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s1",
+                    "quote": "you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30%",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states awareness of the 30% MWBE goal."
+                  }
+                ],
+                "reason": "The excerpt explicitly states awareness of ESD’s 30% MWBE goal."
+              },
+              {
+                "claim": "The applicant acknowledges awareness of ESD’s agency-wide SDVOB utilization goal of 6%.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s1"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s1",
+                    "quote": "ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the 6% SDVOB goal."
+                  }
+                ],
+                "reason": "The excerpt explicitly states the 6% SDVOB goal."
+              },
+              {
+                "claim": "Each project will be assigned an individual contract-specific goal that may be higher or lower than 30% and 6%, respectively.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s1"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s1",
+                    "quote": "each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively",
+                    "label": "ENTAILMENT",
+                    "reason": "The excerpt directly states future contract-specific goals may differ from the agency-wide percentages."
+                  }
+                ],
+                "reason": "The excerpt expressly states contract-specific goals may be higher or lower than the agency-wide goals."
+              },
+              {
+                "claim": "If the project receives a funding award, the applicant must use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to the project.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s1"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s1",
+                    "quote": "should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly imposes the good-faith-efforts requirement if funding is awarded."
+                  }
+                ],
+                "reason": "The excerpt directly states the conditional good-faith-efforts requirement."
+              },
+              {
+                "claim": "Failure to attain MWBE and SDVOB goals could result in the grant amount being reduced.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s1"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s1",
+                    "quote": "failure to attain MWBE and SDVOB goals could result in grant amount being reduced",
+                    "label": "ENTAILMENT",
+                    "reason": "The excerpt expressly states this potential consequence."
+                  }
+                ],
+                "reason": "The excerpt explicitly states grant reduction could result from failure to attain the goals."
+              }
+            ]
+          },
+          {
+            "finding_id": "partial:f2",
+            "claims": [
+              {
+                "claim": "ESD’s agency-wide MWBE utilization goal is 30%.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s2"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s2",
+                    "quote": "ESD’s agency-wide MWBE utilization goal is 30%",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the 30% goal."
+                  }
+                ],
+                "reason": "The excerpt expressly states the 30% agency-wide MWBE goal."
+              },
+              {
+                "claim": "After application approval, the project may be assigned an individual contract-specific goal that may be higher or lower than 30%.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s2"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s2",
+                    "quote": "After application approval the project may be assigned an individual contract-specific goal, which may be higher or lower than 30%",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states a later-assigned project-specific goal may differ from 30%."
+                  }
+                ],
+                "reason": "The excerpt expressly states contract-specific goals may be above or below 30%."
+              },
+              {
+                "claim": "Where goals are set, the grantee must use good faith efforts to achieve the prescribed MWBE goals assigned to the project.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s2"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s2",
+                    "quote": "In instances where goals are set, grantee will be required to use good faith efforts to achieve the prescribed MWBE goals assigned to the project",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the requirement when goals are set."
+                  }
+                ],
+                "reason": "The excerpt expressly states the good-faith-efforts requirement for assigned MWBE goals."
+              },
+              {
+                "claim": "Where goals are set, the grantee must maintain records and take actions necessary to demonstrate compliance with Article 15-A of the New York State Executive Law.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s2"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s2",
+                    "quote": "must maintain such records and take such actions necessary to demonstrate compliance with Article 15-A of the New York State Executive Law",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the compliance-records requirement."
+                  }
+                ],
+                "reason": "The excerpt expressly states the grantee must maintain records and take actions to demonstrate compliance."
+              }
+            ]
+          },
+          {
+            "finding_id": "partial:f3",
+            "claims": [
+              {
+                "claim": "The recipient must submit a periodic MWBE Compliance & Payment Report to OCSD.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s3"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s3",
+                    "quote": "Recipient is required to submit a periodic MWBE Compliance & Payment Report to OCSD",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the reporting requirement."
+                  }
+                ],
+                "reason": "The excerpt expressly requires submission of the report to OCSD."
+              },
+              {
+                "claim": "The report is due by the 10th day after each month for construction contracts over $100,000, or after each quarter for services and commodities contracts over $25,000, over the term of the project.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s3"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s3",
+                    "quote": "by the 10th day following either the end of each (i) month, for construction contracts in excess of $100,000, or (ii) quarter, for services and commodities contracts in excess of $25,000, over the term of the project",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the timing and threshold qualifiers."
+                  }
+                ],
+                "reason": "The excerpt expressly states the timing and contract-threshold conditions."
+              },
+              {
+                "claim": "The report documents progress toward achievement of the MWBE project goals.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s3"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s3",
+                    "quote": "documenting the progress made toward achievement of the MWBE project goals",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the report’s purpose."
+                  }
+                ],
+                "reason": "The excerpt expressly says the report documents progress toward MWBE project goals."
+              }
+            ]
+          },
+          {
+            "finding_id": "partial:f4",
+            "claims": [
+              {
+                "claim": "Where MWBE goals have been established, the recipient must document Good Faith Efforts to provide meaningful participation by MWBEs as subcontractors or suppliers in project performance.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s4"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s4",
+                    "quote": "Where MWBE goals have been established herein, pursuant to 5 NYCRR §142.8, Recipient must document “Good Faith Efforts” to provide meaningful participation by MWBEs as subcontractors or suppliers in the performance of the project.",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the conditional documentation requirement and the form of participation."
+                  }
+                ],
+                "reason": "The excerpt expressly states the recipient must document good-faith efforts for MWBE participation where goals are established."
+              }
+            ]
+          },
+          {
+            "finding_id": "partial:f5",
+            "claims": [
+              {
+                "claim": "If the project receives a funding award, the applicant must use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to the project.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s5"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s5",
+                    "quote": "should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the conditional good-faith-efforts requirement."
+                  }
+                ],
+                "reason": "The excerpt expressly states the applicant must use good faith efforts if the project receives funding."
+              },
+              {
+                "claim": "Failure to attain MWBE and SDVOB goals could result in the grant amount being reduced.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s5"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s5",
+                    "quote": "failure to attain MWBE and SDVOB goals could result in grant amount being reduced",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the possible reduction consequence."
+                  }
+                ],
+                "reason": "The excerpt expressly states grant reduction could follow failure to attain the goals."
+              }
+            ]
+          }
+        ],
+        "coverage": [
+          {
+            "gold_id": "G1",
+            "finding_ids": [
+              "partial:f1",
+              "partial:f2"
+            ],
+            "citation_ids": [
+              "partial:s1",
+              "partial:s2"
+            ],
+            "label": "NEUTRAL",
+            "reason": "The findings and quotes establish a 30% agency-wide MWBE goal and that contract-specific goals may be higher or lower than 30%, but they do not establish that applicants’ MWBE contract-utilization goals are expected to meet or exceed the state’s 30% target.",
+            "claim_links": [
+              {
+                "finding_id": "partial:f1",
+                "claim_index": 1,
+                "label": "NEUTRAL",
+                "reason": "Awareness of a 30% agency-wide goal is weaker than an expectation that applicants’ goals meet or exceed 30%."
+              },
+              {
+                "finding_id": "partial:f1",
+                "claim_index": 3,
+                "label": "CONTRADICTION",
+                "reason": "This claim says project-specific goals may be higher or lower than 30%, which is incompatible with a uniform expectation that applicants' goals meet or exceed 30%."
+              },
+              {
+                "finding_id": "partial:f2",
+                "claim_index": 0,
+                "label": "NEUTRAL",
+                "reason": "Stating a 30% agency-wide goal does not establish that applicants’ goals are expected to meet or exceed it."
+              },
+              {
+                "finding_id": "partial:f2",
+                "claim_index": 1,
+                "label": "CONTRADICTION",
+                "reason": "This claim says the project-specific goal may be lower than 30%, conflicting with an expectation to meet or exceed 30%."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30%",
+                "label": "NEUTRAL",
+                "reason": "This establishes only the existence of a 30% agency-wide goal, not that applicants’ goals must meet or exceed it."
+              },
+              {
+                "citation_id": "partial:s1",
+                "quote": "each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30%",
+                "label": "CONTRADICTION",
+                "reason": "A goal that may be lower than 30% is incompatible with an expectation that applicants’ goals meet or exceed 30%."
+              },
+              {
+                "citation_id": "partial:s2",
+                "quote": "Please note that ESD’s agency-wide MWBE utilization goal is 30%",
+                "label": "NEUTRAL",
+                "reason": "This states a 30% goal but not an expectation that applicants’ goals meet or exceed it."
+              },
+              {
+                "citation_id": "partial:s2",
+                "quote": "the project may be assigned an individual contract-specific goal, which may be higher or lower than 30%",
+                "label": "CONTRADICTION",
+                "reason": "The possibility of a goal lower than 30% conflicts with an expectation that applicants’ goals meet or exceed 30%."
+              }
+            ]
+          },
+          {
+            "gold_id": "G2",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No finding presents RWNYC license requirements for public community-benefits progress reports including workforce diversity data.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G3",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No finding presents a requirement for each licensee to post and update community advisory committee commitments.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G4",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No finding presents the October 2026 report by the Commission chair about monitors for all three casino licensees.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G5",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No finding presents the Board’s report that RWNYC provided no specific MWBE contractor utilization goal.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G6",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No finding presents RWNYC holding a supplier outreach session for prospective MWBE contractors.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G7",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No finding presents RWNYC breaking ground on Phase II in July 2026.",
+            "claim_links": [],
+            "quote_checks": []
+          }
+        ]
+      },
+      "error": "G1 quote checks: duplicate partial:s1"
+    },
+    {
+      "stage": "evidence",
+      "response": {
+        "identity": {
+          "label": "UNRESOLVED",
+          "reason": "The returned commitment has no organization or commitment metadata, and the findings are generic ESD MWBE/SDVOB application requirements rather than a clearly identified promise matching the question’s specific RFA statement."
+        },
+        "findings": [
+          {
+            "finding_id": "partial:f1",
+            "claims": [
+              {
+                "claim": "ESD’s Contractor & Supplier Diversity policy will apply to this project.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s1"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s1",
+                    "quote": "ESD’s Contractor & Supplier Diversity policy will apply to this project.",
+                    "label": "ENTAILMENT",
+                    "reason": "The excerpt states this policy applies to the project."
+                  }
+                ],
+                "reason": "The excerpt expressly says the policy applies to the project."
+              },
+              {
+                "claim": "ESD has an agency-wide MWBE utilization goal of 30%.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s1"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s1",
+                    "quote": "ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30%",
+                    "label": "ENTAILMENT",
+                    "reason": "The excerpt expressly gives a 30% agency-wide MWBE goal."
+                  }
+                ],
+                "reason": "The excerpt expressly states a 30% agency-wide MWBE goal."
+              },
+              {
+                "claim": "ESD has an agency-wide SDVOB utilization goal of 6%.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s1"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s1",
+                    "quote": "ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%",
+                    "label": "ENTAILMENT",
+                    "reason": "The excerpt expressly gives a 6% SDVOB goal."
+                  }
+                ],
+                "reason": "The excerpt expressly states a 6% agency-wide SDVOB goal."
+              },
+              {
+                "claim": "Each project will be assigned an individual contract-specific goal that may be higher or lower than 30% and 6%, respectively.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s1"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s1",
+                    "quote": "each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively",
+                    "label": "ENTAILMENT",
+                    "reason": "The excerpt expressly states project-specific goals may differ from the agency-wide goals."
+                  }
+                ],
+                "reason": "The excerpt expressly says each project gets a contract-specific goal that may be higher or lower."
+              },
+              {
+                "claim": "If the project receives a funding award, the applicant must use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to the project.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s1"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s1",
+                    "quote": "should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project",
+                    "label": "ENTAILMENT",
+                    "reason": "The excerpt expressly conditions the good-faith-efforts requirement on receipt of a funding award."
+                  }
+                ],
+                "reason": "The excerpt expressly states this conditional good-faith-efforts requirement."
+              },
+              {
+                "claim": "Failure to attain assigned MWBE and SDVOB goals could result in the grant amount being reduced.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s1"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s1",
+                    "quote": "failure to attain MWBE and SDVOB goals could result in grant amount being reduced",
+                    "label": "ENTAILMENT",
+                    "reason": "The excerpt expressly states this potential consequence."
+                  }
+                ],
+                "reason": "The excerpt expressly states grant reduction could result from failure to attain the goals."
+              }
+            ]
+          },
+          {
+            "finding_id": "partial:f2",
+            "claims": [
+              {
+                "claim": "ESD’s agency-wide MWBE utilization goal is 30%.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s2"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s2",
+                    "quote": "ESD’s agency-wide MWBE utilization goal is 30%",
+                    "label": "ENTAILMENT",
+                    "reason": "The excerpt expressly states a 30% agency-wide MWBE goal."
+                  }
+                ],
+                "reason": "The excerpt expressly states a 30% agency-wide MWBE goal."
+              },
+              {
+                "claim": "After application approval, the project may be assigned an individual contract-specific goal that may be higher or lower than 30%.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s2"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s2",
+                    "quote": "After application approval the project may be assigned an individual contract-specific goal, which may be higher or lower than 30%",
+                    "label": "ENTAILMENT",
+                    "reason": "The excerpt expressly states the project-specific goal may differ from 30% after approval."
+                  }
+                ],
+                "reason": "The excerpt expressly states project-specific goals may be higher or lower than 30%."
+              },
+              {
+                "claim": "Where goals are set, the grantee must use good faith efforts to achieve the prescribed MWBE goals assigned to the project.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s2"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s2",
+                    "quote": "In instances where goals are set, grantee will be required to use good faith efforts to achieve the prescribed MWBE goals assigned to the project",
+                    "label": "ENTAILMENT",
+                    "reason": "The excerpt expressly states the duty to use good faith efforts when goals are set."
+                  }
+                ],
+                "reason": "The excerpt expressly states the grantee must use good faith efforts where goals are set."
+              },
+              {
+                "claim": "Where goals are set, the grantee must maintain records and take actions necessary to demonstrate compliance with Article 15-A of the New York State Executive Law.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s2"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s2",
+                    "quote": "must maintain such records and take such actions necessary to demonstrate compliance with Article 15-A of the New York State Executive Law",
+                    "label": "ENTAILMENT",
+                    "reason": "The excerpt expressly states this recordkeeping and compliance duty."
+                  }
+                ],
+                "reason": "The excerpt expressly states this recordkeeping and compliance requirement."
+              }
+            ]
+          },
+          {
+            "finding_id": "partial:f3",
+            "claims": [
+              {
+                "claim": "The recipient must submit a periodic MWBE Compliance & Payment Report to OCSD.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s3"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s3",
+                    "quote": "Recipient is required to submit a periodic MWBE Compliance & Payment Report to OCSD",
+                    "label": "ENTAILMENT",
+                    "reason": "The excerpt expressly states this reporting requirement."
+                  }
+                ],
+                "reason": "The excerpt expressly states this reporting requirement."
+              },
+              {
+                "claim": "For construction contracts in excess of $100,000, the report is due by the 10th day following the end of each month over the term of the project.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s3"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s3",
+                    "quote": "by the 10th day following either the end of each (i) month, for construction contracts in excess of $100,000",
+                    "label": "ENTAILMENT",
+                    "reason": "The excerpt expressly states the monthly timing and contract threshold for construction contracts."
+                  }
+                ],
+                "reason": "The excerpt expressly states the monthly deadline for qualifying construction contracts."
+              },
+              {
+                "claim": "For services and commodities contracts in excess of $25,000, the report is due by the 10th day following the end of each quarter over the term of the project.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s3"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s3",
+                    "quote": "or (ii) quarter, for services and commodities contracts in excess of $25,000, over the term of the project",
+                    "label": "ENTAILMENT",
+                    "reason": "The excerpt expressly states the quarterly timing and contract threshold for services and commodities contracts."
+                  }
+                ],
+                "reason": "The excerpt expressly states the quarterly deadline for qualifying services and commodities contracts."
+              },
+              {
+                "claim": "The report documents progress made toward achievement of the MWBE project goals.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s3"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s3",
+                    "quote": "documenting the progress made toward achievement of the MWBE project goals",
+                    "label": "ENTAILMENT",
+                    "reason": "The excerpt expressly states the report’s purpose."
+                  }
+                ],
+                "reason": "The excerpt expressly states the report documents progress toward MWBE goals."
+              }
+            ]
+          },
+          {
+            "finding_id": "partial:f4",
+            "claims": [
+              {
+                "claim": "Where MWBE goals have been established, the recipient must document good faith efforts to provide meaningful participation by MWBEs as subcontractors or suppliers in performance of the project.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s4"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s4",
+                    "quote": "Where MWBE goals have been established herein, pursuant to 5 NYCRR §142.8, Recipient must document “Good Faith Efforts” to provide meaningful participation by MWBEs as subcontractors or suppliers in the performance of the project.",
+                    "label": "ENTAILMENT",
+                    "reason": "The excerpt expressly states this conditional documentation requirement."
+                  }
+                ],
+                "reason": "The excerpt expressly states this conditional good-faith-efforts documentation requirement."
+              }
+            ]
+          },
+          {
+            "finding_id": "partial:f5",
+            "claims": [
+              {
+                "claim": "If the project receives a funding award, the applicant must use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to the project.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s5"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s5",
+                    "quote": "should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project",
+                    "label": "ENTAILMENT",
+                    "reason": "The excerpt expressly states this conditional good-faith-efforts requirement."
+                  }
+                ],
+                "reason": "The excerpt expressly states this conditional good-faith-efforts requirement."
+              },
+              {
+                "claim": "Failure to attain assigned MWBE and SDVOB goals could result in the grant amount being reduced.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "partial:s5"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "partial:s5",
+                    "quote": "failure to attain MWBE and SDVOB goals could result in grant amount being reduced",
+                    "label": "ENTAILMENT",
+                    "reason": "The excerpt expressly states this potential consequence."
+                  }
+                ],
+                "reason": "The excerpt expressly states grant reduction could result from failure to attain the goals."
+              }
+            ]
+          }
+        ],
+        "coverage": [
+          {
+            "gold_id": "G1",
+            "finding_ids": [
+              "partial:f1",
+              "partial:f2"
+            ],
+            "citation_ids": [
+              "partial:s1",
+              "partial:s2"
+            ],
+            "label": "NEUTRAL",
+            "reason": "The findings say ESD has an agency-wide 30% MWBE goal and that each project may receive a contract-specific goal higher or lower than 30%, but they do not establish that applicants' own contract-utilization goals are expected to meet or exceed 30%.",
+            "claim_links": [
+              {
+                "finding_id": "partial:f1",
+                "claim_index": 1,
+                "label": "NEUTRAL",
+                "reason": "An agency-wide 30% goal is weaker than an expectation that applicants' goals meet or exceed 30%."
+              },
+              {
+                "finding_id": "partial:f1",
+                "claim_index": 3,
+                "label": "CONTRADICTION",
+                "reason": "A statement that project-specific goals may be higher or lower than 30% is incompatible with a requirement that applicants' goals be expected to meet or exceed 30%."
+              },
+              {
+                "finding_id": "partial:f2",
+                "claim_index": 0,
+                "label": "NEUTRAL",
+                "reason": "An agency-wide 30% goal does not establish the applicants' expected contract-utilization goals."
+              },
+              {
+                "finding_id": "partial:f2",
+                "claim_index": 1,
+                "label": "CONTRADICTION",
+                "reason": "A project-specific goal that may be lower than 30% conflicts with a meet-or-exceed-30% expectation for applicants' goals."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30%",
+                "label": "NEUTRAL",
+                "reason": "This proves only an agency-wide goal, not the applicants' expected goal level."
+              },
+              {
+                "citation_id": "partial:s1",
+                "quote": "each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively",
+                "label": "CONTRADICTION",
+                "reason": "A goal that may be lower than 30% is incompatible with a meet-or-exceed-30% requirement."
+              },
+              {
+                "citation_id": "partial:s2",
+                "quote": "ESD’s agency-wide MWBE utilization goal is 30%",
+                "label": "NEUTRAL",
+                "reason": "This proves only the agency-wide benchmark, not an applicant-specific expectation to meet or exceed it."
+              },
+              {
+                "citation_id": "partial:s2",
+                "quote": "the project may be assigned an individual contract-specific goal, which may be higher or lower than 30%",
+                "label": "CONTRADICTION",
+                "reason": "A project-specific goal may be lower than 30%, which conflicts with a meet-or-exceed-30% expectation."
+              }
+            ]
+          },
+          {
+            "gold_id": "G2",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No finding presents RWNYC license reporting obligations or public community-benefits progress reports including workforce diversity data.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G3",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No finding presents a licensee obligation to post and update community advisory committee commitments.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G4",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No finding presents the October 2026 statement about monitors for all three casino licensees being in place.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G5",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No finding presents the Board's report that RWNYC provided no specific MWBE contractor utilization goal.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G6",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No finding presents RWNYC holding a supplier outreach session for prospective MWBE contractors.",
+            "claim_links": [],
+            "quote_checks": []
+          },
+          {
+            "gold_id": "G7",
+            "finding_ids": [],
+            "citation_ids": [],
+            "label": "MISSING",
+            "reason": "No finding presents RWNYC breaking ground on Phase II in July 2026.",
+            "claim_links": [],
+            "quote_checks": []
+          }
+        ]
+      },
+      "error": "G1 quote checks: duplicate partial:s1"
+    }
+  ],
+  "evidence": {
+    "identity": {
+      "label": "UNRESOLVED",
+      "reason": "The returned commitment has no organization or commitment metadata, and the findings are generic ESD/MWBE program statements rather than a clearly identified promise matching the question’s specific applicant-goal expectation."
+    },
+    "findings": [
+      {
+        "finding_id": "partial:f1",
+        "claims": [
+          {
+            "claim": "ESD’s Contractor & Supplier Diversity policy will apply to this project.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "quote": "Q_2365 By entering your name in the box below, you are acknowledging that ESD’s Contractor & Supplier Diversity policy will apply to this project. You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%. Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively. Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt explicitly states that ESD’s Contractor & Supplier Diversity policy will apply to this project.",
+                "citation_id": "partial:s1"
+              }
+            ],
+            "reason": "The excerpt directly says the policy will apply to the project."
+          },
+          {
+            "claim": "The applicant acknowledges awareness of ESD’s agency-wide MWBE utilization goal of 30% and SDVOB utilization goal of 6%.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "quote": "Q_2365 By entering your name in the box below, you are acknowledging that ESD’s Contractor & Supplier Diversity policy will apply to this project. You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%. Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively. Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt expressly says the applicant is aware of the agency-wide MWBE goal of 30% and SDVOB goal of 6%.",
+                "citation_id": "partial:s1"
+              }
+            ],
+            "reason": "The excerpt expressly states awareness of the 30% MWBE and 6% SDVOB goals."
+          },
+          {
+            "claim": "Each project will be assigned an individual contract-specific goal that may be higher or lower than 30% and 6%, respectively.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "quote": "Q_2365 By entering your name in the box below, you are acknowledging that ESD’s Contractor & Supplier Diversity policy will apply to this project. You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%. Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively. Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt states each project will be assigned an individual contract-specific goal that may be higher or lower than the listed agency-wide percentages.",
+                "citation_id": "partial:s1"
+              }
+            ],
+            "reason": "The excerpt directly states contract-specific goals may differ from the agency-wide percentages."
+          },
+          {
+            "claim": "If the project receives a funding award, the applicant must use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to the project, and failure to attain them could reduce the grant amount.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "quote": "Q_2365 By entering your name in the box below, you are acknowledging that ESD’s Contractor & Supplier Diversity policy will apply to this project. You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%. Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively. Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt expressly conditions the duty on receiving a funding award and states both the good-faith-efforts requirement and possible grant reduction.",
+                "citation_id": "partial:s1"
+              }
+            ],
+            "reason": "The excerpt directly states the conditional good-faith-efforts obligation and possible grant reduction."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f2",
+        "claims": [
+          {
+            "claim": "ESD’s agency-wide MWBE utilization goal is 30%.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "quote": "Please note that ESD’s agency-wide MWBE utilization goal is 30%. After application approval the project may be assigned an individual contract-specific goal, which may be higher or lower than 30%. In instances where goals are set, grantee will be required to use good faith efforts to achieve the prescribed MWBE goals assigned to the project and must maintain such records and take such actions necessary to demonstrate compliance with Article 15-A of the New York State Executive Law.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt explicitly says ESD’s agency-wide MWBE utilization goal is 30%.",
+                "citation_id": "partial:s2"
+              }
+            ],
+            "reason": "The excerpt directly states the 30% agency-wide MWBE goal."
+          },
+          {
+            "claim": "After application approval, the project may be assigned an individual contract-specific goal that may be higher or lower than 30%.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "quote": "Please note that ESD’s agency-wide MWBE utilization goal is 30%. After application approval the project may be assigned an individual contract-specific goal, which may be higher or lower than 30%. In instances where goals are set, grantee will be required to use good faith efforts to achieve the prescribed MWBE goals assigned to the project and must maintain such records and take such actions necessary to demonstrate compliance with Article 15-A of the New York State Executive Law.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt explicitly states that after application approval a contract-specific goal may be higher or lower than 30%.",
+                "citation_id": "partial:s2"
+              }
+            ],
+            "reason": "The excerpt directly states contract-specific goals may differ from 30% after approval."
+          },
+          {
+            "claim": "Where goals are set, the grantee must use good faith efforts to achieve the prescribed MWBE goals assigned to the project and must maintain records and take actions necessary to demonstrate compliance with Article 15-A.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "quote": "Please note that ESD’s agency-wide MWBE utilization goal is 30%. After application approval the project may be assigned an individual contract-specific goal, which may be higher or lower than 30%. In instances where goals are set, grantee will be required to use good faith efforts to achieve the prescribed MWBE goals assigned to the project and must maintain such records and take such actions necessary to demonstrate compliance with Article 15-A of the New York State Executive Law.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt expressly states the good-faith-efforts duty and recordkeeping/compliance obligations where goals are set.",
+                "citation_id": "partial:s2"
+              }
+            ],
+            "reason": "The excerpt directly states the good-faith-efforts and compliance requirements when goals are set."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f3",
+        "claims": [
+          {
+            "claim": "The recipient must submit a periodic MWBE Compliance & Payment Report to OCSD by the 10th day after each month for construction contracts over $100,000 or after each quarter for services and commodities contracts over $25,000, over the term of the project.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "quote": "Recipient is required to submit a periodic MWBE Compliance & Payment Report to OCSD by the 10th day following either the end of each (i) month, for construction contracts in excess of $100,000, or (ii) quarter, for services and commodities contracts in excess of $25,000, over the term of the project documenting the progress made toward achievement of the MWBE project goals.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt expressly gives the reporting recipient, deadline, contract categories, monetary thresholds, and project-term duration.",
+                "citation_id": "partial:s3"
+              }
+            ],
+            "reason": "The excerpt directly states the periodic reporting duty, timing, thresholds, and duration."
+          },
+          {
+            "claim": "The report documents progress made toward achievement of the MWBE project goals.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "quote": "Recipient is required to submit a periodic MWBE Compliance & Payment Report to OCSD by the 10th day following either the end of each (i) month, for construction contracts in excess of $100,000, or (ii) quarter, for services and commodities contracts in excess of $25,000, over the term of the project documenting the progress made toward achievement of the MWBE project goals.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt explicitly says the report documents progress toward achievement of the MWBE project goals.",
+                "citation_id": "partial:s3"
+              }
+            ],
+            "reason": "The excerpt directly states the report’s purpose is documenting progress toward MWBE goals."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f4",
+        "claims": [
+          {
+            "claim": "Where MWBE goals have been established, the recipient must document Good Faith Efforts to provide meaningful participation by MWBEs as subcontractors or suppliers in performing the project.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s4"
+            ],
+            "quote_checks": [
+              {
+                "quote": "Where MWBE goals have been established herein, pursuant to 5 NYCRR §142.8, Recipient must document “Good Faith Efforts” to provide meaningful participation by MWBEs as subcontractors or suppliers in the performance of the project.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt expressly states the recipient must document Good Faith Efforts for meaningful MWBE participation as subcontractors or suppliers.",
+                "citation_id": "partial:s4"
+              }
+            ],
+            "reason": "The excerpt directly states the Good Faith Efforts documentation requirement."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f5",
+        "claims": [
+          {
+            "claim": "If the project receives a funding award, the applicant must use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to the project.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s5"
+            ],
+            "quote_checks": [
+              {
+                "quote": "Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt expressly conditions the requirement on receipt of a funding award and states the duty to use good faith efforts to achieve the assigned MWBE and SDVOB goals.",
+                "citation_id": "partial:s5"
+              }
+            ],
+            "reason": "The excerpt directly states the conditional good-faith-efforts requirement."
+          },
+          {
+            "claim": "Failure to attain the MWBE and SDVOB goals could result in the grant amount being reduced.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s5"
+            ],
+            "quote_checks": [
+              {
+                "quote": "Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt explicitly states that failure to attain the goals could reduce the grant amount.",
+                "citation_id": "partial:s5"
+              }
+            ],
+            "reason": "The excerpt directly states the possible consequence of failing to attain the goals."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "partial:f1",
+          "partial:f2"
+        ],
+        "citation_ids": [
+          "partial:s1",
+          "partial:s2"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The findings and excerpts establish awareness of a 30% agency-wide MWBE goal and possible contract-specific goals that may be higher or lower, but they do not state that applicants’ goals are expected to meet or exceed the state’s 30% target.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 1,
+            "label": "NEUTRAL",
+            "reason": "Awareness of a 30% agency-wide goal does not establish an expectation that applicants' goals meet or exceed 30%."
+          },
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 2,
+            "label": "NEUTRAL",
+            "reason": "A statement that project-specific goals may be higher or lower than 30% does not establish a meet-or-exceed expectation."
+          },
+          {
+            "finding_id": "partial:f2",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "Stating the agency-wide goal is 30% is weaker than saying applicants’ goals are expected to meet or exceed 30%."
+          },
+          {
+            "finding_id": "partial:f2",
+            "claim_index": 1,
+            "label": "NEUTRAL",
+            "reason": "Possible assignment of goals above or below 30% does not establish the claimed expectation."
+          }
+        ],
+        "quote_checks": [
+          {
+            "quote": "Q_2365 By entering your name in the box below, you are acknowledging that ESD’s Contractor & Supplier Diversity policy will apply to this project. You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%. Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively. Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced.",
+            "label": "NEUTRAL",
+            "reason": "The excerpt states awareness of a 30% goal and that contract-specific goals may be higher or lower, so the claimed meet-or-exceed expectation is not established.",
+            "citation_id": "partial:s1"
+          },
+          {
+            "quote": "Please note that ESD’s agency-wide MWBE utilization goal is 30%. After application approval the project may be assigned an individual contract-specific goal, which may be higher or lower than 30%. In instances where goals are set, grantee will be required to use good faith efforts to achieve the prescribed MWBE goals assigned to the project and must maintain such records and take such actions necessary to demonstrate compliance with Article 15-A of the New York State Executive Law.",
+            "label": "NEUTRAL",
+            "reason": "The excerpt states a 30% agency-wide goal and that project-specific goals may be higher or lower than 30%, which does not entail an expectation to meet or exceed 30%.",
+            "citation_id": "partial:s2"
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents RWNYC’s license requirement for public community-benefits progress reports including workforce diversity data.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents a requirement that each licensee post and update community advisory committee commitments.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents the October 2026 report that monitors for all three casino licensees were in place.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G5",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents the Board’s report that RWNYC provided no specific MWBE contractor utilization goal.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G6",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents RWNYC’s supplier outreach session for prospective MWBE contractors.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G7",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents that RWNYC broke ground on Phase II in July 2026.",
+        "claim_links": [],
+        "quote_checks": []
+      }
+    ]
+  },
+  "verdict_protocol": "two-stage-owned-citations-v4",
+  "judgment": {
+    "identity": {
+      "label": "UNRESOLVED",
+      "reason": "The returned commitment has no organization or commitment metadata, and the findings are generic ESD/MWBE program statements rather than a clearly identified promise matching the question’s specific applicant-goal expectation."
+    },
+    "findings": [
+      {
+        "finding_id": "partial:f1",
+        "claims": [
+          {
+            "claim": "ESD’s Contractor & Supplier Diversity policy will apply to this project.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "quote": "Q_2365 By entering your name in the box below, you are acknowledging that ESD’s Contractor & Supplier Diversity policy will apply to this project. You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%. Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively. Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt explicitly states that ESD’s Contractor & Supplier Diversity policy will apply to this project.",
+                "citation_id": "partial:s1"
+              }
+            ],
+            "reason": "The excerpt directly says the policy will apply to the project."
+          },
+          {
+            "claim": "The applicant acknowledges awareness of ESD’s agency-wide MWBE utilization goal of 30% and SDVOB utilization goal of 6%.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "quote": "Q_2365 By entering your name in the box below, you are acknowledging that ESD’s Contractor & Supplier Diversity policy will apply to this project. You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%. Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively. Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt expressly says the applicant is aware of the agency-wide MWBE goal of 30% and SDVOB goal of 6%.",
+                "citation_id": "partial:s1"
+              }
+            ],
+            "reason": "The excerpt expressly states awareness of the 30% MWBE and 6% SDVOB goals."
+          },
+          {
+            "claim": "Each project will be assigned an individual contract-specific goal that may be higher or lower than 30% and 6%, respectively.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "quote": "Q_2365 By entering your name in the box below, you are acknowledging that ESD’s Contractor & Supplier Diversity policy will apply to this project. You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%. Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively. Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt states each project will be assigned an individual contract-specific goal that may be higher or lower than the listed agency-wide percentages.",
+                "citation_id": "partial:s1"
+              }
+            ],
+            "reason": "The excerpt directly states contract-specific goals may differ from the agency-wide percentages."
+          },
+          {
+            "claim": "If the project receives a funding award, the applicant must use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to the project, and failure to attain them could reduce the grant amount.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "quote": "Q_2365 By entering your name in the box below, you are acknowledging that ESD’s Contractor & Supplier Diversity policy will apply to this project. You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%. Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively. Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt expressly conditions the duty on receiving a funding award and states both the good-faith-efforts requirement and possible grant reduction.",
+                "citation_id": "partial:s1"
+              }
+            ],
+            "reason": "The excerpt directly states the conditional good-faith-efforts obligation and possible grant reduction."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f2",
+        "claims": [
+          {
+            "claim": "ESD’s agency-wide MWBE utilization goal is 30%.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "quote": "Please note that ESD’s agency-wide MWBE utilization goal is 30%. After application approval the project may be assigned an individual contract-specific goal, which may be higher or lower than 30%. In instances where goals are set, grantee will be required to use good faith efforts to achieve the prescribed MWBE goals assigned to the project and must maintain such records and take such actions necessary to demonstrate compliance with Article 15-A of the New York State Executive Law.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt explicitly says ESD’s agency-wide MWBE utilization goal is 30%.",
+                "citation_id": "partial:s2"
+              }
+            ],
+            "reason": "The excerpt directly states the 30% agency-wide MWBE goal."
+          },
+          {
+            "claim": "After application approval, the project may be assigned an individual contract-specific goal that may be higher or lower than 30%.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "quote": "Please note that ESD’s agency-wide MWBE utilization goal is 30%. After application approval the project may be assigned an individual contract-specific goal, which may be higher or lower than 30%. In instances where goals are set, grantee will be required to use good faith efforts to achieve the prescribed MWBE goals assigned to the project and must maintain such records and take such actions necessary to demonstrate compliance with Article 15-A of the New York State Executive Law.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt explicitly states that after application approval a contract-specific goal may be higher or lower than 30%.",
+                "citation_id": "partial:s2"
+              }
+            ],
+            "reason": "The excerpt directly states contract-specific goals may differ from 30% after approval."
+          },
+          {
+            "claim": "Where goals are set, the grantee must use good faith efforts to achieve the prescribed MWBE goals assigned to the project and must maintain records and take actions necessary to demonstrate compliance with Article 15-A.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "quote": "Please note that ESD’s agency-wide MWBE utilization goal is 30%. After application approval the project may be assigned an individual contract-specific goal, which may be higher or lower than 30%. In instances where goals are set, grantee will be required to use good faith efforts to achieve the prescribed MWBE goals assigned to the project and must maintain such records and take such actions necessary to demonstrate compliance with Article 15-A of the New York State Executive Law.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt expressly states the good-faith-efforts duty and recordkeeping/compliance obligations where goals are set.",
+                "citation_id": "partial:s2"
+              }
+            ],
+            "reason": "The excerpt directly states the good-faith-efforts and compliance requirements when goals are set."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f3",
+        "claims": [
+          {
+            "claim": "The recipient must submit a periodic MWBE Compliance & Payment Report to OCSD by the 10th day after each month for construction contracts over $100,000 or after each quarter for services and commodities contracts over $25,000, over the term of the project.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "quote": "Recipient is required to submit a periodic MWBE Compliance & Payment Report to OCSD by the 10th day following either the end of each (i) month, for construction contracts in excess of $100,000, or (ii) quarter, for services and commodities contracts in excess of $25,000, over the term of the project documenting the progress made toward achievement of the MWBE project goals.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt expressly gives the reporting recipient, deadline, contract categories, monetary thresholds, and project-term duration.",
+                "citation_id": "partial:s3"
+              }
+            ],
+            "reason": "The excerpt directly states the periodic reporting duty, timing, thresholds, and duration."
+          },
+          {
+            "claim": "The report documents progress made toward achievement of the MWBE project goals.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "quote": "Recipient is required to submit a periodic MWBE Compliance & Payment Report to OCSD by the 10th day following either the end of each (i) month, for construction contracts in excess of $100,000, or (ii) quarter, for services and commodities contracts in excess of $25,000, over the term of the project documenting the progress made toward achievement of the MWBE project goals.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt explicitly says the report documents progress toward achievement of the MWBE project goals.",
+                "citation_id": "partial:s3"
+              }
+            ],
+            "reason": "The excerpt directly states the report’s purpose is documenting progress toward MWBE goals."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f4",
+        "claims": [
+          {
+            "claim": "Where MWBE goals have been established, the recipient must document Good Faith Efforts to provide meaningful participation by MWBEs as subcontractors or suppliers in performing the project.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s4"
+            ],
+            "quote_checks": [
+              {
+                "quote": "Where MWBE goals have been established herein, pursuant to 5 NYCRR §142.8, Recipient must document “Good Faith Efforts” to provide meaningful participation by MWBEs as subcontractors or suppliers in the performance of the project.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt expressly states the recipient must document Good Faith Efforts for meaningful MWBE participation as subcontractors or suppliers.",
+                "citation_id": "partial:s4"
+              }
+            ],
+            "reason": "The excerpt directly states the Good Faith Efforts documentation requirement."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f5",
+        "claims": [
+          {
+            "claim": "If the project receives a funding award, the applicant must use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to the project.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s5"
+            ],
+            "quote_checks": [
+              {
+                "quote": "Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt expressly conditions the requirement on receipt of a funding award and states the duty to use good faith efforts to achieve the assigned MWBE and SDVOB goals.",
+                "citation_id": "partial:s5"
+              }
+            ],
+            "reason": "The excerpt directly states the conditional good-faith-efforts requirement."
+          },
+          {
+            "claim": "Failure to attain the MWBE and SDVOB goals could result in the grant amount being reduced.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s5"
+            ],
+            "quote_checks": [
+              {
+                "quote": "Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced.",
+                "label": "ENTAILMENT",
+                "reason": "The excerpt explicitly states that failure to attain the goals could reduce the grant amount.",
+                "citation_id": "partial:s5"
+              }
+            ],
+            "reason": "The excerpt directly states the possible consequence of failing to attain the goals."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "partial:f1",
+          "partial:f2"
+        ],
+        "citation_ids": [
+          "partial:s1",
+          "partial:s2"
+        ],
+        "label": "NEUTRAL",
+        "reason": "The findings and excerpts establish awareness of a 30% agency-wide MWBE goal and possible contract-specific goals that may be higher or lower, but they do not state that applicants’ goals are expected to meet or exceed the state’s 30% target.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 1,
+            "label": "NEUTRAL",
+            "reason": "Awareness of a 30% agency-wide goal does not establish an expectation that applicants' goals meet or exceed 30%."
+          },
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 2,
+            "label": "NEUTRAL",
+            "reason": "A statement that project-specific goals may be higher or lower than 30% does not establish a meet-or-exceed expectation."
+          },
+          {
+            "finding_id": "partial:f2",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "Stating the agency-wide goal is 30% is weaker than saying applicants’ goals are expected to meet or exceed 30%."
+          },
+          {
+            "finding_id": "partial:f2",
+            "claim_index": 1,
+            "label": "NEUTRAL",
+            "reason": "Possible assignment of goals above or below 30% does not establish the claimed expectation."
+          }
+        ],
+        "quote_checks": [
+          {
+            "quote": "Q_2365 By entering your name in the box below, you are acknowledging that ESD’s Contractor & Supplier Diversity policy will apply to this project. You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%. Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively. Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced.",
+            "label": "NEUTRAL",
+            "reason": "The excerpt states awareness of a 30% goal and that contract-specific goals may be higher or lower, so the claimed meet-or-exceed expectation is not established.",
+            "citation_id": "partial:s1"
+          },
+          {
+            "quote": "Please note that ESD’s agency-wide MWBE utilization goal is 30%. After application approval the project may be assigned an individual contract-specific goal, which may be higher or lower than 30%. In instances where goals are set, grantee will be required to use good faith efforts to achieve the prescribed MWBE goals assigned to the project and must maintain such records and take such actions necessary to demonstrate compliance with Article 15-A of the New York State Executive Law.",
+            "label": "NEUTRAL",
+            "reason": "The excerpt states a 30% agency-wide goal and that project-specific goals may be higher or lower than 30%, which does not entail an expectation to meet or exceed 30%.",
+            "citation_id": "partial:s2"
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents RWNYC’s license requirement for public community-benefits progress reports including workforce diversity data.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents a requirement that each licensee post and update community advisory committee commitments.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents the October 2026 report that monitors for all three casino licensees were in place.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G5",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents the Board’s report that RWNYC provided no specific MWBE contractor utilization goal.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G6",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents RWNYC’s supplier outreach session for prospective MWBE contractors.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G7",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents that RWNYC broke ground on Phase II in July 2026.",
+        "claim_links": [],
+        "quote_checks": []
+      }
+    ],
+    "protocol": "owned-quotes-v1",
+    "verdict": null
+  },
+  "capture_judgment": {
+    "facts": [
+      {
+        "gold_id": "G1",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "p5"
+        ],
+        "reason": "The excerpt says applicants acknowledge ESD’s 30% MWBE goal and that each project later gets a contract-specific goal that may be higher or lower than 30%, so it does not establish that applicants' own goals are expected to meet or exceed 30%."
+      },
+      {
+        "gold_id": "G2",
+        "label": "NEUTRAL",
+        "citation_ids": [],
+        "reason": "No passage mentions RWNYC, a license requirement, community-benefits progress reports, or workforce diversity data."
+      },
+      {
+        "gold_id": "G3",
+        "label": "NEUTRAL",
+        "citation_ids": [],
+        "reason": "No passage mentions licensees posting or updating community advisory committee commitments."
+      },
+      {
+        "gold_id": "G4",
+        "label": "NEUTRAL",
+        "citation_ids": [],
+        "reason": "No passage mentions an October 2026 statement by the Commission chair or monitors for three casino licensees."
+      },
+      {
+        "gold_id": "G5",
+        "label": "NEUTRAL",
+        "citation_ids": [],
+        "reason": "No passage mentions RWNYC, the Board, or any report that no specific MWBE contractor utilization goal was provided."
+      },
+      {
+        "gold_id": "G6",
+        "label": "NEUTRAL",
+        "citation_ids": [],
+        "reason": "No passage mentions RWNYC holding a supplier outreach session for prospective MWBE contractors."
+      },
+      {
+        "gold_id": "G7",
+        "label": "NEUTRAL",
+        "citation_ids": [],
+        "reason": "No passage mentions RWNYC or groundbreaking on Phase II in July 2026."
+      }
+    ],
+    "abstention": {
+      "label": "JUSTIFIED",
+      "reason": "The question asks for a specific promise that applicant goals for minority, women, and service-disabled veteran utilization are expected to meet or exceed New York State’s 30% MWBE goal. The retrieved passages only show acknowledgment of ESD’s agency-wide 30% MWBE and 6% SDVOB goals and state that any project-specific goal may be higher or lower than those figures and is subject to good-faith efforts if funded, so they do not document the exact promised expectation in the question."
+    }
+  },
+  "finished_at": "2026-11-22T10:16:02.576654+00:00"
+}

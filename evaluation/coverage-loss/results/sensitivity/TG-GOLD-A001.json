@@ -1,0 +1,84 @@
+{
+  "fingerprint": "e12d9d10940d5be7e6c36c10fe3bc8215c160cc4f88090f14aac3613b5b81dc5",
+  "reversed_original_ids": [
+    "p6",
+    "p5",
+    "p4",
+    "p3",
+    "p2",
+    "p1"
+  ],
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 5.468999999924563,
+      "request_id": "req_fca8bfa57d2a47e884550d2bec0afa1f",
+      "usage": {
+        "input_tokens": 2024,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 365,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2389
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "decisions": [
+    {
+      "gold_id": "G2",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p6"
+      ],
+      "reason": "The only quoted livable-wages language says jobs \"must deliver livable wages\" and gives no numeric amount or floor."
+    },
+    {
+      "gold_id": "G3",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p1"
+      ],
+      "reason": "The passages mention \"Labor Peace Agreements\" only as a document heading, not as an ongoing material license condition."
+    },
+    {
+      "gold_id": "G4",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage gives Bally's projected roughly $80,000 median wage; the Bally's excerpts are only titles/headings."
+    },
+    {
+      "gold_id": "G5",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage mentions HRMP or a projected roughly $140,000 average wage."
+    },
+    {
+      "gold_id": "G6",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p4"
+      ],
+      "reason": "The Resorts World executive summary states its \"median compensation package totals nearly $150,000 a year,\" which supports a roughly $150,000 median figure."
+    },
+    {
+      "gold_id": "G7",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "The capture includes no executed gaming license text for all three licenses, so it does not establish whether they state or omit a livable-wage floor."
+    }
+  ]
+}

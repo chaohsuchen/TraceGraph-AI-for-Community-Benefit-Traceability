@@ -1,0 +1,178 @@
+{
+  "fingerprint": "f3ea017464e7a9577d43c3a797996b9a918b48e29e033cc60570810b83d87d4e",
+  "origin": "new_tool_free_v4",
+  "passages": {
+    "p1": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "excerpt": "As the Board previously noted, the project includes $761 million in community benefits as part of the project cost. Another $150 million has been proposed in ongoing commitments to a community impact fund, as the table below illustrates. The Applicant committed to this $150 million over a 30-year license term."
+    },
+    "p2": {
+      "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "excerpt": "Chart 5: HRMP Community Benefit during their 20-year Term of License"
+    },
+    "p3": {
+      "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "excerpt": "Community Impact Fund 13 150 163"
+    },
+    "p4": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "excerpt": "Chart 5: HRMP Community Benefit during their 20-year Term of License"
+    },
+    "p5": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "excerpt": "Community Impact Fund 13 150 163"
+    },
+    "p6": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "excerpt": "As the Board previously noted, the project includes $761 million in community benefits as part of the project cost. Another $150 million has been proposed in ongoing commitments to a community impact fund, as the table below illustrates. The Applicant committed to this $150 million over a 30-year license term."
+    },
+    "p7": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+      "excerpt": "The Community Impact Fund, as proposed in the Application, is valued at $163 million over the 30-year length of the license. Our commitments will be binding under the gaming license, ensuring accountability and delivery."
+    },
+    "p8": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+      "excerpt": "The Fund is structured for annual disbursements, guaranteeing stable support for nonprofits, parks, and cultural institutions."
+    },
+    "p9": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+      "excerpt": "There is another $25 million dedicated to three neighborhood projects: East Elmhurst health clinic, Corona/Jackson Heights senior/youth center, and Flushing addiction services. There are also individual philanthropic commitments totaling approximately $2 million"
+    },
+    "p10": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "excerpt": "The funding of these additional years should be resolved in the manner previously indicated in footnote 5 on Page 8."
+    }
+  },
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 6.577999999979511,
+      "request_id": "req_0abba6e39e8a45fdb6b70f8c34afa093",
+      "usage": {
+        "input_tokens": 2715,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 690,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3405
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "decisions": [
+    {
+      "gold_id": "G1",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p1",
+        "p6"
+      ],
+      "reason": "Both passages state that another $150 million was proposed for a community impact fund and that the applicant committed to this $150 million over a 30-year license term."
+    },
+    {
+      "gold_id": "G2",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p10"
+      ],
+      "reason": "The excerpt says funding of additional years should be resolved as previously indicated, but it does not state that the Board proposed alternatives for commitments extending beyond the awarded term."
+    },
+    {
+      "gold_id": "G3",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p3",
+        "p5",
+        "p7",
+        "p9"
+      ],
+      "reason": "The passages show a $163 million fund and separately mention about $25 million for neighborhood projects and about $2 million in philanthropic commitments, but they do not establish a CAC schedule placing a $150 million operating tranche inside a $163.2 million phased package."
+    },
+    {
+      "gold_id": "G4",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt specifies $5 million annually from 2031 through 2060."
+    },
+    {
+      "gold_id": "G5",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p2",
+        "p4"
+      ],
+      "reason": "The cited chart title refers to a 20-year term of license, but the passages do not mention an initial 20 years from the operation certificate or a possible ten-year renewal."
+    },
+    {
+      "gold_id": "G6",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p7"
+      ],
+      "reason": "The excerpt says commitments will be binding under the gaming license, but it does not state that material changes require written Commission approval."
+    },
+    {
+      "gold_id": "G7",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt is a later operator fund page listing approximately $5 million annually from 2031 through 2050."
+    },
+    {
+      "gold_id": "G8",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p9"
+      ],
+      "reason": "The passage mentions individual philanthropic commitments totaling approximately $2 million, not that the operator reported distributing $2 million in 2026."
+    },
+    {
+      "gold_id": "G9",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p7"
+      ],
+      "reason": "The excerpt says the fund is valued at $163 million over the 30-year length of the license, but it is not a Metropolitan Park FAQ and does not itself show continued advertising of a $163 million fund package."
+    },
+    {
+      "gold_id": "G10",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt mentions Queens Theatre acknowledging support from the Metropolitan Park Community Impact Fund."
+    },
+    {
+      "gold_id": "G11",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt mentions Belongo identifying the Metropolitan Park Community Impact Fund as a supporter."
+    },
+    {
+      "gold_id": "G12",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt mentions a proposed seven-person fund advisory board."
+    }
+  ]
+}

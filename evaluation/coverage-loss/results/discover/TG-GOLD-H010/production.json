@@ -1,0 +1,277 @@
+{
+  "arm": "discover",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 13.98499999998603,
+      "request_id": "req_645057f670334bac931aa5e3890a9c16",
+      "usage": {
+        "input_tokens": 14086,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 4608
+        },
+        "output_tokens": 1227,
+        "output_tokens_details": {
+          "reasoning_tokens": 162
+        },
+        "total_tokens": 15313
+      },
+      "search_enabled": true,
+      "web_search_ids": [
+        "ws_0c0e18836090b922016b02c124523c87d2aa84fb7914030fc1",
+        "ws_0c0e18836090b922016b02c126ea8087d2af0f2b57523e5ac5",
+        "ws_0c0e18836090b922016b02c1280f0887d28980b5751e4ee677"
+      ],
+      "stop_reason": "completed",
+      "web_search_statuses": [
+        "completed",
+        "completed",
+        "searching"
+      ]
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 3.437999999965541,
+      "request_id": "req_38c5a841ecff400b978567a800e673cb",
+      "usage": {
+        "input_tokens": 2416,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 222,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2638
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "documents": [
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "status": "readable",
+      "characters": 9571,
+      "sha256": "c364e24715855df49f2ae52c2262e1aa54db416c96b1ee025804918306e0d5f0"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000084/baly-20260630.htm",
+      "status": "unreadable",
+      "characters": 0,
+      "sha256": null
+    },
+    {
+      "url": "https://a002-ceqraccess.nyc.gov/Handlers/ProjectFile.ashx?file=MjAyNFwyNERNRTAxMVhcc2NvcGVcZmluYWxfc2NvcGVcMjRETUUwMTFYX0ZpbmFsX1Njb3BlX29mX1dvcmsucGRmXzAxMTcyMDI1LnBkZg2&signature=3027a6c6b07872c3a00aaebd0cbcaf2e7fad1faf",
+      "status": "ConnectionAbortedError",
+      "characters": 0,
+      "sha256": null
+    }
+  ],
+  "search": {
+    "stop": "SUFFICIENT",
+    "proposals": [
+      {
+        "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+        "quote": "Bally’s plans to install photovoltaic solar panels across the parking garage and select roof areas, targeting approximately 6 percent of annual energy consumption. The remainder of the renewable energy will be procured from renewable energy sources qualified by NYSERDA (e.g., greenhouse gas offsets, renewable energy credits, distributed energy resources)."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+        "quote": "The proposal details on-site solar photovoltaics with battery storage, geothermal readiness, and long-term renewable energy procurement through power purchase agreements, aligning with Local Law 97 emissions limits."
+      },
+      {
+        "url": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+        "quote": "Bally’s Corporation doing business as Bally’s Bronx (“Bally’s”) having submitted a response to the RFA (the response, along with such other amendments, updates, promises, offers, and submissions is collectively referred to as the “Application”);"
+      },
+      {
+        "url": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+        "quote": "Bally’s shall materially perform consistent with the content of its Application and commitments expressed during the Community Advisory Committee evaluative process, as determined or otherwise approved by the Commission."
+      },
+      {
+        "url": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+        "quote": "License Award Effective Date: The License is awarded effective as of December 15, 2025."
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000084/baly-20260630.htm",
+        "quote": "In December 2025, the Company was awarded one of New York State’s three downstate commercial casino licenses for its planned Bally’s Bronx project, requiring the Company to pay a $500.0 million license fee, which was paid during the first quarter of 2026, as well as post a bond or cash deposit equal to 5% of the total project investment."
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000084/baly-20260630.htm",
+        "quote": "The Company must also implement its community benefit commitments, including periodic public reporting, and has engaged an independent Compliance Monitoring Team, approved by the New York State Gaming Commission, to oversee regulatory, anti‑money‑laundering, and community‑benefit compliance."
+      },
+      {
+        "url": "https://a002-ceqraccess.nyc.gov/Handlers/ProjectFile.ashx?file=MjAyNFwyNERNRTAxMVhcc2NvcGVcZmluYWxfc2NvcGVcMjRETUUwMTFYX0ZpbmFsX1Njb3BlX29mX1dvcmsucGRmXzAxMTcyMDI1LnBkZg2&signature=3027a6c6b07872c3a00aaebd0cbcaf2e7fad1faf",
+        "quote": "The EIS will include an energy analysis that will estimate the energy consumption associated with the Proposed Development. Energy efficiency standards included in the Proposed Development will be qualitatively described. Energy-efficiency measures employed at the Development Site would be the responsibility of Bally’s."
+      },
+      {
+        "url": "https://a002-ceqraccess.nyc.gov/Handlers/ProjectFile.ashx?file=MjAyNFwyNERNRTAxMVhcc2NvcGVcZmluYWxfc2NvcGVcMjRETUUwMTFYX0ZpbmFsX1Njb3BlX29mX1dvcmsucGRmXzAxMTcyMDI1LnBkZg2&signature=3027a6c6b07872c3a00aaebd0cbcaf2e7fad1faf",
+        "quote": "Comment 52: What renewable energy sources or energy-saving technologies would be integrated into the project to minimize its environmental footprint?"
+      },
+      {
+        "url": "https://a002-ceqraccess.nyc.gov/Handlers/ProjectFile.ashx?file=MjAyNFwyNERNRTAxMVhcc2NvcGVcZmluYWxfc2NvcGVcMjRETUUwMTFYX0ZpbmFsX1Njb3BlX29mX1dvcmsucGRfXzAxMTcyMDI1LnBkZg2&signature=3027a6c6b07872c3a00aaebd0cbcaf2e7fad1faf",
+        "quote": "Response 52: Energy efficiency standards included in the Proposed Development will be described in Chapter 13 of the EIS, “Energy,” including Bally’s commitment to using electric-powered HVAC systems."
+      }
+    ],
+    "located": {
+      "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-sustainable-development-principals-energy-consumption": "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-sustainable-development-principals-energy-consumption",
+      "https://nycasinos.ny.gov/ballys-bronx-application-materials": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-sustainable-development-principals-energy-star": "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-sustainable-development-principals-energy-star",
+      "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "https://a002-ceqraccess.nyc.gov/ceqr/Details?data=MjRETUUwMTFY0&signature=1c7557f385641122298923258ffa78cd2f1ddc67": "https://a002-ceqraccess.nyc.gov/ceqr/Details?data=MjRETUUwMTFY0&signature=1c7557f385641122298923258ffa78cd2f1ddc67",
+      "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000084/baly-20260630.htm": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000084/baly-20260630.htm",
+      "https://ballysbronx.com/faq/": "https://ballysbronx.com/faq/",
+      "https://a002-ceqraccess.nyc.gov/Handlers/ProjectFile.ashx?file=MjAyNFwyNERNRTAxMVhcc2NvcGVcZmluYWxfc2NvcGVcMjRETUUwMTFYX0ZpbmFsX1Njb3BlX29mX1dvcmsucGRmXzAxMTcyMDI1LnBkZg2&signature=3027a6c6b07872c3a00aaebd0cbcaf2e7fad1faf": "https://a002-ceqraccess.nyc.gov/Handlers/ProjectFile.ashx?file=MjAyNFwyNERNRTAxMVhcc2NvcGVcZmluYWxfc2NvcGVcMjRETUUwMTFYX0ZpbmFsX1Njb3BlX29mX1dvcmsucGRmXzAxMTcyMDI1LnBkZg2&signature=3027a6c6b07872c3a00aaebd0cbcaf2e7fad1faf",
+      "https://www.nyc.gov/assets/dcas/downloads/pdf/cityrecord/2025/cityrecord-05-07-25.pdf": "https://www.nyc.gov/assets/dcas/downloads/pdf/cityrecord/2025/cityrecord-05-07-25.pdf",
+      "https://therfiwire.com/story/private-development-ballys-bronx-casino-no-bid-list-2026-11-03.html": "https://therfiwire.com/story/private-development-ballys-bronx-casino-no-bid-list-2026-11-03.html",
+      "https://ballysbronx.com/": "https://ballysbronx.com/",
+      "https://www.nyserda.ny.gov/All-Programs/NY-Sun/Contractors/Doing-Solar-Business": "https://www.nyserda.ny.gov/All-Programs/NY-Sun/Contractors/Doing-Solar-Business",
+      "https://home4.nyc.gov/site/dcas/agencies/clean-energy-generation-bronx.page": "https://home4.nyc.gov/site/dcas/agencies/clean-energy-generation-bronx.page",
+      "https://der.nyserda.ny.gov/search/": "https://der.nyserda.ny.gov/search/",
+      "https://www.cityrealty.com/nyc/market-insight/features/future-nyc/ballys-bronx-casino-files-construction-permits-expansive-19-story-waterfront-complex/73084": "https://www.cityrealty.com/nyc/market-insight/features/future-nyc/ballys-bronx-casino-files-construction-permits-expansive-19-story-waterfront-complex/73084",
+      "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000044/ex991q12026earningsrelease.htm": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000044/ex991q12026earningsrelease.htm",
+      "https://www.nyserda.ny.gov/PutEnergyToWork/Energy-Technology-and-Solutions/Renewables-and-Clean-Technologies/Solar": "https://www.nyserda.ny.gov/PutEnergyToWork/Energy-Technology-and-Solutions/Renewables-and-Clean-Technologies/Solar",
+      "https://apnews.com/article/af489ecc87ccaade7e0f01e7ef6c198d": "https://apnews.com/article/af489ecc87ccaade7e0f01e7ef6c198d",
+      "https://apnews.com/article/ec7b3c27324c2aa210ce43877f528231": "https://apnews.com/article/ec7b3c27324c2aa210ce43877f528231",
+      "https://apnews.com/article/a804d9bf7a83c90cbbd2226d38ab102d": "https://apnews.com/article/a804d9bf7a83c90cbbd2226d38ab102d",
+      "https://www.thedailybeast.com/nyc-casino-deal-on-track-to-give-trump-millions-for-nothing/": "https://www.thedailybeast.com/nyc-casino-deal-on-track-to-give-trump-millions-for-nothing/",
+      "https://apnews.com/article/4ad140651214d5a412c8bf04a7dbbd40": "https://apnews.com/article/4ad140651214d5a412c8bf04a7dbbd40"
+    },
+    "requested_actions": 2
+  },
+  "shortlist": [
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "excerpt": "Bally’s Corporation doing business as Bally’s Bronx (“Bally’s”) having submitted a response to the RFA (the response, along with such other amendments, updates, promises, offers, and submissions is collectively referred to as the “Application”);",
+      "start": 1946,
+      "end": 2191
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "excerpt": "License Award Effective Date: The License is awarded effective as of December 15, 2025.",
+      "start": 3418,
+      "end": 3505
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "excerpt": "License Award Effective Date: The License is awarded effective as of December 15, 2025. License Duration: 15 years from the Commission’s issuance of an operation certificate to Bally’s pursuant to Racing, Pari-Mutuel Wagering and Breeding Law § 1331, renewable thereafter for a period of 10 years.",
+      "start": 3418,
+      "end": 3715
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "excerpt": "Conditions Binding on Successors and Assigns All of the terms and conditions of the License shall be binding upon Bally’s and its Commission- approved successors and assigns. 10.",
+      "start": 7127,
+      "end": 7305
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "excerpt": "2. Bond Bally’s shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application, in accordance with Racing, Pari-Mutuel Wagering and Breeding Law § 1321-e(1).",
+      "start": 5040,
+      "end": 5284
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "excerpt": "10. Compliance Monitoring Team The Commission and Bally’s have a mutual intent to maintain financial integrity, enhance compliance and ethics programs, establish policies and procedures, prevent money laundering, and ensure the delivery of promised public benefits by establishing a third -party independent Compliance Monitoring Team (“CMT”) in connection with this License.",
+      "start": 7302,
+      "end": 7677
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "excerpt": "To satisfy Bally’s obligation to accomplish the foregoing, Bally’s shall contract promptly with and compensate appropriately an independent third-party CMT firm, proposed by Bally’s and approved by the Commission, to monitor and report to the Commission, with notice to the board of directors of Bally’s, as frequently as the Commission may request, on the ongoing compliance of Bally’s with each of the elements of the Application and the regulatory obligations of Bally’s , including, without limitation, the following topics , with the specifics and scope of the reporting with respect to each element to be approved by the Commission in the course of the Commission’s consideration of approval",
+      "start": 7678,
+      "end": 8375
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "excerpt": "Kristen M. Buckley Secretary to the Commission DATED: December 19, 2025 1 EXHIBIT 1 LICENSE CONDITIONS All references to laws of New York and provisions of the Official Compilation of Codes, Rules and Regulations of the State of New York (“NYCRR”) are to the provisions of such laws and regulations as they exist on the date hereof and as they may hereafter be amended from time to time.",
+      "start": 4171,
+      "end": 4558
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "excerpt": "Community Benefits Bally’s shall establish milestones and budgets concerning the community benefits proposed in the Application and commitments expressed during the Community Advisory Committee evaluative process. Bally’s shall post on its public website and submit to the Commission, for public dissemination without redaction, a community benefits progress report , including, without limitation , construction and operational workforce diversity and demographic data, at a frequency determined by the Commission.",
+      "start": 5288,
+      "end": 5803
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "excerpt": "Jewett: On December 15, 2025, the New York State Gaming Commission having determined that Bally’s Corporation, doing business as Bally’s Bronx (herein “Bally’s”), is suitable and not disqualified for licensure pursuant to New York Racing, Pari-Mutuel Wagering and Breeding Law (“PML”) §§ 1321-g and 1321-h (incorporating §§ 1317 and 1318, respectively) and meets the minimum license thresholds set forth in PML § 1321-f (incorporating § 1316) and Bally’s having agreed to execute a monitoring agreement as set forth in the Commission’s motion of December 15, 2025, has issued the enclosed Gaming Facility License Award.",
+      "start": 304,
+      "end": 923
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "excerpt": "Bally’s shall post on its public website and submit to the Commission, for public dissemination without redaction, a community benefits progress report , including, without limitation , construction and operational workforce diversity and demographic data, at a frequency determined by the Commission. Each such report shall detail progress, set forth relevant budget and expenditure, and explain actual or anticipated delays in delivery of benefits proposed in the Application or Bally’s other commitments.",
+      "start": 5502,
+      "end": 6009
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "excerpt": "by the Board, having reviewed the Application; and The Commission having determined, based upon review of background materials provided by the New York State Police that disclosed no information that would reasonably inhibit positive consideration of a gaming facility license, that Bally’s is suitable and not disqualified in accordance with Racing, Pari -Mutuel Wagering and Breeding Law §§ 1321-g and 1321-h (incorporating §§ 1317 and 1318, respectively); and The Commission having determined that Bally’s meets each of the minimum license thresholds of Racing, Pari- Mutuel Wagering and Breeding Law § 1321-f (incorporating § 1316); and The Commission awards to Bally’s, to be effective on the",
+      "start": 2280,
+      "end": 2977
+    }
+  ],
+  "selection": {
+    "findings": [
+      {
+        "id": "W7",
+        "claim": "Bally’s renewable-energy commitment in its Application, including the plan to meet at least 10% through on-site solar and NYSERDA-qualified procurement, is subject to ongoing third-party compliance monitoring and reporting to the Commission.",
+        "quote": "Bally’s shall contract promptly with and compensate appropriately an independent third-party CMT firm, proposed by Bally’s and approved by the Commission, to monitor and report to the Commission, with notice to the board of directors of Bally’s, as frequently as the Commission may request, on the ongoing compliance of Bally’s with each of the elements of the Application and the regulatory obligations of Bally’s"
+      },
+      {
+        "id": "W11",
+        "claim": "Bally’s must publicly report progress and explain delays in delivering Application benefits and commitments, which would include the renewable-energy undertaking if treated as one of those commitments.",
+        "quote": "Each such report shall detail progress, set forth relevant budget and expenditure, and explain actual or anticipated delays in delivery of benefits proposed in the Application or Bally’s other commitments."
+      }
+    ]
+  },
+  "additions": [
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "quote": "Bally’s shall contract promptly with and compensate appropriately an independent third-party CMT firm, proposed by Bally’s and approved by the Commission, to monitor and report to the Commission, with notice to the board of directors of Bally’s, as frequently as the Commission may request, on the ongoing compliance of Bally’s with each of the elements of the Application and the regulatory obligations of Bally’s",
+      "claim": "Bally’s renewable-energy commitment in its Application, including the plan to meet at least 10% through on-site solar and NYSERDA-qualified procurement, is subject to ongoing third-party compliance monitoring and reporting to the Commission.",
+      "start": 7737,
+      "end": 8151
+    },
+    {
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "title": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "quote": "Each such report shall detail progress, set forth relevant budget and expenditure, and explain actual or anticipated delays in delivery of benefits proposed in the Application or Bally’s other commitments.",
+      "claim": "Bally’s must publicly report progress and explain delays in delivering Application benefits and commitments, which would include the renewable-energy undertaking if treated as one of those commitments.",
+      "start": 5804,
+      "end": 6009
+    }
+  ]
+}

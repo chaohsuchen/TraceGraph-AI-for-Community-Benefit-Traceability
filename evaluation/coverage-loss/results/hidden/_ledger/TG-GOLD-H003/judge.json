@@ -1,0 +1,9 @@
+[
+  {
+    "phase": "judge",
+    "status": "SCORED",
+    "started_at": "2026-11-22T10:15:33.106928+00:00",
+    "prediction_sha256": "8a06f70453d27f330daf8d0ecf35ac5fa929c9962aafa8a6d3e19cdc55ce6ba2",
+    "finished_at": "2026-11-22T10:16:05.196035+00:00"
+  }
+]

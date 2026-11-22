@@ -1,0 +1,162 @@
+{
+  "case_id": "TG-GOLD-A001",
+  "reference_sha256": "0c5730fe2fa97121f71e12dcc3ddfe4be831e51c627fc1ae6562c6ab5fe409cc",
+  "query": "Jobs created by the new casinos must deliver livable wages.",
+  "model": "gpt-5.4",
+  "web_search_model": "gpt-5.4",
+  "started_at": "2026-11-22T09:31:19.081308+00:00",
+  "outcome": "RESOLVED",
+  "graph": {
+    "commitment": {
+      "title": "Proposed requirement that new casino jobs deliver livable wages",
+      "description": "A public statement said that jobs created by new casinos must deliver livable wages to help families live, stay, and prosper in New York.",
+      "original_text": "Revenue from new gaming facilities is expected to generate substantial fiscal benefit to New York’s public schools, local governments, and problem gambling treatment services. The jobs created by these casinos must deliver livable wages to help families live, stay, and prosper in New York.",
+      "responsible_entity_raw": "New York State Gaming Facility Location Board",
+      "beneficiary": {
+        "name": "workers in jobs created by new casinos",
+        "category": "workers"
+      },
+      "obligation_type": "policy requirement",
+      "amount_value": null,
+      "term_periodicity": null,
+      "geographic_scope": "New York",
+      "condition_contingency": "Applies to jobs created by new casinos.",
+      "milestone": null,
+      "notes": null,
+      "id": "commitment-b53ff0be-f0a6-4c53-a704-f9532f9a241b",
+      "original_promise": {
+        "document_id": null,
+        "source": {
+          "id": "source-a0139420-7269-423b-8cb0-8aa764b9fcfc",
+          "url": "https://nycasinos.ny.gov/system/files/documents/2023/01/01.03.23.gflbrfarelease.pdf",
+          "title": "https://nycasinos.ny.gov/system/files/documents/2023/01/01.03.23.gflbrfarelease.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2023/01/01.03.23.gflbrfarelease.pdf",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "locator": "Cited passage",
+        "char_start": null,
+        "char_end": null
+      }
+    },
+    "organization": {
+      "id": "org-285afcb7-d056-43ae-9016-da6fd0046f6f",
+      "name": "New York State Gaming Facility Location Board"
+    },
+    "assessment": {
+      "label": "UNVERIFIED",
+      "verdict": "Delivery unverified for: Jobs created by the new casinos deliver livable wages.",
+      "reasoning": "Requested scope: Jobs created by the new casinos must deliver livable wages.\n\nJobs created by the new casinos deliver livable wages.\nStatus: UNVERIFIED\nThe cited passage documents the original commitment/requirement: \"The jobs created by these casinos must deliver livable wages.\" It identifies the actor's stated standard for jobs created by the new casinos in New York.\nPromised scope: New York State Gaming Facility Location Board states that jobs created by the new gaming facilities/casinos in New York must deliver livable wages to help families live, stay, and prosper in New York. Intended beneficiaries are the workers/families tied to those jobs; location is New York; benefit is livable wages.\nObserved scope: No cited evidence shows any actual workers at any new casino receiving livable wages. No specific casino, employee group, wage level, or location-specific delivery beyond the general New York promise is reported.\nEvidence gap: There is no cited delivery evidence showing that jobs at any covered new casino actually paid livable wages, nor any evidence identifying recipients, wage terms, or a specific site where this occurred.\nPromise evidence: c1\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “Revenue from new gaming facilities is expected to generate substantial fiscal benefit to New York’s public schools, local governments, and problem gambling treatment services. The jobs created by these casinos must deliver livable wages to help families live, stay, and prosper in New York.”\nhttps://nycasinos.ny.gov/system/files/documents/2023/01/01.03.23.gflbrfarelease.pdf",
+      "verification_date": "2026-11-22"
+    },
+    "findings": [
+      {
+        "id": "finding-66b7626b-b4b6-4488-830f-a75f7361bc79",
+        "claim": "In a Jan. 3, 2023 Gaming Facility Location Board release, the New York State Gaming Facility Location Board stated that revenue from new gaming facilities is expected to provide substantial fiscal benefits to New York public schools, local governments, and problem gambling treatment services, and that jobs created by these casinos must deliver livable wages.",
+        "supports": [
+          {
+            "id": "support-73713cdb-eae9-409a-9e7b-a5013d80f1c6",
+            "source": {
+              "id": "source-a0139420-7269-423b-8cb0-8aa764b9fcfc",
+              "url": "https://nycasinos.ny.gov/system/files/documents/2023/01/01.03.23.gflbrfarelease.pdf",
+              "title": "https://nycasinos.ny.gov/system/files/documents/2023/01/01.03.23.gflbrfarelease.pdf",
+              "citation": "https://nycasinos.ny.gov/system/files/documents/2023/01/01.03.23.gflbrfarelease.pdf",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Promise documented",
+            "excerpt": "Revenue from new gaming facilities is expected to generate substantial fiscal benefit to New York’s public schools, local governments, and problem gambling treatment services. The jobs created by these casinos must deliver livable wages to help families live, stay, and prosper in New York.",
+            "locator": "Cited passage",
+            "summary": "In a Gaming Facility Location Board release, the board said revenue from new gaming facilities is expected to benefit public schools, local governments, and problem gambling treatment services, and that jobs created by these casinos \"must deliver livable wages\" to help families live, stay, and prosper in New York.",
+            "explanation": "This passage directly states the public requirement/expectation attached to jobs created by new casinos and gives the stated policy context for that requirement.",
+            "retrieved_at": "2026-11-22T09:31:56.18235+00:00"
+          }
+        ]
+      }
+    ],
+    "relations": [],
+    "assessment_trace": {
+      "not_yet_due": [],
+      "criteria": [
+        {
+          "criterion": "Jobs created by the new casinos deliver livable wages.",
+          "scope_criteria": [
+            "s1",
+            "s2"
+          ],
+          "promise_scope": "New York State Gaming Facility Location Board states that jobs created by the new gaming facilities/casinos in New York must deliver livable wages to help families live, stay, and prosper in New York. Intended beneficiaries are the workers/families tied to those jobs; location is New York; benefit is livable wages.",
+          "observed_scope": "No cited evidence shows any actual workers at any new casino receiving livable wages. No specific casino, employee group, wage level, or location-specific delivery beyond the general New York promise is reported.",
+          "promise_citation_ids": [
+            "c1"
+          ],
+          "delivery_citation_ids": [],
+          "delivery_status": "UNVERIFIED",
+          "timing_requirement": "",
+          "explanation": "The cited passage documents the original commitment/requirement: \"The jobs created by these casinos must deliver livable wages.\" It identifies the actor's stated standard for jobs created by the new casinos in New York.",
+          "gap": "There is no cited delivery evidence showing that jobs at any covered new casino actually paid livable wages, nor any evidence identifying recipients, wage terms, or a specific site where this occurred.",
+          "delivery_support": []
+        }
+      ],
+      "label": "UNVERIFIED",
+      "verdict": "Delivery unverified for: Jobs created by the new casinos deliver livable wages.",
+      "reasoning": "Requested scope: Jobs created by the new casinos must deliver livable wages.\n\nJobs created by the new casinos deliver livable wages.\nStatus: UNVERIFIED\nThe cited passage documents the original commitment/requirement: \"The jobs created by these casinos must deliver livable wages.\" It identifies the actor's stated standard for jobs created by the new casinos in New York.\nPromised scope: New York State Gaming Facility Location Board states that jobs created by the new gaming facilities/casinos in New York must deliver livable wages to help families live, stay, and prosper in New York. Intended beneficiaries are the workers/families tied to those jobs; location is New York; benefit is livable wages.\nObserved scope: No cited evidence shows any actual workers at any new casino receiving livable wages. No specific casino, employee group, wage level, or location-specific delivery beyond the general New York promise is reported.\nEvidence gap: There is no cited delivery evidence showing that jobs at any covered new casino actually paid livable wages, nor any evidence identifying recipients, wage terms, or a specific site where this occurred.\nPromise evidence: c1\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “Revenue from new gaming facilities is expected to generate substantial fiscal benefit to New York’s public schools, local governments, and problem gambling treatment services. The jobs created by these casinos must deliver livable wages to help families live, stay, and prosper in New York.”\nhttps://nycasinos.ny.gov/system/files/documents/2023/01/01.03.23.gflbrfarelease.pdf",
+      "refutation": [],
+      "scope_anchors": {
+        "s1": "New casino jobs must deliver livable wages.",
+        "s2": "Jobs at a covered new casino delivered livable wages."
+      },
+      "citations": {
+        "c1": {
+          "source": {
+            "title": "https://nycasinos.ny.gov/system/files/documents/2023/01/01.03.23.gflbrfarelease.pdf",
+            "url": "https://nycasinos.ny.gov/system/files/documents/2023/01/01.03.23.gflbrfarelease.pdf",
+            "citation": "https://nycasinos.ny.gov/system/files/documents/2023/01/01.03.23.gflbrfarelease.pdf"
+          },
+          "excerpt": "Revenue from new gaming facilities is expected to generate substantial fiscal benefit to New York’s public schools, local governments, and problem gambling treatment services. The jobs created by these casinos must deliver livable wages to help families live, stay, and prosper in New York.",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:31:56.182350+00:00",
+          "finding_id": "finding-66b7626b-b4b6-4488-830f-a75f7361bc79",
+          "support_ids": [
+            "support-73713cdb-eae9-409a-9e7b-a5013d80f1c6"
+          ]
+        }
+      },
+      "scope_gap": ""
+    }
+  },
+  "job_result": {
+    "run_id": null,
+    "outcome": "RESOLVED",
+    "commitment_id": "commitment-b53ff0be-f0a6-4c53-a704-f9532f9a241b",
+    "unmatched_records": [
+      {
+        "excerpt": "RWNYC maintains strong labor relationships and collective bargaining agreements to ensure fair wages and job security.",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2025/07/gi1.rwnyc_.executivesummary.pdf",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2025/07/gi1.rwnyc_.executivesummary.pdf"
+      },
+      {
+        "excerpt": "The current median wage at RWNYC is $39 per hour, annualized at more than $80,000. When benefits are factored in, our median compensation package totals nearly $150,000 a year.",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2025/07/gi1.rwnyc_.executivesummary.pdf",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2025/07/gi1.rwnyc_.executivesummary.pdf"
+      },
+      {
+        "excerpt": "Resorts World New York City - Exhibit 138 - Workforce Table - REVISED REDACTIONS",
+        "source_url": "https://nycasinos.ny.gov/resorts-world-new-york-city-application-materials",
+        "source_title": "https://nycasinos.ny.gov/resorts-world-new-york-city-application-materials"
+      },
+      {
+        "excerpt": "Bally's New York Casino - Workforce Enhancement - Organized Labor - Employees - Average - REVISED REDACTIONS",
+        "source_url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+        "source_title": "https://nycasinos.ny.gov/ballys-bronx-application-materials"
+      },
+      {
+        "excerpt": "Bally's New York Casino - Workforce Enhancement - Organized Labor - Labor Peace Agreements",
+        "source_url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+        "source_title": "https://nycasinos.ny.gov/ballys-bronx-application-materials"
+      }
+    ]
+  },
+  "finished_at": "2026-11-22T09:33:04.847187+00:00"
+}

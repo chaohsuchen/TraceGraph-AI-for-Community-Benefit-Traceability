@@ -1,0 +1,331 @@
+{
+  "arm": "discover",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 8.905999999959022,
+      "request_id": "req_826cb08f42b245a4b45be14d9b222a3f",
+      "usage": {
+        "input_tokens": 14133,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 4608
+        },
+        "output_tokens": 822,
+        "output_tokens_details": {
+          "reasoning_tokens": 174
+        },
+        "total_tokens": 14955
+      },
+      "search_enabled": true,
+      "web_search_ids": [
+        "ws_03b338564019f88d016b02c270e54487d2a468c169112ee78f",
+        "ws_03b338564019f88d016b02c2733ad887d29e2c5e156ef8b195"
+      ],
+      "stop_reason": "completed",
+      "web_search_statuses": [
+        "completed",
+        "completed"
+      ]
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 2.7660000000614673,
+      "request_id": "req_42f66be8b22c4c00aa25361d222574ca",
+      "usage": {
+        "input_tokens": 3307,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 171,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3478
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "documents": [
+    {
+      "url": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary",
+      "status": "readable",
+      "characters": 14795,
+      "sha256": "64e5666988b127b171e08638e59d4992bda284380b3bdff6774be1c61c193034"
+    },
+    {
+      "url": "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf",
+      "status": "readable",
+      "characters": 2445,
+      "sha256": "e05b180ccc7f680759b08dc565aaf344e924570c506ab3580269b14dfe173a65"
+    },
+    {
+      "url": "https://nyrej.com/print/58231",
+      "status": "unreadable",
+      "characters": 0,
+      "sha256": null
+    }
+  ],
+  "search": {
+    "stop": "SUFFICIENT",
+    "proposals": [
+      {
+        "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+        "quote": "Resorts World has offered a community benefits package consisting of an annual commitment, for the duration of the license term, of the lesser of 2 percent of incremental gross gaming revenue above 2025 levels, or $25 million per year, for a workforce housing fund. Resorts World has partnered with Cirrus Workforce Housing Advisors on this initiative, but the substance is vague, with the promised investments in workforce housing to begin “in the immediate term.”"
+      },
+      {
+        "url": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary",
+        "quote": "RWNYC recently formed a joint venture with Cirrus Workforce Housing to contribute up to $25 million each year, over the term of the License, to help fund the construction of up to 50,000 units of workforce housing throughout New York City."
+      },
+      {
+        "url": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+        "quote": "Resorts World's Workforce Housing Initiative, funded through the Cirrus Workforce Housing Fund, is a landmark partnership with organized labor to deliver tens of thousands of new homes for working families across New York City."
+      },
+      {
+        "url": "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf",
+        "quote": "Approximately 3,000 units of union-built and labor-financed workforce housing would also be created."
+      },
+      {
+        "url": "https://nyrej.com/print/58231",
+        "quote": "Queens, NY Cirrus WFHA Funding LLC, an affiliate of Cirrus Real Estate Partners acting in partnership with Resorts World New York City, has acquired the 1.8-acre development site and parking garage at 92-30 165th St. in Jamaica for $46.125 million in a transaction brokered by RIPCO Real Estate. The property offers more than 600,000 buildable s/f and represents the first acquisition under the partners’ workforce housing initiative."
+      },
+      {
+        "url": "https://nyrej.com/print/58231",
+        "quote": "The transaction also represents the largest development site sale completed in Jamaica since the adoption of the Jamaica Neighborhood Plan, underscoring the neighborhood’s emergence as one of New York City’s most active development markets."
+      },
+      {
+        "url": "https://nyrej.com/print/58231",
+        "quote": "The acquisition of this property demonstrates our commitment to transforming well-located sites into high-quality workforce housing that creates lasting value for communities,"
+      },
+      {
+        "url": "https://nyrej.com/print/58231",
+        "quote": "As the first project under our workforce housing initiative with Resorts World, this development will set the tone for what we hope to achieve across New York City: creating attainable housing in transit-oriented locations while supporting long-term neighborhood growth and economic opportunity."
+      },
+      {
+        "url": "https://nyrej.com/print/58231",
+        "quote": "The acquisition of 92-30 165th St. is the first transaction completed under that initiative."
+      }
+    ],
+    "located": {
+      "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "https://rwnewyork.com/community/community-investments/workforce-housing/": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+      "https://nycasinos.ny.gov/system/files/documents/2026/02/exhibit-174-rwnyc-cirrus-mou_redacted.pdf": "https://nycasinos.ny.gov/system/files/documents/2026/02/exhibit-174-rwnyc-cirrus-mou_redacted.pdf",
+      "https://rwnewyork.com/community/workforce/": "https://rwnewyork.com/community/workforce/",
+      "https://nycasinos.ny.gov/system/files/documents/2026/02/exhibit-175-rwnyc-cirrus-partnership-agreement_redacted.pdf": "https://nycasinos.ny.gov/system/files/documents/2026/02/exhibit-175-rwnyc-cirrus-partnership-agreement_redacted.pdf",
+      "https://rwnewyork.com/community/community-investments/": "https://rwnewyork.com/community/community-investments/",
+      "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf": "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf",
+      "https://rwnewyork.com/rws-next-chapter/resorts-world-new-york-city-cirrus-unveil-new-agreement-to-build-up-to-50000-units-of-workforce-housing/": "https://rwnewyork.com/rws-next-chapter/resorts-world-new-york-city-cirrus-unveil-new-agreement-to-build-up-to-50000-units-of-workforce-housing/",
+      "https://nycasinos.ny.gov/resorts-world-new-york-city-application-materials": "https://nycasinos.ny.gov/resorts-world-new-york-city-application-materials",
+      "https://nycasinos.ny.gov/system/files/documents/2026/02/evalecon9.rwnyc_.experience.redactedrevised.pdf": "https://nycasinos.ny.gov/system/files/documents/2026/02/evalecon9.rwnyc_.experience.redactedrevised.pdf",
+      "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary",
+      "https://therealdeal.com/magazine/february-2026/skys-the-limit/": "https://therealdeal.com/magazine/february-2026/skys-the-limit/",
+      "https://rwnewyork.com/press-releases/resorts-world-new-york-city-cuts-the-ribbon-on-live-table-games-and-commercial-casino-slots-marking-a-historic-first-for-new-york-city/": "https://rwnewyork.com/press-releases/resorts-world-new-york-city-cuts-the-ribbon-on-live-table-games-and-commercial-casino-slots-marking-a-historic-first-for-new-york-city/",
+      "https://nyrej.com/print/58231": "https://nyrej.com/print/58231",
+      "https://rwnewyork.com/news/resorts-world-new-york-city-wins-approval-from-nys-gaming-facility-location-board-gflb-to-become-big-apples-first-commercial-casino/": "https://rwnewyork.com/news/resorts-world-new-york-city-wins-approval-from-nys-gaming-facility-location-board-gflb-to-become-big-apples-first-commercial-casino/",
+      "https://www.youtube.com/watch?v=SR82uld6aGc": "https://www.youtube.com/watch?v=SR82uld6aGc",
+      "https://rwnewyork.com/news/resorts-world-new-york-city-announces-raft-of-new-initiatives-to-prepare-workforce-for-dynamic-new-jobs-coming-online-in-2026/": "https://rwnewyork.com/news/resorts-world-new-york-city-announces-raft-of-new-initiatives-to-prepare-workforce-for-dynamic-new-jobs-coming-online-in-2026/",
+      "https://rwnewyork.com/category/rws-next-chapter/page/2/": "https://rwnewyork.com/category/rws-next-chapter/page/2/",
+      "https://www.youtube.com/watch?v=u96ZXKvwosY": "https://www.youtube.com/watch?v=u96ZXKvwosY",
+      "https://apnews.com/article/2177cf00aaca76de9fa821157a3185f8": "https://apnews.com/article/2177cf00aaca76de9fa821157a3185f8"
+    },
+    "requested_actions": 2
+  },
+  "shortlist": [
+    {
+      "url": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary",
+      "title": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary",
+      "excerpt": "RWNYC recently formed a joint venture with Cirrus Workforce Housing to contribute up to $25 million each year, over the term of the License, to help fund the construction of up to 50,000 units of workforce housing throughout New York City.",
+      "start": 12004,
+      "end": 12243
+    },
+    {
+      "url": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary",
+      "title": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary",
+      "excerpt": "Still, RWNYC realizes that the needs of our community have never been greater, as many of our neighbors struggle to find middle-class housing. RWNYC recently formed a joint venture with Cirrus Workforce Housing to contribute up to $25 million each year, over the term of the License, to help fund the construction of up to 50,000 units of workforce housing throughout New York City.",
+      "start": 11861,
+      "end": 12243
+    },
+    {
+      "url": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary",
+      "title": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary",
+      "excerpt": "RWNYC can begin construction immediately upon License award as all required land use entitlements, SEQRA compliance, and building permits have been secured. As part of its long-term vision for an IR with speed to market advantage, RWNYC, in 2010, constructed a VLT facility with additional space earmarked for future gaming expansion.",
+      "start": 6763,
+      "end": 7097
+    },
+    {
+      "url": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary",
+      "title": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary",
+      "excerpt": "More than 50% of RWNYC’s 1,000 employees live within Queens, meaning those salaries stay directly in the community. Still, RWNYC realizes that the needs of our community have never been greater, as many of our neighbors struggle to find middle-class housing.",
+      "start": 11745,
+      "end": 12003
+    },
+    {
+      "url": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary",
+      "title": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary",
+      "excerpt": "RWNYC, with a profitable 15-year history in NYS is well positioned to raise capital at the lowest cost without the risk associated with traditional greenfield development. Proven Workforce Enhancement RWNYC is committed to workforce excellence through sustainable development, upskilling, and partnerships with local institutions.",
+      "start": 10922,
+      "end": 11252
+    },
+    {
+      "url": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary",
+      "title": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary",
+      "excerpt": "RWNYC will continue to build on this partnership. This will be bolstered by investments into the surrounding infrastructure, such as roadways and parks, as well as a new Innovation Campus with access to health and wellness, STEAM programming, and sports and media.",
+      "start": 13688,
+      "end": 13952
+    },
+    {
+      "url": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary",
+      "title": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary",
+      "excerpt": "Proven Workforce Enhancement RWNYC is committed to workforce excellence through sustainable development, upskilling, and partnerships with local institutions. Programs exceed industry standards for responsible gaming and prioritize US-made APPLICATION TO DEVELOP AND OPERATE A GAMING FACILITY IN NEW YORK STATE II.",
+      "start": 11094,
+      "end": 11408
+    },
+    {
+      "url": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary",
+      "title": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary",
+      "excerpt": "The planned completion by 2030 will give RWNYC sufficient time to establish a market presence that will be complementary to the greenfield downstate gaming facilities coming online. RWNYC can begin construction immediately upon License award as all required land use entitlements, SEQRA compliance, and building permits have been secured.",
+      "start": 6581,
+      "end": 6919
+    },
+    {
+      "url": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary",
+      "title": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary",
+      "excerpt": "When benefits are factored in, our median compensation package totals nearly $150,000 a year. More than 50% of RWNYC’s 1,000 employees live within Queens, meaning those salaries stay directly in the community.",
+      "start": 11651,
+      "end": 11860
+    },
+    {
+      "url": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary",
+      "title": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary",
+      "excerpt": "The current median wage at RWNYC is $39 per hour, annualized at more than $80,000. When benefits are factored in, our median compensation package totals nearly $150,000 a year.",
+      "start": 11568,
+      "end": 11744
+    },
+    {
+      "url": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary",
+      "title": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary",
+      "excerpt": "From the beginning of our partnership with New York, RWNYC believed that the 73-acre Aqueduct Raceway is the most compelling site in NYS for a world-class integrated resort. Its expansive footprint, exceptional accessibility, and strategic proximity to JFK Airport are unrivaled.",
+      "start": 818,
+      "end": 1097
+    },
+    {
+      "url": "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf",
+      "title": "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf",
+      "excerpt": "• Approximately 3,000 units of union -built and labor-financed workforce housing would also be created. • The proposal would also make new investments to improve mass transit connectivity both to Manhattan and JFK Airport.",
+      "start": 2223,
+      "end": 2445
+    },
+    {
+      "url": "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf",
+      "title": "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf",
+      "excerpt": "• Aqueduct Park would add another 50 acres of new, dedicated parks. • Approximately 3,000 units of union -built and labor-financed workforce housing would also be created.",
+      "start": 2155,
+      "end": 2326
+    },
+    {
+      "url": "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf",
+      "title": "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf",
+      "excerpt": "• The proposed 350,000-square-foot casino floor will be one of the largest in the world, staffed b y a diverse, local workforce. • Resorts World will add 1,600 new hotel rooms, adding to the 400 already online at the Hyatt R egency.",
+      "start": 979,
+      "end": 1211
+    },
+    {
+      "url": "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf",
+      "title": "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf",
+      "excerpt": "• Resorts World will add an additional 2 million square feet of entertainment, gaming, retail, dining, and convention space to its existing 1-million -square-foot footprint. • The proposed 350,000-square-foot casino floor will be one of the largest in the world, staffed b y a diverse, local workforce.",
+      "start": 805,
+      "end": 1107
+    },
+    {
+      "url": "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf",
+      "title": "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf",
+      "excerpt": "The $5 billion project will create 10,000 jobs beginning as soon as this year, an d d eliver billions of dollars in new re venue for New York State. Spurring New York State’s Economy • The new Resorts World New York City will increase its permanent workforce by five-fold for a total of 5,000 employees.",
+      "start": 192,
+      "end": 495
+    },
+    {
+      "url": "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf",
+      "title": "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf",
+      "excerpt": "REALIZING THE DREAM Resorts World New York Cit y’s n ew expansion will realize a decade-lo ng v ision to create a global gaming, entertainment and dining destination in the borough of Queens. The $5 billion project will create 10,000 jobs beginning as soon as this year, an d d eliver billions of dollars in new re venue for New York State.",
+      "start": 0,
+      "end": 340
+    },
+    {
+      "url": "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf",
+      "title": "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf",
+      "excerpt": "• Resorts World will add 1,600 new hotel rooms, adding to the 400 already online at the Hyatt R egency. • Guests will be able to enjoy approximately 30 new food and beverage options; take in the hottest DJ performances at the Ayu DayClub; and relax at the Awana Spa Answering Community Needs • The project would create 350,000 square feet of meeting, conference, and entertainment space, including a 7,000-seat arena.",
+      "start": 1108,
+      "end": 1525
+    },
+    {
+      "url": "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf",
+      "title": "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf",
+      "excerpt": "• A $50 million investment in the Genting Innovation Center will lay the foundation for the Kenny “The Jet” Smith Academy; a Community Health and Wellness Center; and a Queens STEAM Institute. A Vision for Aqueduct Park • Future consolidation of horse racing at Belmont Park would open the remainder of the site to create Aqueduct Park – an expanded vision of the Resorts World proposal.",
+      "start": 1673,
+      "end": 2060
+    },
+    {
+      "url": "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf",
+      "title": "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf",
+      "excerpt": "• New York State will immediately receive $500 million from the gaming license fee, as well as millions of dollars in new, direct annual revenue. • Resorts World will add an additional 2 million square feet of entertainment, gaming, retail, dining, and convention space to its existing 1-million -square-foot footprint.",
+      "start": 659,
+      "end": 978
+    },
+    {
+      "url": "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf",
+      "title": "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf",
+      "excerpt": "• Resorts World will create more than 10 acres of publicly accessible greenspace – including pocket parks, new trails, and bike and running paths. • A $50 million investment in the Genting Innovation Center will lay the foundation for the Kenny “The Jet” Smith Academy; a Community Health and Wellness Center; and a Queens STEAM Institute.",
+      "start": 1526,
+      "end": 1865
+    }
+  ],
+  "selection": {
+    "findings": [
+      {
+        "id": "W1",
+        "claim": "RWNYC said the Cirrus workforce-housing joint venture would contribute up to $25 million annually over the term of the license for workforce housing across New York City.",
+        "quote": "RWNYC recently formed a joint venture with Cirrus Workforce Housing to contribute up to $25 million each year, over the term of the License, to help fund the construction of up to 50,000 units of workforce housing throughout New York City."
+      },
+      {
+        "id": "W12",
+        "claim": "A later Resorts World project fact sheet tied the same workforce-housing undertaking to approximately 3,000 units described as union-built and labor-financed.",
+        "quote": "• Approximately 3,000 units of union -built and labor-financed workforce housing would also be created."
+      }
+    ]
+  },
+  "additions": [
+    {
+      "url": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary",
+      "title": "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary",
+      "quote": "RWNYC recently formed a joint venture with Cirrus Workforce Housing to contribute up to $25 million each year, over the term of the License, to help fund the construction of up to 50,000 units of workforce housing throughout New York City.",
+      "claim": "RWNYC said the Cirrus workforce-housing joint venture would contribute up to $25 million annually over the term of the license for workforce housing across New York City.",
+      "start": 12004,
+      "end": 12243
+    },
+    {
+      "url": "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf",
+      "title": "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf",
+      "quote": "• Approximately 3,000 units of union -built and labor-financed workforce housing would also be created.",
+      "claim": "A later Resorts World project fact sheet tied the same workforce-housing undertaking to approximately 3,000 units described as union-built and labor-financed.",
+      "start": 2223,
+      "end": 2326
+    }
+  ]
+}

@@ -1,0 +1,397 @@
+{
+  "case_id": "TG-GOLD-H017",
+  "query": "HRMP's $761 million community benefits include traffic/roadway work, MTA station improvements, 25+ acres of open space, a Community Impact Fund and social-services funding.",
+  "facts": [
+    {
+      "id": "G1",
+      "text": "The Board valued the Metropolitan Park community benefits package at $761 million.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H017",
+          "row": 5
+        }
+      ]
+    },
+    {
+      "id": "G2",
+      "text": "The package includes traffic and roadway improvements.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H017",
+          "row": 5
+        }
+      ]
+    },
+    {
+      "id": "G3",
+      "text": "The package includes improvements to the MTA transit station.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H017",
+          "row": 5
+        }
+      ]
+    },
+    {
+      "id": "G4",
+      "text": "The package includes over 25 acres of new public open space.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H017",
+          "row": 5
+        }
+      ]
+    },
+    {
+      "id": "G5",
+      "text": "The package includes a community impact fund.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H017",
+          "row": 5
+        }
+      ]
+    },
+    {
+      "id": "G6",
+      "text": "The package includes funding for neighborhood social services.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H017",
+          "row": 5
+        }
+      ]
+    },
+    {
+      "id": "G7",
+      "text": "The Board's chart itemizes $761 million upfront and another $150 million ongoing.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H017",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "G8",
+      "text": "HRMP's executive summary advertises about $1 billion in community benefits.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H017",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "G9",
+      "text": "HRMP's executive summary also uses $1.75 billion for investment into community needs.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H017",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "G10",
+      "text": "HRMP's license requires milestones and budgets for community benefits proposed in its application.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H017",
+          "row": 8
+        }
+      ]
+    },
+    {
+      "id": "G11",
+      "text": "The CAC submission schedules $150 million of fund payments during 2031–2060.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H017",
+          "row": 10
+        }
+      ]
+    },
+    {
+      "id": "G12",
+      "text": "The operator reported distributing $2 million in grants in 2026.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H017",
+          "row": 11
+        }
+      ]
+    },
+    {
+      "id": "G13",
+      "text": "News coverage reported that MTA had yet to agree to the proposed station overhaul.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H017",
+          "row": 12
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "K1",
+      "text": "HRMP delivered the promised roadway and traffic improvements.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H017",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H017",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "K2",
+      "text": "HRMP delivered the promised MTA station improvements.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H017",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H017",
+          "row": 12
+        }
+      ]
+    },
+    {
+      "id": "K3",
+      "text": "HRMP provided over 25 acres of new public open space.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H017",
+          "row": 5
+        }
+      ]
+    },
+    {
+      "id": "K4",
+      "text": "HRMP funded the promised Community Impact Fund for the applicable periods.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H017",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H017",
+          "row": 10
+        },
+        {
+          "sheet": "TG-GOLD-H017",
+          "row": 11
+        }
+      ]
+    },
+    {
+      "id": "K5",
+      "text": "HRMP supplied the promised neighborhood social-services funding.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H017",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H017",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "K6",
+      "text": "Delivered benefits meet the promised package value using a defined and reconciled scope and term.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H017",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H017",
+          "row": 6
+        },
+        {
+          "sheet": "TG-GOLD-H017",
+          "row": 7
+        }
+      ]
+    }
+  ],
+  "delivery_applicable": true,
+  "reference_verdict": {
+    "status": "conflicting",
+    "reasoning": "Sources disagree on the size of what was promised: the Board values it at $761M (over 20 years) while HRMP's filings and press say ~$1B or $1.75B, and the impact fund term is 20, 30 or to 2050/2060 depending on the source. The license binds the Application's benefits but sets no dollar figure. Delivery is mostly not yet due (opening 2030); the only delivery evidence (2026 impact-fund grants) is self-reported.",
+    "delivery_applicable": true,
+    "source_refs": [
+      {
+        "sheet": "TG-GOLD-H017",
+        "row": 17
+      },
+      {
+        "sheet": "TG-GOLD-H017",
+        "row": 18
+      }
+    ]
+  },
+  "sources": [
+    {
+      "sheet": "TG-GOLD-H017",
+      "row": 5,
+      "title": "GFLB Selection document (1 Dec 2025)",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "publisher": "NY Gaming Facility Location Board (regulator)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "pdf p.18: \"Community benefits valued at $761 million include significant traffic and roadway improvements, improvements to the ... (MTA)'s public transit station, over 25 acres of new public open space, a Community Impact Fund, and funding for neighborhood social services.\" Fn.7: \"The community benefit commitment is confused by several factors.\"",
+      "notes": "Quote verified verbatim (char 39790-40086)."
+    },
+    {
+      "sheet": "TG-GOLD-H017",
+      "row": 6,
+      "title": "GFLB Report and Findings (Mar 2026)",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "publisher": "NY Gaming Facility Location Board (regulator)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "published_on": null,
+      "evidence_status": "conflicting",
+      "specific_evidence": "p.29: \"$761 million over the 20 years of their license term\". p.30: \"The Applicant committed to this $150 million over a 30-year license term.\" Chart 5: Park $299M, Transit $348M, Taste of Queens $60M, Neighborhood $41M, Impact Fund $13M = $761M upfront; +$150M ongoing = $911M.",
+      "notes": "20- vs 30-year term inconsistency in the Board's own report."
+    },
+    {
+      "sheet": "TG-GOLD-H017",
+      "row": 7,
+      "title": "HRMP application Executive Summary (Jun 2025) and Supplement (Oct 2025)",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2025/07/gi1.hardrock.executivesummary.pdf ; https://nycasinos.ny.gov/system/files/documents/2025/10/gi1.hardrock.executivesummary.supplement-redacted.pdf",
+      "publisher": "Hard Rock Metropolitan Park (obligor)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/gi1.hardrock.executivesummary.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2025/07/gi1.hardrock.executivesummary.pdf ; https://nycasinos.ny.gov/system/files/documents/2025/10/gi1.hardrock.executivesummary.supplement-redacted.pdf",
+      "published_on": null,
+      "evidence_status": "conflicting",
+      "specific_evidence": "Headline \"$1 Billion in Community Benefits\"; \"a $1.75 billion dollar investment into community needs including infrastructure, parks and open space\"; \"$163 million impact fund and $50 million for local health, youth, and senior service initiatives will deliver approximately $1 billion in benefits.\"",
+      "notes": "$761M does not appear in HRMP's own filings."
+    },
+    {
+      "sheet": "TG-GOLD-H017",
+      "row": 8,
+      "title": "HRMP license award and Exhibit 1 License Conditions (19 Dec 2025; effective 15 Dec 2025)",
+      "citation": "https://gaming.ny.gov/hard-rock-metropolitan-park-commercial-casino-license",
+      "publisher": "NYS Gaming Commission (regulator)",
+      "url": "https://gaming.ny.gov/hard-rock-metropolitan-park-commercial-casino-license",
+      "url_origin": "workbook",
+      "locator": "https://gaming.ny.gov/hard-rock-metropolitan-park-commercial-casino-license",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "Condition 3: \"Hard Rock shall establish milestones and budgets concerning the community benefits proposed in the Application\" and post public progress reports. Condition 10: monitor scope includes \"Community benefits proposed in the Application\".",
+      "notes": "No dollar figure in the license."
+    },
+    {
+      "sheet": "TG-GOLD-H017",
+      "row": 9,
+      "title": "Gaming Commission minutes, 3 Feb 2026 (adopted 16 Mar 2026)",
+      "citation": "https://gaming.ny.gov/system/files/documents/2026/03/adopted-minutes-3-february-2026.pdf",
+      "publisher": "NYS Gaming Commission (regulator)",
+      "url": "https://gaming.ny.gov/system/files/documents/2026/03/adopted-minutes-3-february-2026.pdf",
+      "url_origin": "workbook",
+      "locator": "https://gaming.ny.gov/system/files/documents/2026/03/adopted-minutes-3-february-2026.pdf",
+      "published_on": null,
+      "evidence_status": "no public evidence located",
+      "specific_evidence": "Commissioners \"required each licensee publicly post a listing of commitments promised to their representative community advisory committee, and, on a rolling basis, update the progress\".",
+      "notes": "HRMP's list/progress reports not found on metropolitanpark.com or nycasinos.ny.gov."
+    },
+    {
+      "sheet": "TG-GOLD-H017",
+      "row": 10,
+      "title": "HRMP responses to CAC inquiries (29 Sep 2025)",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "publisher": "Hard Rock Metropolitan Park (obligor)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "published_on": null,
+      "evidence_status": "self-reported only",
+      "specific_evidence": "Community Impact Fund schedule: Pre-award $3.2M; 2026-2030 $10M; 2031-2060 $150M; total $163.2M. Seven-member advisory board from 2026.",
+      "notes": "none"
+    },
+    {
+      "sheet": "TG-GOLD-H017",
+      "row": 11,
+      "title": "Metropolitan Park Community Impact Fund page",
+      "citation": "https://www.metropolitanpark.com/fund",
+      "publisher": "Hard Rock Metropolitan Park (obligor)",
+      "url": "https://www.metropolitanpark.com/fund",
+      "url_origin": "workbook",
+      "locator": "https://www.metropolitanpark.com/fund",
+      "published_on": null,
+      "evidence_status": "self-reported only",
+      "specific_evidence": "\"$2 million in grants distributed in 2026 alone\"; ~$2M/yr 2026-2030; ~$5M/yr 2031-2050. \"The Advisory Board does not approve grants.\"",
+      "notes": "Runs to 2050 here vs 2060 in CAC answers."
+    },
+    {
+      "sheet": "TG-GOLD-H017",
+      "row": 12,
+      "title": "Queens Daily Eagle, 'Construction prep underway for $8 billion Metropolitan Park casino' (25 Feb 2026)",
+      "citation": "https://queenseagle.com/all/2026/2/25/construction-prep-underway-for-8-billion-metropolitan-park-casino-in-queens",
+      "publisher": "Queens Daily Eagle (independent press)",
+      "url": "https://queenseagle.com/all/2026/2/25/construction-prep-underway-for-8-billion-metropolitan-park-casino-in-queens",
+      "url_origin": "workbook",
+      "locator": "https://queenseagle.com/all/2026/2/25/construction-prep-underway-for-8-billion-metropolitan-park-casino-in-queens",
+      "published_on": null,
+      "evidence_status": "conflicting",
+      "specific_evidence": "\"Cohen has also promised $1 billion in community benefits, including a complete overhaul of the 7 line train station at Mets-Willets Point, which the MTA has yet to agree to.\"",
+      "notes": "MTA agreement on station work outstanding as of Feb 2026."
+    }
+  ],
+  "provenance": {
+    "workbook": "Golden Dataset (6).xlsx",
+    "sha256": "2da588b49b311957885ed7ff98bcd31c49e9d3ef8e99a761a3e9e5fcdb360099",
+    "identity": {
+      "sheet": "gold commitments",
+      "row": 87
+    },
+    "detail_sheet": "TG-GOLD-H017",
+    "detail_internal_id_cell": "B1",
+    "workbook_valid_flag": 1,
+    "workbook_split": "heldout_provisional",
+    "workbook_evidence_status": "not yet due",
+    "workbook_fields": {
+      "gold_id": "TG-GOLD-H017",
+      "document_id": "GFLB-SEL-2025-12-01",
+      "page_section": "pdf p.18; Hard Rock Metropolitan Park: Board Evaluation",
+      "char_start": 39790.0,
+      "char_end": 40086.0,
+      "commitment_text": "Community benefits valued at $761 million include significant traffic and roadway improvements, improvements to the Metropolitan Transportation Authority (MTA)’s public transit station, over 25 acres of new public open space, a Community Impact Fund, and funding for neighborhood social services.",
+      "normalized_statement": "HRMP's $761 million community benefits include traffic/roadway work, MTA station improvements, 25+ acres of open space, a Community Impact Fund and social-services funding.",
+      "obligation_type": "Contractual commitment",
+      "responsible_entity": "Queens Future, LLC d/b/a Hard Rock Metropolitan Park",
+      "amount_value": "$761 million (valuation)",
+      "term_periodicity": "project cost (construction)",
+      "geographic_scope": "Queens (Willets Point)",
+      "beneficiary_category": "transportation; open space; social services",
+      "beneficiary_named": "Metropolitan Transportation Authority (station); Community Impact Fund",
+      "condition_contingency": "none stated",
+      "milestone": "none stated",
+      "evidence_status": "not yet due",
+      "confidence": "Medium",
+      "adjudication_note": "Footnote 7: the community benefit commitment 'is confused by several factors'.",
+      "duplicate_of": "none",
+      "notes": "none",
+      "evaluation_split": "heldout_provisional",
+      "manually annotated valid?": 1.0
+    },
+    "detail_research_cutoff": null,
+    "evaluation_use": "22-case annotated benchmark; development-exposed cases included",
+    "reference_preparation": "Locally curated factual hypotheses and delivery conditions from the cited Golden (6) cells; prior to research."
+  }
+}

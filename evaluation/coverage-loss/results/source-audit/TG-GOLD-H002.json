@@ -1,0 +1,61 @@
+{
+  "case": "TG-GOLD-H002",
+  "selected_distinct_urls": 2,
+  "review": {
+    "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf": {
+      "relationship": "different_host_independence_unestablished",
+      "identical_content_urls": [],
+      "old_passages_repeated": [],
+      "snapshot_consistent": true,
+      "original_status": {
+        "status": "readable",
+        "characters": 4890,
+        "sha256": "705116e39baf82859b2595378259645242e66a61bfc7ada81041d306e922eaf1"
+      },
+      "same_host_or_filename_compared": []
+    },
+    "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf": {
+      "relationship": "same_host_distinct_or_unresolved_document",
+      "identical_content_urls": [],
+      "old_passages_repeated": [],
+      "snapshot_consistent": true,
+      "original_status": {
+        "status": "readable",
+        "characters": 23053,
+        "sha256": "1c45927c89aa5069e3121ca910d06f2601d5f157188a74e90b8e407e82dfb75c"
+      },
+      "same_host_or_filename_compared": [
+        {
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+          "status": "readable",
+          "characters": 83876,
+          "sha256": "51ff23fae85ecd73d10bfcc4831d8ddeb0cbbb672f7ccf7756d14f6a256ca662"
+        },
+        {
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+          "status": "unreadable",
+          "characters": 0,
+          "sha256": null
+        },
+        {
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys-bronx-casino-and-resort-baly-response-9.19.2025.pdf",
+          "status": "readable",
+          "characters": 36037,
+          "sha256": "baf7fce45c929af603318326cf3c033089bddc04087a01bda19c12265756fc46"
+        },
+        {
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-draft-cac-proposal-and-amendments-for-ballys.pdf",
+          "status": "readable",
+          "characters": 17698,
+          "sha256": "e9e14e9d2107d5bac8dbf25d19222729d99e549a15da2fdde219aee96b9a05a5"
+        },
+        {
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf",
+          "status": "readable",
+          "characters": 11608,
+          "sha256": "d737ebb6e7936f32c08f7d094d51fd3711bcdf90e317c6f69a0bc8af584082ea"
+        }
+      ]
+    }
+  }
+}

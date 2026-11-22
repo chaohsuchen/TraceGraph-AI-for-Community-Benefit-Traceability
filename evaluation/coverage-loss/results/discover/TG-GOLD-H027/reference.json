@@ -1,0 +1,223 @@
+{
+  "case_id": "TG-GOLD-H027",
+  "query": "HRMP proposes onsite daycare and tuition reimbursement for employees.",
+  "facts": [
+    {
+      "id": "G1",
+      "text": "The Board described HRMP as the only applicant proposing both onsite daycare and tuition reimbursement.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H027",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H027",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "G2",
+      "text": "HRMP's executive summary proposes on-site childcare as an employee benefit.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H027",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "G3",
+      "text": "HRMP's executive summary proposes tuition reimbursement for employees.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H027",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "G4",
+      "text": "The HRMP license generally incorporates application and CAC commitments without naming these two benefits.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H027",
+          "row": 10
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "K1",
+      "text": "On-site daycare was actually made available to the project's operating employees.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H027",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H027",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "K2",
+      "text": "Tuition reimbursement was actually made available to the project's operating employees.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H027",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H027",
+          "row": 7
+        }
+      ]
+    }
+  ],
+  "delivery_applicable": true,
+  "reference_verdict": {
+    "status": "not yet due",
+    "reasoning": "The proposal is real but rests on one sentence of the executive summary; the Board repeats it. Both benefits apply to operating employees, and the casino is not due to open until 2030. No later source mentions them. The 'only applicant' part depends on the Board's reading of the other two applications, which were not re-checked.",
+    "delivery_applicable": true,
+    "source_refs": [
+      {
+        "sheet": "TG-GOLD-H027",
+        "row": 17
+      },
+      {
+        "sheet": "TG-GOLD-H027",
+        "row": 18
+      }
+    ]
+  },
+  "sources": [
+    {
+      "sheet": "TG-GOLD-H027",
+      "row": 5,
+      "title": "GFLB Selection document (1 Dec 2025)",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "publisher": "NY Gaming Facility Location Board (regulator)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "pdf p.21: \"The Board also notes positively that HRMP is the only Applicant proposing onsite daycare and tuition reimbursement.\"",
+      "notes": "Quote verified verbatim (char 47797-47875). Favorable note, not a recommended condition."
+    },
+    {
+      "sheet": "TG-GOLD-H027",
+      "row": 6,
+      "title": "GFLB Report and Findings (Mar 2026)",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "publisher": "NY Gaming Facility Location Board (regulator)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "Same sentence (printed p.32).",
+      "notes": "none"
+    },
+    {
+      "sheet": "TG-GOLD-H027",
+      "row": 7,
+      "title": "HRMP application Executive Summary (Jun 2025) and Supplement (Oct 2025)",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2025/07/gi1.hardrock.executivesummary.pdf ; https://nycasinos.ny.gov/system/files/documents/2025/10/gi1.hardrock.executivesummary.supplement-redacted.pdf",
+      "publisher": "Hard Rock Metropolitan Park (obligor)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/gi1.hardrock.executivesummary.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2025/07/gi1.hardrock.executivesummary.pdf ; https://nycasinos.ny.gov/system/files/documents/2025/10/gi1.hardrock.executivesummary.supplement-redacted.pdf",
+      "published_on": null,
+      "evidence_status": "self-reported only",
+      "specific_evidence": "p.5: \"Benefits such as on-site childcare, tuition reimbursement, and family leave will also be offered, making it easier for parents to remain in the workforce.\"",
+      "notes": "Only source of the proposal. No size, operator, cap or start date."
+    },
+    {
+      "sheet": "TG-GOLD-H027",
+      "row": 8,
+      "title": "HRMP application: Workforce Enhancement, MWBE goals (Jun 2025)",
+      "citation": "https://nycasinos.ny.gov/metropolitan-park-workforce-enhancement-mwbe-goals",
+      "publisher": "Hard Rock Metropolitan Park (obligor)",
+      "url": "https://nycasinos.ny.gov/metropolitan-park-workforce-enhancement-mwbe-goals",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/metropolitan-park-workforce-enhancement-mwbe-goals",
+      "published_on": null,
+      "evidence_status": "no public evidence located",
+      "specific_evidence": "Neither childcare nor tuition reimbursement mentioned.",
+      "notes": "none"
+    },
+    {
+      "sheet": "TG-GOLD-H027",
+      "row": 9,
+      "title": "HRMP responses to CAC inquiries (29 Sep 2025)",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "publisher": "Hard Rock Metropolitan Park (obligor)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "published_on": null,
+      "evidence_status": "no public evidence located",
+      "specific_evidence": "Neither childcare nor tuition reimbursement mentioned.",
+      "notes": "none"
+    },
+    {
+      "sheet": "TG-GOLD-H027",
+      "row": 10,
+      "title": "HRMP license award and Exhibit 1 License Conditions (19 Dec 2025; effective 15 Dec 2025)",
+      "citation": "https://gaming.ny.gov/hard-rock-metropolitan-park-commercial-casino-license",
+      "publisher": "NYS Gaming Commission (regulator)",
+      "url": "https://gaming.ny.gov/hard-rock-metropolitan-park-commercial-casino-license",
+      "url_origin": "workbook",
+      "locator": "https://gaming.ny.gov/hard-rock-metropolitan-park-commercial-casino-license",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "Does not name this item. Exhibit 1: \"Hard Rock shall materially perform consistent with the content of its Application and commitments expressed during the Community Advisory Committee evaluative process, as determined or otherwise approved by the Commission.\"",
+      "notes": "Childcare and tuition not named."
+    }
+  ],
+  "provenance": {
+    "workbook": "Golden Dataset (6).xlsx",
+    "sha256": "2da588b49b311957885ed7ff98bcd31c49e9d3ef8e99a761a3e9e5fcdb360099",
+    "identity": {
+      "sheet": "gold commitments",
+      "row": 94
+    },
+    "detail_sheet": "TG-GOLD-H027",
+    "detail_internal_id_cell": "B1",
+    "workbook_valid_flag": 1,
+    "workbook_split": "heldout_provisional",
+    "workbook_evidence_status": "not yet due",
+    "workbook_fields": {
+      "gold_id": "TG-GOLD-H027",
+      "document_id": "GFLB-SEL-2025-12-01",
+      "page_section": "pdf p.21; Hard Rock Metropolitan Park: Workforce Enhancement",
+      "char_start": 47797.0,
+      "char_end": 47875.0,
+      "commitment_text": "HRMP is the only Applicant proposing onsite daycare and tuition reimbursement.",
+      "normalized_statement": "HRMP proposes onsite daycare and tuition reimbursement for employees.",
+      "obligation_type": "Contractual commitment",
+      "responsible_entity": "Queens Future, LLC d/b/a Hard Rock Metropolitan Park",
+      "amount_value": "unspecified",
+      "term_periodicity": "operations",
+      "geographic_scope": "Queens",
+      "beneficiary_category": "workforce/jobs (childcare, education)",
+      "beneficiary_named": "none named",
+      "condition_contingency": "none stated",
+      "milestone": "none stated",
+      "evidence_status": "not yet due",
+      "confidence": "Medium",
+      "adjudication_note": "proposing' — application proposal incorporated via RFA clause; competing label Unresolved / ambiguous.",
+      "duplicate_of": "none",
+      "notes": "none",
+      "evaluation_split": "heldout_provisional",
+      "manually annotated valid?": 1.0
+    },
+    "detail_research_cutoff": null,
+    "evaluation_use": "22-case annotated benchmark; development-exposed cases included",
+    "reference_preparation": "Locally curated factual hypotheses and delivery conditions from the cited Golden (6) cells; prior to research."
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "fingerprint": "0b316f18c51c804f25e925fd64e4d636f649977bacaff88407b854e040729c1b",
+  "reversed_original_ids": [
+    "p11",
+    "p10",
+    "p9",
+    "p8",
+    "p7",
+    "p6",
+    "p5",
+    "p4",
+    "p3",
+    "p2",
+    "p1"
+  ],
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 15.078000000095926,
+      "request_id": "req_06d3787d8fee4420b2e9d73a9253b22e",
+      "usage": {
+        "input_tokens": 2806,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 338,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3144
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "decisions": [
+    {
+      "gold_id": "G2",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p9",
+        "p10"
+      ],
+      "reason": "The Board says the projects \"were not considered in the Board’s evaluation\" and separately that it believes HRMP must complete the food hall, but no excerpt states that the food hall was outside HRMP’s commitments in its application."
+    },
+    {
+      "gold_id": "G6",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage gives the food hall’s square footage, so the claim that it was roughly 30,000 square feet is unestablished."
+    },
+    {
+      "gold_id": "G7",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt discusses license language incorporating application and CAC commitments generally or whether the food hall is expressly named."
+    },
+    {
+      "gold_id": "G8",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage mentions press coverage, a June 1, 2030 completion target, or Commission filings attributing such a date."
+    }
+  ]
+}

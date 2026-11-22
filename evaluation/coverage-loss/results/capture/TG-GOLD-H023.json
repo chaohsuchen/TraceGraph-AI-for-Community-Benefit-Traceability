@@ -1,0 +1,122 @@
+{
+  "fingerprint": "f87f7cfe74d2fa9e53ef585dfa7952423ec2dcd78b5af2382e920a43d87b2d2f",
+  "origin": "frozen",
+  "passages": {
+    "p1": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "excerpt": "Further, HRMP plans to construct an overbuild with a construction cost of approximately $60 million as part of one of the casino’s garages, to serve as the platform for a Taste of Queens food hall that is being built by the New York Mets."
+    },
+    "p2": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "excerpt": "Because the Applicant repeatedly referred to the Taste of Queens as a core project element in its presentations to the community, however, the Board strongly believes that HRMP has an obligation to complete the food hall."
+    },
+    "p3": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "excerpt": "Those projects accordingly were not considered in the Board’s evaluation, but were raised during the Community Advisory Committee process, and the Board recommends to the Commission that the Applicant’s license require those projects to be completed."
+    },
+    "p4": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "excerpt": "As discussed in our Application (see EvalEconCaliber5.HardRock.RetailRecOther), HRMP will unlock further development potential within Metropolitan Park by delivering a parking podium on which Queens Baseball Company (i.e., the New York Mets) will then build the Taste of Queens."
+    },
+    "p5": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "excerpt": "The market will accommodate approximately 20 local food vendors, and we plan to partner with local groups to ensure that includes a mix of operators coming from both brick-and-mortar and street vendor origins."
+    },
+    "p6": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+      "excerpt": "As discussed in our Application (see EvalEconCaliber5.HardRock.RetailRecOther), HRMP will unlock further development potential within Metropolitan Park by delivering a parking podium on which Queens Baseball Company (i.e., the New York Mets) will then build the Taste of Queens. Detailed design for the interior of the Taste of Queens is still underway. We currently anticipate that the market (“food hall”) will be located on the elevated first floor, directly accessible and visible from the MTA gateway plaza as well as the open space. The market will accommodate approximately 20 local food vendors, and we plan to partner with local groups to ensure that includes a mix of operators coming from both brick-and-mortar and street vendor origins. We look forward to working with our community partners on further programmatic details in the years ahead before grand opening."
+    },
+    "p7": {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-29-2025",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-29-2025",
+      "excerpt": "As discussed in our Application (see EvalEconCaliber5.HardRock.RetailRecOther), HRMP will unlock further development potential within Metropolitan Park by delivering a parking podium on which Queens Baseball Company (i.e., the New York Mets) will then build the Taste of Queens."
+    },
+    "p8": {
+      "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "excerpt": "Further, HRMP plans to construct an overbuild with a construction cost of approximately $60 million as part of one of the casino’s garages, to serve as the platform for a Taste of Queens food hall that is being built by the New York Mets."
+    },
+    "p9": {
+      "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "excerpt": "Because the Applicant repeatedly referred to the Taste of Queens as a core project element in its presentations to the community, however, the Board strongly believes that HRMP has an obligation to complete the food hall."
+    },
+    "p10": {
+      "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "excerpt": "the Board recommends to the Commission that the Applicant’s license require those projects to be completed."
+    },
+    "p11": {
+      "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "excerpt": "Taste of Queens Buildout 60 -- 60"
+    }
+  },
+  "calls": [],
+  "decisions": [
+    {
+      "gold_id": "G1",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p2"
+      ],
+      "reason": "The Board report explicitly says it 'strongly believes that HRMP has an obligation to complete the food hall,' which establishes the Board's belief that HRMP should complete Taste of Queens."
+    },
+    {
+      "gold_id": "G2",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p3"
+      ],
+      "reason": "The passages say certain projects 'were not considered in the Board’s evaluation' and were later raised in the CAC process, but they do not specifically state that the food hall was outside HRMP's commitments in its application."
+    },
+    {
+      "gold_id": "G3",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p11"
+      ],
+      "reason": "The Board material includes the line 'Taste of Queens Buildout 60 -- 60,' which documents a $60 million Board chart entry for Taste of Queens buildout."
+    },
+    {
+      "gold_id": "G4",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p4"
+      ],
+      "reason": "HRMP states it 'will unlock further development potential ... by delivering a parking podium on which Queens Baseball Company ... will then build the Taste of Queens,' describing HRMP's role as delivering the podium for the food hall."
+    },
+    {
+      "gold_id": "G5",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p1"
+      ],
+      "reason": "The excerpt states the Taste of Queens food hall 'is being built by the New York Mets,' establishing that a Mets-affiliated entity was expected to build it."
+    },
+    {
+      "gold_id": "G6",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage gives the food hall's square footage, so the claim that it was roughly 30,000 square feet is unestablished in this capture."
+    },
+    {
+      "gold_id": "G7",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No supplied passage discusses license-incorporation language about the application and CAC commitments generally or whether the food hall is expressly named."
+    },
+    {
+      "gold_id": "G8",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage contains press coverage or a June 1, 2030 completion target attributed to Commission filings."
+    }
+  ]
+}

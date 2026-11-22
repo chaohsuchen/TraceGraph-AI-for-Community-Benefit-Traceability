@@ -1,0 +1,373 @@
+{
+  "arm": "discover",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 11.562999999965541,
+      "request_id": "req_5b038a9252024c51bfd6835fb8a9ea42",
+      "usage": {
+        "input_tokens": 14152,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 4608
+        },
+        "output_tokens": 885,
+        "output_tokens_details": {
+          "reasoning_tokens": 173
+        },
+        "total_tokens": 15037
+      },
+      "search_enabled": true,
+      "web_search_ids": [
+        "ws_02407f226a0d09a3016b02c298511c87d2852f394831419553",
+        "ws_02407f226a0d09a3016b02c29ae24c87d28a5b5de259b259d0",
+        "ws_02407f226a0d09a3016b02c29c4ed487d2800f37ca0dc0d06d"
+      ],
+      "stop_reason": "completed",
+      "web_search_statuses": [
+        "completed",
+        "completed",
+        "searching"
+      ]
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 3.969000000040978,
+      "request_id": "req_d070199d10b54c72b5c6c406258b2c2f",
+      "usage": {
+        "input_tokens": 4115,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 346,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4461
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "documents": [
+    {
+      "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "status": "readable",
+      "characters": 56308,
+      "sha256": "682c84bb71938c09af276954ad416419f436059ff4be91d0c91db1150d6520e3"
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "status": "readable",
+      "characters": 23645,
+      "sha256": "9bcc90e56ae7aa1107a305627ebddce1bd1b04b5d89ee837bd5a973c4cbeacfc"
+    },
+    {
+      "url": "https://www.nyc.gov/assets/designcommission/downloads/pdf/pres/10-21-25-EDC-DPR-p-QueensFuture.pdf",
+      "status": "ValueError",
+      "characters": 0,
+      "sha256": null
+    }
+  ],
+  "search": {
+    "stop": "SUFFICIENT",
+    "proposals": [
+      {
+        "url": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250047.pdf",
+        "quote": "A $163 million Community Benefits Fund (with the understanding this Fund should be increased) to be accessible for 30 years (or until the funds are depleted) and allocated across local Queens Community Districts 3, 4, 6, 7, 8, and 9;"
+      },
+      {
+        "url": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250047.pdf",
+        "quote": "A $480 million commitment to local transportation improvements and connections, including but not limited to ADA-accessible improvements to the MTA’s Mets-Willets Point 7 train station; and pedestrian and bike connections to the Flushing Promenade and Flushing Meadows Corona Park;"
+      },
+      {
+        "url": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250047.pdf",
+        "quote": "A $320 million commitment to the creation of a 25-acre public park, as promised by the Applicant, which will be maintained up to Department of Parks and Recreation standards, including but not limited to a sensory park for children with autism, which should be located at least 100 feet from Roosevelt Avenue and the 7-train overpass, and active recreational space for sports;"
+      },
+      {
+        "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+        "quote": "$163 million for a Community Impact Fund that will provide grants to non-profit organizations serving Queens communities and residents. Metropolitan Park will organize and operate the Fund based on recommendations of representatives of these most impacted Community Board Districts in cooperation with our local governing partners."
+      },
+      {
+        "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+        "quote": "$320 million to construct, operate and maintain approximately 25 acres of new public open space at Metropolitan Park"
+      },
+      {
+        "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+        "quote": "$480 million for public infrastructure improvements, including transforming the Mets-Willets Point 7 Train station into a welcoming entrance to Flushing Meadows-Corona Park with long overdue ADA accessibility, safer neighborhood connectivity and significant investment in climate resiliency measures."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf",
+        "quote": "Hard Rock Metropolitan Park has engaged with the MTA for over three years about the proposed improvements at Mets-Willets Point, and the MTA provided conceptual approval of the Proposed Improvements at the 30% Construction Documents stage of review in a letter dated August 21, 2024."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf",
+        "quote": "We will continue to fund the MTA’s ongoing review and coordination expenses, consistent with the framework established for public-private partnerships."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+        "quote": "Metropolitan Park - Site Location Benefits and Recapture Rate - Infrastructure"
+      },
+      {
+        "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+        "quote": "Metropolitan Park - Local Impact Siting - Mitigating Potential Impacts on Communities - Regional Economic Plan"
+      }
+    ],
+    "located": {
+      "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250047.pdf": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250047.pdf",
+      "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "https://www.nyc.gov/assets/designcommission/downloads/pdf/pres/10-21-25-EDC-DPR-p-QueensFuture.pdf": "https://www.nyc.gov/assets/designcommission/downloads/pdf/pres/10-21-25-EDC-DPR-p-QueensFuture.pdf",
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf",
+      "https://a856-cityrecord.nyc.gov/RequestDetail/20251014032": "https://a856-cityrecord.nyc.gov/RequestDetail/20251014032",
+      "https://nycasinos.ny.gov/metropolitan-park-application-materials": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "https://a856-cityrecord.nyc.gov/RequestDetail/20260112026": "https://a856-cityrecord.nyc.gov/RequestDetail/20260112026",
+      "https://a856-cityrecord.nyc.gov/RequestDetail/20260612036": "https://a856-cityrecord.nyc.gov/RequestDetail/20260612036",
+      "https://a856-cityrecord.nyc.gov/RequestDetail/20261109008": "https://a856-cityrecord.nyc.gov/RequestDetail/20261109008",
+      "https://www.queensbp.nyc.gov/about/": "https://www.queensbp.nyc.gov/about/",
+      "https://a856-cityrecord.nyc.gov/RequestDetail/20260316024": "https://a856-cityrecord.nyc.gov/RequestDetail/20260316024",
+      "https://a856-cityrecord.nyc.gov/RequestDetail/20260915035": "https://a856-cityrecord.nyc.gov/RequestDetail/20260915035",
+      "https://a856-cityrecord.nyc.gov/RequestDetail/20261013035": "https://a856-cityrecord.nyc.gov/RequestDetail/20261013035",
+      "https://apps.cio.ny.gov/apps/mediacontact/public/view.cfm?backButton=&parm=8CF994EA-BE93-69D0-2215473F6E0C6BC5": "https://apps.cio.ny.gov/apps/mediacontact/public/view.cfm?backButton=&parm=8CF994EA-BE93-69D0-2215473F6E0C6BC5",
+      "https://www.queensbp.nyc.gov/newsroom/": "https://www.queensbp.nyc.gov/newsroom/",
+      "https://a856-cityrecord.nyc.gov/RequestDetail/20260810053": "https://a856-cityrecord.nyc.gov/RequestDetail/20260810053"
+    },
+    "requested_actions": 2
+  },
+  "shortlist": [
+    {
+      "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "excerpt": "$320 million to construct, operate and maintain approximately 25 acres of new public open space at Metropolitan Park",
+      "start": 31866,
+      "end": 31982
+    },
+    {
+      "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "excerpt": "A seven (7) member Board will be formed that will include at least one member appointed by the Chair of Queens Community Board 3 and additional member nominations will be based on geographic proximity to the site. $320 million to construct, operate and maintain approximately 25 acres of new public open space at Metropolitan Park $480 million for public infrastructure improvements, including transforming the Mets -Willets Point 7 Train station into a welcoming entrance to Flushing Meadows -Corona Park with long overdue ADA accessibility, safer neighborhood connectivity and significant investment in climate resiliency measures.",
+      "start": 31652,
+      "end": 32285
+    },
+    {
+      "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "excerpt": "However, the Applicant Team has done a commendable job of creating a plan that would enrich local constituents’ lives with a 25-acre public park, community facility space, transportation improvements, a food hall designed to elevate Queens-based eateries and a nine-figure community benefits fund, among other aspects. As Borough President, I will work tirelessly to see that these commitments come to fruition and ensure the Applicant Team will deliver on every element of their promises to the surrounding community.",
+      "start": 21370,
+      "end": 21888
+    },
+    {
+      "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "excerpt": "The Applicant team made a presentation and the Borough President asked several questions related to the Community Benefits Fund, types of jobs associated with the site (both temporary and permanent), yearly projected revenue, traffic congestion with regard to the other sports stadiums in the area, gambling addiction resources and education, and the community facility space. There were fifty-six (56) total public speakers at the hearing, with forty-three (43) who testified in f avor and thirteen (13) who testified in opposition.",
+      "start": 19731,
+      "end": 20264
+    },
+    {
+      "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "excerpt": "The Proposed Development will be approximately 3.7 million Gross Square Feet (GSF) and include a 2,300-room hotel, gaming facility, convention and meeting space, restaurant and retail space, 5,000-seat music hall, 30,000-SF community facility space, administrative offices, 13,750-space structured parking facilities, and approximately twenty (20) acres of public parkland. The proposed park will be maintained by the Applicant under Department of Parks and Recreation standards and rules; o The Development Site is comprised of Block 1787, Lot 20 and p/o 1; Block 2018, 1500, p/o 500, p/o 1000; and Block 1789, Lot 65.",
+      "start": 16726,
+      "end": 17345
+    },
+    {
+      "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "excerpt": "$150 million to build Taste of Queens, a community -oriented green food market that will operate year-round and feature Queens-based food vendors. Metropolitan Park Queens Future $25 million for community identified health care and youth and senior needs, including a health clinic in East Elmhurst , a youth and senior center in Corona, and addiction and mental health services infrastructure in Flushing.",
+      "start": 32286,
+      "end": 32692
+    },
+    {
+      "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "excerpt": "The proposed amendment to the Zoning Map, in conjunction with the related City Map amendment, would facilitate a new 3.7 million gross square-foot, mixed-use development including a gaming facility, music hall, hotel, convention space, parking and other amenities, as well as approximately 25 acres of designed public park and green space in Flushing Meadows Corona Park, Joint Interest Area 81, Queens.",
+      "start": 1411,
+      "end": 1814
+    },
+    {
+      "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "excerpt": "central goal of promoting and supporting local businesses across the borough; • A $480 million commitment to local transportation improvements and connections, including but not limited to ADA-accessible improvements to the MTA’s Mets-Willets Point 7 train station; and pedestrian and bike connections to the Flushing Promenade and Flushing Meadows Corona Park; • A $320 million commitment to the creation of a 25-acre public park, as promised by the Applicant, which will be maintained up to Department of Parks and Recreation standards, including but not limited to a sensory park for children with autism, which should be located at least 100 feet from Roosevelt Avenue and the 7-train overpass,",
+      "start": 22584,
+      "end": 23282
+    },
+    {
+      "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "excerpt": "Based on the above consideration, I hereby approve this application with conditions: • A letter from the Applicant Team that spells out in writing all Community Benefit terms that were discussed during the ULURP process, as well as new conditions as cited by the Borough President; • A $163 million Community Benefits Fund (with the understanding this Fund should be increased) to be accessible for 30 years (or until the funds are depleted) and allocated across local Queens Community Districts 3, 4, 6, 7, 8, and 9; • A Community Advisory Board that will meet regularly and act as a watchdog for all promised community benefits; • A “CommUNITY Passport” program terms and conditions, with the",
+      "start": 21889,
+      "end": 22583
+    },
+    {
+      "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "excerpt": "82-11 37th Avenue, Suite 606 Jackson Heights, New York 11372 Telephone: (718) 458-2707 Fax: (718) 458-3316 Website: queenscb3.cityofnewyork.us/ Email: communityboard@queenscb3.cityofnewyork.us $163 million for a Community Impact Fund that will provide grants to non -profit organizations serving Queens communities and residents. Metropolitan Park will organize and operate the Fund based on recommendations of representatives of these most impacted Community Board Districts in cooperation with our local governing partners.",
+      "start": 31126,
+      "end": 31651
+    },
+    {
+      "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "excerpt": "and active recreational space for sports; • Programming plans for the 30,000-SF community facility space and a commitment to local outreach in the surrounding zip codes (11368, 11369, 11370 and 11371 for Corona and East Elmhurst) to fill the community facility space with local tenants; • Specifying how the $25 million reserved for neighborhood projects is intended to be used; • Workforce development plan that includes (but is not limited to) the following: 30% MWBE Hiring Goal (with the intention of exceeding said goal); the total projected number of jobs, both permanent and temporary; list of community-based organizations with which the Applicant has signed MOUs for workforce development;",
+      "start": 23283,
+      "end": 23981
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "Metropolitan Park - Site Location Benefits and Recapture Rate - Infrastructure",
+      "start": 13293,
+      "end": 13371
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "Metropolitan Park - Local Impact Siting - Mitigating Potential Impacts on Communities - Regional Economic Plan",
+      "start": 16627,
+      "end": 16737
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "Facility of Highest Caliber - Back of House Download Metropolitan Park - Gaming Facility of Highest Caliber - Transportation and Parking Download Metropolitan Park - Gaming Facility of Highest Caliber - Physical Plant and Mechanical Systems Download Metropolitan Park - Highest and Best Value to Patrons to Create a Secure and Robust Gaming Market Download Hard Rock Metropolitan Park - Highest and Best Value to Patrons to Create a Secure and Robust Gaming Market - REVISED REDACTIONS Download Metropolitan Park - Site Location Benefits and Recapture Rate - Location Description Download Metropolitan Park - Site Location Benefits and Recapture Rate - Assessed Value Download Metropolitan Park -",
+      "start": 11650,
+      "end": 12346
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "Workforce Enhancement - Sustainable Development Principals - Traffic Download Metropolitan Park - Workforce Enhancement - Sustainable Development Principals - Water Download Metropolitan Park - Workforce Enhancement - Sustainable Development Principals - Energy Star Download Metropolitan Park - Workforce Enhancement - Sustainable Development Principals - Electricity Download Metropolitan Park - Workforce Enhancement - Sustainable Development Principals - Energy Consumption and Efficiency Download Metropolitan Park - Workforce Enhancement - Development of a Skilled and Diverse Workforce Download Metropolitan Park - Workforce Enhancement - Domestically Manufactured Slot Machines Download",
+      "start": 20755,
+      "end": 21449
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "Local Impact Siting - Full Diversified Regional Tourism - Plans for Promoting Local Businesses - Attachment 1 - REVISED REDACTIONS Download Metropolitan Park - Local Impact Siting - Full Diversified Regional Tourism - Local Business Goods and Services Download Hard Rock Metropolitan Park - Local Impact Siting - Full Diversified Regional Tourism - Local Business Goods and Services - REVISED REDACTIONS Download Hard Rock Metropolitan Park - Local Impact Siting - Full Diversified Regional Tourism - Local Business Goods and Services - Attachment 1 - REVISED REDACTIONS Download Metropolitan Park - Local Impact Siting - Full Diversified Regional Tourism - Local Agreements Download Metropolitan",
+      "start": 18663,
+      "end": 19359
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "on Communities - Measures to Mitigate Impact on Underserved Communities - Attachment 7 Local Impact Siting - Full Diversified Regional Tourism - Plans for Promoting Local Businesses Local Impact Siting - Full Diversified Regional Tourism - Plans for Promoting Local Businesses - Attachment 1 Local Impact Siting - Full Diversified Regional Tourism - Local Business Goods and Services Local Impact Siting - Full Diversified Regional Tourism - Local Business Goods and Services - Attachment 1 Workforce Enhancement - Workforce Table - Attachment 1 Workforce Enhancement - Problem Gambling Prevention Measures - Attachment 3 Workforce Enhancement - Problem Gambling Prevention Measures - Attachment 4",
+      "start": 3617,
+      "end": 4314
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "All determinations concerning whether Applications, Supplements and/or associated materials submitted in response to this RFA are subject to disclosure under FOIL will be made by the Board or the Commission, as applicable, in their sole discretion. The Commission procured the services of a FOIL counsel to review redactions to ensure they are appropriate, including the trade secret process outlined in POL § 89(5)(b).",
+      "start": 979,
+      "end": 1398
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "The Commission procured the services of a FOIL counsel to review redactions to ensure they are appropriate, including the trade secret process outlined in POL § 89(5)(b). Updated records are being uploaded adjacent to (not replacing) existing redacted records on each project’s Application Materials page as they become available.",
+      "start": 1228,
+      "end": 1558
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "Site Location Benefits and Recapture Rate - Real Estate Tax Download Metropolitan Park - Site Location Benefits and Recapture Rate - Aerial and Surface Photography Download Metropolitan Park - Site Location Benefits and Recapture Rate - Schematics and Maps Download Metropolitan Park - Site Location Benefits and Recapture Rate - Dimensions and Total Acreage Download Metropolitan Park - Site Location Benefits and Recapture Rate - Geological or Structural Defects Download Metropolitan Park - Site Location Benefits and Recapture Rate - Geotechnical or Environmental Conditions Download Metropolitan Park - Site Location Benefits and Recapture Rate - Land Ownership Download Metropolitan Park -",
+      "start": 12347,
+      "end": 13042
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "Download Metropolitan Park - Site Location Benefits and Recapture Rate - Total Amount Download Metropolitan Park - Site Location Benefits and Recapture Rate - Master Plan Download Metropolitan Park - Site Location Benefits and Recapture Rate - Infrastructure Download Metropolitan Park - Site Location Benefits and Recapture Rate - Market Analysis Download Metropolitan Park - Construction Schedule and Budget - Construction Timeline Download Metropolitan Park - Construction Schedule and Budget - Post License Construction Download Metropolitan Park - Construction Schedule and Budget – Opening Download Metropolitan Park - Construction Schedule and Budget - Construction Budget Download",
+      "start": 13113,
+      "end": 13801
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "Robust Gaming Market Providing Highest Number of Quality Jobs - Attachment 1 Providing Highest Number of Quality Jobs - Attachment 2 Providing Highest Number of Quality Jobs - Attachment 3 Responses to GFLB Questions Metropolitan Park - Response to GFLB Questions - 10/21/25 Download Supplemental Material - October 14, 2025 Metropolitan Park - Supplement - Executive Summary Download Metropolitan Park - Supplement - Market Study Download Metropolitan Park - Supplement - Revenue Study Download Metropolitan Park - Supplement - State and Local Revenue Download Metropolitan Park - Supplement - State and Local Revenue - Excel Download Metropolitan Park - Supplement - Competitive 10 Years Download",
+      "start": 5394,
+      "end": 6092
+    },
+    {
+      "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "title": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+      "excerpt": "Site Location Benefits and Recapture Rate - Deed, Lease, Option, Etc.",
+      "start": 13043,
+      "end": 13112
+    }
+  ],
+  "selection": {
+    "findings": [
+      {
+        "id": "W10",
+        "claim": "HRMP said the same undertaking included a $163 million Community Impact Fund to provide grants to nonprofit organizations serving Queens communities and residents.",
+        "quote": "$163 million for a Community Impact Fund that will provide grants to non -profit organizations serving Queens communities and residents."
+      },
+      {
+        "id": "W9",
+        "claim": "The Borough President’s approval conditions said the Community Benefits Fund for Metropolitan Park should be accessible for 30 years or until depleted and allocated across Queens Community Districts 3, 4, 6, 7, 8, and 9.",
+        "quote": "A $163 million Community Benefits Fund (with the understanding this Fund should be increased) to be accessible for 30 years (or until the funds are depleted) and allocated across local Queens Community Districts 3, 4, 6, 7, 8, and 9;"
+      },
+      {
+        "id": "W9",
+        "claim": "The Borough President’s conditions called for a Community Advisory Board to meet regularly as a watchdog over all promised Metropolitan Park community benefits.",
+        "quote": "A Community Advisory Board that will meet regularly and act as a watchdog for all promised community benefits;"
+      },
+      {
+        "id": "W6",
+        "claim": "HRMP described $25 million in social-services funding for community-identified health care and youth and senior needs, including an East Elmhurst health clinic, a Corona youth and senior center, and addiction and mental health services infrastructure in Flushing.",
+        "quote": "$25 million for community identified health care and youth and senior needs, including a health clinic in East Elmhurst , a youth and senior center in Corona, and addiction and mental health services infrastructure in Flushing."
+      }
+    ]
+  },
+  "additions": [
+    {
+      "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "quote": "$163 million for a Community Impact Fund that will provide grants to non -profit organizations serving Queens communities and residents.",
+      "claim": "HRMP said the same undertaking included a $163 million Community Impact Fund to provide grants to nonprofit organizations serving Queens communities and residents.",
+      "start": 31319,
+      "end": 31455
+    },
+    {
+      "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "quote": "A $163 million Community Benefits Fund (with the understanding this Fund should be increased) to be accessible for 30 years (or until the funds are depleted) and allocated across local Queens Community Districts 3, 4, 6, 7, 8, and 9;",
+      "claim": "The Borough President’s approval conditions said the Community Benefits Fund for Metropolitan Park should be accessible for 30 years or until depleted and allocated across Queens Community Districts 3, 4, 6, 7, 8, and 9.",
+      "start": 22173,
+      "end": 22406
+    },
+    {
+      "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "quote": "A Community Advisory Board that will meet regularly and act as a watchdog for all promised community benefits;",
+      "claim": "The Borough President’s conditions called for a Community Advisory Board to meet regularly as a watchdog over all promised Metropolitan Park community benefits.",
+      "start": 22409,
+      "end": 22519
+    },
+    {
+      "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "title": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+      "quote": "$25 million for community identified health care and youth and senior needs, including a health clinic in East Elmhurst , a youth and senior center in Corona, and addiction and mental health services infrastructure in Flushing.",
+      "claim": "HRMP described $25 million in social-services funding for community-identified health care and youth and senior needs, including an East Elmhurst health clinic, a Corona youth and senior center, and addiction and mental health services infrastructure in Flushing.",
+      "start": 32465,
+      "end": 32692
+    }
+  ]
+}

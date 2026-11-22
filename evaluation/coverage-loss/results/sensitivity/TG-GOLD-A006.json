@@ -1,0 +1,91 @@
+{
+  "fingerprint": "e5306b33909b399fa3559296413c60981fd4ada8f8f96883b4add7a9345a48f4",
+  "reversed_original_ids": [
+    "p9",
+    "p8",
+    "p7",
+    "p6",
+    "p5",
+    "p4",
+    "p3",
+    "p2",
+    "p1"
+  ],
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 5.60999999998603,
+      "request_id": "req_7346b8ef550643828b08d2b0dc24b0a5",
+      "usage": {
+        "input_tokens": 2850,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 450,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3300
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "decisions": [
+    {
+      "gold_id": "G1",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p5",
+        "p7",
+        "p9"
+      ],
+      "reason": "The passages say applicants acknowledge an agency-wide 30% MWBE goal and that each project will get a contract-specific goal that may be higher or lower than 30%, not that applicants' goals are expected to meet or exceed 30%."
+    },
+    {
+      "gold_id": "G2",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage mentions RWNYC, a license, community-benefits progress reports, or workforce diversity data."
+    },
+    {
+      "gold_id": "G3",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage mentions licensees posting or updating community advisory committee commitments."
+    },
+    {
+      "gold_id": "G4",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage mentions an October 2026 report, the Commission chair, monitors, or casino licensees."
+    },
+    {
+      "gold_id": "G5",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage mentions RWNYC or any Board finding about a missing MWBE contractor utilization goal."
+    },
+    {
+      "gold_id": "G6",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage mentions RWNYC holding a supplier outreach session for prospective MWBE contractors."
+    },
+    {
+      "gold_id": "G7",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage mentions RWNYC, Phase II, an expansion, or July 2026 groundbreaking."
+    }
+  ]
+}

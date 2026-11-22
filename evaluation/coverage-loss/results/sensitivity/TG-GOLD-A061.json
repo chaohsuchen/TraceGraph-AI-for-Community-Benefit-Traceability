@@ -1,0 +1,84 @@
+{
+  "fingerprint": "b45216d771c76165fa6ea1d60dcb696226c6a4847d63082e836cd65e7a2ee940",
+  "reversed_original_ids": [
+    "p7",
+    "p6",
+    "p5",
+    "p4",
+    "p3",
+    "p2",
+    "p1"
+  ],
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 4.907000000006519,
+      "request_id": "req_5ed7f8046bda456197b9451588e031f3",
+      "usage": {
+        "input_tokens": 2483,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 427,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2910
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "decisions": [
+    {
+      "gold_id": "G4",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage mentions an official Q&A or states that a deposit bond must guarantee payment upon default."
+    },
+    {
+      "gold_id": "G6",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage gives a recalculated standardized RWNYC capital investment figure of $3.3 billion."
+    },
+    {
+      "gold_id": "G7",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage says RWNYC's public capital-investment monetary fields are redacted."
+    },
+    {
+      "gold_id": "G8",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p4"
+      ],
+      "reason": "The license excerpt states RWNYC's individual license requires a 5 percent cash-or-bond deposit, but no passage says compiled rules print 10 percent or contrasts the two figures."
+    },
+    {
+      "gold_id": "G9",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p2",
+        "p6"
+      ],
+      "reason": "The passages say all three licensees remitted the $500M license fee by February 3, 2026, but none identifies Genting/GENNY or says audited reports show financing in January 2026."
+    },
+    {
+      "gold_id": "G10",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage discusses a June 2026 company report, restricted cash, or attribution to RWNYC's security."
+    }
+  ]
+}

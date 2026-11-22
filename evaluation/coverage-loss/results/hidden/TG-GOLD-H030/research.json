@@ -1,0 +1,47 @@
+{
+  "case_id": "TG-GOLD-H030",
+  "reference_sha256": "b8fece3a1cd37ec3511690b634e009f51402c851986a838ea22bc2765c42f7db",
+  "query": "HRMP aims for 6 percent service-disabled veterans but considers 2 percent more realistic.",
+  "model": "gpt-5.4",
+  "web_search_model": "gpt-5.4",
+  "started_at": "2026-11-22T09:40:37.738590+00:00",
+  "outcome": "PARTIAL_RESEARCH",
+  "message": "Research is incomplete; no commitment was saved.",
+  "graph": null,
+  "job_result": {
+    "gaps": [
+      "No source excerpt could be verified. Located links remain unverified research leads."
+    ],
+    "facts": [],
+    "query": "HRMP aims for 6 percent service-disabled veterans but considers 2 percent more realistic.",
+    "message": "Research is incomplete; no commitment was saved.",
+    "outcome": "PARTIAL_RESEARCH",
+    "suggestions": [
+      {
+        "kind": "WEB_LEAD",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+        "excerpt": "",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+        "description": "Located source; no excerpt could be verified.",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+      },
+      {
+        "kind": "WEB_LEAD",
+        "title": "https://www.dol.gov/sites/dolgov/files/VETS/files/Employer-Guide-to-Hiring-Veterans2025-07.pdf",
+        "excerpt": "",
+        "source_url": "https://www.dol.gov/sites/dolgov/files/VETS/files/Employer-Guide-to-Hiring-Veterans2025-07.pdf",
+        "description": "Located source; no excerpt could be verified.",
+        "source_title": "https://www.dol.gov/sites/dolgov/files/VETS/files/Employer-Guide-to-Hiring-Veterans2025-07.pdf"
+      },
+      {
+        "kind": "WEB_LEAD",
+        "title": "https://www.opm.gov/policy-data-oversight/hiring-information/merit-hiring-plan-resources/rule-of-many-and-veterans-preference.pdf",
+        "excerpt": "",
+        "source_url": "https://www.opm.gov/policy-data-oversight/hiring-information/merit-hiring-plan-resources/rule-of-many-and-veterans-preference.pdf",
+        "description": "Located source; no excerpt could be verified.",
+        "source_title": "https://www.opm.gov/policy-data-oversight/hiring-information/merit-hiring-plan-resources/rule-of-many-and-veterans-preference.pdf"
+      }
+    ]
+  },
+  "finished_at": "2026-11-22T09:40:58.499406+00:00"
+}

@@ -1,0 +1,101 @@
+{
+  "case_ids": [
+    "TG-GOLD-A001",
+    "TG-GOLD-A036",
+    "TG-GOLD-H001",
+    "TG-GOLD-H002",
+    "TG-GOLD-H005",
+    "TG-GOLD-H007",
+    "TG-GOLD-H009",
+    "TG-GOLD-H011",
+    "TG-GOLD-H012",
+    "TG-GOLD-H016",
+    "TG-GOLD-H017",
+    "TG-GOLD-H022",
+    "TG-GOLD-H027",
+    "TG-GOLD-H032"
+  ],
+  "arms": {
+    "control": {
+      "cases": 14,
+      "hits": 30,
+      "facts": 106,
+      "supported": 131,
+      "claims": 144,
+      "overclaims": 2,
+      "verdicts": 8,
+      "identity_match": 12,
+      "wins_ties_losses": [
+        0,
+        14,
+        0
+      ],
+      "gain_mechanisms": {},
+      "lost": 0,
+      "paired_sign_flip_two_sided_p": 1.0,
+      "added_findings": 0,
+      "cases_with_additions": 0,
+      "readable_docs": 0,
+      "document_attempts": 0,
+      "incremental_production": {
+        "requests": 0,
+        "web_searches": 0,
+        "estimated_usd": 0.0
+      },
+      "incremental_judge": {
+        "requests": 0,
+        "web_searches": 0,
+        "estimated_usd": 0.0
+      }
+    },
+    "discover": {
+      "cases": 14,
+      "hits": 36,
+      "facts": 106,
+      "supported": 186,
+      "claims": 199,
+      "overclaims": 2,
+      "verdicts": 8,
+      "identity_match": 13,
+      "wins_ties_losses": [
+        5,
+        8,
+        1
+      ],
+      "gain_mechanisms": {
+        "new_citation": 6,
+        "reclassified_using_only_original_citations": 1
+      },
+      "lost": 1,
+      "paired_sign_flip_two_sided_p": 0.1875,
+      "added_findings": 28,
+      "cases_with_additions": 9,
+      "readable_docs": 25,
+      "document_attempts": 42,
+      "incremental_production": {
+        "input_tokens": 236321,
+        "output_tokens": 13829,
+        "cached_input_tokens": 64512,
+        "requests": 27,
+        "web_searches": 36,
+        "estimated_usd": 1.0130854999999999
+      },
+      "incremental_judge": {
+        "input_tokens": 106192,
+        "output_tokens": 54042,
+        "cached_input_tokens": 13312,
+        "requests": 20,
+        "web_searches": 0,
+        "estimated_usd": 1.0461580000000001
+      }
+    }
+  },
+  "diagnostic_usage": {
+    "input_tokens": 29180,
+    "output_tokens": 5822,
+    "cached_input_tokens": 0,
+    "requests": 12,
+    "web_searches": 0,
+    "estimated_usd": 0.16028
+  }
+}

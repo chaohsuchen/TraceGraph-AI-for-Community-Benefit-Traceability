@@ -1,0 +1,485 @@
+{
+  "input_sha256": "93056cca76101b8004954b44f217e381cba499ac5c977d3c10f9d9ecb8331a07",
+  "judge_model": "gpt-5.4",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "judge_version": "tracegraph-nli-v4-owned-quotes",
+  "started_at": "2026-11-22T10:24:15.675627+00:00",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 12.468999999924563,
+      "request_id": "req_5ad72ab03f8d4646b2473857346b3504",
+      "usage": {
+        "input_tokens": 2576,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 1223,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3799
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 4.531000000075437,
+      "request_id": "req_15ff7bbe3e7d4b20b0c0808d13959cfa",
+      "usage": {
+        "input_tokens": 1511,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 283,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 1794
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "evidence": {
+    "identity": {
+      "label": "MATCH",
+      "reason": "Finding partial:f2 and partial:f3 state Bally’s anticipates approximately 75 percent of the capital expenditures will benefit Bronx-based firms, matching the question’s promise."
+    },
+    "findings": [
+      {
+        "finding_id": "partial:f1",
+        "claims": [
+          {
+            "claim": "Reports shall detail progress, relevant budget and expenditure, and actual or anticipated delays in delivering benefits proposed in the Application or Bally’s other commitments.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "Each such report shall detail progress, set forth relevant budget and expenditure, and explain actual or anticipated delays in delivery of benefits proposed in the Application or Bally’s other commitments.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the required report contents and scope."
+              }
+            ],
+            "reason": "The excerpt verbatim states the reporting requirements."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f2",
+        "claims": [
+          {
+            "claim": "Bally’s proposes a $2.3 billion investment in the Bally’s Bronx project.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "Bally’s proposes a $2.3 billion investment in the Bally’s Bronx project",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the proposed investment amount and project."
+              }
+            ],
+            "reason": "The excerpt expressly states the proposed $2.3 billion investment."
+          },
+          {
+            "claim": "Bally’s anticipates that approximately 75 percent of the capital expenditures will benefit Bronx-based firms.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "It anticipates that approximately 75 percent of the capital expenditures will benefit Bronx- based firms.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the approximate 75 percent expectation and Bronx-based firm beneficiaries."
+              }
+            ],
+            "reason": "The excerpt verbatim states the approximately 75 percent anticipated benefit to Bronx-based firms."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f3",
+        "claims": [
+          {
+            "claim": "Bally’s anticipates that approximately 75 percent of the capital expenditures will benefit Bronx-based firms.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "It anticipates that approximately 75 percent of the capital expenditures will benefit Bronx- based firms.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the approximate 75 percent expectation and Bronx-based firm beneficiaries."
+              }
+            ],
+            "reason": "The excerpt verbatim states the approximately 75 percent anticipated benefit to Bronx-based firms."
+          },
+          {
+            "claim": "In its review, the Board considered that Bally’s has limited experience with large greenfield development.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "In its review, the Board considered that Bally’s has limited experience with large greenfield development.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the Board’s consideration about Bally’s experience."
+              }
+            ],
+            "reason": "The excerpt expressly states the Board considered Bally’s limited large greenfield development experience."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "partial:f2",
+          "partial:f3"
+        ],
+        "citation_ids": [
+          "partial:s2",
+          "partial:s3"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Findings partial:f2 and partial:f3 both state, with quoted support, that Bally’s anticipated approximately 75% of capital expenditures would benefit Bronx-based firms.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f2",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "This claim matches the reference fact’s anticipation, approximate percentage, spending category, and Bronx-based firm beneficiaries."
+          },
+          {
+            "finding_id": "partial:f3",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim repeats the same matched fact with quoted support."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s2",
+            "quote": "It anticipates that approximately 75 percent of the capital expenditures will benefit Bronx- based firms.",
+            "label": "ENTAILMENT",
+            "reason": "The quote directly establishes Bally’s projection, approximate percentage, capital expenditures, and Bronx-based firm beneficiaries."
+          },
+          {
+            "citation_id": "partial:s3",
+            "quote": "It anticipates that approximately 75 percent of the capital expenditures will benefit Bronx- based firms.",
+            "label": "ENTAILMENT",
+            "reason": "The quote directly establishes the same projected approximately 75 percent benefit to Bronx-based firms."
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents or substantively addresses excavation and foundation permits being filed for the Bronx project.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents or substantively addresses Bally’s obtaining $400 million from a $560 million financing facility for preconstruction costs.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [
+          "partial:f1"
+        ],
+        "citation_ids": [
+          "partial:s1"
+        ],
+        "label": "NEUTRAL",
+        "reason": "Finding partial:f1 addresses reporting on progress, budget, expenditure, and delays in delivery of benefits, but it does not specifically state a Board recommendation to report at opening how much actual capital spending benefited Bronx-based firms.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "The claim concerns reporting obligations generally, not the specific recommendation to report at opening actual capital spending benefiting Bronx-based firms."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s1",
+            "quote": "Each such report shall detail progress, set forth relevant budget and expenditure, and explain actual or anticipated delays in delivery of benefits proposed in the Application or Bally’s other commitments.",
+            "label": "NEUTRAL",
+            "reason": "The quote requires reporting generally but does not mention opening timing or actual capital spending benefiting Bronx-based firms specifically."
+          }
+        ]
+      }
+    ]
+  },
+  "verdict_protocol": "two-stage-owned-citations-v4",
+  "judgment": {
+    "identity": {
+      "label": "MATCH",
+      "reason": "Finding partial:f2 and partial:f3 state Bally’s anticipates approximately 75 percent of the capital expenditures will benefit Bronx-based firms, matching the question’s promise."
+    },
+    "findings": [
+      {
+        "finding_id": "partial:f1",
+        "claims": [
+          {
+            "claim": "Reports shall detail progress, relevant budget and expenditure, and actual or anticipated delays in delivering benefits proposed in the Application or Bally’s other commitments.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "Each such report shall detail progress, set forth relevant budget and expenditure, and explain actual or anticipated delays in delivery of benefits proposed in the Application or Bally’s other commitments.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the required report contents and scope."
+              }
+            ],
+            "reason": "The excerpt verbatim states the reporting requirements."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f2",
+        "claims": [
+          {
+            "claim": "Bally’s proposes a $2.3 billion investment in the Bally’s Bronx project.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "Bally’s proposes a $2.3 billion investment in the Bally’s Bronx project",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the proposed investment amount and project."
+              }
+            ],
+            "reason": "The excerpt expressly states the proposed $2.3 billion investment."
+          },
+          {
+            "claim": "Bally’s anticipates that approximately 75 percent of the capital expenditures will benefit Bronx-based firms.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "It anticipates that approximately 75 percent of the capital expenditures will benefit Bronx- based firms.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the approximate 75 percent expectation and Bronx-based firm beneficiaries."
+              }
+            ],
+            "reason": "The excerpt verbatim states the approximately 75 percent anticipated benefit to Bronx-based firms."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f3",
+        "claims": [
+          {
+            "claim": "Bally’s anticipates that approximately 75 percent of the capital expenditures will benefit Bronx-based firms.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "It anticipates that approximately 75 percent of the capital expenditures will benefit Bronx- based firms.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the approximate 75 percent expectation and Bronx-based firm beneficiaries."
+              }
+            ],
+            "reason": "The excerpt verbatim states the approximately 75 percent anticipated benefit to Bronx-based firms."
+          },
+          {
+            "claim": "In its review, the Board considered that Bally’s has limited experience with large greenfield development.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "In its review, the Board considered that Bally’s has limited experience with large greenfield development.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the Board’s consideration about Bally’s experience."
+              }
+            ],
+            "reason": "The excerpt expressly states the Board considered Bally’s limited large greenfield development experience."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "partial:f2",
+          "partial:f3"
+        ],
+        "citation_ids": [
+          "partial:s2",
+          "partial:s3"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Findings partial:f2 and partial:f3 both state, with quoted support, that Bally’s anticipated approximately 75% of capital expenditures would benefit Bronx-based firms.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f2",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "This claim matches the reference fact’s anticipation, approximate percentage, spending category, and Bronx-based firm beneficiaries."
+          },
+          {
+            "finding_id": "partial:f3",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim repeats the same matched fact with quoted support."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s2",
+            "quote": "It anticipates that approximately 75 percent of the capital expenditures will benefit Bronx- based firms.",
+            "label": "ENTAILMENT",
+            "reason": "The quote directly establishes Bally’s projection, approximate percentage, capital expenditures, and Bronx-based firm beneficiaries."
+          },
+          {
+            "citation_id": "partial:s3",
+            "quote": "It anticipates that approximately 75 percent of the capital expenditures will benefit Bronx- based firms.",
+            "label": "ENTAILMENT",
+            "reason": "The quote directly establishes the same projected approximately 75 percent benefit to Bronx-based firms."
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents or substantively addresses excavation and foundation permits being filed for the Bronx project.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents or substantively addresses Bally’s obtaining $400 million from a $560 million financing facility for preconstruction costs.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [
+          "partial:f1"
+        ],
+        "citation_ids": [
+          "partial:s1"
+        ],
+        "label": "NEUTRAL",
+        "reason": "Finding partial:f1 addresses reporting on progress, budget, expenditure, and delays in delivery of benefits, but it does not specifically state a Board recommendation to report at opening how much actual capital spending benefited Bronx-based firms.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f1",
+            "claim_index": 0,
+            "label": "NEUTRAL",
+            "reason": "The claim concerns reporting obligations generally, not the specific recommendation to report at opening actual capital spending benefiting Bronx-based firms."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s1",
+            "quote": "Each such report shall detail progress, set forth relevant budget and expenditure, and explain actual or anticipated delays in delivery of benefits proposed in the Application or Bally’s other commitments.",
+            "label": "NEUTRAL",
+            "reason": "The quote requires reporting generally but does not mention opening timing or actual capital spending benefiting Bronx-based firms specifically."
+          }
+        ]
+      }
+    ],
+    "protocol": "owned-quotes-v1",
+    "verdict": null
+  },
+  "capture_judgment": {
+    "facts": [
+      {
+        "gold_id": "G1",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "p1"
+        ],
+        "reason": "The only passage mentions reporting on 'benefits proposed in the Application or Bally’s other commitments' but does not quote any projection that about 75% of capital expenditures would benefit Bronx-based firms."
+      },
+      {
+        "gold_id": "G2",
+        "label": "NEUTRAL",
+        "citation_ids": [],
+        "reason": "No passage mentions excavation or foundation permits for the Bronx project."
+      },
+      {
+        "gold_id": "G3",
+        "label": "NEUTRAL",
+        "citation_ids": [],
+        "reason": "No passage mentions a $560 million financing facility or Bally's obtaining $400 million for preconstruction costs."
+      },
+      {
+        "gold_id": "G4",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "p1"
+        ],
+        "reason": "The passage requires reports to explain budgets, expenditures, and delays in delivery of proposed benefits, but it does not state that the Board recommended Bally's report at opening how much actual capital spending benefited Bronx-based firms."
+      }
+    ],
+    "abstention": {
+      "label": "JUSTIFIED",
+      "reason": "The question asks whether Bally's anticipated about 75% of capital expenditures would benefit Bronx-based firms. The capture contains only a generic reporting requirement about benefits proposed in the application or other commitments, without the specific promise terms, attribution, percentage, beneficiary scope, or timing needed to identify and save that original commitment."
+    }
+  },
+  "finished_at": "2026-11-22T10:24:32.979429+00:00"
+}

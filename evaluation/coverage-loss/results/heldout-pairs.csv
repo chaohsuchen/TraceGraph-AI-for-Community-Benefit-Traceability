@@ -1,0 +1,29 @@
+﻿case,arm,facts,baseline,hits,gained,lost,gains_by_mechanism,identity,underlying_identity,verdict,support,claims,additions,document_reads,readable,incremental_production_cost
+TG-GOLD-A001,control,7,1,1,[],[],{},MATCH,MATCH,,2,2,,,,
+TG-GOLD-A036,control,10,1,1,[],[],{},MATCH,MATCH,JUSTIFIED,7,10,,,,
+TG-GOLD-H001,control,7,1,1,[],[],{},MATCH,MATCH,JUSTIFIED,5,5,,,,
+TG-GOLD-H002,control,7,3,3,[],[],{},MATCH,MATCH,,17,17,,,,
+TG-GOLD-H005,control,4,0,0,[],[],{},UNRESOLVED,UNRESOLVED,,1,1,,,,
+TG-GOLD-H007,control,7,3,3,[],[],{},MATCH,MATCH,OVERCLAIM,13,17,,,,
+TG-GOLD-H009,control,7,1,1,[],[],{},MATCH,MATCH,JUSTIFIED,6,7,,,,
+TG-GOLD-H011,control,8,5,5,[],[],{},MATCH,MATCH,,25,25,,,,
+TG-GOLD-H012,control,5,1,1,[],[],{},MATCH,MATCH,OVERCLAIM,13,13,,,,
+TG-GOLD-H016,control,8,4,4,[],[],{},MATCH,MATCH,JUSTIFIED,6,8,,,,
+TG-GOLD-H017,control,13,6,6,[],[],{},MATCH,MATCH,JUSTIFIED,15,16,,,,
+TG-GOLD-H022,control,12,1,1,[],[],{},MATCH,MATCH,JUSTIFIED,12,14,,,,
+TG-GOLD-H027,control,4,0,0,[],[],{},UNRESOLVED,UNRESOLVED,,3,3,,,,
+TG-GOLD-H032,control,7,3,3,[],[],{},MATCH,MATCH,,6,6,,,,
+TG-GOLD-A001,discover,7,1,1,[],[],{},MATCH,MATCH,,2,2,0,3,2,0.07638
+TG-GOLD-A036,discover,10,1,1,[],[],{},MATCH,MATCH,JUSTIFIED,12,15,2,3,2,0.068127
+TG-GOLD-H001,discover,7,1,2,['G3'],[],{'G3': 'new_citation'},MATCH,MATCH,JUSTIFIED,10,10,4,3,2,0.081195
+TG-GOLD-H002,discover,7,3,4,['G6'],[],{'G6': 'new_citation'},MATCH,MATCH,,24,24,4,3,2,0.072122
+TG-GOLD-H005,discover,4,0,1,['G1'],[],{'G1': 'new_citation'},MATCH,UNRESOLVED,,5,5,2,3,1,0.070732
+TG-GOLD-H007,discover,7,3,6,"['G4', 'G5', 'G6']",[],"{'G4': 'new_citation', 'G5': 'new_citation', 'G6': 'reclassified_using_only_original_citations'}",MATCH,MATCH,JUSTIFIED,16,20,4,3,2,0.079109
+TG-GOLD-H009,discover,7,1,1,[],[],{},MATCH,MATCH,JUSTIFIED,10,11,2,3,2,0.079642
+TG-GOLD-H011,discover,8,5,5,[],[],{},MATCH,MATCH,,25,25,0,3,0,0.073274
+TG-GOLD-H012,discover,5,1,1,[],[],{},MATCH,MATCH,OVERCLAIM,13,13,0,3,2,0.067375
+TG-GOLD-H016,discover,8,4,4,[],[],{},MATCH,MATCH,JUSTIFIED,6,8,0,3,2,0.074462
+TG-GOLD-H017,discover,13,6,6,[],[],{},MATCH,MATCH,OVERCLAIM,29,30,4,3,2,0.083764
+TG-GOLD-H022,discover,12,1,0,[],['G1'],{},MATCH,MATCH,JUSTIFIED,21,23,4,3,2,0.069337
+TG-GOLD-H027,discover,4,0,0,[],[],{},UNRESOLVED,UNRESOLVED,,3,3,0,3,1,0.040187
+TG-GOLD-H032,discover,7,3,4,['G4'],[],{'G4': 'new_citation'},MATCH,MATCH,,10,10,2,3,3,0.077379

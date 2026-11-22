@@ -1,0 +1,74 @@
+{
+  "case": "TG-GOLD-A036",
+  "selected_distinct_urls": 2,
+  "review": {
+    "https://nycasinos.ny.gov/resorts-world-new-york-city-executive-summary": {
+      "relationship": "same_host_distinct_or_unresolved_document",
+      "identical_content_urls": [],
+      "old_passages_repeated": [],
+      "snapshot_consistent": true,
+      "original_status": {
+        "status": "readable",
+        "characters": 14795,
+        "sha256": "64e5666988b127b171e08638e59d4992bda284380b3bdff6774be1c61c193034"
+      },
+      "same_host_or_filename_compared": [
+        {
+          "url": "https://nycasinos.ny.gov/resorts-world-new-york-city-local-impact-siting-mitigating-potential-impacts-communities-measures-0",
+          "status": "TimeoutError",
+          "characters": 0,
+          "sha256": null
+        },
+        {
+          "url": "https://nycasinos.ny.gov/system/files/documents/2026/02/exhibit-175-rwnyc-cirrus-partnership-agreement_redacted.pdf",
+          "status": "readable",
+          "characters": 60573,
+          "sha256": "3faf2ba3c42366fbb890d1acb5b8978b3f59e6f928de7e2713ba37e4bb2ea8e4"
+        },
+        {
+          "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+          "status": "TimeoutError",
+          "characters": 0,
+          "sha256": null
+        },
+        {
+          "url": "https://nycasinos.ny.gov/resorts-world-new-york-city-local-impact-siting-mitigating-potential-impacts-communities-local-0",
+          "status": "readable",
+          "characters": 17442,
+          "sha256": "0c4c61601da7b89cce6a8b879e676f193ad89e5b1701ba711603495f50e7365f"
+        },
+        {
+          "url": "https://nycasinos.ny.gov/system/files/documents/2026/02/exhibit-174-rwnyc-cirrus-mou_redacted.pdf",
+          "status": "readable",
+          "characters": 4324,
+          "sha256": "c7d74c2e3bcb9fae748c3aaea7a08f57be9a610ead2b2055189da2c8443918bf"
+        }
+      ]
+    },
+    "https://rwnewyork.com/wp-content/uploads/2025/05/RW-Project-Fact-Sheet-FINAL-updated-05.15.25.pdf": {
+      "relationship": "same_host_distinct_or_unresolved_document",
+      "identical_content_urls": [],
+      "old_passages_repeated": [],
+      "snapshot_consistent": true,
+      "original_status": {
+        "status": "readable",
+        "characters": 2445,
+        "sha256": "e05b180ccc7f680759b08dc565aaf344e924570c506ab3580269b14dfe173a65"
+      },
+      "same_host_or_filename_compared": [
+        {
+          "url": "https://rwnewyork.com/rws-next-chapter/resorts-world-new-york-city-cirrus-unveil-new-agreement-to-build-up-to-50000-units-of-workforce-housing/",
+          "status": "readable",
+          "characters": 10321,
+          "sha256": "91a72c1570f5d5b4d0fe195b3b5a2d3685809bb5989d5f2481121673868ca8b1"
+        },
+        {
+          "url": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+          "status": "readable",
+          "characters": 3145,
+          "sha256": "0b38527d05a44e978cfc2f98c666a68bf4346264c3511ad5f4291ddda2cf1357"
+        }
+      ]
+    }
+  }
+}

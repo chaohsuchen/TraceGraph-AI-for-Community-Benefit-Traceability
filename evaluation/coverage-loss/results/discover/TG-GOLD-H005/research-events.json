@@ -1,0 +1,353 @@
+[
+  {
+    "type": "research_start"
+  },
+  {
+    "phase": "search",
+    "event": "started"
+  },
+  {
+    "type": "search_budget",
+    "allocated": 4,
+    "remaining": 2,
+    "limit": 6
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 12.858999999938533,
+    "request_id": "req_9f1aaed0638c472883c87160140112b2",
+    "usage": {
+      "input_tokens": 22115,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 4608
+      },
+      "output_tokens": 816,
+      "output_tokens_details": {
+        "reasoning_tokens": 292
+      },
+      "total_tokens": 22931
+    },
+    "search_enabled": true,
+    "web_search_ids": [
+      "ws_058eacaad0192686016b02b73f9ff887d29667fb379a6b2997",
+      "ws_058eacaad0192686016b02b742e0a087d2a1c7ec51cc33390d",
+      "ws_058eacaad0192686016b02b744263887d2a1dd8af5a993b557",
+      "ws_058eacaad0192686016b02b7452fb087d293ed971adcd89fd8"
+    ],
+    "stop_reason": "completed",
+    "web_search_statuses": [
+      "completed",
+      "completed",
+      "completed",
+      "completed"
+    ]
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://gaming.ny.gov/ballys-bronx-commercial-casino-license",
+    "status": "QUOTE_NOT_FOUND"
+  },
+  {
+    "phase": "search",
+    "event": "completed",
+    "source": "self_reported",
+    "stop_reason": "SUFFICIENT",
+    "stop_reason_status": "reported"
+  },
+  {
+    "type": "research_capture",
+    "brief": "[c1] Each such report shall detail progress, set forth relevant budget and expenditure, and explain actual or anticipated delays in delivery of benefits proposed in the Application or Bally’s other commitments.\nSTOP_REASON=SUFFICIENT",
+    "citations": {
+      "c1": {
+        "url": "https://gaming.ny.gov/ballys-bronx-commercial-casino-license",
+        "title": "https://gaming.ny.gov/ballys-bronx-commercial-casino-license",
+        "excerpt": "Each such report shall detail progress, set forth relevant budget and expenditure, and explain actual or anticipated delays in delivery of benefits proposed in the Application or Bally’s other commitments.",
+        "context": "Each such report shall detail progress, set forth relevant budget and expenditure, and explain actual or anticipated delays in delivery of benefits proposed in the Application or Bally’s other commitments."
+      }
+    }
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 5.140999999945052,
+    "request_id": "req_939e1c6d5f644132b7f5473cf6d87a0e",
+    "usage": {
+      "input_tokens": 1793,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 322,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2115
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 1.672000000020489,
+    "request_id": "req_a16cee17b4a94811b92834cc3a3a641a",
+    "usage": {
+      "input_tokens": 590,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 90,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 680
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "research_scope_review",
+    "checks": [
+      {
+        "criterion_id": "1",
+        "explanation": "The excerpt only mentions \"benefits proposed in the Application or Bally’s other commitments\" in general, but does not document the specific proposed term that \"about 75 percent of capital expenditures would benefit Bronx-based firms.\"",
+        "original_citation_ids": [],
+        "missing_original_terms": [
+          "about 75 percent",
+          "capital expenditures",
+          "would benefit Bronx-based firms"
+        ]
+      }
+    ],
+    "missing_scope": [
+      "Bally's anticipated about 75 percent of capital expenditures would benefit Bronx-based firms"
+    ]
+  },
+  {
+    "type": "source_recovery",
+    "url": "https://gaming.ny.gov/ballys-bronx-commercial-casino-license",
+    "status": "READ",
+    "text_sha256": "c364e24715855df49f2ae52c2262e1aa54db416c96b1ee025804918306e0d5f0",
+    "source_reads": 1,
+    "source_read_limit": 2
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 0.9059999999590218,
+    "request_id": "req_253be1e0afe54074ba934e66bc26bd8e",
+    "usage": {
+      "input_tokens": 1396,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 13,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1409
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "search_budget",
+    "allocated": 2,
+    "remaining": 0,
+    "limit": 6
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 7.827999999979511,
+    "request_id": "req_1dda7ddca28d464aba529f8b308b71df",
+    "usage": {
+      "input_tokens": 13334,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 4608
+      },
+      "output_tokens": 402,
+      "output_tokens_details": {
+        "reasoning_tokens": 131
+      },
+      "total_tokens": 13736
+    },
+    "search_enabled": true,
+    "web_search_ids": [
+      "ws_048bc3e2545a877e016b02b760eeac87d29d5ccf5723f4b269",
+      "ws_048bc3e2545a877e016b02b7638c5c87d284da61814a1c79d1",
+      "ws_048bc3e2545a877e016b02b7651a4487d2923b9e54d609d7dd"
+    ],
+    "stop_reason": "completed",
+    "web_search_statuses": [
+      "completed",
+      "completed",
+      "searching"
+    ]
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+    "status": "QUOTE_NOT_FOUND"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+    "status": "QUOTE_NOT_FOUND"
+  },
+  {
+    "type": "source_validation",
+    "status": "NO_VERIFIED_EXCERPTS",
+    "located_sources": 16
+  },
+  {
+    "type": "research_extracted",
+    "draft": null,
+    "evidence": [
+      {
+        "source": {
+          "url": "https://gaming.ny.gov/ballys-bronx-commercial-casino-license",
+          "title": "https://gaming.ny.gov/ballys-bronx-commercial-casino-license",
+          "citation": "https://gaming.ny.gov/ballys-bronx-commercial-casino-license",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "excerpt": "Each such report shall detail progress, set forth relevant budget and expenditure, and explain actual or anticipated delays in delivery of benefits proposed in the Application or Bally’s other commitments.",
+        "status": "partial",
+        "explanation": "This excerpt shows that Bally's application or other commitments included proposed benefits subject to progress reporting, but it does not specify the alleged 75 percent capital expenditure commitment or any actual expenditures.",
+        "summary": "Official reporting requirement references proposed benefits and Bally's other commitments generally.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:35:18.042281+00:00"
+      }
+    ],
+    "coverage": [
+      {
+        "kind": "PROMISE",
+        "criterion": "Bally's anticipated about 75 percent of capital expenditures would benefit Bronx-based firms",
+        "promise_gap": "No provided excerpt states the 75 percent capital expenditure term or identifies it as Bally's promise/projection.",
+        "promise_citation_ids": [],
+        "delivery_gap": "No provided excerpt shows any actual capital expenditures or distribution of benefits to Bronx-based firms.",
+        "delivery_citation_ids": []
+      }
+    ],
+    "target_status": "IDENTIFIED",
+    "gaps": [
+      "No provided excerpt states the 75 percent capital expenditure term or identifies it as Bally's promise/projection.",
+      "No provided excerpt shows any actual capital expenditures or distribution of benefits to Bronx-based firms."
+    ]
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 3.359000000054948,
+    "request_id": "req_95658e2428f241c4a633915c88502dc3",
+    "usage": {
+      "input_tokens": 845,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 201,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1046
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "evidence_synthesis",
+    "phase": "initial",
+    "capture_count": 1,
+    "selection": {
+      "findings": [
+        {
+          "citation_id": "c1",
+          "summary": "A report requirement for Bally’s Bronx commercial casino license says each report must detail progress, relevant budget and expenditure, and explain actual or anticipated delays in delivering benefits proposed in the application or Bally’s other commitments.",
+          "status": "Context",
+          "explanation": "This passage establishes only a reporting requirement and refers generally to benefits proposed in Bally’s application or other commitments; it does not state any 75 percent capital expenditure commitment or any delivery against it.",
+          "excerpt": "Each such report shall detail progress, set forth relevant budget and expenditure, and explain actual or anticipated delays in delivery of benefits proposed in the Application or Bally’s other commitments.",
+          "locator": ""
+        }
+      ],
+      "gap": "The provided source does not document the alleged commitment that about 75 percent of capital expenditures would benefit Bronx-based firms, nor does it show any actual expenditures or outcomes. The key missing evidence would be Bally’s application or a state summary quoting that term, and any later progress reports with spending details.",
+      "followup_query": "site:gaming.ny.gov Bally's Bronx application 75 percent capital expenditures Bronx-based firms"
+    },
+    "canonical": false
+  },
+  {
+    "type": "evidence_gap_search",
+    "recommended": true,
+    "performed": false,
+    "query": "site:gaming.ny.gov Bally's Bronx application 75 percent capital expenditures Bronx-based firms",
+    "gap": "The provided source does not document the alleged commitment that about 75 percent of capital expenditures would benefit Bronx-based firms, nor does it show any actual expenditures or outcomes. The key missing evidence would be Bally’s application or a state summary quoting that term, and any later progress reports with spending details.",
+    "new_verified_excerpts": 0
+  }
+]

@@ -1,0 +1,260 @@
+{
+  "arm": "discover",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 8.405999999959022,
+      "request_id": "req_46f6da58d4df4532894f7451f0cca617",
+      "usage": {
+        "input_tokens": 13419,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 4608
+        },
+        "output_tokens": 654,
+        "output_tokens_details": {
+          "reasoning_tokens": 124
+        },
+        "total_tokens": 14073
+      },
+      "search_enabled": true,
+      "web_search_ids": [
+        "ws_0c37c5757a2cceac016b02c270d43087d28178183a2657dca8",
+        "ws_0c37c5757a2cceac016b02c272efa087d2bf0288ff4aca5aec",
+        "ws_0c37c5757a2cceac016b02c273ab2c87d2ac41923fd4c0ac69"
+      ],
+      "stop_reason": "completed",
+      "web_search_statuses": [
+        "completed",
+        "completed",
+        "searching"
+      ]
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 3.10999999998603,
+      "request_id": "req_2192d545551943edb4bad23f02f6ed97",
+      "usage": {
+        "input_tokens": 1915,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 197,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2112
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "documents": [
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "status": "readable",
+      "characters": 72606,
+      "sha256": "106bbbaf0d168554b64cd4a6604e696b9722d6a45a389f0ee982ecb9fcdeddb1"
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000019/R28.htm",
+      "status": "unreadable",
+      "characters": 0,
+      "sha256": null
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000089/ex991-bronxprojectfundingp.htm",
+      "status": "unreadable",
+      "characters": 0,
+      "sha256": null
+    }
+  ],
+  "search": {
+    "stop": "SUFFICIENT",
+    "proposals": [
+      {
+        "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+        "quote": "## Economic Activity and Business Development"
+      },
+      {
+        "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+        "quote": "### Bally's New York Casino - Capital Investment Details"
+      },
+      {
+        "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+        "quote": "### Bally's New York Casino - Project Firms"
+      },
+      {
+        "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+        "quote": "### Bally's New York Casino - Workforce Enhancement - MWBE Goals"
+      },
+      {
+        "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+        "quote": "Implementing incentives and preferences for local Bronx-based MWBEs."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+        "quote": "The Applicant states that 70 percent of employees will be Bronx residents, 47 percent will be women, and 75 percent will be minorities."
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000019/R28.htm",
+        "quote": "The closing of the transactions contemplated by the Conveyance Agreement occurred in February 2026 and was contingent upon, among other things, (i) Bally’s New York’s agreement to (a) make certain capital improvements to Ferry Point Park in the Bronx, NY with a fair market value of approximately $161 million"
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000108/baly-20260930.htm",
+        "quote": "Under the Conditional Limited Consent, the lenders (1) consented to the transfer of the Company’s New York gaming license to Bally’s New York Holding Company, LLC or one of its subsidiaries, to support the Bally’s Bronx project financing."
+      },
+      {
+        "url": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000089/ex991-bronxprojectfundingp.htm",
+        "quote": "Proceeds of the loans advanced under the Facilities (the “Loans”) will be used to fund certain pre-construction costs and expenditures associated with the development of the Bally’s Bronx project, with a portion of the proceeds available to the Company for general corporate purposes."
+      }
+    ],
+    "located": {
+      "https://nycasinos.ny.gov/ballys-bronx-application-materials": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000106/ex991q32026earningsrelease.htm": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000106/ex991q32026earningsrelease.htm",
+      "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000030/a2025balyannualreport_ars.pdf": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000030/a2025balyannualreport_ars.pdf",
+      "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000108/baly-20260930.htm": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000108/baly-20260930.htm",
+      "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000089/ex991-bronxprojectfundingp.htm": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000089/ex991-bronxprojectfundingp.htm",
+      "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_august-6-2025.pdf",
+      "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000082/ex991q22026earningsrelease.htm": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000082/ex991q22026earningsrelease.htm",
+      "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000019/R28.htm": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000019/R28.htm",
+      "https://ballysbronx.com/wp-content/uploads/2025/08/Ballys-CAC-Meeting-Materials-08-08-25-vFINAL4.pdf": "https://ballysbronx.com/wp-content/uploads/2025/08/Ballys-CAC-Meeting-Materials-08-08-25-vFINAL4.pdf",
+      "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000108/R10.htm": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000108/R10.htm",
+      "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "https://www.youtube.com/watch?v=Zj3Aw4Xp9TM": "https://www.youtube.com/watch?v=Zj3Aw4Xp9TM",
+      "https://www.youtube.com/watch?v=whShWDfy6ws": "https://www.youtube.com/watch?v=whShWDfy6ws",
+      "https://apnews.com/article/a804d9bf7a83c90cbbd2226d38ab102d": "https://apnews.com/article/a804d9bf7a83c90cbbd2226d38ab102d",
+      "https://apnews.com/article/2177cf00aaca76de9fa821157a3185f8": "https://apnews.com/article/2177cf00aaca76de9fa821157a3185f8",
+      "https://apnews.com/article/1f8f5a3039b573d7f7acacc9fa8d1ac9": "https://apnews.com/article/1f8f5a3039b573d7f7acacc9fa8d1ac9"
+    },
+    "requested_actions": 2
+  },
+  "shortlist": [
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "excerpt": "The Applicant states that 70 percent of employees will be Bronx residents, 47 percent will be women, and 75 percent will be minorities.",
+      "start": 29005,
+      "end": 29140
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "excerpt": "It anticipates that approximately 75 percent of the capital expenditures will benefit Bronx- based firms. In its review, the Board considered that Bally’s has limited experience with large greenfield development.",
+      "start": 26122,
+      "end": 26334
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "excerpt": "Economic Activity and Business Development Bally’s proposes a $2.3 billion investment in the Bally’s Bronx project, with significant backing from a large real estate investment trust and other identified debt options. It anticipates that approximately 75 percent of the capital expenditures will benefit Bronx- based firms.",
+      "start": 25904,
+      "end": 26227
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "excerpt": "The Applicant states that 70 percent of employees will be Bronx residents, 47 percent will be women, and 75 percent will be minorities. Based on Bally’s performance in Chicago, the Board expects these goals to be met or exceeded in the Bronx.",
+      "start": 29005,
+      "end": 29247
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "excerpt": "Diversity Framework The Board fully supports Bally’s goal of ensuring its workforce reflects the demographics of the Bronx, including employment targets of 47 percent women and 75 percent minorities. The Board expects that Bally’s will at a minimum reach the service- disabled veteran employment goal of 6 percent.",
+      "start": 34084,
+      "end": 34398
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "excerpt": "Median compensation is estimated to be near $80,000, including benefits; the compensation package seems low compared to the other Applicants. The Applicant states that 70 percent of employees will be Bronx residents, 47 percent will be women, and 75 percent will be minorities.",
+      "start": 28863,
+      "end": 29140
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "excerpt": "Bally’s Community Benefit Workforce Enhancement Bally’s reported a total construction FTE workforce of 15,000 jobs. As noted previously, Bally’s has committed to ensuring that 70 percent of construction and facility jobs go to Bronx residents—a strong pledge that will require substantial and sustained effort from Bally’s and its contractors.",
+      "start": 30206,
+      "end": 30549
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "excerpt": "Community benefits valued at $761 million include significant traffic and roadway improvements, improvements to the Metropolitan Transportation Authority (MTA)’s public transit station, over 25 acres of new public open space, a Community Impact Fund, and funding for neighborhood social services.7 Economic Activity and Business Development HRMP proposes a $5.3 billion capital investment, with 24 percent of that investment expected to directly benefit Queens-based firms. Hard Rock presents a strong development track record, including two large integrated resorts in Hollywood and Tampa.",
+      "start": 39726,
+      "end": 40316
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "excerpt": "13 In total, Bally’s proposes a net present value (NPV) community benefit of $765 million. Since Bally’s is not providing monies to the Bronx Benefit Fund until the facility opens, the NPV may be overstated.",
+      "start": 29989,
+      "end": 30196
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "excerpt": "The Board was disappointed that only 1 percent of the investment is projected to benefit firms in Queens – that extremely low rate should be improved. The Board has concerns that the project’s financing plan relies heavily on future operating cash flow and future debt financing to fund a substantial portion of development costs.",
+      "start": 55358,
+      "end": 55688
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "excerpt": "In addition, Bally’s will make an annual contribution of 1 percent of gross gaming revenue, with a minimum of $15 million, to a Community Benefits Fund from the time the gaming facility opens, with the Fund to be administered by an independent board representing local communities and organizations. Bally’s anticipates that visitors from many areas of New York City will use the ferry system operated by the NYC Economic Development Corporation to access the facility, and many visitors from the City’s suburbs and upstate New York as well as Long Island, and from New Jersey, and Connecticut will drive to the facility.",
+      "start": 24712,
+      "end": 25333
+    }
+  ],
+  "selection": {
+    "findings": [
+      {
+        "id": "W3",
+        "claim": "For the Bally’s Bronx project, Bally’s ties the expectation that about 75 percent of capital expenditures will benefit Bronx-based firms to its proposed $2.3 billion investment.",
+        "quote": "Economic Activity and Business Development Bally’s proposes a $2.3 billion investment in the Bally’s Bronx project, with significant backing from a large real estate investment trust and other identified debt options. It anticipates that approximately 75 percent of the capital expenditures will benefit Bronx- based firms."
+      },
+      {
+        "id": "W2",
+        "claim": "The Board noted that Bally’s expectation that about 75 percent of capital expenditures will benefit Bronx-based firms comes despite Bally’s having limited experience with large greenfield development.",
+        "quote": "It anticipates that approximately 75 percent of the capital expenditures will benefit Bronx- based firms. In its review, the Board considered that Bally’s has limited experience with large greenfield development."
+      }
+    ]
+  },
+  "additions": [
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "quote": "Economic Activity and Business Development Bally’s proposes a $2.3 billion investment in the Bally’s Bronx project, with significant backing from a large real estate investment trust and other identified debt options. It anticipates that approximately 75 percent of the capital expenditures will benefit Bronx- based firms.",
+      "claim": "For the Bally’s Bronx project, Bally’s ties the expectation that about 75 percent of capital expenditures will benefit Bronx-based firms to its proposed $2.3 billion investment.",
+      "start": 25904,
+      "end": 26227
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "quote": "It anticipates that approximately 75 percent of the capital expenditures will benefit Bronx- based firms. In its review, the Board considered that Bally’s has limited experience with large greenfield development.",
+      "claim": "The Board noted that Bally’s expectation that about 75 percent of capital expenditures will benefit Bronx-based firms comes despite Bally’s having limited experience with large greenfield development.",
+      "start": 26122,
+      "end": 26334
+    }
+  ]
+}

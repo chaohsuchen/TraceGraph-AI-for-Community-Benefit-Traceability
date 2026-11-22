@@ -1,0 +1,394 @@
+{
+  "case_id": "TG-GOLD-H012",
+  "reference_sha256": "fc35517f2c51ea5348687c760d37bfc720a71752d086e2189cd0777ca6377358",
+  "query": "Bally's committed to pay for employee memberships in Upwards for priority childcare placement.",
+  "model": "gpt-5.4",
+  "web_search_model": "gpt-5.4",
+  "started_at": "2026-11-22T09:38:00.850618+00:00",
+  "outcome": "RESOLVED",
+  "graph": {
+    "commitment": {
+      "title": "Proposed Bally’s employee Upwards childcare membership benefit",
+      "description": "Bally’s stated that it funds every employee membership to the Upwards network, whose members receive priority placement at Upwards facilities, for employees including Bally’s Bronx employees.",
+      "original_text": "We fund every employee membership to the Upwards network and offer financial assistance to ease the burden of childcare costs. This includes contributing to a Dependent Care FSA or providing \"credits\" for free childcare days.",
+      "responsible_entity_raw": "Bally’s",
+      "beneficiary": {
+        "name": "Bally’s Bronx employees",
+        "category": "employees"
+      },
+      "obligation_type": "In-kind employee benefit",
+      "amount_value": null,
+      "term_periodicity": null,
+      "geographic_scope": "Bally’s Bronx employees / proposed sites",
+      "condition_contingency": null,
+      "milestone": null,
+      "notes": "Source describes a proposed employee childcare benefit through Bally’s partnership with Upwards; no cited excerpt gives fuller terms such as duration or eligibility limits.",
+      "id": "commitment-1218d910-07fc-4e57-95d7-46765195b567",
+      "original_promise": {
+        "document_id": null,
+        "source": {
+          "id": "source-3f8e6c15-a856-4ffe-8792-208fd183a16a",
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+          "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "locator": "Cited passage",
+        "char_start": null,
+        "char_end": null
+      }
+    },
+    "organization": {
+      "id": "org-e4a56109-c364-4725-906c-4d03459d9925",
+      "name": "Bally's"
+    },
+    "assessment": {
+      "label": "CORROBORATED",
+      "verdict": "Delivery corroborated: Bally’s reports it funds every employee membership to the Upwards network for its employees, with location unspecified. (Bally’s self-reports that it funds Upwards network memberships for its employees generally; the employee population is described broadly as employees, with no full location-wide recipient list specified, though related text elsewhere mentions Bronx employees. The established benefit is funded employee membership in the Upwards network.); Bally’s reports that its Upwards employee members receive priority placement at Upwards facilities; the exact facility locations are not fully specified, though they are described as near proposed sites. (Bally’s self-reports that Upwards members receive priority placement at Upwards facilities. Read with the funded-membership report, this establishes the reported membership benefit for Bally’s employee members generally. Facility locations are not fully specified, though the quote says facilities are near Bally’s proposed sites.)",
+      "reasoning": "Requested scope: Bally's committed to pay for employee memberships in Upwards for priority childcare placement.\n\nBally's pays/funds employee memberships in the Upwards network.\nStatus: DELIVERED\nThe observed outcome directly reports an existing practice by Bally’s: \"We fund every employee membership to the Upwards network.\" That is evidence, attributed to the organization itself, that Bally’s pays or funds Upwards memberships for employees. The reported scope is employees generally; the quote does not enumerate individual recipients or specify all work locations, but the requested query also does not limit the obligation to a narrower site.\nPromised scope: Promisor: Bally's. Intended beneficiaries: 'every employee.' Location: unspecified in the original promise excerpt. Benefit/action: Bally's says it funds each employee's membership to the Upwards network. Material conditions: none stated beyond employee status.\nObserved scope: Bally’s self-reports that it funds Upwards network memberships for its employees generally; the employee population is described broadly as employees, with no full location-wide recipient list specified, though related text elsewhere mentions Bronx employees. The established benefit is funded employee membership in the Upwards network.\nSupported delivery: Bally’s reports it funds every employee membership to the Upwards network for its employees, with location unspecified.\nPromise evidence: c1\nDelivery evidence: c1\n\nThe paid Upwards memberships provide employees priority childcare placement/eligibility through Upwards facilities.\nStatus: DELIVERED\nThe observed outcomes state that \"Members also receive priority placement at Upwards facilities,\" which establishes the reported benefit or eligibility attached to Upwards membership. Combined with Bally’s report that it funds employee memberships, this supports that the paid memberships are reported to provide employees priority childcare placement eligibility through Upwards facilities. This is evidence of the entitlement/priority benefit, not proof that employees obtained childcare slots, which is not required by the condition.\nPromised scope: Promisor: Bally's. Intended beneficiaries: employees receiving Bally's-funded Upwards memberships. Location: unspecified in the requested query; a related Bally's excerpt says facilities are near its proposed sites. Benefit/action: the memberships confer priority placement at Upwards childcare facilities. Material conditions: the priority benefit is tied to Upwards membership, not to proof that employees ultimately obtained childcare slots.\nObserved scope: Bally’s self-reports that Upwards members receive priority placement at Upwards facilities. Read with the funded-membership report, this establishes the reported membership benefit for Bally’s employee members generally. Facility locations are not fully specified, though the quote says facilities are near Bally’s proposed sites.\nSupported delivery: Bally’s reports that its Upwards employee members receive priority placement at Upwards facilities; the exact facility locations are not fully specified, though they are described as near proposed sites.\nPromise evidence: c2, c4\nDelivery evidence: c2, c1\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “We fund every employee membership to the Upwards network and offer financial assistance to ease the burden of childcare costs. This includes contributing to a Dependent Care FSA or providing \"credits\" for free childcare days.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf\n\nc2: “Members also receive priority placement at Upwards facilities, which are plentiful near our proposed sites, and the program is increasingly popular among our employees.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf\n\nc3: “To assist our working families, we have partnered with Upwards, the largest childcare network in the United States, to offer high-quality childcare options including for Bally’s Bronx employees.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf\n\nc4: “Bally’s committed to pay for employees’ membership in Upwards, which would give the employee priority childcare placement in Upwards’ vetted facilities, but little information was provided about what membership entails or whether Upwards’ network facilities are already at capacity.”\nhttps://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026\n\nc5: “The Board recommends the Commission require Bally’s to provide annual updates on employee participation in the Upwards membership program for childcare and to address any challenges employees face in accessing convenient daycare options.”\nhttps://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026\n\nc6: “Childcare Services: Free childcare support for employees through our Upwards partnership”\nhttps://nycasinos.ny.gov/system/files/documents/2025/07/evalloc4.ballys.communities_redacted.pdf",
+      "verification_date": "2026-11-22"
+    },
+    "findings": [
+      {
+        "id": "finding-30439c4b-0a37-463a-90fd-3bc60f3c758d",
+        "claim": "On September 28, 2025, Bally’s committed to fund Upwards network membership for every employee and to provide additional childcare-cost assistance through contributions to a Dependent Care FSA or credits for free childcare days.",
+        "supports": [
+          {
+            "id": "support-0f1154f7-6881-48b8-9b44-a8a9fceafaeb",
+            "source": {
+              "id": "source-3f8e6c15-a856-4ffe-8792-208fd183a16a",
+              "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+              "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+              "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Promise documented",
+            "excerpt": "We fund every employee membership to the Upwards network and offer financial assistance to ease the burden of childcare costs. This includes contributing to a Dependent Care FSA or providing \"credits\" for free childcare days.",
+            "locator": "Cited passage",
+            "summary": "In Bally’s September 28, 2025 amendment, Bally’s states: “We fund every employee membership to the Upwards network” and also offer childcare-cost assistance, including Dependent Care FSA contributions or “credits” for free childcare days.",
+            "explanation": "This is the clearest direct statement of Bally’s undertaking: Bally’s says it pays for every employee’s Upwards membership and describes additional childcare assistance.",
+            "retrieved_at": "2026-11-22T09:38:38.370192+00:00"
+          }
+        ]
+      },
+      {
+        "id": "finding-6914554d-7c52-4332-a70f-c3e391b9ef5a",
+        "claim": "In Bally’s September 28, 2025 amendment, the stated scope and benefit of the Upwards program included high-quality childcare options for Bally’s Bronx employees and priority placement at Upwards facilities near Bally’s proposed sites.",
+        "supports": [
+          {
+            "id": "support-a1395823-a626-453d-b1db-fff22a8a5f8c",
+            "source": {
+              "id": "source-3f8e6c15-a856-4ffe-8792-208fd183a16a",
+              "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+              "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+              "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Context",
+            "excerpt": "Members also receive priority placement at Upwards facilities, which are plentiful near our proposed sites, and the program is increasingly popular among our employees.",
+            "locator": "Cited passage",
+            "summary": "Bally’s amendment says that Upwards members “receive priority placement at Upwards facilities,” which Bally’s says are plentiful near its proposed sites, and that the program is increasingly popular among its employees.",
+            "explanation": "This passage supplies the key scope of the benefit tied to membership: priority placement at Upwards facilities.",
+            "retrieved_at": "2026-11-22T09:38:38.370192+00:00"
+          },
+          {
+            "id": "support-f99e9ae8-cac9-4654-b6ca-3303c99c40c1",
+            "source": {
+              "id": "source-3f8e6c15-a856-4ffe-8792-208fd183a16a",
+              "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+              "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+              "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Context",
+            "excerpt": "To assist our working families, we have partnered with Upwards, the largest childcare network in the United States, to offer high-quality childcare options including for Bally’s Bronx employees.",
+            "locator": "Cited passage",
+            "summary": "Bally’s said it had partnered with Upwards “to offer high-quality childcare options including for Bally’s Bronx employees.”",
+            "explanation": "This identifies the relevant partnership and confirms the stated scope includes Bally’s Bronx employees.",
+            "retrieved_at": "2026-11-22T09:38:38.370192+00:00"
+          }
+        ]
+      },
+      {
+        "id": "finding-c59c24b4-464b-423d-bdf2-e03b47dd73e2",
+        "claim": "In March 2026, the New York Gaming Facility Location Board reported that Bally’s had committed to pay for employees’ Upwards membership, which would provide priority childcare placement in Upwards’ vetted facilities, but that Bally’s had provided little information about what the membership entails or whether network facilities were already at capacity.",
+        "supports": [
+          {
+            "id": "support-ec54060f-f534-4f11-9006-b40c74f5e86a",
+            "source": {
+              "id": "source-e53b2d30-4c55-4c7f-9842-4f9d63239912",
+              "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+              "title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+              "citation": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Qualification",
+            "excerpt": "Bally’s committed to pay for employees’ membership in Upwards, which would give the employee priority childcare placement in Upwards’ vetted facilities, but little information was provided about what membership entails or whether Upwards’ network facilities are already at capacity.",
+            "locator": "Cited passage",
+            "summary": "The New York Gaming Facility Location Board reported that Bally’s committed to pay for employees’ Upwards membership, which would give employees priority childcare placement in Upwards’ vetted facilities, but said little information was provided about what membership entails or whether network facilities are already at capacity.",
+            "explanation": "This independent board report corroborates the commitment and records an explicit limitation: the submission lacked detail on the membership and on facility capacity.",
+            "retrieved_at": "2026-11-22T09:38:38.370192+00:00"
+          }
+        ]
+      },
+      {
+        "id": "finding-8a3f7f62-4f7d-4f2b-b93f-89a56968e934",
+        "claim": "In March 2026, the New York Gaming Facility Location Board recommended requiring Bally’s to provide annual updates on employee participation in the Upwards childcare membership program and on challenges employees face in accessing convenient daycare options.",
+        "supports": [
+          {
+            "id": "support-7066f99b-5629-4811-ba12-fc5cca2524be",
+            "source": {
+              "id": "source-e53b2d30-4c55-4c7f-9842-4f9d63239912",
+              "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+              "title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+              "citation": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Qualification",
+            "excerpt": "The Board recommends the Commission require Bally’s to provide annual updates on employee participation in the Upwards membership program for childcare and to address any challenges employees face in accessing convenient daycare options.",
+            "locator": "Cited passage",
+            "summary": "The Board recommended that the Commission require Bally’s to provide annual updates on employee participation in the Upwards childcare membership program and on any challenges employees face in accessing convenient daycare options.",
+            "explanation": "This shows there was, at the time of the Board report, no cited delivery evidence in these passages; instead the Board sought future reporting on participation and access challenges.",
+            "retrieved_at": "2026-11-22T09:38:38.370192+00:00"
+          }
+        ]
+      },
+      {
+        "id": "finding-bcd9e560-2877-4196-bb83-9401e09cdad2",
+        "claim": "By July 2025, Bally’s described an employee childcare benefit as “free childcare support for employees” through its Upwards partnership.",
+        "supports": [
+          {
+            "id": "support-2d204e4b-7c2c-4a1c-88ac-176737954184",
+            "source": {
+              "id": "source-1be83056-105a-469e-8e8d-076f25d25ea2",
+              "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalloc4.ballys.communities_redacted.pdf",
+              "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalloc4.ballys.communities_redacted.pdf",
+              "citation": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalloc4.ballys.communities_redacted.pdf",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Promise documented",
+            "excerpt": "Childcare Services: Free childcare support for employees through our Upwards partnership",
+            "locator": "Cited passage",
+            "summary": "A July 2025 Bally’s communities document described the benefit as: “Childcare Services: Free childcare support for employees through our Upwards partnership.”",
+            "explanation": "This is an earlier Bally’s characterization of the same Upwards-related employee childcare benefit, though it is less specific than the later membership-language passages.",
+            "retrieved_at": "2026-11-22T09:38:38.370192+00:00"
+          }
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "kind": "PROGRESS",
+        "from_id": "finding-30439c4b-0a37-463a-90fd-3bc60f3c758d",
+        "to_id": "finding-8a3f7f62-4f7d-4f2b-b93f-89a56968e934",
+        "reasoning": "The March 2026 Board recommendation is a follow-up to Bally’s September 28, 2025 Upwards membership commitment: it proposes ongoing annual reporting on employee participation in that program and on access challenges, indicating monitoring of implementation of the promised childcare benefit.",
+        "status": null,
+        "preferred_id": null
+      },
+      {
+        "kind": "PROGRESS",
+        "from_id": "finding-30439c4b-0a37-463a-90fd-3bc60f3c758d",
+        "to_id": "finding-c59c24b4-464b-423d-bdf2-e03b47dd73e2",
+        "reasoning": "The September 28, 2025 amendment set out the commitment to fund every employee’s Upwards membership and offer childcare-cost assistance. The March 2026 Board report directly followed up on that commitment by restating the Upwards membership promise, identifying the expected benefit of priority placement, and noting missing detail about membership terms and facility capacity.",
+        "status": null,
+        "preferred_id": null
+      },
+      {
+        "kind": "PROGRESS",
+        "from_id": "finding-bcd9e560-2877-4196-bb83-9401e09cdad2",
+        "to_id": "finding-30439c4b-0a37-463a-90fd-3bc60f3c758d",
+        "reasoning": "The July 2025 Bally’s document broadly described “free childcare support for employees” through Upwards. The September 28, 2025 amendment followed with a more specific statement of the same benefit, specifying that every employee’s Upwards membership would be funded and that Bally’s would also provide childcare-cost assistance via Dependent Care FSA contributions or credits for free childcare days.",
+        "status": null,
+        "preferred_id": null
+      }
+    ],
+    "assessment_trace": {
+      "not_yet_due": [],
+      "criteria": [
+        {
+          "criterion": "Bally's pays/funds employee memberships in the Upwards network.",
+          "scope_criteria": [
+            "s1",
+            "s3"
+          ],
+          "promise_scope": "Promisor: Bally's. Intended beneficiaries: 'every employee.' Location: unspecified in the original promise excerpt. Benefit/action: Bally's says it funds each employee's membership to the Upwards network. Material conditions: none stated beyond employee status.",
+          "observed_scope": "Bally’s self-reports that it funds Upwards network memberships for its employees generally; the employee population is described broadly as employees, with no full location-wide recipient list specified, though related text elsewhere mentions Bronx employees. The established benefit is funded employee membership in the Upwards network.",
+          "promise_citation_ids": [
+            "c1"
+          ],
+          "delivery_citation_ids": [
+            "c1"
+          ],
+          "delivery_status": "DELIVERED",
+          "timing_requirement": "",
+          "explanation": "The observed outcome directly reports an existing practice by Bally’s: \"We fund every employee membership to the Upwards network.\" That is evidence, attributed to the organization itself, that Bally’s pays or funds Upwards memberships for employees. The reported scope is employees generally; the quote does not enumerate individual recipients or specify all work locations, but the requested query also does not limit the obligation to a narrower site.",
+          "gap": "",
+          "delivery_support": [
+            {
+              "citation_id": "c1",
+              "quote": "We fund every employee membership to the Upwards network and offer financial assistance to ease the burden of childcare costs. This includes contributing to a Dependent Care FSA or providing \"credits\" for free childcare days."
+            }
+          ],
+          "fulfilled_part": "Bally’s reports it funds every employee membership to the Upwards network for its employees, with location unspecified.",
+          "timing_support": []
+        },
+        {
+          "criterion": "The paid Upwards memberships provide employees priority childcare placement/eligibility through Upwards facilities.",
+          "scope_criteria": [
+            "s2",
+            "s3"
+          ],
+          "promise_scope": "Promisor: Bally's. Intended beneficiaries: employees receiving Bally's-funded Upwards memberships. Location: unspecified in the requested query; a related Bally's excerpt says facilities are near its proposed sites. Benefit/action: the memberships confer priority placement at Upwards childcare facilities. Material conditions: the priority benefit is tied to Upwards membership, not to proof that employees ultimately obtained childcare slots.",
+          "observed_scope": "Bally’s self-reports that Upwards members receive priority placement at Upwards facilities. Read with the funded-membership report, this establishes the reported membership benefit for Bally’s employee members generally. Facility locations are not fully specified, though the quote says facilities are near Bally’s proposed sites.",
+          "promise_citation_ids": [
+            "c2",
+            "c4"
+          ],
+          "delivery_citation_ids": [
+            "c2",
+            "c1"
+          ],
+          "delivery_status": "DELIVERED",
+          "timing_requirement": "",
+          "explanation": "The observed outcomes state that \"Members also receive priority placement at Upwards facilities,\" which establishes the reported benefit or eligibility attached to Upwards membership. Combined with Bally’s report that it funds employee memberships, this supports that the paid memberships are reported to provide employees priority childcare placement eligibility through Upwards facilities. This is evidence of the entitlement/priority benefit, not proof that employees obtained childcare slots, which is not required by the condition.",
+          "gap": "",
+          "delivery_support": [
+            {
+              "citation_id": "c2",
+              "quote": "Members also receive priority placement at Upwards facilities, which are plentiful near our proposed sites, and the program is increasingly popular among our employees."
+            },
+            {
+              "citation_id": "c1",
+              "quote": "We fund every employee membership to the Upwards network and offer financial assistance to ease the burden of childcare costs. This includes contributing to a Dependent Care FSA or providing \"credits\" for free childcare days."
+            }
+          ],
+          "fulfilled_part": "Bally’s reports that its Upwards employee members receive priority placement at Upwards facilities; the exact facility locations are not fully specified, though they are described as near proposed sites.",
+          "timing_support": []
+        }
+      ],
+      "label": "CORROBORATED",
+      "verdict": "Delivery corroborated: Bally’s reports it funds every employee membership to the Upwards network for its employees, with location unspecified. (Bally’s self-reports that it funds Upwards network memberships for its employees generally; the employee population is described broadly as employees, with no full location-wide recipient list specified, though related text elsewhere mentions Bronx employees. The established benefit is funded employee membership in the Upwards network.); Bally’s reports that its Upwards employee members receive priority placement at Upwards facilities; the exact facility locations are not fully specified, though they are described as near proposed sites. (Bally’s self-reports that Upwards members receive priority placement at Upwards facilities. Read with the funded-membership report, this establishes the reported membership benefit for Bally’s employee members generally. Facility locations are not fully specified, though the quote says facilities are near Bally’s proposed sites.)",
+      "reasoning": "Requested scope: Bally's committed to pay for employee memberships in Upwards for priority childcare placement.\n\nBally's pays/funds employee memberships in the Upwards network.\nStatus: DELIVERED\nThe observed outcome directly reports an existing practice by Bally’s: \"We fund every employee membership to the Upwards network.\" That is evidence, attributed to the organization itself, that Bally’s pays or funds Upwards memberships for employees. The reported scope is employees generally; the quote does not enumerate individual recipients or specify all work locations, but the requested query also does not limit the obligation to a narrower site.\nPromised scope: Promisor: Bally's. Intended beneficiaries: 'every employee.' Location: unspecified in the original promise excerpt. Benefit/action: Bally's says it funds each employee's membership to the Upwards network. Material conditions: none stated beyond employee status.\nObserved scope: Bally’s self-reports that it funds Upwards network memberships for its employees generally; the employee population is described broadly as employees, with no full location-wide recipient list specified, though related text elsewhere mentions Bronx employees. The established benefit is funded employee membership in the Upwards network.\nSupported delivery: Bally’s reports it funds every employee membership to the Upwards network for its employees, with location unspecified.\nPromise evidence: c1\nDelivery evidence: c1\n\nThe paid Upwards memberships provide employees priority childcare placement/eligibility through Upwards facilities.\nStatus: DELIVERED\nThe observed outcomes state that \"Members also receive priority placement at Upwards facilities,\" which establishes the reported benefit or eligibility attached to Upwards membership. Combined with Bally’s report that it funds employee memberships, this supports that the paid memberships are reported to provide employees priority childcare placement eligibility through Upwards facilities. This is evidence of the entitlement/priority benefit, not proof that employees obtained childcare slots, which is not required by the condition.\nPromised scope: Promisor: Bally's. Intended beneficiaries: employees receiving Bally's-funded Upwards memberships. Location: unspecified in the requested query; a related Bally's excerpt says facilities are near its proposed sites. Benefit/action: the memberships confer priority placement at Upwards childcare facilities. Material conditions: the priority benefit is tied to Upwards membership, not to proof that employees ultimately obtained childcare slots.\nObserved scope: Bally’s self-reports that Upwards members receive priority placement at Upwards facilities. Read with the funded-membership report, this establishes the reported membership benefit for Bally’s employee members generally. Facility locations are not fully specified, though the quote says facilities are near Bally’s proposed sites.\nSupported delivery: Bally’s reports that its Upwards employee members receive priority placement at Upwards facilities; the exact facility locations are not fully specified, though they are described as near proposed sites.\nPromise evidence: c2, c4\nDelivery evidence: c2, c1\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “We fund every employee membership to the Upwards network and offer financial assistance to ease the burden of childcare costs. This includes contributing to a Dependent Care FSA or providing \"credits\" for free childcare days.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf\n\nc2: “Members also receive priority placement at Upwards facilities, which are plentiful near our proposed sites, and the program is increasingly popular among our employees.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf\n\nc3: “To assist our working families, we have partnered with Upwards, the largest childcare network in the United States, to offer high-quality childcare options including for Bally’s Bronx employees.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf\n\nc4: “Bally’s committed to pay for employees’ membership in Upwards, which would give the employee priority childcare placement in Upwards’ vetted facilities, but little information was provided about what membership entails or whether Upwards’ network facilities are already at capacity.”\nhttps://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026\n\nc5: “The Board recommends the Commission require Bally’s to provide annual updates on employee participation in the Upwards membership program for childcare and to address any challenges employees face in accessing convenient daycare options.”\nhttps://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026\n\nc6: “Childcare Services: Free childcare support for employees through our Upwards partnership”\nhttps://nycasinos.ny.gov/system/files/documents/2025/07/evalloc4.ballys.communities_redacted.pdf",
+      "refutation": [],
+      "scope_anchors": {
+        "s1": "Bally’s to pay employee memberships in Upwards for childcare access",
+        "s2": "Bally’s employee Upwards membership to provide priority childcare placement",
+        "s3": "Whether Bally’s actually delivered paid Upwards memberships and priority childcare placement to employees"
+      },
+      "citations": {
+        "c1": {
+          "source": {
+            "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+            "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+            "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf"
+          },
+          "excerpt": "We fund every employee membership to the Upwards network and offer financial assistance to ease the burden of childcare costs. This includes contributing to a Dependent Care FSA or providing \"credits\" for free childcare days.",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:38:38.370192+00:00",
+          "finding_id": "finding-30439c4b-0a37-463a-90fd-3bc60f3c758d",
+          "support_ids": [
+            "support-0f1154f7-6881-48b8-9b44-a8a9fceafaeb"
+          ]
+        },
+        "c2": {
+          "source": {
+            "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+            "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+            "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf"
+          },
+          "excerpt": "Members also receive priority placement at Upwards facilities, which are plentiful near our proposed sites, and the program is increasingly popular among our employees.",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:38:38.370192+00:00",
+          "finding_id": "finding-6914554d-7c52-4332-a70f-c3e391b9ef5a",
+          "support_ids": [
+            "support-a1395823-a626-453d-b1db-fff22a8a5f8c"
+          ]
+        },
+        "c3": {
+          "source": {
+            "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+            "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+            "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf"
+          },
+          "excerpt": "To assist our working families, we have partnered with Upwards, the largest childcare network in the United States, to offer high-quality childcare options including for Bally’s Bronx employees.",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:38:38.370192+00:00",
+          "finding_id": "finding-6914554d-7c52-4332-a70f-c3e391b9ef5a",
+          "support_ids": [
+            "support-f99e9ae8-cac9-4654-b6ca-3303c99c40c1"
+          ]
+        },
+        "c4": {
+          "source": {
+            "title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+            "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+            "citation": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026"
+          },
+          "excerpt": "Bally’s committed to pay for employees’ membership in Upwards, which would give the employee priority childcare placement in Upwards’ vetted facilities, but little information was provided about what membership entails or whether Upwards’ network facilities are already at capacity.",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:38:38.370192+00:00",
+          "finding_id": "finding-c59c24b4-464b-423d-bdf2-e03b47dd73e2",
+          "support_ids": [
+            "support-ec54060f-f534-4f11-9006-b40c74f5e86a"
+          ]
+        },
+        "c5": {
+          "source": {
+            "title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+            "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+            "citation": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026"
+          },
+          "excerpt": "The Board recommends the Commission require Bally’s to provide annual updates on employee participation in the Upwards membership program for childcare and to address any challenges employees face in accessing convenient daycare options.",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:38:38.370192+00:00",
+          "finding_id": "finding-8a3f7f62-4f7d-4f2b-b93f-89a56968e934",
+          "support_ids": [
+            "support-7066f99b-5629-4811-ba12-fc5cca2524be"
+          ]
+        },
+        "c6": {
+          "source": {
+            "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalloc4.ballys.communities_redacted.pdf",
+            "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalloc4.ballys.communities_redacted.pdf",
+            "citation": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalloc4.ballys.communities_redacted.pdf"
+          },
+          "excerpt": "Childcare Services: Free childcare support for employees through our Upwards partnership",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:38:38.370192+00:00",
+          "finding_id": "finding-bcd9e560-2877-4196-bb83-9401e09cdad2",
+          "support_ids": [
+            "support-2d204e4b-7c2c-4a1c-88ac-176737954184"
+          ]
+        }
+      },
+      "scope_gap": ""
+    }
+  },
+  "job_result": {
+    "run_id": null,
+    "outcome": "RESOLVED",
+    "commitment_id": "commitment-1218d910-07fc-4e57-95d7-46765195b567",
+    "unmatched_records": [
+      {
+        "excerpt": "Depending on your location, you may have access to childcare assistance, employee assistance programs, and support services designed to help you navigate what matters.",
+        "source_url": "https://careers.ballys.com/job/ballys-atlantic-city/atlantic-city/new-jersey/united-states/casinos-resorts/promotions-and-events-rep-on-call/10814f67-2cbe-4f0e-9f81-0d0150993f17",
+        "source_title": "https://careers.ballys.com/job/ballys-atlantic-city/atlantic-city/new-jersey/united-states/casinos-resorts/promotions-and-events-rep-on-call/10814f67-2cbe-4f0e-9f81-0d0150993f17"
+      }
+    ]
+  },
+  "finished_at": "2026-11-22T09:40:26.288227+00:00"
+}

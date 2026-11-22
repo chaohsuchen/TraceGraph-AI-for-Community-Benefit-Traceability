@@ -1,0 +1,269 @@
+{
+  "case_id": "TG-GOLD-H007",
+  "query": "Bally's states 70 percent of employees will be Bronx residents, 47 percent women and 75 percent minorities.",
+  "facts": [
+    {
+      "id": "G1",
+      "text": "Bally's stated a 70% Bronx-resident target for permanent employees.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H007",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H007",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "G2",
+      "text": "Bally's targeted 47% women in its workforce.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H007",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H007",
+          "row": 6
+        },
+        {
+          "sheet": "TG-GOLD-H007",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "G3",
+      "text": "Bally's targeted 75% minority employees.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H007",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H007",
+          "row": 6
+        },
+        {
+          "sheet": "TG-GOLD-H007",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "G4",
+      "text": "A Bally's response gave a different Bronx residency figure of 75%.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H007",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "G5",
+      "text": "Bally's response defined local as Community Boards 9, 10 and 11.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H007",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "G6",
+      "text": "In that response the women's and minority shares were labeled goals or targets.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H007",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "G7",
+      "text": "The Bronx gaming license requires public workforce diversity and demographic reporting.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H007",
+          "row": 8
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "K1",
+      "text": "Seventy percent of the project's actual permanent employees were Bronx residents.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H007",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H007",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "K2",
+      "text": "Women comprised 47% of the project's actual permanent workforce.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H007",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H007",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "K3",
+      "text": "Minority employees comprised 75% of the project's actual permanent workforce.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H007",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H007",
+          "row": 7
+        }
+      ]
+    }
+  ],
+  "delivery_applicable": true,
+  "reference_verdict": {
+    "status": "not yet due",
+    "reasoning": "§5 decision order: (1) workforce shares can be evidenced; (2) the trigger (operations, casino opening targeted 2030) is after the assessment date → not yet due. All documents restate the targets; none report hiring. Same evidence chain as H001 (duplicate/restatement), plus the women/minority figures. Re-assess at opening.",
+    "delivery_applicable": true,
+    "source_refs": [
+      {
+        "sheet": "TG-GOLD-H007",
+        "row": 18
+      },
+      {
+        "sheet": "TG-GOLD-H007",
+        "row": 19
+      }
+    ]
+  },
+  "sources": [
+    {
+      "sheet": "TG-GOLD-H007",
+      "row": 5,
+      "title": "GFLB selection document, Bally's Bronx: Economic Activity and Business Development",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf  (GFLB-SEL-2025-12-01) — PDF p.13 (printed p.12)",
+      "publisher": "Gaming Facility Location Board (Dec 1, 2025)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf  (GFLB-SEL-2025-12-01) — PDF p.13 (printed p.12)",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "Source of the targets (70% / 47% / 75%).",
+      "notes": "Board calls these 'goals' that 'must be honored'."
+    },
+    {
+      "sheet": "TG-GOLD-H007",
+      "row": 6,
+      "title": "Bally's Bronx response to GFLB questions",
+      "citation": "https://nycasinos.ny.gov/ballys-bronx-response-gflb-questions-102125",
+      "publisher": "Bally's, via NY casino siting process (Oct 21, 2025)",
+      "url": "https://nycasinos.ny.gov/ballys-bronx-response-gflb-questions-102125",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/ballys-bronx-response-gflb-questions-102125",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "47% women and 75% minorities labelled 'Goal/Target', not 'Commitment'. Bronx residency given as 75% (vs 70% in the Board's text); 'local' defined as CB9, 10 and 11. Diversity to be tracked under a Host Municipality Agreement; no reporting frequency.",
+      "notes": "Supports the Target label. The 70% vs 75% gap is between versions of the promise, not conflicting evidence of fulfillment."
+    },
+    {
+      "sheet": "TG-GOLD-H007",
+      "row": 7,
+      "title": "GFLB final report and findings",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "publisher": "Gaming Facility Location Board (Mar 2026)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "Confirms 70% Bronx, 47% women, 75% minorities for permanent employees; Board expects them to be met or exceeded.",
+      "notes": "Regulator commentary. Method D."
+    },
+    {
+      "sheet": "TG-GOLD-H007",
+      "row": 8,
+      "title": "Bally's license document (executed)",
+      "citation": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "publisher": "NYS Gaming Commission (Dec 19, 2025)",
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "url_origin": "workbook",
+      "locator": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "Community-benefits conditions, including public workforce diversity and demographic reporting.",
+      "notes": "Accountability mechanism; verify page before citing."
+    },
+    {
+      "sheet": "TG-GOLD-H007",
+      "row": 9,
+      "title": "3 NYC casino plans win final OK -- 2 in Queens, 1 in Bronx'",
+      "citation": "https://gothamist.com/news/3-nyc-casino-plans-win-final-ok-2-in-queens-1-in-bronx ",
+      "publisher": "Gothamist (Dec 15, 2025)",
+      "url": "https://gothamist.com/news/3-nyc-casino-plans-win-final-ok-2-in-queens-1-in-bronx",
+      "url_origin": "workbook",
+      "locator": "https://gothamist.com/news/3-nyc-casino-plans-win-final-ok-2-in-queens-1-in-bronx ",
+      "published_on": null,
+      "evidence_status": "not yet due",
+      "specific_evidence": "Repeats only the 70% Bronx figure.",
+      "notes": "Method B; nothing on women/minority shares."
+    }
+  ],
+  "provenance": {
+    "workbook": "Golden Dataset (6).xlsx",
+    "sha256": "2da588b49b311957885ed7ff98bcd31c49e9d3ef8e99a761a3e9e5fcdb360099",
+    "identity": {
+      "sheet": "gold commitments",
+      "row": 21
+    },
+    "detail_sheet": "TG-GOLD-H007",
+    "detail_internal_id_cell": "B1",
+    "workbook_valid_flag": 1,
+    "workbook_split": "heldout_provisional",
+    "workbook_evidence_status": "not yet due",
+    "workbook_fields": {
+      "gold_id": "TG-GOLD-H007",
+      "document_id": "GFLB-SEL-2025-12-01",
+      "page_section": "pdf p.13; Bally’s Bronx: Economic Activity and Business Development",
+      "char_start": 29062.0,
+      "char_end": 29197.0,
+      "commitment_text": "The Applicant states that 70 percent of employees will be Bronx residents, 47 percent will be women, and 75 percent will be minorities.",
+      "normalized_statement": "Bally's states 70 percent of employees will be Bronx residents, 47 percent women and 75 percent minorities.",
+      "obligation_type": "Target / goal",
+      "responsible_entity": "Bally’s Corporation",
+      "amount_value": "70 percent Bronx residents; 47 percent women; 75 percent minorities",
+      "term_periodicity": "operations",
+      "geographic_scope": "Bronx",
+      "beneficiary_category": "workforce/jobs (local residents, women, minorities)",
+      "beneficiary_named": "none named",
+      "condition_contingency": "none stated",
+      "milestone": "none stated",
+      "evidence_status": "not yet due",
+      "confidence": "Medium",
+      "adjudication_note": "Board calls these 'goals' that 'must be honored'; competing label Best effort (p.14).",
+      "duplicate_of": "TG-GOLD-H001",
+      "notes": "duplicate/restatement (adds women/minority figures).",
+      "evaluation_split": "heldout_provisional",
+      "manually annotated valid?": 1.0
+    },
+    "detail_research_cutoff": null,
+    "evaluation_use": "22-case annotated benchmark; development-exposed cases included",
+    "reference_preparation": "Locally curated factual hypotheses and delivery conditions from the cited Golden (6) cells; prior to research."
+  }
+}

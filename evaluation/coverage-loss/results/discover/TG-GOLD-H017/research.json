@@ -1,0 +1,441 @@
+{
+  "case_id": "TG-GOLD-H017",
+  "reference_sha256": "aa342d8a1ce93218a4b3c144167c50e2e4993e421434bdc6c6506df933a502fd",
+  "query": "HRMP's $761 million community benefits include traffic/roadway work, MTA station improvements, 25+ acres of open space, a Community Impact Fund and social-services funding.",
+  "model": "gpt-5.4",
+  "web_search_model": "gpt-5.4",
+  "started_at": "2026-11-22T09:38:43.422927+00:00",
+  "outcome": "RESOLVED",
+  "graph": {
+    "commitment": {
+      "title": "Proposed HRMP $761 million community benefits package",
+      "description": "HRMP proposed community benefits valued at $761 million, including significant traffic and roadway improvements, improvements to the MTA public transit station, over 25 acres of new public open space, a Community Impact Fund, and funding for neighborhood social services.",
+      "original_text": "Community benefits valued at $761 million include significant traffic and roadway improvements, improvements to the Metropolitan Transportation Authority (MTA)’s public transit station, over 25 acres of new public open space, a Community Impact Fund, and funding for neighborhood social services.",
+      "responsible_entity_raw": "HRMP",
+      "beneficiary": {
+        "name": null,
+        "category": "community"
+      },
+      "obligation_type": "community benefits",
+      "amount_value": "$761 million",
+      "term_periodicity": null,
+      "geographic_scope": null,
+      "condition_contingency": null,
+      "milestone": null,
+      "notes": "The cited language describes a proposal.",
+      "id": "commitment-ccb21b73-a417-4c06-9b3b-ac52ad6c82f3",
+      "original_promise": {
+        "document_id": null,
+        "source": {
+          "id": "source-5d74b12c-724c-4535-aa7b-5f2dac8f7f5d",
+          "url": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+          "title": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+          "citation": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "locator": "Cited passage",
+        "char_start": null,
+        "char_end": null
+      }
+    },
+    "organization": {
+      "id": "org-fd09066f-1a5d-4d7d-bda2-f29c608a5fff",
+      "name": "HRMP"
+    },
+    "assessment": {
+      "label": "UNVERIFIED",
+      "verdict": "Delivery unverified for: Traffic and roadway improvements were actually delivered as part of HRMP's community benefits; Improvements to the MTA public transit station were actually delivered; Over 25 acres of new public open space were actually delivered; A Community Impact Fund was actually established or funded as part of the community benefits; Funding for neighborhood social services was actually provided",
+      "reasoning": "Requested scope: HRMP's $761 million community benefits include traffic/roadway work, MTA station improvements, 25+ acres of open space, a Community Impact Fund and social-services funding.\n\nTraffic and roadway improvements were actually delivered as part of HRMP's community benefits\nStatus: UNVERIFIED\nThe original promise documents that the $761 million community benefits package would include 'significant traffic and roadway improvements.' A related passage describes what HRMP proposed: 'extensive traffic and roadway improvements' including intersections, paths, and access changes. But the cited later reporting says HRMP is still 'through development, financing, construction, and permitting stages,' which indicates ongoing process rather than completed delivery.\nPromised scope: HRMP promised community benefits for the surrounding community at an unspecified delivery date and, from the related proposal text, at Willets Point/Queens. The promised benefit included significant traffic and roadway improvements.\nObserved scope: The later evidence shows HRMP reporting proposed traffic and roadway work, including reconfigured intersections, pedestrian and bicycle paths, and transit access improvements, for Willets Point/Queens. No citation shows those improvements were completed or available to beneficiaries.\nEvidence gap: No direct evidence shows the traffic and roadway improvements were actually built, completed, or made available for the promised community.\nPromise evidence: c1, c2\n\nImprovements to the MTA public transit station were actually delivered\nStatus: UNVERIFIED\nThe promise includes 'improvements to the Metropolitan Transportation Authority (MTA)'s public transit station.' HRMP later reported proposed ADA-compliant station upgrades, engagement with the MTA for over three years, and 'conceptual approval' at the 30% Construction Documents stage. HRMP also said it would 'continue to work in good faith to secure all necessary approvals... to deliver this required community benefit.' These passages establish planning and approvals activity, not actual delivered station improvements.\nPromised scope: HRMP promised community benefits for the surrounding community, location otherwise unspecified in the core promise but tied by related proposal text to the Willets Point MTA station in Queens. The promised benefit was improvements to the MTA's public transit station.\nObserved scope: The evidence shows HRMP reporting proposed ADA-compliant upgrades to the Willets Point MTA subway station and reporting MTA conceptual approval at the 30% construction-document stage. It does not show that station improvements were completed or in service for riders.\nEvidence gap: No citation shows the MTA station improvements were finished, opened, or otherwise actually delivered to transit users.\nPromise evidence: c1, c2\n\nOver 25 acres of new public open space were actually delivered\nStatus: UNVERIFIED\nThe original promise expressly includes 'over 25 acres of new public open space.' None of the supplied later citations report completed open space, opened acreage, or public availability of such space.\nPromised scope: HRMP promised community benefits for the surrounding community at an unspecified delivery date and unspecified precise location in the quoted promise. The promised benefit was over 25 acres of new public open space.\nObserved scope: No cited outcome evidence identifies any actually completed public open space acreage, beneficiaries, or location of delivered open space.\nEvidence gap: No direct evidence shows any amount of new public open space was completed or opened, let alone more than 25 acres.\nPromise evidence: c1\n\nA Community Impact Fund was actually established or funded as part of the community benefits\nStatus: UNVERIFIED\nThe original passage lists 'a Community Impact Fund' as part of the $761 million community benefits. The provided later citations discuss transportation-related proposals and overall project development status, but do not report creation, capitalization, or operation of any Community Impact Fund.\nPromised scope: HRMP promised community benefits for the surrounding community at an unspecified location and date in the quoted promise. One promised benefit was a Community Impact Fund.\nObserved scope: No cited outcome evidence shows a Community Impact Fund was created, funded, or operating for any beneficiaries.\nEvidence gap: No direct evidence shows the fund was established, funded, or made available to intended community beneficiaries.\nPromise evidence: c1\n\nFunding for neighborhood social services was actually provided\nStatus: UNVERIFIED\nThe original promise includes 'funding for neighborhood social services.' None of the supplied later citations report actual disbursement of social-services funding, named recipient organizations, funded programs, or served neighborhoods.\nPromised scope: HRMP promised community benefits for neighborhood beneficiaries, with the precise neighborhoods and timing unspecified in the quoted promise. The promised benefit was funding for neighborhood social services.\nObserved scope: No cited outcome evidence shows any neighborhood social-services funding was actually provided, to whom, or where.\nEvidence gap: No direct evidence shows neighborhood social-services funding was paid or made available to recipients.\nPromise evidence: c1\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “Community benefits valued at $761 million include significant traffic and roadway improvements, improvements to the Metropolitan Transportation Authority (MTA)’s public transit station, over 25 acres of new public open space, a Community Impact Fund, and funding for neighborhood social services.”\nhttps://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf\n\nc2: “HRMP proposes extensive traffic and roadway improvements, including ADA-compliant upgrades to the Willets Point MTA subway station, reconfigured intersections, new pedestrian and bicycle paths, and improved access to public transit.”\nhttps://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf\n\nc3: “Hard Rock Metropolitan Park has engaged with the MTA for over three years about the proposed improvements at Mets-Willets Point, and the MTA provided conceptual approval of the Proposed Improvements at the 30% Construction Documents stage of review in a letter dated August 21, 2024”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf\n\nc4: “We have and will continue to work in good faith to secure all necessary approvals from the MTA and meet all necessary deadlines to deliver this required community benefit.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf\n\nc5: “Resorts World NYC is already generating gaming revenue and expanding its casino floor, while Hard Rock Metropolitan Park in Queens and Bally’s Bronx continue through development, financing, construction, and permitting stages.”\nhttps://www.actionnetwork.com/news/new-york-casino-resorts-world-hard-rock-ballys-update/",
+      "verification_date": "2026-11-22"
+    },
+    "findings": [
+      {
+        "id": "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+        "claim": "HRMP documented a proposed community benefits package valued at $761 million, including traffic and roadway improvements, improvements to the MTA public transit station, over 25 acres of new public open space, a Community Impact Fund, and funding for neighborhood social services, as stated in the cited promise document with retrieval date 2026-11-22.",
+        "supports": [
+          {
+            "id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "source": {
+              "id": "source-5d74b12c-724c-4535-aa7b-5f2dac8f7f5d",
+              "url": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+              "title": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+              "citation": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Promise documented",
+            "excerpt": "Community benefits valued at $761 million include significant traffic and roadway improvements, improvements to the Metropolitan Transportation Authority (MTA)’s public transit station, over 25 acres of new public open space, a Community Impact Fund, and funding for neighborhood social services.",
+            "locator": "Cited passage",
+            "summary": "HRMP described a community benefits package valued at $761 million that would include traffic and roadway improvements, improvements to the MTA public transit station, over 25 acres of new public open space, a Community Impact Fund, and funding for neighborhood social services.",
+            "explanation": "This passage directly states the claimed value and enumerates the components of the proposed community benefits package.",
+            "retrieved_at": "2026-11-22T09:39:13.065828+00:00"
+          }
+        ]
+      },
+      {
+        "id": "finding-1cb7b3c0-cb38-4cd6-9045-fd3174e0bc80",
+        "claim": "HRMP specified that the proposed transportation-related community benefits included ADA-compliant upgrades to the Willets Point MTA subway station, reconfigured intersections, new pedestrian and bicycle paths, and improved access to public transit, as stated in the cited promise document with retrieval date 2026-11-22.",
+        "supports": [
+          {
+            "id": "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+            "source": {
+              "id": "source-5d74b12c-724c-4535-aa7b-5f2dac8f7f5d",
+              "url": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+              "title": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+              "citation": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Promise documented",
+            "excerpt": "HRMP proposes extensive traffic and roadway improvements, including ADA-compliant upgrades to the Willets Point MTA subway station, reconfigured intersections, new pedestrian and bicycle paths, and improved access to public transit.",
+            "locator": "Cited passage",
+            "summary": "HRMP proposed traffic and roadway work that included ADA-compliant upgrades to the Willets Point MTA subway station, reconfigured intersections, new pedestrian and bicycle paths, and improved access to public transit.",
+            "explanation": "This passage gives more specific scope for the transportation and station-improvement elements of the proposed benefits.",
+            "retrieved_at": "2026-11-22T09:39:13.065828+00:00"
+          }
+        ]
+      },
+      {
+        "id": "finding-51483460-8378-4ae9-ae18-e849b662808b",
+        "claim": "In a 2025 response document, HRMP said it had engaged with the MTA for over three years on proposed Mets-Willets Point improvements and that the MTA provided conceptual approval at the 30% Construction Documents stage in a letter dated August 21, 2024.",
+        "supports": [
+          {
+            "id": "support-2ce3e3ec-d471-48ff-87f2-5dab103282f0",
+            "source": {
+              "id": "source-4f1a2508-99f3-4693-9cdb-1382140221aa",
+              "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf",
+              "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf",
+              "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Implementation evidence",
+            "excerpt": "Hard Rock Metropolitan Park has engaged with the MTA for over three years about the proposed improvements at Mets-Willets Point, and the MTA provided conceptual approval of the Proposed Improvements at the 30% Construction Documents stage of review in a letter dated August 21, 2024",
+            "locator": "Cited passage",
+            "summary": "By a 2025 response document, Hard Rock Metropolitan Park said it had engaged with the MTA for over three years on proposed Mets-Willets Point improvements, and that the MTA had given conceptual approval at the 30% Construction Documents stage in an August 21, 2024 letter.",
+            "explanation": "This is direct evidence of a later implementation milestone for the proposed MTA-related improvements: extended coordination and conceptual approval at a defined design-review stage.",
+            "retrieved_at": "2026-11-22T09:39:13.065828+00:00"
+          }
+        ]
+      },
+      {
+        "id": "finding-61e5810f-d55b-4f08-a884-68471d3947cb",
+        "claim": "In a 2025 response document, HRMP said it would continue working in good faith to secure all necessary MTA approvals and meet necessary deadlines to deliver the MTA-related community benefit, indicating the benefit remained subject to future approvals and deadlines.",
+        "supports": [
+          {
+            "id": "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669",
+            "source": {
+              "id": "source-4f1a2508-99f3-4693-9cdb-1382140221aa",
+              "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf",
+              "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf",
+              "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Qualification",
+            "excerpt": "We have and will continue to work in good faith to secure all necessary approvals from the MTA and meet all necessary deadlines to deliver this required community benefit.",
+            "locator": "Cited passage",
+            "summary": "Hard Rock Metropolitan Park said it would continue working in good faith to secure all necessary MTA approvals and meet deadlines to deliver the MTA-related community benefit.",
+            "explanation": "This passage shows delivery remained conditional on obtaining required approvals and meeting deadlines, documenting a limitation rather than completed delivery.",
+            "retrieved_at": "2026-11-22T09:39:13.065828+00:00"
+          }
+        ]
+      },
+      {
+        "id": "finding-d6398075-1a05-410b-a89e-b6a60ea5c706",
+        "claim": "An independent report said Hard Rock Metropolitan Park in Queens was continuing through development, financing, construction, and permitting stages at the time of the report, without documenting delivery of the specific $761 million community benefits package.",
+        "supports": [
+          {
+            "id": "support-54e277fd-b358-46df-8cb6-5c8009352e06",
+            "source": {
+              "id": "source-dcfae224-e52c-448c-a0d1-055340107da3",
+              "url": "https://www.actionnetwork.com/news/new-york-casino-resorts-world-hard-rock-ballys-update/",
+              "title": "https://www.actionnetwork.com/news/new-york-casino-resorts-world-hard-rock-ballys-update/",
+              "citation": "https://www.actionnetwork.com/news/new-york-casino-resorts-world-hard-rock-ballys-update/",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Context",
+            "excerpt": "Resorts World NYC is already generating gaming revenue and expanding its casino floor, while Hard Rock Metropolitan Park in Queens and Bally’s Bronx continue through development, financing, construction, and permitting stages.",
+            "locator": "Cited passage",
+            "summary": "An independent report says Hard Rock Metropolitan Park in Queens \"continue[s] through development, financing, construction, and permitting stages.\"",
+            "explanation": "This indicates the project was still in pre-opening stages in the cited report, but it does not document delivery of the listed community benefits.",
+            "retrieved_at": "2026-11-22T09:39:13.065828+00:00"
+          }
+        ]
+      },
+      {
+        "id": "source-reread-1",
+        "claim": "HRMP said the same undertaking included a $163 million Community Impact Fund to provide grants to nonprofit organizations serving Queens communities and residents.",
+        "supports": [
+          {
+            "id": "source-reread-1-s",
+            "excerpt": "$163 million for a Community Impact Fund that will provide grants to non -profit organizations serving Queens communities and residents.",
+            "source": {
+              "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+              "title": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf"
+            }
+          }
+        ]
+      },
+      {
+        "id": "source-reread-2",
+        "claim": "The Borough President’s approval conditions said the Community Benefits Fund for Metropolitan Park should be accessible for 30 years or until depleted and allocated across Queens Community Districts 3, 4, 6, 7, 8, and 9.",
+        "supports": [
+          {
+            "id": "source-reread-2-s",
+            "excerpt": "A $163 million Community Benefits Fund (with the understanding this Fund should be increased) to be accessible for 30 years (or until the funds are depleted) and allocated across local Queens Community Districts 3, 4, 6, 7, 8, and 9;",
+            "source": {
+              "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+              "title": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf"
+            }
+          }
+        ]
+      },
+      {
+        "id": "source-reread-3",
+        "claim": "The Borough President’s conditions called for a Community Advisory Board to meet regularly as a watchdog over all promised Metropolitan Park community benefits.",
+        "supports": [
+          {
+            "id": "source-reread-3-s",
+            "excerpt": "A Community Advisory Board that will meet regularly and act as a watchdog for all promised community benefits;",
+            "source": {
+              "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+              "title": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf"
+            }
+          }
+        ]
+      },
+      {
+        "id": "source-reread-4",
+        "claim": "HRMP described $25 million in social-services funding for community-identified health care and youth and senior needs, including an East Elmhurst health clinic, a Corona youth and senior center, and addiction and mental health services infrastructure in Flushing.",
+        "supports": [
+          {
+            "id": "source-reread-4-s",
+            "excerpt": "$25 million for community identified health care and youth and senior needs, including a health clinic in East Elmhurst , a youth and senior center in Corona, and addiction and mental health services infrastructure in Flushing.",
+            "source": {
+              "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+              "title": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf"
+            }
+          }
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "kind": "PROGRESS",
+        "from_id": "finding-1cb7b3c0-cb38-4cd6-9045-fd3174e0bc80",
+        "to_id": "finding-51483460-8378-4ae9-ae18-e849b662808b",
+        "reasoning": "The original transportation/station-benefit proposal in the promise document identified ADA-compliant upgrades to the Willets Point MTA subway station and related access improvements. The later 2025 response describes concrete follow-up implementation activity for that same scope: more than three years of engagement with the MTA and conceptual approval at the 30% Construction Documents stage in an August 21, 2024 letter. This establishes order and shows a later implementation milestone for the previously proposed station-related improvements.",
+        "status": null,
+        "preferred_id": null
+      },
+      {
+        "kind": "PROGRESS",
+        "from_id": "finding-51483460-8378-4ae9-ae18-e849b662808b",
+        "to_id": "finding-61e5810f-d55b-4f08-a884-68471d3947cb",
+        "reasoning": "The 2025 response first reports a specific implementation milestone for the proposed Mets-Willets Point improvements—MTA conceptual approval at the 30% Construction Documents stage as of August 21, 2024—then separately states that HRMP still must secure all necessary MTA approvals and meet deadlines to deliver the benefit. This shows the later claim follows from the earlier milestone by clarifying that the project remained conditional and not yet fully approved or delivered.",
+        "status": null,
+        "preferred_id": null
+      }
+    ],
+    "assessment_trace": {
+      "not_yet_due": [],
+      "criteria": [
+        {
+          "criterion": "Traffic and roadway improvements were actually delivered as part of HRMP's community benefits",
+          "scope_criteria": [
+            "s1",
+            "s2"
+          ],
+          "promise_scope": "HRMP promised community benefits for the surrounding community at an unspecified delivery date and, from the related proposal text, at Willets Point/Queens. The promised benefit included significant traffic and roadway improvements.",
+          "observed_scope": "The later evidence shows HRMP reporting proposed traffic and roadway work, including reconfigured intersections, pedestrian and bicycle paths, and transit access improvements, for Willets Point/Queens. No citation shows those improvements were completed or available to beneficiaries.",
+          "promise_citation_ids": [
+            "c1",
+            "c2"
+          ],
+          "delivery_citation_ids": [],
+          "delivery_status": "UNVERIFIED",
+          "timing_requirement": "",
+          "explanation": "The original promise documents that the $761 million community benefits package would include 'significant traffic and roadway improvements.' A related passage describes what HRMP proposed: 'extensive traffic and roadway improvements' including intersections, paths, and access changes. But the cited later reporting says HRMP is still 'through development, financing, construction, and permitting stages,' which indicates ongoing process rather than completed delivery.",
+          "gap": "No direct evidence shows the traffic and roadway improvements were actually built, completed, or made available for the promised community.",
+          "delivery_support": []
+        },
+        {
+          "criterion": "Improvements to the MTA public transit station were actually delivered",
+          "scope_criteria": [
+            "s1",
+            "s2"
+          ],
+          "promise_scope": "HRMP promised community benefits for the surrounding community, location otherwise unspecified in the core promise but tied by related proposal text to the Willets Point MTA station in Queens. The promised benefit was improvements to the MTA's public transit station.",
+          "observed_scope": "The evidence shows HRMP reporting proposed ADA-compliant upgrades to the Willets Point MTA subway station and reporting MTA conceptual approval at the 30% construction-document stage. It does not show that station improvements were completed or in service for riders.",
+          "promise_citation_ids": [
+            "c1",
+            "c2"
+          ],
+          "delivery_citation_ids": [],
+          "delivery_status": "UNVERIFIED",
+          "timing_requirement": "",
+          "explanation": "The promise includes 'improvements to the Metropolitan Transportation Authority (MTA)'s public transit station.' HRMP later reported proposed ADA-compliant station upgrades, engagement with the MTA for over three years, and 'conceptual approval' at the 30% Construction Documents stage. HRMP also said it would 'continue to work in good faith to secure all necessary approvals... to deliver this required community benefit.' These passages establish planning and approvals activity, not actual delivered station improvements.",
+          "gap": "No citation shows the MTA station improvements were finished, opened, or otherwise actually delivered to transit users.",
+          "delivery_support": []
+        },
+        {
+          "criterion": "Over 25 acres of new public open space were actually delivered",
+          "scope_criteria": [
+            "s1",
+            "s2"
+          ],
+          "promise_scope": "HRMP promised community benefits for the surrounding community at an unspecified delivery date and unspecified precise location in the quoted promise. The promised benefit was over 25 acres of new public open space.",
+          "observed_scope": "No cited outcome evidence identifies any actually completed public open space acreage, beneficiaries, or location of delivered open space.",
+          "promise_citation_ids": [
+            "c1"
+          ],
+          "delivery_citation_ids": [],
+          "delivery_status": "UNVERIFIED",
+          "timing_requirement": "",
+          "explanation": "The original promise expressly includes 'over 25 acres of new public open space.' None of the supplied later citations report completed open space, opened acreage, or public availability of such space.",
+          "gap": "No direct evidence shows any amount of new public open space was completed or opened, let alone more than 25 acres.",
+          "delivery_support": []
+        },
+        {
+          "criterion": "A Community Impact Fund was actually established or funded as part of the community benefits",
+          "scope_criteria": [
+            "s1",
+            "s2"
+          ],
+          "promise_scope": "HRMP promised community benefits for the surrounding community at an unspecified location and date in the quoted promise. One promised benefit was a Community Impact Fund.",
+          "observed_scope": "No cited outcome evidence shows a Community Impact Fund was created, funded, or operating for any beneficiaries.",
+          "promise_citation_ids": [
+            "c1"
+          ],
+          "delivery_citation_ids": [],
+          "delivery_status": "UNVERIFIED",
+          "timing_requirement": "",
+          "explanation": "The original passage lists 'a Community Impact Fund' as part of the $761 million community benefits. The provided later citations discuss transportation-related proposals and overall project development status, but do not report creation, capitalization, or operation of any Community Impact Fund.",
+          "gap": "No direct evidence shows the fund was established, funded, or made available to intended community beneficiaries.",
+          "delivery_support": []
+        },
+        {
+          "criterion": "Funding for neighborhood social services was actually provided",
+          "scope_criteria": [
+            "s1",
+            "s2"
+          ],
+          "promise_scope": "HRMP promised community benefits for neighborhood beneficiaries, with the precise neighborhoods and timing unspecified in the quoted promise. The promised benefit was funding for neighborhood social services.",
+          "observed_scope": "No cited outcome evidence shows any neighborhood social-services funding was actually provided, to whom, or where.",
+          "promise_citation_ids": [
+            "c1"
+          ],
+          "delivery_citation_ids": [],
+          "delivery_status": "UNVERIFIED",
+          "timing_requirement": "",
+          "explanation": "The original promise includes 'funding for neighborhood social services.' None of the supplied later citations report actual disbursement of social-services funding, named recipient organizations, funded programs, or served neighborhoods.",
+          "gap": "No direct evidence shows neighborhood social-services funding was paid or made available to recipients.",
+          "delivery_support": []
+        }
+      ],
+      "label": "UNVERIFIED",
+      "verdict": "Delivery unverified for: Traffic and roadway improvements were actually delivered as part of HRMP's community benefits; Improvements to the MTA public transit station were actually delivered; Over 25 acres of new public open space were actually delivered; A Community Impact Fund was actually established or funded as part of the community benefits; Funding for neighborhood social services was actually provided",
+      "reasoning": "Requested scope: HRMP's $761 million community benefits include traffic/roadway work, MTA station improvements, 25+ acres of open space, a Community Impact Fund and social-services funding.\n\nTraffic and roadway improvements were actually delivered as part of HRMP's community benefits\nStatus: UNVERIFIED\nThe original promise documents that the $761 million community benefits package would include 'significant traffic and roadway improvements.' A related passage describes what HRMP proposed: 'extensive traffic and roadway improvements' including intersections, paths, and access changes. But the cited later reporting says HRMP is still 'through development, financing, construction, and permitting stages,' which indicates ongoing process rather than completed delivery.\nPromised scope: HRMP promised community benefits for the surrounding community at an unspecified delivery date and, from the related proposal text, at Willets Point/Queens. The promised benefit included significant traffic and roadway improvements.\nObserved scope: The later evidence shows HRMP reporting proposed traffic and roadway work, including reconfigured intersections, pedestrian and bicycle paths, and transit access improvements, for Willets Point/Queens. No citation shows those improvements were completed or available to beneficiaries.\nEvidence gap: No direct evidence shows the traffic and roadway improvements were actually built, completed, or made available for the promised community.\nPromise evidence: c1, c2\n\nImprovements to the MTA public transit station were actually delivered\nStatus: UNVERIFIED\nThe promise includes 'improvements to the Metropolitan Transportation Authority (MTA)'s public transit station.' HRMP later reported proposed ADA-compliant station upgrades, engagement with the MTA for over three years, and 'conceptual approval' at the 30% Construction Documents stage. HRMP also said it would 'continue to work in good faith to secure all necessary approvals... to deliver this required community benefit.' These passages establish planning and approvals activity, not actual delivered station improvements.\nPromised scope: HRMP promised community benefits for the surrounding community, location otherwise unspecified in the core promise but tied by related proposal text to the Willets Point MTA station in Queens. The promised benefit was improvements to the MTA's public transit station.\nObserved scope: The evidence shows HRMP reporting proposed ADA-compliant upgrades to the Willets Point MTA subway station and reporting MTA conceptual approval at the 30% construction-document stage. It does not show that station improvements were completed or in service for riders.\nEvidence gap: No citation shows the MTA station improvements were finished, opened, or otherwise actually delivered to transit users.\nPromise evidence: c1, c2\n\nOver 25 acres of new public open space were actually delivered\nStatus: UNVERIFIED\nThe original promise expressly includes 'over 25 acres of new public open space.' None of the supplied later citations report completed open space, opened acreage, or public availability of such space.\nPromised scope: HRMP promised community benefits for the surrounding community at an unspecified delivery date and unspecified precise location in the quoted promise. The promised benefit was over 25 acres of new public open space.\nObserved scope: No cited outcome evidence identifies any actually completed public open space acreage, beneficiaries, or location of delivered open space.\nEvidence gap: No direct evidence shows any amount of new public open space was completed or opened, let alone more than 25 acres.\nPromise evidence: c1\n\nA Community Impact Fund was actually established or funded as part of the community benefits\nStatus: UNVERIFIED\nThe original passage lists 'a Community Impact Fund' as part of the $761 million community benefits. The provided later citations discuss transportation-related proposals and overall project development status, but do not report creation, capitalization, or operation of any Community Impact Fund.\nPromised scope: HRMP promised community benefits for the surrounding community at an unspecified location and date in the quoted promise. One promised benefit was a Community Impact Fund.\nObserved scope: No cited outcome evidence shows a Community Impact Fund was created, funded, or operating for any beneficiaries.\nEvidence gap: No direct evidence shows the fund was established, funded, or made available to intended community beneficiaries.\nPromise evidence: c1\n\nFunding for neighborhood social services was actually provided\nStatus: UNVERIFIED\nThe original promise includes 'funding for neighborhood social services.' None of the supplied later citations report actual disbursement of social-services funding, named recipient organizations, funded programs, or served neighborhoods.\nPromised scope: HRMP promised community benefits for neighborhood beneficiaries, with the precise neighborhoods and timing unspecified in the quoted promise. The promised benefit was funding for neighborhood social services.\nObserved scope: No cited outcome evidence shows any neighborhood social-services funding was actually provided, to whom, or where.\nEvidence gap: No direct evidence shows neighborhood social-services funding was paid or made available to recipients.\nPromise evidence: c1\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “Community benefits valued at $761 million include significant traffic and roadway improvements, improvements to the Metropolitan Transportation Authority (MTA)’s public transit station, over 25 acres of new public open space, a Community Impact Fund, and funding for neighborhood social services.”\nhttps://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf\n\nc2: “HRMP proposes extensive traffic and roadway improvements, including ADA-compliant upgrades to the Willets Point MTA subway station, reconfigured intersections, new pedestrian and bicycle paths, and improved access to public transit.”\nhttps://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf\n\nc3: “Hard Rock Metropolitan Park has engaged with the MTA for over three years about the proposed improvements at Mets-Willets Point, and the MTA provided conceptual approval of the Proposed Improvements at the 30% Construction Documents stage of review in a letter dated August 21, 2024”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf\n\nc4: “We have and will continue to work in good faith to secure all necessary approvals from the MTA and meet all necessary deadlines to deliver this required community benefit.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf\n\nc5: “Resorts World NYC is already generating gaming revenue and expanding its casino floor, while Hard Rock Metropolitan Park in Queens and Bally’s Bronx continue through development, financing, construction, and permitting stages.”\nhttps://www.actionnetwork.com/news/new-york-casino-resorts-world-hard-rock-ballys-update/",
+      "refutation": [],
+      "scope_anchors": {
+        "s1": "HRMP proposed $761 million in community benefits including traffic/roadway improvements, MTA station improvements, over 25 acres of public open space, a Community Impact Fund, and neighborhood social-services funding.",
+        "s2": "Whether those community benefits were actually delivered."
+      },
+      "citations": {
+        "c1": {
+          "source": {
+            "title": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+            "url": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+            "citation": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf"
+          },
+          "excerpt": "Community benefits valued at $761 million include significant traffic and roadway improvements, improvements to the Metropolitan Transportation Authority (MTA)’s public transit station, over 25 acres of new public open space, a Community Impact Fund, and funding for neighborhood social services.",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:39:13.065828+00:00",
+          "finding_id": "finding-849e32d0-5686-4611-9788-3b5b108b29f4",
+          "support_ids": [
+            "support-91355293-5b80-400f-93fb-7736d662f1c9"
+          ]
+        },
+        "c2": {
+          "source": {
+            "title": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+            "url": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+            "citation": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf"
+          },
+          "excerpt": "HRMP proposes extensive traffic and roadway improvements, including ADA-compliant upgrades to the Willets Point MTA subway station, reconfigured intersections, new pedestrian and bicycle paths, and improved access to public transit.",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:39:13.065828+00:00",
+          "finding_id": "finding-1cb7b3c0-cb38-4cd6-9045-fd3174e0bc80",
+          "support_ids": [
+            "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc"
+          ]
+        },
+        "c3": {
+          "source": {
+            "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf",
+            "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf",
+            "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf"
+          },
+          "excerpt": "Hard Rock Metropolitan Park has engaged with the MTA for over three years about the proposed improvements at Mets-Willets Point, and the MTA provided conceptual approval of the Proposed Improvements at the 30% Construction Documents stage of review in a letter dated August 21, 2024",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:39:13.065828+00:00",
+          "finding_id": "finding-51483460-8378-4ae9-ae18-e849b662808b",
+          "support_ids": [
+            "support-2ce3e3ec-d471-48ff-87f2-5dab103282f0"
+          ]
+        },
+        "c4": {
+          "source": {
+            "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf",
+            "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf",
+            "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf"
+          },
+          "excerpt": "We have and will continue to work in good faith to secure all necessary approvals from the MTA and meet all necessary deadlines to deliver this required community benefit.",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:39:13.065828+00:00",
+          "finding_id": "finding-61e5810f-d55b-4f08-a884-68471d3947cb",
+          "support_ids": [
+            "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669"
+          ]
+        },
+        "c5": {
+          "source": {
+            "title": "https://www.actionnetwork.com/news/new-york-casino-resorts-world-hard-rock-ballys-update/",
+            "url": "https://www.actionnetwork.com/news/new-york-casino-resorts-world-hard-rock-ballys-update/",
+            "citation": "https://www.actionnetwork.com/news/new-york-casino-resorts-world-hard-rock-ballys-update/"
+          },
+          "excerpt": "Resorts World NYC is already generating gaming revenue and expanding its casino floor, while Hard Rock Metropolitan Park in Queens and Bally’s Bronx continue through development, financing, construction, and permitting stages.",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:39:13.065828+00:00",
+          "finding_id": "finding-d6398075-1a05-410b-a89e-b6a60ea5c706",
+          "support_ids": [
+            "support-54e277fd-b358-46df-8cb6-5c8009352e06"
+          ]
+        }
+      },
+      "scope_gap": ""
+    }
+  },
+  "job_result": {
+    "run_id": null,
+    "outcome": "RESOLVED",
+    "commitment_id": "commitment-ccb21b73-a417-4c06-9b3b-ac52ad6c82f3",
+    "unmatched_records": [
+      {
+        "excerpt": "Gaming Facility Location Board Selects 3 Applicants to Apply to the Gaming Commission for Gaming Facility Licenses",
+        "source_url": "https://apps.cio.ny.gov/apps/mediacontact/public/view.cfm?backButton=&parm=8CF994EA-BE93-69D0-2215473F6E0C6BC5",
+        "source_title": "https://apps.cio.ny.gov/apps/mediacontact/public/view.cfm?backButton=&parm=8CF994EA-BE93-69D0-2215473F6E0C6BC5"
+      }
+    ]
+  },
+  "finished_at": "2026-11-22T09:40:37.696948+00:00"
+}

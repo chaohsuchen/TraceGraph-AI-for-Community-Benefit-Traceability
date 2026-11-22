@@ -1,0 +1,141 @@
+{
+  "case_id": "TG-GOLD-H011",
+  "reference_sha256": "8cfe2b462b387f2cf9d856e48741cd7713911f626872bd4f0f68ae7042996a24",
+  "query": "Bally's promised pedestrian/bicycle connections to Ferry Point Park and waterfront, expanded ferry shuttle service, and at least three new bus stops.",
+  "model": "gpt-5.4",
+  "web_search_model": "gpt-5.4",
+  "started_at": "2026-11-22T09:37:18.250976+00:00",
+  "outcome": "PARTIAL_RESEARCH",
+  "message": "Research is incomplete; no commitment was saved.",
+  "graph": null,
+  "job_result": {
+    "gaps": [
+      "No cited evidence shows these connections were actually built or opened; the excerpts describe commitment/proposal status only.",
+      "Cited excerpts show an existing shuttle and a plan to expand it, but do not show any future expansion was implemented beyond the already operating service.",
+      "The cited excerpts show only potential increased ferry service and preliminary discussions with NYCEDC; they do not document a firm Bally’s promise with specific terms.",
+      "No cited evidence shows ferry service was expanded or that a binding service commitment took effect.",
+      "The cited excerpts document added bus stops generally and identify two intended locations—within Ferry Point Park and within the site or at its entrance—but do not directly document a promise of at least three new bus stops.",
+      "No cited evidence shows any new bus stops were actually constructed or placed in service.",
+      "The passages document Bally’s qualified commitment on pedestrian/bike connections, an existing shuttle service with a conditional plan to expand it, two proposed new MTA bus-stop locations, and only preliminary discussions about increased ferry service. They do not directly support a firm promise of expanded ferry shuttle service, a promise of at least three new bus stops, or that any of these new connections or services were actually built or opened."
+    ],
+    "facts": [
+      {
+        "excerpt": "The bicycle path and sidewalks have been coordinated with the DOT and Parks departments to enhance access to these features. While we are exploring the possibility of connecting Ferry Point Park with the waterfront park via a path under the Whitestone Bridge, we are continuing discussions with the relevant authorities to obtain permission for this highly desired connection. 4. Can you provide direct pedestrian and bike connections between the gaming facility, Ferry Point Park, and the Ferry Point waterfront walking path? To the extent practicable, we are committed to providing direct pedestrian and bike connections between the gaming facility, Ferry Point Park, and the Ferry Point waterfront walking path. Our primary focus is to ensure that these connections enhance accessibility while maintaining pedestrian safety around the site. Additionally, we must respect the designated staging areas for MTA emergency response equipment, which are crucial for operational readiness and public safety",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf"
+      },
+      {
+        "excerpt": "The walking paths on site will be limited to the area immediately around the building and 6 connect to the park property at controlled points. The nature of the landfill site prohibits trees of any size. A path connecting the main entry to the golf club house will have plantings where possible that relate to the links-style landscape of the golf course. The perimeter sidewalks will have the same approach. A patio/outdoor gathering area between the 18th hole and the resort will have a variety of seating, umbrellas and food/beverage service. This area will have a path that extends south to the boundary of the property where it can be connected to the waterfront park. Note the landscape there is a wetland zone with no trees as well, by design. Connectivity to Ferry Point Park will be provided from the resort entry and the proposed bus stop in the resort as well as through new sidewalks along Ring Road which do not exist today.",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf"
+      },
+      {
+        "excerpt": "Our bus service commitments are centered around maintaining and enhancing the existing Bally’s shuttle service, which currently operates at 10 locations throughout our local catchment area and provides free, accessible transportation to thousands of community members and their families. This shuttle service is a critical component of our commitment to providing convenient and reliable transportation options for our patrons and employees. We plan to expand this based on usage and demand.",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf"
+      },
+      {
+        "excerpt": "Since September 2023 Bally’s has offered shuttle service with 10 stops, including stops at the Bally’s Golf Links at Ferry Point and various stops between the Throggs Neck neighborhood and the Westchester Square 6 -Train Subway station. Thousands of riders have utilized the free shuttle service over the last ~2 years with average ridership over 1,000 riders per month during peak su mmer months. In addition, the proposed integrated facility would provide space for an MTA bus stop on-site, as well as a bus stop along the proposed reconstructed Ring Road in Ferry Point Park for Park users.",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf"
+      },
+      {
+        "excerpt": "5 Our bus service commitments are centered around maintaining and enhancing the existing Bally’s shuttle service, which currently operates at 10 locations throughout our local catchment area and provides free, accessible transportation to thousands of community members and their families. This shuttle service is a critical component of our commitment to providing convenient and reliable transportation options for our patrons and employees. We plan to expand this based on usage and demand. In addition to our shuttle service, we have initiated preliminary discussions with the MTA regarding the expansion of their bus service routes. Our goal is to include additional stops (1) within Ferry Point Park and (2) within our site or at its entrance, which would enhance transit access for our employees and visitors. This expansion is viewed as essential from an operational standpoint, ensuring seamless and efficient transit access throughout the local catchment area. Based on ongoing dialogue with the MTA including during the CEQR process, we have agreed that Bally’s would be responsible for funding the construction of bus stops and any associated infrastructure required to meet MTA standards.",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf"
+      },
+      {
+        "excerpt": "Preliminary discussions have been held with MTA regarding potential extension of bus lines to the Project Site and with NYCEDC regarding potential for increased ferry service to the Ferry Point Park ferry landing. Commitments for increased service for the MTA bus stops are in place, but specific details will need to be further materialized. The proposed integrated facility would not be operational until approximately 2030 if the New York State gaming license is awarded thus there is ample time to finalize the plans . 16 Further discussions will be held with MTA and NYCD EC once the New York State gaming license is awarded. In order to accommodate future MTA bus service, the proposed integrated facility would provide space for an MTA bus stop on-site, as well as a bus stop along the proposed reconstructed Ring Road in Ferry Point Park for Park users.",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf"
+      },
+      {
+        "excerpt": "▪ New Lafayette Ave Overpass ▪ Ferry Point Ring Road Rebuilt ▪ Added MTA Bus Stops ▪ Expanded Shuttle Services ▪ Parking Accommodations at Bally’s",
+        "source_url": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+        "source_title": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf"
+      },
+      {
+        "excerpt": "▪ Improved Access, Parking & Facilities at Ferry Point Park ▪ Pedestrian & Bicycle Safety Improvements",
+        "source_url": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf",
+        "source_title": "https://ballysbronx.com/wp-content/uploads/2025/03/BallysBronx_CommunityBenefitsAgreement_202503.pdf"
+      },
+      {
+        "excerpt": "Bally’s shall allocate resources for transportation and infrastructure improvements, including the implementation of shuttle services to and from the site, investments in expanded public transit access, and the addition of bike lanes to improve local connectivity.",
+        "source_url": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250085.pdf",
+        "source_title": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/250085.pdf"
+      }
+    ],
+    "query": "Bally's promised pedestrian/bicycle connections to Ferry Point Park and waterfront, expanded ferry shuttle service, and at least three new bus stops.",
+    "message": "Research is incomplete; no commitment was saved.",
+    "outcome": "PARTIAL_RESEARCH",
+    "suggestions": [
+      {
+        "kind": "WEB_LEAD",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "excerpt": "The bicycle path and sidewalks have been coordinated with the DOT and Parks departments to enhance access to these features. While we are exploring the possibility of connecting Ferry Point Park with the waterfront park via a path under the Whitestone Bridge, we are continuing discussions with the relevant authorities to obtain permission for this highly desired connection. 4. Can you provide direct pedestrian and bike connections between the gaming facility, Ferry Point Park, and the Ferry Point waterfront walking path? To the extent practicable, we are committed to providing direct pedestrian and bike connections between the gaming facility, Ferry Point Park, and the Ferry Point waterfront walking path. Our primary focus is to ensure that these connections enhance accessibility while maintaining pedestrian safety around the site. Additionally, we must respect the designated staging areas for MTA emergency response equipment, which are crucial for operational readiness and public safety",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "description": "The bicycle path and sidewalks have been coordinated with the DOT and Parks departments to enhance access to these features. While we are exploring the possibility of connecting Ferry Point Park with the waterfront park via a path under the Whitestone Bridge, we are continuing discussions with the relevant authorities to obtain permission for this highly desired connection. 4. Can you provide direct pedestrian and bike connections between the gaming facility, Ferry Point Park, and the Ferry Point waterfront walking path? To the extent practicable, we are committed to providing direct pedestrian and bike connections between the gaming facility, Ferry Point Park, and the Ferry Point waterfront walking path. Our primary focus is to ensure that these connections enhance accessibility while maintaining pedestrian safety around the site. Additionally, we must respect the designated staging areas for MTA emergency response equipment, which are crucial for operational readiness and public safety",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf"
+      },
+      {
+        "kind": "WEB_LEAD",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "excerpt": "The walking paths on site will be limited to the area immediately around the building and 6 connect to the park property at controlled points. The nature of the landfill site prohibits trees of any size. A path connecting the main entry to the golf club house will have plantings where possible that relate to the links-style landscape of the golf course. The perimeter sidewalks will have the same approach. A patio/outdoor gathering area between the 18th hole and the resort will have a variety of seating, umbrellas and food/beverage service. This area will have a path that extends south to the boundary of the property where it can be connected to the waterfront park. Note the landscape there is a wetland zone with no trees as well, by design. Connectivity to Ferry Point Park will be provided from the resort entry and the proposed bus stop in the resort as well as through new sidewalks along Ring Road which do not exist today.",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "description": "The walking paths on site will be limited to the area immediately around the building and 6 connect to the park property at controlled points. The nature of the landfill site prohibits trees of any size. A path connecting the main entry to the golf club house will have plantings where possible that relate to the links-style landscape of the golf course. The perimeter sidewalks will have the same approach. A patio/outdoor gathering area between the 18th hole and the resort will have a variety of seating, umbrellas and food/beverage service. This area will have a path that extends south to the boundary of the property where it can be connected to the waterfront park. Note the landscape there is a wetland zone with no trees as well, by design. Connectivity to Ferry Point Park will be provided from the resort entry and the proposed bus stop in the resort as well as through new sidewalks along Ring Road which do not exist today.",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf"
+      },
+      {
+        "kind": "WEB_LEAD",
+        "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "excerpt": "Our bus service commitments are centered around maintaining and enhancing the existing Bally’s shuttle service, which currently operates at 10 locations throughout our local catchment area and provides free, accessible transportation to thousands of community members and their families. This shuttle service is a critical component of our commitment to providing convenient and reliable transportation options for our patrons and employees. We plan to expand this based on usage and demand.",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "description": "Our bus service commitments are centered around maintaining and enhancing the existing Bally’s shuttle service, which currently operates at 10 locations throughout our local catchment area and provides free, accessible transportation to thousands of community members and their families. This shuttle service is a critical component of our commitment to providing convenient and reliable transportation options for our patrons and employees. We plan to expand this based on usage and demand.",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf"
+      }
+    ],
+    "unmatched_records": [
+      {
+        "excerpt": "To the extent practicable, we are committed to providing direct pedestrian and bike connections between the gaming facility, Ferry Point Park, and the Ferry Point waterfront walking path.",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf"
+      },
+      {
+        "excerpt": "In addition to our shuttle service, we have initiated preliminary discussions with the MTA regarding the expansion of their bus service routes. Our goal is to include additional stops (1) within Ferry Point Park and (2) within our site or at its entrance, which would enhance transit access for our employees and visitors.",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf"
+      },
+      {
+        "excerpt": "the proposed integrated facility would provide space for an MTA bus stop on-site, as well as a bus stop along the proposed reconstructed Ring Road in Ferry Point Park for Park users.",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf"
+      },
+      {
+        "excerpt": "Preliminary discussions have been held with MTA regarding potential extension of bus lines to the Project Site and with NYCEDC regarding potential for increased ferry service to the Ferry Point Park ferry landing. Commitments for increased service for the MTA bus stops are in place, but specific details will need to be further materialized.",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-bronx-cac-questions-with-responses-9.3.2025_vf.pdf"
+      },
+      {
+        "excerpt": "GFLB decisions expected by December 1, 2025",
+        "source_url": "https://ballysbronx.com/faq/",
+        "source_title": "https://ballysbronx.com/faq/"
+      },
+      {
+        "excerpt": "Gaming Commission licensure expected by December 31, 2025",
+        "source_url": "https://ballysbronx.com/faq/",
+        "source_title": "https://ballysbronx.com/faq/"
+      },
+      {
+        "excerpt": "In addition to our shuttle service, we have initiated preliminary discussions with the MTA regarding the expansion of their bus service routes. Our goal is to include additional stops (1) within Ferry Point Park and (2) within our site or at its entrance",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf"
+      },
+      {
+        "excerpt": "Based on ongoing dialogue with the MTA including during the CEQR process, we have agreed that Bally’s would be responsible for funding the construction of bus stops and any associated infrastructure required to meet MTA standards.",
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-ballys-qa_sep-12-2025.pdf"
+      }
+    ]
+  },
+  "finished_at": "2026-11-22T09:39:41.268705+00:00"
+}

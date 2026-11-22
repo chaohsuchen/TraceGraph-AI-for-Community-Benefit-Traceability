@@ -1,0 +1,264 @@
+{
+  "arm": "discover",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 9.344000000040978,
+      "request_id": "req_b6725c140fc04697aec2fe202b0846b5",
+      "usage": {
+        "input_tokens": 13838,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 4608
+        },
+        "output_tokens": 767,
+        "output_tokens_details": {
+          "reasoning_tokens": 140
+        },
+        "total_tokens": 14605
+      },
+      "search_enabled": true,
+      "web_search_ids": [
+        "ws_0c9f39e37d1776b3016b02c28e4d7c87d2b91500d34fb5990d",
+        "ws_0c9f39e37d1776b3016b02c290af8c87d282ed21af45c1d148",
+        "ws_0c9f39e37d1776b3016b02c291a59887d29ef0d74211d563ef"
+      ],
+      "stop_reason": "completed",
+      "web_search_statuses": [
+        "completed",
+        "completed",
+        "searching"
+      ]
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 1.3440000000409782,
+      "request_id": "req_9acfd059bf9b4b0a8d946d5ffa97fdad",
+      "usage": {
+        "input_tokens": 3414,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 13,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3427
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "documents": [
+    {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "status": "readable",
+      "characters": 18732,
+      "sha256": "9971c9b9ea52d065e4f5cb1c5b7c3232c9182315324899ebfc59844cc7956602"
+    },
+    {
+      "url": "https://a002-ceqraccess.nyc.gov/ceqr/Details?data=MjRETUUwMTFY0&signature=1c7557f385641122298923258ffa78cd2f1ddc67",
+      "status": "readable",
+      "characters": 4598,
+      "sha256": "32c592036a06790333324c56d6e43378147cc40810824c728d34532dd3fe825c"
+    },
+    {
+      "url": "https://www.ballys.com/privacy-policy/default.aspx",
+      "status": "unreadable",
+      "characters": 0,
+      "sha256": null
+    }
+  ],
+  "search": {
+    "stop": "SUFFICIENT",
+    "proposals": [
+      {
+        "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+        "quote": "(3) Construction goals are 10 percent women, 40 percent minorities and 10 percent service-disabled veterans."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+        "quote": "Bally’s plans to meet with all members of the project team to communicate its diversity hiring goals. Bally’s will also work closely with the New York City Building & Construction Trades Council within the confines of a project labor agreement to create a pipeline of diverse candidates."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+        "quote": "Further, Bally’s will provide administrative assistance to the project team in pursuit of hiring qualified MWBEs and SDVOBs as both prime and subcontractors."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+        "quote": "Bally’s plans to utilize pre-apprenticeship programs, partnerships with organizations such as the National Association of Black Women in Construction and African American Contractors Association, and job postings to recruit qualified MWBEs and SDVOBs."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+        "quote": "Bally’s will incorporate tracking of its ongoing success outcomes through quarterly reporting on contractor diversity participation rates, attendance tracking at outreach events, digital engagement metrics, and annual reviews."
+      },
+      {
+        "url": "https://nycasinos.ny.gov/ballys-bronx-response-gflb-questions-102125",
+        "quote": "| Women | 40% | 47% |\n| Minorities | 10% | 75% |\n| Service- Disabled Veterans | 10% | 5% |"
+      },
+      {
+        "url": "https://nycasinos.ny.gov/ballys-bronx-response-gflb-questions-102125",
+        "quote": "5. Considering the proximity of potential facilities and the available job market, please clarify if the above percentages are a commitment or a goal/target? Please choose:\n\n___ Commitment\n\n_x__ Goal/Target"
+      },
+      {
+        "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+        "quote": "### Bally's New York Casino - Workforce Enhancement - MWBE Goals"
+      },
+      {
+        "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+        "quote": "### Bally's New York Casino - Workforce Enhancement - Development of a Skilled and Diverse Workforce"
+      },
+      {
+        "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+        "quote": "### Bally's New York Casino - Diversity Framework - Current and Planned Diversity Efforts - MWBE Construction Goals"
+      }
+    ],
+    "located": {
+      "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "https://nycasinos.ny.gov/ballys-bronx-response-gflb-questions-102125": "https://nycasinos.ny.gov/ballys-bronx-response-gflb-questions-102125",
+      "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork4.ballys.mwbe_redacted.pdf": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork4.ballys.mwbe_redacted.pdf",
+      "https://nycasinos.ny.gov/system/files/documents/2025/07/evaldiv6.ballys.mwbeconstructiongoals_redacted.pdf": "https://nycasinos.ny.gov/system/files/documents/2025/07/evaldiv6.ballys.mwbeconstructiongoals_redacted.pdf",
+      "https://nycasinos.ny.gov/ballys-new-york-casino-diversity-framework-current-and-planned-diversity-efforts-mwbe-contracts": "https://nycasinos.ny.gov/ballys-new-york-casino-diversity-framework-current-and-planned-diversity-efforts-mwbe-contracts",
+      "https://nycasinos.ny.gov/ballys-bronx-application-materials": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "https://a002-ceqraccess.nyc.gov/ceqr/Details?data=MjRETUUwMTFY0&signature=1c7557f385641122298923258ffa78cd2f1ddc67": "https://a002-ceqraccess.nyc.gov/ceqr/Details?data=MjRETUUwMTFY0&signature=1c7557f385641122298923258ffa78cd2f1ddc67",
+      "https://www.ballys.com/privacy-policy/default.aspx": "https://www.ballys.com/privacy-policy/default.aspx",
+      "https://www.advocate.nyc.gov/reports/gambling": "https://www.advocate.nyc.gov/reports/gambling",
+      "https://www.ballys.com/Our-Brands/casinos-resorts/default.aspx": "https://www.ballys.com/Our-Brands/casinos-resorts/default.aspx",
+      "https://www.ballys.com/esg/default.aspx": "https://www.ballys.com/esg/default.aspx",
+      "https://bronxboropres.nyc.gov/business_detail_T9_R157.php": "https://bronxboropres.nyc.gov/business_detail_T9_R157.php",
+      "https://www.ballys.com/master-purchase-agreement/": "https://www.ballys.com/master-purchase-agreement/",
+      "https://council.nyc.gov/press/2023/10/06/2478/": "https://council.nyc.gov/press/2023/10/06/2478/",
+      "https://www.nyc.gov/mayors-office/news/2025/07/mayor-adams--statement-on-veto-of-city-council-decision-deprivin": "https://www.nyc.gov/mayors-office/news/2025/07/mayor-adams--statement-on-veto-of-city-council-decision-deprivin",
+      "https://bronxboropres.nyc.gov/services/advisory_councils_task_forces/index.php": "https://bronxboropres.nyc.gov/services/advisory_councils_task_forces/index.php",
+      "https://investors.ballys.com/news/default.aspx": "https://investors.ballys.com/news/default.aspx"
+    },
+    "requested_actions": 2
+  },
+  "shortlist": [
+    {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "title": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "excerpt": "York Casino - Construction Schedule and Budget - Construction Timeline - Suffolk Download Bally's New York Casino - Construction Schedule and Budget - Post License Construction Download Bally's New York Casino - Construction Schedule and Budget – Opening Download Bally's New York Casino - Construction Schedule and Budget - Construction Budget Download Bally's New York Casino - Demonstrating Ability to Finance the Project - Financial Forecast Download Bally's New York Casino - Demonstrating Ability to Finance the Project - Financial Forecast - Model Download Bally's New York Casino - Demonstrating Ability to Finance the Project - 5-Year Plan Download Bally's New York Casino - Demonstrating",
+      "start": 9611,
+      "end": 10308
+    },
+    {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "title": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "excerpt": "Enhancement - Organized Labor - Employees - Median Responses to GFLB Questions Bally's Bronx Response to GFLB Questions - 10/21/25 Download Supplemental Materials - October 14, 2025 Bally's Bronx - Supplement - Executive Summary - Clean Download Bally's Bronx - Supplement - Executive Summary - Redline Download Bally's Bronx - Supplement - Market Study Download Bally's Bronx - Supplement - Market Study Download Bally's Bronx - Supplement - Revenue Study Download Bally's Bronx - Supplement - Revenue Study Download Bally's Bronx - Supplement - Competitive 10 Years Download Bally's Bronx - Supplement - Financial Model Download Bally's Bronx - Supplement - State and Local Revenues Download",
+      "start": 2876,
+      "end": 3569
+    },
+    {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "title": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "excerpt": "Download Bally's New York Casino - Site Location Benefits and Recapture Rate - Total Amount Download Bally's New York Casino - Site Location Benefits and Recapture Rate - Total Amount - CBRE Appraiser Download Bally's New York Casino - Site Location Benefits and Recapture Rate - Master Plan Download Bally's New York Casino - Site Location Benefits and Recapture Rate - Infrastructure Download Bally's New York Casino - Site Location Benefits and Recapture Rate - Market Analysis Download Bally's New York Casino - Site Location Benefits and Recapture Rate - Market Analysis - Study Download Bally's New York Casino - Construction Schedule and Budget - Construction Timeline Download Bally's New",
+      "start": 8914,
+      "end": 9610
+    },
+    {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "title": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "excerpt": "Planned Diversity Efforts - MWBE Construction Goals Download Bally's New York Casino - Diversity Framework - Current and Planned Diversity Efforts - MWBE Contracts Download Bally's New York Casino - Diversity Framework - Current and Planned Diversity Efforts - MWBE Partnerships Download Bally's New York Casino - Diversity Framework - Current and Planned Diversity Efforts - Diversity Business Model Download Bally's New York Casino - Diversity Framework - Current and Planned Diversity Efforts - Recruitment Download Bally's New York Casino - Diversity Framework - Current and Planned Diversity Efforts - Professional Development Download Scroll back to the top of the page Gaming Facility",
+      "start": 17969,
+      "end": 18660
+    },
+    {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "title": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "excerpt": "Bally's Bronx - Supplement - Zoning Compliance and Land Use Approvals Download Bally's Bronx - Supplement - Zoning Compliance Download General Information Bally's New York Casino - Executive Summary Download Bally's New York Casino - General Applicant Information Download Bally's New York Casino - Minimum Capital Investment Download Bally's New York Casino - Prior Capital Investment Download Bally's New York Casino - Table of Ownership Download Bally's New York Casino - Organizational Chart Download Bally's New York Casino - Directors and Officers Download Bally's New York Casino - Principal Resumes Download Bally's New York Casino - Ownership and Other Interests Download Bally's New York",
+      "start": 3570,
+      "end": 4267
+    },
+    {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "title": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "excerpt": "Casino - Promoters, Sponsors and Others Download Bally's New York Casino - Promoters, Sponsors and Others - REVISED REDACTIONS Download Bally's New York Casino - Project Firms Download Bally's New York Casino - Project Firms - REVISED REDACTIONS Download Bally's New York Casino - Conflicts of Interest Download Bally's New York Casino - Public Officials Download Bally's New York Casino - Contracts with the State of New York Download Bally's New York Casino - Casino Operator Download Bally's New York Casino - Organizational Document - Incorporation Download Bally's New York Casino - Organizational Document - Bylaws Download Bally's New York Casino - Organizational Document - Certificate of",
+      "start": 4268,
+      "end": 4964
+    },
+    {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "title": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "excerpt": "Formation or Operating Agreement Download Bally's New York Casino - Organizational Document - LLC or Operating Agreement Download Bally's New York Casino - Organizational Document - Certficate of Partnership Download Bally's New York Casino - Organizational Document - Partnership Agreement Download Bally's New York Casino - Organizational Document - Certificate of Limited Partnership Download Bally's New York Casino - Organizational Document - Other Legal Instruments of Organization Download Bally's New York Casino - Organizational Document - Joint Venture Agreement Download Bally's New York Casino - Organizational Document - Trust Agreement 1 Download Bally's New York Casino -",
+      "start": 4965,
+      "end": 5651
+    },
+    {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "title": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "excerpt": "New York Casino - Workforce Enhancement - Job Opportunities Download Bally's New York Casino - Workforce Enhancement - MWBE Goals Download Bally's New York Casino - Workforce Enhancement - Workforce Training Download Bally's New York Casino - Workforce Enhancement - Problem Gambling Prevention Measures Download Bally's New York Casino - Workforce Enhancement - Sustainable Development Principals - Leadership in Environmental and Energy Design (LEED) Download Bally's New York Casino - Workforce Enhancement - Sustainable Development Principals - Traffic Download Bally's New York Casino - Workforce Enhancement - Sustainable Development Principals - Traffic Analysis Memo Download Bally's New",
+      "start": 15185,
+      "end": 15880
+    },
+    {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "title": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "excerpt": "Bally's New York Casino - Gaming Facility of Highest Caliber - Entertainment Venue Download Bally's New York Casino - Gaming Facility of Highest Caliber - Restaurant Download Bally's New York Casino - Gaming Facility of Highest Caliber - Retail, Recreation, Other Download Bally's New York Casino - Gaming Facility of Highest Caliber - Comparison with Area Facilities Download Bally's New York Casino - Gaming Facility of Highest Caliber - Hours of Operation Download Bally's New York Casino - Gaming Facility of Highest Caliber - Player Database and Loyalty Program Download Bally's New York Casino - Gaming Facility of Highest Caliber - Internal Controls Download Bally's New York Casino - Gaming",
+      "start": 6345,
+      "end": 7043
+    },
+    {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "title": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+      "excerpt": "Organized Labor - Employees Download Bally's New York Casino - Workforce Enhancement - Organized Labor - Employees - Average Case Download Bally's New York Casino - Workforce Enhancement - Organized Labor - Employees - Average - REVISED REDACTIONS Download Bally's New York Casino - Workforce Enhancement - Organized Labor - Employees - Median Case Download Bally's New York Casino - Workforce Enhancement - Organized Labor - Employees - Median - REVISED REDACTIONS Download Bally's New York Casino - Workforce Enhancement - Organized Labor - Labor Harmony Plans Download Bally's New York Casino - Workforce Enhancement - Organized Labor - Labor Peace Agreements Download Bally's New York Casino -",
+      "start": 16572,
+      "end": 17269
+    },
+    {
+      "url": "https://a002-ceqraccess.nyc.gov/ceqr/Details?data=MjRETUUwMTFY0&signature=1c7557f385641122298923258ffa78cd2f1ddc67",
+      "title": "https://a002-ceqraccess.nyc.gov/ceqr/Details?data=MjRETUUwMTFY0&signature=1c7557f385641122298923258ffa78cd2f1ddc67",
+      "excerpt": "Office of Environmental Coordination NYC Resources 311 Mayor's Office CEQR Access Project Information Back to results CEQR Number 24DME011X Project Name Bally’s Bronx Project Description The Applicant, Bally’s New York Operating Company, LLC, seeks a series of discretionary land use actions to facilitate the Proposed Development in the Throggs Neck neighborhood of Bronx Community District 10, including an approximately 3,134,040-gross-square-foot (gsf) gaming facility and the widening and mapping of Ring Road as a city street.",
+      "start": 0,
+      "end": 532
+    },
+    {
+      "url": "https://a002-ceqraccess.nyc.gov/ceqr/Details?data=MjRETUUwMTFY0&signature=1c7557f385641122298923258ffa78cd2f1ddc67",
+      "title": "https://a002-ceqraccess.nyc.gov/ceqr/Details?data=MjRETUUwMTFY0&signature=1c7557f385641122298923258ffa78cd2f1ddc67",
+      "excerpt": "Lead Agency Deputy Mayor for Housing and Economic Development Borough Bronx Geographical Information Block Lot Community District Street Address Zip Code 5622 1 BX10 450 Hutchinson River Parkway 10465 History Milestone Name Milestone Date Lead Agency Letter 05/15/2024 24DME011X_Lead_Agency_Letter_1_05152024 221.4KB 24DME011X_Lead_Agency_Letter_10_05152024 221.5KB 24DME011X_Lead_Agency_Letter_11_05152024 221.3KB 24DME011X_Lead_Agency_Letter_12_05152024 221.5KB 24DME011X_Lead_Agency_Letter_2_05152024 221.4KB 24DME011X_Lead_Agency_Letter_3_05152024 221.4KB 24DME011X_Lead_Agency_Letter_4_05152024 221.5KB 24DME011X_Lead_Agency_Letter_5_05152024 221.4KB 24DME011X_Lead_Agency_Letter_6_05152024",
+      "start": 2641,
+      "end": 3336
+    },
+    {
+      "url": "https://a002-ceqraccess.nyc.gov/ceqr/Details?data=MjRETUUwMTFY0&signature=1c7557f385641122298923258ffa78cd2f1ddc67",
+      "title": "https://a002-ceqraccess.nyc.gov/ceqr/Details?data=MjRETUUwMTFY0&signature=1c7557f385641122298923258ffa78cd2f1ddc67",
+      "excerpt": "As part of the Proposed Development, the Applicant would construct a replacement standalone clubhouse for the Golf Course, which would remain as currently configured and would continue to be open to the public during the entire construction time period.",
+      "start": 1147,
+      "end": 1400
+    },
+    {
+      "url": "https://a002-ceqraccess.nyc.gov/ceqr/Details?data=MjRETUUwMTFY0&signature=1c7557f385641122298923258ffa78cd2f1ddc67",
+      "title": "https://a002-ceqraccess.nyc.gov/ceqr/Details?data=MjRETUUwMTFY0&signature=1c7557f385641122298923258ffa78cd2f1ddc67",
+      "excerpt": "In addition, State Legislation and Governor’s Approval authorizing the Alienation of Parkland would be required to facilitate the Proposed Development. Other State approvals include approval from NYSDEC for stormwater discharges during construction and from the New York State Department of Transportation (NYSDOT) and potentially other State agencies to facilitate certain street improvements near the Hutchinson River Expressway.",
+      "start": 1884,
+      "end": 2315
+    },
+    {
+      "url": "https://a002-ceqraccess.nyc.gov/ceqr/Details?data=MjRETUUwMTFY0&signature=1c7557f385641122298923258ffa78cd2f1ddc67",
+      "title": "https://a002-ceqraccess.nyc.gov/ceqr/Details?data=MjRETUUwMTFY0&signature=1c7557f385641122298923258ffa78cd2f1ddc67",
+      "excerpt": "The Proposed Development would require the following discretionary approvals: City Map Amendments, Zoning Map Amendment, Approval for the Disposition of Real Property, Extension and Modification of Existing Concession, Approval by the Gaming Facility Location Board and Issuance of a Gaming License from the New York State Gaming Commission, Approval from New York State Department of Environmental Conservation (NYSDEC) to allow the use of and construction on the Development Site. In addition, State Legislation and Governor’s Approval authorizing the Alienation of Parkland would be required to facilitate the Proposed Development.",
+      "start": 1401,
+      "end": 2035
+    }
+  ],
+  "selection": {
+    "findings": []
+  },
+  "additions": []
+}

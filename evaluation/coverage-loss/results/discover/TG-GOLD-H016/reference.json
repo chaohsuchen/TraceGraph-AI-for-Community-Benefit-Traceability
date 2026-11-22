@@ -1,0 +1,251 @@
+{
+  "case_id": "TG-GOLD-H016",
+  "query": "Bally's construction targets: 10 percent women, 40 percent minorities, 10 percent service-disabled veterans.",
+  "facts": [
+    {
+      "id": "G1",
+      "text": "Bally's Bronx targeted 10% women among construction workers.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H016",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H016",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "G2",
+      "text": "Bally's Bronx targeted 40% minorities among construction workers.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H016",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H016",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "G3",
+      "text": "The Board identified a 10% service-disabled-veteran construction workforce target.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H016",
+          "row": 5
+        }
+      ]
+    },
+    {
+      "id": "G4",
+      "text": "The applicant's own construction workforce chart uses the broader category of veterans for its 10% target.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H016",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "G5",
+      "text": "Bally's application separately describes a 35% MWBE participation goal.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H016",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "G6",
+      "text": "Bally's application separately describes 5% spending with service-disabled-veteran-owned firms.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H016",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "G7",
+      "text": "The Bronx license requires public progress reports on workforce diversity and demographic data.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H016",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "G8",
+      "text": "The Bronx license requires independent monitoring of community benefit milestones.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H016",
+          "row": 7
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "K1",
+      "text": "Women comprised 10% of the actual Bronx construction workforce on the relevant contractor-inclusive denominator.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H016",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H016",
+          "row": 6
+        },
+        {
+          "sheet": "TG-GOLD-H016",
+          "row": 18
+        }
+      ]
+    },
+    {
+      "id": "K2",
+      "text": "Minority workers comprised 40% of that Bronx construction workforce.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H016",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H016",
+          "row": 6
+        },
+        {
+          "sheet": "TG-GOLD-H016",
+          "row": 18
+        }
+      ]
+    },
+    {
+      "id": "K3",
+      "text": "Service-disabled veterans comprised 10% of that Bronx construction workforce under the approved veteran definition.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H016",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H016",
+          "row": 6
+        },
+        {
+          "sheet": "TG-GOLD-H016",
+          "row": 18
+        }
+      ]
+    }
+  ],
+  "delivery_applicable": true,
+  "reference_verdict": {
+    "status": "Workforce targets documented. Attainment unverified.",
+    "reasoning": "Code the beneficiary as construction workers. Verify attainment with contractor-inclusive workforce data and a defined denominator and reporting period. Confirm the veteran category in the approved reporting definition.",
+    "delivery_applicable": true,
+    "source_refs": [
+      {
+        "sheet": "TG-GOLD-H016",
+        "row": 17
+      },
+      {
+        "sheet": "TG-GOLD-H016",
+        "row": 18
+      }
+    ]
+  },
+  "sources": [
+    {
+      "sheet": "TG-GOLD-H016",
+      "row": 5,
+      "title": "GFLB Selection Report",
+      "citation": "Dec. 1, 2025, PDF p. 16",
+      "publisher": "Gaming Facility Location Board",
+      "url": null,
+      "url_origin": null,
+      "locator": "Dec. 1, 2025, PDF p. 16",
+      "published_on": null,
+      "evidence_status": "Targets documented",
+      "specific_evidence": "The Diversity Framework repeats the three targets under MWBE wording. PDF p. 10 explicitly describes construction workforce composition.",
+      "notes": "The Board specifies service-disabled veterans."
+    },
+    {
+      "sheet": "TG-GOLD-H016",
+      "row": 6,
+      "title": "Bally’s Bronx Application, MWBE Goals",
+      "citation": "June 27, 2025, PDF pp. 3–4",
+      "publisher": "Bally’s Corporation",
+      "url": null,
+      "url_origin": null,
+      "locator": "June 27, 2025, PDF pp. 3–4",
+      "published_on": null,
+      "evidence_status": "Workforce scope clarified",
+      "specific_evidence": "Lists 10% women, 40% minorities and 10% veterans under construction workforce diversity. Separately describes 35% MWBE participation and a 5% spending target for service-disabled veteran-owned firms.",
+      "notes": "The workforce chart uses the broader label veterans."
+    },
+    {
+      "sheet": "TG-GOLD-H016",
+      "row": 7,
+      "title": "Executed Gaming Facility License",
+      "citation": "Exhibit 1 §§ 3 and 10",
+      "publisher": "NYS Gaming Commission",
+      "url": null,
+      "url_origin": null,
+      "locator": "Exhibit 1 §§ 3 and 10",
+      "published_on": null,
+      "evidence_status": "Reporting requirement",
+      "specific_evidence": "Requires public progress reports and independent monitoring of community benefit milestones.",
+      "notes": "Workforce diversity and demographic data are included in the reporting requirement."
+    }
+  ],
+  "provenance": {
+    "workbook": "Golden Dataset (6).xlsx",
+    "sha256": "2da588b49b311957885ed7ff98bcd31c49e9d3ef8e99a761a3e9e5fcdb360099",
+    "identity": {
+      "sheet": "gold commitments",
+      "row": 27
+    },
+    "detail_sheet": "TG-GOLD-H016",
+    "detail_internal_id_cell": "B1",
+    "workbook_valid_flag": 1,
+    "workbook_split": "heldout_provisional",
+    "workbook_evidence_status": "not yet due",
+    "workbook_fields": {
+      "gold_id": "TG-GOLD-H016",
+      "document_id": "GFLB-SEL-2025-12-01",
+      "page_section": "pdf p.16; Bally’s Bronx: Diversity Framework",
+      "char_start": 35890.0,
+      "char_end": 36000.0,
+      "commitment_text": "Bally’s proposed targets of 10 percent women, 40 percent minorities, and 10 percent service-disabled veterans.",
+      "normalized_statement": "Bally's construction targets: 10 percent women, 40 percent minorities, 10 percent service-disabled veterans.",
+      "obligation_type": "Target / goal",
+      "responsible_entity": "Bally’s Corporation",
+      "amount_value": "10 percent women; 40 percent minorities; 10 percent service-disabled veterans",
+      "term_periodicity": "construction",
+      "geographic_scope": "unspecified",
+      "beneficiary_category": "MWBE firms / construction workforce",
+      "beneficiary_named": "none named",
+      "condition_contingency": "none stated",
+      "milestone": "none stated",
+      "evidence_status": "not yet due",
+      "confidence": "Medium",
+      "adjudication_note": "Passage is framed as MWBE goals but the percentages mirror the construction workforce goals on p.10; beneficiary (firms vs workers) is ambiguous.",
+      "duplicate_of": "none",
+      "notes": "none",
+      "evaluation_split": "heldout_provisional",
+      "manually annotated valid?": 1.0
+    },
+    "detail_research_cutoff": null,
+    "evaluation_use": "22-case annotated benchmark; development-exposed cases included",
+    "reference_preparation": "Locally curated factual hypotheses and delivery conditions from the cited Golden (6) cells; prior to research."
+  }
+}

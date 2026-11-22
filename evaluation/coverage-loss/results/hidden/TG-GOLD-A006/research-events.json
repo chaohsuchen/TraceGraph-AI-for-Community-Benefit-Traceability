@@ -1,0 +1,682 @@
+[
+  {
+    "type": "research_start"
+  },
+  {
+    "phase": "search",
+    "event": "started"
+  },
+  {
+    "type": "search_budget",
+    "allocated": 4,
+    "remaining": 2,
+    "limit": 6
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 8.952999999979511,
+    "request_id": "req_6bcdf03411f141738302a3690cab069d",
+    "usage": {
+      "input_tokens": 9455,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 4608
+      },
+      "output_tokens": 695,
+      "output_tokens_details": {
+        "reasoning_tokens": 116
+      },
+      "total_tokens": 10150
+    },
+    "search_enabled": true,
+    "web_search_ids": [
+      "ws_0fb0c8f6aeb40c04016b02b672fdd087d2bd0b5f37fef81c64"
+    ],
+    "stop_reason": "completed",
+    "web_search_statuses": [
+      "completed"
+    ]
+  },
+  {
+    "type": "source_validation",
+    "url": "https://esd.ny.gov/sites/default/files/media/document/071824-ESD-Board-Materials.pdf",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+    "status": "QUOTE_NOT_FOUND"
+  },
+  {
+    "type": "source_validation",
+    "url": "https://esd.ny.gov/sites/default/files/media/document/MNY-Round-14-Guidelines_0.pdf",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 1.015999999945052,
+    "request_id": "req_524733b82b784af4946bbd1655d3e7b1",
+    "usage": {
+      "input_tokens": 1345,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 26,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1371
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "source_span_recovery",
+    "readable_pages": 1,
+    "verified_count": 4
+  },
+  {
+    "phase": "search",
+    "event": "completed",
+    "source": "self_reported",
+    "stop_reason": "SUFFICIENT",
+    "stop_reason_status": "reported"
+  },
+  {
+    "type": "research_capture",
+    "brief": "[c1] You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%. Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively.\n[c2] Q_2365 By entering your name in the box below, you are acknowledging that ESD’s Contractor & Supplier Diversity policy will apply to this project. You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%.\n[c3] Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively. Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced.\n[c4] Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced. Q_4182 By entering your name in the box below, you certify and agree that you are aware that your award will be reduced in proportion to the reduction of jobs and/or total project costs.\nSTOP_REASON=SUFFICIENT",
+    "citations": {
+      "c1": {
+        "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+        "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+        "excerpt": "You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%. Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively.",
+        "context": "You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%. Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively.",
+        "source_start": 39415,
+        "source_end": 39801
+      },
+      "c2": {
+        "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+        "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+        "excerpt": "Q_2365 By entering your name in the box below, you are acknowledging that ESD’s Contractor & Supplier Diversity policy will apply to this project. You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%.",
+        "context": "Q_2365 By entering your name in the box below, you are acknowledging that ESD’s Contractor & Supplier Diversity policy will apply to this project. You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%.",
+        "source_start": 39268,
+        "source_end": 39652
+      },
+      "c3": {
+        "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+        "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+        "excerpt": "Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively. Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced.",
+        "context": "Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively. Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced.",
+        "source_start": 39653,
+        "source_end": 40097
+      },
+      "c4": {
+        "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+        "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+        "excerpt": "Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced. Q_4182 By entering your name in the box below, you certify and agree that you are aware that your award will be reduced in proportion to the reduction of jobs and/or total project costs.",
+        "context": "Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced. Q_4182 By entering your name in the box below, you certify and agree that you are aware that your award will be reduced in proportion to the reduction of jobs and/or total project costs.",
+        "source_start": 39802,
+        "source_end": 40284
+      }
+    }
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 8.859000000054948,
+    "request_id": "req_a89b92f0b5934560a4d8d652c9d66eee",
+    "usage": {
+      "input_tokens": 2310,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 760,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3070
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 2.125,
+    "request_id": "req_81fdc1ac9ba04f9cb25c0dc1d34dc256",
+    "usage": {
+      "input_tokens": 1108,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 178,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1286
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "research_scope_review",
+    "checks": [
+      {
+        "criterion_id": "1",
+        "explanation": "The excerpts document only that applicants must acknowledge ESD’s \"agency-wide Minority and Women Business Enterprise ('MWBE') utilization goal of 30%\" and that \"each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30%.\" They also state that, if awarded, the applicant must use \"good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project.\" This does not establish an original public pledge, proposal term, or conditional commitment by the applicant to \"meet or exceed\" the 30% goal specifically.",
+        "original_citation_ids": [
+          "c1",
+          "c2",
+          "c3"
+        ],
+        "missing_original_terms": [
+          "meet or exceed",
+          "30 percent MWBE contract utilization goal as the applicant's own goal"
+        ]
+      }
+    ],
+    "missing_scope": [
+      "Applicant to meet or exceed New York State's 30 percent MWBE contract utilization goal"
+    ]
+  },
+  {
+    "type": "source_recovery",
+    "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+    "status": "READ",
+    "text_sha256": "0e39a8781250c9e856dc8456c8aefccf01ad36d837f954f75afce978b902fc68",
+    "source_reads": 1,
+    "source_read_limit": 2
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 1.9059999999590218,
+    "request_id": "req_91ac05c997ba4e2c9264461865ad3d7d",
+    "usage": {
+      "input_tokens": 2619,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 195,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2814
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "research_recovery_capture",
+    "citations": {
+      "c1": {
+        "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+        "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+        "excerpt": "You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%. Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively.",
+        "context": "You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%. Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively.",
+        "source_start": 39415,
+        "source_end": 39801
+      },
+      "c2": {
+        "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+        "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+        "excerpt": "Q_2365 By entering your name in the box below, you are acknowledging that ESD’s Contractor & Supplier Diversity policy will apply to this project. You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%.",
+        "context": "Q_2365 By entering your name in the box below, you are acknowledging that ESD’s Contractor & Supplier Diversity policy will apply to this project. You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%.",
+        "source_start": 39268,
+        "source_end": 39652
+      },
+      "c3": {
+        "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+        "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+        "excerpt": "Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively. Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced.",
+        "context": "Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively. Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced.",
+        "source_start": 39653,
+        "source_end": 40097
+      },
+      "c4": {
+        "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+        "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+        "excerpt": "Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced. Q_4182 By entering your name in the box below, you certify and agree that you are aware that your award will be reduced in proportion to the reduction of jobs and/or total project costs.",
+        "context": "Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced. Q_4182 By entering your name in the box below, you certify and agree that you are aware that your award will be reduced in proportion to the reduction of jobs and/or total project costs.",
+        "source_start": 39802,
+        "source_end": 40284
+      },
+      "c5": {
+        "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+        "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+        "excerpt": "Q_2365 By entering your name in the box below, you are acknowledging that ESD’s Contractor & Supplier Diversity policy will apply to this project. You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%. Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively. Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced.",
+        "context": "Q_2365 By entering your name in the box below, you are acknowledging that ESD’s Contractor & Supplier Diversity policy will apply to this project. You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%. Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively. Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced."
+      },
+      "c6": {
+        "url": "https://esd.ny.gov/sites/default/files/Guidelines-Defense-Industry-Assistance-Grants-%204618.pdf",
+        "title": "https://esd.ny.gov/sites/default/files/Guidelines-Defense-Industry-Assistance-Grants-%204618.pdf",
+        "excerpt": "Please note that ESD’s agency-wide MWBE utilization goal is 30%. After application approval the project may be assigned an individual contract-specific goal, which may be higher or lower than 30%. In instances where goals are set, grantee will be required to use good faith efforts to achieve the prescribed MWBE goals assigned to the project and must maintain such records and take such actions necessary to demonstrate compliance with Article 15-A of the New York State Executive Law.",
+        "context": "Please note that ESD’s agency-wide MWBE utilization goal is 30%. After application approval the project may be assigned an individual contract-specific goal, which may be higher or lower than 30%. In instances where goals are set, grantee will be required to use good faith efforts to achieve the prescribed MWBE goals assigned to the project and must maintain such records and take such actions necessary to demonstrate compliance with Article 15-A of the New York State Executive Law."
+      },
+      "c7": {
+        "url": "https://esd.ny.gov/participation-requirements-new-york-state-certified-mwbes",
+        "title": "https://esd.ny.gov/participation-requirements-new-york-state-certified-mwbes",
+        "excerpt": "Recipient is required to submit an MWBE Utilization Plan (Form OCSD-4) no later than ten (10) days after the execution of this Incentive Proposal.",
+        "context": "Recipient is required to submit an MWBE Utilization Plan (Form OCSD-4) no later than ten (10) days after the execution of this Incentive Proposal."
+      },
+      "c8": {
+        "url": "https://esd.ny.gov/participation-requirements-new-york-state-certified-mwbes",
+        "title": "https://esd.ny.gov/participation-requirements-new-york-state-certified-mwbes",
+        "excerpt": "Recipient is required to submit a periodic MWBE Compliance & Payment Report to OCSD by the 10th day following either the end of each (i) month, for construction contracts in excess of $100,000, or (ii) quarter, for services and commodities contracts in excess of $25,000, over the term of the project documenting the progress made toward achievement of the MWBE project goals.",
+        "context": "Recipient is required to submit a periodic MWBE Compliance & Payment Report to OCSD by the 10th day following either the end of each (i) month, for construction contracts in excess of $100,000, or (ii) quarter, for services and commodities contracts in excess of $25,000, over the term of the project documenting the progress made toward achievement of the MWBE project goals."
+      },
+      "c9": {
+        "url": "https://esd.ny.gov/participation-requirements-new-york-state-certified-mwbes",
+        "title": "https://esd.ny.gov/participation-requirements-new-york-state-certified-mwbes",
+        "excerpt": "Where MWBE goals have been established herein, pursuant to 5 NYCRR §142.8, Recipient must document “Good Faith Efforts” to provide meaningful participation by MWBEs as subcontractors or suppliers in the performance of the project.",
+        "context": "Where MWBE goals have been established herein, pursuant to 5 NYCRR §142.8, Recipient must document “Good Faith Efforts” to provide meaningful participation by MWBEs as subcontractors or suppliers in the performance of the project."
+      }
+    }
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 9.15700000000652,
+    "request_id": "req_00ff9b3e2e0d42b1b66f30f511852b9b",
+    "usage": {
+      "input_tokens": 2541,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 1792
+      },
+      "output_tokens": 779,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3320
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "search_budget",
+    "allocated": 2,
+    "remaining": 0,
+    "limit": 6
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 7.657000000006519,
+    "request_id": "req_6a70faea571544799d038707a7f85ae8",
+    "usage": {
+      "input_tokens": 13261,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 4608
+      },
+      "output_tokens": 682,
+      "output_tokens_details": {
+        "reasoning_tokens": 159
+      },
+      "total_tokens": 13943
+    },
+    "search_enabled": true,
+    "web_search_ids": [
+      "ws_09d4f2ff2712fc24016b02b6a535fc87d2a5e50bcc577608e8",
+      "ws_09d4f2ff2712fc24016b02b6a793c487d29dbb7ac5d1d97ee7"
+    ],
+    "stop_reason": "completed",
+    "web_search_statuses": [
+      "completed",
+      "completed"
+    ]
+  },
+  {
+    "type": "source_validation",
+    "url": "https://esd.ny.gov/sites/default/files/media/document/Market-NY-Rd15-Guidelines-051925.pdf",
+    "status": "FETCH_UNAVAILABLE"
+  },
+  {
+    "type": "research_recovery_capture",
+    "citations": {
+      "c1": {
+        "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+        "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+        "excerpt": "You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%. Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively.",
+        "context": "You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%. Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively.",
+        "source_start": 39415,
+        "source_end": 39801
+      },
+      "c2": {
+        "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+        "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+        "excerpt": "Q_2365 By entering your name in the box below, you are acknowledging that ESD’s Contractor & Supplier Diversity policy will apply to this project. You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%.",
+        "context": "Q_2365 By entering your name in the box below, you are acknowledging that ESD’s Contractor & Supplier Diversity policy will apply to this project. You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%.",
+        "source_start": 39268,
+        "source_end": 39652
+      },
+      "c3": {
+        "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+        "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+        "excerpt": "Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively. Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced.",
+        "context": "Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively. Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced.",
+        "source_start": 39653,
+        "source_end": 40097
+      },
+      "c4": {
+        "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+        "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+        "excerpt": "Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced. Q_4182 By entering your name in the box below, you certify and agree that you are aware that your award will be reduced in proportion to the reduction of jobs and/or total project costs.",
+        "context": "Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced. Q_4182 By entering your name in the box below, you certify and agree that you are aware that your award will be reduced in proportion to the reduction of jobs and/or total project costs.",
+        "source_start": 39802,
+        "source_end": 40284
+      },
+      "c5": {
+        "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+        "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+        "excerpt": "Q_2365 By entering your name in the box below, you are acknowledging that ESD’s Contractor & Supplier Diversity policy will apply to this project. You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%. Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively. Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced.",
+        "context": "Q_2365 By entering your name in the box below, you are acknowledging that ESD’s Contractor & Supplier Diversity policy will apply to this project. You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%. Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively. Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced."
+      },
+      "c6": {
+        "url": "https://esd.ny.gov/sites/default/files/Guidelines-Defense-Industry-Assistance-Grants-%204618.pdf",
+        "title": "https://esd.ny.gov/sites/default/files/Guidelines-Defense-Industry-Assistance-Grants-%204618.pdf",
+        "excerpt": "Please note that ESD’s agency-wide MWBE utilization goal is 30%. After application approval the project may be assigned an individual contract-specific goal, which may be higher or lower than 30%. In instances where goals are set, grantee will be required to use good faith efforts to achieve the prescribed MWBE goals assigned to the project and must maintain such records and take such actions necessary to demonstrate compliance with Article 15-A of the New York State Executive Law.",
+        "context": "Please note that ESD’s agency-wide MWBE utilization goal is 30%. After application approval the project may be assigned an individual contract-specific goal, which may be higher or lower than 30%. In instances where goals are set, grantee will be required to use good faith efforts to achieve the prescribed MWBE goals assigned to the project and must maintain such records and take such actions necessary to demonstrate compliance with Article 15-A of the New York State Executive Law."
+      },
+      "c7": {
+        "url": "https://esd.ny.gov/participation-requirements-new-york-state-certified-mwbes",
+        "title": "https://esd.ny.gov/participation-requirements-new-york-state-certified-mwbes",
+        "excerpt": "Recipient is required to submit an MWBE Utilization Plan (Form OCSD-4) no later than ten (10) days after the execution of this Incentive Proposal.",
+        "context": "Recipient is required to submit an MWBE Utilization Plan (Form OCSD-4) no later than ten (10) days after the execution of this Incentive Proposal."
+      },
+      "c8": {
+        "url": "https://esd.ny.gov/participation-requirements-new-york-state-certified-mwbes",
+        "title": "https://esd.ny.gov/participation-requirements-new-york-state-certified-mwbes",
+        "excerpt": "Recipient is required to submit a periodic MWBE Compliance & Payment Report to OCSD by the 10th day following either the end of each (i) month, for construction contracts in excess of $100,000, or (ii) quarter, for services and commodities contracts in excess of $25,000, over the term of the project documenting the progress made toward achievement of the MWBE project goals.",
+        "context": "Recipient is required to submit a periodic MWBE Compliance & Payment Report to OCSD by the 10th day following either the end of each (i) month, for construction contracts in excess of $100,000, or (ii) quarter, for services and commodities contracts in excess of $25,000, over the term of the project documenting the progress made toward achievement of the MWBE project goals."
+      },
+      "c9": {
+        "url": "https://esd.ny.gov/participation-requirements-new-york-state-certified-mwbes",
+        "title": "https://esd.ny.gov/participation-requirements-new-york-state-certified-mwbes",
+        "excerpt": "Where MWBE goals have been established herein, pursuant to 5 NYCRR §142.8, Recipient must document “Good Faith Efforts” to provide meaningful participation by MWBEs as subcontractors or suppliers in the performance of the project.",
+        "context": "Where MWBE goals have been established herein, pursuant to 5 NYCRR §142.8, Recipient must document “Good Faith Efforts” to provide meaningful participation by MWBEs as subcontractors or suppliers in the performance of the project."
+      }
+    }
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 8.25,
+    "request_id": "req_905ad410190e494ba95d9f3d9a5af14b",
+    "usage": {
+      "input_tokens": 3054,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 1792
+      },
+      "output_tokens": 747,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3801
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "research_extracted",
+    "draft": null,
+    "evidence": [
+      {
+        "source": {
+          "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+          "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+          "citation": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "excerpt": "You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%. Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively.",
+        "status": "supports_partial",
+        "explanation": "This excerpt shows ESD's agency-wide MWBE utilization goal is 30% and that each project will receive an individual contract-specific goal that may be higher or lower than 30%. That undercuts any claim that the applicant's own goal was necessarily at least 30%.",
+        "summary": "ESD set a 30% agency-wide MWBE goal, but project-specific goals could be above or below 30%.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:31:56.986962+00:00"
+      },
+      {
+        "source": {
+          "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+          "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+          "citation": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "excerpt": "Q_2365 By entering your name in the box below, you are acknowledging that ESD’s Contractor & Supplier Diversity policy will apply to this project. You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%.",
+        "status": "Located source excerpt",
+        "explanation": "The quoted record was located; it is not a delivery verdict.",
+        "summary": null,
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:31:56.986962+00:00"
+      },
+      {
+        "source": {
+          "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+          "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+          "citation": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "excerpt": "Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively. Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced.",
+        "status": "supports_partial",
+        "explanation": "This excerpt states that if awarded funding, the applicant must use good-faith efforts to achieve the prescribed project-specific MWBE and SDVOB goals. It does not say the applicant's own goals are expected to meet or exceed 30%; it ties compliance to later-assigned goals.",
+        "summary": "Awarded applicants must use good-faith efforts to meet assigned project-specific MWBE/SDVOB goals.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:31:56.986962+00:00"
+      },
+      {
+        "source": {
+          "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+          "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+          "citation": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "excerpt": "Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced. Q_4182 By entering your name in the box below, you certify and agree that you are aware that your award will be reduced in proportion to the reduction of jobs and/or total project costs.",
+        "status": "Located source excerpt",
+        "explanation": "The quoted record was located; it is not a delivery verdict.",
+        "summary": null,
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:31:56.986962+00:00"
+      },
+      {
+        "source": {
+          "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+          "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+          "citation": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "excerpt": "Q_2365 By entering your name in the box below, you are acknowledging that ESD’s Contractor & Supplier Diversity policy will apply to this project. You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%. Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively. Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced.",
+        "status": "supports_partial",
+        "explanation": "This combined acknowledgment repeats that ESD has a 30% agency-wide MWBE goal, that each project gets its own contract-specific goal that may be higher or lower, and that awardees must use good-faith efforts to meet assigned goals. It does not establish a direct applicant promise to meet or exceed 30%.",
+        "summary": "Application acknowledgment references the 30% agency-wide goal but makes compliance project-specific.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:31:56.986962+00:00"
+      },
+      {
+        "source": {
+          "url": "https://esd.ny.gov/sites/default/files/Guidelines-Defense-Industry-Assistance-Grants-%204618.pdf",
+          "title": "https://esd.ny.gov/sites/default/files/Guidelines-Defense-Industry-Assistance-Grants-%204618.pdf",
+          "citation": "https://esd.ny.gov/sites/default/files/Guidelines-Defense-Industry-Assistance-Grants-%204618.pdf",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "excerpt": "Please note that ESD’s agency-wide MWBE utilization goal is 30%. After application approval the project may be assigned an individual contract-specific goal, which may be higher or lower than 30%. In instances where goals are set, grantee will be required to use good faith efforts to achieve the prescribed MWBE goals assigned to the project and must maintain such records and take such actions necessary to demonstrate compliance with Article 15-A of the New York State Executive Law.",
+        "status": "supports_partial",
+        "explanation": "The grant guidelines state ESD's agency-wide MWBE goal is 30% and that after approval a project may be assigned an individual contract-specific goal that may be higher or lower than 30%, with grantees required to use good-faith efforts where goals are set. This is official guidance, not evidence of a specific applicant goal meeting or exceeding 30%.",
+        "summary": "Official guidelines confirm 30% is an agency-wide benchmark, while project goals may differ.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:31:56.986962+00:00"
+      }
+    ],
+    "coverage": [
+      {
+        "kind": "PROMISE",
+        "criterion": "Applicant good-faith effort to achieve project-assigned MWBE utilization goals, with awareness of ESD's 30% agency-wide MWBE goal",
+        "promise_gap": "No citation directly shows the applicant promising that its own utilization goals will meet or exceed 30%; the excerpts instead say the applicant acknowledges ESD's 30% agency-wide goal and may later receive a project-specific goal that could be higher or lower than 30%.",
+        "promise_citation_ids": [
+          "c3",
+          "c5",
+          "c6"
+        ],
+        "delivery_gap": "No evidence here shows any assigned project-specific MWBE goal or actual utilization achieved.",
+        "delivery_citation_ids": []
+      }
+    ],
+    "target_status": "IDENTIFIED",
+    "gaps": [
+      "No citation directly shows the applicant promising that its own utilization goals will meet or exceed 30%; the excerpts instead say the applicant acknowledges ESD's 30% agency-wide goal and may later receive a project-specific goal that could be higher or lower than 30%.",
+      "No evidence here shows any assigned project-specific MWBE goal or actual utilization achieved."
+    ]
+  },
+  {
+    "type": "provider_call",
+    "provider": "openai",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 7.719000000040978,
+    "request_id": "req_fe925bf8af0f4092ada426b5ae44d431",
+    "usage": {
+      "input_tokens": 2353,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 620,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2973
+    },
+    "search_enabled": false,
+    "web_search_ids": [],
+    "stop_reason": "completed"
+  },
+  {
+    "type": "evidence_synthesis",
+    "phase": "initial",
+    "capture_count": 9,
+    "selection": {
+      "findings": [
+        {
+          "citation_id": "c5",
+          "summary": "The application acknowledgment says ESD’s Contractor & Supplier Diversity policy applies to the project; the applicant acknowledges ESD’s agency-wide MWBE utilization goal of 30% and SDVOB goal of 6%; each project will later receive an individual contract-specific goal that may be higher or lower than those percentages; and, if funded, the applicant must use good faith efforts to achieve the prescribed project-assigned goals, with possible grant reduction for failure to attain them.",
+          "status": "Promise documented",
+          "explanation": "This passage directly states the governing terms. It does not say the applicant promised its own utilization goals would meet or exceed 30%; instead it says the applicant acknowledges ESD’s agency-wide goals, that project-specific goals may differ, and that the obligation is good faith efforts toward the assigned goals if funding is awarded.",
+          "excerpt": "Q_2365 By entering your name in the box below, you are acknowledging that ESD’s Contractor & Supplier Diversity policy will apply to this project. You are further acknowledging that you are aware of ESD’s agency-wide Minority and Women Business Enterprise (‘MWBE’) utilization goal of 30% and ESD's agency wide Service-Disabled Veteran-Owned Business ('SDVOB') utilization goal of 6%. Please note that each project will be assigned an individual contract-specific goal, which may be higher or lower than the 30% and 6%, respectively. Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced.",
+          "locator": ""
+        },
+        {
+          "citation_id": "c6",
+          "summary": "ESD’s program guidelines state that the agency-wide MWBE utilization goal is 30%, that after application approval a project may be assigned an individual contract-specific goal higher or lower than 30%, and that where goals are set the grantee must use good faith efforts to achieve the prescribed project MWBE goals and maintain records needed to demonstrate compliance with Article 15-A.",
+          "status": "Context",
+          "explanation": "This independent guideline confirms the same program structure and clarifies that the relevant obligation is to pursue whatever project-specific goal is assigned, not necessarily 30%.",
+          "excerpt": "Please note that ESD’s agency-wide MWBE utilization goal is 30%. After application approval the project may be assigned an individual contract-specific goal, which may be higher or lower than 30%. In instances where goals are set, grantee will be required to use good faith efforts to achieve the prescribed MWBE goals assigned to the project and must maintain such records and take such actions necessary to demonstrate compliance with Article 15-A of the New York State Executive Law.",
+          "locator": ""
+        },
+        {
+          "citation_id": "c8",
+          "summary": "For projects subject to MWBE requirements, the recipient must submit periodic MWBE Compliance & Payment Reports documenting progress made toward achievement of the MWBE project goals.",
+          "status": "Implementation evidence",
+          "explanation": "This establishes a reporting mechanism for tracking progress toward assigned project MWBE goals, but it does not show any project-specific goal or actual utilization for the applicant.",
+          "excerpt": "Recipient is required to submit a periodic MWBE Compliance & Payment Report to OCSD by the 10th day following either the end of each (i) month, for construction contracts in excess of $100,000, or (ii) quarter, for services and commodities contracts in excess of $25,000, over the term of the project documenting the progress made toward achievement of the MWBE project goals.",
+          "locator": ""
+        },
+        {
+          "citation_id": "c9",
+          "summary": "Where MWBE goals have been established, the recipient must document good faith efforts to provide meaningful MWBE participation as subcontractors or suppliers in performing the project.",
+          "status": "Qualification",
+          "explanation": "This provides an explicit limitation/condition: the good-faith-efforts documentation duty applies where MWBE goals have been established.",
+          "excerpt": "Where MWBE goals have been established herein, pursuant to 5 NYCRR §142.8, Recipient must document “Good Faith Efforts” to provide meaningful participation by MWBEs as subcontractors or suppliers in the performance of the project.",
+          "locator": ""
+        }
+      ],
+      "gap": "No verified passage shows that the applicant itself committed that its minority, women, and service-disabled veteran utilization goals would meet or exceed 30%. The supplied sources instead show acknowledgment of ESD’s agency-wide 30% MWBE goal and 6% SDVOB goal, later assignment of project-specific goals that may be higher or lower, and a duty to use good faith efforts toward assigned goals. No source here identifies this applicant’s assigned project-specific goal or any actual utilization achieved.",
+      "followup_query": "site:esd.ny.gov applicant MWBE Utilization Plan OCSD-4 project-specific goal SDVOB incentive proposal"
+    },
+    "canonical": false
+  },
+  {
+    "type": "evidence_gap_search",
+    "recommended": true,
+    "performed": false,
+    "query": "site:esd.ny.gov applicant MWBE Utilization Plan OCSD-4 project-specific goal SDVOB incentive proposal",
+    "gap": "No verified passage shows that the applicant itself committed that its minority, women, and service-disabled veteran utilization goals would meet or exceed 30%. The supplied sources instead show acknowledgment of ESD’s agency-wide 30% MWBE goal and 6% SDVOB goal, later assignment of project-specific goals that may be higher or lower, and a duty to use good faith efforts toward assigned goals. No source here identifies this applicant’s assigned project-specific goal or any actual utilization achieved.",
+    "new_verified_excerpts": 0
+  }
+]

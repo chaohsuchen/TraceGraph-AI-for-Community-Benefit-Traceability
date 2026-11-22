@@ -1,0 +1,163 @@
+{
+  "arm": "reread",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 2.922000000020489,
+      "request_id": "req_8219d32cc38241e993130a83c7e2f5b7",
+      "usage": {
+        "input_tokens": 1716,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 250,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 1966
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "documents": [
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "status": "readable",
+      "characters": 92779,
+      "sha256": "5a1747a5c17b9cb580ed17fe93456dd627dee46822e162066f2c620c7065114a"
+    },
+    {
+      "url": "https://www.dol.gov/sites/dolgov/files/VETS/files/Employer-Guide-to-Hiring-Veterans2025-07.pdf",
+      "status": "unreadable",
+      "characters": 0,
+      "sha256": null
+    }
+  ],
+  "shortlist": [
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "excerpt": "Diversity Framework The Board appreciated HRMP’s goal of building an operational workforce that reflects the demographics of Queens: 51 percent women and 83 percent minorities. HRMP aims for the minimum 6 percent utilization of service-disabled veterans.",
+      "start": 68462,
+      "end": 68716
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "excerpt": "HRMP aims for the minimum 6 percent utilization of service-disabled veterans. HRMP notes that the Applicant may have to bring current experienced employees from other states to work at the facility, and this may impact reaching these workforce composition goals.",
+      "start": 68639,
+      "end": 68901
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "excerpt": "38 Construction workforce diversity goals are targeted for 5 percent women, 40 percent minorities, and approximately 5 percent service-disabled veterans - below the State- indicated minimum of 6 percent. Resorts World also projected that 19 percent of its construction FTEs will be Queens residents, which the Board considers low.",
+      "start": 86741,
+      "end": 87071
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "excerpt": "Median compensation for full-time employees is estimated near $150,000 annually, including benefits. Employment is projected to be 47 percent women, 85 percent minorities, and approximately 5 percent service-disabled veterans, although all Applicants must meet the articulated minimum of 6 percent service-disabled veteran utilization.",
+      "start": 78985,
+      "end": 79320
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "excerpt": "Similarly, Resorts World did not evidence a strong commitment to prevent human trafficking, and the Board recommends that more attention be given to developing a strong anti-trafficking program. Diversity Framework The Board supports Resorts World’s reported permanent employment target of 47 percent women, and 85 percent minorities, but expects the service-disabled veterans’ employment target to be the required 6 percent, not the 5 percent offered.",
+      "start": 85714,
+      "end": 86166
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "excerpt": "For Minority and Women-Owned Business Enterprises (MWBE) goals during construction, Bally’s proposed targets of 10 percent women, 40 percent minorities, and 10 percent service-disabled veterans. With respect to contractor MWBE goals, the Board considers Bally’s partnership with the Velez Organization a strength.",
+      "start": 55529,
+      "end": 55842
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "excerpt": "The Board noted that Resorts World provided data on current employment at its existing facility but failed to supply sufficient demographic context for the areas from which they draw employees, limiting the Board’s ability to fully assess its diversity strategy. 38 Construction workforce diversity goals are targeted for 5 percent women, 40 percent minorities, and approximately 5 percent service-disabled veterans - below the State- indicated minimum of 6 percent.",
+      "start": 86478,
+      "end": 86944
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "excerpt": "For MWBE participation in the construction of the project, HRMP established goals of 8 percent women and 30 - 63 percent minorities and aims for 6 percent SDV.",
+      "start": 69493,
+      "end": 69652
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "excerpt": "The Board also expressed concern about transparency, as more than 36.4 percent of executive leadership race was reported as “non-specified.” This is not an acceptable response, and the Board expects more diverse executive leadership for the Bronx project. For Minority and Women-Owned Business Enterprises (MWBE) goals during construction, Bally’s proposed targets of 10 percent women, 40 percent minorities, and 10 percent service-disabled veterans.",
+      "start": 55273,
+      "end": 55723
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "excerpt": "All Applicants are expected to track and report service-disabled veteran employment and meet the RFA-articulated 6 percent goal requirement. The Board also expects the Applicants to be innovative and diligent in their efforts to prevent problem gambling and to help problem gamblers not just by telling those people that help is available, but by doing more to help them actually find and use the help.",
+      "start": 39745,
+      "end": 40147
+    }
+  ],
+  "selection": {
+    "findings": [
+      {
+        "id": "W2",
+        "claim": "HRMP says bringing in current experienced employees from other states for the facility could hinder its ability to meet the 6 percent service-disabled veteran utilization goal.",
+        "quote": "HRMP aims for the minimum 6 percent utilization of service-disabled veterans. HRMP notes that the Applicant may have to bring current experienced employees from other states to work at the facility, and this may impact reaching these workforce composition goals."
+      },
+      {
+        "id": "W8",
+        "claim": "For project construction MWBE participation, HRMP set a separate goal of 6 percent service-disabled veterans alongside targets of 8 percent women and 30 - 63 percent minorities.",
+        "quote": "For MWBE participation in the construction of the project, HRMP established goals of 8 percent women and 30 - 63 percent minorities and aims for 6 percent SDV."
+      },
+      {
+        "id": "W10",
+        "claim": "The Board expects all applicants, including HRMP, to track and report service-disabled veteran employment and to meet the RFA’s 6 percent requirement.",
+        "quote": "All Applicants are expected to track and report service-disabled veteran employment and meet the RFA-articulated 6 percent goal requirement."
+      }
+    ]
+  },
+  "additions": [
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "quote": "HRMP aims for the minimum 6 percent utilization of service-disabled veterans. HRMP notes that the Applicant may have to bring current experienced employees from other states to work at the facility, and this may impact reaching these workforce composition goals.",
+      "claim": "HRMP says bringing in current experienced employees from other states for the facility could hinder its ability to meet the 6 percent service-disabled veteran utilization goal.",
+      "start": 68639,
+      "end": 68901
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "quote": "For MWBE participation in the construction of the project, HRMP established goals of 8 percent women and 30 - 63 percent minorities and aims for 6 percent SDV.",
+      "claim": "For project construction MWBE participation, HRMP set a separate goal of 6 percent service-disabled veterans alongside targets of 8 percent women and 30 - 63 percent minorities.",
+      "start": 69493,
+      "end": 69652
+    },
+    {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "quote": "All Applicants are expected to track and report service-disabled veteran employment and meet the RFA-articulated 6 percent goal requirement.",
+      "claim": "The Board expects all applicants, including HRMP, to track and report service-disabled veteran employment and to meet the RFA’s 6 percent requirement.",
+      "start": 39745,
+      "end": 39885
+    }
+  ]
+}

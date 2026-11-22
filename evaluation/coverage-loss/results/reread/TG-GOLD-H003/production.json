@@ -1,0 +1,20 @@
+{
+  "arm": "reread",
+  "calls": [],
+  "documents": [
+    {
+      "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "status": "TimeoutError",
+      "characters": 0,
+      "sha256": null
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000084/baly-20260630.htm",
+      "status": "unreadable",
+      "characters": 0,
+      "sha256": null
+    }
+  ],
+  "shortlist": [],
+  "additions": []
+}

@@ -1,0 +1,64 @@
+{
+  "arm": "hidden",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 1.547000000020489,
+      "request_id": "req_43d9986405524eb6ae371ed328efde93",
+      "usage": {
+        "input_tokens": 947,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 86,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 1033
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "documents": [],
+  "shortlist": [
+    {
+      "url": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+      "title": "https://apps.cio.ny.gov/apps/cfa/programQuestions.cfm?programId=820",
+      "excerpt": "Furthermore, you understand that, should this project receive a funding award, the Applicant shall be required to use good faith efforts to achieve the prescribed MWBE and SDVOB goals assigned to this project and failure to attain MWBE and SDVOB goals could result in grant amount being reduced. Q_4182 By entering your name in the box below, you certify and agree that you are aware that your award will be reduced in proportion to the reduction of jobs and/or total project costs."
+    },
+    {
+      "url": "https://esd.ny.gov/participation-requirements-new-york-state-certified-mwbes",
+      "title": "https://esd.ny.gov/participation-requirements-new-york-state-certified-mwbes",
+      "excerpt": "Recipient is required to submit an MWBE Utilization Plan (Form OCSD-4) no later than ten (10) days after the execution of this Incentive Proposal."
+    }
+  ],
+  "selection": {
+    "findings": [
+      {
+        "id": "W2",
+        "claim": "The recipient must submit an MWBE Utilization Plan on Form OCSD-4 within ten days after the Incentive Proposal is executed.",
+        "quote": "Recipient is required to submit an MWBE Utilization Plan (Form OCSD-4) no later than ten (10) days after the execution of this Incentive Proposal."
+      }
+    ]
+  },
+  "additions": [
+    {
+      "url": "https://esd.ny.gov/participation-requirements-new-york-state-certified-mwbes",
+      "title": "https://esd.ny.gov/participation-requirements-new-york-state-certified-mwbes",
+      "quote": "Recipient is required to submit an MWBE Utilization Plan (Form OCSD-4) no later than ten (10) days after the execution of this Incentive Proposal.",
+      "claim": "The recipient must submit an MWBE Utilization Plan on Form OCSD-4 within ten days after the Incentive Proposal is executed.",
+      "start": 0,
+      "end": 146
+    }
+  ]
+}

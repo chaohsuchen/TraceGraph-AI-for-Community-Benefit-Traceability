@@ -1,0 +1,33 @@
+﻿case,arm,facts,baseline,hits,gained,lost,gains_by_mechanism,identity,underlying_identity,verdict,support,claims,additions,document_reads,readable,incremental_production_cost
+TG-GOLD-A006,control,7,0,0,[],[],{},MATCH,MATCH,,13,13,,,,
+TG-GOLD-A034,control,12,0,0,[],[],{},UNRESOLVED,UNRESOLVED,,15,15,,,,
+TG-GOLD-A061,control,10,2,2,[],[],{},MATCH,MATCH,JUSTIFIED,3,3,,,,
+TG-GOLD-H003,control,10,0,0,[],[],{},UNRESOLVED,UNRESOLVED,,8,8,,,,
+TG-GOLD-H008,control,6,4,4,[],[],{},MATCH,MATCH,JUSTIFIED,8,8,,,,
+TG-GOLD-H010,control,5,0,0,[],[],{},UNRESOLVED,UNRESOLVED,INDETERMINATE,10,10,,,,
+TG-GOLD-H023,control,8,3,3,[],[],{},MATCH,MATCH,,14,14,,,,
+TG-GOLD-H030,control,12,0,0,[],[],{},UNRESOLVED,UNRESOLVED,,0,0,,,,
+TG-GOLD-A006,hidden,7,0,0,[],[],{},MATCH,MATCH,,12,12,1,0,0,0.003658
+TG-GOLD-A034,hidden,12,0,0,[],[],{},UNRESOLVED,UNRESOLVED,,21,21,2,0,0,0.004383
+TG-GOLD-A061,hidden,10,2,2,[],[],{},MATCH,MATCH,JUSTIFIED,3,3,0,0,0,0.00225
+TG-GOLD-H003,hidden,10,0,3,"['G2', 'G3', 'G9']",[],"{'G2': 'prior_fact_gated_by_identity', 'G3': 'prior_fact_gated_by_identity', 'G9': 'prior_fact_gated_by_identity'}",MATCH,UNRESOLVED,,13,13,2,0,0,0.005528
+TG-GOLD-H008,hidden,6,4,4,[],[],{},MATCH,MATCH,JUSTIFIED,8,8,0,0,0,0.001857
+TG-GOLD-H010,hidden,5,0,0,[],[],{},MISMATCH,UNRESOLVED,INDETERMINATE,9,11,2,0,0,0.004615
+TG-GOLD-H023,hidden,8,3,4,['G3'],[],{'G3': 'new_citation'},MATCH,MATCH,,17,17,1,0,0,0.00375
+TG-GOLD-H030,hidden,12,0,0,[],[],{},UNRESOLVED,UNRESOLVED,,0,0,0,0,0,0.0
+TG-GOLD-A006,reread,7,0,0,[],[],{},UNRESOLVED,MATCH,,12,12,1,2,2,0.010093
+TG-GOLD-A034,reread,12,0,0,[],[],{},UNRESOLVED,UNRESOLVED,,15,15,0,2,0,0.0
+TG-GOLD-A061,reread,10,2,2,[],[],{},MATCH,MATCH,JUSTIFIED,6,7,3,2,2,0.012735
+TG-GOLD-H003,reread,10,0,0,[],[],{},UNRESOLVED,UNRESOLVED,,8,8,0,2,0,0.0
+TG-GOLD-H008,reread,6,4,4,[],[],{},MATCH,MATCH,JUSTIFIED,11,11,3,2,1,0.009237
+TG-GOLD-H010,reread,5,0,0,[],[],{},UNRESOLVED,UNRESOLVED,INDETERMINATE,12,12,2,2,1,0.00825
+TG-GOLD-H023,reread,8,3,5,"['G2', 'G3']",[],"{'G2': 'new_citation', 'G3': 'new_citation'}",MATCH,MATCH,,22,22,3,2,2,0.013585
+TG-GOLD-H030,reread,12,0,0,[],[],{},UNRESOLVED,UNRESOLVED,,6,6,3,2,1,0.00804
+TG-GOLD-A006,discover,7,0,0,[],[],{},UNRESOLVED,MATCH,,23,23,4,3,1,0.080588
+TG-GOLD-A034,discover,12,0,3,"['G1', 'G11', 'G5']",[],"{'G1': 'new_citation', 'G11': 'prior_fact_gated_by_identity', 'G5': 'prior_fact_gated_by_identity'}",MATCH,UNRESOLVED,,21,21,3,3,1,0.075262
+TG-GOLD-A061,discover,10,2,2,[],[],{},MATCH,MATCH,JUSTIFIED,3,3,0,3,3,0.080422
+TG-GOLD-H003,discover,10,0,3,"['G2', 'G3', 'G9']",[],"{'G2': 'prior_fact_gated_by_identity', 'G3': 'prior_fact_gated_by_identity', 'G9': 'prior_fact_gated_by_identity'}",MATCH,UNRESOLVED,,15,15,4,3,2,0.079085
+TG-GOLD-H008,discover,6,4,4,[],[],{},MATCH,MATCH,JUSTIFIED,8,8,0,3,1,0.067107
+TG-GOLD-H010,discover,5,0,0,[],[],{},MISMATCH,UNRESOLVED,INDETERMINATE,13,14,2,3,1,0.082622
+TG-GOLD-H023,discover,8,3,4,['G6'],[],{'G6': 'new_citation'},MATCH,MATCH,,23,23,3,3,3,0.083817
+TG-GOLD-H030,discover,12,0,2,"['G1', 'G2']",[],"{'G1': 'new_citation', 'G2': 'new_citation'}",MATCH,UNRESOLVED,,10,10,4,3,3,0.084987

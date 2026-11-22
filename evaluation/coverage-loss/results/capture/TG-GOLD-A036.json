@@ -1,0 +1,130 @@
+{
+  "fingerprint": "1d715b70f8f2ace7f36b694dc8ed4a376ed1ed84379fa9d8ecaa086214b66036",
+  "origin": "new_tool_free_v4",
+  "passages": {
+    "p1": {
+      "url": "https://nycasinos.ny.gov/resorts-world-new-york-city-local-impact-siting-mitigating-potential-impacts-communities-local-0",
+      "title": "https://nycasinos.ny.gov/resorts-world-new-york-city-local-impact-siting-mitigating-potential-impacts-communities-local-0",
+      "excerpt": "The new partnership will begin investing in new housing developments in the immediate term. This landmark agreement with Cirrus, labor pension funds, and contractors will ensure there is affordable housing financed by, built by, and lived in by working- and middle-class families."
+    },
+    "p2": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/02/exhibit-174-rwnyc-cirrus-mou_redacted.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/02/exhibit-174-rwnyc-cirrus-mou_redacted.pdf",
+      "excerpt": "WHEREAS, the Parties desire to amplify both the actual and perceived scale and results of the RWNYC Impact Goals (the “Multiplier Effect”) and ultimate WFH creation via leveraging CWFHA’s WFH Investment pipeline, the CWFHA Coalition and CWFHA’s WFH investment expertise, and as such the Parties desire to enter into a long-term strategic joint venture (the “RCJV”) to:"
+    },
+    "p3": {
+      "url": "https://rwnewyork.com/rws-next-chapter/resorts-world-new-york-city-cirrus-unveil-new-agreement-to-build-up-to-50000-units-of-workforce-housing/",
+      "title": "https://rwnewyork.com/rws-next-chapter/resorts-world-new-york-city-cirrus-unveil-new-agreement-to-build-up-to-50000-units-of-workforce-housing/",
+      "excerpt": "Resorts World New York City has officially formed a joint venture with Cirrus to invest in this housing commitment, which will focus on large-scale projects across the five boroughs. The new partnership will begin to invest in new housing developments in the immediate term."
+    },
+    "p4": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/02/exhibit-175-rwnyc-cirrus-partnership-agreement_redacted.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/02/exhibit-175-rwnyc-cirrus-partnership-agreement_redacted.pdf",
+      "excerpt": "“Investments” means (i) co-investments by the Partnership with other investment vehicles and partnerships managed by the Management Company in the development and ownership of workforce housing in New York City and its suburbs (“Co-Investments”); (ii) investments by the Partnership alongside other Management Company anchor investors within the Management Company’s flagship funds in order to support further investments by these vehicles in the development and ownership of workforce housing in New York City and its suburbs"
+    },
+    "p5": {
+      "url": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+      "title": "https://rwnewyork.com/community/community-investments/workforce-housing/",
+      "excerpt": "Resorts World's Workforce Housing Initiative, funded through the Cirrus Workforce Housing Fund, is a landmark partnership with organized labor to deliver tens of thousands of new homes for working families across New York City."
+    }
+  },
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 6.562999999965541,
+      "request_id": "req_9b98392480cf4dc4a41daddd2b6c4bc3",
+      "usage": {
+        "input_tokens": 2310,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 542,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2852
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "decisions": [
+    {
+      "gold_id": "G1",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p1",
+        "p3"
+      ],
+      "reason": "Both passages state the partnership will begin investing in new/workforce housing developments \"in the immediate term,\" which records an immediate-term start but gives no calendar deadline."
+    },
+    {
+      "gold_id": "G2",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p1",
+        "p3"
+      ],
+      "reason": "The passages describe a partnership and immediate-term investing, but do not mention a multimillion-dollar down payment, the amount, or that it occurred before the license award."
+    },
+    {
+      "gold_id": "G3",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt says RWNYC's application expressed hope that construction would start before the license award."
+    },
+    {
+      "gold_id": "G4",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt discusses license requirements, milestones, or budgets for community benefits."
+    },
+    {
+      "gold_id": "G5",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p4"
+      ],
+      "reason": "The partnership agreement excerpt defines “Investments” but does not refer the investment-period start to section 3.1(b)."
+    },
+    {
+      "gold_id": "G6",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt mentions a $46.125 million deed, the Jamaica site, or May 29/June 5, 2026 recording dates."
+    },
+    {
+      "gold_id": "G7",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt identifies RWNYC ARCHER AVE LLC as a recorded buyer."
+    },
+    {
+      "gold_id": "G8",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt mentions Queens block 10151, lot 39, or deed and mortgage parcel references."
+    },
+    {
+      "gold_id": "G9",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt reports $25 million delivered in 2026 through September for the fund."
+    },
+    {
+      "gold_id": "G10",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No excerpt says that in September 2026 the operator still described 700 Jamaica units as proposed."
+    }
+  ]
+}

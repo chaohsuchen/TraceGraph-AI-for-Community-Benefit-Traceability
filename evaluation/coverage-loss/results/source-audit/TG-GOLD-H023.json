@@ -1,0 +1,73 @@
+{
+  "case": "TG-GOLD-H023",
+  "selected_distinct_urls": 2,
+  "review": {
+    "https://nycasinos.ny.gov/system/files/documents/2026/02/evalloc5.hardrock.tourism.redactedrevised.pdf": {
+      "relationship": "same_host_distinct_or_unresolved_document",
+      "identical_content_urls": [],
+      "old_passages_repeated": [],
+      "snapshot_consistent": false,
+      "original_status": {
+        "status": "TimeoutError",
+        "characters": 0,
+        "sha256": null
+      },
+      "same_host_or_filename_compared": [
+        {
+          "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+          "status": "TimeoutError",
+          "characters": 0,
+          "sha256": null
+        },
+        {
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-responses-9.29.25-1-c.pdf",
+          "status": "readable",
+          "characters": 8280,
+          "sha256": "d58f398141d137855778184a3689f2cc36936ec8d8b4aa30139046ea8a690da4"
+        },
+        {
+          "url": "https://nycasinos.ny.gov/metropolitan-park-gaming-facility-highest-caliber-restaurant",
+          "status": "TimeoutError",
+          "characters": 0,
+          "sha256": null
+        },
+        {
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/12/12.01.25.gflbselectiondocument.pdf",
+          "status": "unreadable",
+          "characters": 0,
+          "sha256": null
+        },
+        {
+          "url": "https://nycasinos.ny.gov/metropolitan-park-cac-inquiries-requested-september-29-2025",
+          "status": "readable",
+          "characters": 8280,
+          "sha256": "d58f398141d137855778184a3689f2cc36936ec8d8b4aa30139046ea8a690da4"
+        },
+        {
+          "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+          "status": "TimeoutError",
+          "characters": 0,
+          "sha256": null
+        },
+        {
+          "url": "https://nycasinos.ny.gov/metropolitan-park-application-materials",
+          "status": "readable",
+          "characters": 23645,
+          "sha256": "9bcc90e56ae7aa1107a305627ebddce1bd1b04b5d89ee837bd5a973c4cbeacfc"
+        }
+      ]
+    },
+    "https://ny.eater.com/news/24445921/major-food-group-restaurants-hard-rock-hotel-metropolitan-park-queens-food-hall-citi-field": {
+      "relationship": "different_host_independence_unestablished",
+      "identical_content_urls": [],
+      "old_passages_repeated": [],
+      "snapshot_consistent": true,
+      "original_status": {
+        "status": "readable",
+        "characters": 7864,
+        "sha256": "d8f2112f742d275069a34f07dd4ba14649d3627aa0348c3f1a1c6e3fd4aaca98"
+      },
+      "same_host_or_filename_compared": []
+    }
+  }
+}

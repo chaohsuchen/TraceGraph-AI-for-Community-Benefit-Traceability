@@ -1,0 +1,250 @@
+{
+  "case_id": "TG-GOLD-A001",
+  "query": "Jobs created by the new casinos must deliver livable wages.",
+  "facts": [
+    {
+      "id": "G1",
+      "text": "The New York gaming RFA says casino jobs must deliver livable wages.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H024",
+          "row": 5
+        }
+      ]
+    },
+    {
+      "id": "G2",
+      "text": "The RFA's livable-wages language specifies no numerical wage floor.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H024",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-H024",
+          "row": 17
+        },
+        {
+          "sheet": "TG-GOLD-H024",
+          "row": 18
+        }
+      ]
+    },
+    {
+      "id": "G3",
+      "text": "The RFA identifies a labor peace agreement as an ongoing material license condition.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H024",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "G4",
+      "text": "The Board's report projects a roughly $80,000 median wage for Bally's.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H024",
+          "row": 8
+        }
+      ]
+    },
+    {
+      "id": "G5",
+      "text": "The Board's report projects a roughly $140,000 average wage for HRMP.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H024",
+          "row": 8
+        }
+      ]
+    },
+    {
+      "id": "G6",
+      "text": "The Board's report projects a roughly $150,000 median wage for Resorts World.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H024",
+          "row": 8
+        }
+      ]
+    },
+    {
+      "id": "G7",
+      "text": "The three executed gaming licenses reviewed do not state a livable-wage floor.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-H024",
+          "row": 9
+        },
+        {
+          "sheet": "TG-GOLD-H024",
+          "row": 10
+        },
+        {
+          "sheet": "TG-GOLD-H024",
+          "row": 11
+        }
+      ]
+    }
+  ],
+  "conditions": [],
+  "delivery_applicable": false,
+  "reference_verdict": {
+    "status": "not applicable",
+    "reasoning": "The sentence is a Board policy statement with no obligated party, wage figure or enforcement route; no RFA requirement, Board finding or license sets a wage floor, so there is nothing to collect delivery evidence against. The enforceable labor term is the labor peace agreement (an ongoing material condition of licensure), which could be its own row. Statute text (PML 1306/1320/1321) could not be loaded and was not checked directly.",
+    "delivery_applicable": false,
+    "source_refs": [
+      {
+        "sheet": "TG-GOLD-H024",
+        "row": 17
+      },
+      {
+        "sheet": "TG-GOLD-H024",
+        "row": 18
+      }
+    ]
+  },
+  "sources": [
+    {
+      "sheet": "TG-GOLD-H024",
+      "row": 5,
+      "title": "GFLB Request for Applications, Overview: Introduction (3 Jan 2023, updated)",
+      "citation": "nycasinos.ny.gov (RFA, 3 Jan 2023, updated NY supplement); project copy 01.03.23.rfa_updatednysupplement_0.pdf",
+      "publisher": "NY Gaming Facility Location Board (regulator)",
+      "url": null,
+      "url_origin": null,
+      "locator": "nycasinos.ny.gov (RFA, 3 Jan 2023, updated NY supplement); project copy 01.03.23.rfa_updatednysupplement_0.pdf",
+      "published_on": null,
+      "evidence_status": "not applicable",
+      "specific_evidence": "pdf p.4: \"The jobs created by these casinos must deliver livable wages to help families live, stay, and prosper in New York.\" Wages are otherwise only reported data (\"average and median pay weighted by the number of full-time equivalent employees\").",
+      "notes": "Quote verified verbatim (char 4210-4324). No wage standard or obligated party."
+    },
+    {
+      "sheet": "TG-GOLD-H024",
+      "row": 6,
+      "title": "GFLB RFA release (3 Jan 2023)",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2023/01/01.03.23.gflbrfarelease.pdf",
+      "publisher": "NY Gaming Facility Location Board (regulator)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2023/01/01.03.23.gflbrfarelease.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2023/01/01.03.23.gflbrfarelease.pdf",
+      "published_on": null,
+      "evidence_status": "not applicable",
+      "specific_evidence": "Same sentence. Criteria: \"Providing the highest number of quality jobs\" (economic, 70%); \"Organized labor agreements\" (workforce, 10%).",
+      "notes": "Livable wages is not itself a scoring criterion."
+    },
+    {
+      "sheet": "TG-GOLD-H024",
+      "row": 7,
+      "title": "GFLB RFA, licensee obligations",
+      "citation": "nycasinos.ny.gov (RFA, 3 Jan 2023, updated NY supplement); project copy 01.03.23.rfa_updatednysupplement_0.pdf",
+      "publisher": "NY Gaming Facility Location Board (regulator)",
+      "url": null,
+      "url_origin": null,
+      "locator": "nycasinos.ny.gov (RFA, 3 Jan 2023, updated NY supplement); project copy 01.03.23.rfa_updatednysupplement_0.pdf",
+      "published_on": null,
+      "evidence_status": "not applicable",
+      "specific_evidence": "\"A Gaming Facility licensee must produce documentation that it has entered into a labor peace agreement ... This is an ongoing material condition of licensure.\"",
+      "notes": "The binding labor duty is labor peace, not a wage level."
+    },
+    {
+      "sheet": "TG-GOLD-H024",
+      "row": 8,
+      "title": "GFLB Report and Findings (Mar 2026)",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "publisher": "NY Gaming Facility Location Board (regulator)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "published_on": null,
+      "evidence_status": "not applicable",
+      "specific_evidence": "p.8: framework \"places greater emphasis on community benefits and job opportunities at livable wages\". Projected pay: Bally's median ~$80,000 (\"seems low compared to the other Applicants\"); HRMP ~$140,000 average; Resorts World ~$150,000 median.",
+      "notes": "Projections, not tested against a standard."
+    },
+    {
+      "sheet": "TG-GOLD-H024",
+      "row": 9,
+      "title": "Bally's Bronx executed license (19 Dec 2025)",
+      "citation": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "publisher": "NYS Gaming Commission (regulator)",
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "url_origin": "workbook",
+      "locator": "https://gaming.ny.gov/system/files/documents/2025/12/ballys-license-document-121925-executed.pdf",
+      "published_on": null,
+      "evidence_status": "not applicable",
+      "specific_evidence": "No wage, livable-wage or labor-peace condition.",
+      "notes": "none"
+    },
+    {
+      "sheet": "TG-GOLD-H024",
+      "row": 10,
+      "title": "HRMP license award and Exhibit 1 License Conditions (19 Dec 2025; effective 15 Dec 2025)",
+      "citation": "https://gaming.ny.gov/hard-rock-metropolitan-park-commercial-casino-license",
+      "publisher": "NYS Gaming Commission (regulator)",
+      "url": "https://gaming.ny.gov/hard-rock-metropolitan-park-commercial-casino-license",
+      "url_origin": "workbook",
+      "locator": "https://gaming.ny.gov/hard-rock-metropolitan-park-commercial-casino-license",
+      "published_on": null,
+      "evidence_status": "not applicable",
+      "specific_evidence": "No wage, livable-wage or labor-peace condition.",
+      "notes": "none"
+    },
+    {
+      "sheet": "TG-GOLD-H024",
+      "row": 11,
+      "title": "Resorts World NYC license document (Dec 2025)",
+      "citation": "project copy: rwnyc-license-document.pdf",
+      "publisher": "NYS Gaming Commission (regulator)",
+      "url": null,
+      "url_origin": null,
+      "locator": "project copy: rwnyc-license-document.pdf",
+      "published_on": null,
+      "evidence_status": "not applicable",
+      "specific_evidence": "No wage, livable-wage or labor-peace condition.",
+      "notes": "none"
+    }
+  ],
+  "provenance": {
+    "workbook": "Golden Dataset (6).xlsx",
+    "sha256": "2da588b49b311957885ed7ff98bcd31c49e9d3ef8e99a761a3e9e5fcdb360099",
+    "identity": {
+      "sheet": "gold commitments",
+      "row": 100
+    },
+    "detail_sheet": "TG-GOLD-H024",
+    "detail_internal_id_cell": "B1",
+    "workbook_valid_flag": 1,
+    "workbook_split": "anchor_test",
+    "workbook_evidence_status": "no public evidence located",
+    "workbook_fields": {
+      "gold_id": "TG-GOLD-A001",
+      "document_id": "RFA-2023-01-03",
+      "page_section": "pdf p.4; Overview: Introduction",
+      "char_start": 4210.0,
+      "char_end": 4324.0,
+      "commitment_text": "The jobs created by these casinos must deliver livable wages to help families live, stay, and prosper in New York.",
+      "normalized_statement": "Jobs created by the new casinos must deliver livable wages.",
+      "obligation_type": "Unresolved / ambiguous",
+      "responsible_entity": "unspecified (\"these casinos\"; no obligated party named)",
+      "amount_value": "livable wages (no figure)",
+      "term_periodicity": "unspecified",
+      "geographic_scope": "New York State",
+      "beneficiary_category": "workforce/jobs",
+      "beneficiary_named": "none named",
+      "condition_contingency": "none stated",
+      "milestone": "none stated",
+      "evidence_status": "no public evidence located",
+      "confidence": "Low",
+      "adjudication_note": "Mandatory 'must' but in a policy-intent letter with no obligated party, metric, or enforcement mechanism; competing reads: Binding vs. aspirational policy statement.",
+      "duplicate_of": "none",
+      "notes": "Ambiguity: 'must deliver livable wages' has no wage standard. Useful negative/edge case for obligation-strength classification.",
+      "evaluation_split": "anchor_test",
+      "manually annotated valid?": 1.0
+    },
+    "detail_research_cutoff": null,
+    "evaluation_use": "22-case annotated benchmark; development-exposed cases included",
+    "reference_preparation": "Locally curated factual hypotheses and delivery conditions from the cited Golden (6) cells; prior to research."
+  }
+}

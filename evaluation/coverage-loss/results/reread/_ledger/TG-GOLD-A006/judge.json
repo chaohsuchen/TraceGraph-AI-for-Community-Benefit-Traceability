@@ -1,0 +1,16 @@
+[
+  {
+    "phase": "judge",
+    "status": "SCORED",
+    "started_at": "2026-11-22T10:14:54.875805+00:00",
+    "prediction_sha256": "096799533e8256ebbe4094c0eabb483237e027125dce4ca42ac01bd3a1d41424",
+    "finished_at": "2026-11-22T10:16:02.616572+00:00"
+  },
+  {
+    "phase": "structural_repair",
+    "started_at": "2026-11-22T10:15:41.061734+00:00",
+    "status": "SCORED",
+    "prediction_sha256": "096799533e8256ebbe4094c0eabb483237e027125dce4ca42ac01bd3a1d41424",
+    "finished_at": "2026-11-22T10:16:02.608898+00:00"
+  }
+]

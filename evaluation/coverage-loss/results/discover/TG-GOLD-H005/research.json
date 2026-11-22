@@ -1,0 +1,65 @@
+{
+  "case_id": "TG-GOLD-H005",
+  "reference_sha256": "66574b614a65dbbd4449ab788b1265527328b644e41e5dfc532d5acf777c9319",
+  "query": "Bally's anticipates about 75 percent of capital expenditures will benefit Bronx-based firms.",
+  "model": "gpt-5.4",
+  "web_search_model": "gpt-5.4",
+  "started_at": "2026-11-22T09:34:49.699624+00:00",
+  "outcome": "PARTIAL_RESEARCH",
+  "message": "Research is incomplete; no commitment was saved.",
+  "graph": null,
+  "job_result": {
+    "gaps": [
+      "No provided excerpt states the 75 percent capital expenditure term or identifies it as Bally's promise/projection.",
+      "No provided excerpt shows any actual capital expenditures or distribution of benefits to Bronx-based firms.",
+      "The provided source does not document the alleged commitment that about 75 percent of capital expenditures would benefit Bronx-based firms, nor does it show any actual expenditures or outcomes. The key missing evidence would be Bally’s application or a state summary quoting that term, and any later progress reports with spending details."
+    ],
+    "facts": [
+      {
+        "excerpt": "Each such report shall detail progress, set forth relevant budget and expenditure, and explain actual or anticipated delays in delivery of benefits proposed in the Application or Bally’s other commitments.",
+        "source_url": "https://gaming.ny.gov/ballys-bronx-commercial-casino-license",
+        "source_title": "https://gaming.ny.gov/ballys-bronx-commercial-casino-license"
+      },
+      {
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+        "excerpt": "Economic Activity and Business Development Bally’s proposes a $2.3 billion investment in the Bally’s Bronx project, with significant backing from a large real estate investment trust and other identified debt options. It anticipates that approximately 75 percent of the capital expenditures will benefit Bronx- based firms."
+      },
+      {
+        "source_url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+        "source_title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+        "excerpt": "It anticipates that approximately 75 percent of the capital expenditures will benefit Bronx- based firms. In its review, the Board considered that Bally’s has limited experience with large greenfield development."
+      }
+    ],
+    "query": "Bally's anticipates about 75 percent of capital expenditures will benefit Bronx-based firms.",
+    "message": "Research is incomplete; no commitment was saved.",
+    "outcome": "PARTIAL_RESEARCH",
+    "suggestions": [
+      {
+        "kind": "WEB_LEAD",
+        "title": "https://gaming.ny.gov/ballys-bronx-commercial-casino-license",
+        "excerpt": "Each such report shall detail progress, set forth relevant budget and expenditure, and explain actual or anticipated delays in delivery of benefits proposed in the Application or Bally’s other commitments.",
+        "source_url": "https://gaming.ny.gov/ballys-bronx-commercial-casino-license",
+        "description": "Each such report shall detail progress, set forth relevant budget and expenditure, and explain actual or anticipated delays in delivery of benefits proposed in the Application or Bally’s other commitments.",
+        "source_title": "https://gaming.ny.gov/ballys-bronx-commercial-casino-license"
+      },
+      {
+        "kind": "WEB_LEAD",
+        "title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+        "excerpt": "",
+        "source_url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+        "description": "Located source; no excerpt could be verified.",
+        "source_title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026"
+      },
+      {
+        "kind": "WEB_LEAD",
+        "title": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000108/baly-20260930.htm",
+        "excerpt": "",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000108/baly-20260930.htm",
+        "description": "Located source; no excerpt could be verified.",
+        "source_title": "https://www.sec.gov/Archives/edgar/data/1747079/000174707926000108/baly-20260930.htm"
+      }
+    ]
+  },
+  "finished_at": "2026-11-22T09:35:48.996832+00:00"
+}

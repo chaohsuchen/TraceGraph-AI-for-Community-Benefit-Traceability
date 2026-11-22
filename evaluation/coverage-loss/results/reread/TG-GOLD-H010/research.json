@@ -1,0 +1,429 @@
+{
+  "case_id": "TG-GOLD-H010",
+  "reference_sha256": "6cd99db4706d218f3ba9939be7e3a42e28d760ba1165e9c49eee49a90479f1e4",
+  "query": "Bally's plans to exceed the 10 percent renewable energy requirement through on-site solar and NYSERDA-qualified off-site procurement.",
+  "model": "gpt-5.4",
+  "web_search_model": "gpt-5.4",
+  "started_at": "2026-11-22T09:36:00.221236+00:00",
+  "outcome": "RESOLVED",
+  "graph": {
+    "commitment": {
+      "title": "Proposed renewable energy plan for Bally's Bronx casino project",
+      "description": "Bally's Bronx application materials describe a plan to ensure at least 10% of the facility’s annual electricity consumption comes from NYSERDA-qualified renewable energy sources, with part generated on-site and the remainder procured off-site. The on-site component is proposed as photovoltaic solar panels on the parking garage and select roof areas, projected to supply about 6% of annual energy consumption.",
+      "original_text": "As the Gaming Facility’s design is finalized, the exact proportions of energy generated on-site versus energy procured will be further refined to ensure the target of at least 10 percent renewable energy consumption is met.",
+      "responsible_entity_raw": "Bally's Bronx casino project / resort",
+      "beneficiary": {
+        "name": null,
+        "category": null
+      },
+      "obligation_type": "plan",
+      "amount_value": "at least 10 percent of annual electricity consumption from renewable energy; approximately 6 percent from on-site solar target",
+      "term_periodicity": "annual",
+      "geographic_scope": "Bronx, New York",
+      "condition_contingency": "As the Gaming Facility’s design is finalized, the exact proportions of on-site generation versus procured energy will be further refined.",
+      "milestone": null,
+      "notes": "The cited materials describe a proposed plan in application documents, not completed delivery. Off-site renewable energy is described as NYSERDA-qualified procurement for the remainder needed to reach at least 10%.",
+      "id": "commitment-d3b29c75-b280-4b58-a62b-3ac3ba410b8c",
+      "original_promise": {
+        "document_id": null,
+        "source": {
+          "id": "source-179b18e3-26f7-4a1f-aead-5d93b32a4e68",
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+          "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+          "publisher": null,
+          "source_type": null,
+          "published_on": null
+        },
+        "locator": "Cited passage",
+        "char_start": null,
+        "char_end": null
+      }
+    },
+    "organization": {
+      "id": "org-7d15a522-bb26-43fd-8a24-c21bfc1cf886",
+      "name": "Bally's"
+    },
+    "assessment": {
+      "label": "UNVERIFIED",
+      "verdict": "Delivery unverified for: Bally's documented plan for the Bronx gaming facility is to have at least 10% of the facility's annual electricity consumption supplied by NYSERDA-qualified renewable energy using a mix of on-site generation and procured renewable energy.; Bally's documented plan uses on-site photovoltaic solar panels as part of that renewable energy mix for the Bronx facility.; Bally's documented plan is to exceed, rather than merely meet, a 10% renewable-energy requirement for the Bronx facility.",
+      "reasoning": "Requested scope: Bally's plans to exceed the 10 percent renewable energy requirement through on-site solar and NYSERDA-qualified off-site procurement.\n\nBally's documented plan for the Bronx gaming facility is to have at least 10% of the facility's annual electricity consumption supplied by NYSERDA-qualified renewable energy using a mix of on-site generation and procured renewable energy.\nStatus: UNVERIFIED\nThe only allowed delivery evidence in observed_outcomes is a Bally's application-materials posting note stating that certain Bally's records were final and posted as of May 5, 2026. That establishes publication/finalization of records, but it does not itself establish that the documented plan for the Bronx gaming facility provides at least 10% of annual electricity consumption from NYSERDA-qualified renewable energy using a mix of on-site generation and procured renewable energy. The cited application excerpts describe such a plan, but they are not included in observed_outcomes, so they cannot be used here as delivery evidence.\nPromised scope: Promisor: Bally's/Bronx Bally's. Intended beneficiary: the proposed Bronx gaming facility itself (facility electricity supply), not a separately named public population. Location: Bronx, New York City, for the proposed Bally's gaming facility. Benefit/action promised: at least 10% of the facility's annual electricity consumption would come from NYSERDA-qualified renewable sources, with the mix split between on-site generation and procured renewable energy.\nObserved scope: Observed outcome evidence shows only that Bally's records were considered final and posted online as of May 5, 2026. The actual beneficiary population is unspecified, the location is unspecified in the observed outcome, and the observed action is publication/finalization of records rather than proof of a documented plan with the stated Bronx-facility renewable-energy mix.\nEvidence gap: No observed outcome proves the content of the documented Bronx-facility plan: at least 10% of annual electricity consumption from NYSERDA-qualified renewable energy using both on-site generation and procured renewable energy.\nPromise evidence: c1, c3, c7\n\nBally's documented plan uses on-site photovoltaic solar panels as part of that renewable energy mix for the Bronx facility.\nStatus: UNVERIFIED\nThe only observed outcome is the posting/finalization statement for Bally's records. That does not itself establish that Bally's documented plan for the Bronx facility uses on-site photovoltaic solar panels as part of the renewable-energy mix. Other cited passages discuss photovoltaic solar panels, but they are not in observed_outcomes and therefore cannot be used as delivery evidence for this check.\nPromised scope: Promisor: Bally's/Bronx Bally's. Intended beneficiary: the proposed Bronx gaming facility. Location: Bronx, New York City, at the proposed resort/garage and roof areas. Benefit/action promised: on-site photovoltaic solar panels would be installed as part of the facility's renewable energy strategy.\nObserved scope: Observed outcome evidence shows only that Bally's records were considered final and posted online as of May 5, 2026. The actual beneficiary population is unspecified, the location is unspecified in the observed outcome, and the observed action is publication/finalization of records rather than proof that the Bronx facility's documented renewable-energy plan uses on-site photovoltaic solar panels.\nEvidence gap: No observed outcome proves that the documented Bronx-facility renewable-energy plan uses on-site photovoltaic solar panels.\nPromise evidence: c5, c6, c7\n\nBally's documented plan is to exceed, rather than merely meet, a 10% renewable-energy requirement for the Bronx facility.\nStatus: UNVERIFIED\nThe sources support a plan to meet an \"at least 10 percent\" target using on-site solar plus off-site NYSERDA-qualified procurement. They do not expressly say Bally's plans to exceed 10% beyond that threshold.\nPromised scope: Promisor: Bally's/Bronx Bally's. Intended beneficiary: the proposed Bronx gaming facility. Location: Bronx, New York City. Benefit/action at issue: exceeding a 10% renewable-energy threshold, not just meeting at least 10%.\nObserved scope: The cited materials describe a target of \"at least 10 percent\" renewable energy consumption, with about 6% from planned on-site solar and the remainder procured from NYSERDA-qualified renewable sources. The excerpts do not state a plan to go above 10% by any specified amount.\nEvidence gap: No cited excerpt states that Bally's plans renewable electricity above the 10% threshold; the evidence shows a plan to meet at least 10%, not a documented commitment to surpass it.\nPromise evidence: c1, c3, c7\n\nThe checked conditions do not include the user-requested qualifier that Bally's plan is to exceed, rather than merely meet, the 10% renewable-energy level for the Bronx facility.\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “A description of plans for procuring or generating on-site at least 10 percent of the facility’s annual electricity consumption from renewable energy sources qualified by the New York State Energy Research and Development Authority (NYSERDA).”\nhttps://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf\n\nc2: “As of May 5, 2026, the following Bally's records denoted with “REVISED REDACTIONS” suffixes have undergone the statutory review process, are considered final, and are posted below.”\nhttps://nycasinos.ny.gov/ballys-bronx-application-materials\n\nc3: “In addition to on-site generation, the remainder of the renewable energy needed to meet at least 10 percent of the facility’s annual electricity consumption will be procured from renewable energy sources qualified by the New York State Energy Research and Development Authority (NYSERDA).”\nhttps://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf\n\nc4: “Bronx Bally’s will also embrace NYSERDA Tier IV NYC centric renewable energy with the goal to increase the penetration of renewable energy in New York City through eligible resources located in NYC or delivered through a new transmission interconnection to NYC.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf\n\nc5: “To reduce electrical demand and comply with New York City local laws, the resort plans to install photovoltaic (PV) solar panels across the parking garage and select roof areas in accordance with NYC Local Laws 92 and 94. Approximately 46,000-sq. ft. will be utilized for photovoltaic panels and associated inverters. These areas are predicted to produce approximately 1.8 million kWh of carbon free electricity per year.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf\n\nc6: “The target is approximately 6% of the annual energy consumption.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf\n\nc7: “As the Gaming Facility’s design is finalized, the exact proportions of energy generated on-site versus energy procured will be further refined to ensure the target of at least 10 percent renewable energy consumption is met.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+      "verification_date": "2026-11-22"
+    },
+    "findings": [
+      {
+        "id": "finding-89667e14-2835-48ca-a1a7-b817a8f57799",
+        "claim": "Bally's application commits that the gaming facility will procure or generate on-site at least 10% of its annual electricity consumption from NYSERDA-qualified renewable energy sources; this plan was documented in application materials later posted as final by May 5, 2026.",
+        "supports": [
+          {
+            "id": "support-5a582c53-0956-416e-954a-a1189a8a40a4",
+            "source": {
+              "id": "source-dec7fccb-706a-495c-a7f5-4e11ea57064d",
+              "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+              "title": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+              "citation": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Context",
+            "excerpt": "As of May 5, 2026, the following Bally's records denoted with “REVISED REDACTIONS” suffixes have undergone the statutory review process, are considered final, and are posted below.",
+            "locator": "Cited passage",
+            "summary": "As of May 5, 2026, Bally's application records with “REVISED REDACTIONS” had completed statutory review, were considered final, and were posted by the New York casino licensing website.",
+            "explanation": "This establishes that the posted application materials were finalized records as of that date, helping date the documented plan.",
+            "retrieved_at": "2026-11-22T09:36:31.210042+00:00"
+          },
+          {
+            "id": "support-d5b5010a-5ef8-4ad3-88ab-86f8fbcd2389",
+            "source": {
+              "id": "source-179b18e3-26f7-4a1f-aead-5d93b32a4e68",
+              "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+              "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+              "citation": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Promise documented",
+            "excerpt": "A description of plans for procuring or generating on-site at least 10 percent of the facility’s annual electricity consumption from renewable energy sources qualified by the New York State Energy Research and Development Authority (NYSERDA).",
+            "locator": "Cited passage",
+            "summary": "Bally's application includes a plan to procure or generate on-site at least 10 percent of the facility’s annual electricity consumption from renewable energy sources qualified by NYSERDA.",
+            "explanation": "This sentence states the undertaking’s core obligation and scope: at least 10% of the facility’s annual electricity use is to come from NYSERDA-qualified renewable sources, whether procured or generated on-site.",
+            "retrieved_at": "2026-11-22T09:36:31.210042+00:00"
+          }
+        ]
+      },
+      {
+        "id": "finding-320da05e-3f60-4ffc-a785-33da5d5bf262",
+        "claim": "Bally's states that the remaining renewable electricity needed beyond on-site generation to reach at least 10% of annual electricity consumption will be procured from NYSERDA-qualified renewable energy sources, including NYSERDA Tier IV NYC-centric renewable energy.",
+        "supports": [
+          {
+            "id": "support-e74782d3-31e2-4482-8f86-a38297184675",
+            "source": {
+              "id": "source-179b18e3-26f7-4a1f-aead-5d93b32a4e68",
+              "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+              "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+              "citation": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Promise documented",
+            "excerpt": "In addition to on-site generation, the remainder of the renewable energy needed to meet at least 10 percent of the facility’s annual electricity consumption will be procured from renewable energy sources qualified by the New York State Energy Research and Development Authority (NYSERDA).",
+            "locator": "Cited passage",
+            "summary": "Bally's says that, beyond on-site generation, the remainder needed to reach at least 10 percent of annual electricity consumption will be procured from NYSERDA-qualified renewable energy sources.",
+            "explanation": "This passage directly supports the off-site procurement component needed to reach the 10% renewable electricity target.",
+            "retrieved_at": "2026-11-22T09:36:31.210042+00:00"
+          },
+          {
+            "id": "support-3ca43975-7aea-4ea7-9361-5b615a09c84e",
+            "source": {
+              "id": "source-179b18e3-26f7-4a1f-aead-5d93b32a4e68",
+              "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+              "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+              "citation": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Context",
+            "excerpt": "Bronx Bally’s will also embrace NYSERDA Tier IV NYC centric renewable energy with the goal to increase the penetration of renewable energy in New York City through eligible resources located in NYC or delivered through a new transmission interconnection to NYC.",
+            "locator": "Cited passage",
+            "summary": "Bally's also says Bronx Bally’s will embrace NYSERDA Tier IV NYC-centric renewable energy, aiming to increase renewable penetration in New York City through eligible resources located in NYC or delivered through a new transmission interconnection to NYC.",
+            "explanation": "This provides additional context on the type of NYSERDA-qualified off-site renewable energy Bally's says it will use, but it does not by itself restate the 10% obligation.",
+            "retrieved_at": "2026-11-22T09:36:31.210042+00:00"
+          }
+        ]
+      },
+      {
+        "id": "finding-0e29fa31-2262-4e5f-ba32-61af66512271",
+        "claim": "For the on-site portion of the renewable electricity plan, Bally's proposes photovoltaic solar panels across the parking garage and select roof areas totaling about 46,000 square feet, projected to produce about 1.8 million kWh of carbon-free electricity per year and supply about 6% of annual energy consumption.",
+        "supports": [
+          {
+            "id": "support-5f778b87-4721-44f2-81c1-6593088e2318",
+            "source": {
+              "id": "source-179b18e3-26f7-4a1f-aead-5d93b32a4e68",
+              "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+              "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+              "citation": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Promise documented",
+            "excerpt": "To reduce electrical demand and comply with New York City local laws, the resort plans to install photovoltaic (PV) solar panels across the parking garage and select roof areas in accordance with NYC Local Laws 92 and 94. Approximately 46,000-sq. ft. will be utilized for photovoltaic panels and associated inverters. These areas are predicted to produce approximately 1.8 million kWh of carbon free electricity per year.",
+            "locator": "Cited passage",
+            "summary": "For the on-site portion, the resort plans to install photovoltaic solar panels across the parking garage and select roof areas, using about 46,000 square feet and predicting production of about 1.8 million kWh of carbon-free electricity per year.",
+            "explanation": "This text gives the proposed on-site implementation method, physical scope, and forecast output for the solar component.",
+            "retrieved_at": "2026-11-22T09:36:31.210042+00:00"
+          },
+          {
+            "id": "support-b1d24917-6e86-46f9-97ea-90fbab86d3c3",
+            "source": {
+              "id": "source-179b18e3-26f7-4a1f-aead-5d93b32a4e68",
+              "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+              "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+              "citation": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Promise documented",
+            "excerpt": "The target is approximately 6% of the annual energy consumption.",
+            "locator": "Cited passage",
+            "summary": "The on-site solar component is targeted to supply approximately 6% of annual energy consumption.",
+            "explanation": "This specifies the planned contribution of the on-site solar portion toward the broader renewable-energy target.",
+            "retrieved_at": "2026-11-22T09:36:31.210042+00:00"
+          }
+        ]
+      },
+      {
+        "id": "finding-bc844b42-6143-4243-8894-76148a812acf",
+        "claim": "Bally's says that as the gaming facility design is finalized, the exact proportions between on-site generation and procured renewable energy will be further refined while still ensuring at least 10% renewable energy consumption is met.",
+        "supports": [
+          {
+            "id": "support-6d968e43-beff-49d2-a43c-e56b70089d50",
+            "source": {
+              "id": "source-179b18e3-26f7-4a1f-aead-5d93b32a4e68",
+              "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+              "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+              "citation": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+              "publisher": null,
+              "source_type": null,
+              "published_on": null
+            },
+            "status": "Qualification",
+            "excerpt": "As the Gaming Facility’s design is finalized, the exact proportions of energy generated on-site versus energy procured will be further refined to ensure the target of at least 10 percent renewable energy consumption is met.",
+            "locator": "Cited passage",
+            "summary": "Bally's states that as the gaming facility design is finalized, the exact proportions between on-site generation and procured energy will be further refined to ensure at least 10 percent renewable energy consumption is met.",
+            "explanation": "This passage qualifies the commitment by noting the split between on-site and procured renewable energy was not final and could change while still aiming to meet the 10% target.",
+            "retrieved_at": "2026-11-22T09:36:31.210042+00:00"
+          }
+        ]
+      },
+      {
+        "id": "source-reread-1",
+        "claim": "For Bally’s Bronx renewable energy integration, the on-site solar commitment includes battery storage to manage peak loads and provide backup power.",
+        "supports": [
+          {
+            "id": "source-reread-1-s",
+            "excerpt": "Bally’s Bronx will pursue a multi-pronged renewable energy strategy: • On-Site Solar Generation: Rooftop and canopy-mounted photovoltaic (PV) systems will be installed to generate clean electricity, with battery storage to manage peak loads and provide backup power.",
+            "source": {
+              "url": "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-sustainable-development-principals-energy-consumption",
+              "title": "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-sustainable-development-principals-energy-consumption"
+            }
+          }
+        ]
+      },
+      {
+        "id": "source-reread-2",
+        "claim": "Bally’s Bronx also commits to long-term power purchase agreements for 100% renewable electricity from regional wind and solar farms as part of the same renewable energy strategy.",
+        "supports": [
+          {
+            "id": "source-reread-2-s",
+            "excerpt": "• Green Power Procurement: Bally’s Bronx commits to entering into long- term Power Purchase Agreements (PPAs) for 100% renewable electricity from regional wind and solar farms, ensuring compliance with Local Law 97’s emissions caps.",
+            "source": {
+              "url": "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-sustainable-development-principals-energy-consumption",
+              "title": "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-sustainable-development-principals-energy-consumption"
+            }
+          }
+        ]
+      }
+    ],
+    "relations": [],
+    "assessment_trace": {
+      "not_yet_due": [],
+      "criteria": [
+        {
+          "criterion": "Bally's documented plan for the Bronx gaming facility is to have at least 10% of the facility's annual electricity consumption supplied by NYSERDA-qualified renewable energy using a mix of on-site generation and procured renewable energy.",
+          "scope_criteria": [
+            "s1"
+          ],
+          "promise_scope": "Promisor: Bally's/Bronx Bally's. Intended beneficiary: the proposed Bronx gaming facility itself (facility electricity supply), not a separately named public population. Location: Bronx, New York City, for the proposed Bally's gaming facility. Benefit/action promised: at least 10% of the facility's annual electricity consumption would come from NYSERDA-qualified renewable sources, with the mix split between on-site generation and procured renewable energy.",
+          "observed_scope": "Observed outcome evidence shows only that Bally's records were considered final and posted online as of May 5, 2026. The actual beneficiary population is unspecified, the location is unspecified in the observed outcome, and the observed action is publication/finalization of records rather than proof of a documented plan with the stated Bronx-facility renewable-energy mix.",
+          "promise_citation_ids": [
+            "c1",
+            "c3",
+            "c7"
+          ],
+          "delivery_citation_ids": [],
+          "delivery_status": "UNVERIFIED",
+          "timing_requirement": "",
+          "explanation": "The only allowed delivery evidence in observed_outcomes is a Bally's application-materials posting note stating that certain Bally's records were final and posted as of May 5, 2026. That establishes publication/finalization of records, but it does not itself establish that the documented plan for the Bronx gaming facility provides at least 10% of annual electricity consumption from NYSERDA-qualified renewable energy using a mix of on-site generation and procured renewable energy. The cited application excerpts describe such a plan, but they are not included in observed_outcomes, so they cannot be used here as delivery evidence.",
+          "gap": "No observed outcome proves the content of the documented Bronx-facility plan: at least 10% of annual electricity consumption from NYSERDA-qualified renewable energy using both on-site generation and procured renewable energy.",
+          "delivery_support": [],
+          "fulfilled_part": ""
+        },
+        {
+          "criterion": "Bally's documented plan uses on-site photovoltaic solar panels as part of that renewable energy mix for the Bronx facility.",
+          "scope_criteria": [
+            "s2"
+          ],
+          "promise_scope": "Promisor: Bally's/Bronx Bally's. Intended beneficiary: the proposed Bronx gaming facility. Location: Bronx, New York City, at the proposed resort/garage and roof areas. Benefit/action promised: on-site photovoltaic solar panels would be installed as part of the facility's renewable energy strategy.",
+          "observed_scope": "Observed outcome evidence shows only that Bally's records were considered final and posted online as of May 5, 2026. The actual beneficiary population is unspecified, the location is unspecified in the observed outcome, and the observed action is publication/finalization of records rather than proof that the Bronx facility's documented renewable-energy plan uses on-site photovoltaic solar panels.",
+          "promise_citation_ids": [
+            "c5",
+            "c6",
+            "c7"
+          ],
+          "delivery_citation_ids": [],
+          "delivery_status": "UNVERIFIED",
+          "timing_requirement": "",
+          "explanation": "The only observed outcome is the posting/finalization statement for Bally's records. That does not itself establish that Bally's documented plan for the Bronx facility uses on-site photovoltaic solar panels as part of the renewable-energy mix. Other cited passages discuss photovoltaic solar panels, but they are not in observed_outcomes and therefore cannot be used as delivery evidence for this check.",
+          "gap": "No observed outcome proves that the documented Bronx-facility renewable-energy plan uses on-site photovoltaic solar panels.",
+          "delivery_support": [],
+          "fulfilled_part": ""
+        },
+        {
+          "criterion": "Bally's documented plan is to exceed, rather than merely meet, a 10% renewable-energy requirement for the Bronx facility.",
+          "scope_criteria": [],
+          "promise_scope": "Promisor: Bally's/Bronx Bally's. Intended beneficiary: the proposed Bronx gaming facility. Location: Bronx, New York City. Benefit/action at issue: exceeding a 10% renewable-energy threshold, not just meeting at least 10%.",
+          "observed_scope": "The cited materials describe a target of \"at least 10 percent\" renewable energy consumption, with about 6% from planned on-site solar and the remainder procured from NYSERDA-qualified renewable sources. The excerpts do not state a plan to go above 10% by any specified amount.",
+          "promise_citation_ids": [
+            "c1",
+            "c3",
+            "c7"
+          ],
+          "delivery_citation_ids": [],
+          "delivery_status": "UNVERIFIED",
+          "timing_requirement": "",
+          "explanation": "The sources support a plan to meet an \"at least 10 percent\" target using on-site solar plus off-site NYSERDA-qualified procurement. They do not expressly say Bally's plans to exceed 10% beyond that threshold.",
+          "gap": "No cited excerpt states that Bally's plans renewable electricity above the 10% threshold; the evidence shows a plan to meet at least 10%, not a documented commitment to surpass it.",
+          "delivery_support": []
+        }
+      ],
+      "label": "UNVERIFIED",
+      "verdict": "Delivery unverified for: Bally's documented plan for the Bronx gaming facility is to have at least 10% of the facility's annual electricity consumption supplied by NYSERDA-qualified renewable energy using a mix of on-site generation and procured renewable energy.; Bally's documented plan uses on-site photovoltaic solar panels as part of that renewable energy mix for the Bronx facility.; Bally's documented plan is to exceed, rather than merely meet, a 10% renewable-energy requirement for the Bronx facility.",
+      "reasoning": "Requested scope: Bally's plans to exceed the 10 percent renewable energy requirement through on-site solar and NYSERDA-qualified off-site procurement.\n\nBally's documented plan for the Bronx gaming facility is to have at least 10% of the facility's annual electricity consumption supplied by NYSERDA-qualified renewable energy using a mix of on-site generation and procured renewable energy.\nStatus: UNVERIFIED\nThe only allowed delivery evidence in observed_outcomes is a Bally's application-materials posting note stating that certain Bally's records were final and posted as of May 5, 2026. That establishes publication/finalization of records, but it does not itself establish that the documented plan for the Bronx gaming facility provides at least 10% of annual electricity consumption from NYSERDA-qualified renewable energy using a mix of on-site generation and procured renewable energy. The cited application excerpts describe such a plan, but they are not included in observed_outcomes, so they cannot be used here as delivery evidence.\nPromised scope: Promisor: Bally's/Bronx Bally's. Intended beneficiary: the proposed Bronx gaming facility itself (facility electricity supply), not a separately named public population. Location: Bronx, New York City, for the proposed Bally's gaming facility. Benefit/action promised: at least 10% of the facility's annual electricity consumption would come from NYSERDA-qualified renewable sources, with the mix split between on-site generation and procured renewable energy.\nObserved scope: Observed outcome evidence shows only that Bally's records were considered final and posted online as of May 5, 2026. The actual beneficiary population is unspecified, the location is unspecified in the observed outcome, and the observed action is publication/finalization of records rather than proof of a documented plan with the stated Bronx-facility renewable-energy mix.\nEvidence gap: No observed outcome proves the content of the documented Bronx-facility plan: at least 10% of annual electricity consumption from NYSERDA-qualified renewable energy using both on-site generation and procured renewable energy.\nPromise evidence: c1, c3, c7\n\nBally's documented plan uses on-site photovoltaic solar panels as part of that renewable energy mix for the Bronx facility.\nStatus: UNVERIFIED\nThe only observed outcome is the posting/finalization statement for Bally's records. That does not itself establish that Bally's documented plan for the Bronx facility uses on-site photovoltaic solar panels as part of the renewable-energy mix. Other cited passages discuss photovoltaic solar panels, but they are not in observed_outcomes and therefore cannot be used as delivery evidence for this check.\nPromised scope: Promisor: Bally's/Bronx Bally's. Intended beneficiary: the proposed Bronx gaming facility. Location: Bronx, New York City, at the proposed resort/garage and roof areas. Benefit/action promised: on-site photovoltaic solar panels would be installed as part of the facility's renewable energy strategy.\nObserved scope: Observed outcome evidence shows only that Bally's records were considered final and posted online as of May 5, 2026. The actual beneficiary population is unspecified, the location is unspecified in the observed outcome, and the observed action is publication/finalization of records rather than proof that the Bronx facility's documented renewable-energy plan uses on-site photovoltaic solar panels.\nEvidence gap: No observed outcome proves that the documented Bronx-facility renewable-energy plan uses on-site photovoltaic solar panels.\nPromise evidence: c5, c6, c7\n\nBally's documented plan is to exceed, rather than merely meet, a 10% renewable-energy requirement for the Bronx facility.\nStatus: UNVERIFIED\nThe sources support a plan to meet an \"at least 10 percent\" target using on-site solar plus off-site NYSERDA-qualified procurement. They do not expressly say Bally's plans to exceed 10% beyond that threshold.\nPromised scope: Promisor: Bally's/Bronx Bally's. Intended beneficiary: the proposed Bronx gaming facility. Location: Bronx, New York City. Benefit/action at issue: exceeding a 10% renewable-energy threshold, not just meeting at least 10%.\nObserved scope: The cited materials describe a target of \"at least 10 percent\" renewable energy consumption, with about 6% from planned on-site solar and the remainder procured from NYSERDA-qualified renewable sources. The excerpts do not state a plan to go above 10% by any specified amount.\nEvidence gap: No cited excerpt states that Bally's plans renewable electricity above the 10% threshold; the evidence shows a plan to meet at least 10%, not a documented commitment to surpass it.\nPromise evidence: c1, c3, c7\n\nThe checked conditions do not include the user-requested qualifier that Bally's plan is to exceed, rather than merely meet, the 10% renewable-energy level for the Bronx facility.\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “A description of plans for procuring or generating on-site at least 10 percent of the facility’s annual electricity consumption from renewable energy sources qualified by the New York State Energy Research and Development Authority (NYSERDA).”\nhttps://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf\n\nc2: “As of May 5, 2026, the following Bally's records denoted with “REVISED REDACTIONS” suffixes have undergone the statutory review process, are considered final, and are posted below.”\nhttps://nycasinos.ny.gov/ballys-bronx-application-materials\n\nc3: “In addition to on-site generation, the remainder of the renewable energy needed to meet at least 10 percent of the facility’s annual electricity consumption will be procured from renewable energy sources qualified by the New York State Energy Research and Development Authority (NYSERDA).”\nhttps://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf\n\nc4: “Bronx Bally’s will also embrace NYSERDA Tier IV NYC centric renewable energy with the goal to increase the penetration of renewable energy in New York City through eligible resources located in NYC or delivered through a new transmission interconnection to NYC.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf\n\nc5: “To reduce electrical demand and comply with New York City local laws, the resort plans to install photovoltaic (PV) solar panels across the parking garage and select roof areas in accordance with NYC Local Laws 92 and 94. Approximately 46,000-sq. ft. will be utilized for photovoltaic panels and associated inverters. These areas are predicted to produce approximately 1.8 million kWh of carbon free electricity per year.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf\n\nc6: “The target is approximately 6% of the annual energy consumption.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf\n\nc7: “As the Gaming Facility’s design is finalized, the exact proportions of energy generated on-site versus energy procured will be further refined to ensure the target of at least 10 percent renewable energy consumption is met.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+      "refutation": [],
+      "scope_anchors": {
+        "s1": "Bally's Bronx plans to meet at least 10% of the facility’s annual electricity consumption with NYSERDA-qualified renewable energy, using a mix of on-site generation and off-site procurement.",
+        "s2": "Bally's Bronx plans to use on-site photovoltaic solar panels as part of that renewable energy mix."
+      },
+      "citations": {
+        "c1": {
+          "source": {
+            "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+            "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+            "citation": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf"
+          },
+          "excerpt": "A description of plans for procuring or generating on-site at least 10 percent of the facility’s annual electricity consumption from renewable energy sources qualified by the New York State Energy Research and Development Authority (NYSERDA).",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:36:31.210042+00:00",
+          "finding_id": "finding-89667e14-2835-48ca-a1a7-b817a8f57799",
+          "support_ids": [
+            "support-d5b5010a-5ef8-4ad3-88ab-86f8fbcd2389"
+          ]
+        },
+        "c2": {
+          "source": {
+            "title": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+            "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials",
+            "citation": "https://nycasinos.ny.gov/ballys-bronx-application-materials"
+          },
+          "excerpt": "As of May 5, 2026, the following Bally's records denoted with “REVISED REDACTIONS” suffixes have undergone the statutory review process, are considered final, and are posted below.",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:36:31.210042+00:00",
+          "finding_id": "finding-89667e14-2835-48ca-a1a7-b817a8f57799",
+          "support_ids": [
+            "support-5a582c53-0956-416e-954a-a1189a8a40a4"
+          ]
+        },
+        "c3": {
+          "source": {
+            "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+            "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+            "citation": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf"
+          },
+          "excerpt": "In addition to on-site generation, the remainder of the renewable energy needed to meet at least 10 percent of the facility’s annual electricity consumption will be procured from renewable energy sources qualified by the New York State Energy Research and Development Authority (NYSERDA).",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:36:31.210042+00:00",
+          "finding_id": "finding-320da05e-3f60-4ffc-a785-33da5d5bf262",
+          "support_ids": [
+            "support-e74782d3-31e2-4482-8f86-a38297184675"
+          ]
+        },
+        "c4": {
+          "source": {
+            "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+            "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+            "citation": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf"
+          },
+          "excerpt": "Bronx Bally’s will also embrace NYSERDA Tier IV NYC centric renewable energy with the goal to increase the penetration of renewable energy in New York City through eligible resources located in NYC or delivered through a new transmission interconnection to NYC.",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:36:31.210042+00:00",
+          "finding_id": "finding-320da05e-3f60-4ffc-a785-33da5d5bf262",
+          "support_ids": [
+            "support-3ca43975-7aea-4ea7-9361-5b615a09c84e"
+          ]
+        },
+        "c5": {
+          "source": {
+            "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+            "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+            "citation": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf"
+          },
+          "excerpt": "To reduce electrical demand and comply with New York City local laws, the resort plans to install photovoltaic (PV) solar panels across the parking garage and select roof areas in accordance with NYC Local Laws 92 and 94. Approximately 46,000-sq. ft. will be utilized for photovoltaic panels and associated inverters. These areas are predicted to produce approximately 1.8 million kWh of carbon free electricity per year.",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:36:31.210042+00:00",
+          "finding_id": "finding-0e29fa31-2262-4e5f-ba32-61af66512271",
+          "support_ids": [
+            "support-5f778b87-4721-44f2-81c1-6593088e2318"
+          ]
+        },
+        "c6": {
+          "source": {
+            "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+            "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+            "citation": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf"
+          },
+          "excerpt": "The target is approximately 6% of the annual energy consumption.",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:36:31.210042+00:00",
+          "finding_id": "finding-0e29fa31-2262-4e5f-ba32-61af66512271",
+          "support_ids": [
+            "support-b1d24917-6e86-46f9-97ea-90fbab86d3c3"
+          ]
+        },
+        "c7": {
+          "source": {
+            "title": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+            "url": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf",
+            "citation": "https://nycasinos.ny.gov/system/files/documents/2025/07/evalworksus5.ballys.electricity_redacted.pdf"
+          },
+          "excerpt": "As the Gaming Facility’s design is finalized, the exact proportions of energy generated on-site versus energy procured will be further refined to ensure the target of at least 10 percent renewable energy consumption is met.",
+          "locator": "Cited passage",
+          "retrieved_at": "2026-11-22T09:36:31.210042+00:00",
+          "finding_id": "finding-bc844b42-6143-4243-8894-76148a812acf",
+          "support_ids": [
+            "support-6d968e43-beff-49d2-a43c-e56b70089d50"
+          ]
+        }
+      },
+      "scope_gap": "The checked conditions do not include the user-requested qualifier that Bally's plan is to exceed, rather than merely meet, the 10% renewable-energy level for the Bronx facility."
+    }
+  },
+  "job_result": {
+    "run_id": null,
+    "outcome": "RESOLVED",
+    "commitment_id": "commitment-d3b29c75-b280-4b58-a62b-3ac3ba410b8c",
+    "unmatched_records": [
+      {
+        "excerpt": "Use of Renewable Energy Credits (RECs): To offset any residual emissions, Bally’s will purchase RECs in accordance with LL97 guidelines.",
+        "source_url": "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-sustainable-development-principals-energy-consumption",
+        "source_title": "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-sustainable-development-principals-energy-consumption"
+      },
+      {
+        "excerpt": "Four applicants - Bally's Bronx, Hard Rock Metropolitan Park, MGM Yonkers, and Resorts World New York City - received Community Advisory Committee approval, establishing public support for these projects. The other four applicants failed to achieve the required two-thirds approval threshold and were eliminated from further consideration.",
+        "source_url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+        "source_title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026"
+      },
+      {
+        "excerpt": "On-Site Solar Generation: Rooftop and canopy-mounted photovoltaic (PV) systems will be installed to generate clean electricity, with battery storage to manage peak loads and provide backup power.",
+        "source_url": "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-sustainable-development-principals-energy-consumption",
+        "source_title": "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-sustainable-development-principals-energy-consumption"
+      }
+    ]
+  },
+  "finished_at": "2026-11-22T09:38:26.992751+00:00"
+}

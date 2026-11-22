@@ -1,0 +1,309 @@
+{
+  "case_id": "TG-GOLD-A006",
+  "query": "Applicant goals for minority, women and service-disabled veteran utilization are expected to meet or exceed New York State's 30 percent MWBE contract utilization goal.",
+  "facts": [
+    {
+      "id": "G1",
+      "text": "The RFA expects applicants' MWBE contract-utilization goals to meet or exceed the state's 30% target.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A006",
+          "row": 5
+        }
+      ]
+    },
+    {
+      "id": "G2",
+      "text": "RWNYC's license requires public community-benefits progress reports that include workforce diversity data.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A006",
+          "row": 6
+        }
+      ]
+    },
+    {
+      "id": "G3",
+      "text": "Each licensee is required to post and update its community advisory committee commitments.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A006",
+          "row": 7
+        }
+      ]
+    },
+    {
+      "id": "G4",
+      "text": "In October 2026 the Commission chair reported that monitors for all three casino licensees were in place.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A006",
+          "row": 9
+        }
+      ]
+    },
+    {
+      "id": "G5",
+      "text": "The Board reported that RWNYC provided no specific MWBE contractor utilization goal.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A006",
+          "row": 10
+        }
+      ]
+    },
+    {
+      "id": "G6",
+      "text": "RWNYC held a supplier outreach session for prospective MWBE contractors.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A006",
+          "row": 11
+        }
+      ]
+    },
+    {
+      "id": "G7",
+      "text": "RWNYC broke ground on Phase II of its expansion in July 2026.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A006",
+          "row": 12
+        }
+      ]
+    }
+  ],
+  "conditions": [
+    {
+      "id": "K1",
+      "text": "The applicable applicant adopted an MWBE contracting goal of at least 30%.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A006",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-A006",
+          "row": 10
+        },
+        {
+          "sheet": "TG-GOLD-A006",
+          "row": 18
+        }
+      ]
+    },
+    {
+      "id": "K2",
+      "text": "Actual eligible contracting at RWNYC reached the 30% MWBE utilization benchmark on a defined contract denominator.",
+      "source_refs": [
+        {
+          "sheet": "TG-GOLD-A006",
+          "row": 5
+        },
+        {
+          "sheet": "TG-GOLD-A006",
+          "row": 18
+        }
+      ]
+    }
+  ],
+  "delivery_applicable": true,
+  "reference_verdict": {
+    "status": "no public evidence located",
+    "reasoning": "§5 decision order: (1) a utilization rate can be evidenced, so not 'not applicable'; (2) construction has been under way since early 2026, so not 'not yet due'; (3) no sources disagree; (4) no independent source reports RWNYC MWBE utilization; (5) RWNYC has made no claim about it either; (6) the CMT's reports to the Commission are a known non-public source, but nothing shows they cover MWBE utilization; (7) → no public evidence located. Searched: web/news, Gale OneFile: News (64 RWNYC articles, Dec 2025–Nov 2026), Gaming Commission minutes/transcripts, GFLB report. Competing reading: source unavailable, if the CMT reports are confirmed to include MWBE data. Note the required public progress report (License Condition 3) has not been located, which is itself a finding.",
+    "delivery_applicable": true,
+    "source_refs": [
+      {
+        "sheet": "TG-GOLD-A006",
+        "row": 17
+      },
+      {
+        "sheet": "TG-GOLD-A006",
+        "row": 18
+      }
+    ]
+  },
+  "sources": [
+    {
+      "sheet": "TG-GOLD-A006",
+      "row": 5,
+      "title": "Request for Applications (RFA), Workforce Development Plan (MWBE)",
+      "citation": "https://nycasinos.ny.gov/request-applications-updated — page: pdf p.54 in the project corpus copy (RFA-2023-01-03); page in this updated online version NOT YET CONFIRMED (its web text ends at p.48)",
+      "publisher": "NY Gaming Facility Location Board (issued Jan 3, 2023; updated version online)",
+      "url": "https://nycasinos.ny.gov/request-applications-updated",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/request-applications-updated — page: pdf p.54 in the project corpus copy (RFA-2023-01-03); page in this updated online version NOT YET CONFIRMED (its web text ends at p.48)",
+      "published_on": null,
+      "evidence_status": "no public evidence located",
+      "specific_evidence": "Source of the commitment: applicants' MWBE goals are 'expected' to meet or exceed the State's 30% goal.",
+      "notes": "Defines the duty only. Construction is under way (conversion opened Apr 2026; Phase II from Jul 2026), so the duty is live. Link is the Board's updated RFA; schedule addenda of Aug 30, 2023 and Jun 27, 2024 change dates only."
+    },
+    {
+      "sheet": "TG-GOLD-A006",
+      "row": 6,
+      "title": "RWNYC Gaming Facility License Award + Exhibit 1 License Conditions",
+      "citation": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "publisher": "NYS Gaming Commission (Dec 19, 2025)",
+      "url": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "url_origin": "workbook",
+      "locator": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+      "published_on": null,
+      "evidence_status": "no public evidence located",
+      "specific_evidence": "Condition 3: RWNYC must post publicly and file a community benefits progress report, including construction and operational workforce diversity data, at a frequency the Commission sets. Condition 10: independent Compliance Monitoring Team (CMT) reports to the Commission on community benefits.",
+      "notes": "Accountability mechanism, not delivery. Found via web (Method A); government record (Method D)."
+    },
+    {
+      "sheet": "TG-GOLD-A006",
+      "row": 7,
+      "title": "Gaming Commission adopted minutes, Feb 3, 2026",
+      "citation": "https://gaming.ny.gov/system/files/documents/2026/03/adopted-minutes-3-february-2026.pdf",
+      "publisher": "NYS Gaming Commission",
+      "url": "https://gaming.ny.gov/system/files/documents/2026/03/adopted-minutes-3-february-2026.pdf",
+      "url_origin": "workbook",
+      "locator": "https://gaming.ny.gov/system/files/documents/2026/03/adopted-minutes-3-february-2026.pdf",
+      "published_on": null,
+      "evidence_status": "no public evidence located",
+      "specific_evidence": "Each licensee must publicly post its list of CAC commitments and update progress on a rolling basis.",
+      "notes": "Shows where the evidence should appear; no posted list or MWBE data found on RWNYC's site."
+    },
+    {
+      "sheet": "TG-GOLD-A006",
+      "row": 8,
+      "title": "Gaming Commission minutes, Mar 16, 2026",
+      "citation": "https://gaming.ny.gov/system/files/documents/2026/05/final-minutes-16-march-2026.pdf",
+      "publisher": "NYS Gaming Commission",
+      "url": "https://gaming.ny.gov/system/files/documents/2026/05/final-minutes-16-march-2026.pdf",
+      "url_origin": "workbook",
+      "locator": "https://gaming.ny.gov/system/files/documents/2026/05/final-minutes-16-march-2026.pdf",
+      "published_on": null,
+      "evidence_status": "source unavailable",
+      "specific_evidence": "Commissioners met RWNYC's proposed third-party monitor (CMT); final contract pending.",
+      "notes": "CMT reports go to the Commission and are not published (guide example E6)."
+    },
+    {
+      "sheet": "TG-GOLD-A006",
+      "row": 9,
+      "title": "Gaming Commission meeting transcript, Oct 9, 2026",
+      "citation": "https://gaming.ny.gov/100926-meeting-transcript",
+      "publisher": "NYS Gaming Commission",
+      "url": "https://gaming.ny.gov/100926-meeting-transcript",
+      "url_origin": "workbook",
+      "locator": "https://gaming.ny.gov/100926-meeting-transcript",
+      "published_on": null,
+      "evidence_status": "source unavailable",
+      "specific_evidence": "Chair says the monitors for all three licensees 'are in place' and meet regularly with staff.",
+      "notes": "Confirms a non-public reporting channel exists; contents unknown."
+    },
+    {
+      "sheet": "TG-GOLD-A006",
+      "row": 10,
+      "title": "GFLB final report and findings",
+      "citation": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "publisher": "Gaming Facility Location Board (Mar 2026)",
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "url_origin": "workbook",
+      "locator": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+      "published_on": null,
+      "evidence_status": "no public evidence located",
+      "specific_evidence": "RWNYC gave no specific MWBE contractor goals; its construction workforce goals are 5% women, 40% minorities, ~5% service-disabled veterans (below the State's 6% minimum). Board doubts any applicant can meet MWBE goals alongside union and local-hire pledges.",
+      "notes": "Regulator commentary (guide §7: quote in notes). Shows no RWNYC-specific MWBE target exists."
+    },
+    {
+      "sheet": "TG-GOLD-A006",
+      "row": 11,
+      "title": "Resorts World New York City expansion puts local content front and center'",
+      "citation": "https://localcontent.com/article/resorts-world-new-york-city-expansion-puts-local-content-front-and-center",
+      "publisher": "localcontent.com (undated)",
+      "url": "https://localcontent.com/article/resorts-world-new-york-city-expansion-puts-local-content-front-and-center",
+      "url_origin": "workbook",
+      "locator": "https://localcontent.com/article/resorts-world-new-york-city-expansion-puts-local-content-front-and-center",
+      "published_on": null,
+      "evidence_status": "no public evidence located",
+      "specific_evidence": "RWNYC held a supplier/MWBE information session; MWBE inquiries routed to a consulting firm.",
+      "notes": "Outreach process, not utilization."
+    },
+    {
+      "sheet": "TG-GOLD-A006",
+      "row": 12,
+      "title": "Phase II groundbreaking coverage",
+      "citation": "https://www.yogonet.com/international/news/2026/07/22/125515-resorts-world-new-york-city-adds-1-400-slots-as-55-billion-expansion-progresses;\nhttps://queenseagle.com/all/2026/7/23/resorts-world-breaks-ground-on-second-phase-of-casino-project ",
+      "publisher": "Yogonet (Jul 22, 2026); Queens Daily Eagle (Jul 23, 2026)",
+      "url": "https://www.yogonet.com/international/news/2026/07/22/125515-resorts-world-new-york-city-adds-1-400-slots-as-55-billion-expansion-progresses",
+      "url_origin": "workbook",
+      "locator": "https://www.yogonet.com/international/news/2026/07/22/125515-resorts-world-new-york-city-adds-1-400-slots-as-55-billion-expansion-progresses;\nhttps://queenseagle.com/all/2026/7/23/resorts-world-breaks-ground-on-second-phase-of-casino-project ",
+      "published_on": null,
+      "evidence_status": "no public evidence located",
+      "specific_evidence": "RWNYC broke ground on Phase II of its $5.5B expansion on Jul 22, 2026.",
+      "notes": "Context: confirms construction (and the MWBE duty) is ongoing. No MWBE figures."
+    },
+    {
+      "sheet": "TG-GOLD-A006",
+      "row": 13,
+      "title": "Bally's says its Bronx casino project is still a safe bet, amid debt concerns'",
+      "citation": "https://gothamist.com/news/ballys-says-its-bronx-casino-project-is-still-a-safe-bet-amid-debt-concerns  (also in Gale OneFile: News)",
+      "publisher": "Gothamist (Sep 22, 2026)",
+      "url": "https://gothamist.com/news/ballys-says-its-bronx-casino-project-is-still-a-safe-bet-amid-debt-concerns",
+      "url_origin": "workbook",
+      "locator": "https://gothamist.com/news/ballys-says-its-bronx-casino-project-is-still-a-safe-bet-amid-debt-concerns  (also in Gale OneFile: News)",
+      "published_on": null,
+      "evidence_status": "no public evidence located",
+      "specific_evidence": "Queens Borough President says Hard Rock Metropolitan Park's MWBE contracts are ahead of benchmarks. The article's RWNYC section covers only the opening, expansion and a tax dispute.",
+      "notes": "Different obligor (Hard Rock). Method B (Gale) gave the full text."
+    },
+    {
+      "sheet": "TG-GOLD-A006",
+      "row": 14,
+      "title": "RWNYC opening press release",
+      "citation": "https://www.prnewswire.com/news-releases/resorts-world-new-york-city-set-to-officially-open-nycs-first-table-games-casino-on-april-28--follows-massive-job-creation-operation-that-has-already-doubled-employment-with-over-2-200-jobs-on-day-one-at-the-citys-hottest-new-e-302748986.html",
+      "publisher": "Resorts World NYC via PR Newswire (Apr 21, 2026)",
+      "url": "https://www.prnewswire.com/news-releases/resorts-world-new-york-city-set-to-officially-open-nycs-first-table-games-casino-on-april-28--follows-massive-job-creation-operation-that-has-already-doubled-employment-with-over-2-200-jobs-on-day-one-at-the-citys-hottest-new-e-302748986.html",
+      "url_origin": "workbook",
+      "locator": "https://www.prnewswire.com/news-releases/resorts-world-new-york-city-set-to-officially-open-nycs-first-table-games-casino-on-april-28--follows-massive-job-creation-operation-that-has-already-doubled-employment-with-over-2-200-jobs-on-day-one-at-the-citys-hottest-new-e-302748986.html",
+      "published_on": null,
+      "evidence_status": "no public evidence located",
+      "specific_evidence": "Over 2,200 jobs on opening day.",
+      "notes": "Obligor's own claim, but about jobs, not MWBE contracts, so it is not a self-reported MWBE claim."
+    }
+  ],
+  "provenance": {
+    "workbook": "Golden Dataset (6).xlsx",
+    "sha256": "2da588b49b311957885ed7ff98bcd31c49e9d3ef8e99a761a3e9e5fcdb360099",
+    "identity": {
+      "sheet": "gold commitments",
+      "row": 6
+    },
+    "detail_sheet": "TG-GOLD-A006",
+    "detail_internal_id_cell": "B1",
+    "workbook_valid_flag": 1,
+    "workbook_split": "anchor_test",
+    "workbook_evidence_status": "no public evidence located",
+    "workbook_fields": {
+      "gold_id": "TG-GOLD-A006",
+      "document_id": "RFA-2023-01-03",
+      "page_section": "pdf p.54; Workforce Enhancement: Workforce Development Plan (.MWBE)",
+      "char_start": 136720.0,
+      "char_end": 136869.0,
+      "commitment_text": "It is expected that such goals meet or exceed New York State’s 30 percent utilization goal of Minority and Women-Owned Business Enterprise contracts.",
+      "normalized_statement": "Applicant goals for minority, women and service-disabled veteran utilization are expected to meet or exceed New York State's 30 percent MWBE contract utilization goal.",
+      "obligation_type": "Unresolved / ambiguous",
+      "responsible_entity": "Applicant (generic; applies to Genting New York LLC d/b/a Resorts World New York City as an RFA Applicant)",
+      "amount_value": "30 percent MWBE contract utilization (State goal; floor)",
+      "term_periodicity": "construction jobs",
+      "geographic_scope": "New York State",
+      "beneficiary_category": "MWBE firms",
+      "beneficiary_named": "none named",
+      "condition_contingency": "none stated",
+      "milestone": "none stated",
+      "evidence_status": "no public evidence located",
+      "confidence": "Medium",
+      "adjudication_note": "It is expected that' is listed as an ambiguity trigger; reads as an evaluation expectation, not an enforceable condition.",
+      "duplicate_of": "none",
+      "notes": "Restated on RFA p.55 (Diversity Framework) — see duplicate row.",
+      "evaluation_split": "anchor_test",
+      "manually annotated valid?": 1.0
+    },
+    "detail_research_cutoff": null,
+    "evaluation_use": "22-case annotated benchmark; development-exposed cases included",
+    "reference_preparation": "Locally curated factual hypotheses and delivery conditions from the cited Golden (6) cells; prior to research."
+  }
+}

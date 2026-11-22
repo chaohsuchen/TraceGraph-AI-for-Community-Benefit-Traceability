@@ -1,0 +1,1417 @@
+{
+  "input_sha256": "13fe58740e3812ba6f34b4c180e99335e78747882882a1dd0a142343c0cf0159",
+  "judge_model": "gpt-5.4",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "judge_version": "tracegraph-nli-v4-owned-quotes",
+  "started_at": "2026-11-22T10:18:10.118489+00:00",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 35.28099999995902,
+      "request_id": "req_e6bf5357f24a48e3b4c85877bb74baa2",
+      "usage": {
+        "input_tokens": 4093,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 2816
+        },
+        "output_tokens": 3901,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 7994
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 8.312999999965541,
+      "request_id": "req_c2cc274f4cf8485a8ed43edf6d83094f",
+      "usage": {
+        "input_tokens": 2796,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 1792
+        },
+        "output_tokens": 755,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3551
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "evidence": {
+    "identity": {
+      "label": "MATCH",
+      "reason": "Finding partial:f8 states Resorts World offered an annual commitment for the duration of the license term of the lesser of 2% of incremental gross gaming revenue above 2025 levels or $25 million per year for a workforce housing fund, which matches the question’s organization, obligation, amount formula, beneficiary, and timing."
+    },
+    "findings": [
+      {
+        "finding_id": "partial:f1",
+        "claims": [
+          {
+            "claim": "Resorts World's Workforce Housing Initiative is funded through the Cirrus Workforce Housing Fund.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "funded through the Cirrus Workforce Housing Fund",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the initiative's funding source."
+              }
+            ],
+            "reason": "The excerpt directly says the initiative is funded through the Cirrus Workforce Housing Fund."
+          },
+          {
+            "claim": "Resorts World's Workforce Housing Initiative is a landmark partnership with organized labor to deliver tens of thousands of new homes for working families across New York City.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "is a landmark partnership with organized labor to deliver tens of thousands of new homes for working families across New York City",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the partnership character and intended housing delivery scope."
+              }
+            ],
+            "reason": "The excerpt explicitly describes the partnership and its citywide housing aim."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f2",
+        "claims": [
+          {
+            "claim": "The Workforce Housing Fund is described as a landmark joint venture with organized labor that aims to deliver the largest injection of new workforce housing in decades.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "LANDMARK JOINT VENTURE WITH ORGANIZED LABOR We aim to tackle the city’s affordability crisis head-on by delivering the largest injection of new workforce housing in decades.",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly gives the venture description and stated aim."
+              }
+            ],
+            "reason": "The excerpt directly states the venture description and its intended impact."
+          },
+          {
+            "claim": "The initiative is creating up to 50,000 units citywide that are union-financed and union-built.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "We are creating up to 50,000 units citywide that are union-financed and union-built.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the unit count, geography, and union-financed/union-built qualifiers."
+              }
+            ],
+            "reason": "The excerpt expressly states up to 50,000 citywide union-financed and union-built units."
+          },
+          {
+            "claim": "The Workforce Housing Fund is described as $25M annually.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "$25M Annually",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the annual amount."
+              }
+            ],
+            "reason": "The excerpt explicitly states $25M annually."
+          },
+          {
+            "claim": "The Workforce Housing Fund had $25M delivered in 2026.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "$25M Delivered in 2026",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states delivery of $25M in 2026."
+              }
+            ],
+            "reason": "The excerpt explicitly states $25M delivered in 2026."
+          },
+          {
+            "claim": "The data is as of September 2026.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "Data as of September 2026",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the reporting date qualifier."
+              }
+            ],
+            "reason": "The excerpt explicitly gives the as-of date."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f3",
+        "claims": [
+          {
+            "claim": "The initiative is described as $25M annually for up to 50,000 units.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "$25M Annually for up to 50,000 units",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states both the annual amount and the unit cap."
+              }
+            ],
+            "reason": "The excerpt directly states the annual amount and unit scope."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f4",
+        "claims": [
+          {
+            "claim": "$25M was delivered in 2026.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s4"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s4",
+                "quote": "$25M Delivered in 2026",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the amount delivered and the year."
+              }
+            ],
+            "reason": "The excerpt explicitly states $25M delivered in 2026."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f5",
+        "claims": [
+          {
+            "claim": "The data is as of September 2026.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s5"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s5",
+                "quote": "Data as of September 2026",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the as-of date."
+              }
+            ],
+            "reason": "The excerpt explicitly states the reporting date."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f6",
+        "claims": [
+          {
+            "claim": "Resorts World New York City has officially formed a joint venture with Cirrus to invest in this housing commitment.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s6"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s6",
+                "quote": "Resorts World New York City has officially formed a joint venture with Cirrus to invest in this housing commitment",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states formation of the joint venture and its purpose."
+              }
+            ],
+            "reason": "The excerpt directly states the joint venture and its investment purpose."
+          },
+          {
+            "claim": "The joint venture will focus on large-scale projects across the five boroughs.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s6"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s6",
+                "quote": "which will focus on large-scale projects across the five boroughs",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the geographic and project scope."
+              }
+            ],
+            "reason": "The excerpt explicitly states the focus across the five boroughs."
+          },
+          {
+            "claim": "The new partnership will begin to invest in new housing developments in the immediate term.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s6"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s6",
+                "quote": "The new partnership will begin to invest in new housing developments in the immediate term.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the timing of intended investment."
+              }
+            ],
+            "reason": "The excerpt explicitly states investment will begin in the immediate term."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f7",
+        "claims": [
+          {
+            "claim": "About 700 new homes could be coming to Downtown Jamaica on the site of what is now a massive parking garage.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s7"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s7",
+                "quote": "About 700 new homes could be coming to Downtown Jamaica on the site of what’s now a massive parking garage",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the proposed homes and location, with the modal qualifier 'could be coming.'"
+              }
+            ],
+            "reason": "The excerpt directly states a proposal for about 700 homes with uncertainty preserved."
+          },
+          {
+            "claim": "The Jamaica project is part of the agreement by Resorts World New York City and Cirrus Real Estate Partners to deliver nearly 50,000 units across the five boroughs.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s7"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s7",
+                "quote": "as part of the agreement by Resorts World New York City and Cirrus Real Estate Partners to deliver nearly 50,000 units across the five boroughs",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly links the Jamaica project to the broader agreement and scope."
+              }
+            ],
+            "reason": "The excerpt explicitly connects the Jamaica project to the broader five-borough agreement."
+          },
+          {
+            "claim": "The joint venture has purchased the 1.8-acre development site and parking garage at 92-30 165th St. for $46.1 million with plans to turn the lot into housing, according to Cirrus and Ripco Real Estate.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s7"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s7",
+                "quote": "The joint venture has purchased the 1.8-acre development site and parking garage at 92-30 165th St. for $46.1 million with plans to turn the lot into housing, according to Cirrus and Ripco Real Estate, which brokered the deal.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the purchase, address, amount, and planned housing use, with attribution."
+              }
+            ],
+            "reason": "The excerpt explicitly states the purchase details and planned use, attributed to Cirrus and Ripco."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f8",
+        "claims": [
+          {
+            "claim": "Resorts World has offered a community benefits package consisting of an annual commitment, for the duration of the license term, of the lesser of 2 percent of incremental gross gaming revenue above 2025 levels or $25 million per year for a workforce housing fund.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s8"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s8",
+                "quote": "Resorts World has offered a community benefits package consisting of an annual commitment, for the duration of the license term, of the lesser of 2 percent of incremental gross gaming revenue above 2025 levels, or $25 million per year for a workforce housing fund.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the annual formula, beneficiary fund, and license-term duration."
+              }
+            ],
+            "reason": "The excerpt exactly states the offered annual commitment, formula, beneficiary, and timing."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f9",
+        "claims": [
+          {
+            "claim": "Resorts World has partnered with Cirrus Workforce Housing Advisors on the initiative.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s9"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s9",
+                "quote": "Resorts World has partnered with Cirrus Workforce Housing Advisors on the initiative",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the partnership."
+              }
+            ],
+            "reason": "The excerpt directly states the partnership."
+          },
+          {
+            "claim": "The substance of the project is vague.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s9"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s9",
+                "quote": "the substance of the project is vague",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly characterizes the project as vague."
+              }
+            ],
+            "reason": "The excerpt explicitly characterizes the project as vague."
+          },
+          {
+            "claim": "The promised investments in workforce housing are to begin in the immediate term.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s9"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s9",
+                "quote": "the promised investments in workforce housing to begin “in the immediate term”",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the promised timing."
+              }
+            ],
+            "reason": "The excerpt explicitly states the promised investments are to begin in the immediate term."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f10",
+        "claims": [
+          {
+            "claim": "The Board urges the elected representatives who made up the Community Advisory Committee to monitor the implementation of this commitment carefully.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s10"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s10",
+                "quote": "The Board urges the elected representatives who made up the Community Advisory Committee to monitor the implementation of this commitment carefully.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the Board's urging."
+              }
+            ],
+            "reason": "The excerpt exactly states the Board's urging."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "partial:f8"
+        ],
+        "citation_ids": [
+          "partial:s8"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Finding partial:f8 conveys the same annual lesser-of formula, workforce housing fund beneficiary, and license-term duration, and citation partial:s8 states it verbatim.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f8",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "The claim matches the reference fact's promise, amount formula, beneficiary, and timing."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s8",
+            "quote": "annual commitment, for the duration of the license term, of the lesser of 2 percent of incremental gross gaming revenue above 2025 levels, or $25 million per year for a workforce housing fund",
+            "label": "ENTAILMENT",
+            "reason": "The quote directly states the same promise and qualifiers."
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents the Board proposing alternative ways of addressing benefits originally projected beyond the awarded license term.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states that RWNYC's original license term is 15 years.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states that the Cirrus partnership agreement defines annual commitments as calendar-year cash capital contributions.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G5",
+        "finding_ids": [
+          "partial:f2",
+          "partial:f4",
+          "partial:f5"
+        ],
+        "citation_ids": [
+          "partial:s2",
+          "partial:s4",
+          "partial:s5"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Findings partial:f2 and partial:f4 state $25M delivered in 2026, and partial:f5 supplies the as-of-September-2026 reporting date.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f2",
+            "claim_index": 3,
+            "label": "ENTAILMENT",
+            "reason": "This claim states $25M delivered in 2026."
+          },
+          {
+            "finding_id": "partial:f2",
+            "claim_index": 4,
+            "label": "ENTAILMENT",
+            "reason": "This claim states the data is as of September 2026."
+          },
+          {
+            "finding_id": "partial:f4",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim repeats $25M delivered in 2026."
+          },
+          {
+            "finding_id": "partial:f5",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim gives the reporting date as of September 2026."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s2",
+            "quote": "$25M Delivered in 2026 Data as of September 2026",
+            "label": "ENTAILMENT",
+            "reason": "The contiguous quote states both the amount delivered in 2026 and that the data is as of September 2026."
+          },
+          {
+            "citation_id": "partial:s4",
+            "quote": "$25M Delivered in 2026",
+            "label": "ENTAILMENT",
+            "reason": "The quote states the amount delivered and year."
+          },
+          {
+            "citation_id": "partial:s5",
+            "quote": "Data as of September 2026",
+            "label": "ENTAILMENT",
+            "reason": "The quote states the reporting date qualifier."
+          }
+        ]
+      },
+      {
+        "gold_id": "G6",
+        "finding_ids": [
+          "partial:f7"
+        ],
+        "citation_ids": [
+          "partial:s7"
+        ],
+        "label": "NEUTRAL",
+        "reason": "Finding partial:f7 states a $46.1 million purchase, but not the stricter official-records details of a $46.125 million deed dated May 29, 2026.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f7",
+            "claim_index": 2,
+            "label": "NEUTRAL",
+            "reason": "The claim gives an approximate purchase amount and planned use, not an official deed amount and date."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s7",
+            "quote": "purchased the 1.8-acre development site and parking garage at 92-30 165th St. for $46.1 million",
+            "label": "NEUTRAL",
+            "reason": "The quote supports a purchase at about this amount but does not establish a $46.125 million deed or the May 29, 2026 deed date."
+          }
+        ]
+      },
+      {
+        "gold_id": "G7",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states that official records show a $24 million mortgage accompanying the Jamaica acquisition.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G8",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states that the recorded buyer was RWNYC ARCHER AVE LLC.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G9",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states Queens block 10151, lot 39, at 92-02 165 Street.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G10",
+        "finding_ids": [
+          "partial:f7"
+        ],
+        "citation_ids": [
+          "partial:s7"
+        ],
+        "label": "NEUTRAL",
+        "reason": "Finding partial:f7 attributes the purchase to the joint venture according to Cirrus and Ripco, but it does not mention trade reporting or Cirrus WFHA Funding specifically.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f7",
+            "claim_index": 2,
+            "label": "NEUTRAL",
+            "reason": "The claim links the joint venture to the purchase but lacks the specific trade-reporting and Cirrus WFHA Funding qualifiers."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s7",
+            "quote": "The joint venture has purchased the 1.8-acre development site and parking garage at 92-30 165th St. for $46.1 million with plans to turn the lot into housing, according to Cirrus and Ripco Real Estate",
+            "label": "NEUTRAL",
+            "reason": "The quote links a joint venture and Resorts World/Cirrus context to the acquisition, but not the specific trade reporting or Cirrus WFHA Funding named in the reference fact."
+          }
+        ]
+      },
+      {
+        "gold_id": "G11",
+        "finding_ids": [
+          "partial:f7"
+        ],
+        "citation_ids": [
+          "partial:s7"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Finding partial:f7 states about 700 new homes could be coming to Downtown Jamaica, which conveys that the 700 workforce housing units were proposed rather than completed.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f7",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim states about 700 homes could be coming, preserving proposal status."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s7",
+            "quote": "About 700 new homes could be coming to Downtown Jamaica",
+            "label": "ENTAILMENT",
+            "reason": "The quote establishes a proposed, not completed, 700-home Jamaica project."
+          }
+        ]
+      },
+      {
+        "gold_id": "G12",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states that an August 2026 PLUTO record listed zero residential units on the Jamaica parcel.",
+        "claim_links": [],
+        "quote_checks": []
+      }
+    ]
+  },
+  "verdict_protocol": "two-stage-owned-citations-v4",
+  "judgment": {
+    "identity": {
+      "label": "MATCH",
+      "reason": "Finding partial:f8 states Resorts World offered an annual commitment for the duration of the license term of the lesser of 2% of incremental gross gaming revenue above 2025 levels or $25 million per year for a workforce housing fund, which matches the question’s organization, obligation, amount formula, beneficiary, and timing."
+    },
+    "findings": [
+      {
+        "finding_id": "partial:f1",
+        "claims": [
+          {
+            "claim": "Resorts World's Workforce Housing Initiative is funded through the Cirrus Workforce Housing Fund.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "funded through the Cirrus Workforce Housing Fund",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the initiative's funding source."
+              }
+            ],
+            "reason": "The excerpt directly says the initiative is funded through the Cirrus Workforce Housing Fund."
+          },
+          {
+            "claim": "Resorts World's Workforce Housing Initiative is a landmark partnership with organized labor to deliver tens of thousands of new homes for working families across New York City.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s1",
+                "quote": "is a landmark partnership with organized labor to deliver tens of thousands of new homes for working families across New York City",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the partnership character and intended housing delivery scope."
+              }
+            ],
+            "reason": "The excerpt explicitly describes the partnership and its citywide housing aim."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f2",
+        "claims": [
+          {
+            "claim": "The Workforce Housing Fund is described as a landmark joint venture with organized labor that aims to deliver the largest injection of new workforce housing in decades.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "LANDMARK JOINT VENTURE WITH ORGANIZED LABOR We aim to tackle the city’s affordability crisis head-on by delivering the largest injection of new workforce housing in decades.",
+                "label": "ENTAILMENT",
+                "reason": "The quote expressly gives the venture description and stated aim."
+              }
+            ],
+            "reason": "The excerpt directly states the venture description and its intended impact."
+          },
+          {
+            "claim": "The initiative is creating up to 50,000 units citywide that are union-financed and union-built.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "We are creating up to 50,000 units citywide that are union-financed and union-built.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the unit count, geography, and union-financed/union-built qualifiers."
+              }
+            ],
+            "reason": "The excerpt expressly states up to 50,000 citywide union-financed and union-built units."
+          },
+          {
+            "claim": "The Workforce Housing Fund is described as $25M annually.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "$25M Annually",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the annual amount."
+              }
+            ],
+            "reason": "The excerpt explicitly states $25M annually."
+          },
+          {
+            "claim": "The Workforce Housing Fund had $25M delivered in 2026.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "$25M Delivered in 2026",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states delivery of $25M in 2026."
+              }
+            ],
+            "reason": "The excerpt explicitly states $25M delivered in 2026."
+          },
+          {
+            "claim": "The data is as of September 2026.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s2",
+                "quote": "Data as of September 2026",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the reporting date qualifier."
+              }
+            ],
+            "reason": "The excerpt explicitly gives the as-of date."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f3",
+        "claims": [
+          {
+            "claim": "The initiative is described as $25M annually for up to 50,000 units.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s3",
+                "quote": "$25M Annually for up to 50,000 units",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states both the annual amount and the unit cap."
+              }
+            ],
+            "reason": "The excerpt directly states the annual amount and unit scope."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f4",
+        "claims": [
+          {
+            "claim": "$25M was delivered in 2026.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s4"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s4",
+                "quote": "$25M Delivered in 2026",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the amount delivered and the year."
+              }
+            ],
+            "reason": "The excerpt explicitly states $25M delivered in 2026."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f5",
+        "claims": [
+          {
+            "claim": "The data is as of September 2026.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s5"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s5",
+                "quote": "Data as of September 2026",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the as-of date."
+              }
+            ],
+            "reason": "The excerpt explicitly states the reporting date."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f6",
+        "claims": [
+          {
+            "claim": "Resorts World New York City has officially formed a joint venture with Cirrus to invest in this housing commitment.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s6"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s6",
+                "quote": "Resorts World New York City has officially formed a joint venture with Cirrus to invest in this housing commitment",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states formation of the joint venture and its purpose."
+              }
+            ],
+            "reason": "The excerpt directly states the joint venture and its investment purpose."
+          },
+          {
+            "claim": "The joint venture will focus on large-scale projects across the five boroughs.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s6"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s6",
+                "quote": "which will focus on large-scale projects across the five boroughs",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the geographic and project scope."
+              }
+            ],
+            "reason": "The excerpt explicitly states the focus across the five boroughs."
+          },
+          {
+            "claim": "The new partnership will begin to invest in new housing developments in the immediate term.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s6"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s6",
+                "quote": "The new partnership will begin to invest in new housing developments in the immediate term.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the timing of intended investment."
+              }
+            ],
+            "reason": "The excerpt explicitly states investment will begin in the immediate term."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f7",
+        "claims": [
+          {
+            "claim": "About 700 new homes could be coming to Downtown Jamaica on the site of what is now a massive parking garage.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s7"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s7",
+                "quote": "About 700 new homes could be coming to Downtown Jamaica on the site of what’s now a massive parking garage",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the proposed homes and location, with the modal qualifier 'could be coming.'"
+              }
+            ],
+            "reason": "The excerpt directly states a proposal for about 700 homes with uncertainty preserved."
+          },
+          {
+            "claim": "The Jamaica project is part of the agreement by Resorts World New York City and Cirrus Real Estate Partners to deliver nearly 50,000 units across the five boroughs.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s7"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s7",
+                "quote": "as part of the agreement by Resorts World New York City and Cirrus Real Estate Partners to deliver nearly 50,000 units across the five boroughs",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly links the Jamaica project to the broader agreement and scope."
+              }
+            ],
+            "reason": "The excerpt explicitly connects the Jamaica project to the broader five-borough agreement."
+          },
+          {
+            "claim": "The joint venture has purchased the 1.8-acre development site and parking garage at 92-30 165th St. for $46.1 million with plans to turn the lot into housing, according to Cirrus and Ripco Real Estate.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s7"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s7",
+                "quote": "The joint venture has purchased the 1.8-acre development site and parking garage at 92-30 165th St. for $46.1 million with plans to turn the lot into housing, according to Cirrus and Ripco Real Estate, which brokered the deal.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the purchase, address, amount, and planned housing use, with attribution."
+              }
+            ],
+            "reason": "The excerpt explicitly states the purchase details and planned use, attributed to Cirrus and Ripco."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f8",
+        "claims": [
+          {
+            "claim": "Resorts World has offered a community benefits package consisting of an annual commitment, for the duration of the license term, of the lesser of 2 percent of incremental gross gaming revenue above 2025 levels or $25 million per year for a workforce housing fund.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s8"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s8",
+                "quote": "Resorts World has offered a community benefits package consisting of an annual commitment, for the duration of the license term, of the lesser of 2 percent of incremental gross gaming revenue above 2025 levels, or $25 million per year for a workforce housing fund.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the annual formula, beneficiary fund, and license-term duration."
+              }
+            ],
+            "reason": "The excerpt exactly states the offered annual commitment, formula, beneficiary, and timing."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f9",
+        "claims": [
+          {
+            "claim": "Resorts World has partnered with Cirrus Workforce Housing Advisors on the initiative.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s9"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s9",
+                "quote": "Resorts World has partnered with Cirrus Workforce Housing Advisors on the initiative",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the partnership."
+              }
+            ],
+            "reason": "The excerpt directly states the partnership."
+          },
+          {
+            "claim": "The substance of the project is vague.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s9"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s9",
+                "quote": "the substance of the project is vague",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly characterizes the project as vague."
+              }
+            ],
+            "reason": "The excerpt explicitly characterizes the project as vague."
+          },
+          {
+            "claim": "The promised investments in workforce housing are to begin in the immediate term.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s9"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s9",
+                "quote": "the promised investments in workforce housing to begin “in the immediate term”",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the promised timing."
+              }
+            ],
+            "reason": "The excerpt explicitly states the promised investments are to begin in the immediate term."
+          }
+        ]
+      },
+      {
+        "finding_id": "partial:f10",
+        "claims": [
+          {
+            "claim": "The Board urges the elected representatives who made up the Community Advisory Committee to monitor the implementation of this commitment carefully.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "partial:s10"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "partial:s10",
+                "quote": "The Board urges the elected representatives who made up the Community Advisory Committee to monitor the implementation of this commitment carefully.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the Board's urging."
+              }
+            ],
+            "reason": "The excerpt exactly states the Board's urging."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "partial:f8"
+        ],
+        "citation_ids": [
+          "partial:s8"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Finding partial:f8 conveys the same annual lesser-of formula, workforce housing fund beneficiary, and license-term duration, and citation partial:s8 states it verbatim.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f8",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "The claim matches the reference fact's promise, amount formula, beneficiary, and timing."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s8",
+            "quote": "annual commitment, for the duration of the license term, of the lesser of 2 percent of incremental gross gaming revenue above 2025 levels, or $25 million per year for a workforce housing fund",
+            "label": "ENTAILMENT",
+            "reason": "The quote directly states the same promise and qualifiers."
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding presents the Board proposing alternative ways of addressing benefits originally projected beyond the awarded license term.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states that RWNYC's original license term is 15 years.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G4",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states that the Cirrus partnership agreement defines annual commitments as calendar-year cash capital contributions.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G5",
+        "finding_ids": [
+          "partial:f2",
+          "partial:f4",
+          "partial:f5"
+        ],
+        "citation_ids": [
+          "partial:s2",
+          "partial:s4",
+          "partial:s5"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Findings partial:f2 and partial:f4 state $25M delivered in 2026, and partial:f5 supplies the as-of-September-2026 reporting date.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f2",
+            "claim_index": 3,
+            "label": "ENTAILMENT",
+            "reason": "This claim states $25M delivered in 2026."
+          },
+          {
+            "finding_id": "partial:f2",
+            "claim_index": 4,
+            "label": "ENTAILMENT",
+            "reason": "This claim states the data is as of September 2026."
+          },
+          {
+            "finding_id": "partial:f4",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim repeats $25M delivered in 2026."
+          },
+          {
+            "finding_id": "partial:f5",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim gives the reporting date as of September 2026."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s2",
+            "quote": "$25M Delivered in 2026 Data as of September 2026",
+            "label": "ENTAILMENT",
+            "reason": "The contiguous quote states both the amount delivered in 2026 and that the data is as of September 2026."
+          },
+          {
+            "citation_id": "partial:s4",
+            "quote": "$25M Delivered in 2026",
+            "label": "ENTAILMENT",
+            "reason": "The quote states the amount delivered and year."
+          },
+          {
+            "citation_id": "partial:s5",
+            "quote": "Data as of September 2026",
+            "label": "ENTAILMENT",
+            "reason": "The quote states the reporting date qualifier."
+          }
+        ]
+      },
+      {
+        "gold_id": "G6",
+        "finding_ids": [
+          "partial:f7"
+        ],
+        "citation_ids": [
+          "partial:s7"
+        ],
+        "label": "NEUTRAL",
+        "reason": "Finding partial:f7 states a $46.1 million purchase, but not the stricter official-records details of a $46.125 million deed dated May 29, 2026.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f7",
+            "claim_index": 2,
+            "label": "NEUTRAL",
+            "reason": "The claim gives an approximate purchase amount and planned use, not an official deed amount and date."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s7",
+            "quote": "purchased the 1.8-acre development site and parking garage at 92-30 165th St. for $46.1 million",
+            "label": "NEUTRAL",
+            "reason": "The quote supports a purchase at about this amount but does not establish a $46.125 million deed or the May 29, 2026 deed date."
+          }
+        ]
+      },
+      {
+        "gold_id": "G7",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states that official records show a $24 million mortgage accompanying the Jamaica acquisition.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G8",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states that the recorded buyer was RWNYC ARCHER AVE LLC.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G9",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states Queens block 10151, lot 39, at 92-02 165 Street.",
+        "claim_links": [],
+        "quote_checks": []
+      },
+      {
+        "gold_id": "G10",
+        "finding_ids": [
+          "partial:f7"
+        ],
+        "citation_ids": [
+          "partial:s7"
+        ],
+        "label": "NEUTRAL",
+        "reason": "Finding partial:f7 attributes the purchase to the joint venture according to Cirrus and Ripco, but it does not mention trade reporting or Cirrus WFHA Funding specifically.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f7",
+            "claim_index": 2,
+            "label": "NEUTRAL",
+            "reason": "The claim links the joint venture to the purchase but lacks the specific trade-reporting and Cirrus WFHA Funding qualifiers."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s7",
+            "quote": "The joint venture has purchased the 1.8-acre development site and parking garage at 92-30 165th St. for $46.1 million with plans to turn the lot into housing, according to Cirrus and Ripco Real Estate",
+            "label": "NEUTRAL",
+            "reason": "The quote links a joint venture and Resorts World/Cirrus context to the acquisition, but not the specific trade reporting or Cirrus WFHA Funding named in the reference fact."
+          }
+        ]
+      },
+      {
+        "gold_id": "G11",
+        "finding_ids": [
+          "partial:f7"
+        ],
+        "citation_ids": [
+          "partial:s7"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Finding partial:f7 states about 700 new homes could be coming to Downtown Jamaica, which conveys that the 700 workforce housing units were proposed rather than completed.",
+        "claim_links": [
+          {
+            "finding_id": "partial:f7",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim states about 700 homes could be coming, preserving proposal status."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "partial:s7",
+            "quote": "About 700 new homes could be coming to Downtown Jamaica",
+            "label": "ENTAILMENT",
+            "reason": "The quote establishes a proposed, not completed, 700-home Jamaica project."
+          }
+        ]
+      },
+      {
+        "gold_id": "G12",
+        "finding_ids": [],
+        "citation_ids": [],
+        "label": "MISSING",
+        "reason": "No finding states that an August 2026 PLUTO record listed zero residential units on the Jamaica parcel.",
+        "claim_links": [],
+        "quote_checks": []
+      }
+    ],
+    "protocol": "owned-quotes-v1",
+    "verdict": null
+  },
+  "capture_judgment": {
+    "facts": [
+      {
+        "gold_id": "G1",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "p4",
+          "p7",
+          "p9"
+        ],
+        "reason": "The passages show a Workforce Housing Fund with “$25M Annually,” but they do not state the license-term condition or the formula “lesser of $25 million or 2% of incremental GGR above 2025 levels.”"
+      },
+      {
+        "gold_id": "G2",
+        "label": "NEUTRAL",
+        "citation_ids": [],
+        "reason": "No excerpt mentions Board proposals, alternatives, or benefits projected beyond the awarded license term."
+      },
+      {
+        "gold_id": "G3",
+        "label": "NEUTRAL",
+        "citation_ids": [],
+        "reason": "No passage states that RWNYC’s original license term is 15 years."
+      },
+      {
+        "gold_id": "G4",
+        "label": "NEUTRAL",
+        "citation_ids": [],
+        "reason": "No excerpt gives a Cirrus partnership-agreement definition of annual commitments as calendar-year cash capital contributions."
+      },
+      {
+        "gold_id": "G5",
+        "label": "ENTAILMENT",
+        "citation_ids": [
+          "p5",
+          "p6",
+          "p7"
+        ],
+        "reason": "The dashboard excerpts state “$25M Delivered in 2026” and “Data as of September 2026.”"
+      },
+      {
+        "gold_id": "G6",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "p13"
+        ],
+        "reason": "One passage says the joint venture purchased the site at 92-30 165th St. for $46.1 million, but it does not provide official records, a deed amount of $46.125 million, or the date May 29, 2026."
+      },
+      {
+        "gold_id": "G7",
+        "label": "NEUTRAL",
+        "citation_ids": [],
+        "reason": "No excerpt mentions a $24 million mortgage for the Jamaica acquisition."
+      },
+      {
+        "gold_id": "G8",
+        "label": "NEUTRAL",
+        "citation_ids": [],
+        "reason": "No passage identifies the recorded buyer as RWNYC ARCHER AVE LLC."
+      },
+      {
+        "gold_id": "G9",
+        "label": "NEUTRAL",
+        "citation_ids": [],
+        "reason": "No excerpt states Queens block 10151, lot 39; the only location text is “92-30 165th St.” in a news-style passage."
+      },
+      {
+        "gold_id": "G10",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "p13"
+        ],
+        "reason": "The passage links the Resorts World/Cirrus joint venture to purchasing the Jamaica site, but it does not mention “Cirrus WFHA Funding” or trade reporting."
+      },
+      {
+        "gold_id": "G11",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "p13"
+        ],
+        "reason": "The excerpt says “About 700 new homes could be coming” with “plans to turn the lot into housing,” which is a tentative housing proposal, but it does not specifically say RWNYC described 700 Jamaica workforce housing units as proposed."
+      },
+      {
+        "gold_id": "G12",
+        "label": "NEUTRAL",
+        "citation_ids": [],
+        "reason": "No passage mentions an August 2026 PLUTO record or zero residential units on the parcel."
+      }
+    ],
+    "abstention": {
+      "label": "JUSTIFIED",
+      "reason": "The question asks for a specific promise: Resorts World committed annually, for the license term, the lesser of 2% of incremental GGR above 2025 levels or $25 million to a workforce housing fund. The retrieved passages do establish a workforce-housing initiative and annual/$25M figures (p4, p7, p9) plus claimed 2026 delivery (p5-p7), but they do not document the key original terms “for the license term” or “the lesser of 2% of incremental GGR above 2025 levels or $25 million.” On this capture alone, declining to save that exact commitment was justified."
+    }
+  },
+  "finished_at": "2026-11-22T10:18:54.002531+00:00"
+}

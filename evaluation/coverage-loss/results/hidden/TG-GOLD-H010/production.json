@@ -1,0 +1,82 @@
+{
+  "arm": "hidden",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 2.3910000000614673,
+      "request_id": "req_8ca84dc5fed441dea3de527c8720f5e3",
+      "usage": {
+        "input_tokens": 850,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 166,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 1016
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "documents": [],
+  "shortlist": [
+    {
+      "url": "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-sustainable-development-principals-energy-consumption",
+      "title": "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-sustainable-development-principals-energy-consumption",
+      "excerpt": "Use of Renewable Energy Credits (RECs): To offset any residual emissions, Bally’s will purchase RECs in accordance with LL97 guidelines."
+    },
+    {
+      "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+      "excerpt": "Four applicants - Bally's Bronx, Hard Rock Metropolitan Park, MGM Yonkers, and Resorts World New York City - received Community Advisory Committee approval, establishing public support for these projects. The other four applicants failed to achieve the required two-thirds approval threshold and were eliminated from further consideration."
+    },
+    {
+      "url": "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-sustainable-development-principals-energy-consumption",
+      "title": "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-sustainable-development-principals-energy-consumption",
+      "excerpt": "On-Site Solar Generation: Rooftop and canopy-mounted photovoltaic (PV) systems will be installed to generate clean electricity, with battery storage to manage peak loads and provide backup power."
+    }
+  ],
+  "selection": {
+    "findings": [
+      {
+        "id": "W3",
+        "claim": "Bally’s says the same on-site solar plan for the gaming facility includes rooftop and canopy-mounted photovoltaic systems with battery storage for peak-load management and backup power.",
+        "quote": "On-Site Solar Generation: Rooftop and canopy-mounted photovoltaic (PV) systems will be installed to generate clean electricity, with battery storage to manage peak loads and provide backup power."
+      },
+      {
+        "id": "W1",
+        "claim": "Bally’s states it will also purchase renewable energy credits under Local Law 97 guidelines to offset residual emissions, which is separate from the 10% renewable electricity supply commitment.",
+        "quote": "Use of Renewable Energy Credits (RECs): To offset any residual emissions, Bally’s will purchase RECs in accordance with LL97 guidelines."
+      }
+    ]
+  },
+  "additions": [
+    {
+      "url": "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-sustainable-development-principals-energy-consumption",
+      "title": "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-sustainable-development-principals-energy-consumption",
+      "quote": "On-Site Solar Generation: Rooftop and canopy-mounted photovoltaic (PV) systems will be installed to generate clean electricity, with battery storage to manage peak loads and provide backup power.",
+      "claim": "Bally’s says the same on-site solar plan for the gaming facility includes rooftop and canopy-mounted photovoltaic systems with battery storage for peak-load management and backup power.",
+      "start": 0,
+      "end": 195
+    },
+    {
+      "url": "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-sustainable-development-principals-energy-consumption",
+      "title": "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-sustainable-development-principals-energy-consumption",
+      "quote": "Use of Renewable Energy Credits (RECs): To offset any residual emissions, Bally’s will purchase RECs in accordance with LL97 guidelines.",
+      "claim": "Bally’s states it will also purchase renewable energy credits under Local Law 97 guidelines to offset residual emissions, which is separate from the 10% renewable electricity supply commitment.",
+      "start": 0,
+      "end": 136
+    }
+  ]
+}

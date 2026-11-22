@@ -1,0 +1,112 @@
+{
+  "fingerprint": "f683336bce3e7587bac5a58caf7d7b8f4341c47674d2c0df9eea6fc01375a8ff",
+  "origin": "new_tool_free_v4",
+  "passages": {
+    "p1": {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+      "excerpt": "For its permanent operations, Bally’s commits to building a diverse workforce of 3,503 full-time equivalent employees, with 70 percent of those workers coming from the Bronx, and reflecting the demographics of the Bronx. It cites its performance at Bally’s Chicago, where over 80 percent of the employees at its temporary facility identify as minority, and 45 percent are women."
+    },
+    "p2": {
+      "url": "https://apps.cio.ny.gov/apps/mediacontact/public/view.cfm?backButton=&parm=8CF994EA-BE93-69D0-2215473F6E0C6BC5",
+      "title": "https://apps.cio.ny.gov/apps/mediacontact/public/view.cfm?backButton=&parm=8CF994EA-BE93-69D0-2215473F6E0C6BC5",
+      "excerpt": "Four Applicants - Bally’s Bronx, Hard Rock Metropolitan Park, MGM Yonkers, and Resorts World New York City – received approval from their respective Committees and submitted evidence of zoning compliance, and completion of environmental review."
+    },
+    "p3": {
+      "url": "https://ballysbronx.com/",
+      "title": "https://ballysbronx.com/",
+      "excerpt": "2025 – Gaming License Application due in June"
+    },
+    "p4": {
+      "url": "https://ballysbronx.com/",
+      "title": "https://ballysbronx.com/",
+      "excerpt": "BREAKING: Bally’s Wins State Casino License"
+    },
+    "p5": {
+      "url": "https://ballysbronx.com/",
+      "title": "https://ballysbronx.com/",
+      "excerpt": "December 15, 2025"
+    }
+  },
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 5.530999999959022,
+      "request_id": "req_a0fae7f58d044cccb9376200ceafdba6",
+      "usage": {
+        "input_tokens": 1941,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 386,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2327
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "decisions": [
+    {
+      "gold_id": "G1",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p1"
+      ],
+      "reason": "p1 states Bally’s commits to a permanent workforce of 3,503 full-time equivalent employees, which matches approximately 3,503 permanent FTE positions."
+    },
+    {
+      "gold_id": "G2",
+      "label": "ENTAILMENT",
+      "citation_ids": [
+        "p1"
+      ],
+      "reason": "p1 expressly says 70 percent of the 3,503 permanent workers would come from the Bronx."
+    },
+    {
+      "gold_id": "G3",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p1"
+      ],
+      "reason": "p1 mentions Bronx workers and reflecting Bronx demographics, but it does not describe the target population as Bronx residents or local underserved populations."
+    },
+    {
+      "gold_id": "G4",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage mentions quarterly reporting on hiring."
+    },
+    {
+      "gold_id": "G5",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage discusses any license requirement for public workforce demographic reporting or community-benefit reporting."
+    },
+    {
+      "gold_id": "G6",
+      "label": "NEUTRAL",
+      "citation_ids": [
+        "p1"
+      ],
+      "reason": "p1 gives 3,503 full-time equivalent employees, but no passage shows the Board distinguishing that figure from approximately 3,741 permanent positions."
+    },
+    {
+      "gold_id": "G7",
+      "label": "NEUTRAL",
+      "citation_ids": [],
+      "reason": "No passage mentions Bronx vacancies at the existing golf course and restaurant."
+    }
+  ]
+}
