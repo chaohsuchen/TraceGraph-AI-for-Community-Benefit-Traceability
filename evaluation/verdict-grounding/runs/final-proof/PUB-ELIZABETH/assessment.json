@@ -1,0 +1,20 @@
+{
+  "case": "PUB-ELIZABETH",
+  "model": "gpt-5.4",
+  "status": "COMPLETED",
+  "runtime": {
+    "agent.py": "a05ce765ed68bdd3bdef1b319c2349e39f60e2abf7d2c923502295582c8aff21",
+    "providers.py": "bb319def975c4ffbf361cbaafcf6ba79e04c8dc1516a32d094f02a9060f21f18",
+    "reconcile.py": "e34b4c6024d8184e276a59f738b9ab346f0ac9042c975c98b3769ceba41ba748",
+    "openai_provider.py": "cebdca8526ccb8ebec3b83da3c0e0cec2b6f2b39797dae0a4ce15e88cbe09f59"
+  },
+  "source_trace_sha256": "38ad4eb60fd279753dc09324de3a4ba312567174e32bb1c594ac76eee92a42ff",
+  "inputs_sha256": "9a013813ed31ebdaab37c1a3eedf3548dcfb94787416478ba0a00c419a41fc86",
+  "calls": [],
+  "displayed": {
+    "label": "UNVERIFIED",
+    "verdict": "The cited record reports “around 260,000 journeys made on the new central section between Paddington and Abbey Wood across its opening day” (c4). The available evidence leaves the precise promised scope (“Paddington low level and Abbey Wood”) and the promised timing (“By December 2018”) unverified.",
+    "reasoning": "The available evidence does not directly establish withdrawal or disproof of this commitment.\n\nSource excerpts for context:\nc1: “December 2018 — Crossrail services commence in the central tunnel section between Paddington low level and Abbey Wood”\nhttps://www.gov.uk/government/speeches/annual-update-on-crossrail-2017\n\nc2: “The Crossrail Ltd Board took the decision to open the central section between Paddington and Abbey Wood in Autumn 2019 on 29 August 2018.”\nhttps://tfl.gov.uk/corporate/transparency/freedom-of-information/foi-request-detail?referenceId=FOI-1470-1819\n\nc3: “The Elizabeth line will operate 12 trains per hour between Paddington and Abbey Wood from Monday to Saturday 06:30 to 23:00.”\nhttps://tfl-newsroom.prgloo.com/news/tfl-press-release-elizabeth-line-to-open-on-24-may-2022\n\nc4: “The celebratory response to the opening saw around 260,000 journeys made on the new central section between Paddington and Abbey Wood across its opening day, clearly showing its popularity.”\nhttps://tfl-newsroom.prgloo.com/news/tfl-press-release-celebrations-as-transformational-elizabeth-line-begins-operations",
+    "verification_date": "2026-11-22"
+  }
+}

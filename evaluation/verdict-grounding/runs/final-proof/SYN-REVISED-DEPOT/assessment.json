@@ -1,0 +1,20 @@
+{
+  "case": "SYN-REVISED-DEPOT",
+  "model": "gpt-5.4",
+  "status": "COMPLETED",
+  "runtime": {
+    "agent.py": "a05ce765ed68bdd3bdef1b319c2349e39f60e2abf7d2c923502295582c8aff21",
+    "providers.py": "bb319def975c4ffbf361cbaafcf6ba79e04c8dc1516a32d094f02a9060f21f18",
+    "reconcile.py": "e34b4c6024d8184e276a59f738b9ab346f0ac9042c975c98b3769ceba41ba748",
+    "openai_provider.py": "cebdca8526ccb8ebec3b83da3c0e0cec2b6f2b39797dae0a4ce15e88cbe09f59"
+  },
+  "source_trace_sha256": "1afe200a84654dd0e686a1353d67911cbb4b1c565e7909a8aa9f00e0f0c24aba",
+  "inputs_sha256": "7c616ee361c48d87da16bb4f079f8fc6933afd3be54b76172005150b79cc5bd9",
+  "calls": [],
+  "displayed": {
+    "label": "UNVERIFIED",
+    "verdict": "Delivery has not been verified.",
+    "reasoning": "The available evidence does not directly establish withdrawal or disproof of this commitment.\n\nSource excerpts for context:\nc1: “Pine District will open the North Bank service depot; the initial target is October 2026.”\nhttps://pine.example.invalid/capital-program\n\nc2: “On November 4, 2026 the board revised the scheduled North Bank depot opening to April 2027 and retained the capital project in the budget.”\nhttps://pine.example.invalid/board-minutes\n\nc3: “At our November 18, 2026 inspection of the North Bank depot site, construction had not begun and no depot services were operating.”\nhttps://pine.example.invalid/inspection",
+    "verification_date": "2026-11-22"
+  }
+}

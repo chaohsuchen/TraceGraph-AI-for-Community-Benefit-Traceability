@@ -1,0 +1,316 @@
+{
+  "case": "SYN-REVISED-DEPOT",
+  "model": "gpt-5.4",
+  "runtime": {
+    "agent.py": "a05ce765ed68bdd3bdef1b319c2349e39f60e2abf7d2c923502295582c8aff21",
+    "providers.py": "962429f31c4ffda86024918916638aefa135c62ce4fc69a7d9003539d1c9938f",
+    "reconcile.py": "cdfb5f40c1e831b64f5575a7f5833aae1e34865f6106c33de3f22dddf2bacbee",
+    "openai_provider.py": "cebdca8526ccb8ebec3b83da3c0e0cec2b6f2b39797dae0a4ce15e88cbe09f59"
+  },
+  "inputs_sha256": "7c616ee361c48d87da16bb4f079f8fc6933afd3be54b76172005150b79cc5bd9",
+  "as_of": "2026-11-22",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 8.922000000000025,
+      "request_id": "req_936b98f5f7514b26a79b827911815373",
+      "usage": {
+        "input_tokens": 3279,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 1792
+        },
+        "output_tokens": 647,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3926
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 1.1709999999998217,
+      "request_id": "req_782e9d742d264b1f879dcf94dbac1ca9",
+      "usage": {
+        "input_tokens": 336,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 13,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 349
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 1.3130000000001019,
+      "request_id": "req_46bf5a74ed024339b86ac73b6d911031",
+      "usage": {
+        "input_tokens": 325,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 16,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 341
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 0.9209999999998217,
+      "request_id": "req_57217bc7dcd946019809285da9e37031",
+      "usage": {
+        "input_tokens": 429,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 16,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 445
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 2.219000000000051,
+      "request_id": "req_9b753a2eebb94f948701337f9e102ffb",
+      "usage": {
+        "input_tokens": 632,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 198,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 830
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 1.3910000000000764,
+      "request_id": "req_f0427871d9e249f190a32c057e2fbb77",
+      "usage": {
+        "input_tokens": 718,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 90,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 808
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "status": "COMPLETED",
+  "trace": {
+    "scope_locks": [
+      {
+        "mention": "North Bank service depot",
+        "citation_id": "c1",
+        "aliases": [],
+        "condition_numbers": []
+      }
+    ],
+    "not_yet_due": [],
+    "criteria": [
+      {
+        "criterion": "Pine District has opened the North Bank service depot.",
+        "required_elements": [
+          "Pine District opened the North Bank service depot",
+          "the depot is the North Bank service depot"
+        ],
+        "scope_criteria": [
+          "s1"
+        ],
+        "promise_scope": "Pine District promised to open the North Bank service depot; location beyond the named North Bank site is not further specified; intended beneficiaries are district service users or the public, unspecified in the excerpt.",
+        "observed_scope": "Evidence concerns the North Bank depot site. As of November 18, 2026, no depot services were operating there and construction had not begun.",
+        "promise_citation_ids": [
+          "c1"
+        ],
+        "delivery_citation_ids": [],
+        "delivery_status": "REFUTED",
+        "timing_requirement": "The original passage says the initial target was October 2026.",
+        "explanation": "c1 documents the original undertaking: Pine District would open the North Bank service depot, with an initial target of October 2026. c2 says that on November 4, 2026 the board revised the scheduled opening to April 2027, showing the October 2026 target was not met and the opening was postponed. c3 directly reports that at a November 18, 2026 inspection, construction had not begun and no depot services were operating at the North Bank depot site. That is directly incompatible with the depot having opened by the as_of date.",
+        "gap": "",
+        "locked_scopes": [
+          {
+            "mention": "North Bank service depot",
+            "citation_id": "c1",
+            "aliases": []
+          }
+        ],
+        "delivery_support": []
+      }
+    ],
+    "label": "REFUTED",
+    "verdict": "The promise is documented: Pine District said it would open the North Bank service depot, initially targeting October 2026. But the requested outcome has not occurred by 2026-11-22. Board minutes moved the opening to April 2027, and a November 18, 2026 inspection found that construction had not begun and no depot services were operating at the site.",
+    "reasoning": "Requested scope: Has Pine District opened the new North Bank service depot?\n\nThe original undertaking is specifically about the North Bank service depot. The relevant delivery question is whether that named depot has actually opened. c1 establishes the promise and its initial October 2026 target. c2 is not delivery evidence; it shows the district officially rescheduled the opening to April 2027 while keeping the project in budget. c3 provides direct, dated evidence about actual status at the site: construction had not begun and no depot services were operating on November 18, 2026. That directly disproves the depot having opened by the as_of date, so the requested claim is refuted rather than merely unverified.\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “Pine District will open the North Bank service depot; the initial target is October 2026.”\nhttps://pine.example.invalid/capital-program\n\nc2: “On November 4, 2026 the board revised the scheduled North Bank depot opening to April 2027 and retained the capital project in the budget.”\nhttps://pine.example.invalid/board-minutes\n\nc3: “At our November 18, 2026 inspection of the North Bank depot site, construction had not begun and no depot services were operating.”\nhttps://pine.example.invalid/inspection",
+    "refutation": [
+      {
+        "basis": "OFFICIAL_WITHDRAWAL",
+        "finding_id": "fS2",
+        "quote": "On November 4, 2026 the board revised the scheduled North Bank depot opening to April 2027 and retained the capital project in the budget."
+      },
+      {
+        "basis": "DIRECT_DISPROOF",
+        "finding_id": "fS3",
+        "quote": "At our November 18, 2026 inspection of the North Bank depot site, construction had not begun and no depot services were operating."
+      }
+    ],
+    "scope_anchors": {
+      "s1": "Pine District opens its new North Bank service depot."
+    },
+    "citations": {
+      "c1": {
+        "source": {
+          "title": "District capital program",
+          "url": "https://pine.example.invalid/capital-program",
+          "citation": "https://pine.example.invalid/capital-program"
+        },
+        "excerpt": "Pine District will open the North Bank service depot; the initial target is October 2026.",
+        "locator": "Synthetic excerpt",
+        "retrieved_at": "2026-11-22T00:00:00Z",
+        "finding_id": "fS1"
+      },
+      "c2": {
+        "source": {
+          "title": "November board minutes",
+          "url": "https://pine.example.invalid/board-minutes",
+          "citation": "https://pine.example.invalid/board-minutes"
+        },
+        "excerpt": "On November 4, 2026 the board revised the scheduled North Bank depot opening to April 2027 and retained the capital project in the budget.",
+        "locator": "Synthetic excerpt",
+        "retrieved_at": "2026-11-22T00:00:00Z",
+        "finding_id": "fS2"
+      },
+      "c3": {
+        "source": {
+          "title": "November inspection",
+          "url": "https://pine.example.invalid/inspection",
+          "citation": "https://pine.example.invalid/inspection"
+        },
+        "excerpt": "At our November 18, 2026 inspection of the North Bank depot site, construction had not begun and no depot services were operating.",
+        "locator": "Synthetic excerpt",
+        "retrieved_at": "2026-11-22T00:00:00Z",
+        "finding_id": "fS3"
+      }
+    },
+    "scope_gap": "",
+    "rejected_refutation_review": {
+      "status": "COMPLETED",
+      "label": "UNVERIFIED",
+      "verdict": "The available evidence does not establish delivery of the requested obligation.",
+      "reasoning": "Pine District has opened the North Bank service depot.\nStatus: UNVERIFIED\nThe cited excerpts describe no observed delivery.\nPromised scope: Pine District promised to open the North Bank service depot; location beyond the named North Bank site is not further specified; intended beneficiaries are district service users or the public, unspecified in the excerpt.\nObserved scope: In-scope performance remains unverified.\nEvidence gap: An excerpt that directly reports delivery of this condition is still needed.\nPromise evidence: c1\n\nCited source excerpts:\nc1: “Pine District will open the North Bank service depot; the initial target is October 2026.”\nhttps://pine.example.invalid/capital-program\n\nc2: “On November 4, 2026 the board revised the scheduled North Bank depot opening to April 2027 and retained the capital project in the budget.”\nhttps://pine.example.invalid/board-minutes\n\nc3: “At our November 18, 2026 inspection of the North Bank depot site, construction had not begun and no depot services were operating.”\nhttps://pine.example.invalid/inspection",
+      "criteria": [
+        {
+          "criterion": "Pine District has opened the North Bank service depot.",
+          "required_elements": [
+            "Pine District opened the North Bank service depot",
+            "the depot is the North Bank service depot"
+          ],
+          "scope_criteria": [
+            "s1"
+          ],
+          "promise_scope": "Pine District promised to open the North Bank service depot; location beyond the named North Bank site is not further specified; intended beneficiaries are district service users or the public, unspecified in the excerpt.",
+          "promise_citation_ids": [
+            "c1"
+          ],
+          "timing_requirement": "The original passage says the initial target was October 2026.",
+          "locked_scopes": [
+            {
+              "mention": "North Bank service depot",
+              "citation_id": "c1",
+              "aliases": []
+            }
+          ],
+          "delivery_status": "UNVERIFIED",
+          "delivery_support": [],
+          "delivery_citation_ids": [],
+          "explanation": "The cited excerpts describe no observed delivery.",
+          "fulfilled_part": "",
+          "gap": "An excerpt that directly reports delivery of this condition is still needed.",
+          "observed_scope": "In-scope performance remains unverified."
+        }
+      ],
+      "scope_gap": ""
+    }
+  },
+  "displayed": {
+    "label": "UNVERIFIED",
+    "verdict": "Delivery has not been verified.",
+    "reasoning": "The available evidence does not directly establish withdrawal or disproof of this commitment.\n\nSource excerpts for context:\nc1: “Pine District will open the North Bank service depot; the initial target is October 2026.”\nhttps://pine.example.invalid/capital-program\n\nc2: “On November 4, 2026 the board revised the scheduled North Bank depot opening to April 2027 and retained the capital project in the budget.”\nhttps://pine.example.invalid/board-minutes\n\nc3: “At our November 18, 2026 inspection of the North Bank depot site, construction had not begun and no depot services were operating.”\nhttps://pine.example.invalid/inspection",
+    "verification_date": "2026-11-22"
+  }
+}

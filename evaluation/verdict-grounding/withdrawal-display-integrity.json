@@ -1,0 +1,48 @@
+{
+  "formal_grades": {
+    "JUSTIFIED": 16,
+    "OVERCLAIM": 1
+  },
+  "h017": "JUSTIFIED",
+  "additional_diagnostics": {
+    "SYN-FIVE-ROUTES": [
+      "REFUTED",
+      "JUSTIFIED"
+    ],
+    "SYN-REVISED-DEPOT": [
+      "UNVERIFIED",
+      "OVERCLAIM"
+    ]
+  },
+  "previous_diagnostic_grade": "OVERCLAIM",
+  "additional_usage": {
+    "input": 2951,
+    "output": 250,
+    "cached": 0,
+    "calls": 3,
+    "estimated_usd": 0.0111275
+  },
+  "all_recorded_usage": {
+    "input": 1630557,
+    "output": 259986,
+    "cached": 649216,
+    "calls": 443,
+    "estimated_usd": 6.5154465
+  },
+  "stage_usage": {
+    "assessment.json": {
+      "input": 852911,
+      "output": 156332,
+      "cached": 280832,
+      "calls": 323,
+      "estimated_usd": 3.8453855
+    },
+    "judge.json": {
+      "input": 777646,
+      "output": 103654,
+      "cached": 368384,
+      "calls": 120,
+      "estimated_usd": 2.670061
+    }
+  }
+}

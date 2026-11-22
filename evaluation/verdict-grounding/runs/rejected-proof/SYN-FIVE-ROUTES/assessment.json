@@ -1,0 +1,71 @@
+{
+  "case": "SYN-FIVE-ROUTES",
+  "model": "gpt-5.4",
+  "runtime": {
+    "agent.py": "a05ce765ed68bdd3bdef1b319c2349e39f60e2abf7d2c923502295582c8aff21",
+    "providers.py": "962429f31c4ffda86024918916638aefa135c62ce4fc69a7d9003539d1c9938f",
+    "reconcile.py": "cdfb5f40c1e831b64f5575a7f5833aae1e34865f6106c33de3f22dddf2bacbee",
+    "openai_provider.py": "cebdca8526ccb8ebec3b83da3c0e0cec2b6f2b39797dae0a4ce15e88cbe09f59"
+  },
+  "inputs_sha256": "b51f437e88e4db2e7fd1f90fe6855ad8c413a7d1bdaec1dac5125c3e506b5cfe",
+  "as_of": "2026-11-22",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 5.655999999999949,
+      "request_id": "req_a509cc47154e49c9a3307234c16c71bc",
+      "usage": {
+        "input_tokens": 3143,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 391,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3534
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 5.7970000000000255,
+      "request_id": "req_f5a41128c5f5461c896f23afed01b9e1",
+      "usage": {
+        "input_tokens": 3164,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 1792
+        },
+        "output_tokens": 416,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3580
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "status": "ERROR",
+  "error_type": "ProviderError",
+  "error": "Copy the distinctive original scope mention from its cited passage."
+}

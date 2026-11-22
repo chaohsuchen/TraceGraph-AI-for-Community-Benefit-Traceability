@@ -1,0 +1,19 @@
+{
+  "case_id": "SYN-REVISED-DEPOT",
+  "query": "Has Pine District opened the new North Bank service depot?",
+  "organization": "Pine District",
+  "title": "Opening the North Bank service depot",
+  "description": "Pine District undertook to open the North Bank service depot.",
+  "scope_hints": ["Pine District opens its new North Bank service depot."],
+  "date": "2026-11-22",
+  "passages": [
+    {"id":"S1", "title":"District capital program", "url":"https://pine.example.invalid/capital-program", "quote":"Pine District will open the North Bank service depot; the initial target is October 2026."},
+    {"id":"S2", "title":"November board minutes", "url":"https://pine.example.invalid/board-minutes", "quote":"On November 4, 2026 the board revised the scheduled North Bank depot opening to April 2027 and retained the capital project in the budget."},
+    {"id":"S3", "title":"November inspection", "url":"https://pine.example.invalid/inspection", "quote":"At our November 18, 2026 inspection of the North Bank depot site, construction had not begun and no depot services were operating."}
+  ],
+  "evaluator_only": {
+    "facts": [{"id":"G1","text":"The original target for the North Bank depot was October 2026."},{"id":"G2","text":"The district moved the opening target to April 2027 and kept the project in its budget."},{"id":"G3","text":"Construction and service had not started as of the November 18, 2026 inspection."}],
+    "conditions": [{"id":"K1","text":"Pine District actually opened its North Bank service depot by the verification date."}],
+    "expected":"Construction and service had not begun on the inspection date, and the new April 2027 opening date is a plan; neither support actual delivery or abandonment of the project."
+  }
+}

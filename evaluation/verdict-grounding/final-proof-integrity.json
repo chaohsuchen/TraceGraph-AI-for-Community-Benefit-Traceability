@@ -1,0 +1,35 @@
+{
+  "formal_grades": {
+    "JUSTIFIED": 16,
+    "OVERCLAIM": 1
+  },
+  "h017": "JUSTIFIED",
+  "new_outputs": {
+    "PUB-ELIZABETH": [
+      "UNVERIFIED",
+      "OVERCLAIM"
+    ],
+    "SYN-FIVE-ROUTES": [
+      "REFUTED",
+      "OVERCLAIM"
+    ],
+    "SYN-REVISED-DEPOT": [
+      "UNVERIFIED",
+      "OVERCLAIM"
+    ]
+  },
+  "additional_usage": {
+    "input": 16992,
+    "output": 2076,
+    "cached": 1792,
+    "calls": 7,
+    "estimated_usd": 0.069588
+  },
+  "runtime": {
+    "agent.py": "a05ce765ed68bdd3bdef1b319c2349e39f60e2abf7d2c923502295582c8aff21",
+    "providers.py": "bb319def975c4ffbf361cbaafcf6ba79e04c8dc1516a32d094f02a9060f21f18",
+    "reconcile.py": "e34b4c6024d8184e276a59f738b9ab346f0ac9042c975c98b3769ceba41ba748",
+    "openai_provider.py": "cebdca8526ccb8ebec3b83da3c0e0cec2b6f2b39797dae0a4ce15e88cbe09f59",
+    "runtime.py": "1020f5850d6916b1efd445c21c8079808dc09b60e5bee194c5fcacf85f0fe654"
+  }
+}

@@ -76,8 +76,9 @@ def assessor_pin(runtime):
             for name in ("agent.py", "providers.py", "reconcile.py", "openai_provider.py")}
 
 
-def synthetic_inputs():
-    fixture = read(ROOT / "fixtures/scope-negative.json")
+def synthetic_inputs(fixture=None):
+    if fixture is None:
+        fixture = read(ROOT / "fixtures/scope-negative.json")
     findings = [{"id": "f"+p["id"], "claim": p["quote"], "supports": [{
         "id": "s"+p["id"], "source": {"url": p["url"], "title": p["title"], "citation":p["url"]},
         "excerpt": p["quote"], "locator": "Synthetic excerpt", "retrieved_at": fixture["date"]+"T00:00:00Z",
@@ -111,7 +112,8 @@ def assess(args, cid, folder, *, frozen_inputs=None):
     client = OpenAIClient(api_key=read_credential(args.key_file, provider="openai"),
                           model=MODEL, allow_web_search=False, emit=record_call)
     judge = ClaudeReconciliationJudge(client)
-    reconciler = EvidenceReconciler(judge, assessor=judge.assess,
+    recovery = {"recover_delivery": judge.recover_delivery} if hasattr(judge, "recover_delivery") else {}
+    reconciler = EvidenceReconciler(judge, assessor=judge.assess, **recovery,
                                     verify_refutation=judge.verify_refutation, verify_conflicts=judge.verify_conflicts)
     try:
         with_frozen_date = args.as_of
@@ -127,7 +129,7 @@ def assess(args, cid, folder, *, frozen_inputs=None):
     return displayed["label"]
 
 
-def grade(args, cid, folder):
+def grade(args, cid, folder, *, fixture=None, repair_evidence_format=False, frozen_synthetic_evidence=None):
     from tracegraph.nli_judge import JUDGE_VERSION, rubric_digest, judge_evidence, judge_verdict
     from tracegraph.nli_packet import prediction_from_research
     from tracegraph.nli_score import score_case, validate_evidence
@@ -136,11 +138,13 @@ def grade(args, cid, folder):
     local = ROOT / "runs" / args.arm / cid
     result = read(local / "assessment.json")
     assert result["status"] == "COMPLETED"
-    if cid == SYNTHETIC:
-        fixture = read(ROOT/"fixtures/scope-negative.json")
-        context, snapshot, _ = synthetic_inputs()
+    synthetic = fixture is not None or cid == SYNTHETIC
+    if synthetic:
+        if fixture is None:
+            fixture = read(ROOT/"fixtures/scope-negative.json")
+        context, snapshot, _ = synthetic_inputs(fixture)
         gold = {"case_id":cid, "query":fixture["query"], "conditions":fixture["evaluator_only"]["conditions"],
-                "facts":[{"id":"G1","text":fixture["passages"][0]["quote"]}]}
+                "facts":fixture["evaluator_only"].get("facts", [{"id":"G1","text":fixture["passages"][0]["quote"]}])}
         research = {"query":fixture["query"], "outcome":"RESOLVED",
                     "graph":{**snapshot, "organization":{"name":fixture["organization"]},
                              "commitment":context["commitment"], "assessment":result["displayed"]}}
@@ -155,11 +159,18 @@ def grade(args, cid, folder):
     graph = deepcopy(prediction)
     graph["assessment"] = result["displayed"]
     target = local / "judge.json"
-    if target.exists():
-        raise ValueError(f"Retain existing judge attempt for {cid}.")
     receipt = {"case": cid, "model": MODEL, "version": JUDGE_VERSION, "rubric_sha256": rubric_digest(),
                "research_sha256": digest(research), "displayed_sha256": digest(result["displayed"]),
                "original": prior, "calls": []}
+    if repair_evidence_format:
+        previous = read(target)
+        assert synthetic and prior is None and "result" not in previous and "evidence" not in previous
+        assert all(previous[k] == v for k,v in receipt.items() if k != "calls")
+        assert len(previous["evidence_rejections"]) == 2 and "evidence_format_retry" not in previous
+        receipt = previous
+        receipt["evidence_format_retry"] = "One quote_check per citation ID per fact; retain the frozen rubric."
+    elif target.exists():
+        raise ValueError(f"Retain existing judge attempt for {cid}.")
     write(target, receipt)
 
     def emit(event):
@@ -169,9 +180,18 @@ def grade(args, cid, folder):
 
     client = OpenAIClient(api_key=read_credential(args.key_file, provider="openai"),
                           model=MODEL, allow_web_search=False, emit=emit)
-    if cid == SYNTHETIC:
-        correction = None
-        for _ in range(2):
+    if frozen_synthetic_evidence is not None:
+        assert synthetic and not repair_evidence_format
+        receipt["evidence"] = saved["evidence"] = frozen_synthetic_evidence
+        receipt["reused_evidence_sha256"] = digest(frozen_synthetic_evidence)
+        write(target,receipt)
+    elif synthetic:
+        correction = (receipt["evidence_rejections"][-1]["error"] +
+                      ". For each individual coverage fact include EXACTLY ONE quote_check per cited ID. "
+                      "If two parts of a fact come from one excerpt, return ONE continuous literal quotation "
+                      "covering both parts; do not repeat the same citation ID in that fact's quote_checks."
+                      if repair_evidence_format else None)
+        for _ in range(1 if repair_evidence_format else 2):
             observed = judge_evidence(client, gold, graph, correction=correction)
             try:
                 validate_evidence(gold, graph, observed, require_quote_checks=True)

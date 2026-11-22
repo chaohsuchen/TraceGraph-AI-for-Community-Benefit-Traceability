@@ -1,0 +1,869 @@
+{
+  "case": "SYN-REVISED-DEPOT",
+  "model": "gpt-5.4",
+  "version": "tracegraph-nli-v4-owned-quotes",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "research_sha256": "17724bce6c62d7f1aec3d1adc1bf09fe6e07dac6118cedd244259eb22d221510",
+  "displayed_sha256": "becf73a28db7c56721a19044e28227ef0e1dc2fc76f7aced36287a2031beaf44",
+  "original": null,
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 10.905999999999949,
+      "request_id": "req_8e98940992d24ff1ba160e350b9a3559",
+      "usage": {
+        "input_tokens": 2342,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 1250,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3592
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 10.594000000000051,
+      "request_id": "req_2f9e5a11c74a435e81f6cc1386d77e8a",
+      "usage": {
+        "input_tokens": 2359,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 1792
+        },
+        "output_tokens": 1287,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3646
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 10.313000000000102,
+      "request_id": "req_5e4f971dea9f4e8eae5f8f473d4e33db",
+      "usage": {
+        "input_tokens": 2409,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 1792
+        },
+        "output_tokens": 1193,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3602
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 3.6410000000000764,
+      "request_id": "req_104ed31cf20d4f8486cf9970e95b2a12",
+      "usage": {
+        "input_tokens": 3278,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 301,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3579
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "evidence_rejections": [
+    {
+      "response": {
+        "identity": {
+          "label": "MATCH",
+          "reason": "The returned commitment and findings concern Pine District's undertaking to open the North Bank service depot, the same organization, facility, and obligation asked about."
+        },
+        "findings": [
+          {
+            "finding_id": "fS1",
+            "claims": [
+              {
+                "claim": "Pine District will open the North Bank service depot.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "sS1"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "sS1",
+                    "quote": "Pine District will open the North Bank service depot",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the undertaking to open the depot."
+                  }
+                ],
+                "reason": "The excerpt expressly says Pine District will open the North Bank service depot."
+              },
+              {
+                "claim": "The initial target for the North Bank service depot is October 2026.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "sS1"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "sS1",
+                    "quote": "the initial target is October 2026",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly gives October 2026 as the initial target."
+                  }
+                ],
+                "reason": "The excerpt explicitly identifies October 2026 as the initial target."
+              }
+            ]
+          },
+          {
+            "finding_id": "fS2",
+            "claims": [
+              {
+                "claim": "On November 4, 2026 the board revised the scheduled North Bank depot opening to April 2027.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "sS2"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "sS2",
+                    "quote": "On November 4, 2026 the board revised the scheduled North Bank depot opening to April 2027",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the revision date and new opening target."
+                  }
+                ],
+                "reason": "The excerpt expressly states the opening was revised to April 2027 on November 4, 2026."
+              },
+              {
+                "claim": "The board retained the North Bank depot capital project in the budget.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "sS2"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "sS2",
+                    "quote": "retained the capital project in the budget",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the project remained in the budget."
+                  }
+                ],
+                "reason": "The excerpt explicitly says the capital project was retained in the budget."
+              }
+            ]
+          },
+          {
+            "finding_id": "fS3",
+            "claims": [
+              {
+                "claim": "At the November 18, 2026 inspection of the North Bank depot site, construction had not begun.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "sS3"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "sS3",
+                    "quote": "At our November 18, 2026 inspection of the North Bank depot site, construction had not begun",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states that construction had not begun at that inspection."
+                  }
+                ],
+                "reason": "The excerpt expressly says construction had not begun as of the November 18, 2026 inspection."
+              },
+              {
+                "claim": "At the November 18, 2026 inspection of the North Bank depot site, no depot services were operating.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "sS3"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "sS3",
+                    "quote": "no depot services were operating",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states that service was not operating at that inspection."
+                  }
+                ],
+                "reason": "The excerpt explicitly states no depot services were operating as of the inspection."
+              }
+            ]
+          }
+        ],
+        "coverage": [
+          {
+            "gold_id": "G1",
+            "finding_ids": [
+              "fS1"
+            ],
+            "citation_ids": [
+              "sS1"
+            ],
+            "label": "ENTAILMENT",
+            "reason": "Finding fS1 states that the initial target was October 2026, and its excerpt directly supports that fact.",
+            "claim_links": [
+              {
+                "finding_id": "fS1",
+                "claim_index": 1,
+                "label": "ENTAILMENT",
+                "reason": "This claim matches the original target date in G1."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "sS1",
+                "quote": "the initial target is October 2026",
+                "label": "ENTAILMENT",
+                "reason": "This directly establishes October 2026 as the original target."
+              }
+            ]
+          },
+          {
+            "gold_id": "G2",
+            "finding_ids": [
+              "fS2"
+            ],
+            "citation_ids": [
+              "sS2"
+            ],
+            "label": "ENTAILMENT",
+            "reason": "Finding fS2 states the opening target was revised to April 2027 and the project remained in the budget, matching both parts of G2.",
+            "claim_links": [
+              {
+                "finding_id": "fS2",
+                "claim_index": 0,
+                "label": "ENTAILMENT",
+                "reason": "This claim establishes the moved opening target of April 2027."
+              },
+              {
+                "finding_id": "fS2",
+                "claim_index": 1,
+                "label": "ENTAILMENT",
+                "reason": "This claim establishes that the project was kept in the budget."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "sS2",
+                "quote": "revised the scheduled North Bank depot opening to April 2027",
+                "label": "ENTAILMENT",
+                "reason": "This directly supports the moved opening target."
+              },
+              {
+                "citation_id": "sS2",
+                "quote": "retained the capital project in the budget",
+                "label": "ENTAILMENT",
+                "reason": "This directly supports that the project stayed in the budget."
+              }
+            ]
+          },
+          {
+            "gold_id": "G3",
+            "finding_ids": [
+              "fS3"
+            ],
+            "citation_ids": [
+              "sS3"
+            ],
+            "label": "ENTAILMENT",
+            "reason": "Finding fS3 states that construction had not begun and no depot services were operating at the November 18, 2026 inspection, matching G3.",
+            "claim_links": [
+              {
+                "finding_id": "fS3",
+                "claim_index": 0,
+                "label": "ENTAILMENT",
+                "reason": "This claim establishes that construction had not started by the inspection date."
+              },
+              {
+                "finding_id": "fS3",
+                "claim_index": 1,
+                "label": "ENTAILMENT",
+                "reason": "This claim establishes that service had not started by the inspection date."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "sS3",
+                "quote": "construction had not begun",
+                "label": "ENTAILMENT",
+                "reason": "This directly establishes that construction had not started."
+              },
+              {
+                "citation_id": "sS3",
+                "quote": "no depot services were operating",
+                "label": "ENTAILMENT",
+                "reason": "This directly establishes that service had not started."
+              }
+            ]
+          }
+        ]
+      },
+      "error": "G2 quote checks: duplicate sS2"
+    },
+    {
+      "response": {
+        "identity": {
+          "label": "MATCH",
+          "reason": "The returned commitment and findings concern Pine District's undertaking to open the North Bank service depot, matching the same organization, obligation, scope, and project named in the question."
+        },
+        "findings": [
+          {
+            "finding_id": "fS1",
+            "claims": [
+              {
+                "claim": "Pine District will open the North Bank service depot.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "sS1"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "sS1",
+                    "quote": "Pine District will open the North Bank service depot",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the undertaking to open the depot."
+                  }
+                ],
+                "reason": "The cited excerpt expressly says Pine District will open the North Bank service depot."
+              },
+              {
+                "claim": "The initial target for the North Bank service depot is October 2026.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "sS1"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "sS1",
+                    "quote": "the initial target is October 2026",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly gives October 2026 as the initial target."
+                  }
+                ],
+                "reason": "The excerpt explicitly identifies October 2026 as the initial target."
+              }
+            ]
+          },
+          {
+            "finding_id": "fS2",
+            "claims": [
+              {
+                "claim": "On November 4, 2026 the board revised the scheduled North Bank depot opening to April 2027.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "sS2"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "sS2",
+                    "quote": "On November 4, 2026 the board revised the scheduled North Bank depot opening to April 2027",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the date of revision and the new opening target."
+                  }
+                ],
+                "reason": "The excerpt expressly states that on November 4, 2026 the opening was revised to April 2027."
+              },
+              {
+                "claim": "The capital project was retained in the budget.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "sS2"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "sS2",
+                    "quote": "retained the capital project in the budget",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states the project remained in the budget."
+                  }
+                ],
+                "reason": "The excerpt explicitly says the capital project was retained in the budget."
+              }
+            ]
+          },
+          {
+            "finding_id": "fS3",
+            "claims": [
+              {
+                "claim": "At the November 18, 2026 inspection of the North Bank depot site, construction had not begun.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "sS3"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "sS3",
+                    "quote": "At our November 18, 2026 inspection of the North Bank depot site, construction had not begun",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states that construction had not begun as of the inspection."
+                  }
+                ],
+                "reason": "The excerpt expressly says construction had not begun at the November 18, 2026 inspection."
+              },
+              {
+                "claim": "At the November 18, 2026 inspection of the North Bank depot site, no depot services were operating.",
+                "label": "ENTAILMENT",
+                "citation_ids": [
+                  "sS3"
+                ],
+                "quote_checks": [
+                  {
+                    "citation_id": "sS3",
+                    "quote": "no depot services were operating",
+                    "label": "ENTAILMENT",
+                    "reason": "The quote directly states that service was not operating at the inspection date."
+                  }
+                ],
+                "reason": "The excerpt expressly states that no depot services were operating at the inspection."
+              }
+            ]
+          }
+        ],
+        "coverage": [
+          {
+            "gold_id": "G1",
+            "finding_ids": [
+              "fS1"
+            ],
+            "citation_ids": [
+              "sS1"
+            ],
+            "label": "ENTAILMENT",
+            "reason": "Finding fS1 states the original target was October 2026, and its cited excerpt directly supports that fact.",
+            "claim_links": [
+              {
+                "finding_id": "fS1",
+                "claim_index": 1,
+                "label": "ENTAILMENT",
+                "reason": "This claim directly matches the original target date."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "sS1",
+                "quote": "the initial target is October 2026",
+                "label": "ENTAILMENT",
+                "reason": "Initial target and original target align here, and the month and year match exactly."
+              }
+            ]
+          },
+          {
+            "gold_id": "G2",
+            "finding_ids": [
+              "fS2"
+            ],
+            "citation_ids": [
+              "sS2"
+            ],
+            "label": "ENTAILMENT",
+            "reason": "Finding fS2 states the opening target was revised to April 2027 and the project stayed in the budget, both directly supported by its excerpt.",
+            "claim_links": [
+              {
+                "finding_id": "fS2",
+                "claim_index": 0,
+                "label": "ENTAILMENT",
+                "reason": "This claim matches the moved opening target to April 2027."
+              },
+              {
+                "finding_id": "fS2",
+                "claim_index": 1,
+                "label": "ENTAILMENT",
+                "reason": "This claim matches that the project was kept in the budget."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "sS2",
+                "quote": "revised the scheduled North Bank depot opening to April 2027",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly establishes the new target date."
+              },
+              {
+                "citation_id": "sS2",
+                "quote": "retained the capital project in the budget",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly establishes that the project remained in the budget."
+              }
+            ]
+          },
+          {
+            "gold_id": "G3",
+            "finding_ids": [
+              "fS3"
+            ],
+            "citation_ids": [
+              "sS3"
+            ],
+            "label": "ENTAILMENT",
+            "reason": "Finding fS3 states that construction and service had not started as of the November 18, 2026 inspection, and the excerpt directly supports both parts.",
+            "claim_links": [
+              {
+                "finding_id": "fS3",
+                "claim_index": 0,
+                "label": "ENTAILMENT",
+                "reason": "This claim covers that construction had not started by the inspection date."
+              },
+              {
+                "finding_id": "fS3",
+                "claim_index": 1,
+                "label": "ENTAILMENT",
+                "reason": "This claim covers that service was not operating by the inspection date."
+              }
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "sS3",
+                "quote": "At our November 18, 2026 inspection of the North Bank depot site, construction had not begun",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly establishes non-start of construction as of the inspection."
+              },
+              {
+                "citation_id": "sS3",
+                "quote": "no depot services were operating",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly establishes that service had not started as of the inspection."
+              }
+            ]
+          }
+        ]
+      },
+      "error": "G2 quote checks: duplicate sS2"
+    }
+  ],
+  "evidence_format_retry": "One quote_check per citation ID per fact; retain the frozen rubric.",
+  "evidence": {
+    "identity": {
+      "label": "MATCH",
+      "reason": "The returned commitment and findings concern Pine District's undertaking to open the North Bank service depot, the same organization, obligation, and project named in the question."
+    },
+    "findings": [
+      {
+        "finding_id": "fS1",
+        "claims": [
+          {
+            "claim": "Pine District will open the North Bank service depot.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "sS1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "sS1",
+                "quote": "Pine District will open the North Bank service depot",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the undertaking to open the depot."
+              }
+            ],
+            "reason": "The excerpt expressly states Pine District will open the depot."
+          },
+          {
+            "claim": "The initial target is October 2026.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "sS1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "sS1",
+                "quote": "the initial target is October 2026",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly gives the original target date."
+              }
+            ],
+            "reason": "The excerpt explicitly identifies October 2026 as the initial target."
+          }
+        ]
+      },
+      {
+        "finding_id": "fS2",
+        "claims": [
+          {
+            "claim": "On November 4, 2026 the board revised the scheduled North Bank depot opening to April 2027.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "sS2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "sS2",
+                "quote": "On November 4, 2026 the board revised the scheduled North Bank depot opening to April 2027",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the revised opening target and the date of the revision statement."
+              }
+            ],
+            "reason": "The excerpt expressly says the board revised the opening to April 2027."
+          },
+          {
+            "claim": "The board retained the capital project in the budget.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "sS2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "sS2",
+                "quote": "retained the capital project in the budget",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the project remained in the budget."
+              }
+            ],
+            "reason": "The excerpt explicitly states the project was retained in the budget."
+          }
+        ]
+      },
+      {
+        "finding_id": "fS3",
+        "claims": [
+          {
+            "claim": "At the November 18, 2026 inspection of the North Bank depot site, construction had not begun.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "sS3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "sS3",
+                "quote": "At our November 18, 2026 inspection of the North Bank depot site, construction had not begun",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states that construction had not begun as of that inspection."
+              }
+            ],
+            "reason": "The excerpt expressly states construction had not begun at the November 18, 2026 inspection."
+          },
+          {
+            "claim": "At the November 18, 2026 inspection, no depot services were operating.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "sS3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "sS3",
+                "quote": "no depot services were operating",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states service was not operating at that inspection."
+              }
+            ],
+            "reason": "The excerpt expressly states no depot services were operating at the inspection."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "fS1"
+        ],
+        "citation_ids": [
+          "sS1"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Finding fS1 states and its excerpt establishes that the original target was October 2026.",
+        "claim_links": [
+          {
+            "finding_id": "fS1",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "This claim exactly matches the original target date."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "sS1",
+            "quote": "the initial target is October 2026",
+            "label": "ENTAILMENT",
+            "reason": "This directly establishes the original target month and year."
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [
+          "fS2"
+        ],
+        "citation_ids": [
+          "sS2"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Finding fS2 and its excerpt jointly establish both the revised opening target of April 2027 and that the project remained in the budget.",
+        "claim_links": [
+          {
+            "finding_id": "fS2",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim gives the revised opening target of April 2027."
+          },
+          {
+            "finding_id": "fS2",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "This claim states the project was retained in the budget."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "sS2",
+            "quote": "On November 4, 2026 the board revised the scheduled North Bank depot opening to April 2027 and retained the capital project in the budget.",
+            "label": "ENTAILMENT",
+            "reason": "This single continuous quote establishes both the revised target and continued budget inclusion."
+          }
+        ]
+      },
+      {
+        "gold_id": "G3",
+        "finding_ids": [
+          "fS3"
+        ],
+        "citation_ids": [
+          "sS3"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Finding fS3 and its excerpt establish that as of the November 18, 2026 inspection neither construction nor service had started.",
+        "claim_links": [
+          {
+            "finding_id": "fS3",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim establishes construction had not started by the inspection."
+          },
+          {
+            "finding_id": "fS3",
+            "claim_index": 1,
+            "label": "ENTAILMENT",
+            "reason": "This claim establishes service was not operating by the inspection."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "sS3",
+            "quote": "At our November 18, 2026 inspection of the North Bank depot site, construction had not begun and no depot services were operating.",
+            "label": "ENTAILMENT",
+            "reason": "This single continuous quote establishes both that construction had not started and that service was not operating as of the inspection."
+          }
+        ]
+      }
+    ]
+  },
+  "evidence_judgment_sha256": "af786dbe910d464ea27802aac71657150ef20c0ec84b1578be7194dd266fddbb",
+  "result": {
+    "label": "OVERCLAIM",
+    "reason": "The final assessment materially understates the available evidence: by the 2026-11-22 verification date, the excerpts support that the depot had not opened, not merely that delivery was unverified.",
+    "conditions": [
+      {
+        "condition_id": "K1",
+        "label": "CONTRADICTION",
+        "citation_ids": [
+          "sS2",
+          "sS3"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "sS2",
+            "quote": "On November 4, 2026 the board revised the scheduled North Bank depot opening to April 2027",
+            "label": "CONTRADICTION",
+            "reason": "If the opening was rescheduled to April 2027 on November 4, 2026, the depot had not already opened by the November 22, 2026 verification date."
+          },
+          {
+            "citation_id": "sS3",
+            "quote": "At our November 18, 2026 inspection of the North Bank depot site, construction had not begun and no depot services were operating.",
+            "label": "CONTRADICTION",
+            "reason": "Four days before verification, the site had no construction and no operating depot services, which is incompatible with the depot having actually opened by November 22, 2026."
+          }
+        ],
+        "reason": "The condition requires actual opening by 2026-11-22, but the opening was still rescheduled for April 2027 and as of 2026-11-18 construction had not begun and no services were operating."
+      }
+    ]
+  },
+  "score": {
+    "case_id": "SYN-REVISED-DEPOT",
+    "identity": "MATCH",
+    "reference_coverage": {
+      "numerator": 3,
+      "denominator": 3,
+      "rate": 1.0
+    },
+    "finding_support": {
+      "numerator": 6,
+      "denominator": 6,
+      "rate": 1.0
+    },
+    "traceability": {
+      "numerator": 6,
+      "denominator": 6,
+      "rate": 1.0
+    },
+    "claim_count": 6,
+    "evidence_eligible_claims": 6,
+    "unquoted_claims": 0,
+    "credited_reference_ids": [
+      "G1",
+      "G2",
+      "G3"
+    ],
+    "coverage_labels": {
+      "ENTAILMENT": 3,
+      "CONTRADICTION": 0,
+      "NEUTRAL": 0,
+      "MISSING": 0
+    },
+    "finding_labels": {
+      "ENTAILMENT": 6,
+      "CONTRADICTION": 0,
+      "NEUTRAL": 0
+    },
+    "citation_audit": "OWNED_QUOTES_V1",
+    "verdict": "OVERCLAIM",
+    "verdict_evaluation": {
+      "applicable": true,
+      "reason": null,
+      "label": "OVERCLAIM"
+    }
+  }
+}

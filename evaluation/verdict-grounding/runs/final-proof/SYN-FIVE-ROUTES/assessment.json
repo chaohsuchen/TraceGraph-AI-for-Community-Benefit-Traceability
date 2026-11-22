@@ -1,0 +1,196 @@
+{
+  "case": "SYN-FIVE-ROUTES",
+  "model": "gpt-5.4",
+  "runtime": {
+    "agent.py": "a05ce765ed68bdd3bdef1b319c2349e39f60e2abf7d2c923502295582c8aff21",
+    "providers.py": "bb319def975c4ffbf361cbaafcf6ba79e04c8dc1516a32d094f02a9060f21f18",
+    "reconcile.py": "e34b4c6024d8184e276a59f738b9ab346f0ac9042c975c98b3769ceba41ba748",
+    "openai_provider.py": "cebdca8526ccb8ebec3b83da3c0e0cec2b6f2b39797dae0a4ce15e88cbe09f59"
+  },
+  "inputs_sha256": "b51f437e88e4db2e7fd1f90fe6855ad8c413a7d1bdaec1dac5125c3e506b5cfe",
+  "as_of": "2026-11-22",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 5.108999999999924,
+      "request_id": "req_e4b972c289c94d30864815e87b7475ea",
+      "usage": {
+        "input_tokens": 3143,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 386,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3529
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 5.514999999999873,
+      "request_id": "req_4c46db32db584ce2bf4b739cdee0ab0a",
+      "usage": {
+        "input_tokens": 3164,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 1792
+        },
+        "output_tokens": 446,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3610
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 1.2029999999999745,
+      "request_id": "req_39c00d235b144f8b9119c658c7ed28ba",
+      "usage": {
+        "input_tokens": 302,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 17,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 319
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 1.2660000000000764,
+      "request_id": "req_efa24547ea0444aa939bc16dcf0051a5",
+      "usage": {
+        "input_tokens": 405,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 16,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 421
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "status": "COMPLETED",
+  "trace": {
+    "scope_locks": [],
+    "not_yet_due": [],
+    "criteria": [
+      {
+        "criterion": "Estuary Transit Authority provided five overnight shuttle routes.",
+        "required_elements": [
+          "Estuary Transit Authority provided overnight shuttle routes",
+          "The number of routes provided was five"
+        ],
+        "scope_criteria": [
+          "s1"
+        ],
+        "promise_scope": "Promisor: Estuary Transit Authority. Intended beneficiaries: unspecified riders/public. Location: unspecified. Benefit: provide five overnight shuttle routes.",
+        "observed_scope": "No delivery evidence is provided. Instead, a withdrawal notice states the authority withdrew this commitment. Recipients and location remain unspecified.",
+        "promise_citation_ids": [
+          "c1"
+        ],
+        "delivery_citation_ids": [],
+        "delivery_status": "REFUTED",
+        "timing_requirement": "",
+        "explanation": "c1 documents the original undertaking: 'The Estuary Transit Authority commits to provide five overnight shuttle routes.' c2 is direct official evidence that this exact commitment was withdrawn: 'The authority has withdrawn its commitment to provide five overnight shuttle routes.'",
+        "gap": "There is no evidence in the supplied citations that the five overnight shuttle routes were actually provided.",
+        "locked_scopes": [],
+        "delivery_support": []
+      }
+    ],
+    "label": "REFUTED",
+    "verdict": "The promise is documented, but the supplied evidence does not show delivery. Instead, an official withdrawal notice directly states that the Estuary Transit Authority withdrew its commitment to provide five overnight shuttle routes, so the claim that it provided them is refuted on this record.",
+    "reasoning": "Requested scope: Did the Estuary Transit Authority provide the five overnight shuttle routes it committed to?\n\nThe original undertaking in c1 is a general commitment by the Estuary Transit Authority to provide five overnight shuttle routes, with no narrower site or beneficiary scope stated in the cited text. The only outcome evidence supplied is c2, an official withdrawal notice expressly withdrawing that same commitment. That is direct evidence incompatible with fulfillment of the exact promised action in this record. Because no citation shows the routes were actually provided, and c2 directly withdraws the promise, the requested outcome is refuted rather than merely unverified.\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “The Estuary Transit Authority commits to provide five overnight shuttle routes.”\nhttps://estuary.example.invalid/agreement\n\nc2: “The authority has withdrawn its commitment to provide five overnight shuttle routes.”\nhttps://estuary.example.invalid/board-notice",
+    "refutation": [
+      {
+        "basis": "OFFICIAL_WITHDRAWAL",
+        "finding_id": "fS2",
+        "quote": "The authority has withdrawn its commitment to provide five overnight shuttle routes."
+      }
+    ],
+    "scope_validation": "UNAVAILABLE",
+    "scope_anchors": {
+      "s1": "The authority provides the five overnight shuttle routes."
+    },
+    "citations": {
+      "c1": {
+        "source": {
+          "title": "Service agreement",
+          "url": "https://estuary.example.invalid/agreement",
+          "citation": "https://estuary.example.invalid/agreement"
+        },
+        "excerpt": "The Estuary Transit Authority commits to provide five overnight shuttle routes.",
+        "locator": "Synthetic excerpt",
+        "retrieved_at": "2026-11-22T00:00:00Z",
+        "finding_id": "fS1"
+      },
+      "c2": {
+        "source": {
+          "title": "Authority withdrawal notice",
+          "url": "https://estuary.example.invalid/board-notice",
+          "citation": "https://estuary.example.invalid/board-notice"
+        },
+        "excerpt": "The authority has withdrawn its commitment to provide five overnight shuttle routes.",
+        "locator": "Synthetic excerpt",
+        "retrieved_at": "2026-11-22T00:00:00Z",
+        "finding_id": "fS2"
+      }
+    },
+    "scope_gap": ""
+  },
+  "displayed": {
+    "label": "REFUTED",
+    "verdict": "The promise is documented, but the supplied evidence does not show delivery. Instead, an official withdrawal notice directly states that the Estuary Transit Authority withdrew its commitment to provide five overnight shuttle routes, so the claim that it provided them is refuted on this record.",
+    "reasoning": "Requested scope: Did the Estuary Transit Authority provide the five overnight shuttle routes it committed to?\n\nThe original undertaking in c1 is a general commitment by the Estuary Transit Authority to provide five overnight shuttle routes, with no narrower site or beneficiary scope stated in the cited text. The only outcome evidence supplied is c2, an official withdrawal notice expressly withdrawing that same commitment. That is direct evidence incompatible with fulfillment of the exact promised action in this record. Because no citation shows the routes were actually provided, and c2 directly withdraws the promise, the requested outcome is refuted rather than merely unverified.\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “The Estuary Transit Authority commits to provide five overnight shuttle routes.”\nhttps://estuary.example.invalid/agreement\n\nc2: “The authority has withdrawn its commitment to provide five overnight shuttle routes.”\nhttps://estuary.example.invalid/board-notice\n\nDirect evidence from https://estuary.example.invalid/board-notice. “The authority has withdrawn its commitment to provide five overnight shuttle routes.”",
+    "verification_date": "2026-11-22"
+  }
+}

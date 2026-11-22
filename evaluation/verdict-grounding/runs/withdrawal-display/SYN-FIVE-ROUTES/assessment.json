@@ -1,0 +1,93 @@
+{
+  "case": "SYN-FIVE-ROUTES",
+  "source_trace_sha256": "3dd75dd53ba08517f20ea93239b9eb3c0a9a68333fb8739fc892922a5fd30117",
+  "upstream_proof": {
+    "basis": "OFFICIAL_WITHDRAWAL",
+    "finding_id": "fS2",
+    "quote": "The authority has withdrawn its commitment to provide five overnight shuttle routes."
+  },
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 1.0630000000001019,
+      "request_id": "req_7487a55324f848179e7c9e275e9eeee3",
+      "usage": {
+        "input_tokens": 302,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 17,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 319
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 1.030999999999949,
+      "request_id": "req_b3091584d4ba440a9e4a9e8d279ff762",
+      "usage": {
+        "input_tokens": 405,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 16,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 421
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "verification": [
+    {
+      "basis": "OFFICIAL_WITHDRAWAL"
+    },
+    {
+      "directly_refutes": true
+    }
+  ],
+  "status": "COMPLETED",
+  "inputs_sha256": "b51f437e88e4db2e7fd1f90fe6855ad8c413a7d1bdaec1dac5125c3e506b5cfe",
+  "runtime": {
+    "agent.py": "a05ce765ed68bdd3bdef1b319c2349e39f60e2abf7d2c923502295582c8aff21",
+    "providers.py": "9b5af0a44997dd26979ddc6f13a8139047a1144f834c63ca27f9032324b25fdf",
+    "reconcile.py": "e45ffbec7659f2ff4cfe06603dbb75ca29c677b8bb9fa48b59a918aed18ccd40",
+    "openai_provider.py": "cebdca8526ccb8ebec3b83da3c0e0cec2b6f2b39797dae0a4ce15e88cbe09f59"
+  },
+  "runtime_py": "1020f5850d6916b1efd445c21c8079808dc09b60e5bee194c5fcacf85f0fe654",
+  "verified_refutation": {
+    "basis": "OFFICIAL_WITHDRAWAL",
+    "finding_id": "fS2",
+    "quote": "The authority has withdrawn its commitment to provide five overnight shuttle routes."
+  },
+  "displayed": {
+    "label": "REFUTED",
+    "verdict": "The commitment was officially withdrawn. The notice alone does not establish what was delivered before withdrawal.",
+    "reasoning": "Official withdrawal: “The authority has withdrawn its commitment to provide five overnight shuttle routes.”\nhttps://estuary.example.invalid/board-notice",
+    "verification_date": "2026-11-22"
+  }
+}

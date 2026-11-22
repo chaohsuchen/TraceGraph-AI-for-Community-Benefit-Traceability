@@ -1,0 +1,245 @@
+{
+  "case": "SYN-FIVE-ROUTES",
+  "model": "gpt-5.4",
+  "version": "tracegraph-nli-v4-owned-quotes",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "research_sha256": "48e46fa200659e2667267409c619afda0c9c77d1ff9704c19f6cfbef0b7408aa",
+  "displayed_sha256": "fff81f5f7a7791133d991a18d8fc7eb713775a3722d08c2657eaa67c8b5f495d",
+  "original": null,
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 5.0,
+      "request_id": "req_1b41bf880e7d48a09f101f16480c1bfe",
+      "usage": {
+        "input_tokens": 2123,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 539,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2662
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 3.342999999999847,
+      "request_id": "req_b004216a6c284882ad020e4ff991d3d1",
+      "usage": {
+        "input_tokens": 2478,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 237,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2715
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "evidence": {
+    "identity": {
+      "label": "MATCH",
+      "reason": "The returned commitment and findings describe the same promise by Estuary Transit Authority to provide five overnight shuttle routes."
+    },
+    "findings": [
+      {
+        "finding_id": "fS1",
+        "claims": [
+          {
+            "claim": "The Estuary Transit Authority commits to provide five overnight shuttle routes.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "sS1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "sS1",
+                "quote": "The Estuary Transit Authority commits to provide five overnight shuttle routes.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the commitment, organization, obligation, and number of routes."
+              }
+            ],
+            "reason": "The attached excerpt verbatim states the commitment to provide five overnight shuttle routes."
+          }
+        ]
+      },
+      {
+        "finding_id": "fS2",
+        "claims": [
+          {
+            "claim": "The authority has withdrawn its commitment to provide five overnight shuttle routes.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "sS2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "sS2",
+                "quote": "The authority has withdrawn its commitment to provide five overnight shuttle routes.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states withdrawal of the same five-route commitment."
+              }
+            ],
+            "reason": "The attached excerpt verbatim states that the commitment was withdrawn."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "fS1"
+        ],
+        "citation_ids": [
+          "sS1"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Finding fS1 states the authority committed to operate/provide five overnight shuttle routes, and its excerpt directly supports that commitment.",
+        "claim_links": [
+          {
+            "finding_id": "fS1",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "The claim matches the reference fact's commitment to five overnight shuttle routes."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "sS1",
+            "quote": "The Estuary Transit Authority commits to provide five overnight shuttle routes.",
+            "label": "ENTAILMENT",
+            "reason": "This directly establishes the authority's commitment to five overnight shuttle routes."
+          }
+        ]
+      },
+      {
+        "gold_id": "G2",
+        "finding_ids": [
+          "fS2"
+        ],
+        "citation_ids": [
+          "sS2"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Finding fS2 states the authority withdrew the five-route commitment, and its excerpt directly supports that withdrawal.",
+        "claim_links": [
+          {
+            "finding_id": "fS2",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "The claim matches the reference fact that the commitment was officially withdrawn."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "sS2",
+            "quote": "The authority has withdrawn its commitment to provide five overnight shuttle routes.",
+            "label": "ENTAILMENT",
+            "reason": "This directly states withdrawal of the commitment."
+          }
+        ]
+      }
+    ]
+  },
+  "evidence_judgment_sha256": "8604a7d864c42b0fc45198e11ef83380b972d476cbcf528615e1729b90842711",
+  "result": {
+    "label": "OVERCLAIM",
+    "reason": "The assessment overstates the evidence by treating withdrawal of the commitment as refuting actual delivery; the supplied excerpts prove the pledge and its withdrawal, but do not establish whether the authority did or did not in fact provide five overnight shuttle routes under it.",
+    "conditions": [
+      {
+        "condition_id": "K1",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "sS1",
+          "sS2"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "sS1",
+            "quote": "The Estuary Transit Authority commits to provide five overnight shuttle routes.",
+            "label": "NEUTRAL",
+            "reason": "This quote establishes only that the authority made the commitment, not that it later provided the routes."
+          },
+          {
+            "citation_id": "sS2",
+            "quote": "The authority has withdrawn its commitment to provide five overnight shuttle routes.",
+            "label": "NEUTRAL",
+            "reason": "This quote establishes withdrawal of the commitment, but withdrawal alone does not exclude that the routes were provided before or despite the withdrawal."
+          }
+        ],
+        "reason": "The record contains evidence of the commitment and of its withdrawal, but no excerpt directly showing whether five overnight shuttle routes were actually provided under the commitment."
+      }
+    ]
+  },
+  "score": {
+    "case_id": "SYN-FIVE-ROUTES",
+    "identity": "MATCH",
+    "reference_coverage": {
+      "numerator": 2,
+      "denominator": 2,
+      "rate": 1.0
+    },
+    "finding_support": {
+      "numerator": 2,
+      "denominator": 2,
+      "rate": 1.0
+    },
+    "traceability": {
+      "numerator": 2,
+      "denominator": 2,
+      "rate": 1.0
+    },
+    "claim_count": 2,
+    "evidence_eligible_claims": 2,
+    "unquoted_claims": 0,
+    "credited_reference_ids": [
+      "G1",
+      "G2"
+    ],
+    "coverage_labels": {
+      "ENTAILMENT": 2,
+      "CONTRADICTION": 0,
+      "NEUTRAL": 0,
+      "MISSING": 0
+    },
+    "finding_labels": {
+      "ENTAILMENT": 2,
+      "CONTRADICTION": 0,
+      "NEUTRAL": 0
+    },
+    "citation_audit": "OWNED_QUOTES_V1",
+    "verdict": "OVERCLAIM",
+    "verdict_evaluation": {
+      "applicable": true,
+      "reason": null,
+      "label": "OVERCLAIM"
+    }
+  }
+}

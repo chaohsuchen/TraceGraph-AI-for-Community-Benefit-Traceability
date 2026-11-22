@@ -1,0 +1,18 @@
+{
+  "case_id": "SYN-FIVE-ROUTES",
+  "query": "Did the Estuary Transit Authority provide the five overnight shuttle routes it committed to?",
+  "organization": "Estuary Transit Authority",
+  "title": "Five overnight shuttle routes",
+  "description": "The authority undertook to provide five overnight shuttle routes.",
+  "scope_hints": ["The authority provides the five overnight shuttle routes."],
+  "date": "2026-11-22",
+  "passages": [
+    {"id":"S1", "title":"Service agreement", "url":"https://estuary.example.invalid/agreement", "quote":"The Estuary Transit Authority commits to provide five overnight shuttle routes."},
+    {"id":"S2", "title":"Authority withdrawal notice", "url":"https://estuary.example.invalid/board-notice", "quote":"The authority has withdrawn its commitment to provide five overnight shuttle routes."}
+  ],
+  "evaluator_only": {
+    "facts": [{"id":"G1","text":"The authority committed to operate five overnight shuttle routes."},{"id":"G2","text":"The authority officially withdrew that commitment."}],
+    "conditions": [{"id":"K1","text":"The authority provided five overnight shuttle routes under this commitment."}],
+    "expected":"An explicit official withdrawal of the same routes refutes the pledge. No passage supports actual operation."
+  }
+}
