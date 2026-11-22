@@ -1,0 +1,220 @@
+{
+  "case": "TG-GOLD-H012",
+  "model": "gpt-5.4",
+  "version": "tracegraph-nli-v4-owned-quotes",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "research_sha256": "09601278d8021489222de23a081e699da738271f2e643811a45b74c855fd8376",
+  "displayed_sha256": "54e847150d82bd762713df72897fa8ac4fa62d97d017a8c17a36f48773791fc7",
+  "original": {
+    "label": "OVERCLAIM",
+    "reason": "The displayed assessment says delivery was corroborated/DELIVERED for both conditions, but the excerpts show at most Bally’s and the Board describing a commitment or stated membership benefit; they do not establish actual funding at the Bronx operation or that priority placement was available in practice to Bronx employees.",
+    "conditions": [
+      {
+        "condition_id": "K1",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-0f1154f7-6881-48b8-9b44-a8a9fceafaeb",
+          "support-f99e9ae8-cac9-4654-b6ca-3303c99c40c1",
+          "support-ec54060f-f534-4f11-9006-b40c74f5e86a"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-0f1154f7-6881-48b8-9b44-a8a9fceafaeb",
+            "quote": "We fund every employee membership to the Upwards network",
+            "label": "NEUTRAL",
+            "reason": "This is Bally’s self-report about funding memberships generally, but it does not specifically establish actual funding at its Bronx operation."
+          },
+          {
+            "citation_id": "support-f99e9ae8-cac9-4654-b6ca-3303c99c40c1",
+            "quote": "to offer high-quality childcare options including for Bally’s Bronx employees",
+            "label": "NEUTRAL",
+            "reason": "This ties the program to Bronx employees, but says only that childcare options were offered, not that memberships were actually funded at the Bronx operation."
+          },
+          {
+            "citation_id": "support-ec54060f-f534-4f11-9006-b40c74f5e86a",
+            "quote": "Bally’s committed to pay for employees’ membership in Upwards",
+            "label": "NEUTRAL",
+            "reason": "This establishes a commitment, not actual performance, and does not prove Bronx-operation delivery."
+          }
+        ],
+        "reason": "Evidence supports a pledge or self-described general practice, but not the condition’s required actual funding for employees at Bally’s Bronx operation."
+      },
+      {
+        "condition_id": "K2",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-a1395823-a626-453d-b1db-fff22a8a5f8c",
+          "support-f99e9ae8-cac9-4654-b6ca-3303c99c40c1",
+          "support-ec54060f-f534-4f11-9006-b40c74f5e86a"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-a1395823-a626-453d-b1db-fff22a8a5f8c",
+            "quote": "Members also receive priority placement at Upwards facilities, which are plentiful near our proposed sites",
+            "label": "NEUTRAL",
+            "reason": "This states the membership benefit generally, but not that priority placement was available in practice to Bronx employees."
+          },
+          {
+            "citation_id": "support-f99e9ae8-cac9-4654-b6ca-3303c99c40c1",
+            "quote": "including for Bally’s Bronx employees",
+            "label": "NEUTRAL",
+            "reason": "This connects Upwards childcare options to Bronx employees, but not actual in-practice availability of priority placement under memberships."
+          },
+          {
+            "citation_id": "support-ec54060f-f534-4f11-9006-b40c74f5e86a",
+            "quote": "which would give the employee priority childcare placement in Upwards’ vetted facilities, but little information was provided about what membership entails or whether Upwards’ network facilities are already at capacity",
+            "label": "NEUTRAL",
+            "reason": "The quote describes an expected benefit and simultaneously notes unresolved uncertainty about capacity, so it does not establish practical availability to Bronx employees."
+          }
+        ],
+        "reason": "The excerpts describe what membership would provide, but they do not prove that priority placement was actually available in practice to Bronx employees, and the Board notes uncertainty about facility capacity."
+      }
+    ]
+  },
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 8.547000000000025,
+      "request_id": "req_b1541cf0a24440b58f81e069e4235ec8",
+      "usage": {
+        "input_tokens": 7901,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 4864
+        },
+        "output_tokens": 897,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 8798
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "evidence_judgment_sha256": "ef6f0fb21b98d2e6808b144543aa1400695aed2257de31942d7e29c66096982b",
+  "result": {
+    "label": "JUSTIFIED",
+    "reason": "The displayed assessment appropriately limits itself to UNVERIFIED delivery because the excerpts show Bally’s promised/funded memberships and described priority-placement benefits, but do not establish actual performance for Bronx employees or actual availability in practice; its caution matches the evidentiary gaps for both delivery conditions.",
+    "conditions": [
+      {
+        "condition_id": "K1",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-0f1154f7-6881-48b8-9b44-a8a9fceafaeb",
+          "support-f99e9ae8-cac9-4654-b6ca-3303c99c40c1",
+          "support-ec54060f-f534-4f11-9006-b40c74f5e86a",
+          "support-7066f99b-5629-4811-ba12-fc5cca2524be"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-0f1154f7-6881-48b8-9b44-a8a9fceafaeb",
+            "quote": "We fund every employee membership to the Upwards network",
+            "label": "NEUTRAL",
+            "reason": "This states Bally’s undertaking in its document, but does not verify that memberships were actually funded for employees at its Bronx operation."
+          },
+          {
+            "citation_id": "support-f99e9ae8-cac9-4654-b6ca-3303c99c40c1",
+            "quote": "to offer high-quality childcare options including for Bally’s Bronx employees",
+            "label": "NEUTRAL",
+            "reason": "This includes Bronx employees in the offering, but does not show actual funded memberships at the Bronx operation."
+          },
+          {
+            "citation_id": "support-ec54060f-f534-4f11-9006-b40c74f5e86a",
+            "quote": "Bally’s committed to pay for employees’ membership in Upwards",
+            "label": "NEUTRAL",
+            "reason": "This is evidence of a commitment, not proof that Bally’s actually funded memberships at its Bronx operation."
+          },
+          {
+            "citation_id": "support-7066f99b-5629-4811-ba12-fc5cca2524be",
+            "quote": "provide annual updates on employee participation in the Upwards membership program for childcare",
+            "label": "NEUTRAL",
+            "reason": "A recommendation for future reporting suggests possible participation tracking, but does not establish actual funding of Bronx employees’ memberships."
+          }
+        ],
+        "reason": "The record proves a pledge and Bronx-employee inclusion, but not actual funding of Upwards memberships for employees at Bally’s Bronx operation."
+      },
+      {
+        "condition_id": "K2",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-a1395823-a626-453d-b1db-fff22a8a5f8c",
+          "support-f99e9ae8-cac9-4654-b6ca-3303c99c40c1",
+          "support-ec54060f-f534-4f11-9006-b40c74f5e86a"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-a1395823-a626-453d-b1db-fff22a8a5f8c",
+            "quote": "Members also receive priority placement at Upwards facilities",
+            "label": "NEUTRAL",
+            "reason": "This describes the membership benefit in general, not that priority placement was actually available in practice to Bronx employees under funded memberships."
+          },
+          {
+            "citation_id": "support-f99e9ae8-cac9-4654-b6ca-3303c99c40c1",
+            "quote": "including for Bally’s Bronx employees",
+            "label": "NEUTRAL",
+            "reason": "This ties the offering to Bronx employees, but not actual in-practice availability of priority placement under memberships."
+          },
+          {
+            "citation_id": "support-ec54060f-f534-4f11-9006-b40c74f5e86a",
+            "quote": "which would give the employee priority childcare placement in Upwards’ vetted facilities, but little information was provided about what membership entails or whether Upwards’ network facilities are already at capacity",
+            "label": "NEUTRAL",
+            "reason": "The passage describes what the membership would provide while expressly noting missing information and capacity uncertainty, so actual practical availability is unproven."
+          }
+        ],
+        "reason": "The excerpts describe promised priority placement and Bronx-employee coverage, but do not establish that such placement was actually available in practice to Bronx employees under those memberships."
+      }
+    ]
+  },
+  "score": {
+    "case_id": "TG-GOLD-H012",
+    "identity": "MATCH",
+    "reference_coverage": {
+      "numerator": 1,
+      "denominator": 5,
+      "rate": 0.2
+    },
+    "finding_support": {
+      "numerator": 13,
+      "denominator": 13,
+      "rate": 1.0
+    },
+    "traceability": {
+      "numerator": 13,
+      "denominator": 13,
+      "rate": 1.0
+    },
+    "claim_count": 13,
+    "evidence_eligible_claims": 13,
+    "unquoted_claims": 0,
+    "credited_reference_ids": [
+      "G1"
+    ],
+    "coverage_labels": {
+      "ENTAILMENT": 1,
+      "CONTRADICTION": 0,
+      "NEUTRAL": 4,
+      "MISSING": 0
+    },
+    "finding_labels": {
+      "ENTAILMENT": 13,
+      "CONTRADICTION": 0,
+      "NEUTRAL": 0
+    },
+    "citation_audit": "OWNED_QUOTES_V1",
+    "verdict": "JUSTIFIED",
+    "verdict_evaluation": {
+      "applicable": true,
+      "reason": null,
+      "label": "JUSTIFIED"
+    }
+  }
+}

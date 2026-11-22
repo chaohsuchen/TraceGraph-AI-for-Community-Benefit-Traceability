@@ -1,0 +1,241 @@
+{
+  "case": "TG-GOLD-H022",
+  "model": "gpt-5.4",
+  "version": "tracegraph-nli-v4-owned-quotes",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "research_sha256": "1288ab7e484f76a9a2847d42871f2074199e7adf274ffa314ca9459308465ecf",
+  "displayed_sha256": "1086f4d3ea36373c397c8cdba7b3a40a130ddb39a8237da7faf76e752977785b",
+  "original": {
+    "label": "JUSTIFIED",
+    "reason": "The displayed assessment appropriately limits itself to an unverified delivery verdict because the excerpts show a pledge/proposal and planned structure, but no actual receipt, funding, disbursement, or schedule performance for the community impact fund.",
+    "conditions": [
+      {
+        "condition_id": "K1",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+          "support-95a1eedf-0297-4916-97cc-3b1c8b717ad3",
+          "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3",
+          "support-7b7dcaf8-d394-41e5-b878-03ca5505b6c1",
+          "support-1d012418-8307-41ba-aba2-59cb61c941ce"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+            "quote": "Another $150 million has been proposed in ongoing commitments to a community impact fund, as the table below illustrates. The Applicant committed to this $150 million over a 30-year license term.",
+            "label": "NEUTRAL",
+            "reason": "This proves a proposed commitment, not that the fund actually received or disbursed money."
+          },
+          {
+            "citation_id": "support-95a1eedf-0297-4916-97cc-3b1c8b717ad3",
+            "quote": "Another $150 million has been proposed in ongoing commitments to a community impact fund, as the table below illustrates. The Applicant committed to this $150 million over a 30-year license term.",
+            "label": "NEUTRAL",
+            "reason": "This duplicate passage likewise documents only the commitment."
+          },
+          {
+            "citation_id": "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3",
+            "quote": "The Community Impact Fund, as proposed in the Application, is valued at $163 million over the 30-year length of the license. Our commitments will be binding under the gaming license, ensuring accountability and delivery.",
+            "label": "NEUTRAL",
+            "reason": "The passage says the fund is proposed and commitments will be binding; it does not show actual funding or disbursement."
+          },
+          {
+            "citation_id": "support-7b7dcaf8-d394-41e5-b878-03ca5505b6c1",
+            "quote": "The Fund is structured for annual disbursements, guaranteeing stable support for nonprofits, parks, and cultural institutions.",
+            "label": "NEUTRAL",
+            "reason": "A planned structure for annual disbursements is not evidence that any disbursement occurred."
+          },
+          {
+            "citation_id": "support-1d012418-8307-41ba-aba2-59cb61c941ce",
+            "quote": "Community Impact Fund 13 150 163",
+            "label": "NEUTRAL",
+            "reason": "The undefined chart entry does not establish receipt or disbursement of money."
+          }
+        ],
+        "reason": "No excerpt shows the operating fund actually received money or made disbursements against the original $150 million tranche; the evidence only describes a proposal/commitment and intended structure."
+      },
+      {
+        "condition_id": "K2",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+          "support-95a1eedf-0297-4916-97cc-3b1c8b717ad3",
+          "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3",
+          "support-7b7dcaf8-d394-41e5-b878-03ca5505b6c1",
+          "support-e3a1c4dc-a376-4654-8955-ef51c2566cf5"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+            "quote": "The Applicant committed to this $150 million over a 30-year license term.",
+            "label": "NEUTRAL",
+            "reason": "This establishes the pledged term, not that payments met any applicable schedule."
+          },
+          {
+            "citation_id": "support-95a1eedf-0297-4916-97cc-3b1c8b717ad3",
+            "quote": "The Applicant committed to this $150 million over a 30-year license term.",
+            "label": "NEUTRAL",
+            "reason": "This duplicate passage likewise shows only the pledged 30-year term."
+          },
+          {
+            "citation_id": "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3",
+            "quote": "The Community Impact Fund, as proposed in the Application, is valued at $163 million over the 30-year length of the license. Our commitments will be binding under the gaming license, ensuring accountability and delivery.",
+            "label": "NEUTRAL",
+            "reason": "This states a proposed 30-year valuation and future binding status, but not actual payment timing or compliance with a schedule."
+          },
+          {
+            "citation_id": "support-7b7dcaf8-d394-41e5-b878-03ca5505b6c1",
+            "quote": "The Fund is structured for annual disbursements, guaranteeing stable support for nonprofits, parks, and cultural institutions.",
+            "label": "NEUTRAL",
+            "reason": "Annual structure does not establish that payments were made on schedule."
+          },
+          {
+            "citation_id": "support-e3a1c4dc-a376-4654-8955-ef51c2566cf5",
+            "quote": "Chart 5: HRMP Community Benefit during their 20-year Term of License",
+            "label": "NEUTRAL",
+            "reason": "This introduces possible term ambiguity rather than proving schedule compliance or a formally approved revision."
+          }
+        ],
+        "reason": "The record does not show any actual payment schedule performance or any formally approved revision; it only mentions a 30-year commitment, annual-disbursement structure, and a separate 20-year chart title that leaves timing unresolved."
+      }
+    ]
+  },
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 6.969000000000051,
+      "request_id": "req_e8b0f7e5baed470399f796d63f8e5736",
+      "usage": {
+        "input_tokens": 8446,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 6912
+        },
+        "output_tokens": 874,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 9320
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "evidence_judgment_sha256": "2560ecc92f7e4ae5dba7581d6082629f526afc5f2f8f55a93683a5db26a4d3c3",
+  "result": {
+    "label": "JUSTIFIED",
+    "reason": "The displayed assessment says delivery has not been verified, and the supplied excerpts show only commitment/proposal statements and future-oriented structure, with no evidence that money was actually received/disbursed or that payments met the required schedule.",
+    "conditions": [
+      {
+        "condition_id": "K1",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+          "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3",
+          "support-7b7dcaf8-d394-41e5-b878-03ca5505b6c1"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+            "quote": "Another $150 million has been proposed in ongoing commitments to a community impact fund, as the table below illustrates. The Applicant committed to this $150 million over a 30-year license term.",
+            "label": "NEUTRAL",
+            "reason": "This proves a proposed/committed fund, not that the fund actually received or disbursed money."
+          },
+          {
+            "citation_id": "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3",
+            "quote": "The Community Impact Fund, as proposed in the Application, is valued at $163 million over the 30-year length of the license. Our commitments will be binding under the gaming license, ensuring accountability and delivery.",
+            "label": "NEUTRAL",
+            "reason": "This describes a proposed valuation and future binding commitments, not actual receipt or disbursement."
+          },
+          {
+            "citation_id": "support-7b7dcaf8-d394-41e5-b878-03ca5505b6c1",
+            "quote": "The Fund is structured for annual disbursements, guaranteeing stable support for nonprofits, parks, and cultural institutions.",
+            "label": "NEUTRAL",
+            "reason": "Being structured for annual disbursements does not establish that any money was in fact disbursed."
+          }
+        ],
+        "reason": "The excerpts describe the fund as proposed, committed, binding, and structured for annual disbursements, but none shows actual receipt or disbursement against the original $150 million tranche."
+      },
+      {
+        "condition_id": "K2",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+          "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3",
+          "support-7b7dcaf8-d394-41e5-b878-03ca5505b6c1"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-e3ee5d95-8b40-4801-8566-f368e2362208",
+            "quote": "The Applicant committed to this $150 million over a 30-year license term.",
+            "label": "NEUTRAL",
+            "reason": "This gives the overall commitment term but no payment schedule and no evidence of payments meeting it."
+          },
+          {
+            "citation_id": "support-c58c2720-ab90-44ad-85b6-e0d5e72b9dd3",
+            "quote": "The Community Impact Fund, as proposed in the Application, is valued at $163 million over the 30-year length of the license.",
+            "label": "NEUTRAL",
+            "reason": "This states a valuation over 30 years, not the applicable payment schedule or compliance with it."
+          },
+          {
+            "citation_id": "support-7b7dcaf8-d394-41e5-b878-03ca5505b6c1",
+            "quote": "The Fund is structured for annual disbursements, guaranteeing stable support for nonprofits, parks, and cultural institutions.",
+            "label": "NEUTRAL",
+            "reason": "Annual disbursement structure is not enough to establish the required schedule or that payments met it, and no formally approved revision is shown."
+          }
+        ],
+        "reason": "The record gives a 30-year term and mentions annual disbursements, but it does not provide the applicable payment schedule, actual payments, or any formally approved revision, so schedule compliance is unproven."
+      }
+    ]
+  },
+  "score": {
+    "case_id": "TG-GOLD-H022",
+    "identity": "MATCH",
+    "reference_coverage": {
+      "numerator": 1,
+      "denominator": 12,
+      "rate": 0.08333333333333333
+    },
+    "finding_support": {
+      "numerator": 12,
+      "denominator": 14,
+      "rate": 0.8571428571428571
+    },
+    "traceability": {
+      "numerator": 12,
+      "denominator": 14,
+      "rate": 0.8571428571428571
+    },
+    "claim_count": 14,
+    "evidence_eligible_claims": 14,
+    "unquoted_claims": 0,
+    "credited_reference_ids": [
+      "G1"
+    ],
+    "coverage_labels": {
+      "ENTAILMENT": 1,
+      "CONTRADICTION": 0,
+      "NEUTRAL": 5,
+      "MISSING": 6
+    },
+    "finding_labels": {
+      "ENTAILMENT": 12,
+      "CONTRADICTION": 0,
+      "NEUTRAL": 2
+    },
+    "citation_audit": "OWNED_QUOTES_V1",
+    "verdict": "JUSTIFIED",
+    "verdict_evaluation": {
+      "applicable": true,
+      "reason": null,
+      "label": "JUSTIFIED"
+    }
+  }
+}

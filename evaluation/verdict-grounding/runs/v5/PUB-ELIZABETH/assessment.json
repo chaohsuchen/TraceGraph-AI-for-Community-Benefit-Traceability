@@ -1,0 +1,195 @@
+{
+  "case": "PUB-ELIZABETH",
+  "model": "gpt-5.4",
+  "runtime": {
+    "agent.py": "a05ce765ed68bdd3bdef1b319c2349e39f60e2abf7d2c923502295582c8aff21",
+    "providers.py": "e561490a72eefd0fcb97013b61230570688bb1882e07c9798f8d39d90a943811",
+    "reconcile.py": "582754a7c24a38543485d4e7589cbdd738d571fb3dd949f0b118374bf12f532b",
+    "openai_provider.py": "cebdca8526ccb8ebec3b83da3c0e0cec2b6f2b39797dae0a4ce15e88cbe09f59"
+  },
+  "inputs_sha256": "9a013813ed31ebdaab37c1a3eedf3548dcfb94787416478ba0a00c419a41fc86",
+  "as_of": "2026-11-22",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 8.437999999999988,
+      "request_id": "req_30bb4082385c467fa2f15debd8b385ed",
+      "usage": {
+        "input_tokens": 3551,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 1792
+        },
+        "output_tokens": 762,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4313
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 0.9060000000000628,
+      "request_id": "req_96b8002e2f244dabb37bbbb0af9441df",
+      "usage": {
+        "input_tokens": 416,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 17,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 433
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 1.1870000000000118,
+      "request_id": "req_43c815dfc6d347d788aa619821c05e44",
+      "usage": {
+        "input_tokens": 575,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 16,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 591
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "status": "COMPLETED",
+  "trace": {
+    "not_yet_due": [],
+    "criteria": [
+      {
+        "criterion": "Crossrail/Elizabeth line central passenger service between Paddington low level and Abbey Wood commenced by December 2018",
+        "required_elements": [
+          "Crossrail services commenced in the central tunnel section between Paddington low level and Abbey Wood",
+          "the commencement occurred by December 2018"
+        ],
+        "scope_criteria": [
+          "s1",
+          "s2"
+        ],
+        "promise_scope": "Crossrail promised that Crossrail services would commence in December 2018 in the central tunnel section between Paddington low level and Abbey Wood; beneficiaries are passengers using that central section; location is Paddington low level to Abbey Wood.",
+        "observed_scope": "TfL later reported the central section between Paddington and Abbey Wood was rescheduled to Autumn 2019 in August 2018, and TfL press releases report the Elizabeth line operating between Paddington and Abbey Wood and carrying passengers on its opening day in May 2022; beneficiaries are passengers on that central section; location is Paddington to Abbey Wood.",
+        "promise_citation_ids": [
+          "c1"
+        ],
+        "delivery_citation_ids": [],
+        "delivery_status": "REFUTED",
+        "timing_requirement": "Service commencement was promised for December 2018.",
+        "explanation": "The original undertaking is explicit: 'December 2018 — Crossrail services commence in the central tunnel section between Paddington low level and Abbey Wood.' A later TfL record states that on 29 August 2018 the Board decided 'to open the central section between Paddington and Abbey Wood in Autumn 2019,' which is incompatible with opening by December 2018. Direct outcome evidence then shows the service operating between Paddington and Abbey Wood in May 2022, with passenger journeys on its opening day, confirming the central section opened substantially later than the promised date.",
+        "gap": "",
+        "delivery_support": []
+      }
+    ],
+    "label": "REFUTED",
+    "verdict": "The December 2018 commitment is documented, but the evidence refutes that the central passenger service between Paddington and Abbey Wood opened by that date. TfL states the opening was deferred to Autumn 2019 in August 2018, and direct operation/opening evidence appears only in May 2022.",
+    "reasoning": "Requested scope: Did London's Elizabeth line open its central passenger service from Paddington to Abbey Wood by the originally planned December 2018 date?\n\nThe cited 2017 annual update documents the original promise: Crossrail services would commence in the central tunnel section between Paddington low level and Abbey Wood in December 2018. The question asks whether the central passenger service opened by that original date. It did not. TfL's FOI material states that the Crossrail Ltd Board decided on 29 August 2018 to open that central section in Autumn 2019 instead, directly disproving opening by December 2018. Subsequent TfL press releases show the Elizabeth line operating between Paddington and Abbey Wood and recording about 260,000 journeys on its opening day in May 2022, further confirming that actual commencement occurred later than promised. Because the exact timed commitment was not met, the result is refuted rather than merely unverified.\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “December 2018 — Crossrail services commence in the central tunnel section between Paddington low level and Abbey Wood”\nhttps://www.gov.uk/government/speeches/annual-update-on-crossrail-2017\n\nc2: “The Crossrail Ltd Board took the decision to open the central section between Paddington and Abbey Wood in Autumn 2019 on 29 August 2018.”\nhttps://tfl.gov.uk/corporate/transparency/freedom-of-information/foi-request-detail?referenceId=FOI-1470-1819\n\nc3: “The Elizabeth line will operate 12 trains per hour between Paddington and Abbey Wood from Monday to Saturday 06:30 to 23:00.”\nhttps://tfl-newsroom.prgloo.com/news/tfl-press-release-elizabeth-line-to-open-on-24-may-2022\n\nc4: “The celebratory response to the opening saw around 260,000 journeys made on the new central section between Paddington and Abbey Wood across its opening day, clearly showing its popularity.”\nhttps://tfl-newsroom.prgloo.com/news/tfl-press-release-celebrations-as-transformational-elizabeth-line-begins-operations",
+    "refutation": [
+      {
+        "basis": "DIRECT_DISPROOF",
+        "finding_id": "finding-044855df-cd63-4e1e-8c76-0005a15bd255",
+        "quote": "The Crossrail Ltd Board took the decision to open the central section between Paddington and Abbey Wood in Autumn 2019 on 29 August 2018."
+      },
+      {
+        "basis": "DIRECT_DISPROOF",
+        "finding_id": "finding-b593a9ef-612b-468b-b51c-dbfc211a6e63",
+        "quote": "The celebratory response to the opening saw around 260,000 journeys made on the new central section between Paddington and Abbey Wood across its opening day, clearly showing its popularity."
+      }
+    ],
+    "scope_anchors": {
+      "s1": "Crossrail planned central passenger service between Paddington low level and Abbey Wood to commence in December 2018",
+      "s2": "Elizabeth line central passenger service between Paddington and Abbey Wood opened by the originally planned December 2018 date"
+    },
+    "citations": {
+      "c1": {
+        "source": {
+          "title": "https://www.gov.uk/government/speeches/annual-update-on-crossrail-2017",
+          "url": "https://www.gov.uk/government/speeches/annual-update-on-crossrail-2017",
+          "citation": "https://www.gov.uk/government/speeches/annual-update-on-crossrail-2017"
+        },
+        "excerpt": "December 2018 — Crossrail services commence in the central tunnel section between Paddington low level and Abbey Wood",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:33:06.270086+00:00",
+        "finding_id": "finding-5518dde2-1e39-417c-bb94-c27578d82f0f"
+      },
+      "c2": {
+        "source": {
+          "title": "https://tfl.gov.uk/corporate/transparency/freedom-of-information/foi-request-detail?referenceId=FOI-1470-1819",
+          "url": "https://tfl.gov.uk/corporate/transparency/freedom-of-information/foi-request-detail?referenceId=FOI-1470-1819",
+          "citation": "https://tfl.gov.uk/corporate/transparency/freedom-of-information/foi-request-detail?referenceId=FOI-1470-1819"
+        },
+        "excerpt": "The Crossrail Ltd Board took the decision to open the central section between Paddington and Abbey Wood in Autumn 2019 on 29 August 2018.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:33:06.270086+00:00",
+        "finding_id": "finding-044855df-cd63-4e1e-8c76-0005a15bd255"
+      },
+      "c3": {
+        "source": {
+          "title": "https://tfl-newsroom.prgloo.com/news/tfl-press-release-elizabeth-line-to-open-on-24-may-2022",
+          "url": "https://tfl-newsroom.prgloo.com/news/tfl-press-release-elizabeth-line-to-open-on-24-may-2022",
+          "citation": "https://tfl-newsroom.prgloo.com/news/tfl-press-release-elizabeth-line-to-open-on-24-may-2022"
+        },
+        "excerpt": "The Elizabeth line will operate 12 trains per hour between Paddington and Abbey Wood from Monday to Saturday 06:30 to 23:00.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:33:06.270086+00:00",
+        "finding_id": "finding-7f627b12-1a0d-4fa9-9061-28067126a618"
+      },
+      "c4": {
+        "source": {
+          "title": "https://tfl-newsroom.prgloo.com/news/tfl-press-release-celebrations-as-transformational-elizabeth-line-begins-operations",
+          "url": "https://tfl-newsroom.prgloo.com/news/tfl-press-release-celebrations-as-transformational-elizabeth-line-begins-operations",
+          "citation": "https://tfl-newsroom.prgloo.com/news/tfl-press-release-celebrations-as-transformational-elizabeth-line-begins-operations"
+        },
+        "excerpt": "The celebratory response to the opening saw around 260,000 journeys made on the new central section between Paddington and Abbey Wood across its opening day, clearly showing its popularity.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:33:06.270086+00:00",
+        "finding_id": "finding-b593a9ef-612b-468b-b51c-dbfc211a6e63"
+      }
+    },
+    "scope_gap": ""
+  },
+  "displayed": {
+    "label": "REFUTED",
+    "verdict": "The December 2018 commitment is documented, but the evidence refutes that the central passenger service between Paddington and Abbey Wood opened by that date. TfL states the opening was deferred to Autumn 2019 in August 2018, and direct operation/opening evidence appears only in May 2022.",
+    "reasoning": "Requested scope: Did London's Elizabeth line open its central passenger service from Paddington to Abbey Wood by the originally planned December 2018 date?\n\nThe cited 2017 annual update documents the original promise: Crossrail services would commence in the central tunnel section between Paddington low level and Abbey Wood in December 2018. The question asks whether the central passenger service opened by that original date. It did not. TfL's FOI material states that the Crossrail Ltd Board decided on 29 August 2018 to open that central section in Autumn 2019 instead, directly disproving opening by December 2018. Subsequent TfL press releases show the Elizabeth line operating between Paddington and Abbey Wood and recording about 260,000 journeys on its opening day in May 2022, further confirming that actual commencement occurred later than promised. Because the exact timed commitment was not met, the result is refuted rather than merely unverified.\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “December 2018 — Crossrail services commence in the central tunnel section between Paddington low level and Abbey Wood”\nhttps://www.gov.uk/government/speeches/annual-update-on-crossrail-2017\n\nc2: “The Crossrail Ltd Board took the decision to open the central section between Paddington and Abbey Wood in Autumn 2019 on 29 August 2018.”\nhttps://tfl.gov.uk/corporate/transparency/freedom-of-information/foi-request-detail?referenceId=FOI-1470-1819\n\nc3: “The Elizabeth line will operate 12 trains per hour between Paddington and Abbey Wood from Monday to Saturday 06:30 to 23:00.”\nhttps://tfl-newsroom.prgloo.com/news/tfl-press-release-elizabeth-line-to-open-on-24-may-2022\n\nc4: “The celebratory response to the opening saw around 260,000 journeys made on the new central section between Paddington and Abbey Wood across its opening day, clearly showing its popularity.”\nhttps://tfl-newsroom.prgloo.com/news/tfl-press-release-celebrations-as-transformational-elizabeth-line-begins-operations\n\nDirect evidence from https://tfl.gov.uk/corporate/transparency/freedom-of-information/foi-request-detail?referenceId=FOI-1470-1819. “The Crossrail Ltd Board took the decision to open the central section between Paddington and Abbey Wood in Autumn 2019 on 29 August 2018.”",
+    "verification_date": "2026-11-22"
+  }
+}

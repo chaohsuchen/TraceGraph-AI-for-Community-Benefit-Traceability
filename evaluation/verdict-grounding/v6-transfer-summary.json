@@ -1,0 +1,87 @@
+{
+  "model": "gpt-5.4",
+  "judge": "tracegraph-nli-v4-owned-quotes",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "cases": {
+    "TG-GOLD-A036": {
+      "archived": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED"
+      },
+      "v6-transfer": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment appropriately treats the record as proving the promise but not actual delivery: none of the supplied excerpts establishes that a qualifying workforce-housing investment actually began, nor identifies a concrete start trigger and first investment timing needed to verify the 'immediate term' condition.",
+        "criteria": [
+          "UNVERIFIED"
+        ]
+      }
+    },
+    "TG-GOLD-A061": {
+      "archived": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED"
+      },
+      "v6-transfer": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment correctly limits itself to an UNVERIFIED delivery conclusion because the record proves the obligation existed but does not specifically establish that RWNYC itself deposited qualifying security, in the required 5% amount, by December 31, 2025; the only delivery-related excerpt is an unnamed three-licensee status report that leaves RWNYC and the deadline unresolved.",
+        "criteria": [
+          "UNVERIFIED"
+        ]
+      }
+    },
+    "TG-GOLD-H016": {
+      "archived": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED"
+      },
+      "v6-transfer": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The assessment correctly treats the excerpts as evidence of targets/undertakings only and not actual workforce outcomes; for each condition, the record lacks proof that the actual Bronx construction workforce reached the specified percentages, and the veteran evidence also leaves uncertainty between 'veteran workers' and the narrower 'service-disabled veterans.'",
+        "criteria": [
+          "UNVERIFIED",
+          "UNVERIFIED",
+          "UNVERIFIED"
+        ]
+      }
+    },
+    "TG-GOLD-H022": {
+      "archived": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED"
+      },
+      "v6-transfer": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The displayed assessment says delivery has not been verified, and the supplied excerpts show only commitment/proposal statements and future-oriented structure, with no evidence that money was actually received/disbursed or that payments met the required schedule.",
+        "criteria": [
+          "CONFLICTING"
+        ]
+      }
+    }
+  },
+  "arms": {
+    "v6-transfer": {
+      "assess": {
+        "input": 17269,
+        "output": 3485,
+        "cached": 5376,
+        "calls": 4,
+        "estimated_usd": 0.0833515
+      },
+      "judge": {
+        "input": 28768,
+        "output": 3699,
+        "cached": 13824,
+        "calls": 4,
+        "estimated_usd": 0.096301
+      },
+      "grades": {
+        "JUSTIFIED": 4
+      }
+    }
+  },
+  "total_estimated_usd": 0.1796525
+}

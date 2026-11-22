@@ -1,0 +1,187 @@
+{
+  "case": "PUB-DART",
+  "model": "gpt-5.4",
+  "version": "tracegraph-nli-v4-owned-quotes",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "research_sha256": "8979f5c2532cb61851ff1317892c319ca93e066686c20d3680d73fea1399f703",
+  "displayed_sha256": "10e9d50a0b193c48ce58e1029f0839617c334475d83e6906e7cc36aef71cbd16",
+  "evidence_judgment_sha256": "0a6e50a148675ca93c8d830035a007dc549661444950b7f8ace50d144e941a7a",
+  "original": {
+    "label": "JUSTIFIED",
+    "reason": "The final assessment appropriately concludes delivery was corroborated because the cited excerpts establish both required conditions: DART actually hit Dimorphos and the measured orbital-period change greatly exceeded the pre-impact 73-second threshold.",
+    "conditions": [
+      {
+        "condition_id": "C1",
+        "label": "ENTAILMENT",
+        "citation_ids": [
+          "support-d4c4eeef-ddf8-4e77-b098-18291676d72e"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-d4c4eeef-ddf8-4e77-b098-18291676d72e",
+            "quote": "Since DART’s intentional collision with Dimorphos on Sept. 26, astronomers have been using telescopes on Earth to measure how much that time has changed.",
+            "label": "ENTAILMENT",
+            "reason": "This directly states that DART collided with Dimorphos, establishing the strike occurred."
+          }
+        ],
+        "reason": "The excerpt expressly says DART had an intentional collision with Dimorphos."
+      },
+      {
+        "condition_id": "C2",
+        "label": "ENTAILMENT",
+        "citation_ids": [
+          "support-a5e890a2-0fdc-406f-b67b-ba39891b75fa",
+          "support-d4c4eeef-ddf8-4e77-b098-18291676d72e",
+          "support-23b5499c-cbdc-4d46-90f3-7915ef17346e"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-a5e890a2-0fdc-406f-b67b-ba39891b75fa",
+            "quote": "Before its encounter, NASA had defined a minimum successful orbit period change of Dimorphos as change of 73 seconds or more.",
+            "label": "ENTAILMENT",
+            "reason": "This establishes the pre-impact success threshold was 73 seconds or more."
+          },
+          {
+            "citation_id": "support-d4c4eeef-ddf8-4e77-b098-18291676d72e",
+            "quote": "Now, the investigation team has confirmed the spacecraft’s impact altered Dimorphos’ orbit around Didymos by 32 minutes",
+            "label": "ENTAILMENT",
+            "reason": "A 32-minute change is far greater than 73 seconds, so this reported measurement meets the threshold."
+          },
+          {
+            "citation_id": "support-23b5499c-cbdc-4d46-90f3-7915ef17346e",
+            "quote": "finally settling at 11 hours, 22 minutes, and 3 seconds per orbit – 33 minutes and 15 seconds less time than before impact.",
+            "label": "ENTAILMENT",
+            "reason": "This later measurement also exceeds 73 seconds and reinforces that the threshold was met."
+          }
+        ],
+        "reason": "The evidence gives a pre-impact success threshold of 73 seconds or more and post-impact measured changes of 32 minutes and later 33 minutes 15 seconds, each above that threshold."
+      }
+    ]
+  },
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 6.0,
+      "request_id": "req_73b9328ebfe2407684142deeaff7243e",
+      "usage": {
+        "input_tokens": 6892,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 4864
+        },
+        "output_tokens": 680,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 7572
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "result": {
+    "label": "JUSTIFIED",
+    "reason": "The final assessment appropriately concludes delivery was corroborated because the cited excerpts establish both required conditions: DART actually impacted Dimorphos and the measured orbital-period change greatly exceeded NASA’s pre-impact 73-second threshold.",
+    "conditions": [
+      {
+        "condition_id": "C1",
+        "label": "ENTAILMENT",
+        "citation_ids": [
+          "support-d4c4eeef-ddf8-4e77-b098-18291676d72e"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-d4c4eeef-ddf8-4e77-b098-18291676d72e",
+            "quote": "Since DART’s intentional collision with Dimorphos on Sept. 26, astronomers have been using telescopes on Earth to measure how much that time has changed.",
+            "label": "ENTAILMENT",
+            "reason": "This directly states that DART intentionally collided with Dimorphos, satisfying actual impact."
+          }
+        ],
+        "reason": "The excerpt expressly says DART had an intentional collision with Dimorphos."
+      },
+      {
+        "condition_id": "C2",
+        "label": "ENTAILMENT",
+        "citation_ids": [
+          "support-a5e890a2-0fdc-406f-b67b-ba39891b75fa",
+          "support-d4c4eeef-ddf8-4e77-b098-18291676d72e",
+          "support-23b5499c-cbdc-4d46-90f3-7915ef17346e"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-a5e890a2-0fdc-406f-b67b-ba39891b75fa",
+            "quote": "Before its encounter, NASA had defined a minimum successful orbit period change of Dimorphos as change of 73 seconds or more.",
+            "label": "ENTAILMENT",
+            "reason": "This gives the pre-impact success threshold of 73 seconds or more."
+          },
+          {
+            "citation_id": "support-d4c4eeef-ddf8-4e77-b098-18291676d72e",
+            "quote": "Now, the investigation team has confirmed the spacecraft’s impact altered Dimorphos’ orbit around Didymos by 32 minutes, shortening the 11 hour and 55-minute orbit to 11 hours and 23 minutes. This measurement has a margin of uncertainty of approximately plus or minus 2 minutes.",
+            "label": "ENTAILMENT",
+            "reason": "A 32-minute measured change, even with ±2 minutes uncertainty, still far exceeds 73 seconds."
+          },
+          {
+            "citation_id": "support-23b5499c-cbdc-4d46-90f3-7915ef17346e",
+            "quote": "Over the following weeks, the asteroid’s orbital period continued to shorten as Dimorphos lost more rocky material to space, finally settling at 11 hours, 22 minutes, and 3 seconds per orbit – 33 minutes and 15 seconds less time than before impact. This calculation is accurate to within 1 1⁄2 seconds, Naidu said.",
+            "label": "ENTAILMENT",
+            "reason": "The later settled change of 33 minutes 15 seconds also clearly exceeds the 73-second threshold."
+          }
+        ],
+        "reason": "NASA’s stated minimum success threshold was 73 seconds or more, and the cited measurements of 32 minutes and later 33 minutes 15 seconds both establish the threshold was met."
+      }
+    ]
+  },
+  "score": {
+    "case_id": "PUB-DART",
+    "identity": "MATCH",
+    "reference_coverage": {
+      "numerator": 3,
+      "denominator": 5,
+      "rate": 0.6
+    },
+    "finding_support": {
+      "numerator": 12,
+      "denominator": 12,
+      "rate": 1.0
+    },
+    "traceability": {
+      "numerator": 12,
+      "denominator": 12,
+      "rate": 1.0
+    },
+    "claim_count": 12,
+    "evidence_eligible_claims": 12,
+    "unquoted_claims": 0,
+    "credited_reference_ids": [
+      "G2",
+      "G3",
+      "G5"
+    ],
+    "coverage_labels": {
+      "ENTAILMENT": 3,
+      "CONTRADICTION": 0,
+      "NEUTRAL": 1,
+      "MISSING": 1
+    },
+    "finding_labels": {
+      "ENTAILMENT": 12,
+      "CONTRADICTION": 0,
+      "NEUTRAL": 0
+    },
+    "citation_audit": "OWNED_QUOTES_V1",
+    "verdict": "JUSTIFIED",
+    "verdict_evaluation": {
+      "applicable": true,
+      "reason": null,
+      "label": "JUSTIFIED"
+    }
+  }
+}

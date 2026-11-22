@@ -1,0 +1,160 @@
+{
+  "model": "gpt-5.4",
+  "judge": "tracegraph-nli-v4-owned-quotes",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "cases": {
+    "TG-GOLD-H012": {
+      "archived": {
+        "label": "CORROBORATED",
+        "grade": "OVERCLAIM"
+      },
+      "v7": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The displayed assessment correctly treats both delivery conditions as unverified because the excerpts show Bally’s promised or described funded Upwards memberships and priority-placement benefits, but do not establish actual funding at the Bronx operation or actual in-practice availability of priority placement to Bronx employees.",
+        "criteria": [
+          "UNVERIFIED",
+          "UNVERIFIED"
+        ]
+      },
+      "v7-r2": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The displayed assessment appropriately treats both delivery conditions as unverified because the cited excerpts describe Bally’s commitment and the membership’s intended benefit, but do not establish actual funding at the Bronx operation or that priority placement was available in practice to Bronx employees.",
+        "criteria": [
+          "UNVERIFIED",
+          "UNVERIFIED"
+        ]
+      },
+      "v7-r3": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The displayed assessment appropriately treats both delivery conditions as unverified because the cited excerpts describe Bally’s commitment and the membership’s intended benefit, but do not establish actual funding at the Bronx operation or actual availability in practice of priority placement for Bronx employees.",
+        "criteria": [
+          "UNVERIFIED",
+          "UNVERIFIED"
+        ]
+      }
+    },
+    "PUB-COBALT": {
+      "archived": {
+        "label": "CORROBORATED",
+        "grade": "OVERCLAIM"
+      },
+      "v7": {
+        "label": "PARTIALLY_CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment appropriately treats delivery by end-2025 as unproven: the excerpts show a 2025 goal, >99% progress earlier in 2025, and present-tense full achievement in April 2026, but no citation expressly dates this specific cobalt achievement to by the end of 2025.",
+        "criteria": [
+          "PARTIAL"
+        ]
+      },
+      "v7-r2": {
+        "label": "PARTIALLY_CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment appropriately treats delivery by end-2025 as unproven: April 2026 excerpts establish 100% recycled cobalt in all Apple-designed batteries then, and another excerpt says several targets were reached in 2025, but none verbatim ties this specific cobalt target to achievement by end of 2025.",
+        "criteria": [
+          "PARTIAL"
+        ]
+      },
+      "v7-r3": {
+        "label": "PARTIALLY_CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment appropriately limits itself to partial support because the excerpts prove Apple stated full achievement by April 2026, but do not establish that the 100-percent recycled-cobalt target had been met by the end of 2025; its caution about the timing gap is well grounded.",
+        "criteria": [
+          "PARTIAL"
+        ]
+      }
+    },
+    "PUB-DART": {
+      "archived": {
+        "label": "CORROBORATED",
+        "grade": "JUSTIFIED"
+      },
+      "v7": {
+        "label": "CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment appropriately concludes delivery was corroborated because the excerpts establish both required conditions: DART actually hit Dimorphos and the measured orbital-period change far exceeded NASA’s pre-impact 73-second success threshold.",
+        "criteria": [
+          "DELIVERED"
+        ]
+      },
+      "v7-r2": {
+        "label": "CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment appropriately concludes delivery was corroborated: the excerpts establish both that DART struck Dimorphos and that the measured orbital-period change greatly exceeded NASA’s pre-impact 73-second success threshold.",
+        "criteria": [
+          "DELIVERED"
+        ]
+      },
+      "v7-r3": {
+        "label": "CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment correctly concludes delivery was corroborated because the excerpts establish both required conditions: DART actually impacted Dimorphos and the measured orbital-period change far exceeded NASA’s pre-impact 73-second success threshold.",
+        "criteria": [
+          "DELIVERED"
+        ]
+      }
+    }
+  },
+  "arms": {
+    "v7": {
+      "assess": {
+        "input": 30679,
+        "output": 4607,
+        "cached": 11520,
+        "calls": 11,
+        "estimated_usd": 0.1198825
+      },
+      "judge": {
+        "input": 19232,
+        "output": 2050,
+        "cached": 13568,
+        "calls": 3,
+        "estimated_usd": 0.048302
+      },
+      "grades": {
+        "JUSTIFIED": 3
+      }
+    },
+    "v7-r2": {
+      "assess": {
+        "input": 31280,
+        "output": 4873,
+        "cached": 17152,
+        "calls": 12,
+        "estimated_usd": 0.112703
+      },
+      "judge": {
+        "input": 19276,
+        "output": 2642,
+        "cached": 13568,
+        "calls": 3,
+        "estimated_usd": 0.057292
+      },
+      "grades": {
+        "JUSTIFIED": 3
+      }
+    },
+    "v7-r3": {
+      "assess": {
+        "input": 39287,
+        "output": 5870,
+        "cached": 24576,
+        "calls": 15,
+        "estimated_usd": 0.1309715
+      },
+      "judge": {
+        "input": 19447,
+        "output": 2424,
+        "cached": 15616,
+        "calls": 3,
+        "estimated_usd": 0.0498415
+      },
+      "grades": {
+        "JUSTIFIED": 3
+      }
+    }
+  },
+  "total_estimated_usd": 0.5189925
+}

@@ -90,6 +90,8 @@ python -m tracegraph.runtime evaluate --commitment-id TG-GOLD-H008 --commitment-
 
 The report separates confirmed one-to-one matches, evidence that needs review, unmatched evidence, and failed research jobs. Confirmed recall is matched reference evidence divided by all reference evidence in scored cases. With no IDs supplied, the evaluator selects the first two completed detail tabs by ID. See `evaluate --help` for options, including a custom workbook path and reviewed matches.
 
+The [delivery assessment study](evaluation/verdict-grounding/report.md) replays fixed source passages against the production assessor and grades the displayed verdict and explanation with a tool-free GPT-5.4 judge. The [Golden fact coverage review](evaluation/verdict-grounding/coverage-review.md) measures how many reference facts users can recover from the evidence TraceGraph found across 22 commitments.
+
 ## Repository layout
 
 | Directory | Contents |
@@ -98,7 +100,7 @@ The report separates confirmed one-to-one matches, evidence that needs review, u
 | [`frontend/`](frontend/) | Browser app, Cytoscape graph, development server, and synthetic demo |
 | [`db/`](db/) | PostgreSQL migrations and pgvector schema |
 | [`contracts/`](contracts/) | [Current OpenAPI contract](contracts/openapi.json) and [API notes](contracts/README.md) |
-| [`evaluation/`](evaluation/) | Golden reference workbook |
+| [`evaluation/`](evaluation/) | Golden reference workbook, frozen assessment cases, and evaluation reports |
 | [`tests/`](tests/) | Unit, PostgreSQL integration, and browser end-to-end tests |
 | [`docs/`](docs/) | [Original Nov. 7 design notes](docs/nov-07-mvp-notes.txt) and [legacy snapshot API guide](docs/legacy-data-api.md) |
 

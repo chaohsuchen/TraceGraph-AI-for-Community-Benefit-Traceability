@@ -1,0 +1,278 @@
+{
+  "case": "PUB-DART",
+  "model": "gpt-5.4",
+  "runtime": {
+    "agent.py": "a05ce765ed68bdd3bdef1b319c2349e39f60e2abf7d2c923502295582c8aff21",
+    "providers.py": "ca5b2481b0d18e88ddd57f28333f5ac60051d8f98e045217aceb442166f2d84b",
+    "reconcile.py": "582754a7c24a38543485d4e7589cbdd738d571fb3dd949f0b118374bf12f532b",
+    "openai_provider.py": "cebdca8526ccb8ebec3b83da3c0e0cec2b6f2b39797dae0a4ce15e88cbe09f59"
+  },
+  "inputs_sha256": "07b5cebf81e1ef35a4b9ce5ce6e1b6015c4d6fc9207dc95e149ec7e544752078",
+  "as_of": "2026-11-22",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 8.452999999999975,
+      "request_id": "req_41855fdbdd16441dbc1721bb1af730f2",
+      "usage": {
+        "input_tokens": 4018,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 3840
+        },
+        "output_tokens": 643,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4661
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 2.2970000000000255,
+      "request_id": "req_5734d442565e4de6a425ee1553170f11",
+      "usage": {
+        "input_tokens": 835,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 262,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 1097
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 4.0,
+      "request_id": "req_2eb314334bb94cc48fb06e30dd69ad65",
+      "usage": {
+        "input_tokens": 3517,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 408,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3925
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 2.0,
+      "request_id": "req_a4851d03b92847d999f166c86350ca7a",
+      "usage": {
+        "input_tokens": 2562,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 1792
+        },
+        "output_tokens": 151,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2713
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "status": "COMPLETED",
+  "trace": {
+    "scope_locks": [
+      {
+        "mention": "Dimorphos",
+        "citation_id": "c1",
+        "aliases": [],
+        "condition_numbers": []
+      }
+    ],
+    "not_yet_due": [],
+    "criteria": [
+      {
+        "criterion": "NASA's DART mission changed Dimorphos' orbital period around Didymos by at least 73 seconds",
+        "required_elements": [
+          "NASA defined success as a change in Dimorphos' orbit period",
+          "the change concerned Dimorphos' orbit around Didymos",
+          "the minimum successful change was 73 seconds or more",
+          "DART actually changed Dimorphos' orbital period by at least 73 seconds"
+        ],
+        "scope_criteria": [
+          "s1",
+          "s2"
+        ],
+        "promise_scope": "NASA; beneficiary/location is the Dimorphos orbit around Didymos rather than a human population; benefit/action: DART mission success was defined as changing Dimorphos' orbital period by at least 73 seconds; location: Dimorphos around Didymos.",
+        "observed_scope": "NASA reported that DART’s impact altered Dimorphos’ orbit around Didymos by 32 minutes, and a later analysis said it finally settled at 33 minutes and 15 seconds less time than before impact.",
+        "promise_citation_ids": [
+          "c1"
+        ],
+        "delivery_citation_ids": [
+          "c2",
+          "c3"
+        ],
+        "delivery_status": "DELIVERED",
+        "timing_requirement": "",
+        "explanation": "NASA reported that DART’s impact altered Dimorphos’ orbit around Didymos by 32 minutes, and a later analysis said it finally settled at 33 minutes and 15 seconds less time than before impact.",
+        "gap": "",
+        "locked_scopes": [
+          {
+            "mention": "Dimorphos",
+            "citation_id": "c1",
+            "aliases": []
+          }
+        ],
+        "delivery_support": [
+          {
+            "citation_id": "c2",
+            "quote": "Now, the investigation team has confirmed the spacecraft’s impact altered Dimorphos’ orbit around Didymos by 32 minutes, shortening the 11 hour and 55-minute orbit to 11 hours and 23 minutes."
+          },
+          {
+            "citation_id": "c3",
+            "quote": "Over the following weeks, the asteroid’s orbital period continued to shorten as Dimorphos lost more rocky material to space, finally settling at 11 hours, 22 minutes, and 3 seconds per orbit – 33 minutes and 15 seconds less time than before impact."
+          }
+        ],
+        "fulfilled_part": "NASA reported that DART’s impact altered Dimorphos’ orbit around Didymos by 32 minutes, and a later analysis said it finally settled at 33 minutes and 15 seconds less time than before impact.",
+        "timing_support": [],
+        "element_support": {
+          "e1": [
+            "c2",
+            "c3"
+          ],
+          "e2": [
+            "c2",
+            "c3"
+          ],
+          "e3": [
+            "c2",
+            "c3"
+          ],
+          "e4": [
+            "c2",
+            "c3"
+          ]
+        },
+        "entailment_check": {
+          "occurrence_witness": {
+            "binding": "DIRECT",
+            "action_citation_id": "c2",
+            "action_quote": "confirmed the spacecraft’s impact altered Dimorphos’ orbit around Didymos by 32 minutes",
+            "scope_words": "Dimorphos’ orbit around Didymos",
+            "scope_citation_id": "",
+            "scope_quote": "",
+            "event_reference": ""
+          },
+          "zero_delivery_alternative": "",
+          "incomplete_delivery_alternative": "",
+          "support_ids": [
+            "c2",
+            "c3"
+          ],
+          "observed_fact": "NASA reported that DART’s impact altered Dimorphos’ orbit around Didymos by 32 minutes, and a later analysis said it finally settled at 33 minutes and 15 seconds less time than before impact."
+        }
+      }
+    ],
+    "label": "CORROBORATED",
+    "verdict": "Delivery corroborated: NASA reported that DART’s impact altered Dimorphos’ orbit around Didymos by 32 minutes, and a later analysis said it finally settled at 33 minutes and 15 seconds less time than before impact.",
+    "reasoning": "Requested scope: Did NASA's DART mission meet its target for changing how long Dimorphos takes to orbit Didymos?\n\nNASA's DART mission changed Dimorphos' orbital period around Didymos by at least 73 seconds\nStatus: DELIVERED\nNASA reported that DART’s impact altered Dimorphos’ orbit around Didymos by 32 minutes, and a later analysis said it finally settled at 33 minutes and 15 seconds less time than before impact.\nPromised scope: NASA; beneficiary/location is the Dimorphos orbit around Didymos rather than a human population; benefit/action: DART mission success was defined as changing Dimorphos' orbital period by at least 73 seconds; location: Dimorphos around Didymos.\nObserved scope: NASA reported that DART’s impact altered Dimorphos’ orbit around Didymos by 32 minutes, and a later analysis said it finally settled at 33 minutes and 15 seconds less time than before impact.\nSupported delivery: NASA reported that DART’s impact altered Dimorphos’ orbit around Didymos by 32 minutes, and a later analysis said it finally settled at 33 minutes and 15 seconds less time than before impact.\nPromise evidence: c1\nDelivery evidence: c2, c3\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “Before its encounter, NASA had defined a minimum successful orbit period change of Dimorphos as change of 73 seconds or more.”\nhttps://www.nasa.gov/news-release/nasa-confirms-dart-mission-impact-changed-asteroids-motion-in-space/\n\nc2: “Prior to DART’s impact, it took Dimorphos 11 hours and 55 minutes to orbit its larger parent asteroid, Didymos. Since DART’s intentional collision with Dimorphos on Sept. 26, astronomers have been using telescopes on Earth to measure how much that time has changed. Now, the investigation team has confirmed the spacecraft’s impact altered Dimorphos’ orbit around Didymos by 32 minutes, shortening the 11 hour and 55-minute orbit to 11 hours and 23 minutes. This measurement has a margin of uncertainty of approximately plus or minus 2 minutes.”\nhttps://www.nasa.gov/news-release/nasa-confirms-dart-mission-impact-changed-asteroids-motion-in-space/\n\nc3: “Over the following weeks, the asteroid’s orbital period continued to shorten as Dimorphos lost more rocky material to space, finally settling at 11 hours, 22 minutes, and 3 seconds per orbit – 33 minutes and 15 seconds less time than before impact. This calculation is accurate to within 1 1⁄2 seconds, Naidu said.”\nhttps://www.nasa.gov/missions/dart/nasa-study-asteroids-orbit-shape-changed-after-dart-impact/?rand=772114\n\nc4: “After further analysis, NASA confirmed that DART’s hypervelocity impact with Dimorphos successfully altered Dimorphos’ orbit around Didymos, marking humanity’s first time purposely changing the motion of a celestial object and the first demonstration of asteroid deflection technology.”\nhttps://science.nasa.gov/planetary-defense-dart/",
+    "refutation": [],
+    "scope_anchors": {
+      "s1": "NASA DART mission target: change Dimorphos' orbital period around Didymos by at least 73 seconds",
+      "s2": "Actual change in Dimorphos' orbital period around Didymos after DART impact"
+    },
+    "citations": {
+      "c1": {
+        "source": {
+          "title": "https://www.nasa.gov/news-release/nasa-confirms-dart-mission-impact-changed-asteroids-motion-in-space/",
+          "url": "https://www.nasa.gov/news-release/nasa-confirms-dart-mission-impact-changed-asteroids-motion-in-space/",
+          "citation": "https://www.nasa.gov/news-release/nasa-confirms-dart-mission-impact-changed-asteroids-motion-in-space/"
+        },
+        "excerpt": "Before its encounter, NASA had defined a minimum successful orbit period change of Dimorphos as change of 73 seconds or more.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:31:47.088553+00:00",
+        "finding_id": "finding-21e87091-738f-4ad7-b977-726b68c4a47e"
+      },
+      "c2": {
+        "source": {
+          "title": "https://www.nasa.gov/news-release/nasa-confirms-dart-mission-impact-changed-asteroids-motion-in-space/",
+          "url": "https://www.nasa.gov/news-release/nasa-confirms-dart-mission-impact-changed-asteroids-motion-in-space/",
+          "citation": "https://www.nasa.gov/news-release/nasa-confirms-dart-mission-impact-changed-asteroids-motion-in-space/"
+        },
+        "excerpt": "Prior to DART’s impact, it took Dimorphos 11 hours and 55 minutes to orbit its larger parent asteroid, Didymos. Since DART’s intentional collision with Dimorphos on Sept. 26, astronomers have been using telescopes on Earth to measure how much that time has changed. Now, the investigation team has confirmed the spacecraft’s impact altered Dimorphos’ orbit around Didymos by 32 minutes, shortening the 11 hour and 55-minute orbit to 11 hours and 23 minutes. This measurement has a margin of uncertainty of approximately plus or minus 2 minutes.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:31:47.088553+00:00",
+        "finding_id": "finding-8377462b-10bd-44c1-9d50-4b7a5f0f1137"
+      },
+      "c3": {
+        "source": {
+          "title": "https://www.nasa.gov/missions/dart/nasa-study-asteroids-orbit-shape-changed-after-dart-impact/?rand=772114",
+          "url": "https://www.nasa.gov/missions/dart/nasa-study-asteroids-orbit-shape-changed-after-dart-impact/?rand=772114",
+          "citation": "https://www.nasa.gov/missions/dart/nasa-study-asteroids-orbit-shape-changed-after-dart-impact/?rand=772114"
+        },
+        "excerpt": "Over the following weeks, the asteroid’s orbital period continued to shorten as Dimorphos lost more rocky material to space, finally settling at 11 hours, 22 minutes, and 3 seconds per orbit – 33 minutes and 15 seconds less time than before impact. This calculation is accurate to within 1 1⁄2 seconds, Naidu said.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:31:47.088553+00:00",
+        "finding_id": "finding-85fbff84-932c-4a65-bd07-5791ff5b09eb"
+      },
+      "c4": {
+        "source": {
+          "title": "https://science.nasa.gov/planetary-defense-dart/",
+          "url": "https://science.nasa.gov/planetary-defense-dart/",
+          "citation": "https://science.nasa.gov/planetary-defense-dart/"
+        },
+        "excerpt": "After further analysis, NASA confirmed that DART’s hypervelocity impact with Dimorphos successfully altered Dimorphos’ orbit around Didymos, marking humanity’s first time purposely changing the motion of a celestial object and the first demonstration of asteroid deflection technology.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:31:47.088553+00:00",
+        "finding_id": "finding-7f140332-1b2d-4c06-ba5b-b2c519b3efe5"
+      }
+    },
+    "scope_gap": ""
+  },
+  "displayed": {
+    "label": "CORROBORATED",
+    "verdict": "Delivery corroborated: NASA reported that DART’s impact altered Dimorphos’ orbit around Didymos by 32 minutes, and a later analysis said it finally settled at 33 minutes and 15 seconds less time than before impact.",
+    "reasoning": "Requested scope: Did NASA's DART mission meet its target for changing how long Dimorphos takes to orbit Didymos?\n\nNASA's DART mission changed Dimorphos' orbital period around Didymos by at least 73 seconds\nStatus: DELIVERED\nNASA reported that DART’s impact altered Dimorphos’ orbit around Didymos by 32 minutes, and a later analysis said it finally settled at 33 minutes and 15 seconds less time than before impact.\nPromised scope: NASA; beneficiary/location is the Dimorphos orbit around Didymos rather than a human population; benefit/action: DART mission success was defined as changing Dimorphos' orbital period by at least 73 seconds; location: Dimorphos around Didymos.\nObserved scope: NASA reported that DART’s impact altered Dimorphos’ orbit around Didymos by 32 minutes, and a later analysis said it finally settled at 33 minutes and 15 seconds less time than before impact.\nSupported delivery: NASA reported that DART’s impact altered Dimorphos’ orbit around Didymos by 32 minutes, and a later analysis said it finally settled at 33 minutes and 15 seconds less time than before impact.\nPromise evidence: c1\nDelivery evidence: c2, c3\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “Before its encounter, NASA had defined a minimum successful orbit period change of Dimorphos as change of 73 seconds or more.”\nhttps://www.nasa.gov/news-release/nasa-confirms-dart-mission-impact-changed-asteroids-motion-in-space/\n\nc2: “Prior to DART’s impact, it took Dimorphos 11 hours and 55 minutes to orbit its larger parent asteroid, Didymos. Since DART’s intentional collision with Dimorphos on Sept. 26, astronomers have been using telescopes on Earth to measure how much that time has changed. Now, the investigation team has confirmed the spacecraft’s impact altered Dimorphos’ orbit around Didymos by 32 minutes, shortening the 11 hour and 55-minute orbit to 11 hours and 23 minutes. This measurement has a margin of uncertainty of approximately plus or minus 2 minutes.”\nhttps://www.nasa.gov/news-release/nasa-confirms-dart-mission-impact-changed-asteroids-motion-in-space/\n\nc3: “Over the following weeks, the asteroid’s orbital period continued to shorten as Dimorphos lost more rocky material to space, finally settling at 11 hours, 22 minutes, and 3 seconds per orbit – 33 minutes and 15 seconds less time than before impact. This calculation is accurate to within 1 1⁄2 seconds, Naidu said.”\nhttps://www.nasa.gov/missions/dart/nasa-study-asteroids-orbit-shape-changed-after-dart-impact/?rand=772114\n\nc4: “After further analysis, NASA confirmed that DART’s hypervelocity impact with Dimorphos successfully altered Dimorphos’ orbit around Didymos, marking humanity’s first time purposely changing the motion of a celestial object and the first demonstration of asteroid deflection technology.”\nhttps://science.nasa.gov/planetary-defense-dart/",
+    "verification_date": "2026-11-22"
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "case": "PUB-ELIZABETH",
+  "model": "gpt-5.4",
+  "version": "tracegraph-nli-v4-owned-quotes",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "research_sha256": "efbd6ad1b5b64db4cb016bb6df69af93a600aac4d4e39c2db78725e5ed585539",
+  "displayed_sha256": "bf6df769c43a20d553aea88348b8df44ed0da98673b2375eb8d93182b4b6304e",
+  "original": {
+    "label": "JUSTIFIED",
+    "reason": "The final assessment correctly concludes the December 2018 by-deadline opening was not delivered and eventual opening is supported; its key inference rests on the August 2018 decision to open in Autumn 2019, which is incompatible with opening by end-December 2018, and on opening-day operation evidence for eventual opening.",
+    "conditions": [
+      {
+        "condition_id": "C1",
+        "label": "CONTRADICTION",
+        "citation_ids": [
+          "support-c6e9b5ce-24fd-484d-86c6-a42201ed8471"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-c6e9b5ce-24fd-484d-86c6-a42201ed8471",
+            "quote": "The Crossrail Ltd Board took the decision to open the central section between Paddington and Abbey Wood in Autumn 2019 on 29 August 2018.",
+            "label": "CONTRADICTION",
+            "reason": "A decision on 29 August 2018 to open this section in Autumn 2019 is incompatible with it having begun service by the end of December 2018."
+          }
+        ],
+        "reason": "The August 2018 decision set the opening for Autumn 2019, contradicting service having begun by end-December 2018."
+      },
+      {
+        "condition_id": "C2",
+        "label": "ENTAILMENT",
+        "citation_ids": [
+          "support-1e0052a2-3f39-4d6d-a16e-89d3abf62008"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-1e0052a2-3f39-4d6d-a16e-89d3abf62008",
+            "quote": "The celebratory response to the opening saw around 260,000 journeys made on the new central section between Paddington and Abbey Wood across its opening day, clearly showing its popularity.",
+            "label": "ENTAILMENT",
+            "reason": "Journeys made on the section across its opening day establish that passenger services on this section eventually opened."
+          }
+        ],
+        "reason": "Opening-day passenger journeys on the Paddington–Abbey Wood central section establish that the section eventually opened."
+      }
+    ]
+  },
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 4.2650000000001,
+      "request_id": "req_43b139b8499a4029a007c3c8e715b680",
+      "usage": {
+        "input_tokens": 5049,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 431,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 5480
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "evidence_judgment_sha256": "5fea23b7d7cf42f0ee73efdfeea900ac5fb852e4ee5b64cbd29c72f791868a33",
+  "result": {
+    "label": "JUSTIFIED",
+    "reason": "The displayed assessment says delivery was not verified, and the supplied excerpts do not establish that central passenger services began by end-December 2018, while they do establish the section eventually opened; given this mixed record, an unverified verdict is warranted and does not overstate either fulfillment or failure.",
+    "conditions": [
+      {
+        "condition_id": "C1",
+        "label": "CONTRADICTION",
+        "citation_ids": [
+          "support-c6e9b5ce-24fd-484d-86c6-a42201ed8471"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-c6e9b5ce-24fd-484d-86c6-a42201ed8471",
+            "quote": "The Crossrail Ltd Board took the decision to open the central section between Paddington and Abbey Wood in Autumn 2019 on 29 August 2018.",
+            "label": "CONTRADICTION",
+            "reason": "A decision in August 2018 to open this section in Autumn 2019 is incompatible with it having begun by the end of December 2018."
+          }
+        ],
+        "reason": "The August 2018 board decision set opening for Autumn 2019, which contradicts commencement by end-December 2018."
+      },
+      {
+        "condition_id": "C2",
+        "label": "ENTAILMENT",
+        "citation_ids": [
+          "support-1e0052a2-3f39-4d6d-a16e-89d3abf62008"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-1e0052a2-3f39-4d6d-a16e-89d3abf62008",
+            "quote": "The celebratory response to the opening saw around 260,000 journeys made on the new central section between Paddington and Abbey Wood across its opening day, clearly showing its popularity.",
+            "label": "ENTAILMENT",
+            "reason": "Reporting journeys on the section across its opening day establishes that passenger services on this section eventually opened."
+          }
+        ],
+        "reason": "The opening-day journeys on the Paddington-Abbey Wood central section establish that passenger services eventually opened."
+      }
+    ]
+  },
+  "score": {
+    "case_id": "PUB-ELIZABETH",
+    "identity": "MATCH",
+    "reference_coverage": {
+      "numerator": 1,
+      "denominator": 4,
+      "rate": 0.25
+    },
+    "finding_support": {
+      "numerator": 5,
+      "denominator": 7,
+      "rate": 0.7142857142857143
+    },
+    "traceability": {
+      "numerator": 5,
+      "denominator": 7,
+      "rate": 0.7142857142857143
+    },
+    "claim_count": 7,
+    "evidence_eligible_claims": 7,
+    "unquoted_claims": 0,
+    "credited_reference_ids": [
+      "G1"
+    ],
+    "coverage_labels": {
+      "ENTAILMENT": 1,
+      "CONTRADICTION": 0,
+      "NEUTRAL": 2,
+      "MISSING": 1
+    },
+    "finding_labels": {
+      "ENTAILMENT": 5,
+      "CONTRADICTION": 0,
+      "NEUTRAL": 2
+    },
+    "citation_audit": "OWNED_QUOTES_V1",
+    "verdict": "JUSTIFIED",
+    "verdict_evaluation": {
+      "applicable": true,
+      "reason": null,
+      "label": "JUSTIFIED"
+    }
+  }
+}

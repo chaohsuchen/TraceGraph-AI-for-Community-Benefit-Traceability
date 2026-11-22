@@ -1,0 +1,180 @@
+{
+  "case": "TG-GOLD-H017",
+  "model": "gpt-5.4",
+  "runtime": {
+    "agent.py": "a05ce765ed68bdd3bdef1b319c2349e39f60e2abf7d2c923502295582c8aff21",
+    "providers.py": "e561490a72eefd0fcb97013b61230570688bb1882e07c9798f8d39d90a943811",
+    "reconcile.py": "582754a7c24a38543485d4e7589cbdd738d571fb3dd949f0b118374bf12f532b",
+    "openai_provider.py": "cebdca8526ccb8ebec3b83da3c0e0cec2b6f2b39797dae0a4ce15e88cbe09f59"
+  },
+  "inputs_sha256": "0f75fd9b9fe233058445030ea42c458ada26474c93410470d99b5ec17b0e1811",
+  "as_of": "2026-11-22",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 10.0,
+      "request_id": "req_b92bc635dbe54b60aeb5aa5a92742de1",
+      "usage": {
+        "input_tokens": 4631,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 847,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 5478
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "status": "COMPLETED",
+  "trace": {
+    "not_yet_due": [],
+    "criteria": [
+      {
+        "criterion": "Deliver the proposed HRMP community benefits package for the Willets Point/Queens project: traffic and roadway improvements, MTA station improvements, over 25 acres of new public open space, a Community Impact Fund, and funding for neighborhood social services.",
+        "required_elements": [
+          "HRMP delivers traffic and roadway improvements for the project",
+          "HRMP delivers improvements to the MTA public transit station for the project",
+          "HRMP delivers over 25 acres of new public open space for the project",
+          "HRMP delivers a Community Impact Fund for Queens communities/residents",
+          "HRMP delivers funding for neighborhood social services for Queens communities/residents"
+        ],
+        "scope_criteria": [
+          "s1",
+          "s2"
+        ],
+        "promise_scope": "HRMP proposed, for its Hard Rock Metropolitan Park project in Queens/Willets Point, community benefits valued at $761 million including traffic and roadway improvements, improvements to the MTA public transit station, over 25 acres of new public open space, a Community Impact Fund, and funding for neighborhood social services benefiting surrounding Queens communities/residents.",
+        "observed_scope": "Delivery for the promised scope remains unverified.",
+        "promise_citation_ids": [
+          "c1",
+          "c2",
+          "c6",
+          "c7",
+          "c9"
+        ],
+        "delivery_citation_ids": [],
+        "delivery_status": "UNVERIFIED",
+        "timing_requirement": "",
+        "explanation": "The cited sources document the terms of the undertaking.",
+        "gap": "The sources do not establish actual performance for the promised scope.",
+        "delivery_support": []
+      }
+    ],
+    "label": "UNVERIFIED",
+    "verdict": "The available evidence does not establish delivery of the requested obligation.",
+    "reasoning": "Requested scope: HRMP's $761 million community benefits include traffic/roadway work, MTA station improvements, 25+ acres of open space, a Community Impact Fund and social-services funding.\n\nDeliver the proposed HRMP community benefits package for the Willets Point/Queens project: traffic and roadway improvements, MTA station improvements, over 25 acres of new public open space, a Community Impact Fund, and funding for neighborhood social services.\nStatus: UNVERIFIED\nThe cited sources document the terms of the undertaking.\nPromised scope: HRMP proposed, for its Hard Rock Metropolitan Park project in Queens/Willets Point, community benefits valued at $761 million including traffic and roadway improvements, improvements to the MTA public transit station, over 25 acres of new public open space, a Community Impact Fund, and funding for neighborhood social services benefiting surrounding Queens communities/residents.\nObserved scope: Delivery for the promised scope remains unverified.\nEvidence gap: The sources do not establish actual performance for the promised scope.\nPromise evidence: c1, c2, c6, c7, c9\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “Community benefits valued at $761 million include significant traffic and roadway improvements, improvements to the Metropolitan Transportation Authority (MTA)’s public transit station, over 25 acres of new public open space, a Community Impact Fund, and funding for neighborhood social services.”\nhttps://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf\n\nc2: “HRMP proposes extensive traffic and roadway improvements, including ADA-compliant upgrades to the Willets Point MTA subway station, reconfigured intersections, new pedestrian and bicycle paths, and improved access to public transit.”\nhttps://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf\n\nc3: “Hard Rock Metropolitan Park has engaged with the MTA for over three years about the proposed improvements at Mets-Willets Point, and the MTA provided conceptual approval of the Proposed Improvements at the 30% Construction Documents stage of review in a letter dated August 21, 2024”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf\n\nc4: “We have and will continue to work in good faith to secure all necessary approvals from the MTA and meet all necessary deadlines to deliver this required community benefit.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf\n\nc5: “Resorts World NYC is already generating gaming revenue and expanding its casino floor, while Hard Rock Metropolitan Park in Queens and Bally’s Bronx continue through development, financing, construction, and permitting stages.”\nhttps://www.actionnetwork.com/news/new-york-casino-resorts-world-hard-rock-ballys-update/\n\nc6: “$163 million for a Community Impact Fund that will provide grants to non -profit organizations serving Queens communities and residents.”\nhttps://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf\n\nc7: “A $163 million Community Benefits Fund (with the understanding this Fund should be increased) to be accessible for 30 years (or until the funds are depleted) and allocated across local Queens Community Districts 3, 4, 6, 7, 8, and 9;”\nhttps://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf\n\nc8: “A Community Advisory Board that will meet regularly and act as a watchdog for all promised community benefits;”\nhttps://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf\n\nc9: “$25 million for community identified health care and youth and senior needs, including a health clinic in East Elmhurst , a youth and senior center in Corona, and addiction and mental health services infrastructure in Flushing.”\nhttps://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+    "refutation": [],
+    "scope_anchors": {
+      "s1": "HRMP proposed $761 million in community benefits including traffic/roadway improvements, MTA station improvements, over 25 acres of public open space, a Community Impact Fund, and neighborhood social-services funding.",
+      "s2": "Whether those community benefits were actually delivered."
+    },
+    "citations": {
+      "c1": {
+        "source": {
+          "title": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+          "url": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+          "citation": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf"
+        },
+        "excerpt": "Community benefits valued at $761 million include significant traffic and roadway improvements, improvements to the Metropolitan Transportation Authority (MTA)’s public transit station, over 25 acres of new public open space, a Community Impact Fund, and funding for neighborhood social services.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:39:13.065828+00:00",
+        "finding_id": "finding-849e32d0-5686-4611-9788-3b5b108b29f4"
+      },
+      "c2": {
+        "source": {
+          "title": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+          "url": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf",
+          "citation": "https://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf"
+        },
+        "excerpt": "HRMP proposes extensive traffic and roadway improvements, including ADA-compliant upgrades to the Willets Point MTA subway station, reconfigured intersections, new pedestrian and bicycle paths, and improved access to public transit.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:39:13.065828+00:00",
+        "finding_id": "finding-1cb7b3c0-cb38-4cd6-9045-fd3174e0bc80"
+      },
+      "c3": {
+        "source": {
+          "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf",
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf"
+        },
+        "excerpt": "Hard Rock Metropolitan Park has engaged with the MTA for over three years about the proposed improvements at Mets-Willets Point, and the MTA provided conceptual approval of the Proposed Improvements at the 30% Construction Documents stage of review in a letter dated August 21, 2024",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:39:13.065828+00:00",
+        "finding_id": "finding-51483460-8378-4ae9-ae18-e849b662808b"
+      },
+      "c4": {
+        "source": {
+          "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf",
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf"
+        },
+        "excerpt": "We have and will continue to work in good faith to secure all necessary approvals from the MTA and meet all necessary deadlines to deliver this required community benefit.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:39:13.065828+00:00",
+        "finding_id": "finding-61e5810f-d55b-4f08-a884-68471d3947cb"
+      },
+      "c5": {
+        "source": {
+          "title": "https://www.actionnetwork.com/news/new-york-casino-resorts-world-hard-rock-ballys-update/",
+          "url": "https://www.actionnetwork.com/news/new-york-casino-resorts-world-hard-rock-ballys-update/",
+          "citation": "https://www.actionnetwork.com/news/new-york-casino-resorts-world-hard-rock-ballys-update/"
+        },
+        "excerpt": "Resorts World NYC is already generating gaming revenue and expanding its casino floor, while Hard Rock Metropolitan Park in Queens and Bally’s Bronx continue through development, financing, construction, and permitting stages.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:39:13.065828+00:00",
+        "finding_id": "finding-d6398075-1a05-410b-a89e-b6a60ea5c706"
+      },
+      "c6": {
+        "source": {
+          "title": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+          "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf"
+        },
+        "excerpt": "$163 million for a Community Impact Fund that will provide grants to non -profit organizations serving Queens communities and residents.",
+        "finding_id": "source-reread-1"
+      },
+      "c7": {
+        "source": {
+          "title": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+          "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf"
+        },
+        "excerpt": "A $163 million Community Benefits Fund (with the understanding this Fund should be increased) to be accessible for 30 years (or until the funds are depleted) and allocated across local Queens Community Districts 3, 4, 6, 7, 8, and 9;",
+        "finding_id": "source-reread-2"
+      },
+      "c8": {
+        "source": {
+          "title": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+          "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf"
+        },
+        "excerpt": "A Community Advisory Board that will meet regularly and act as a watchdog for all promised community benefits;",
+        "finding_id": "source-reread-3"
+      },
+      "c9": {
+        "source": {
+          "title": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+          "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf"
+        },
+        "excerpt": "$25 million for community identified health care and youth and senior needs, including a health clinic in East Elmhurst , a youth and senior center in Corona, and addiction and mental health services infrastructure in Flushing.",
+        "finding_id": "source-reread-4"
+      }
+    },
+    "scope_gap": ""
+  },
+  "displayed": {
+    "label": "UNVERIFIED",
+    "verdict": "The available evidence does not establish delivery of the requested obligation.",
+    "reasoning": "Requested scope: HRMP's $761 million community benefits include traffic/roadway work, MTA station improvements, 25+ acres of open space, a Community Impact Fund and social-services funding.\n\nDeliver the proposed HRMP community benefits package for the Willets Point/Queens project: traffic and roadway improvements, MTA station improvements, over 25 acres of new public open space, a Community Impact Fund, and funding for neighborhood social services.\nStatus: UNVERIFIED\nThe cited sources document the terms of the undertaking.\nPromised scope: HRMP proposed, for its Hard Rock Metropolitan Park project in Queens/Willets Point, community benefits valued at $761 million including traffic and roadway improvements, improvements to the MTA public transit station, over 25 acres of new public open space, a Community Impact Fund, and funding for neighborhood social services benefiting surrounding Queens communities/residents.\nObserved scope: Delivery for the promised scope remains unverified.\nEvidence gap: The sources do not establish actual performance for the promised scope.\nPromise evidence: c1, c2, c6, c7, c9\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “Community benefits valued at $761 million include significant traffic and roadway improvements, improvements to the Metropolitan Transportation Authority (MTA)’s public transit station, over 25 acres of new public open space, a Community Impact Fund, and funding for neighborhood social services.”\nhttps://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf\n\nc2: “HRMP proposes extensive traffic and roadway improvements, including ADA-compliant upgrades to the Willets Point MTA subway station, reconfigured intersections, new pedestrian and bicycle paths, and improved access to public transit.”\nhttps://bloximages.chicago2.vip.townnews.com/pressofatlanticcity.com/content/tncms/assets/v3/editorial/4/5b/45beb9c7-dd44-4850-b206-d4f0249b219b/692dd87b17ea4.pdf.pdf\n\nc3: “Hard Rock Metropolitan Park has engaged with the MTA for over three years about the proposed improvements at Mets-Willets Point, and the MTA provided conceptual approval of the Proposed Improvements at the 30% Construction Documents stage of review in a letter dated August 21, 2024”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf\n\nc4: “We have and will continue to work in good faith to secure all necessary approvals from the MTA and meet all necessary deadlines to deliver this required community benefit.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/cac-mta-questions-response-redacted-c-1.pdf\n\nc5: “Resorts World NYC is already generating gaming revenue and expanding its casino floor, while Hard Rock Metropolitan Park in Queens and Bally’s Bronx continue through development, financing, construction, and permitting stages.”\nhttps://www.actionnetwork.com/news/new-york-casino-resorts-world-hard-rock-ballys-update/\n\nc6: “$163 million for a Community Impact Fund that will provide grants to non -profit organizations serving Queens communities and residents.”\nhttps://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf\n\nc7: “A $163 million Community Benefits Fund (with the understanding this Fund should be increased) to be accessible for 30 years (or until the funds are depleted) and allocated across local Queens Community Districts 3, 4, 6, 7, 8, and 9;”\nhttps://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf\n\nc8: “A Community Advisory Board that will meet regularly and act as a watchdog for all promised community benefits;”\nhttps://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf\n\nc9: “$25 million for community identified health care and youth and senior needs, including a health clinic in East Elmhurst , a youth and senior center in Corona, and addiction and mental health services infrastructure in Flushing.”\nhttps://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+    "verification_date": "2026-11-22"
+  }
+}

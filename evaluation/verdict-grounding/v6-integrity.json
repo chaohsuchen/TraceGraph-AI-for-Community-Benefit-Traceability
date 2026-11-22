@@ -1,0 +1,102 @@
+{
+  "runtime": {
+    "providers.py": "ca5b2481b0d18e88ddd57f28333f5ac60051d8f98e045217aceb442166f2d84b",
+    "reconcile.py": "582754a7c24a38543485d4e7589cbdd738d571fb3dd949f0b118374bf12f532b",
+    "openai_provider.py": "cebdca8526ccb8ebec3b83da3c0e0cec2b6f2b39797dae0a4ce15e88cbe09f59",
+    "agent.py": "a05ce765ed68bdd3bdef1b319c2349e39f60e2abf7d2c923502295582c8aff21"
+  },
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "verified": 17,
+  "grade_totals": {
+    "JUSTIFIED": 14,
+    "UNDERCLAIM": 1,
+    "OVERCLAIM": 2
+  },
+  "recorded_usage": {
+    "input": 267397,
+    "output": 40188,
+    "cached": 97536,
+    "calls": 74,
+    "estimated_usd": 1.0518565
+  },
+  "panels": {
+    "v6": {
+      "TG-GOLD-H012": [
+        "UNVERIFIED",
+        "JUSTIFIED"
+      ],
+      "PUB-COBALT": [
+        "UNVERIFIED",
+        "UNDERCLAIM"
+      ],
+      "TG-GOLD-H007": [
+        "UNVERIFIED",
+        "JUSTIFIED"
+      ],
+      "PUB-DART": [
+        "CORROBORATED",
+        "JUSTIFIED"
+      ],
+      "TG-GOLD-H008": [
+        "UNVERIFIED",
+        "JUSTIFIED"
+      ],
+      "PUB-ELIZABETH": [
+        "UNVERIFIED",
+        "JUSTIFIED"
+      ]
+    },
+    "v6-transfer": {
+      "TG-GOLD-A036": [
+        "UNVERIFIED",
+        "JUSTIFIED"
+      ],
+      "TG-GOLD-A061": [
+        "UNVERIFIED",
+        "JUSTIFIED"
+      ],
+      "TG-GOLD-H016": [
+        "UNVERIFIED",
+        "JUSTIFIED"
+      ],
+      "TG-GOLD-H022": [
+        "UNVERIFIED",
+        "JUSTIFIED"
+      ]
+    },
+    "v6-r2": {
+      "TG-GOLD-H012": [
+        "UNVERIFIED",
+        "JUSTIFIED"
+      ],
+      "PUB-COBALT": [
+        "UNVERIFIED",
+        "OVERCLAIM"
+      ],
+      "PUB-DART": [
+        "CORROBORATED",
+        "JUSTIFIED"
+      ]
+    },
+    "v6-r3": {
+      "TG-GOLD-H012": [
+        "UNVERIFIED",
+        "JUSTIFIED"
+      ],
+      "PUB-COBALT": [
+        "UNVERIFIED",
+        "OVERCLAIM"
+      ],
+      "PUB-DART": [
+        "CORROBORATED",
+        "JUSTIFIED"
+      ]
+    },
+    "v6-negative": {
+      "SYN-SCOPE-NEG": [
+        "UNVERIFIED",
+        "JUSTIFIED"
+      ]
+    }
+  }
+}

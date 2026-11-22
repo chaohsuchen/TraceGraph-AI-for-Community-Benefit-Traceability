@@ -1,0 +1,189 @@
+{
+  "case": "TG-GOLD-H008",
+  "model": "gpt-5.4",
+  "runtime": {
+    "agent.py": "a05ce765ed68bdd3bdef1b319c2349e39f60e2abf7d2c923502295582c8aff21",
+    "providers.py": "1346b7a2a854216e9b5bae559e30ba025b531aa421151f4f1e4e0d0ed064c60f",
+    "reconcile.py": "582754a7c24a38543485d4e7589cbdd738d571fb3dd949f0b118374bf12f532b",
+    "openai_provider.py": "cebdca8526ccb8ebec3b83da3c0e0cec2b6f2b39797dae0a4ce15e88cbe09f59"
+  },
+  "inputs_sha256": "a546f4e03edf25387acbb1a27e7bacc3bc536b3068c94a575c3c0b92940c0810",
+  "as_of": "2026-11-22",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 12.875,
+      "request_id": "req_32585a8e4aec4ba0aff1cb492c2b1e4e",
+      "usage": {
+        "input_tokens": 4335,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 1792
+        },
+        "output_tokens": 1193,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 5528
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "status": "COMPLETED",
+  "trace": {
+    "not_yet_due": [],
+    "criteria": [
+      {
+        "criterion": "Bally's contributes up to $10 million in capital toward construction of a new NYPD substation for the 45th Precinct",
+        "required_elements": [
+          "Bally's committed a capital contribution of up to $10 million",
+          "the contribution is toward construction of a new NYPD substation",
+          "the substation is for the 45th Precinct"
+        ],
+        "scope_criteria": [
+          "s1"
+        ],
+        "promise_scope": "Promisor: Bally's. Intended beneficiary: NYPD/45th Precinct public safety presence. Location: 45th Precinct, with the substation to be housed on the property. Benefit: up to $10 million capital contribution toward construction of a new NYPD substation.",
+        "observed_scope": "Delivery for the promised scope remains unverified.",
+        "promise_citation_ids": [
+          "c1",
+          "c6"
+        ],
+        "delivery_citation_ids": [],
+        "delivery_status": "UNVERIFIED",
+        "timing_requirement": "No specific delivery date for the capital contribution or construction is stated in the provided excerpts.",
+        "explanation": "The cited sources document the terms of the undertaking.",
+        "gap": "The sources do not establish actual performance for the promised scope. Timing to verify: No specific delivery date for the capital contribution or construction is stated in the provided excerpts.",
+        "delivery_support": []
+      },
+      {
+        "criterion": "Bally's provides $5 million annually for NYPD public safety staffing, support, or associated needs in conjunction with the substation",
+        "required_elements": [
+          "Bally's committed to provide $5 million annually",
+          "the annual support is for NYPD staffing support overtime paid detail or associated NYPD needs",
+          "the support is in conjunction with the NYPD substation"
+        ],
+        "scope_criteria": [
+          "s2"
+        ],
+        "promise_scope": "Promisor: Bally's. Intended beneficiary: NYPD/public safety operations associated with the proposed substation. Location: tied to the NYPD substation for the 45th Precinct/property; exact service area beyond that is not further specified in the excerpts. Benefit: $5 million annually for staffing, support, overtime, paid detail, or associated NYPD needs in conjunction with the substation.",
+        "observed_scope": "Delivery for the promised scope remains unverified.",
+        "promise_citation_ids": [
+          "c2",
+          "c3",
+          "c4",
+          "c5"
+        ],
+        "delivery_citation_ids": [],
+        "delivery_status": "UNVERIFIED",
+        "timing_requirement": "Annual funding was promised, but the provided excerpts do not state a first payment date. c7 says, \"Upon awarding of a license we will explore and define the appropriate methodology for providing the financial support...\"",
+        "explanation": "The cited sources document the terms of the undertaking.",
+        "gap": "The sources do not establish actual performance for the promised scope. Timing to verify: Annual funding was promised, but the provided excerpts do not state a first payment date. c7 says, \"Upon awarding of a license we will explore and define the appropriate methodology for providing the financial support...\"",
+        "delivery_support": []
+      }
+    ],
+    "label": "UNVERIFIED",
+    "verdict": "The available evidence does not establish delivery of the requested obligation.",
+    "reasoning": "Requested scope: Bally's committed up to $10 million for a new police substation and $5 million per year in public safety support.\n\nBally's contributes up to $10 million in capital toward construction of a new NYPD substation for the 45th Precinct\nStatus: UNVERIFIED\nThe cited sources document the terms of the undertaking.\nPromised scope: Promisor: Bally's. Intended beneficiary: NYPD/45th Precinct public safety presence. Location: 45th Precinct, with the substation to be housed on the property. Benefit: up to $10 million capital contribution toward construction of a new NYPD substation.\nObserved scope: Delivery for the promised scope remains unverified.\nEvidence gap: The sources do not establish actual performance for the promised scope. Timing to verify: No specific delivery date for the capital contribution or construction is stated in the provided excerpts.\nPromise evidence: c1, c6\n\nBally's provides $5 million annually for NYPD public safety staffing, support, or associated needs in conjunction with the substation\nStatus: UNVERIFIED\nThe cited sources document the terms of the undertaking.\nPromised scope: Promisor: Bally's. Intended beneficiary: NYPD/public safety operations associated with the proposed substation. Location: tied to the NYPD substation for the 45th Precinct/property; exact service area beyond that is not further specified in the excerpts. Benefit: $5 million annually for staffing, support, overtime, paid detail, or associated NYPD needs in conjunction with the substation.\nObserved scope: Delivery for the promised scope remains unverified.\nEvidence gap: The sources do not establish actual performance for the promised scope. Timing to verify: Annual funding was promised, but the provided excerpts do not state a first payment date. c7 says, \"Upon awarding of a license we will explore and define the appropriate methodology for providing the financial support...\"\nPromise evidence: c2, c3, c4, c5\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “A key component of this commitment is our up to $10 million capital contribution towards the construction of a new NYPD substation for the 45th Precinct.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf\n\nc2: “This was outlined in our Community Benefits Agreement, where we initially intended to fund up to $3 million dollars annually for purposes of staffing. Hearing the request from the CAC, we will amend our commitment to provide $5 million dollars annually for the purposes of staffing and support.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf\n\nc3: “The Board notes that Bally’s agreed to increase this amount from $3 million to $5 million during the Community Advisory Committee process.”\nhttps://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026\n\nc4: “Confirming that the $5 million annually is for all NYPD associated needs in conjunction with the NYPD substation we will house.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf\n\nc5: “Bally’s has agreed to dedicate $5 million annually for NYPD overtime or Paid Detail programs.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf\n\nc6: “Yes, we will host an NYPD substation within the property.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf\n\nc7: “Upon awarding of a license we will explore and define the appropriate methodology for providing the financial support for all Community Benefit Fund and associated commitments related to the above commitments.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+    "refutation": [],
+    "scope_anchors": {
+      "s1": "Bally's to contribute up to $10 million toward construction of a new NYPD substation for the 45th Precinct",
+      "s2": "Bally's to provide $5 million annually for NYPD public safety staffing, support, or associated needs in conjunction with the substation"
+    },
+    "citations": {
+      "c1": {
+        "source": {
+          "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf"
+        },
+        "excerpt": "A key component of this commitment is our up to $10 million capital contribution towards the construction of a new NYPD substation for the 45th Precinct.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:36:04.427165+00:00",
+        "finding_id": "finding-f7d25641-92ac-4b7d-b84e-6b3a3c93576f"
+      },
+      "c2": {
+        "source": {
+          "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf"
+        },
+        "excerpt": "This was outlined in our Community Benefits Agreement, where we initially intended to fund up to $3 million dollars annually for purposes of staffing. Hearing the request from the CAC, we will amend our commitment to provide $5 million dollars annually for the purposes of staffing and support.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:36:04.427165+00:00",
+        "finding_id": "finding-064256cd-0faf-410d-a80b-e8306d97e032"
+      },
+      "c3": {
+        "source": {
+          "title": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+          "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026",
+          "citation": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026"
+        },
+        "excerpt": "The Board notes that Bally’s agreed to increase this amount from $3 million to $5 million during the Community Advisory Committee process.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:36:04.427165+00:00",
+        "finding_id": "finding-064256cd-0faf-410d-a80b-e8306d97e032"
+      },
+      "c4": {
+        "source": {
+          "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf",
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf"
+        },
+        "excerpt": "Confirming that the $5 million annually is for all NYPD associated needs in conjunction with the NYPD substation we will house.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:36:04.427165+00:00",
+        "finding_id": "finding-c0122a9a-f814-4756-ab46-fbd88b3b6a4b"
+      },
+      "c5": {
+        "source": {
+          "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf",
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf"
+        },
+        "excerpt": "Bally’s has agreed to dedicate $5 million annually for NYPD overtime or Paid Detail programs.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:36:04.427165+00:00",
+        "finding_id": "finding-c0122a9a-f814-4756-ab46-fbd88b3b6a4b"
+      },
+      "c6": {
+        "source": {
+          "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf",
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf"
+        },
+        "excerpt": "Yes, we will host an NYPD substation within the property.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:36:04.427165+00:00",
+        "finding_id": "finding-2e81e896-89d8-4c12-9224-2471351c4b45"
+      },
+      "c7": {
+        "source": {
+          "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf"
+        },
+        "excerpt": "Upon awarding of a license we will explore and define the appropriate methodology for providing the financial support for all Community Benefit Fund and associated commitments related to the above commitments.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:36:04.427165+00:00",
+        "finding_id": "finding-895a94d1-e333-4087-a531-228208983006"
+      }
+    },
+    "scope_gap": ""
+  },
+  "displayed": {
+    "label": "UNVERIFIED",
+    "verdict": "The available evidence does not establish delivery of the requested obligation.",
+    "reasoning": "Requested scope: Bally's committed up to $10 million for a new police substation and $5 million per year in public safety support.\n\nBally's contributes up to $10 million in capital toward construction of a new NYPD substation for the 45th Precinct\nStatus: UNVERIFIED\nThe cited sources document the terms of the undertaking.\nPromised scope: Promisor: Bally's. Intended beneficiary: NYPD/45th Precinct public safety presence. Location: 45th Precinct, with the substation to be housed on the property. Benefit: up to $10 million capital contribution toward construction of a new NYPD substation.\nObserved scope: Delivery for the promised scope remains unverified.\nEvidence gap: The sources do not establish actual performance for the promised scope. Timing to verify: No specific delivery date for the capital contribution or construction is stated in the provided excerpts.\nPromise evidence: c1, c6\n\nBally's provides $5 million annually for NYPD public safety staffing, support, or associated needs in conjunction with the substation\nStatus: UNVERIFIED\nThe cited sources document the terms of the undertaking.\nPromised scope: Promisor: Bally's. Intended beneficiary: NYPD/public safety operations associated with the proposed substation. Location: tied to the NYPD substation for the 45th Precinct/property; exact service area beyond that is not further specified in the excerpts. Benefit: $5 million annually for staffing, support, overtime, paid detail, or associated NYPD needs in conjunction with the substation.\nObserved scope: Delivery for the promised scope remains unverified.\nEvidence gap: The sources do not establish actual performance for the promised scope. Timing to verify: Annual funding was promised, but the provided excerpts do not state a first payment date. c7 says, \"Upon awarding of a license we will explore and define the appropriate methodology for providing the financial support...\"\nPromise evidence: c2, c3, c4, c5\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “A key component of this commitment is our up to $10 million capital contribution towards the construction of a new NYPD substation for the 45th Precinct.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf\n\nc2: “This was outlined in our Community Benefits Agreement, where we initially intended to fund up to $3 million dollars annually for purposes of staffing. Hearing the request from the CAC, we will amend our commitment to provide $5 million dollars annually for the purposes of staffing and support.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf\n\nc3: “The Board notes that Bally’s agreed to increase this amount from $3 million to $5 million during the Community Advisory Committee process.”\nhttps://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026\n\nc4: “Confirming that the $5 million annually is for all NYPD associated needs in conjunction with the NYPD substation we will house.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf\n\nc5: “Bally’s has agreed to dedicate $5 million annually for NYPD overtime or Paid Detail programs.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf\n\nc6: “Yes, we will host an NYPD substation within the property.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/cac-response-memo-baly-response-9.27.2025.pdf\n\nc7: “Upon awarding of a license we will explore and define the appropriate methodology for providing the financial support for all Community Benefit Fund and associated commitments related to the above commitments.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf",
+    "verification_date": "2026-11-22"
+  }
+}

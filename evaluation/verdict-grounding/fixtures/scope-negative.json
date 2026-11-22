@@ -1,0 +1,18 @@
+{
+  "case_id": "SYN-SCOPE-NEG",
+  "query": "Did Meridian Learning Cooperative issue the evening transit passes it promised to apprentices enrolled at the North Pier campus?",
+  "organization": "Meridian Learning Cooperative",
+  "title": "Evening transit passes at North Pier",
+  "description": "Meridian undertook to pay for and issue evening transit passes to each apprentice enrolled at North Pier.",
+  "scope_hints": ["Meridian pays for and issues evening transit passes to apprentices enrolled at North Pier."],
+  "date": "2026-11-22",
+  "passages": [
+    {"id":"S1", "title":"North Pier access agreement", "url":"https://meridian.example.invalid/north-pier/access-agreement", "quote":"Meridian Learning Cooperative undertakes to pay for and issue an evening transit pass to each apprentice enrolled at its North Pier campus."},
+    {"id":"S2", "title":"Cooperative transport benefit annual statement", "url":"https://meridian.example.invalid/annual-statement", "quote":"Our cooperative pays for apprentice transit passes. Last year we issued 280 evening passes across our East Quay, Hill End and Market Street campuses."},
+    {"id":"S3", "title":"North Pier program update", "url":"https://meridian.example.invalid/north-pier/update", "quote":"North Pier's proposed apprentice support package includes access to our established transport benefit. The campus office is preparing the enrollment and pass-distribution procedures."}
+  ],
+  "evaluator_only": {
+    "conditions": [{"id":"K1","text":"Meridian actually paid for and issued evening passes to the North Pier apprentices promised the benefit."}],
+    "expected": "The promise and cooperative-wide program are documented. No cited source establishes any in-scope pass was paid for or issued at North Pier, so local delivery remains UNVERIFIED. A label claiming any partial or full North Pier delivery is unsupported."
+  }
+}

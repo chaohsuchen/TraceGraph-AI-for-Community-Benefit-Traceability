@@ -1,0 +1,87 @@
+{
+  "model": "gpt-5.4",
+  "judge": "tracegraph-nli-v4-owned-quotes",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "cases": {
+    "TG-GOLD-A036": {
+      "archived": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED"
+      },
+      "v7-transfer": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The displayed assessment appropriately treats the record as proving the promise but not actual delivery: the excerpts say the partnership 'will begin' investing and define contemplated investments, but none shows that a qualifying investment actually began or when a first one occurred relative to any identified trigger.",
+        "criteria": [
+          "UNVERIFIED"
+        ]
+      }
+    },
+    "TG-GOLD-A061": {
+      "archived": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED"
+      },
+      "v7-transfer": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment appropriately treats the record as proving only the obligation, not RWNYC’s actual delivery: the license text establishes the required cash-or-bond deposit, but the only later performance excerpt says only that two unnamed licensees had provided completion bonds and a third was being finalized, which does not identify RWNYC or establish amount or by-12/31/2025 timing.",
+        "criteria": [
+          "UNVERIFIED"
+        ]
+      }
+    },
+    "TG-GOLD-H016": {
+      "archived": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED"
+      },
+      "v7-transfer": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment appropriately treats the cited excerpts as evidence of targets/undertakings only and not of actual delivery; for each condition, the record lacks proof that the actual Bronx construction workforce achieved the stated percentages, and the assessment also notes the remaining category uncertainty between 'veteran workers' and 'service-disabled veterans.'",
+        "criteria": [
+          "UNVERIFIED",
+          "UNVERIFIED",
+          "UNVERIFIED"
+        ]
+      }
+    },
+    "TG-GOLD-H022": {
+      "archived": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED"
+      },
+      "v7-transfer": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The displayed assessment appropriately limits itself to an unverified delivery verdict because the excerpts show only the commitment terms and related descriptions, not actual receipt/disbursement of fund money or compliance with any payment schedule.",
+        "criteria": [
+          "UNVERIFIED"
+        ]
+      }
+    }
+  },
+  "arms": {
+    "v7-transfer": {
+      "assess": {
+        "input": 21797,
+        "output": 4110,
+        "cached": 5376,
+        "calls": 6,
+        "estimated_usd": 0.1040465
+      },
+      "judge": {
+        "input": 29504,
+        "output": 4551,
+        "cached": 24576,
+        "calls": 4,
+        "estimated_usd": 0.086729
+      },
+      "grades": {
+        "JUSTIFIED": 4
+      }
+    }
+  },
+  "total_estimated_usd": 0.1907755
+}

@@ -1,0 +1,87 @@
+{
+  "model": "gpt-5.4",
+  "judge": "tracegraph-nli-v4-owned-quotes",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "cases": {
+    "TG-GOLD-A036": {
+      "archived": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED"
+      },
+      "v5-transfer": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The displayed assessment appropriately treats the record as proof of a promise and investment structure, but not proof that any qualifying workforce-housing investment actually began or that any first investment occurred within an identifiable 'immediate term' trigger.",
+        "criteria": [
+          "UNVERIFIED"
+        ]
+      }
+    },
+    "TG-GOLD-A061": {
+      "archived": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED"
+      },
+      "v5-transfer": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The displayed assessment appropriately rates delivery as unverified because the cited license excerpts prove only the obligation, and the only later delivery-related excerpt says two unnamed licensees had provided completion bonds while a third was still being finalized, which does not establish RWNYC's own deposit, its amount, or that it was deposited by December 31, 2025.",
+        "criteria": [
+          "UNVERIFIED"
+        ]
+      }
+    },
+    "TG-GOLD-H016": {
+      "archived": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED"
+      },
+      "v5-transfer": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The displayed assessment correctly treats the cited excerpts as evidence of targets/pledges only, not actual delivered workforce composition, so its UNVERIFIED conclusion is supported; its only material nuance is noting that one source says 'veteran workers' while later summaries say 'service-disabled veterans,' which still leaves delivery unproven rather than overstating performance or refutation.",
+        "criteria": [
+          "UNVERIFIED",
+          "UNVERIFIED",
+          "UNVERIFIED"
+        ]
+      }
+    },
+    "TG-GOLD-H022": {
+      "archived": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED"
+      },
+      "v5-transfer": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment appropriately limits itself to an UNVERIFIED delivery verdict because the supplied excerpts show only the pledge/structure of the Community Impact Fund and contain no evidence that money was actually received or disbursed or that payments met the applicable schedule.",
+        "criteria": [
+          "UNVERIFIED"
+        ]
+      }
+    }
+  },
+  "arms": {
+    "v5-transfer": {
+      "assess": {
+        "input": 15917,
+        "output": 3290,
+        "cached": 5376,
+        "calls": 4,
+        "estimated_usd": 0.0770465
+      },
+      "judge": {
+        "input": 37127,
+        "output": 5893,
+        "cached": 30464,
+        "calls": 5,
+        "estimated_usd": 0.1126685
+      },
+      "grades": {
+        "JUSTIFIED": 4
+      }
+    }
+  },
+  "total_estimated_usd": 0.18971500000000002
+}

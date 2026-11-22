@@ -1,0 +1,230 @@
+{
+  "case": "TG-GOLD-H008",
+  "model": "gpt-5.4",
+  "version": "tracegraph-nli-v4-owned-quotes",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "research_sha256": "0f480b974e85fbf91bf6f404b5294c65b1b382ee2fe533c106f7cfe91f549e65",
+  "displayed_sha256": "722cb9fb9be754136ad3ed16d36d771900319ae1f04611041867e93abd7475e3",
+  "evidence_judgment_sha256": "7430cbb083a9fcab53c4e0fa1094f178b2595de806767f3302516a9478da65a9",
+  "original": {
+    "label": "JUSTIFIED",
+    "reason": "The displayed assessment appropriately treats both conditions as unverified delivery: the cited excerpts establish pledges and future methodology, but none shows actual payment, contribution, construction, or funded annual support for the due periods.",
+    "conditions": [
+      {
+        "condition_id": "K1",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-4253a0b7-fb14-4d6e-aede-790c62ede813",
+          "support-011b345c-d9bf-41ec-9842-b477d6c57d96",
+          "support-9b854936-ce97-41d2-926c-d98d4a966d3d"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-4253a0b7-fb14-4d6e-aede-790c62ede813",
+            "quote": "A key component of this commitment is our up to $10 million capital contribution towards the construction of a new NYPD substation for the 45th Precinct.",
+            "label": "NEUTRAL",
+            "reason": "This proves a commitment to contribute, not that Bally's actually delivered any capital contribution."
+          },
+          {
+            "citation_id": "support-011b345c-d9bf-41ec-9842-b477d6c57d96",
+            "quote": "Yes, we will host an NYPD substation within the property.",
+            "label": "NEUTRAL",
+            "reason": "This is a future-tense statement about hosting a substation, not evidence that funds were paid or the substation was constructed."
+          },
+          {
+            "citation_id": "support-9b854936-ce97-41d2-926c-d98d4a966d3d",
+            "quote": "Upon awarding of a license we will explore and define the appropriate methodology for providing the financial support for all Community Benefit Fund and associated commitments related to the above commitments.",
+            "label": "NEUTRAL",
+            "reason": "This indicates future planning for funding methodology and underscores that actual financial support delivery is not shown."
+          }
+        ],
+        "reason": "The record shows only a pledged up-to-$10 million contribution and future support methodology; it does not show actual payment or other delivery of the capital contribution due."
+      },
+      {
+        "condition_id": "K2",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-ec5e45b0-b8af-47ed-a272-1b97a842376f",
+          "support-53f3e04f-f636-4773-8ef2-1f1c9ddbe960",
+          "support-639f251b-befd-437f-9f81-86e28214a75e",
+          "support-81df4c35-2ea2-450a-ac22-60a00706e980",
+          "support-9b854936-ce97-41d2-926c-d98d4a966d3d"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-ec5e45b0-b8af-47ed-a272-1b97a842376f",
+            "quote": "we will amend our commitment to provide $5 million dollars annually for the purposes of staffing and support.",
+            "label": "NEUTRAL",
+            "reason": "This states an amended annual commitment, not actual payment of any annual amount."
+          },
+          {
+            "citation_id": "support-53f3e04f-f636-4773-8ef2-1f1c9ddbe960",
+            "quote": "Confirming that the $5 million annually is for all NYPD associated needs in conjunction with the NYPD substation we will house.",
+            "label": "NEUTRAL",
+            "reason": "This clarifies the intended scope of the annual support but does not show that any annual support was actually paid."
+          },
+          {
+            "citation_id": "support-639f251b-befd-437f-9f81-86e28214a75e",
+            "quote": "Bally’s has agreed to dedicate $5 million annually for NYPD overtime or Paid Detail programs.",
+            "label": "NEUTRAL",
+            "reason": "Agreement to dedicate funds annually is still pledge evidence, not proof that any due annual payment was made."
+          },
+          {
+            "citation_id": "support-81df4c35-2ea2-450a-ac22-60a00706e980",
+            "quote": "The Board notes that Bally’s agreed to increase this amount from $3 million to $5 million during the Community Advisory Committee process.",
+            "label": "NEUTRAL",
+            "reason": "This corroborates the amount increase in the commitment but does not establish delivery for any annual period due."
+          },
+          {
+            "citation_id": "support-9b854936-ce97-41d2-926c-d98d4a966d3d",
+            "quote": "Upon awarding of a license we will explore and define the appropriate methodology for providing the financial support for all Community Benefit Fund and associated commitments related to the above commitments.",
+            "label": "NEUTRAL",
+            "reason": "This shows future planning contingent on license award, leaving actual annual payment and timing unproven."
+          }
+        ],
+        "reason": "The evidence establishes only the annual $5 million pledge and its scope; it does not show any annual public-safety payment was actually made for periods due since the funding milestone."
+      }
+    ]
+  },
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 9.155999999959022,
+      "request_id": "req_0347f73c35e94e5b9e952286013f3678",
+      "usage": {
+        "input_tokens": 7406,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 4864
+        },
+        "output_tokens": 877,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 8283
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "result": {
+    "label": "JUSTIFIED",
+    "reason": "The final assessment appropriately treats the record as evidence of pledges only and not of actual delivery; none of the supplied excerpts show Bally’s paid the capital contribution or made any annual $5 million public-safety payment, and one excerpt adds unresolved timing contingency by saying funding methodology would be defined only upon license award.",
+    "conditions": [
+      {
+        "condition_id": "K1",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-4253a0b7-fb14-4d6e-aede-790c62ede813",
+          "support-9b854936-ce97-41d2-926c-d98d4a966d3d"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-4253a0b7-fb14-4d6e-aede-790c62ede813",
+            "quote": "A key component of this commitment is our up to $10 million capital contribution towards the construction of a new NYPD substation for the 45th Precinct.",
+            "label": "NEUTRAL",
+            "reason": "This proves a commitment to contribute, not that Bally’s actually delivered any capital contribution due."
+          },
+          {
+            "citation_id": "support-9b854936-ce97-41d2-926c-d98d4a966d3d",
+            "quote": "Upon awarding of a license we will explore and define the appropriate methodology for providing the financial support for all Community Benefit Fund and associated commitments related to the above commitments.",
+            "label": "NEUTRAL",
+            "reason": "This indicates future planning for funding methodology upon license award, not actual payment or delivery of the capital contribution."
+          }
+        ],
+        "reason": "The record shows only a promised up-to-$10 million contribution and future funding-methodology planning, with no evidence of actual payment or that any due contribution was delivered."
+      },
+      {
+        "condition_id": "K2",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-ec5e45b0-b8af-47ed-a272-1b97a842376f",
+          "support-53f3e04f-f636-4773-8ef2-1f1c9ddbe960",
+          "support-639f251b-befd-437f-9f81-86e28214a75e",
+          "support-9b854936-ce97-41d2-926c-d98d4a966d3d"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-ec5e45b0-b8af-47ed-a272-1b97a842376f",
+            "quote": "we will amend our commitment to provide $5 million dollars annually for the purposes of staffing and support.",
+            "label": "NEUTRAL",
+            "reason": "This is a statement of an amended annual commitment, not proof that any annual payment due was actually paid."
+          },
+          {
+            "citation_id": "support-53f3e04f-f636-4773-8ef2-1f1c9ddbe960",
+            "quote": "Confirming that the $5 million annually is for all NYPD associated needs in conjunction with the NYPD substation we will house.",
+            "label": "NEUTRAL",
+            "reason": "This describes the intended scope of the annual support, not actual payment for any due annual period."
+          },
+          {
+            "citation_id": "support-639f251b-befd-437f-9f81-86e28214a75e",
+            "quote": "Bally’s has agreed to dedicate $5 million annually for NYPD overtime or Paid Detail programs.",
+            "label": "NEUTRAL",
+            "reason": "Agreement to dedicate funds annually does not establish that Bally’s actually paid $5 million for any annual period due."
+          },
+          {
+            "citation_id": "support-9b854936-ce97-41d2-926c-d98d4a966d3d",
+            "quote": "Upon awarding of a license we will explore and define the appropriate methodology for providing the financial support for all Community Benefit Fund and associated commitments related to the above commitments.",
+            "label": "NEUTRAL",
+            "reason": "This adds a future license-award-related step for funding methodology rather than evidence that annual public-safety support payments were made."
+          }
+        ],
+        "reason": "The excerpts establish only the annual support pledge and its scope; they do not show any approved funding milestone, any annual period becoming due, or any actual $5 million payment since that milestone."
+      }
+    ]
+  },
+  "score": {
+    "case_id": "TG-GOLD-H008",
+    "identity": "MATCH",
+    "reference_coverage": {
+      "numerator": 4,
+      "denominator": 6,
+      "rate": 0.6666666666666666
+    },
+    "finding_support": {
+      "numerator": 8,
+      "denominator": 8,
+      "rate": 1.0
+    },
+    "traceability": {
+      "numerator": 8,
+      "denominator": 8,
+      "rate": 1.0
+    },
+    "claim_count": 8,
+    "evidence_eligible_claims": 8,
+    "unquoted_claims": 0,
+    "credited_reference_ids": [
+      "G1",
+      "G2",
+      "G3",
+      "G4"
+    ],
+    "coverage_labels": {
+      "ENTAILMENT": 4,
+      "CONTRADICTION": 0,
+      "NEUTRAL": 0,
+      "MISSING": 2
+    },
+    "finding_labels": {
+      "ENTAILMENT": 8,
+      "CONTRADICTION": 0,
+      "NEUTRAL": 0
+    },
+    "citation_audit": "OWNED_QUOTES_V1",
+    "verdict": "JUSTIFIED",
+    "verdict_evaluation": {
+      "applicable": true,
+      "reason": null,
+      "label": "JUSTIFIED"
+    }
+  }
+}

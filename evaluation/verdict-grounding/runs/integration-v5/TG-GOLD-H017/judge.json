@@ -1,0 +1,437 @@
+{
+  "case": "TG-GOLD-H017",
+  "model": "gpt-5.4",
+  "version": "tracegraph-nli-v4-owned-quotes",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "research_sha256": "c3dd35413df524d1a56611147a3a0beb02f97ef8eee8081902e02f097578e57b",
+  "displayed_sha256": "dee05e24f89718ccf88c2722c27c7e22b41661d137e2a33d07131acfd538f1e8",
+  "original": {
+    "label": "OVERCLAIM",
+    "reason": "The final assessment is justified in treating K1, K2, K3, and K6 as unverified because the cited excerpts show proposals, ongoing approvals, and development stages rather than completed delivery, but it overclaims for K4 and K5 by saying no later citations report fund creation or social-services provision while supplied excerpts do provide relevant later details about a $163 million fund and $25 million social-services funding, even though those details still do not prove delivery.",
+    "conditions": [
+      {
+        "condition_id": "K1",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-91355293-5b80-400f-93fb-7736d662f1c9",
+          "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+          "support-54e277fd-b358-46df-8cb6-5c8009352e06"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "quote": "Community benefits valued at $761 million include significant traffic and roadway improvements",
+            "label": "NEUTRAL",
+            "reason": "This proves the promised component, not that roadway and traffic improvements were delivered."
+          },
+          {
+            "citation_id": "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+            "quote": "HRMP proposes extensive traffic and roadway improvements, including ADA-compliant upgrades to the Willets Point MTA subway station, reconfigured intersections, new pedestrian and bicycle paths, and improved access to public transit.",
+            "label": "NEUTRAL",
+            "reason": "The passage is explicitly proposal language and does not establish completed roadway or traffic work."
+          },
+          {
+            "citation_id": "support-54e277fd-b358-46df-8cb6-5c8009352e06",
+            "quote": "Hard Rock Metropolitan Park in Queens and Bally’s Bronx continue through development, financing, construction, and permitting stages.",
+            "label": "NEUTRAL",
+            "reason": "Ongoing project stages are consistent with non-delivery but do not specifically establish whether the roadway items were delivered."
+          }
+        ],
+        "reason": "The excerpts show promised and proposed roadway work plus ongoing project stages, but no completed traffic or roadway delivery."
+      },
+      {
+        "condition_id": "K2",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-91355293-5b80-400f-93fb-7736d662f1c9",
+          "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+          "support-2ce3e3ec-d471-48ff-87f2-5dab103282f0",
+          "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "quote": "improvements to the Metropolitan Transportation Authority (MTA)’s public transit station",
+            "label": "NEUTRAL",
+            "reason": "This states the promised station-improvement category only."
+          },
+          {
+            "citation_id": "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+            "quote": "including ADA-compliant upgrades to the Willets Point MTA subway station",
+            "label": "NEUTRAL",
+            "reason": "This identifies the proposed station work but not its completion."
+          },
+          {
+            "citation_id": "support-2ce3e3ec-d471-48ff-87f2-5dab103282f0",
+            "quote": "the MTA provided conceptual approval of the Proposed Improvements at the 30% Construction Documents stage of review in a letter dated August 21, 2024",
+            "label": "NEUTRAL",
+            "reason": "Conceptual approval at 30% documents planning progress, not delivered station improvements."
+          },
+          {
+            "citation_id": "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669",
+            "quote": "We have and will continue to work in good faith to secure all necessary approvals from the MTA and meet all necessary deadlines to deliver this required community benefit.",
+            "label": "NEUTRAL",
+            "reason": "Future-oriented efforts to secure approvals imply delivery remained outstanding, but the passage does not directly state non-delivery at a specific date."
+          }
+        ],
+        "reason": "The record shows proposed station upgrades and incomplete approvals, not actual delivered MTA station improvements."
+      },
+      {
+        "condition_id": "K3",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-91355293-5b80-400f-93fb-7736d662f1c9"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "quote": "over 25 acres of new public open space",
+            "label": "NEUTRAL",
+            "reason": "This establishes the promised open-space benefit, not that over 25 acres were provided."
+          }
+        ],
+        "reason": "The supplied excerpts identify promised open space but give no evidence that any acreage was completed or opened to the public."
+      },
+      {
+        "condition_id": "K4",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-91355293-5b80-400f-93fb-7736d662f1c9",
+          "source-reread-1-s",
+          "source-reread-2-s"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "quote": "a Community Impact Fund",
+            "label": "NEUTRAL",
+            "reason": "This names the promised fund but does not prove it was funded for the applicable periods."
+          },
+          {
+            "citation_id": "source-reread-1-s",
+            "quote": "$163 million for a Community Impact Fund that will provide grants to non -profit organizations serving Queens communities and residents.",
+            "label": "NEUTRAL",
+            "reason": "This gives amount and intended function, but the future-oriented 'will provide' does not establish actual funding or period-by-period availability."
+          },
+          {
+            "citation_id": "source-reread-2-s",
+            "quote": "A $163 million Community Benefits Fund (with the understanding this Fund should be increased) to be accessible for 30 years (or until the funds are depleted) and allocated across local Queens Community Districts 3, 4, 6, 7, 8, and 9;",
+            "label": "NEUTRAL",
+            "reason": "This states conditions for accessibility and allocation, but not that HRMP funded the fund for the applicable periods."
+          }
+        ],
+        "reason": "There is evidence describing the fund's amount and intended duration, but no proof that HRMP actually funded or maintained it for the required periods."
+      },
+      {
+        "condition_id": "K5",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-91355293-5b80-400f-93fb-7736d662f1c9",
+          "source-reread-4-s"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "quote": "funding for neighborhood social services",
+            "label": "NEUTRAL",
+            "reason": "This states the promised category only, not actual provision."
+          },
+          {
+            "citation_id": "source-reread-4-s",
+            "quote": "$25 million for community identified health care and youth and senior needs, including a health clinic in East Elmhurst , a youth and senior center in Corona, and addiction and mental health services infrastructure in Flushing.",
+            "label": "NEUTRAL",
+            "reason": "This describes planned social-services funding and uses examples, but does not show the money was actually supplied."
+          }
+        ],
+        "reason": "The record gives concrete social-services funding descriptions, but no evidence of actual disbursement or provision."
+      },
+      {
+        "condition_id": "K6",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-91355293-5b80-400f-93fb-7736d662f1c9",
+          "source-reread-1-s",
+          "source-reread-2-s",
+          "source-reread-4-s"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "quote": "Community benefits valued at $761 million include significant traffic and roadway improvements, improvements to the Metropolitan Transportation Authority (MTA)’s public transit station, over 25 acres of new public open space, a Community Impact Fund, and funding for neighborhood social services.",
+            "label": "NEUTRAL",
+            "reason": "This gives the headline package value and categories, but not delivered value."
+          },
+          {
+            "citation_id": "source-reread-1-s",
+            "quote": "$163 million for a Community Impact Fund that will provide grants to non -profit organizations serving Queens communities and residents.",
+            "label": "NEUTRAL",
+            "reason": "This supplies one component amount but does not establish delivered value."
+          },
+          {
+            "citation_id": "source-reread-2-s",
+            "quote": "A $163 million Community Benefits Fund (with the understanding this Fund should be increased) to be accessible for 30 years (or until the funds are depleted) and allocated across local Queens Community Districts 3, 4, 6, 7, 8, and 9;",
+            "label": "NEUTRAL",
+            "reason": "This adds scope and term language for one fund but not a reconciled delivered package valuation."
+          },
+          {
+            "citation_id": "source-reread-4-s",
+            "quote": "$25 million for community identified health care and youth and senior needs, including a health clinic in East Elmhurst , a youth and senior center in Corona, and addiction and mental health services infrastructure in Flushing.",
+            "label": "NEUTRAL",
+            "reason": "This gives another component amount, but the record still lacks a defined, reconciled delivered scope and term totaling the promised package value."
+          }
+        ],
+        "reason": "The excerpts state package and component amounts, but do not establish what benefits were actually delivered or reconcile delivered value across scope and term."
+      }
+    ]
+  },
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 15.093999999999937,
+      "request_id": "req_5e080a6981b94a1c9669d5a10fde2086",
+      "usage": {
+        "input_tokens": 12068,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 1824,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 13892
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "evidence_judgment_sha256": "0743c0d0b2eec1e5a7852270426862805565c5413f2e86d1bc5a0efb9f642a91",
+  "result": {
+    "label": "JUSTIFIED",
+    "reason": "The final assessment appropriately limits itself to an UNVERIFIED delivery verdict because the supplied excerpts establish the proposal’s promised components and some planning/approval status, but do not show actual delivery, funding, provision, or reconciled package value performance for any condition.",
+    "conditions": [
+      {
+        "condition_id": "K1",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-91355293-5b80-400f-93fb-7736d662f1c9",
+          "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+          "support-54e277fd-b358-46df-8cb6-5c8009352e06"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "quote": "include significant traffic and roadway improvements",
+            "label": "NEUTRAL",
+            "reason": "This proves the promised component, not that HRMP delivered it."
+          },
+          {
+            "citation_id": "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+            "quote": "HRMP proposes extensive traffic and roadway improvements, including ADA-compliant upgrades to the Willets Point MTA subway station, reconfigured intersections, new pedestrian and bicycle paths, and improved access to public transit.",
+            "label": "NEUTRAL",
+            "reason": "The passage is explicitly propositional ('proposes') and does not show completion or provision."
+          },
+          {
+            "citation_id": "support-54e277fd-b358-46df-8cb6-5c8009352e06",
+            "quote": "Hard Rock Metropolitan Park in Queens and Bally’s Bronx continue through development, financing, construction, and permitting stages.",
+            "label": "NEUTRAL",
+            "reason": "Ongoing project stages are consistent with non-delivery and do not establish delivered roadway/traffic improvements."
+          }
+        ],
+        "reason": "The excerpts describe proposed roadway/traffic work and ongoing development status, but none shows the improvements were actually delivered."
+      },
+      {
+        "condition_id": "K2",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-91355293-5b80-400f-93fb-7736d662f1c9",
+          "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+          "support-2ce3e3ec-d471-48ff-87f2-5dab103282f0",
+          "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "quote": "improvements to the Metropolitan Transportation Authority (MTA)’s public transit station",
+            "label": "NEUTRAL",
+            "reason": "This identifies the promised benefit only."
+          },
+          {
+            "citation_id": "support-867ef789-f9e6-40ba-9259-c8db0b7b60bc",
+            "quote": "including ADA-compliant upgrades to the Willets Point MTA subway station",
+            "label": "NEUTRAL",
+            "reason": "This gives proposal detail, not evidence of completed station improvements."
+          },
+          {
+            "citation_id": "support-2ce3e3ec-d471-48ff-87f2-5dab103282f0",
+            "quote": "the MTA provided conceptual approval of the Proposed Improvements at the 30% Construction Documents stage of review in a letter dated August 21, 2024",
+            "label": "NEUTRAL",
+            "reason": "Conceptual approval at a design-review stage is not delivery of the station improvements."
+          },
+          {
+            "citation_id": "support-a0a53e8b-cec4-4a3a-b9f5-9b061801a669",
+            "quote": "will continue to work in good faith to secure all necessary approvals from the MTA and meet all necessary deadlines to deliver this required community benefit.",
+            "label": "NEUTRAL",
+            "reason": "Future-oriented effort to secure approvals indicates delivery remained pending, not completed."
+          }
+        ],
+        "reason": "The evidence shows proposed station work, conceptual approval, and ongoing need for approvals, but not actual delivery of MTA station improvements."
+      },
+      {
+        "condition_id": "K3",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-91355293-5b80-400f-93fb-7736d662f1c9"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "quote": "over 25 acres of new public open space",
+            "label": "NEUTRAL",
+            "reason": "This states the promised open-space component, not that HRMP provided it."
+          }
+        ],
+        "reason": "The record states the package included over 25 acres of new public open space, but contains no delivery evidence that this open space was provided."
+      },
+      {
+        "condition_id": "K4",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-91355293-5b80-400f-93fb-7736d662f1c9",
+          "source-reread-1-s",
+          "source-reread-2-s"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "quote": "a Community Impact Fund",
+            "label": "NEUTRAL",
+            "reason": "This names the promised fund but does not show it was funded."
+          },
+          {
+            "citation_id": "source-reread-1-s",
+            "quote": "$163 million for a Community Impact Fund that will provide grants to non -profit organizations serving Queens communities and residents.",
+            "label": "NEUTRAL",
+            "reason": "The future-oriented 'will provide' language describes intended use, not actual funding or grants made."
+          },
+          {
+            "citation_id": "source-reread-2-s",
+            "quote": "A $163 million Community Benefits Fund (with the understanding this Fund should be increased) to be accessible for 30 years (or until the funds are depleted) and allocated across local Queens Community Districts 3, 4, 6, 7, 8, and 9;",
+            "label": "NEUTRAL",
+            "reason": "This sets conditions and duration for the fund but does not establish that HRMP funded it for any applicable period."
+          }
+        ],
+        "reason": "The excerpts define the Community Impact/Benefits Fund and its intended duration/allocation, but do not prove HRMP actually funded it for the required periods."
+      },
+      {
+        "condition_id": "K5",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-91355293-5b80-400f-93fb-7736d662f1c9",
+          "source-reread-4-s"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "quote": "funding for neighborhood social services",
+            "label": "NEUTRAL",
+            "reason": "This is promise language only and does not show supplied funding."
+          },
+          {
+            "citation_id": "source-reread-4-s",
+            "quote": "$25 million for community identified health care and youth and senior needs, including a health clinic in East Elmhurst , a youth and senior center in Corona, and addiction and mental health services infrastructure in Flushing.",
+            "label": "NEUTRAL",
+            "reason": "This specifies the contemplated social-services funding uses, not that the money was actually supplied."
+          }
+        ],
+        "reason": "The record describes the promised social-services funding and intended projects, but not actual payment or provision of that funding."
+      },
+      {
+        "condition_id": "K6",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-91355293-5b80-400f-93fb-7736d662f1c9",
+          "source-reread-1-s",
+          "source-reread-4-s"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-91355293-5b80-400f-93fb-7736d662f1c9",
+            "quote": "Community benefits valued at $761 million",
+            "label": "NEUTRAL",
+            "reason": "This establishes the stated package value, not that delivered benefits reached that value."
+          },
+          {
+            "citation_id": "source-reread-1-s",
+            "quote": "$163 million for a Community Impact Fund",
+            "label": "NEUTRAL",
+            "reason": "This is one component amount only and does not prove funded delivery or a reconciled delivered total."
+          },
+          {
+            "citation_id": "source-reread-4-s",
+            "quote": "$25 million for community identified health care and youth and senior needs",
+            "label": "NEUTRAL",
+            "reason": "This is another proposed component amount only and does not establish delivered package value across scope and term."
+          }
+        ],
+        "reason": "The evidence states proposed values for the package and some components, but does not show delivered benefits meeting the promised total under a defined, reconciled delivery scope and term."
+      }
+    ]
+  },
+  "score": {
+    "case_id": "TG-GOLD-H017",
+    "identity": "MATCH",
+    "reference_coverage": {
+      "numerator": 6,
+      "denominator": 13,
+      "rate": 0.46153846153846156
+    },
+    "finding_support": {
+      "numerator": 29,
+      "denominator": 30,
+      "rate": 0.9666666666666667
+    },
+    "traceability": {
+      "numerator": 29,
+      "denominator": 30,
+      "rate": 0.9666666666666667
+    },
+    "claim_count": 30,
+    "evidence_eligible_claims": 30,
+    "unquoted_claims": 0,
+    "credited_reference_ids": [
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G5",
+      "G6"
+    ],
+    "coverage_labels": {
+      "ENTAILMENT": 6,
+      "CONTRADICTION": 0,
+      "NEUTRAL": 1,
+      "MISSING": 6
+    },
+    "finding_labels": {
+      "ENTAILMENT": 29,
+      "CONTRADICTION": 0,
+      "NEUTRAL": 1
+    },
+    "citation_audit": "OWNED_QUOTES_V1",
+    "verdict": "JUSTIFIED",
+    "verdict_evaluation": {
+      "applicable": true,
+      "reason": null,
+      "label": "JUSTIFIED"
+    }
+  }
+}

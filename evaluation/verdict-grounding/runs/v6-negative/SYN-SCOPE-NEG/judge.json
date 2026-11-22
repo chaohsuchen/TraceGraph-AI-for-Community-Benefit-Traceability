@@ -1,0 +1,277 @@
+{
+  "case": "SYN-SCOPE-NEG",
+  "model": "gpt-5.4",
+  "version": "tracegraph-nli-v4-owned-quotes",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "research_sha256": "54acf818c177a7be8d7b681e3da62fc57e8029073470b91e35b3a91a420c2300",
+  "displayed_sha256": "7b4d4d273b39935ff91d4424f91d0ff69726d7bca87c57bde24b01c3bffac8ee",
+  "original": null,
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 6.844000000000051,
+      "request_id": "req_c365b6c70a07401b9b8417ca4a14fccf",
+      "usage": {
+        "input_tokens": 2332,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 740,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3072
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 3.6720000000000255,
+      "request_id": "req_9289d930fd2245259540a95353039131",
+      "usage": {
+        "input_tokens": 2933,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 284,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3217
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "evidence": {
+    "identity": {
+      "label": "MATCH",
+      "reason": "The returned commitment and finding fS1 describe the same organization, obligation, beneficiary group, and North Pier campus scope: Meridian undertakes to pay for and issue evening transit passes to each apprentice enrolled at North Pier."
+    },
+    "findings": [
+      {
+        "finding_id": "fS1",
+        "claims": [
+          {
+            "claim": "Meridian Learning Cooperative undertakes to pay for and issue an evening transit pass to each apprentice enrolled at its North Pier campus.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "sS1"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "sS1",
+                "quote": "Meridian Learning Cooperative undertakes to pay for and issue an evening transit pass to each apprentice enrolled at its North Pier campus.",
+                "label": "ENTAILMENT",
+                "reason": "The quote exactly states the undertaking, issuer, benefit, beneficiaries, and North Pier scope."
+              }
+            ],
+            "reason": "The cited excerpt exactly states this undertaking."
+          }
+        ]
+      },
+      {
+        "finding_id": "fS2",
+        "claims": [
+          {
+            "claim": "The cooperative pays for apprentice transit passes.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "sS2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "sS2",
+                "quote": "Our cooperative pays for apprentice transit passes.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states that the cooperative pays for apprentice transit passes."
+              }
+            ],
+            "reason": "The excerpt directly states this general practice."
+          },
+          {
+            "claim": "Last year the cooperative issued 280 evening passes across its East Quay, Hill End and Market Street campuses.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "sS2"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "sS2",
+                "quote": "Last year we issued 280 evening passes across our East Quay, Hill End and Market Street campuses.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states issuance of 280 evening passes and limits it to the named campuses."
+              }
+            ],
+            "reason": "The excerpt directly states issuance last year at the three named campuses."
+          }
+        ]
+      },
+      {
+        "finding_id": "fS3",
+        "claims": [
+          {
+            "claim": "North Pier's proposed apprentice support package includes access to the cooperative's established transport benefit.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "sS3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "sS3",
+                "quote": "North Pier's proposed apprentice support package includes access to our established transport benefit.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states the proposed package includes the transport benefit for North Pier."
+              }
+            ],
+            "reason": "The excerpt directly states inclusion in a proposed package."
+          },
+          {
+            "claim": "The North Pier campus office is preparing enrollment and pass-distribution procedures.",
+            "label": "ENTAILMENT",
+            "citation_ids": [
+              "sS3"
+            ],
+            "quote_checks": [
+              {
+                "citation_id": "sS3",
+                "quote": "The campus office is preparing the enrollment and pass-distribution procedures.",
+                "label": "ENTAILMENT",
+                "reason": "The quote directly states preparation of procedures."
+              }
+            ],
+            "reason": "The excerpt directly states preparation of procedures."
+          }
+        ]
+      }
+    ],
+    "coverage": [
+      {
+        "gold_id": "G1",
+        "finding_ids": [
+          "fS1"
+        ],
+        "citation_ids": [
+          "sS1"
+        ],
+        "label": "ENTAILMENT",
+        "reason": "Finding fS1 conveys the same undertaking, and its cited excerpt exactly states it.",
+        "claim_links": [
+          {
+            "finding_id": "fS1",
+            "claim_index": 0,
+            "label": "ENTAILMENT",
+            "reason": "This claim matches the reference fact exactly."
+          }
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "sS1",
+            "quote": "Meridian Learning Cooperative undertakes to pay for and issue an evening transit pass to each apprentice enrolled at its North Pier campus.",
+            "label": "ENTAILMENT",
+            "reason": "The quote exactly states the undertaking in the reference fact."
+          }
+        ]
+      }
+    ]
+  },
+  "evidence_judgment_sha256": "d88f3ea4bf1cfd43969e2262b6b77da0f8f2f447f5810ee17b2f5a2590cbc6d4",
+  "result": {
+    "label": "JUSTIFIED",
+    "reason": "The final assessment appropriately treats North Pier delivery as unverified because the excerpts show a promise and preparation for North Pier, plus delivery at other campuses, but do not establish that Meridian actually paid for and issued evening passes to North Pier apprentices.",
+    "conditions": [
+      {
+        "condition_id": "K1",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "sS1",
+          "sS2",
+          "sS3"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "sS1",
+            "quote": "undertakes to pay for and issue an evening transit pass to each apprentice enrolled at its North Pier campus.",
+            "label": "NEUTRAL",
+            "reason": "This proves the undertaking for North Pier, not actual payment or issuance."
+          },
+          {
+            "citation_id": "sS2",
+            "quote": "Last year we issued 280 evening passes across our East Quay, Hill End and Market Street campuses.",
+            "label": "NEUTRAL",
+            "reason": "This proves actual issuance at other named campuses, not at North Pier."
+          },
+          {
+            "citation_id": "sS3",
+            "quote": "The campus office is preparing the enrollment and pass-distribution procedures.",
+            "label": "NEUTRAL",
+            "reason": "Preparing procedures suggests future administration, not completed delivery of passes."
+          }
+        ],
+        "reason": "No excerpt establishes actual payment and issuance to the promised North Pier apprentices; the evidence shows only the pledge, delivery elsewhere, and preparatory steps at North Pier."
+      }
+    ]
+  },
+  "score": {
+    "case_id": "SYN-SCOPE-NEG",
+    "identity": "MATCH",
+    "reference_coverage": {
+      "numerator": 1,
+      "denominator": 1,
+      "rate": 1.0
+    },
+    "finding_support": {
+      "numerator": 5,
+      "denominator": 5,
+      "rate": 1.0
+    },
+    "traceability": {
+      "numerator": 5,
+      "denominator": 5,
+      "rate": 1.0
+    },
+    "claim_count": 5,
+    "evidence_eligible_claims": 5,
+    "unquoted_claims": 0,
+    "credited_reference_ids": [
+      "G1"
+    ],
+    "coverage_labels": {
+      "ENTAILMENT": 1,
+      "CONTRADICTION": 0,
+      "NEUTRAL": 0,
+      "MISSING": 0
+    },
+    "finding_labels": {
+      "ENTAILMENT": 5,
+      "CONTRADICTION": 0,
+      "NEUTRAL": 0
+    },
+    "citation_audit": "OWNED_QUOTES_V1",
+    "verdict": "JUSTIFIED",
+    "verdict_evaluation": {
+      "applicable": true,
+      "reason": null,
+      "label": "JUSTIFIED"
+    }
+  }
+}

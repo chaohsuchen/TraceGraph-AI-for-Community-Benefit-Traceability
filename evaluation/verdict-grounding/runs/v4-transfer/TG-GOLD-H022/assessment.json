@@ -1,0 +1,166 @@
+{
+  "case": "TG-GOLD-H022",
+  "model": "gpt-5.4",
+  "runtime": {
+    "agent.py": "a05ce765ed68bdd3bdef1b319c2349e39f60e2abf7d2c923502295582c8aff21",
+    "providers.py": "1346b7a2a854216e9b5bae559e30ba025b531aa421151f4f1e4e0d0ed064c60f",
+    "reconcile.py": "582754a7c24a38543485d4e7589cbdd738d571fb3dd949f0b118374bf12f532b",
+    "openai_provider.py": "cebdca8526ccb8ebec3b83da3c0e0cec2b6f2b39797dae0a4ce15e88cbe09f59"
+  },
+  "inputs_sha256": "c15f490982e8b079f6e0d2fdc359b0b53caaa21227260be293a2962edfb433ac",
+  "as_of": "2026-11-22",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 7.593999999924563,
+      "request_id": "req_b131b4b6e2e94c2cbf60488336cced1b",
+      "usage": {
+        "input_tokens": 4308,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 1792
+        },
+        "output_tokens": 710,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 5018
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "status": "COMPLETED",
+  "trace": {
+    "not_yet_due": [],
+    "criteria": [
+      {
+        "criterion": "HRMP funds or delivers the proposed community impact fund commitment",
+        "required_elements": [
+          "HRMP provides a community impact fund",
+          "the commitment is for $150 million",
+          "the commitment is tied to the project",
+          "the amount is over a 30-year license term"
+        ],
+        "scope_criteria": [
+          "s1",
+          "s2"
+        ],
+        "promise_scope": "HRMP/the applicant proposed for the project an ongoing community impact fund commitment of $150 million over a 30-year license term; intended beneficiaries are community recipients of the fund, with later passages describing support for nonprofits, parks, and cultural institutions, but no narrower beneficiary list is part of the quoted original commitment; location is tied to the project community, not otherwise precisely specified in the original quote.",
+        "observed_scope": "Delivery for the promised scope remains unverified.",
+        "promise_citation_ids": [
+          "c1",
+          "c2"
+        ],
+        "delivery_citation_ids": [],
+        "delivery_status": "UNVERIFIED",
+        "timing_requirement": "Over a 30-year license term.",
+        "explanation": "The cited sources document the terms of the undertaking.",
+        "gap": "The sources do not establish actual performance for the promised scope. Timing to verify: Over a 30-year license term.",
+        "delivery_support": []
+      }
+    ],
+    "label": "UNVERIFIED",
+    "verdict": "The available evidence does not establish delivery of the requested obligation.",
+    "reasoning": "Requested scope: HRMP committed $150 million to a community impact fund over a 30-year license term.\n\nHRMP funds or delivers the proposed community impact fund commitment\nStatus: UNVERIFIED\nThe cited sources document the terms of the undertaking.\nPromised scope: HRMP/the applicant proposed for the project an ongoing community impact fund commitment of $150 million over a 30-year license term; intended beneficiaries are community recipients of the fund, with later passages describing support for nonprofits, parks, and cultural institutions, but no narrower beneficiary list is part of the quoted original commitment; location is tied to the project community, not otherwise precisely specified in the original quote.\nObserved scope: Delivery for the promised scope remains unverified.\nEvidence gap: The sources do not establish actual performance for the promised scope. Timing to verify: Over a 30-year license term.\nPromise evidence: c1, c2\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “As the Board previously noted, the project includes $761 million in community benefits as part of the project cost. Another $150 million has been proposed in ongoing commitments to a community impact fund, as the table below illustrates. The Applicant committed to this $150 million over a 30-year license term.”\nhttps://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf\n\nc2: “As the Board previously noted, the project includes $761 million in community benefits as part of the project cost. Another $150 million has been proposed in ongoing commitments to a community impact fund, as the table below illustrates. The Applicant committed to this $150 million over a 30-year license term.”\nhttps://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf\n\nc3: “The Community Impact Fund, as proposed in the Application, is valued at $163 million over the 30-year length of the license. Our commitments will be binding under the gaming license, ensuring accountability and delivery.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf\n\nc4: “The Fund is structured for annual disbursements, guaranteeing stable support for nonprofits, parks, and cultural institutions.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf\n\nc5: “There is another $25 million dedicated to three neighborhood projects: East Elmhurst health clinic, Corona/Jackson Heights senior/youth center, and Flushing addiction services. There are also individual philanthropic commitments totaling approximately $2 million”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf\n\nc6: “Chart 5: HRMP Community Benefit during their 20-year Term of License”\nhttps://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf\n\nc7: “Community Impact Fund 13 150 163”\nhttps://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+    "refutation": [],
+    "scope_anchors": {
+      "s1": "HRMP committed $150 million to a community impact fund over a 30-year license term",
+      "s2": "Whether HRMP actually funded or delivered the community impact fund"
+    },
+    "citations": {
+      "c1": {
+        "source": {
+          "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+          "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf"
+        },
+        "excerpt": "As the Board previously noted, the project includes $761 million in community benefits as part of the project cost. Another $150 million has been proposed in ongoing commitments to a community impact fund, as the table below illustrates. The Applicant committed to this $150 million over a 30-year license term.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:40:06.572946+00:00",
+        "finding_id": "finding-7847f7d1-6220-4079-ab3e-cc51830876fe"
+      },
+      "c2": {
+        "source": {
+          "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+          "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+        },
+        "excerpt": "As the Board previously noted, the project includes $761 million in community benefits as part of the project cost. Another $150 million has been proposed in ongoing commitments to a community impact fund, as the table below illustrates. The Applicant committed to this $150 million over a 30-year license term.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:40:06.572946+00:00",
+        "finding_id": "finding-7847f7d1-6220-4079-ab3e-cc51830876fe"
+      },
+      "c3": {
+        "source": {
+          "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf"
+        },
+        "excerpt": "The Community Impact Fund, as proposed in the Application, is valued at $163 million over the 30-year length of the license. Our commitments will be binding under the gaming license, ensuring accountability and delivery.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:40:06.572946+00:00",
+        "finding_id": "finding-bb478a7e-d0f6-4198-8a8a-76260808a2bb"
+      },
+      "c4": {
+        "source": {
+          "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf"
+        },
+        "excerpt": "The Fund is structured for annual disbursements, guaranteeing stable support for nonprofits, parks, and cultural institutions.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:40:06.572946+00:00",
+        "finding_id": "finding-f3b4149b-e63e-4237-a0f3-38113cdb3239"
+      },
+      "c5": {
+        "source": {
+          "title": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+          "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf"
+        },
+        "excerpt": "There is another $25 million dedicated to three neighborhood projects: East Elmhurst health clinic, Corona/Jackson Heights senior/youth center, and Flushing addiction services. There are also individual philanthropic commitments totaling approximately $2 million",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:40:06.572946+00:00",
+        "finding_id": "finding-09a3a214-601e-4482-a795-037bcf117384"
+      },
+      "c6": {
+        "source": {
+          "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+          "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+        },
+        "excerpt": "Chart 5: HRMP Community Benefit during their 20-year Term of License",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:40:06.572946+00:00",
+        "finding_id": "finding-2853e164-a606-492b-9b1a-a1da0f01717a"
+      },
+      "c7": {
+        "source": {
+          "title": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+          "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+          "citation": "https://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf"
+        },
+        "excerpt": "Community Impact Fund 13 150 163",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:40:06.572946+00:00",
+        "finding_id": "finding-4d7ddb26-bd01-491c-9afa-5974840ee805"
+      }
+    },
+    "scope_gap": ""
+  },
+  "displayed": {
+    "label": "UNVERIFIED",
+    "verdict": "The available evidence does not establish delivery of the requested obligation.",
+    "reasoning": "Requested scope: HRMP committed $150 million to a community impact fund over a 30-year license term.\n\nHRMP funds or delivers the proposed community impact fund commitment\nStatus: UNVERIFIED\nThe cited sources document the terms of the undertaking.\nPromised scope: HRMP/the applicant proposed for the project an ongoing community impact fund commitment of $150 million over a 30-year license term; intended beneficiaries are community recipients of the fund, with later passages describing support for nonprofits, parks, and cultural institutions, but no narrower beneficiary list is part of the quoted original commitment; location is tied to the project community, not otherwise precisely specified in the original quote.\nObserved scope: Delivery for the promised scope remains unverified.\nEvidence gap: The sources do not establish actual performance for the promised scope. Timing to verify: Over a 30-year license term.\nPromise evidence: c1, c2\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “As the Board previously noted, the project includes $761 million in community benefits as part of the project cost. Another $150 million has been proposed in ongoing commitments to a community impact fund, as the table below illustrates. The Applicant committed to this $150 million over a 30-year license term.”\nhttps://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf\n\nc2: “As the Board previously noted, the project includes $761 million in community benefits as part of the project cost. Another $150 million has been proposed in ongoing commitments to a community impact fund, as the table below illustrates. The Applicant committed to this $150 million over a 30-year license term.”\nhttps://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf\n\nc3: “The Community Impact Fund, as proposed in the Application, is valued at $163 million over the 30-year length of the license. Our commitments will be binding under the gaming license, ensuring accountability and delivery.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf\n\nc4: “The Fund is structured for annual disbursements, guaranteeing stable support for nonprofits, parks, and cultural institutions.”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf\n\nc5: “There is another $25 million dedicated to three neighborhood projects: East Elmhurst health clinic, Corona/Jackson Heights senior/youth center, and Flushing addiction services. There are also individual philanthropic commitments totaling approximately $2 million”\nhttps://nycasinos.ny.gov/system/files/documents/2025/09/final-cac-question-responses-9-19-25-redacted-c-1.pdf\n\nc6: “Chart 5: HRMP Community Benefit during their 20-year Term of License”\nhttps://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf\n\nc7: “Community Impact Fund 13 150 163”\nhttps://nycasinos.ny.gov/system/files/documents/2026/03/03.23.26.gflbreport.pdf",
+    "verification_date": "2026-11-22"
+  }
+}

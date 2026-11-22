@@ -1,0 +1,162 @@
+{
+  "model": "gpt-5.4",
+  "judge": "tracegraph-nli-v4-owned-quotes",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "cases": {
+    "TG-GOLD-H012": {
+      "archived": {
+        "label": "CORROBORATED",
+        "grade": "OVERCLAIM"
+      },
+      "v4": {
+        "label": "PARTIALLY_CORROBORATED",
+        "grade": "OVERCLAIM",
+        "reason": "The displayed assessment overstates delivery by calling one condition DELIVERED and overall PARTIALLY_CORROBORATED even though the supplied excerpts show commitments/claimed benefits, not actual performance in practice for either condition.",
+        "criteria": [
+          "DELIVERED",
+          "PARTIAL"
+        ]
+      },
+      "v4-r2": {
+        "label": "PARTIALLY_CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The displayed assessment properly treats the record as showing a pledge/undertaking but not actual delivery: the cited passages say Bally’s funds or committed to pay for memberships and describe priority placement as a membership benefit, while no excerpt shows Bronx employees actually had funded memberships in effect or that priority placement was available in practice to them.",
+        "criteria": [
+          "PARTIAL",
+          "UNVERIFIED"
+        ]
+      },
+      "v4-r3": {
+        "label": "PARTIALLY_CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The displayed assessment appropriately treats both conditions as only partially/unverified delivered because the cited passages describe Bally’s commitment/benefit design, not actual Bronx-operation funding or actual in-practice priority placement for Bronx employees; its stated evidence gaps match the record.",
+        "criteria": [
+          "PARTIAL",
+          "PARTIAL"
+        ]
+      }
+    },
+    "PUB-COBALT": {
+      "archived": {
+        "label": "CORROBORATED",
+        "grade": "OVERCLAIM"
+      },
+      "v4": {
+        "label": "PARTIALLY_CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment correctly treats delivery by the end of 2025 as unproven: April 2026 excerpts establish current 100% recycled cobalt in all Apple-designed batteries, while the separate statement about having reached several targets in 2025 does not specifically tie that timing to cobalt, so a partial/unresolved verdict is warranted rather than full delivery or failure.",
+        "criteria": [
+          "PARTIAL"
+        ]
+      },
+      "v4-r2": {
+        "label": "PARTIALLY_CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment appropriately limits delivery to partial/unverified for the 2025 deadline because the decisive April 2026 excerpts establish present-tense achievement across all Apple-designed batteries but do not establish that this was already true by the end of 2025; the 2025 excerpt shows only >99% progress toward the goal.",
+        "criteria": [
+          "PARTIAL"
+        ]
+      },
+      "v4-r3": {
+        "label": "PARTIALLY_CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment appropriately treats current all-batteries achievement as supported but full delivery by the end of 2025 as unproven, because the cited 2026 statements establish present-tense use of 100% recycled cobalt across Apple-designed batteries without fixing when that was first achieved, while the 2025 excerpt says only that Apple had surpassed 99% toward the goal.",
+        "criteria": [
+          "PARTIAL",
+          "PARTIAL"
+        ]
+      }
+    },
+    "PUB-DART": {
+      "archived": {
+        "label": "CORROBORATED",
+        "grade": "JUSTIFIED"
+      },
+      "v4": {
+        "label": "CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment correctly concludes delivery was corroborated because the excerpts establish both required conditions: DART actually hit Dimorphos and the measured orbital-period change far exceeded the pre-impact 73-second threshold.",
+        "criteria": [
+          "DELIVERED"
+        ]
+      },
+      "v4-r2": {
+        "label": "CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment correctly concludes delivery was corroborated: the excerpts show DART struck Dimorphos and that the measured orbital-period change was far greater than the pre-impact 73-second minimum success threshold.",
+        "criteria": [
+          "DELIVERED"
+        ]
+      },
+      "v4-r3": {
+        "label": "CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment’s core conclusion that the target was met is supported by citations showing a pre-impact success threshold of 73 seconds or more and a measured post-impact shortening of 32 minutes, later 33 minutes 15 seconds; both far exceed the threshold. Its delivery reasoning is appropriately grounded in the supplied excerpts, despite not explicitly discussing condition structure.",
+        "criteria": [
+          "DELIVERED"
+        ]
+      }
+    }
+  },
+  "arms": {
+    "v4": {
+      "assess": {
+        "input": 32318,
+        "output": 5311,
+        "cached": 7424,
+        "calls": 13,
+        "estimated_usd": 0.143756
+      },
+      "judge": {
+        "input": 19693,
+        "output": 2550,
+        "cached": 0,
+        "calls": 3,
+        "estimated_usd": 0.0874825
+      },
+      "grades": {
+        "OVERCLAIM": 1,
+        "JUSTIFIED": 2
+      }
+    },
+    "v4-r2": {
+      "assess": {
+        "input": 32103,
+        "output": 5150,
+        "cached": 16896,
+        "calls": 13,
+        "estimated_usd": 0.1194915
+      },
+      "judge": {
+        "input": 19510,
+        "output": 2192,
+        "cached": 13568,
+        "calls": 3,
+        "estimated_usd": 0.051127
+      },
+      "grades": {
+        "JUSTIFIED": 3
+      }
+    },
+    "v4-r3": {
+      "assess": {
+        "input": 32851,
+        "output": 6110,
+        "cached": 14080,
+        "calls": 13,
+        "estimated_usd": 0.1420975
+      },
+      "judge": {
+        "input": 20051,
+        "output": 2219,
+        "cached": 13568,
+        "calls": 3,
+        "estimated_usd": 0.0528845
+      },
+      "grades": {
+        "JUSTIFIED": 3
+      }
+    }
+  },
+  "total_estimated_usd": 0.596839
+}

@@ -1,0 +1,87 @@
+{
+  "model": "gpt-5.4",
+  "judge": "tracegraph-nli-v4-owned-quotes",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "cases": {
+    "TG-GOLD-A036": {
+      "archived": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED"
+      },
+      "v4-transfer": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment appropriately treats the record as proving the promise but not actual delivery: none of the supplied excerpts shows that a qualifying workforce-housing investment actually began, and without an identified start trigger or first-investment date the timing condition also remains unverified.",
+        "criteria": [
+          "UNVERIFIED"
+        ]
+      }
+    },
+    "TG-GOLD-A061": {
+      "archived": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED"
+      },
+      "v4-transfer": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The displayed assessment appropriately limits itself to UNVERIFIED delivery because the quoted license passages prove only the obligation, and the later commission statement about 'two of the three licensees' providing completion bonds does not identify RWNYC or establish RWNYC's amount or deadline.",
+        "criteria": [
+          "UNVERIFIED"
+        ]
+      }
+    },
+    "TG-GOLD-H016": {
+      "archived": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED"
+      },
+      "v4-transfer": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment correctly treats the cited excerpts as evidence of Bally’s proposed/target workforce composition, not evidence that the actual Bronx construction workforce achieved those percentages, so its overall UNVERIFIED delivery verdict is supported; the only nuance is that the veteran category is described inconsistently across sources, which reinforces rather than undermines the stated evidence gap for actual delivery.",
+        "criteria": [
+          "UNVERIFIED",
+          "UNVERIFIED",
+          "UNVERIFIED"
+        ]
+      }
+    },
+    "TG-GOLD-H022": {
+      "archived": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED"
+      },
+      "v4-transfer": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The displayed assessment correctly limits the record to evidence of a pledge and notes the absence of proof that the fund actually paid or received money or that payments met the required schedule; no supplied excerpt establishes delivery of either condition.",
+        "criteria": [
+          "UNVERIFIED"
+        ]
+      }
+    }
+  },
+  "arms": {
+    "v4-transfer": {
+      "assess": {
+        "input": 15917,
+        "output": 3298,
+        "cached": 5376,
+        "calls": 4,
+        "estimated_usd": 0.0771665
+      },
+      "judge": {
+        "input": 29483,
+        "output": 4293,
+        "cached": 0,
+        "calls": 4,
+        "estimated_usd": 0.1381025
+      },
+      "grades": {
+        "JUSTIFIED": 4
+      }
+    }
+  },
+  "total_estimated_usd": 0.215269
+}

@@ -1,0 +1,318 @@
+{
+  "case": "TG-GOLD-H016",
+  "model": "gpt-5.4",
+  "version": "tracegraph-nli-v4-owned-quotes",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "research_sha256": "a517fa71b659b036ce7f39148fedd1b5a894b9980a88a267d234b3a12bd7b513",
+  "displayed_sha256": "16ed31ad861313f01264591a374026e26dfad2a021844751a167a8f488e22456",
+  "evidence_judgment_sha256": "e42079dad84a574e049976f5ccd8ebc63b30507530bfa0746b4419662a98ff8b",
+  "original": {
+    "label": "JUSTIFIED",
+    "reason": "The final assessment correctly treats all three conditions as unverified delivery because every cited excerpt describes proposed/sought workforce targets, not actual Bronx construction workforce outcomes on the required denominators or veteran definition.",
+    "conditions": [
+      {
+        "condition_id": "K1",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-f7059bd8-73b4-4a46-a21d-9fbef9c363c3",
+          "support-e78a85ce-aad5-4d62-a014-6893fc91e97a",
+          "support-835a7c5c-046c-4bc6-b6d5-0a883340e9c8",
+          "support-460c9fdd-eb8d-4d0d-a893-a4237b7e83b5"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-f7059bd8-73b4-4a46-a21d-9fbef9c363c3",
+            "quote": "The following table illustrates the significant workforce diversity targets for the Bally’s Bronx construction project. We will create 15,000 union construction jobs, including 6,000 (40% utilization) minority workers, 1,500 women workers (10%) and 1,500 veteran workers (10%).",
+            "label": "NEUTRAL",
+            "reason": "This states a target for the Bronx project, not that women actually comprised 10% of the realized workforce."
+          },
+          {
+            "citation_id": "support-e78a85ce-aad5-4d62-a014-6893fc91e97a",
+            "quote": "we have established clear diversity targets for our contractors and subcontractors that align with our overall project goals: 40% minority workers, 10% women workers and 10% veteran workers.",
+            "label": "NEUTRAL",
+            "reason": "Established targets for contractors and subcontractors do not prove actual achieved workforce composition."
+          },
+          {
+            "citation_id": "support-835a7c5c-046c-4bc6-b6d5-0a883340e9c8",
+            "quote": "In the construction phase, Bally’s seeks to achieve a workforce drawn primarily from the Bronx and made up of approximately 10 percent women, 10 percent service-disabled veterans, and 40 percent minority construction workers.",
+            "label": "NEUTRAL",
+            "reason": "\"Seeks to achieve\" describes an aim, not actual workforce results."
+          },
+          {
+            "citation_id": "support-460c9fdd-eb8d-4d0d-a893-a4237b7e83b5",
+            "quote": "Bally’s proposed targets of 10 percent women, 40 percent minorities, and 10 percent service-disabled veterans.",
+            "label": "NEUTRAL",
+            "reason": "Proposed targets are not evidence that women actually comprised 10% of the workforce."
+          }
+        ],
+        "reason": "All relevant excerpts are prospective targets or aims and none reports actual women’s share of the Bronx construction workforce on the relevant contractor-inclusive denominator."
+      },
+      {
+        "condition_id": "K2",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-f7059bd8-73b4-4a46-a21d-9fbef9c363c3",
+          "support-e78a85ce-aad5-4d62-a014-6893fc91e97a",
+          "support-835a7c5c-046c-4bc6-b6d5-0a883340e9c8",
+          "support-460c9fdd-eb8d-4d0d-a893-a4237b7e83b5"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-f7059bd8-73b4-4a46-a21d-9fbef9c363c3",
+            "quote": "The following table illustrates the significant workforce diversity targets for the Bally’s Bronx construction project. We will create 15,000 union construction jobs, including 6,000 (40% utilization) minority workers, 1,500 women workers (10%) and 1,500 veteran workers (10%).",
+            "label": "NEUTRAL",
+            "reason": "This gives a target utilization figure, not actual realized minority share of the workforce."
+          },
+          {
+            "citation_id": "support-e78a85ce-aad5-4d62-a014-6893fc91e97a",
+            "quote": "we have established clear diversity targets for our contractors and subcontractors that align with our overall project goals: 40% minority workers, 10% women workers and 10% veteran workers.",
+            "label": "NEUTRAL",
+            "reason": "A stated target does not establish actual workforce composition."
+          },
+          {
+            "citation_id": "support-835a7c5c-046c-4bc6-b6d5-0a883340e9c8",
+            "quote": "In the construction phase, Bally’s seeks to achieve a workforce drawn primarily from the Bronx and made up of approximately 10 percent women, 10 percent service-disabled veterans, and 40 percent minority construction workers.",
+            "label": "NEUTRAL",
+            "reason": "The phrase \"seeks to achieve\" shows aspiration rather than performance."
+          },
+          {
+            "citation_id": "support-460c9fdd-eb8d-4d0d-a893-a4237b7e83b5",
+            "quote": "Bally’s proposed targets of 10 percent women, 40 percent minorities, and 10 percent service-disabled veterans.",
+            "label": "NEUTRAL",
+            "reason": "Proposed targets are not evidence that minority workers actually comprised 40% of the workforce."
+          }
+        ],
+        "reason": "The record shows only planned or proposed 40% minority participation, not actual Bronx construction workforce performance."
+      },
+      {
+        "condition_id": "K3",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-460c9fdd-eb8d-4d0d-a893-a4237b7e83b5",
+          "support-835a7c5c-046c-4bc6-b6d5-0a883340e9c8",
+          "support-f7059bd8-73b4-4a46-a21d-9fbef9c363c3",
+          "support-e78a85ce-aad5-4d62-a014-6893fc91e97a"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-460c9fdd-eb8d-4d0d-a893-a4237b7e83b5",
+            "quote": "Bally’s proposed targets of 10 percent women, 40 percent minorities, and 10 percent service-disabled veterans.",
+            "label": "NEUTRAL",
+            "reason": "This is a proposed target, not proof that service-disabled veterans actually comprised 10% of the workforce."
+          },
+          {
+            "citation_id": "support-835a7c5c-046c-4bc6-b6d5-0a883340e9c8",
+            "quote": "In the construction phase, Bally’s seeks to achieve a workforce drawn primarily from the Bronx and made up of approximately 10 percent women, 10 percent service-disabled veterans, and 40 percent minority construction workers.",
+            "label": "NEUTRAL",
+            "reason": "An effort to achieve approximately 10 percent does not establish actual attainment, and it is approximate rather than exact."
+          },
+          {
+            "citation_id": "support-f7059bd8-73b4-4a46-a21d-9fbef9c363c3",
+            "quote": "1,500 women workers (10%) and 1,500 veteran workers (10%).",
+            "label": "NEUTRAL",
+            "reason": "This states a 10% veteran-worker target, not actual performance, and it uses the broader category veteran workers rather than the condition’s service-disabled-veteran definition."
+          },
+          {
+            "citation_id": "support-e78a85ce-aad5-4d62-a014-6893fc91e97a",
+            "quote": "40% minority workers, 10% women workers and 10% veteran workers.",
+            "label": "NEUTRAL",
+            "reason": "This gives a target for veteran workers, not actual results, and does not establish the narrower approved service-disabled-veteran definition."
+          }
+        ],
+        "reason": "No excerpt proves actual service-disabled-veteran composition at 10%; the evidence is only prospective and some passages use the broader 'veteran workers' category instead of the condition’s approved service-disabled-veteran definition."
+      }
+    ]
+  },
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 14.640999999945052,
+      "request_id": "req_ef3693bf29ad4334acf3f55cd663a153",
+      "usage": {
+        "input_tokens": 7787,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 1542,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 9329
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "result": {
+    "label": "JUSTIFIED",
+    "reason": "The displayed assessment correctly treats all three conditions as unverified delivery because every cited excerpt describes proposed/target workforce composition, not actual Bronx construction workforce results on the required contractor-inclusive denominator; for K3 it also appropriately notes the residual category mismatch between 'veteran workers' and 'service-disabled veterans.'",
+    "conditions": [
+      {
+        "condition_id": "K1",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-f7059bd8-73b4-4a46-a21d-9fbef9c363c3",
+          "support-e78a85ce-aad5-4d62-a014-6893fc91e97a",
+          "support-835a7c5c-046c-4bc6-b6d5-0a883340e9c8",
+          "support-460c9fdd-eb8d-4d0d-a893-a4237b7e83b5"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-f7059bd8-73b4-4a46-a21d-9fbef9c363c3",
+            "quote": "The following table illustrates the significant workforce diversity targets for the Bally’s Bronx construction project. We will create 15,000 union construction jobs, including 6,000 (40% utilization) minority workers, 1,500 women workers (10%)",
+            "label": "NEUTRAL",
+            "reason": "This states a target composition, not that women actually comprised 10% of the realized workforce."
+          },
+          {
+            "citation_id": "support-e78a85ce-aad5-4d62-a014-6893fc91e97a",
+            "quote": "we have established clear diversity targets for our contractors and subcontractors that align with our overall project goals: 40% minority workers, 10% women workers and 10% veteran workers.",
+            "label": "NEUTRAL",
+            "reason": "Established targets for contractors and subcontractors do not prove actual achieved workforce composition."
+          },
+          {
+            "citation_id": "support-835a7c5c-046c-4bc6-b6d5-0a883340e9c8",
+            "quote": "Bally’s seeks to achieve a workforce drawn primarily from the Bronx and made up of approximately 10 percent women",
+            "label": "NEUTRAL",
+            "reason": "Seeks to achieve and approximately describe aspiration rather than delivered performance."
+          },
+          {
+            "citation_id": "support-460c9fdd-eb8d-4d0d-a893-a4237b7e83b5",
+            "quote": "Bally’s proposed targets of 10 percent women, 40 percent minorities, and 10 percent service-disabled veterans.",
+            "label": "NEUTRAL",
+            "reason": "Proposed targets are not evidence that women actually comprised 10% of the workforce."
+          }
+        ],
+        "reason": "The record shows only targets/proposals for 10% women, not actual Bronx construction workforce performance on the relevant denominator."
+      },
+      {
+        "condition_id": "K2",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-f7059bd8-73b4-4a46-a21d-9fbef9c363c3",
+          "support-e78a85ce-aad5-4d62-a014-6893fc91e97a",
+          "support-835a7c5c-046c-4bc6-b6d5-0a883340e9c8",
+          "support-460c9fdd-eb8d-4d0d-a893-a4237b7e83b5"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-f7059bd8-73b4-4a46-a21d-9fbef9c363c3",
+            "quote": "including 6,000 (40% utilization) minority workers",
+            "label": "NEUTRAL",
+            "reason": "This is part of the stated workforce target, not evidence that minority workers actually comprised 40%."
+          },
+          {
+            "citation_id": "support-e78a85ce-aad5-4d62-a014-6893fc91e97a",
+            "quote": "we have established clear diversity targets for our contractors and subcontractors that align with our overall project goals: 40% minority workers",
+            "label": "NEUTRAL",
+            "reason": "A clear diversity target does not establish realized workforce composition."
+          },
+          {
+            "citation_id": "support-835a7c5c-046c-4bc6-b6d5-0a883340e9c8",
+            "quote": "made up of approximately 10 percent women, 10 percent service-disabled veterans, and 40 percent minority construction workers.",
+            "label": "NEUTRAL",
+            "reason": "This describes what Bally’s seeks to achieve, not what the workforce actually was."
+          },
+          {
+            "citation_id": "support-460c9fdd-eb8d-4d0d-a893-a4237b7e83b5",
+            "quote": "Bally’s proposed targets of 10 percent women, 40 percent minorities, and 10 percent service-disabled veterans.",
+            "label": "NEUTRAL",
+            "reason": "Proposed targets do not prove delivered 40% minority composition."
+          }
+        ],
+        "reason": "The excerpts establish only a 40% minority target/proposal, not actual contractor-inclusive workforce results."
+      },
+      {
+        "condition_id": "K3",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-460c9fdd-eb8d-4d0d-a893-a4237b7e83b5",
+          "support-835a7c5c-046c-4bc6-b6d5-0a883340e9c8",
+          "support-f7059bd8-73b4-4a46-a21d-9fbef9c363c3",
+          "support-e78a85ce-aad5-4d62-a014-6893fc91e97a"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-460c9fdd-eb8d-4d0d-a893-a4237b7e83b5",
+            "quote": "Bally’s proposed targets of 10 percent women, 40 percent minorities, and 10 percent service-disabled veterans.",
+            "label": "NEUTRAL",
+            "reason": "This supports only a proposed service-disabled-veteran target, not actual achieved workforce composition."
+          },
+          {
+            "citation_id": "support-835a7c5c-046c-4bc6-b6d5-0a883340e9c8",
+            "quote": "Bally’s seeks to achieve a workforce drawn primarily from the Bronx and made up of approximately 10 percent women, 10 percent service-disabled veterans",
+            "label": "NEUTRAL",
+            "reason": "Seeks to achieve an approximate composition is not evidence of actual delivery."
+          },
+          {
+            "citation_id": "support-f7059bd8-73b4-4a46-a21d-9fbef9c363c3",
+            "quote": "1,500 veteran workers (10%).",
+            "label": "NEUTRAL",
+            "reason": "This uses the broader category veteran workers and still states only a target, not actual service-disabled-veteran performance under an approved definition."
+          },
+          {
+            "citation_id": "support-e78a85ce-aad5-4d62-a014-6893fc91e97a",
+            "quote": "10% veteran workers.",
+            "label": "NEUTRAL",
+            "reason": "This is broader than service-disabled veterans and does not show actual achieved composition."
+          }
+        ],
+        "reason": "The record contains only proposed/aspirational 10% service-disabled-veteran language plus broader 'veteran workers' target language, but no proof that service-disabled veterans actually comprised 10% under the required definition."
+      }
+    ]
+  },
+  "score": {
+    "case_id": "TG-GOLD-H016",
+    "identity": "MATCH",
+    "reference_coverage": {
+      "numerator": 4,
+      "denominator": 8,
+      "rate": 0.5
+    },
+    "finding_support": {
+      "numerator": 6,
+      "denominator": 8,
+      "rate": 0.75
+    },
+    "traceability": {
+      "numerator": 6,
+      "denominator": 8,
+      "rate": 0.75
+    },
+    "claim_count": 8,
+    "evidence_eligible_claims": 8,
+    "unquoted_claims": 0,
+    "credited_reference_ids": [
+      "G1",
+      "G2",
+      "G3",
+      "G4"
+    ],
+    "coverage_labels": {
+      "ENTAILMENT": 4,
+      "CONTRADICTION": 0,
+      "NEUTRAL": 0,
+      "MISSING": 4
+    },
+    "finding_labels": {
+      "ENTAILMENT": 6,
+      "CONTRADICTION": 0,
+      "NEUTRAL": 2
+    },
+    "citation_audit": "OWNED_QUOTES_V1",
+    "verdict": "JUSTIFIED",
+    "verdict_evaluation": {
+      "applicable": true,
+      "reason": null,
+      "label": "JUSTIFIED"
+    }
+  }
+}

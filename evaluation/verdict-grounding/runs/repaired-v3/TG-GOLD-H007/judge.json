@@ -1,0 +1,282 @@
+{
+  "case": "TG-GOLD-H007",
+  "model": "gpt-5.4",
+  "version": "tracegraph-nli-v4-owned-quotes",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "research_sha256": "caf7b1b49bdd2649c649a8021d6ad1034c9fd4ae9f683e6478e5035eb53ac927",
+  "displayed_sha256": "0faed544309b9a8da9280f3dbfc57a2733d4ecc5968d9a27263af3df9ccc8606",
+  "evidence_judgment_sha256": "72bf0744261fb78b454d3add8b5c25f2adc7dbf6fd0602bc713124c83c213511",
+  "original": {
+    "label": "OVERCLAIM",
+    "reason": "The final assessment correctly treats delivery as unverified because the excerpts show only stated future workforce targets and comparator/context, not actual permanent-workforce outcomes for the Bronx project; however, it overclaims when it says the only observed outcome provided is the Chicago facility result and that no observed outcome shows Bally’s Bronx permanent operations publicly stated the targets, because cited Bronx project passages do publicly state those targets even though they do not prove delivery.",
+    "conditions": [
+      {
+        "condition_id": "K1",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-d2f85263-8aea-4767-a0f3-c520a6cc6c94",
+          "support-0841fe55-81b1-4273-9e5c-3e8d4351b95e",
+          "support-e6a6d9d6-adf6-4b9e-a258-cb329bd71e50",
+          "support-10beef46-753e-4c7d-bd20-6844e14cc08f"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-d2f85263-8aea-4767-a0f3-c520a6cc6c94",
+            "quote": "The Applicant states that 70 percent of employees will be Bronx residents, 47 percent will be women, and 75 percent will be minorities.",
+            "label": "NEUTRAL",
+            "reason": "This establishes a stated future target, not that actual permanent employees were Bronx residents at 70%."
+          },
+          {
+            "citation_id": "support-0841fe55-81b1-4273-9e5c-3e8d4351b95e",
+            "quote": "For its permanent operations, Bally’s commits to building a diverse workforce of 3,503 full-time equivalent employees, with 70 percent of those workers coming from the Bronx, and reflecting the demographics of the Bronx.",
+            "label": "NEUTRAL",
+            "reason": "This is a commitment for permanent operations, not evidence of actual workforce composition achieved."
+          },
+          {
+            "citation_id": "support-e6a6d9d6-adf6-4b9e-a258-cb329bd71e50",
+            "quote": "70%+ MINIMUM TARGET BRONX-BASED EMPLOYEES Positions to be filled by Bronx residents within surrounding catchment area",
+            "label": "NEUTRAL",
+            "reason": "This is another target statement and uses 70%+ minimum wording, not proof that actual permanent employees were 70% Bronx residents."
+          },
+          {
+            "citation_id": "support-10beef46-753e-4c7d-bd20-6844e14cc08f",
+            "quote": "Bally’s will not be operational in the first three and one-half years of the projection period.",
+            "label": "NEUTRAL",
+            "reason": "This suggests operations had not yet begun for part of the projection period, reinforcing lack of delivery evidence but not proving the actual employee share."
+          }
+        ],
+        "reason": "The record shows Bronx-resident hiring targets for proposed permanent operations, but no excerpt reports the actual permanent workforce share of Bronx residents."
+      },
+      {
+        "condition_id": "K2",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-d2f85263-8aea-4767-a0f3-c520a6cc6c94",
+          "support-dde9babb-0aaa-4c88-b779-43167901ddca"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-d2f85263-8aea-4767-a0f3-c520a6cc6c94",
+            "quote": "The Applicant states that 70 percent of employees will be Bronx residents, 47 percent will be women, and 75 percent will be minorities.",
+            "label": "NEUTRAL",
+            "reason": "This states a future women-share target, not that women actually comprised 47% of the permanent workforce."
+          },
+          {
+            "citation_id": "support-dde9babb-0aaa-4c88-b779-43167901ddca",
+            "quote": "It cites its performance at Bally’s Chicago, where over 80 percent of the employees at its temporary facility identify as minority, and 45 percent are women.",
+            "label": "NEUTRAL",
+            "reason": "This is an actual figure for a different facility in Chicago and does not establish the Bronx permanent workforce share of women."
+          }
+        ],
+        "reason": "The excerpts provide only a stated 47% women target for Bronx operations and a separate Chicago comparator of 45% women, not actual Bronx permanent-workforce results."
+      },
+      {
+        "condition_id": "K3",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-d2f85263-8aea-4767-a0f3-c520a6cc6c94",
+          "support-dde9babb-0aaa-4c88-b779-43167901ddca",
+          "support-e6a6d9d6-adf6-4b9e-a258-cb329bd71e50"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-d2f85263-8aea-4767-a0f3-c520a6cc6c94",
+            "quote": "The Applicant states that 70 percent of employees will be Bronx residents, 47 percent will be women, and 75 percent will be minorities.",
+            "label": "NEUTRAL",
+            "reason": "This establishes a stated 75% minority target, not that minority employees actually comprised 75% of the permanent workforce."
+          },
+          {
+            "citation_id": "support-dde9babb-0aaa-4c88-b779-43167901ddca",
+            "quote": "It cites its performance at Bally’s Chicago, where over 80 percent of the employees at its temporary facility identify as minority, and 45 percent are women.",
+            "label": "NEUTRAL",
+            "reason": "This reports a different actual workforce in Chicago, not the Bronx permanent workforce."
+          },
+          {
+            "citation_id": "support-e6a6d9d6-adf6-4b9e-a258-cb329bd71e50",
+            "quote": "75%+ MINIMUM TARGET OF DIVERSE EMPLOYEES Positions to be reflective of Bronx Demographics",
+            "label": "NEUTRAL",
+            "reason": "This is a minimum target for diverse employees, not evidence of the actual minority share in the Bronx permanent workforce."
+          }
+        ],
+        "reason": "The evidence shows only proposed diversity/minority targets and a Chicago comparator, not actual minority composition of Bally’s Bronx permanent workforce."
+      }
+    ]
+  },
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 13.89000000001397,
+      "request_id": "req_27c9ee71124b4606ac9c951b6436d8f1",
+      "usage": {
+        "input_tokens": 8807,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 6912
+        },
+        "output_tokens": 1437,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 10244
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "result": {
+    "label": "JUSTIFIED",
+    "reason": "The final assessment correctly treats the cited materials as evidence of Bally’s stated workforce targets, not of actual delivery, and it explicitly marks delivery as unverified because the excerpts show projected permanent operations and no realized workforce composition.",
+    "conditions": [
+      {
+        "condition_id": "K1",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-d2f85263-8aea-4767-a0f3-c520a6cc6c94",
+          "support-0841fe55-81b1-4273-9e5c-3e8d4351b95e",
+          "support-10beef46-753e-4c7d-bd20-6844e14cc08f",
+          "support-c5605437-c401-49c3-a070-014719c47f64"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-d2f85263-8aea-4767-a0f3-c520a6cc6c94",
+            "quote": "The Applicant states that 70 percent of employees will be Bronx residents, 47 percent will be women, and 75 percent will be minorities.",
+            "label": "NEUTRAL",
+            "reason": "This is a statement of what will be true, not evidence that actual permanent employees were Bronx residents at that level."
+          },
+          {
+            "citation_id": "support-0841fe55-81b1-4273-9e5c-3e8d4351b95e",
+            "quote": "For its permanent operations, Bally’s commits to building a diverse workforce of 3,503 full-time equivalent employees, with 70 percent of those workers coming from the Bronx, and reflecting the demographics of the Bronx.",
+            "label": "NEUTRAL",
+            "reason": "This shows a commitment for permanent operations, not delivered workforce composition."
+          },
+          {
+            "citation_id": "support-10beef46-753e-4c7d-bd20-6844e14cc08f",
+            "quote": "Bally’s will not be operational in the first three and one-half years of the projection period.",
+            "label": "NEUTRAL",
+            "reason": "This indicates non-operation during part of the projection period, which helps explain why actual permanent workforce delivery is unshown, but it does not prove or disprove K1."
+          },
+          {
+            "citation_id": "support-c5605437-c401-49c3-a070-014719c47f64",
+            "quote": "Bally’s project, Bally’s Bronx, is a proposed single-phase, integrated casino resort located at Bally’s Golf Links at Ferry Point in the Bronx, New York. The project represents a total capital investment of $2.3 billion and is projected to open by mid- 2030.",
+            "label": "NEUTRAL",
+            "reason": "A projected opening date confirms the project is still prospective in the cited record, not that actual permanent employees met the Bronx-resident share."
+          }
+        ],
+        "reason": "The excerpts establish only prospective targets/commitments and projected operations, not that 70% of actual permanent employees were Bronx residents."
+      },
+      {
+        "condition_id": "K2",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-d2f85263-8aea-4767-a0f3-c520a6cc6c94",
+          "support-10beef46-753e-4c7d-bd20-6844e14cc08f",
+          "support-c5605437-c401-49c3-a070-014719c47f64"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-d2f85263-8aea-4767-a0f3-c520a6cc6c94",
+            "quote": "The Applicant states that 70 percent of employees will be Bronx residents, 47 percent will be women, and 75 percent will be minorities.",
+            "label": "NEUTRAL",
+            "reason": "This states an anticipated workforce composition, not that women actually comprised 47% of the permanent workforce."
+          },
+          {
+            "citation_id": "support-10beef46-753e-4c7d-bd20-6844e14cc08f",
+            "quote": "Bally’s will not be operational in the first three and one-half years of the projection period.",
+            "label": "NEUTRAL",
+            "reason": "This suggests the operation was not yet running for part of the period, but does not establish actual delivered gender composition."
+          },
+          {
+            "citation_id": "support-c5605437-c401-49c3-a070-014719c47f64",
+            "quote": "Bally’s project, Bally’s Bronx, is a proposed single-phase, integrated casino resort located at Bally’s Golf Links at Ferry Point in the Bronx, New York. The project represents a total capital investment of $2.3 billion and is projected to open by mid- 2030.",
+            "label": "NEUTRAL",
+            "reason": "The project is described as proposed and projected to open later, so the excerpt does not show actual permanent workforce results."
+          }
+        ],
+        "reason": "The record gives a 47% women target but no evidence of actual permanent workforce composition at that percentage."
+      },
+      {
+        "condition_id": "K3",
+        "label": "NEUTRAL",
+        "citation_ids": [
+          "support-d2f85263-8aea-4767-a0f3-c520a6cc6c94",
+          "support-10beef46-753e-4c7d-bd20-6844e14cc08f",
+          "support-c5605437-c401-49c3-a070-014719c47f64"
+        ],
+        "quote_checks": [
+          {
+            "citation_id": "support-d2f85263-8aea-4767-a0f3-c520a6cc6c94",
+            "quote": "The Applicant states that 70 percent of employees will be Bronx residents, 47 percent will be women, and 75 percent will be minorities.",
+            "label": "NEUTRAL",
+            "reason": "This is a pledge/statement about future workforce composition, not evidence that minorities actually comprised 75% of the permanent workforce."
+          },
+          {
+            "citation_id": "support-10beef46-753e-4c7d-bd20-6844e14cc08f",
+            "quote": "Bally’s will not be operational in the first three and one-half years of the projection period.",
+            "label": "NEUTRAL",
+            "reason": "This bears on why delivery evidence may be absent, but does not prove or negate the actual minority share in the permanent workforce."
+          },
+          {
+            "citation_id": "support-c5605437-c401-49c3-a070-014719c47f64",
+            "quote": "Bally’s project, Bally’s Bronx, is a proposed single-phase, integrated casino resort located at Bally’s Golf Links at Ferry Point in the Bronx, New York. The project represents a total capital investment of $2.3 billion and is projected to open by mid- 2030.",
+            "label": "NEUTRAL",
+            "reason": "The cited project remains proposed/projected in this record, so the excerpt does not establish actual permanent workforce outcomes."
+          }
+        ],
+        "reason": "The evidence shows only a 75% minorities target for permanent operations, with no proof of actual delivered workforce composition."
+      }
+    ]
+  },
+  "score": {
+    "case_id": "TG-GOLD-H007",
+    "identity": "MATCH",
+    "reference_coverage": {
+      "numerator": 3,
+      "denominator": 7,
+      "rate": 0.42857142857142855
+    },
+    "finding_support": {
+      "numerator": 13,
+      "denominator": 17,
+      "rate": 0.7647058823529411
+    },
+    "traceability": {
+      "numerator": 13,
+      "denominator": 17,
+      "rate": 0.7647058823529411
+    },
+    "claim_count": 17,
+    "evidence_eligible_claims": 17,
+    "unquoted_claims": 0,
+    "credited_reference_ids": [
+      "G1",
+      "G2",
+      "G3"
+    ],
+    "coverage_labels": {
+      "ENTAILMENT": 3,
+      "CONTRADICTION": 0,
+      "NEUTRAL": 1,
+      "MISSING": 3
+    },
+    "finding_labels": {
+      "ENTAILMENT": 13,
+      "CONTRADICTION": 0,
+      "NEUTRAL": 4
+    },
+    "citation_audit": "OWNED_QUOTES_V1",
+    "verdict": "JUSTIFIED",
+    "verdict_evaluation": {
+      "applicable": true,
+      "reason": null,
+      "label": "JUSTIFIED"
+    }
+  }
+}

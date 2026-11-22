@@ -1,0 +1,289 @@
+{
+  "case": "PUB-COBALT",
+  "model": "gpt-5.4",
+  "runtime": {
+    "agent.py": "a05ce765ed68bdd3bdef1b319c2349e39f60e2abf7d2c923502295582c8aff21",
+    "providers.py": "11b9845226eb50e72c6ceb95f08f539bc4602a3a0394ecbc48b2b78e3ad120cf",
+    "reconcile.py": "582754a7c24a38543485d4e7589cbdd738d571fb3dd949f0b118374bf12f532b",
+    "openai_provider.py": "cebdca8526ccb8ebec3b83da3c0e0cec2b6f2b39797dae0a4ce15e88cbe09f59"
+  },
+  "inputs_sha256": "4f00649c72399973e75e3eea81deb97affb22963d2502464d2d83fdf7de2523c",
+  "as_of": "2026-11-22",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 12.312000000034459,
+      "request_id": "req_2aa12c86b1b44fd1983065273a8211bf",
+      "usage": {
+        "input_tokens": 3731,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 1792
+        },
+        "output_tokens": 1012,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4743
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 2.405999999959022,
+      "request_id": "req_af2a5b00f23841a1b3ff6b34c5a77298",
+      "usage": {
+        "input_tokens": 710,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 280,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 990
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 2.6719999999040738,
+      "request_id": "req_6db06d49e7b94a809b20f321b4224009",
+      "usage": {
+        "input_tokens": 796,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 278,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 1074
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    },
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 8.625,
+      "request_id": "req_165311cd714f4bd58cc39f65c2214dcb",
+      "usage": {
+        "input_tokens": 3681,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 0
+        },
+        "output_tokens": 845,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4526
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "status": "COMPLETED",
+  "trace": {
+    "not_yet_due": [],
+    "criteria": [
+      {
+        "criterion": "Apple uses 100 percent recycled cobalt in all Apple-designed batteries",
+        "required_elements": [
+          "Apple uses 100 percent recycled cobalt",
+          "the cobalt is in all batteries designed by Apple"
+        ],
+        "scope_criteria": [
+          "s1",
+          "s2"
+        ],
+        "promise_scope": "Apple promised that by its 2025 goals, all Apple-designed batteries would use 100 percent recycled cobalt. Beneficiaries are users of Apple products generally; no narrower population or location is specified.",
+        "observed_scope": "Apple reports company-wide product/material performance: in all batteries designed by Apple, the cobalt is 100 percent recycled. Location is unspecified. The beneficiary population is not separately specified beyond Apple-designed batteries/products generally.",
+        "promise_citation_ids": [
+          "c1"
+        ],
+        "delivery_citation_ids": [
+          "c3",
+          "c4"
+        ],
+        "delivery_status": "PARTIAL",
+        "timing_requirement": "The original undertaking is framed as a 2025 goal (“its 2025 goals to use 100 percent recycled cobalt in all Apple-designed batteries”).",
+        "explanation": "The original undertaking is a company-wide 2025 goal to use 100 percent recycled cobalt in all Apple-designed batteries. Apple later reports the matching outcome: \"all batteries designed by Apple are made with 100 percent recycled cobalt\" and \"Apple now uses 100 percent recycled cobalt in all the batteries it designs.\" This establishes the substantive promised action for the same broad scope: Apple, all Apple-designed batteries, with no narrower location or population stated. Because the promise is tied to a 2025 goal, timing matters; however, the clearest outcome quote is dated only as \"Today,\" and the separate timing phrase \"last year\" refers to reaching several recycled-content targets in select components without naming the cobalt target specifically. So the action is established, but timely achievement within the 2025 goal year is not fully proven from the supplied timing evidence.",
+        "gap": "Unproven qualifier: that this cobalt outcome was achieved within the 2025 goal year.",
+        "delivery_support": [
+          {
+            "citation_id": "c3",
+            "quote": "As part of this work, Apple now uses 100 percent recycled cobalt in all the batteries it designs and 100 percent recycled rare earth elements in all magnets."
+          },
+          {
+            "citation_id": "c4",
+            "quote": "Today, all batteries designed by Apple are made with 100 percent recycled cobalt, and all magnets are made with 100 percent recycled rare earth elements."
+          }
+        ],
+        "fulfilled_part": "Apple reports that all batteries it designs are made with 100 percent recycled cobalt.",
+        "timing_support": [],
+        "element_support": {
+          "e1": [
+            "c3",
+            "c4"
+          ],
+          "e2": [
+            "c3",
+            "c4"
+          ]
+        }
+      },
+      {
+        "criterion": "Apple met the cobalt pledge as a 2025 target",
+        "required_elements": [
+          "Apple achieved the 100 percent recycled cobalt outcome",
+          "the achievement satisfied the 2025 goal timing"
+        ],
+        "scope_criteria": [
+          "s1",
+          "s2"
+        ],
+        "promise_scope": "Apple committed to reach 100 percent recycled cobalt in all Apple-designed batteries as part of its 2025 goals, with no project-specific or geographic limitation stated.",
+        "observed_scope": "Apple reports the outcome company-wide for all batteries it designs: 100 percent recycled cobalt. Location is unspecified. The observed timing attached directly to that outcome is only \"Today\"; a separate phrase says Apple reached several recycled-content targets \"last year,\" but does not specifically identify the cobalt target.",
+        "promise_citation_ids": [
+          "c1"
+        ],
+        "delivery_citation_ids": [
+          "c3",
+          "c4"
+        ],
+        "delivery_status": "PARTIAL",
+        "timing_requirement": "Achievement was required by the 2025 goal year.",
+        "explanation": "The promise was to reach 100 percent recycled cobalt in all Apple-designed batteries as a 2025 goal. Apple reports the substantive outcome in matching company-wide terms, which supports that the pledged material standard was achieved. But meeting the pledge \"as a 2025 target\" requires proof that this specific cobalt outcome was reached within the 2025 goal year. The supplied evidence does not directly date the cobalt achievement to 2025: \"Today\" is undated relative to the target year for timeliness purposes, and \"last year\" is attached to several recycled-content targets in select components without expressly stating that the cobalt target was among those targets reached last year. Therefore, the outcome is reported, but timely satisfaction of the 2025 target remains unverified from the provided passages.",
+        "gap": "Unproven part: that Apple achieved the cobalt outcome by the 2025 goal year.",
+        "delivery_support": [
+          {
+            "citation_id": "c3",
+            "quote": "As part of this work, Apple now uses 100 percent recycled cobalt in all the batteries it designs and 100 percent recycled rare earth elements in all magnets."
+          },
+          {
+            "citation_id": "c4",
+            "quote": "Today, all batteries designed by Apple are made with 100 percent recycled cobalt, and all magnets are made with 100 percent recycled rare earth elements."
+          }
+        ],
+        "fulfilled_part": "Apple reports that it achieved 100 percent recycled cobalt in all the batteries it designs.",
+        "timing_support": [],
+        "element_support": {
+          "e1": [
+            "c3",
+            "c4"
+          ],
+          "e2": []
+        }
+      }
+    ],
+    "label": "PARTIALLY_CORROBORATED",
+    "verdict": "Partial delivery supported: Apple reports that all batteries it designs are made with 100 percent recycled cobalt. (Apple reports company-wide product/material performance: in all batteries designed by Apple, the cobalt is 100 percent recycled. Location is unspecified. The beneficiary population is not separately specified beyond Apple-designed batteries/products generally.); Apple reports that it achieved 100 percent recycled cobalt in all the batteries it designs. (Apple reports the outcome company-wide for all batteries it designs: 100 percent recycled cobalt. Location is unspecified. The observed timing attached directly to that outcome is only \"Today\"; a separate phrase says Apple reached several recycled-content targets \"last year,\" but does not specifically identify the cobalt target.) Unresolved: Unproven qualifier: that this cobalt outcome was achieved within the 2025 goal year.; Unproven part: that Apple achieved the cobalt outcome by the 2025 goal year.",
+    "reasoning": "Requested scope: Did Apple meet its 2025 pledge about the cobalt in the batteries it designs?\n\nApple uses 100 percent recycled cobalt in all Apple-designed batteries\nStatus: PARTIAL\nThe original undertaking is a company-wide 2025 goal to use 100 percent recycled cobalt in all Apple-designed batteries. Apple later reports the matching outcome: \"all batteries designed by Apple are made with 100 percent recycled cobalt\" and \"Apple now uses 100 percent recycled cobalt in all the batteries it designs.\" This establishes the substantive promised action for the same broad scope: Apple, all Apple-designed batteries, with no narrower location or population stated. Because the promise is tied to a 2025 goal, timing matters; however, the clearest outcome quote is dated only as \"Today,\" and the separate timing phrase \"last year\" refers to reaching several recycled-content targets in select components without naming the cobalt target specifically. So the action is established, but timely achievement within the 2025 goal year is not fully proven from the supplied timing evidence.\nPromised scope: Apple promised that by its 2025 goals, all Apple-designed batteries would use 100 percent recycled cobalt. Beneficiaries are users of Apple products generally; no narrower population or location is specified.\nObserved scope: Apple reports company-wide product/material performance: in all batteries designed by Apple, the cobalt is 100 percent recycled. Location is unspecified. The beneficiary population is not separately specified beyond Apple-designed batteries/products generally.\nSupported delivery: Apple reports that all batteries it designs are made with 100 percent recycled cobalt.\nEvidence gap: Unproven qualifier: that this cobalt outcome was achieved within the 2025 goal year.\nPromise evidence: c1\nDelivery evidence: c3, c4\n\nApple met the cobalt pledge as a 2025 target\nStatus: PARTIAL\nThe promise was to reach 100 percent recycled cobalt in all Apple-designed batteries as a 2025 goal. Apple reports the substantive outcome in matching company-wide terms, which supports that the pledged material standard was achieved. But meeting the pledge \"as a 2025 target\" requires proof that this specific cobalt outcome was reached within the 2025 goal year. The supplied evidence does not directly date the cobalt achievement to 2025: \"Today\" is undated relative to the target year for timeliness purposes, and \"last year\" is attached to several recycled-content targets in select components without expressly stating that the cobalt target was among those targets reached last year. Therefore, the outcome is reported, but timely satisfaction of the 2025 target remains unverified from the provided passages.\nPromised scope: Apple committed to reach 100 percent recycled cobalt in all Apple-designed batteries as part of its 2025 goals, with no project-specific or geographic limitation stated.\nObserved scope: Apple reports the outcome company-wide for all batteries it designs: 100 percent recycled cobalt. Location is unspecified. The observed timing attached directly to that outcome is only \"Today\"; a separate phrase says Apple reached several recycled-content targets \"last year,\" but does not specifically identify the cobalt target.\nSupported delivery: Apple reports that it achieved 100 percent recycled cobalt in all the batteries it designs.\nEvidence gap: Unproven part: that Apple achieved the cobalt outcome by the 2025 goal year.\nPromise evidence: c1\nDelivery evidence: c3, c4\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “Earlier this year, Apple surpassed 99 percent on the way toward its 2025 goals to use 100 percent recycled rare earth elements in all magnets and 100 percent recycled cobalt in all Apple-designed batteries.”\nhttps://www.apple.com/newsroom/2025/04/apple-surpasses-60-percent-reduction-in-global-greenhouse-gas-emissions/\n\nc2: “On top of hitting 30 percent recycled content across all of its products shipped in 2025, Apple also reached several targets for recycled content in select components last year.”\nhttps://www.apple.com/newsroom/2026/04/apple-accelerates-progress-with-highest-ever-recycled-material-in-its-products/\n\nc3: “As part of this work, Apple now uses 100 percent recycled cobalt in all the batteries it designs and 100 percent recycled rare earth elements in all magnets.”\nhttps://www.apple.com/newsroom/2026/04/apple-accelerates-progress-with-highest-ever-recycled-material-in-its-products/\n\nc4: “Today, all batteries designed by Apple are made with 100 percent recycled cobalt, and all magnets are made with 100 percent recycled rare earth elements.”\nhttps://www.apple.com/newsroom/2026/04/apple-accelerates-progress-with-highest-ever-recycled-material-in-its-products/\n\nc5: “recycled cobalt used in all Apple-designed batteries”\nhttps://www.apple.com/supply-chain/",
+    "refutation": [],
+    "scope_anchors": {
+      "s1": "Apple to use 100 percent recycled cobalt in all Apple-designed batteries by 2025",
+      "s2": "Whether Apple met its 2025 pledge on recycled cobalt in all batteries it designs"
+    },
+    "citations": {
+      "c1": {
+        "source": {
+          "title": "https://www.apple.com/newsroom/2025/04/apple-surpasses-60-percent-reduction-in-global-greenhouse-gas-emissions/",
+          "url": "https://www.apple.com/newsroom/2025/04/apple-surpasses-60-percent-reduction-in-global-greenhouse-gas-emissions/",
+          "citation": "https://www.apple.com/newsroom/2025/04/apple-surpasses-60-percent-reduction-in-global-greenhouse-gas-emissions/"
+        },
+        "excerpt": "Earlier this year, Apple surpassed 99 percent on the way toward its 2025 goals to use 100 percent recycled rare earth elements in all magnets and 100 percent recycled cobalt in all Apple-designed batteries.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:31:43.893690+00:00",
+        "finding_id": "finding-b431ca18-1231-4445-9fc0-07c9b49c9f5c"
+      },
+      "c2": {
+        "source": {
+          "title": "https://www.apple.com/newsroom/2026/04/apple-accelerates-progress-with-highest-ever-recycled-material-in-its-products/",
+          "url": "https://www.apple.com/newsroom/2026/04/apple-accelerates-progress-with-highest-ever-recycled-material-in-its-products/",
+          "citation": "https://www.apple.com/newsroom/2026/04/apple-accelerates-progress-with-highest-ever-recycled-material-in-its-products/"
+        },
+        "excerpt": "On top of hitting 30 percent recycled content across all of its products shipped in 2025, Apple also reached several targets for recycled content in select components last year.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:31:43.893690+00:00",
+        "finding_id": "finding-95e99665-55cb-4c95-bc7d-1ed0c4ea9bc0"
+      },
+      "c3": {
+        "source": {
+          "title": "https://www.apple.com/newsroom/2026/04/apple-accelerates-progress-with-highest-ever-recycled-material-in-its-products/",
+          "url": "https://www.apple.com/newsroom/2026/04/apple-accelerates-progress-with-highest-ever-recycled-material-in-its-products/",
+          "citation": "https://www.apple.com/newsroom/2026/04/apple-accelerates-progress-with-highest-ever-recycled-material-in-its-products/"
+        },
+        "excerpt": "As part of this work, Apple now uses 100 percent recycled cobalt in all the batteries it designs and 100 percent recycled rare earth elements in all magnets.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:31:43.893690+00:00",
+        "finding_id": "finding-e729ee23-cc1d-4c81-9f78-2d71e4a9efe5"
+      },
+      "c4": {
+        "source": {
+          "title": "https://www.apple.com/newsroom/2026/04/apple-accelerates-progress-with-highest-ever-recycled-material-in-its-products/",
+          "url": "https://www.apple.com/newsroom/2026/04/apple-accelerates-progress-with-highest-ever-recycled-material-in-its-products/",
+          "citation": "https://www.apple.com/newsroom/2026/04/apple-accelerates-progress-with-highest-ever-recycled-material-in-its-products/"
+        },
+        "excerpt": "Today, all batteries designed by Apple are made with 100 percent recycled cobalt, and all magnets are made with 100 percent recycled rare earth elements.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:31:43.893690+00:00",
+        "finding_id": "finding-e729ee23-cc1d-4c81-9f78-2d71e4a9efe5"
+      },
+      "c5": {
+        "source": {
+          "title": "https://www.apple.com/supply-chain/",
+          "url": "https://www.apple.com/supply-chain/",
+          "citation": "https://www.apple.com/supply-chain/"
+        },
+        "excerpt": "recycled cobalt used in all Apple-designed batteries",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:31:43.893690+00:00",
+        "finding_id": "finding-e729ee23-cc1d-4c81-9f78-2d71e4a9efe5"
+      }
+    },
+    "scope_gap": ""
+  },
+  "displayed": {
+    "label": "PARTIALLY_CORROBORATED",
+    "verdict": "Partial delivery supported: Apple reports that all batteries it designs are made with 100 percent recycled cobalt. (Apple reports company-wide product/material performance: in all batteries designed by Apple, the cobalt is 100 percent recycled. Location is unspecified. The beneficiary population is not separately specified beyond Apple-designed batteries/products generally.); Apple reports that it achieved 100 percent recycled cobalt in all the batteries it designs. (Apple reports the outcome company-wide for all batteries it designs: 100 percent recycled cobalt. Location is unspecified. The observed timing attached directly to that outcome is only \"Today\"; a separate phrase says Apple reached several recycled-content targets \"last year,\" but does not specifically identify the cobalt target.) Unresolved: Unproven qualifier: that this cobalt outcome was achieved within the 2025 goal year.; Unproven part: that Apple achieved the cobalt outcome by the 2025 goal year.",
+    "reasoning": "Requested scope: Did Apple meet its 2025 pledge about the cobalt in the batteries it designs?\n\nApple uses 100 percent recycled cobalt in all Apple-designed batteries\nStatus: PARTIAL\nThe original undertaking is a company-wide 2025 goal to use 100 percent recycled cobalt in all Apple-designed batteries. Apple later reports the matching outcome: \"all batteries designed by Apple are made with 100 percent recycled cobalt\" and \"Apple now uses 100 percent recycled cobalt in all the batteries it designs.\" This establishes the substantive promised action for the same broad scope: Apple, all Apple-designed batteries, with no narrower location or population stated. Because the promise is tied to a 2025 goal, timing matters; however, the clearest outcome quote is dated only as \"Today,\" and the separate timing phrase \"last year\" refers to reaching several recycled-content targets in select components without naming the cobalt target specifically. So the action is established, but timely achievement within the 2025 goal year is not fully proven from the supplied timing evidence.\nPromised scope: Apple promised that by its 2025 goals, all Apple-designed batteries would use 100 percent recycled cobalt. Beneficiaries are users of Apple products generally; no narrower population or location is specified.\nObserved scope: Apple reports company-wide product/material performance: in all batteries designed by Apple, the cobalt is 100 percent recycled. Location is unspecified. The beneficiary population is not separately specified beyond Apple-designed batteries/products generally.\nSupported delivery: Apple reports that all batteries it designs are made with 100 percent recycled cobalt.\nEvidence gap: Unproven qualifier: that this cobalt outcome was achieved within the 2025 goal year.\nPromise evidence: c1\nDelivery evidence: c3, c4\n\nApple met the cobalt pledge as a 2025 target\nStatus: PARTIAL\nThe promise was to reach 100 percent recycled cobalt in all Apple-designed batteries as a 2025 goal. Apple reports the substantive outcome in matching company-wide terms, which supports that the pledged material standard was achieved. But meeting the pledge \"as a 2025 target\" requires proof that this specific cobalt outcome was reached within the 2025 goal year. The supplied evidence does not directly date the cobalt achievement to 2025: \"Today\" is undated relative to the target year for timeliness purposes, and \"last year\" is attached to several recycled-content targets in select components without expressly stating that the cobalt target was among those targets reached last year. Therefore, the outcome is reported, but timely satisfaction of the 2025 target remains unverified from the provided passages.\nPromised scope: Apple committed to reach 100 percent recycled cobalt in all Apple-designed batteries as part of its 2025 goals, with no project-specific or geographic limitation stated.\nObserved scope: Apple reports the outcome company-wide for all batteries it designs: 100 percent recycled cobalt. Location is unspecified. The observed timing attached directly to that outcome is only \"Today\"; a separate phrase says Apple reached several recycled-content targets \"last year,\" but does not specifically identify the cobalt target.\nSupported delivery: Apple reports that it achieved 100 percent recycled cobalt in all the batteries it designs.\nEvidence gap: Unproven part: that Apple achieved the cobalt outcome by the 2025 goal year.\nPromise evidence: c1\nDelivery evidence: c3, c4\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “Earlier this year, Apple surpassed 99 percent on the way toward its 2025 goals to use 100 percent recycled rare earth elements in all magnets and 100 percent recycled cobalt in all Apple-designed batteries.”\nhttps://www.apple.com/newsroom/2025/04/apple-surpasses-60-percent-reduction-in-global-greenhouse-gas-emissions/\n\nc2: “On top of hitting 30 percent recycled content across all of its products shipped in 2025, Apple also reached several targets for recycled content in select components last year.”\nhttps://www.apple.com/newsroom/2026/04/apple-accelerates-progress-with-highest-ever-recycled-material-in-its-products/\n\nc3: “As part of this work, Apple now uses 100 percent recycled cobalt in all the batteries it designs and 100 percent recycled rare earth elements in all magnets.”\nhttps://www.apple.com/newsroom/2026/04/apple-accelerates-progress-with-highest-ever-recycled-material-in-its-products/\n\nc4: “Today, all batteries designed by Apple are made with 100 percent recycled cobalt, and all magnets are made with 100 percent recycled rare earth elements.”\nhttps://www.apple.com/newsroom/2026/04/apple-accelerates-progress-with-highest-ever-recycled-material-in-its-products/\n\nc5: “recycled cobalt used in all Apple-designed batteries”\nhttps://www.apple.com/supply-chain/",
+    "verification_date": "2026-11-22"
+  }
+}

@@ -1,0 +1,617 @@
+{
+  "model": "gpt-5.4",
+  "judge": "tracegraph-nli-v4-owned-quotes",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "cases": {
+    "TG-GOLD-H012": {
+      "archived": {
+        "label": "CORROBORATED",
+        "grade": "OVERCLAIM"
+      },
+      "control": {
+        "label": "CORROBORATED",
+        "grade": "OVERCLAIM",
+        "reason": "The displayed assessment overstates delivery by calling both conditions DELIVERED/CORROBORATED even though the excerpts show at most self-reported funding of memberships and a stated membership feature; they do not establish actual funding at Bally’s Bronx operation or that priority placement was available in practice to Bronx employees, and one cited report expressly notes uncertainty about capacity.",
+        "criteria": [
+          "DELIVERED",
+          "DELIVERED"
+        ]
+      },
+      "repaired": {
+        "label": "PARTIALLY_CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment correctly treats actual delivery as only partially supported: it finds support for Bally’s self-reported funding of employee Upwards memberships, but explicitly marks the priority-placement component as unverified because the excerpts describe the benefit as a commitment/representation rather than actual in-practice delivery to Bronx employees.",
+        "criteria": [
+          "DELIVERED",
+          "UNVERIFIED"
+        ]
+      },
+      "repaired-v2": {
+        "label": "CORROBORATED",
+        "grade": "OVERCLAIM",
+        "reason": "The displayed assessment treats both delivery conditions as DELIVERED/CORROBORATED based on Bally’s and the Board’s descriptions of the membership benefit, but the supplied excerpts do not establish actual funding at the Bronx operation or that priority placement was available in practice to Bronx employees; they show a pledge/claimed benefit and residual uncertainty about capacity and participation.",
+        "criteria": [
+          "DELIVERED",
+          "DELIVERED"
+        ]
+      },
+      "repaired-v3": {
+        "label": "PARTIALLY_CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The displayed assessment appropriately treats the record as supporting Bally’s pledge/policy statements about funded Upwards memberships and priority placement, while declining to claim actual delivery in practice to Bronx employees because no excerpt proves memberships were actually funded at the Bronx operation or that priority placement was available in practice under those memberships.",
+        "criteria": [
+          "PARTIAL",
+          "PARTIAL"
+        ]
+      },
+      "v4": {
+        "label": "PARTIALLY_CORROBORATED",
+        "grade": "OVERCLAIM",
+        "reason": "The displayed assessment overstates delivery by calling one condition DELIVERED and overall PARTIALLY_CORROBORATED even though the supplied excerpts show commitments/claimed benefits, not actual performance in practice for either condition.",
+        "criteria": [
+          "DELIVERED",
+          "PARTIAL"
+        ]
+      },
+      "v5": {
+        "label": "PARTIALLY_CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The displayed assessment correctly treats the record as showing the pledge/represented benefit but not actual delivery in practice: no cited excerpt proves Bally’s actually funded memberships at its Bronx operation or that priority placement was actually available to Bronx employees under those memberships.",
+        "criteria": [
+          "PARTIAL",
+          "PARTIAL"
+        ]
+      },
+      "v6": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The displayed assessment appropriately treats the record as proving only the pledge/terms and not actual delivery; both delivery conditions require performance in practice, but the cited excerpts speak in promise or descriptive terms and do not establish that Bronx employees actually received funded memberships or actual in-practice availability of priority placement.",
+        "criteria": [
+          "UNVERIFIED",
+          "UNVERIFIED"
+        ]
+      },
+      "v7": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The displayed assessment correctly treats both delivery conditions as unverified because the excerpts show Bally’s promised or described funded Upwards memberships and priority-placement benefits, but do not establish actual funding at the Bronx operation or actual in-practice availability of priority placement to Bronx employees.",
+        "criteria": [
+          "UNVERIFIED",
+          "UNVERIFIED"
+        ]
+      }
+    },
+    "PUB-COBALT": {
+      "archived": {
+        "label": "CORROBORATED",
+        "grade": "OVERCLAIM"
+      },
+      "control": {
+        "label": "UNVERIFIED",
+        "grade": "OVERCLAIM",
+        "reason": "The final assessment overstates the uncertainty by saying delivery is unverified and that no excerpt directly reports delivery, even though April 2026 excerpts directly state Apple uses 100 percent recycled cobalt in all batteries it designs; however, those excerpts do not establish the by-end-of-2025 timing, so the correct condition-level judgment remains neutral rather than delivered or refuted.",
+        "criteria": [
+          "UNVERIFIED"
+        ]
+      },
+      "repaired": {
+        "label": "UNVERIFIED",
+        "grade": "OVERCLAIM",
+        "reason": "The final assessment says delivery is unverified and that only pledge terms are documented, but the supplied 2026 excerpts directly state Apple uses 100 percent recycled cobalt in all batteries it designs; the remaining uncertainty is only whether this was achieved by the end of 2025, so a blanket non-delivery assessment overstates the evidentiary gap.",
+        "criteria": [
+          "UNVERIFIED"
+        ]
+      },
+      "repaired-v2": {
+        "label": "CORROBORATED",
+        "grade": "OVERCLAIM",
+        "reason": "The final assessment overstates delivery by concluding the 2025 pledge was delivered, because the excerpts show Apple reported complete achievement by April 2026 but do not expressly establish that the all-batteries 100% recycled-cobalt state was reached by the end of 2025 under the stated accounting method.",
+        "criteria": [
+          "DELIVERED"
+        ]
+      },
+      "repaired-v3": {
+        "label": "PARTIALLY_CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment appropriately treats current full achievement as supported but timely achievement by the end of 2025 as unproven; the supplied excerpts show 99% progress in 2025 and present-tense full use in April 2026, without directly establishing that the 100% cobalt target was reached within 2025.",
+        "criteria": [
+          "PARTIAL",
+          "PARTIAL"
+        ]
+      },
+      "v4": {
+        "label": "PARTIALLY_CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment correctly treats delivery by the end of 2025 as unproven: April 2026 excerpts establish current 100% recycled cobalt in all Apple-designed batteries, while the separate statement about having reached several targets in 2025 does not specifically tie that timing to cobalt, so a partial/unresolved verdict is warranted rather than full delivery or failure.",
+        "criteria": [
+          "PARTIAL"
+        ]
+      },
+      "v5": {
+        "label": "PARTIALLY_CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment appropriately treats delivery by the end of 2025 as unproven: the cited 2026 passages establish present-tense achievement and unspecified 2025 target-reaching, but none specifically dates the all-Apple-designed-batteries cobalt achievement to by end-2025.",
+        "criteria": [
+          "PARTIAL"
+        ]
+      },
+      "v6": {
+        "label": "UNVERIFIED",
+        "grade": "UNDERCLAIM",
+        "reason": "The final assessment says the evidence does not establish delivery, but April 2026 excerpts stating Apple 'now uses' and 'Today, all batteries designed by Apple are made with 100 percent recycled cobalt,' combined with the same article’s reference to products shipped and targets reached 'last year' (2025), support that Apple had achieved the pledged all-Apple-designed-batteries cobalt target by the end of 2025; its stated evidence gap is therefore too skeptical.",
+        "criteria": [
+          "UNVERIFIED"
+        ]
+      },
+      "v7": {
+        "label": "PARTIALLY_CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment appropriately treats delivery by end-2025 as unproven: the excerpts show a 2025 goal, >99% progress earlier in 2025, and present-tense full achievement in April 2026, but no citation expressly dates this specific cobalt achievement to by the end of 2025.",
+        "criteria": [
+          "PARTIAL"
+        ]
+      }
+    },
+    "TG-GOLD-H007": {
+      "archived": {
+        "label": "UNVERIFIED",
+        "grade": "OVERCLAIM"
+      },
+      "control": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment appropriately treats the cited passages as evidence of Bally’s stated future workforce targets, not of actual delivery, and it correctly concludes delivery is unverified because the record shows a proposed project not yet operational and contains no evidence of an actual Bronx permanent workforce meeting the three percentages.",
+        "criteria": [
+          "UNVERIFIED",
+          "UNVERIFIED",
+          "UNVERIFIED",
+          "UNVERIFIED"
+        ]
+      },
+      "repaired": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment appropriately treats the cited passages as evidence of Bally’s stated workforce targets, not proof that the project’s actual permanent workforce achieved them; every requested delivery condition lacks evidence of actual Bronx operations/workforce composition, and the assessment expressly marks that performance as unverified.",
+        "criteria": [
+          "UNVERIFIED",
+          "UNVERIFIED",
+          "UNVERIFIED",
+          "UNVERIFIED"
+        ]
+      },
+      "repaired-v2": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment correctly treats the question as asking about delivery of actual permanent-workforce demographics, and the supplied excerpts only show Bally’s stated targets and that the project is not yet operational / projected to open later, leaving actual performance unverified for all three conditions.",
+        "criteria": [
+          "UNVERIFIED",
+          "UNVERIFIED"
+        ]
+      },
+      "repaired-v3": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment correctly treats the cited materials as evidence of Bally’s stated workforce targets, not of actual delivery, and it explicitly marks delivery as unverified because the excerpts show projected permanent operations and no realized workforce composition.",
+        "criteria": [
+          "UNVERIFIED"
+        ]
+      },
+      "v4": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment appropriately treats the cited passages as evidence of Bally’s stated workforce targets only and not of actual delivery; no supplied excerpt shows the project's actual permanent workforce composition, and the assessment’s UNVERIFIED verdict expressly identifies that delivery gap while noting the project was not yet operational/projected to open later.",
+        "criteria": [
+          "UNVERIFIED"
+        ]
+      },
+      "v5": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The displayed assessment appropriately treats the cited passages as evidence of Bally’s stated workforce targets only, not evidence that the project's actual permanent workforce achieved them; each requested delivery condition lacks proof of actual permanent employee composition, and the assessment expressly says delivery remains unverified.",
+        "criteria": [
+          "UNVERIFIED"
+        ]
+      },
+      "v6": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment correctly treats each condition as unverified delivery because the cited excerpts establish only projected or promised permanent-workforce composition, while none shows actual permanent operations or actual workforce shares for Bronx residents, women, or minorities; its references to future opening and non-operational status support why delivery cannot yet be confirmed.",
+        "criteria": [
+          "UNVERIFIED",
+          "UNVERIFIED",
+          "UNVERIFIED"
+        ]
+      },
+      "v7": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment appropriately treats each condition as an unverified delivery claim because the excerpts only document Bally’s stated workforce targets and project timing, not actual permanent-workforce outcomes for Bronx residency, women, or minority shares.",
+        "criteria": [
+          "UNVERIFIED",
+          "UNVERIFIED",
+          "UNVERIFIED"
+        ]
+      }
+    },
+    "PUB-DART": {
+      "archived": {
+        "label": "CORROBORATED",
+        "grade": "JUSTIFIED"
+      },
+      "control": {
+        "label": "CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment appropriately concludes delivery was corroborated because the cited excerpts establish both required conditions: DART actually impacted Dimorphos and the measured orbital-period change greatly exceeded NASA’s pre-impact 73-second threshold.",
+        "criteria": [
+          "DELIVERED"
+        ]
+      },
+      "repaired": {
+        "label": "CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment correctly concludes delivery was corroborated because the excerpts establish both required conditions: DART actually collided with Dimorphos and the measured orbital-period change was far greater than the pre-impact 73-second minimum success threshold.",
+        "criteria": [
+          "DELIVERED"
+        ]
+      },
+      "repaired-v2": {
+        "label": "CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment correctly concludes delivery/corroboration because the excerpts establish both required conditions: DART actually hit Dimorphos and the measured orbital-period change greatly exceeded NASA’s pre-impact 73-second minimum threshold.",
+        "criteria": [
+          "DELIVERED"
+        ]
+      },
+      "repaired-v3": {
+        "label": "CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment correctly concludes delivery was corroborated because the cited excerpts establish both required conditions: DART actually hit Dimorphos and the measured orbital-period change was far greater than the pre-impact 73-second success threshold.",
+        "criteria": [
+          "DELIVERED"
+        ]
+      },
+      "v4": {
+        "label": "CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment correctly concludes delivery was corroborated because the excerpts establish both required conditions: DART actually hit Dimorphos and the measured orbital-period change far exceeded the pre-impact 73-second threshold.",
+        "criteria": [
+          "DELIVERED"
+        ]
+      },
+      "v5": {
+        "label": "CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment appropriately concludes delivery was corroborated because the excerpts establish both required conditions: DART actually hit Dimorphos and the measured orbital-period change far exceeded NASA’s pre-impact 73-second success threshold.",
+        "criteria": [
+          "DELIVERED"
+        ]
+      },
+      "v6": {
+        "label": "CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment’s conclusion that the target was met is supported because the cited excerpts establish both required delivery conditions: DART actually struck Dimorphos and the measured orbital-period change greatly exceeded the pre-impact 73-second threshold.",
+        "criteria": [
+          "DELIVERED"
+        ]
+      },
+      "v7": {
+        "label": "CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment appropriately concludes delivery was corroborated because the excerpts establish both required conditions: DART actually hit Dimorphos and the measured orbital-period change far exceeded NASA’s pre-impact 73-second success threshold.",
+        "criteria": [
+          "DELIVERED"
+        ]
+      }
+    },
+    "TG-GOLD-H008": {
+      "archived": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED"
+      },
+      "control": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment correctly limits the record to pledge evidence and explicitly finds delivery unverified because no cited passage shows actual payment, construction, receipt, or funded annual support for either condition; that matches the supplied excerpts and preserves the distinction between commitment and performance.",
+        "criteria": [
+          "UNVERIFIED",
+          "UNVERIFIED"
+        ]
+      },
+      "repaired": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The displayed assessment appropriately treats the record as showing pledge terms only, not actual delivery: all cited excerpts describe commitments or future methodology, and none show Bally’s actually paid the capital contribution or annual public-safety support due under the conditions.",
+        "criteria": [
+          "UNVERIFIED",
+          "UNVERIFIED"
+        ]
+      },
+      "repaired-v2": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The displayed assessment accurately treats the record as showing pledges but not actual delivery: none of the cited excerpts says Bally’s paid the capital contribution or made any annual $5 million public-safety payment, and one excerpt adds that funding methodology would only be explored upon license award, reinforcing the lack of performance proof.",
+        "criteria": [
+          "UNVERIFIED",
+          "UNVERIFIED"
+        ]
+      },
+      "repaired-v3": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment appropriately treats the record as evidence of pledges only and not of actual delivery; none of the supplied excerpts show Bally’s paid the capital contribution or made any annual $5 million public-safety payment, and one excerpt adds unresolved timing contingency by saying funding methodology would be defined only upon license award.",
+        "criteria": [
+          "UNVERIFIED",
+          "UNVERIFIED"
+        ]
+      },
+      "v4": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The displayed assessment appropriately treats the record as evidence of pledges only and not actual delivery: no excerpt shows Bally’s paid the capital contribution or made any $5 million annual public-safety payments, and one excerpt adds residual uncertainty by saying that only upon license award would Bally’s later define the funding methodology.",
+        "criteria": [
+          "UNVERIFIED",
+          "UNVERIFIED"
+        ]
+      },
+      "v5": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The displayed assessment appropriately treats the record as proving pledges but not actual delivery: none of the cited excerpts shows Bally’s paid the capital contribution or made any annual $5 million public-safety payments, and one excerpt adds that funding methodology would only be explored upon license award, leaving timing/performance unestablished.",
+        "criteria": [
+          "UNVERIFIED",
+          "UNVERIFIED"
+        ]
+      },
+      "v6": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment appropriately limits itself to an UNVERIFIED delivery verdict because the supplied excerpts show promises and a future license-contingent funding methodology, but do not show actual payment or construction contribution delivery for either condition.",
+        "criteria": [
+          "UNVERIFIED",
+          "UNVERIFIED"
+        ]
+      },
+      "v7": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The displayed assessment correctly limits the record to pledge terms and explicitly says delivery is unverified; none of the supplied excerpts shows actual payment or construction funding delivered, and one excerpt adds implementation uncertainty by stating support methodology would be defined only upon license award.",
+        "criteria": [
+          "UNVERIFIED",
+          "UNVERIFIED"
+        ]
+      }
+    },
+    "PUB-ELIZABETH": {
+      "archived": {
+        "label": "REFUTED",
+        "grade": "JUSTIFIED"
+      },
+      "control": {
+        "label": "PARTIALLY_CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment ultimately treats timely opening by December 2018 as unproven while acknowledging evidence that the section eventually opened; that matches the excerpts, which show a December 2018 plan, an August 2018 decision for Autumn 2019, and later opening-day operation without a dated opening in the quoted text.",
+        "criteria": [
+          "PARTIAL"
+        ]
+      },
+      "repaired": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The displayed assessment's bottom-line unverified verdict is supported because the excerpts do not establish C1 and do establish eventual opening for C2, so delivery of the original by-December-2018 condition is not verified; however, its reasoning is imprecise because the record does contain evidence bearing on non-delivery timing and eventual opening.",
+        "criteria": [
+          "PARTIAL",
+          "REFUTED"
+        ]
+      },
+      "repaired-v2": {
+        "label": "REFUTED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment correctly treats the by-December-2018 opening as refuted because one excerpt states a December 2018 plan while another states that on 29 August 2018 the board decided the section would open in Autumn 2019, which is incompatible with opening by end-December 2018; it also cautiously treats eventual opening as later-supported rather than dating it more precisely than the excerpts allow.",
+        "criteria": [
+          "REFUTED"
+        ]
+      },
+      "repaired-v3": {
+        "label": "REFUTED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment correctly treats the December 2018 plan as documented, identifies decisive contrary evidence that by 29 August 2018 the board decided the section would open in Autumn 2019 instead, and notes only eventual later opening rather than unsupported December 2018 delivery.",
+        "criteria": [
+          "REFUTED"
+        ]
+      },
+      "v4": {
+        "label": "REFUTED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment correctly treats the question as actual delivery by end-December 2018, and the cited August 2018 decision to open the same section in Autumn 2019 is incompatible with opening by December 2018; separate opening-day evidence also supports that services eventually opened, though later.",
+        "criteria": [
+          "REFUTED"
+        ]
+      },
+      "v5": {
+        "label": "REFUTED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment correctly treats the December 2018 plan as documented, uses the August 2018 decision for an Autumn 2019 opening as contradictory to opening by December 2018, and treats later opening-day operation evidence as showing eventual opening without overstating the exact 2022 date from the quoted excerpts.",
+        "criteria": [
+          "REFUTED"
+        ]
+      },
+      "v6": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The displayed assessment says delivery was not verified, and the supplied excerpts do not establish that central passenger services began by end-December 2018, while they do establish the section eventually opened; given this mixed record, an unverified verdict is warranted and does not overstate either fulfillment or failure.",
+        "criteria": [
+          "UNVERIFIED",
+          "REFUTED"
+        ]
+      },
+      "v7": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment's unverified verdict is supported because the supplied excerpts do not establish condition C1 and do establish C2, so the overall question of opening by December 2018 is not verified as delivered.",
+        "criteria": [
+          "REFUTED"
+        ]
+      }
+    }
+  },
+  "arms": {
+    "control": {
+      "assess": {
+        "input": 34281,
+        "output": 8516,
+        "cached": 5376,
+        "calls": 14,
+        "estimated_usd": 0.2013465
+      },
+      "judge": {
+        "input": 43150,
+        "output": 4910,
+        "cached": 30208,
+        "calls": 6,
+        "estimated_usd": 0.113557
+      },
+      "grades": {
+        "OVERCLAIM": 2,
+        "JUSTIFIED": 4
+      }
+    },
+    "repaired": {
+      "assess": {
+        "input": 43895,
+        "output": 10228,
+        "cached": 3584,
+        "calls": 19,
+        "estimated_usd": 0.2550935
+      },
+      "judge": {
+        "input": 41500,
+        "output": 5080,
+        "cached": 0,
+        "calls": 6,
+        "estimated_usd": 0.17995
+      },
+      "grades": {
+        "JUSTIFIED": 5,
+        "OVERCLAIM": 1
+      }
+    },
+    "repaired-v2": {
+      "assess": {
+        "input": 43852,
+        "output": 8932,
+        "cached": 3584,
+        "calls": 17,
+        "estimated_usd": 0.235546
+      },
+      "judge": {
+        "input": 51108,
+        "output": 6264,
+        "cached": 38144,
+        "calls": 7,
+        "estimated_usd": 0.135906
+      },
+      "grades": {
+        "OVERCLAIM": 2,
+        "JUSTIFIED": 4
+      }
+    },
+    "repaired-v3": {
+      "assess": {
+        "input": 43525,
+        "output": 9130,
+        "cached": 15104,
+        "calls": 17,
+        "estimated_usd": 0.2117785
+      },
+      "judge": {
+        "input": 41948,
+        "output": 5224,
+        "cached": 21504,
+        "calls": 6,
+        "estimated_usd": 0.134846
+      },
+      "grades": {
+        "JUSTIFIED": 6
+      }
+    },
+    "v4": {
+      "assess": {
+        "input": 45506,
+        "output": 8141,
+        "cached": 11008,
+        "calls": 18,
+        "estimated_usd": 0.211112
+      },
+      "judge": {
+        "input": 41494,
+        "output": 5492,
+        "cached": 0,
+        "calls": 6,
+        "estimated_usd": 0.186115
+      },
+      "grades": {
+        "OVERCLAIM": 1,
+        "JUSTIFIED": 5
+      }
+    },
+    "v5": {
+      "assess": {
+        "input": 46823,
+        "output": 8075,
+        "cached": 7168,
+        "calls": 18,
+        "estimated_usd": 0.2220545
+      },
+      "judge": {
+        "input": 41374,
+        "output": 5288,
+        "cached": 11776,
+        "calls": 6,
+        "estimated_usd": 0.156259
+      },
+      "grades": {
+        "JUSTIFIED": 6
+      }
+    },
+    "v6": {
+      "assess": {
+        "input": 55504,
+        "output": 9616,
+        "cached": 1792,
+        "calls": 23,
+        "estimated_usd": 0.278968
+      },
+      "judge": {
+        "input": 40555,
+        "output": 5241,
+        "cached": 9728,
+        "calls": 6,
+        "estimated_usd": 0.1581145
+      },
+      "grades": {
+        "JUSTIFIED": 5,
+        "UNDERCLAIM": 1
+      }
+    },
+    "v7": {
+      "assess": {
+        "input": 44306,
+        "output": 7787,
+        "cached": 15104,
+        "calls": 15,
+        "estimated_usd": 0.193586
+      },
+      "judge": {
+        "input": 40654,
+        "output": 4276,
+        "cached": 30208,
+        "calls": 6,
+        "estimated_usd": 0.097807
+      },
+      "grades": {
+        "JUSTIFIED": 6
+      }
+    }
+  },
+  "total_estimated_usd": 2.9720395
+}

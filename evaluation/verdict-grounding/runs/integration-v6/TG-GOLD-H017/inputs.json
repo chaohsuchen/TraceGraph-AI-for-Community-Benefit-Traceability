@@ -1,0 +1,43 @@
+{
+  "case": "TG-GOLD-H017",
+  "previous_research": "ecb505733771c6509ed9fa70c646136f9c164709728aa1596d288ba7fab283d3",
+  "augmented_research": "c3dd35413df524d1a56611147a3a0beb02f97ef8eee8081902e02f097578e57b",
+  "previous_citations": 5,
+  "augmented_citations": 9,
+  "new_findings": 4,
+  "new_source_passages": [
+    {
+      "source": {
+        "title": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+        "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf"
+      },
+      "excerpt": "$163 million for a Community Impact Fund that will provide grants to non -profit organizations serving Queens communities and residents.",
+      "finding_id": "source-reread-1"
+    },
+    {
+      "source": {
+        "title": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+        "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf"
+      },
+      "excerpt": "A $163 million Community Benefits Fund (with the understanding this Fund should be increased) to be accessible for 30 years (or until the funds are depleted) and allocated across local Queens Community Districts 3, 4, 6, 7, 8, and 9;",
+      "finding_id": "source-reread-2"
+    },
+    {
+      "source": {
+        "title": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+        "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf"
+      },
+      "excerpt": "A Community Advisory Board that will meet regularly and act as a watchdog for all promised community benefits;",
+      "finding_id": "source-reread-3"
+    },
+    {
+      "source": {
+        "title": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf",
+        "url": "https://www1.nyc.gov/assets/planning/download/pdf/about/cpc/250046.pdf"
+      },
+      "excerpt": "$25 million for community identified health care and youth and senior needs, including a health clinic in East Elmhurst , a youth and senior center in Corona, and addiction and mental health services infrastructure in Flushing.",
+      "finding_id": "source-reread-4"
+    }
+  ],
+  "producer_inputs_sha256": "0f75fd9b9fe233058445030ea42c458ada26474c93410470d99b5ec17b0e1811"
+}

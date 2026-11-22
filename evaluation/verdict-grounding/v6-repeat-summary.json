@@ -1,0 +1,163 @@
+{
+  "model": "gpt-5.4",
+  "judge": "tracegraph-nli-v4-owned-quotes",
+  "rubric_sha256": "80a9659737b5ee27f15075e9912c391fc2caa0812791ccb625efea5e1e7cb04c",
+  "cases": {
+    "TG-GOLD-H012": {
+      "archived": {
+        "label": "CORROBORATED",
+        "grade": "OVERCLAIM"
+      },
+      "v6": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The displayed assessment appropriately treats the record as proving only the pledge/terms and not actual delivery; both delivery conditions require performance in practice, but the cited excerpts speak in promise or descriptive terms and do not establish that Bronx employees actually received funded memberships or actual in-practice availability of priority placement.",
+        "criteria": [
+          "UNVERIFIED",
+          "UNVERIFIED"
+        ]
+      },
+      "v6-r2": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The displayed assessment appropriately limits itself to non-delivery: the cited excerpts show Bally’s described or committed to fund Upwards memberships and said memberships would provide priority placement, but they do not establish actual funding at the Bronx operation or that priority placement was available in practice to Bronx employees.",
+        "criteria": [
+          "UNVERIFIED",
+          "UNVERIFIED"
+        ]
+      },
+      "v6-r3": {
+        "label": "UNVERIFIED",
+        "grade": "JUSTIFIED",
+        "reason": "The displayed assessment appropriately limits itself to UNVERIFIED delivery because the excerpts show Bally’s promised/funded memberships and described priority-placement benefits, but do not establish actual performance for Bronx employees or actual availability in practice; its caution matches the evidentiary gaps for both delivery conditions.",
+        "criteria": [
+          "UNVERIFIED",
+          "UNVERIFIED"
+        ]
+      }
+    },
+    "PUB-COBALT": {
+      "archived": {
+        "label": "CORROBORATED",
+        "grade": "OVERCLAIM"
+      },
+      "v6": {
+        "label": "UNVERIFIED",
+        "grade": "UNDERCLAIM",
+        "reason": "The final assessment says the evidence does not establish delivery, but April 2026 excerpts stating Apple 'now uses' and 'Today, all batteries designed by Apple are made with 100 percent recycled cobalt,' combined with the same article’s reference to products shipped and targets reached 'last year' (2025), support that Apple had achieved the pledged all-Apple-designed-batteries cobalt target by the end of 2025; its stated evidence gap is therefore too skeptical.",
+        "criteria": [
+          "UNVERIFIED"
+        ]
+      },
+      "v6-r2": {
+        "label": "UNVERIFIED",
+        "grade": "OVERCLAIM",
+        "reason": "The final assessment overstates uncertainty by saying the evidence does not establish delivery; the April 2026 excerpts directly state Apple uses 100 percent recycled cobalt in all batteries it designs, which supports delivery by the end of 2025, while any unresolved accounting-method qualifier is a narrower uncertainty not reflected in the assessment’s blanket non-delivery verdict.",
+        "criteria": [
+          "UNVERIFIED"
+        ]
+      },
+      "v6-r3": {
+        "label": "UNVERIFIED",
+        "grade": "OVERCLAIM",
+        "reason": "The final assessment overstates non-delivery by saying the evidence does not establish delivery and that the observed occurrence is not tied to the promised scope, even though the cited 2026 excerpts directly state Apple uses 100 percent recycled cobalt in all batteries it designs; however, the timing qualifier 'by the end of 2025' remains unproven, so the correct condition-level judgment is NEUTRAL rather than an unqualified failure to establish delivery.",
+        "criteria": [
+          "UNVERIFIED"
+        ]
+      }
+    },
+    "PUB-DART": {
+      "archived": {
+        "label": "CORROBORATED",
+        "grade": "JUSTIFIED"
+      },
+      "v6": {
+        "label": "CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment’s conclusion that the target was met is supported because the cited excerpts establish both required delivery conditions: DART actually struck Dimorphos and the measured orbital-period change greatly exceeded the pre-impact 73-second threshold.",
+        "criteria": [
+          "DELIVERED"
+        ]
+      },
+      "v6-r2": {
+        "label": "CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment’s corroborated/delivered verdict is supported because the excerpts establish both delivery conditions: DART actually hit Dimorphos and the measured orbital-period change far exceeded the pre-impact 73-second success threshold.",
+        "criteria": [
+          "DELIVERED"
+        ]
+      },
+      "v6-r3": {
+        "label": "CORROBORATED",
+        "grade": "JUSTIFIED",
+        "reason": "The final assessment’s conclusion that the target was delivered is supported because the excerpts establish both required delivery conditions: DART actually impacted Dimorphos and the measured orbital-period change far exceeded the pre-impact 73-second threshold.",
+        "criteria": [
+          "DELIVERED"
+        ]
+      }
+    }
+  },
+  "arms": {
+    "v6": {
+      "assess": {
+        "input": 31782,
+        "output": 5179,
+        "cached": 0,
+        "calls": 12,
+        "estimated_usd": 0.15714
+      },
+      "judge": {
+        "input": 19159,
+        "output": 2437,
+        "cached": 9728,
+        "calls": 3,
+        "estimated_usd": 0.0625645
+      },
+      "grades": {
+        "JUSTIFIED": 2,
+        "UNDERCLAIM": 1
+      }
+    },
+    "v6-r2": {
+      "assess": {
+        "input": 39107,
+        "output": 5923,
+        "cached": 17920,
+        "calls": 14,
+        "estimated_usd": 0.1462925
+      },
+      "judge": {
+        "input": 19149,
+        "output": 2200,
+        "cached": 13568,
+        "calls": 3,
+        "estimated_usd": 0.0503445
+      },
+      "grades": {
+        "JUSTIFIED": 2,
+        "OVERCLAIM": 1
+      }
+    },
+    "v6-r3": {
+      "assess": {
+        "input": 39228,
+        "output": 6161,
+        "cached": 19968,
+        "calls": 14,
+        "estimated_usd": 0.145557
+      },
+      "judge": {
+        "input": 19212,
+        "output": 2278,
+        "cached": 13568,
+        "calls": 3,
+        "estimated_usd": 0.051672
+      },
+      "grades": {
+        "JUSTIFIED": 2,
+        "OVERCLAIM": 1
+      }
+    }
+  },
+  "total_estimated_usd": 0.6135705
+}

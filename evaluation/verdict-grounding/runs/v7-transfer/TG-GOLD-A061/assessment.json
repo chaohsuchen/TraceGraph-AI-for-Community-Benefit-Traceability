@@ -1,0 +1,136 @@
+{
+  "case": "TG-GOLD-A061",
+  "model": "gpt-5.4",
+  "runtime": {
+    "agent.py": "a05ce765ed68bdd3bdef1b319c2349e39f60e2abf7d2c923502295582c8aff21",
+    "providers.py": "4457bcf476314bb66f490344ea9b6afac9227a1cf9151a809af1edce47f26b08",
+    "reconcile.py": "582754a7c24a38543485d4e7589cbdd738d571fb3dd949f0b118374bf12f532b",
+    "openai_provider.py": "cebdca8526ccb8ebec3b83da3c0e0cec2b6f2b39797dae0a4ce15e88cbe09f59"
+  },
+  "inputs_sha256": "3cba49f2d8cf992cba3215295cac6f01f7c4364e0b006015838e33974c61ad7d",
+  "as_of": "2026-11-22",
+  "calls": [
+    {
+      "type": "provider_call",
+      "provider": "openai",
+      "model": "gpt-5.4",
+      "status": "ok",
+      "seconds": 8.734000000000151,
+      "request_id": "req_dee251b967cf4e258ced7a1d43386533",
+      "usage": {
+        "input_tokens": 4224,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          },
+          "cached_tokens": 1792
+        },
+        "output_tokens": 756,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4980
+      },
+      "search_enabled": false,
+      "web_search_ids": [],
+      "stop_reason": "completed"
+    }
+  ],
+  "status": "COMPLETED",
+  "trace": {
+    "scope_locks": [
+      {
+        "mention": "Resorts World New York City",
+        "citation_id": "c1",
+        "aliases": [],
+        "condition_numbers": []
+      }
+    ],
+    "not_yet_due": [],
+    "criteria": [
+      {
+        "criterion": "Resorts World New York City deposited cash or bond equal to 5 percent of the total investment proposed in its application by December 31, 2025.",
+        "required_elements": [
+          "Resorts World New York City deposited cash or bond",
+          "the deposit amount represented 5 percent of the total investment proposed in its application",
+          "the deposit was made by December 31, 2025"
+        ],
+        "scope_criteria": [
+          "s1",
+          "s2"
+        ],
+        "promise_scope": "Promisor/obligated actor: Resorts World New York City. Beneficiary: the State/Commission as license-condition counterparty; no separate public beneficiary is specified. Location: unspecified in the cited condition. Benefit/action: deposit via cash or bond an amount representing 5 percent of the total investment proposed in the application.",
+        "observed_scope": "Delivery for the promised scope remains unverified.",
+        "promise_citation_ids": [
+          "c1",
+          "c2"
+        ],
+        "delivery_citation_ids": [],
+        "delivery_status": "UNVERIFIED",
+        "timing_requirement": "On or before December 31, 2025.",
+        "explanation": "The cited sources document the terms of the undertaking.",
+        "gap": "The sources do not establish actual performance for the promised scope. Timing to verify: On or before December 31, 2025.",
+        "locked_scopes": [
+          {
+            "mention": "Resorts World New York City",
+            "citation_id": "c1",
+            "aliases": []
+          }
+        ],
+        "delivery_support": []
+      }
+    ],
+    "label": "UNVERIFIED",
+    "verdict": "The available evidence does not establish delivery of the requested obligation.",
+    "reasoning": "Requested scope: Resorts World shall deposit cash or bond equal to 5 percent of its proposed total investment by December 31, 2025.\n\nResorts World New York City deposited cash or bond equal to 5 percent of the total investment proposed in its application by December 31, 2025.\nStatus: UNVERIFIED\nThe cited sources document the terms of the undertaking.\nPromised scope: Promisor/obligated actor: Resorts World New York City. Beneficiary: the State/Commission as license-condition counterparty; no separate public beneficiary is specified. Location: unspecified in the cited condition. Benefit/action: deposit via cash or bond an amount representing 5 percent of the total investment proposed in the application.\nObserved scope: Delivery for the promised scope remains unverified.\nEvidence gap: The sources do not establish actual performance for the promised scope. Timing to verify: On or before December 31, 2025.\nPromise evidence: c1, c2\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “EXHIBIT 1 LICENSE CONDITIONS All references to laws of New York and provisions of the Official Compilation of Codes, Rules and Regulations of the State of New York (\"NYCRR\") are to the provisions of such laws and regulations as they exist on the date hereof and as they may hereafter be amended from time to time. Resorts World New York City shall materially perform consistent with the content of its Application and commitments expressed during the Community Advisory Committee evaluative process, as determined or otherwise approved by the Commission. General Conditions 1. License Fee Resorts World New York City shall pay, on or before December 31, 2025, a $500,000,000 gaming facility license fee by electronic funds transfer in accordance with Racing, Pari-Mutuel Wagering and Breeding Law§ 1321-e(3) and 9 NYC RR § 601.1 (b ). 2. Bond Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application, in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 ).”\nhttps://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf\n\nc2: “General Conditions 1. License Fee Resorts World New York City shall pay, on or before December 31, 2025, a $500,000,000 gaming facility license fee by electronic funds transfer in accordance with Racing, Pari-Mutuel Wagering and Breeding Law§ 1321-e(3) and 9 NYC RR § 601.1 (b ). 2. Bond Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application, in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 ).”\nhttps://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf\n\nc3: “First, all three licensees have remitted their $500M license fee, which has, consistent with state law, in turn been remitted to the Metropolitan Transit Authority. Additionally, two of the three licensees have provided their completion bond for their respective project, with the third being finalized shortly.”\nhttps://gaming.ny.gov/february-3-2026-commission-meeting-transcript",
+    "refutation": [],
+    "scope_anchors": {
+      "s1": "Resorts World New York City to deposit via cash or bond, by December 31, 2025, an amount equal to 5 percent of the total investment proposed in its application",
+      "s2": "Whether Resorts World New York City deposited the required cash or bond by December 31, 2025"
+    },
+    "citations": {
+      "c1": {
+        "source": {
+          "title": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+          "url": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+          "citation": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf"
+        },
+        "excerpt": "EXHIBIT 1 LICENSE CONDITIONS All references to laws of New York and provisions of the Official Compilation of Codes, Rules and Regulations of the State of New York (\"NYCRR\") are to the provisions of such laws and regulations as they exist on the date hereof and as they may hereafter be amended from time to time. Resorts World New York City shall materially perform consistent with the content of its Application and commitments expressed during the Community Advisory Committee evaluative process, as determined or otherwise approved by the Commission. General Conditions 1. License Fee Resorts World New York City shall pay, on or before December 31, 2025, a $500,000,000 gaming facility license fee by electronic funds transfer in accordance with Racing, Pari-Mutuel Wagering and Breeding Law§ 1321-e(3) and 9 NYC RR § 601.1 (b ). 2. Bond Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application, in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 ).",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:33:27.830620+00:00",
+        "finding_id": "finding-dbb6c084-d5c2-4886-84e0-9dbaae7fcd55"
+      },
+      "c2": {
+        "source": {
+          "title": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+          "url": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf",
+          "citation": "https://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf"
+        },
+        "excerpt": "General Conditions 1. License Fee Resorts World New York City shall pay, on or before December 31, 2025, a $500,000,000 gaming facility license fee by electronic funds transfer in accordance with Racing, Pari-Mutuel Wagering and Breeding Law§ 1321-e(3) and 9 NYC RR § 601.1 (b ). 2. Bond Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application, in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 ).",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:33:27.830620+00:00",
+        "finding_id": "finding-dbb6c084-d5c2-4886-84e0-9dbaae7fcd55"
+      },
+      "c3": {
+        "source": {
+          "title": "https://gaming.ny.gov/february-3-2026-commission-meeting-transcript",
+          "url": "https://gaming.ny.gov/february-3-2026-commission-meeting-transcript",
+          "citation": "https://gaming.ny.gov/february-3-2026-commission-meeting-transcript"
+        },
+        "excerpt": "First, all three licensees have remitted their $500M license fee, which has, consistent with state law, in turn been remitted to the Metropolitan Transit Authority. Additionally, two of the three licensees have provided their completion bond for their respective project, with the third being finalized shortly.",
+        "locator": "Cited passage",
+        "retrieved_at": "2026-11-22T09:33:27.830620+00:00",
+        "finding_id": "finding-689d16c9-34aa-4bf5-b182-f08383d32f16"
+      }
+    },
+    "scope_gap": ""
+  },
+  "displayed": {
+    "label": "UNVERIFIED",
+    "verdict": "The available evidence does not establish delivery of the requested obligation.",
+    "reasoning": "Requested scope: Resorts World shall deposit cash or bond equal to 5 percent of its proposed total investment by December 31, 2025.\n\nResorts World New York City deposited cash or bond equal to 5 percent of the total investment proposed in its application by December 31, 2025.\nStatus: UNVERIFIED\nThe cited sources document the terms of the undertaking.\nPromised scope: Promisor/obligated actor: Resorts World New York City. Beneficiary: the State/Commission as license-condition counterparty; no separate public beneficiary is specified. Location: unspecified in the cited condition. Benefit/action: deposit via cash or bond an amount representing 5 percent of the total investment proposed in the application.\nObserved scope: Delivery for the promised scope remains unverified.\nEvidence gap: The sources do not establish actual performance for the promised scope. Timing to verify: On or before December 31, 2025.\nPromise evidence: c1, c2\n\nCited source excerpts (promise, delivery, or context as assessed above):\nc1: “EXHIBIT 1 LICENSE CONDITIONS All references to laws of New York and provisions of the Official Compilation of Codes, Rules and Regulations of the State of New York (\"NYCRR\") are to the provisions of such laws and regulations as they exist on the date hereof and as they may hereafter be amended from time to time. Resorts World New York City shall materially perform consistent with the content of its Application and commitments expressed during the Community Advisory Committee evaluative process, as determined or otherwise approved by the Commission. General Conditions 1. License Fee Resorts World New York City shall pay, on or before December 31, 2025, a $500,000,000 gaming facility license fee by electronic funds transfer in accordance with Racing, Pari-Mutuel Wagering and Breeding Law§ 1321-e(3) and 9 NYC RR § 601.1 (b ). 2. Bond Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application, in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 ).”\nhttps://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf\n\nc2: “General Conditions 1. License Fee Resorts World New York City shall pay, on or before December 31, 2025, a $500,000,000 gaming facility license fee by electronic funds transfer in accordance with Racing, Pari-Mutuel Wagering and Breeding Law§ 1321-e(3) and 9 NYC RR § 601.1 (b ). 2. Bond Resorts World New York City shall, on or before December 31, 2025, deposit via cash or bond, an amount representing 5 percent of the total investment proposed in the Application, in accordance with Racing, Pari Mutuel Wagering and Breeding Law § 1321-e( 1 ).”\nhttps://gaming.ny.gov/system/files/documents/2025/12/rwnyc-license-document.pdf\n\nc3: “First, all three licensees have remitted their $500M license fee, which has, consistent with state law, in turn been remitted to the Metropolitan Transit Authority. Additionally, two of the three licensees have provided their completion bond for their respective project, with the third being finalized shortly.”\nhttps://gaming.ny.gov/february-3-2026-commission-meeting-transcript",
+    "verification_date": "2026-11-22"
+  }
+}
