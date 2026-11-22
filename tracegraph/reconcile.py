@@ -107,12 +107,14 @@ def _assert_acyclic(findings, relations):
 class EvidenceReconciler:
     """Run one review at most for each cache shared across a job's retries."""
 
-    def __init__(self, judge, *, followup=None, assessor=None, verify_conflicts=None, verify_refutation=None):
+    def __init__(self, judge, *, followup=None, assessor=None, verify_conflicts=None, verify_refutation=None,
+                 on_assessment=None):
         self._judge = judge
         self._followup = followup
         self._assessor = assessor
         self._verify_conflicts = verify_conflicts
         self._verify_refutation = verify_refutation
+        self._on_assessment = on_assessment
 
     def reconcile(self, context, snapshot, result, *, followup_cache=None):
         cache = {} if followup_cache is None else followup_cache
@@ -143,6 +145,8 @@ class EvidenceReconciler:
                 self._check_conflicts(context, state, cache)
 
         assessment = self._assessor(context, deepcopy(state)) if self._assessor else state["assessment"]
+        if self._on_assessment is not None:
+            self._on_assessment(deepcopy(assessment))
         assessment = self._check_assessment(context, state, assessment)
         remaining = {_relation_key(edge["kind"], edge["from_id"], edge["to_id"]) for edge in state["relations"]}
         dismissed = [

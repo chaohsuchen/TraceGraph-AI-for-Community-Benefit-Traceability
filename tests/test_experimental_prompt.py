@@ -61,7 +61,7 @@ class PromptExperimentTests(unittest.TestCase):
         with (
             patch("tracegraph.runtime.check_embedding_profile"),
             patch("tracegraph.runtime.read_credential", return_value="fixture"),
-            patch("tracegraph.providers.ClaudeWebResearcher") as researcher,
+            patch("tracegraph.openai_provider.OpenAIWebResearcher") as researcher,
         ):
             create_application("fixture-database", "live")
             self.assertIs(researcher.call_args.kwargs["search_strategy"], search)
@@ -69,7 +69,7 @@ class PromptExperimentTests(unittest.TestCase):
             create_application("fixture-database", "live", search_strategy=None)
             self.assertIsNone(researcher.call_args.kwargs["search_strategy"])
 
-    def test_one_hosted_search_turn_with_six_uses(self):
+    def test_initial_search_reserves_two_uses_for_evidence_recovery(self):
         self.client.create.return_value = _h011_message()
 
         search(self.researcher, {**_REQUEST, "internal": "private job data"}, emit=self.events.append)
@@ -78,7 +78,7 @@ class PromptExperimentTests(unittest.TestCase):
         call = self.client.create.call_args.kwargs
         self.assertEqual(set(call), {"system", "messages", "max_tokens", "tools"})
         self.assertEqual(call["max_tokens"], 4096)
-        self.assertEqual(call["tools"], [{"type": "web_search_20250305", "name": "web_search", "max_uses": 6}])
+        self.assertEqual(call["tools"], [{"type": "web_search_20250305", "name": "web_search", "max_uses": 4}])
         self.assertEqual(json.loads(call["messages"][0]["content"]), _REQUEST)
         self.assertIn("search again only for a concrete gap likely to", call["system"])
         self.assertEqual(self.events, [
@@ -104,8 +104,8 @@ class PromptExperimentTests(unittest.TestCase):
         follow_up_message = {"role": "assistant", "content": follow_up["content"]}
         self.assertEqual(second["messages"], [*first["messages"], initial_message])
         self.assertEqual(third["messages"], [*second["messages"], follow_up_message])
-        for continued in (second, third):
-            self.assertEqual(continued["tools"], first["tools"])
+        for remaining, continued in zip((3, 2), (second, third)):
+            self.assertEqual(continued["tools"], [{**first["tools"][0], "max_uses": remaining}])
             self.assertEqual(continued["max_tokens"], 4096)
             self.assertEqual(continued["system"], first["system"])
         self.assertEqual([item["url"] for item in citations.values()], [_ORIGINAL_URL, _LATER_URL])

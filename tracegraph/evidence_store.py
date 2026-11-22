@@ -119,7 +119,8 @@ class EvidenceStore(PostgresStore):
         """, (commitment_id, revision + 1, result["label"], result["verdict"],
               result["reasoning"], result["verification_date"]))
         ids = {"commitment_id": commitment_id, "run_id": None}
-        self._set_terminal(connection, job, "COMPLETED", result={"outcome": "RESOLVED", **ids})
+        self._set_terminal(connection, job, "COMPLETED", result={"outcome": "RESOLVED", **ids,
+            **({"unmatched_records": result["unmatched_records"]} if result.get("unmatched_records") else {})})
         return {"outcome": "COMMITTED", **ids}
 
     def _merge_findings(self, connection, commitment_id, findings):

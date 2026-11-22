@@ -50,6 +50,8 @@ def _extracted(draft, citation_id, *, coverage=None):
     }
     if draft is not None or coverage is not None:
         result["criteria"] = coverage if coverage is not None else [_coverage_row()]
+        result.update(target_status="IDENTIFIED", clarification_question="", relevant_citation_ids=list(dict.fromkeys(([draft["original_citation_id"]] if draft else []) + [row["citation_id"] for row in result["findings"]])),
+                      recovery_citation_ids=[], followup_query="")
     return result
 
 
@@ -67,6 +69,7 @@ class OpenAIProviderTests(unittest.TestCase):
         self.assertEqual(request.get_header("Authorization"), "Bearer test-key")
         payload = json.loads(request.data)
         self.assertEqual(payload["model"], "test-model")
+        self.assertNotIn("reasoning", payload)
         self.assertFalse(payload["store"])
         self.assertEqual(payload["max_output_tokens"], 1024)
         self.assertNotIn("tools", payload)
@@ -78,6 +81,24 @@ class OpenAIProviderTests(unittest.TestCase):
         self.assertEqual(format_spec["schema"]["required"], list(answer))
         self.assertEqual(events[0]["usage"], {"input_tokens": 20, "output_tokens": 30})
         self.assertNotIn("Public query", json.dumps(events))
+
+    def test_structured_reasoning_can_be_disabled_without_changing_the_model(self):
+        answer = {"outcome": "NO_MATCH", "commitment_id": "", "question": "", "related_ids": []}
+        opener = Mock(return_value=_response(answer))
+        client = OpenAIClient("test-key", "gpt-5.4-mini", opener=opener, reasoning_effort=None)
+        self.assertEqual(ClaudeIdentityJudge(client)({"query": "Public query"}, _CANDIDATES), answer)
+        payload = json.loads(opener.call_args.args[0].data)
+        self.assertEqual(payload["model"], "gpt-5.4-mini")
+        self.assertNotIn("reasoning", payload)
+
+    def test_structured_reasoning_can_be_enabled_for_the_assessment_client(self):
+        answer = {"outcome": "NO_MATCH", "commitment_id": "", "question": "", "related_ids": []}
+        opener = Mock(return_value=_response(answer))
+        client = OpenAIClient("test-key", "gpt-5.4-mini", opener=opener, reasoning_effort="low")
+        self.assertEqual(ClaudeIdentityJudge(client)({"query": "Public query"}, _CANDIDATES), answer)
+        payload = json.loads(opener.call_args.args[0].data)
+        self.assertEqual(payload["reasoning"], {"effort": "low"})
+        self.assertEqual(payload["model"], "gpt-5.4-mini")
 
     def test_refusal_incomplete_and_http_errors_are_provider_failures(self):
         http_error = HTTPError("https://api.openai.com/v1/responses", 429, "test", {},
@@ -100,8 +121,11 @@ class OpenAIProviderTests(unittest.TestCase):
             _response(proposals, tools=[_tool([_PROGRESS_URL])],
                       annotations=[_annotation(_ORIGINAL_URL, "Board Decision")]),
             _response(_extracted(_draft(), "c2")),
-            _response({"checks": [{"criterion_id": "1", "explanation": "Checked the Board Decision.",
+            _response({"target_status": "IDENTIFIED", "clarification_question": "", "alternative_citation_ids": [], "accepted_finding_ids": ["f1"],
+                       "checks": [{"criterion_id": "1", "explanation": "Checked the Board Decision.",
                                    "original_citation_ids": ["c1"], "missing_original_terms": []}]}),
+            _response({"target_status": "IDENTIFIED", "clarification_question": "", "alternative_citation_ids": []}),
+            _response({"supported": True, "quoted_support": _PROGRESS_TEXT, "explanation": "This quote records three running routes."}),
         ])
         source = Mock(side_effect={_ORIGINAL_URL: _ORIGINAL_TEXT, _PROGRESS_URL: _PROGRESS_TEXT}.get)
         events = []
@@ -117,12 +141,13 @@ class OpenAIProviderTests(unittest.TestCase):
         self.assertEqual([item["excerpt"] for item in result["result"]["evidence"]],
                          [_ORIGINAL_TEXT, _PROGRESS_TEXT])
         self.assertEqual([call.args for call in source.call_args_list], [(_ORIGINAL_URL,), (_PROGRESS_URL,)])
-        search_payload, extraction_payload, scope_payload = [
+        search_payload, extraction_payload, scope_payload, target_payload, finding_payload = [
             json.loads(call.args[0].data) for call in opener.call_args_list
         ]
         self.assertEqual(search_payload["tools"], [{"type": "web_search"}])
         self.assertEqual(search_payload["tool_choice"], "required")
-        self.assertEqual(search_payload["max_tool_calls"], 6)
+        self.assertEqual(search_payload["max_tool_calls"], 4)
+        self.assertNotIn("reasoning", search_payload)
         self.assertEqual(search_payload["include"], ["web_search_call.action.sources"])
         self.assertNotIn(_JOB["claim_token"], json.dumps(search_payload))
         self.assertNotIn("tools", extraction_payload)
@@ -132,6 +157,20 @@ class OpenAIProviderTests(unittest.TestCase):
         self.assertNotIn("tools", scope_payload)
         self.assertTrue(any(event.get("stop_reason") == "BUDGET" for event in events))
         self.assertTrue(any(event.get("web_search_ids") == ["ws_test"] for event in events))
+
+    def test_model_override_is_limited_to_hosted_search(self):
+        search_http = Mock(return_value=_response(_proposed((_PROGRESS_URL, _PROGRESS_TEXT)),
+                                                  tools=[_tool([_PROGRESS_URL])]))
+        extract_http = Mock(return_value=_response(_extracted(None, "c1")))
+        events = []
+        researcher = OpenAIWebResearcher(
+            OpenAIClient("test-key", model="gpt-5.4-mini", opener=extract_http, emit=events.append),
+            search_client=OpenAIClient("test-key", model="gpt-5.4", opener=search_http, emit=events.append),
+            source_loader=lambda url, **_: _PROGRESS_TEXT,
+        )
+        researcher({**_JOB, "kind": "REFRESH"}, {"commitment": {}, "findings": []})
+        self.assertEqual([(e["model"], e["search_enabled"]) for e in events],
+                         [("gpt-5.4", True), ("gpt-5.4-mini", False)])
 
     def test_refresh_uses_verified_search_without_discovery_strategy(self):
         opener = Mock(side_effect=[
@@ -185,6 +224,10 @@ class OpenAIProviderTests(unittest.TestCase):
                 _coverage_row(delivery=()),
                 _coverage_row("Add three bus stops", promise=(), delivery=()),
             ])),
+            _response({"checks": [{"criterion_id": "1", "explanation": "Routes documented.",
+                                    "original_citation_ids": ["c1"], "missing_original_terms": []},
+                                   {"criterion_id": "2", "explanation": "No bus-stop pledge.",
+                                    "original_citation_ids": [], "missing_original_terms": ["Three bus stops"]}]}),
         ])
         events = []
         researcher = OpenAIWebResearcher(
@@ -210,8 +253,8 @@ class OpenAIProviderTests(unittest.TestCase):
             (_response(_proposed(), tools=[_tool()]), "did not report"),
             (_response(_proposed()), "did not complete"),
             (_response(_proposed(), tools=[_tool([], status="failed")]), "did not complete"),
-            (_response(_proposed(), tools=[_tool([_ORIGINAL_URL])]), "without proposing evidence"),
-            (_response(_proposed((_ORIGINAL_URL, bad_quote)), tools=[_tool([_ORIGINAL_URL])]), "could not be verified"),
+            (_response(_proposed(), tools=[_tool([_ORIGINAL_URL])]), "unverified source"),
+            (_response(_proposed((_ORIGINAL_URL, bad_quote)), tools=[_tool([_ORIGINAL_URL])]), "unverified source"),
         )
         for response, expected in cases:
             with self.subTest(expected=expected):
@@ -219,6 +262,11 @@ class OpenAIProviderTests(unittest.TestCase):
                 researcher = OpenAIWebResearcher(client, source_loader=Mock(return_value=_ORIGINAL_TEXT))
                 if expected is None:
                     self.assertEqual(researcher(_JOB, None), {"draft": None})
+                elif expected == "unverified source":
+                    result = researcher(_JOB, None)
+                    self.assertIsNone(result["draft"])
+                    self.assertEqual(result["related_sources"], [{"source_url": _ORIGINAL_URL, "title": _ORIGINAL_URL}])
+                    self.assertNotIn("related_evidence", result)
                 else:
                     with self.assertRaisesRegex(ProviderError, expected):
                         researcher(_JOB, None)

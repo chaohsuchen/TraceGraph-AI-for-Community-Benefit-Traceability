@@ -113,20 +113,46 @@ class Agent:
         draft = response["draft"]
         if draft is not None and not isinstance(draft, dict):
             raise ResearchUnavailable("The discovery response contains an invalid draft")
+        if response.get("target_status") == "AMBIGUOUS":
+            question = response.get("clarification_question")
+            if not _has_text(question):
+                raise ResearchUnavailable("An ambiguous research target requires an object-selection question")
+            result = {"outcome": "AMBIGUOUS", "question": question.strip()}
+            suggestions = _web_leads(response.get("related_evidence", []))
+            if suggestions:
+                result["suggestions"] = suggestions
+            self._store.finish_without_run(claim, result)
+            return
         missing_scope = _scope_parts(response, "missing_scope")
         if missing_scope or draft is None or not _has_original_promise(draft.get("original_promise")):
-            message = "No publicly documented original promise could be located."
-            if missing_scope:
-                components = ", ".join(part.rstrip(".") for part in missing_scope)
-                message = (
-                    "The verified sources did not document the full requested promise. "
-                    f"Missing parts include {components}."
-                )
+            gaps = _scope_parts(response, "gaps") or missing_scope or [
+                "A source documenting the complete requested original obligation is still needed."]
+            located = _web_leads(response.get("related_evidence", []), limit=32)
             result = {
-                "outcome": "NO_PUBLIC_PROMISE",
-                "message": message,
+                "outcome": "PARTIAL_RESEARCH", "query": claimed_job["query"],
+                "message": "Research is incomplete; no commitment was saved.",
+                "facts": [{"source_title": row["title"], "source_url": row["source_url"],
+                           "excerpt": row["description"]} for row in located],
+                "gaps": gaps,
             }
+            unmatched = _web_leads(response.get("unmatched_evidence", []), limit=32)
+            if unmatched:
+                result["unmatched_records"] = [{"source_title": row["title"], "source_url": row["source_url"],
+                                                "excerpt": row["description"]} for row in unmatched]
             suggestions = _web_leads(response.get("related_evidence", []))
+            if len(suggestions) < 3:
+                quoted_urls = {row["source_url"] for row in suggestions}
+                for source in response.get("related_sources", []):
+                    url = source.get("source_url")
+                    if not _has_text(url) or url in quoted_urls:
+                        continue
+                    candidate = _web_leads([{"source": {"url": url, "title": source.get("title") or url},
+                                             "excerpt": "Located source; no excerpt could be verified."}])
+                    if candidate:
+                        suggestions.append({**candidate[0], "excerpt": ""})
+                        quoted_urls.add(url)
+                    if len(suggestions) == 3:
+                        break
             if suggestions:
                 result["suggestions"] = suggestions
             self._store.finish_without_run(claim, result)
@@ -136,6 +162,9 @@ class Agent:
             raise ResearchUnavailable("The discovery draft is missing commitment details")
 
         criteria = _scope_parts(response, "criteria")
+        unmatched = _web_leads(response.get("unmatched_evidence", []), limit=32)
+        retained_records = ([{"source_title": row["title"], "source_url": row["source_url"],
+                              "excerpt": row["description"]} for row in unmatched])
         identity = {field: draft.get(field) for field in _DISCOVERED_FIELDS}
         new_commitment = None
         for _ in range(_MAX_RESEARCH_WRITE_ATTEMPTS):
@@ -146,6 +175,7 @@ class Agent:
                         "outcome": "RESOLVED",
                         "commitment_id": decision["commitment_id"],
                         "run_id": None,
+                        **({"unmatched_records": retained_records} if retained_records else {}),
                     })
                     return
                 case "AMBIGUOUS":
@@ -154,6 +184,8 @@ class Agent:
 
             if new_commitment is None:
                 result = _validate_result(response.get("result"))
+                if retained_records:
+                    result = {**result, "unmatched_records": retained_records}
                 if self._reconciler is not None:
                     context = {
                         "commitment": {**identity, "title": draft["title"]},
@@ -235,12 +267,19 @@ def _scope_parts(response, field):
     return [part.strip() for part in parts]
 
 
-def _web_leads(evidence):
+def _web_leads(evidence, *, limit=3):
     leads = {}
     for item in evidence:
+        if not isinstance(item, dict):
+            continue
         source = item.get("source", {})
+        if not isinstance(source, dict):
+            continue
         url, excerpt = source.get("url"), item.get("excerpt")
-        if not _has_text(url) or not _has_text(excerpt) or url in leads:
+        if not _has_text(url) or not _has_text(excerpt):
+            continue
+        key = url, excerpt.strip()
+        if key in leads:
             continue
         try:
             parsed = urlsplit(url)
@@ -248,11 +287,12 @@ def _web_leads(evidence):
                 continue
         except ValueError:
             continue
-        title = item.get("summary") or source.get("title")
+        title = source.get("title") or url
         if _has_text(title):
-            leads[url] = {"kind": "WEB_LEAD", "title": title.strip()[:180], "description": excerpt.strip()[:500],
+            leads[key] = {"kind": "WEB_LEAD", "title": title.strip(), "source_title": title.strip(),
+                          "description": excerpt.strip(), "excerpt": excerpt.strip(),
                           "source_url": url}
-        if len(leads) == 3:
+        if len(leads) == limit:
             break
     return list(leads.values())
 

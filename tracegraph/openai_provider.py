@@ -16,7 +16,7 @@ from tracegraph.public_excerpt import load_public_text, normalize_excerpt
 
 
 _RESPONSES_URL = "https://api.openai.com/v1/responses"
-_DEFAULT_MODEL = "gpt-5.4-mini"
+DEFAULT_OPENAI_MODEL = "gpt-5.4"
 _MAX_PASSAGES = 12
 _MAX_QUOTE_LENGTH = 700
 _SEARCH_OUTPUT = _object({
@@ -70,18 +70,19 @@ class OpenAIClient:
 
     def __init__(
         self, api_key=None, model=None, *, timeout=120, opener=None, emit=None, deadline=None,
-        allow_web_search=True,
+        allow_web_search=True, reasoning_effort=None,
     ):
         key = api_key if api_key is not None else os.environ.get("OPENAI_API_KEY")
         if not isinstance(key, str) or not key.strip():
             raise ProviderError("OPENAI_API_KEY is required for OpenAI")
         self._api_key = key.strip()
-        self.model = model or os.environ.get("OPENAI_MODEL") or _DEFAULT_MODEL
+        self.model = model or os.environ.get("OPENAI_MODEL") or DEFAULT_OPENAI_MODEL
         self._timeout = timeout
         self._open = opener or build_opener(_NoRedirect()).open
         self._emit = emit
         self._deadline = deadline
         self._allow_web_search = allow_web_search
+        self._reasoning_effort = reasoning_effort
 
     def _timeout_for(self, limit):
         timeout = limit if self._deadline is None else min(limit, self._deadline - monotonic())
@@ -131,7 +132,7 @@ class OpenAIClient:
         finally:
             if self._emit is not None:
                 self._emit({
-                    "type": "provider_call", "provider": "openai", "status": status,
+                    "type": "provider_call", "provider": "openai", "model": self.model, "status": status,
                     "seconds": monotonic() - started, "request_id": request_id or document.get("id"),
                     "usage": document.get("usage"), "search_enabled": bool(options.get("tools")),
                     "web_search_ids": [
@@ -144,9 +145,10 @@ class OpenAIClient:
 
     def create(self, *, system, messages, max_tokens, output_config):
         """Provide the text-block shape used by the shared structured adapter."""
+        options = {"reasoning": {"effort": self._reasoning_effort}} if self._reasoning_effort else {}
         document = self._request(
             system=system, messages=messages, max_tokens=max_tokens,
-            text=_strict_format(output_config["format"]["schema"]),
+            text=_strict_format(output_config["format"]["schema"]), **options,
         )
         return {
             "stop_reason": "end_turn",
@@ -173,9 +175,7 @@ class OpenAIClient:
         rows, stop = proposed["passages"], proposed["stop_reason"]
         if not isinstance(rows, list) or not isinstance(stop, str) or stop not in {"", *_STOP_REASONS}:
             raise ProviderError("OpenAI returned invalid evidence proposals")
-        if not rows and (reported_results or sources):
-            raise ProviderError("OpenAI returned search results without proposing evidence")
-        if not rows and reported_results is None:
+        if not rows and reported_results is None and not sources:
             raise ProviderError("OpenAI did not report whether the search returned sources")
         return rows, stop, sources
 
@@ -226,12 +226,19 @@ def _search_sources(output, parts):
 class OpenAIWebResearcher(ClaudeWebResearcher):
     """Reuse research and reconciliation inputs with a verified OpenAI capture."""
 
-    def __init__(self, client, *, clock=None, search_strategy=None, emit=None, source_loader=None):
-        super().__init__(client, clock=clock, search_strategy=search_strategy, emit=emit)
+    def __init__(self, client, *, clock=None, search_strategy=None, emit=None, source_loader=None, search_client=None,
+                 allow_source_recovery=True):
+        super().__init__(client, clock=clock, search_strategy=search_strategy, emit=emit,
+                         source_loader=source_loader, allow_source_recovery=allow_source_recovery)
+        self._search_client = search_client or client
         self._load_source = source_loader or load_public_text
 
     def _search(self, request, *, system=_SEARCH_SYSTEM, max_uses=6):
-        rows, stop, sources = self._client.search(request, system=system, max_uses=max_uses)
+        max_uses = self._claim_search_uses(max_uses)
+        if not max_uses:
+            return "STOP_REASON=BUDGET", {}
+        rows, stop, sources = self._search_client.search(request, system=system, max_uses=max_uses)
+        self._located_sources.update(sources)
         pages = {}
         citations = {}
         seen = set()
@@ -244,19 +251,21 @@ class OpenAIWebResearcher(ClaudeWebResearcher):
                 continue
             if url not in pages:
                 try:
-                    pages[url] = self._load_source(url, timeout=self._client._timeout_for(8))
+                    pages[url] = self._load_source(url, timeout=self._search_client._timeout_for(8))
                 except (OSError, ValueError):
                     pages[url] = None
             page = pages[url]
             if not isinstance(page, str) or (start := page.find(excerpt)) < 0:
+                self._emit({"type": "source_validation", "url": url,
+                            "status": "FETCH_UNAVAILABLE" if not page else "QUOTE_NOT_FOUND"})
                 continue
             verified = page[start:start + len(excerpt)]
             seen.add((url, excerpt))
             citations[f"c{len(citations) + 1}"] = {
                 "url": url, "title": sources[url], "excerpt": verified, "context": verified,
             }
-        if rows and not citations:
-            raise ProviderError("OpenAI evidence quotes could not be verified against public sources")
+        if sources and not citations:
+            self._emit({"type": "source_validation", "status": "NO_VERIFIED_EXCERPTS", "located_sources": len(sources)})
         lines = [f"[{key}] {citation['excerpt']}" for key, citation in citations.items()]
         if stop:
             lines.append(f"STOP_REASON={stop}")

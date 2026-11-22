@@ -101,7 +101,7 @@ class FullIntegrationTest(TestCase):
             self.assertEqual(final["assessment"]["label"], "PARTIALLY_CORROBORATED")
             self.assertEqual(EvidenceStore(dsn).graph(cid), final)
             self.assertEqual(finish(lookup("An unrelated pledge with no public record", "unknown"))["outcome"],
-                             "NO_PUBLIC_PROMISE")
+                             "PARTIAL_RESEARCH")
             with psycopg.connect(dsn) as connection:
                 self.assertEqual(connection.execute("SELECT count(*) FROM commitment").fetchone()[0], 1)
                 self.assertEqual(connection.execute("SELECT count(*) FROM research_run").fetchone()[0], 0)

@@ -22,6 +22,7 @@ ROOT = Path(__file__).resolve().parents[1]
 WORKBOOK = ROOT / "evaluation" / "Golden Dataset (5).xlsx"
 LOCAL_DSN = "postgresql://tracegraph:tracegraph@127.0.0.1:55432/tracegraph"
 LIVE_SCHEMA = "tracegraph_live"
+DEFAULT_PROVIDER = "openai"
 LOG = logging.getLogger(__name__)
 
 
@@ -110,7 +111,7 @@ def evaluation_catalog(dsn):
             connection.execute(sql.SQL("DROP SCHEMA {} CASCADE").format(sql.Identifier(schema)))
 
 
-def read_credential(path=None, *, provider="anthropic"):
+def read_credential(path=None, *, provider=DEFAULT_PROVIDER):
     if provider == "openai":
         name, environment, flag = "OpenAI", "OPENAI_API_KEY", "--openai-key-file"
         prefix = r"sk-(?!ant-)"
@@ -148,7 +149,8 @@ def check_embedding_profile(dsn, embed):
 
 def create_application(
     dsn, mode, *, key_file=None, model=None, search_strategy=prompt_discovery_search, emit=None,
-    deadline=None, enable_conflict_review=True, allow_web_search=True, provider="anthropic",
+    deadline=None, enable_conflict_review=True, allow_web_search=True, provider=DEFAULT_PROVIDER,
+    on_assessment=None, web_search_model=None, allow_source_recovery=None,
 ):
     from tracegraph.evidence_store import EvidenceStore
     from tracegraph.providers import LocalEmbedding
@@ -170,18 +172,27 @@ def create_application(
             client_type, researcher_type = OpenAIClient, OpenAIWebResearcher
         else:
             client_type, researcher_type = AnthropicClient, ClaudeWebResearcher
-        client = client_type(
-            api_key=read_credential(key_file, provider=provider), model=model, emit=emit, deadline=deadline,
-            allow_web_search=allow_web_search,
-        )
+        options = dict(api_key=read_credential(key_file, provider=provider), emit=emit,
+                       deadline=deadline, allow_web_search=allow_web_search)
+        client = client_type(model=model, **options)
+        research_options = {}
+        if web_search_model and provider != "openai":
+            raise ValueError("A separate web search model requires the OpenAI provider.")
+        if web_search_model and web_search_model != client.model:
+            research_options["search_client"] = client_type(model=web_search_model, **options)
         judge = ClaudeIdentityJudge(client)
-        researcher = researcher_type(client, search_strategy=search_strategy, emit=emit)
+        researcher = researcher_type(client, search_strategy=search_strategy, emit=emit,
+                                     allow_source_recovery=allow_web_search if allow_source_recovery is None else allow_source_recovery,
+                                     **research_options)
         reconciliation_judge = ClaudeReconciliationJudge(client)
+        assessment_client = client_type(model=model, reasoning_effort="low", **options) if provider == "openai" else client
+        assessor = ClaudeReconciliationJudge(assessment_client).assess
         reconciler = EvidenceReconciler(
-            reconciliation_judge, assessor=reconciliation_judge.assess,
+            reconciliation_judge, assessor=assessor,
             followup=researcher.review_conflicts if enable_conflict_review else None,
             verify_conflicts=reconciliation_judge.verify_conflicts,
             verify_refutation=reconciliation_judge.verify_refutation,
+            on_assessment=on_assessment,
         )
     store = EvidenceStore(dsn)
     agent = Agent(Retrieval(store, embed, judge), store, researcher, reconciler=reconciler)
@@ -189,7 +200,7 @@ def create_application(
 
 
 def evaluate(dsn, workbook, *, commitment_ids=None, reviewed_matches=None, mode="live",
-             key_file=None, model=None, provider="anthropic"):
+             key_file=None, model=None, provider=DEFAULT_PROVIDER):
     from tracegraph.benchmark import EvaluationCaseFailed, evaluate_workbook
 
     def research(query):
@@ -203,7 +214,7 @@ def evaluate(dsn, workbook, *, commitment_ids=None, reviewed_matches=None, mode=
             if job["status"] != "COMPLETED":
                 raise EvaluationCaseFailed("Evidence search failed: " + job.get("error", {}).get("code", "UNKNOWN"))
             result = job["result"]
-            if result["outcome"] == "NO_PUBLIC_PROMISE":
+            if result["outcome"] in ("NO_PUBLIC_PROMISE", "PARTIAL_RESEARCH"):
                 return {"draft": None}
             if result["outcome"] != "RESOLVED":
                 raise EvaluationCaseFailed("Evidence search did not resolve the commitment.")
@@ -248,7 +259,7 @@ def _add_provider_arguments(parser):
 def _provider_configuration(args):
     openai = (args.openai_key_file, args.openai_model)
     anthropic = (args.anthropic_key_file, args.anthropic_model)
-    provider = args.provider or ("openai" if any(openai) else "anthropic")
+    provider = args.provider or ("anthropic" if any(anthropic) else DEFAULT_PROVIDER)
     selected, other = (openai, anthropic) if provider == "openai" else (anthropic, openai)
     if any(other):
         raise ValueError("Use options for one live provider at a time.")

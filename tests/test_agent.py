@@ -115,7 +115,7 @@ class AgentTest(unittest.TestCase):
                 self.agent.execute(DISCOVERY)
                 claim, result = self.store.finish_without_run.call_args.args
                 self.assertEqual(claim, DISCOVERY_CLAIM)
-                self.assertEqual(result["outcome"], "NO_PUBLIC_PROMISE")
+                self.assertEqual(result["outcome"], "PARTIAL_RESEARCH")
         self.retrieval.resolve.assert_not_called()
         self.store.finish_discovery.assert_not_called()
         self.store.fail.assert_not_called()
@@ -128,9 +128,9 @@ class AgentTest(unittest.TestCase):
                 self.agent.execute(DISCOVERY)
                 claim, result = self.store.finish_without_run.call_args.args
                 self.assertEqual(claim, DISCOVERY_CLAIM)
-                self.assertEqual(result["outcome"], "NO_PUBLIC_PROMISE")
+                self.assertEqual(result["outcome"], "PARTIAL_RESEARCH")
                 for component in missing:
-                    self.assertIn(component, result["message"])
+                    self.assertIn(component, result["gaps"])
         self.retrieval.resolve.assert_not_called()
         self.store.finish_discovery.assert_not_called()
         self.store.fail.assert_not_called()
@@ -265,6 +265,8 @@ class AgentTest(unittest.TestCase):
         client.create.return_value = {"stop_reason": "end_turn", "content": [{"type": "text", "text": json.dumps({
             "label": "UNVERIFIED", "verdict": "Delivery remains uncertain.", "reasoning": "The annual amounts remain open.",
             "criteria": [{"criterion": "Provide annual public safety support", "scope_criteria": ["s1"],
+                          "promise_scope": "The authority pledged annual public safety funding.",
+                          "observed_scope": "No actual funding recipients or payments are documented.",
                           "promise_citation_ids": [], "delivery_citation_ids": [], "delivery_status": "UNVERIFIED",
                           "timing_requirement": "",
                           "explanation": "The available excerpts do not establish payment.", "gap": "A payment record."}],
@@ -279,10 +281,10 @@ class AgentTest(unittest.TestCase):
         payload = json.loads(client.create.call_args.kwargs["messages"][0]["content"])
         target = payload["target"]
         self.assertEqual(target["original_text"], commitment["original_text"])
-        self.assertEqual(target["scope_hint"], {"description": commitment["description"], "milestone": commitment["milestone"]})
-        self.assertNotIn("description", target)
-        self.assertNotIn("milestone", target)
-        self.assertEqual(payload["requested_criteria"], {"s1": commitment["original_text"]})
+        for field in ("description", "milestone", "amount_value", "term_periodicity"):
+            self.assertEqual(target["scope_hint"][field], commitment[field])
+            self.assertNotIn(field, target)
+        self.assertEqual(payload["generated_scope_hints"], {"s1": commitment["original_text"]})
         self.store.finish_refresh.assert_called_once()
         self.store.fail.assert_not_called()
 

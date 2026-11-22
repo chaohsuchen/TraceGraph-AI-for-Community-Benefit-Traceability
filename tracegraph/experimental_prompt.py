@@ -96,8 +96,11 @@ def _emit_stop(emit, phase, brief):
 def search(researcher, request, *, emit):
     """Run one hosted turn, including any continuations handled by the adapter."""
     request = _discover_request(request)
+    researcher._remaining_search_uses = 6
+    researcher._budget_discovery = True
     emit({"phase": "search", "event": "started"})
-    brief, citations = researcher._search(request, system=_SEARCH_SYSTEM, max_uses=6)
+    maximum = 4 if researcher._allow_source_recovery else 6
+    brief, citations = researcher._search(request, system=_SEARCH_SYSTEM, max_uses=maximum)
     _emit_stop(emit, "search", brief)
     return brief, citations
 
