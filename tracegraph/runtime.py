@@ -158,6 +158,7 @@ def create_application(
 
     embed = LocalEmbedding()
     check_embedding_profile(dsn, embed)
+    companion_research = None
     if mode == "fixture":
         from tracegraph.runtime_fixtures import fixture_judge, fixture_reconcile, fixture_research, fixture_review
 
@@ -182,11 +183,16 @@ def create_application(
         if web_search_model and web_search_model != client.model:
             research_options["search_client"] = client_type(model=web_search_model, **options)
         judge = ClaudeIdentityJudge(client)
+        recover_sources = allow_web_search if allow_source_recovery is None else allow_source_recovery
         researcher = researcher_type(client, search_strategy=search_strategy, emit=emit,
-                                     allow_source_recovery=allow_web_search if allow_source_recovery is None else allow_source_recovery,
+                                     allow_source_recovery=recover_sources,
                                      evidence_synthesizer=synthesize,
                                      evidence_followup=os.environ.get("TRACEGRAPH_EVIDENCE_FOLLOWUP", "1") != "0",
                                      **research_options)
+        if allow_web_search and recover_sources:
+            from tracegraph.companion_documents import CompanionDocumentResearcher
+
+            companion_research = CompanionDocumentResearcher(researcher)
         reconciliation_judge = ClaudeReconciliationJudge(client)
         assessment_client = client_type(model=model, reasoning_effort="low", **options) if provider == "openai" else client
         assessor = ClaudeReconciliationJudge(assessment_client)
@@ -198,7 +204,8 @@ def create_application(
             on_assessment=on_assessment,
         )
     store = EvidenceStore(dsn)
-    agent = Agent(Retrieval(store, embed, judge), store, researcher, reconciler=reconciler)
+    agent = Agent(Retrieval(store, embed, judge), store, researcher,
+                  reconciler=reconciler, companion_research=companion_research)
     return Application(store, agent, (ResolutionUnavailable,))
 
 

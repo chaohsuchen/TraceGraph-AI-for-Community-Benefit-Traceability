@@ -18,8 +18,8 @@ flowchart LR
     C -->|Add details or research a lead| Q
     C -->|Choose a saved commitment| G
     D --> G
-    G -->|Research again| F["Research the saved commitment"]
-    F -->|Merge findings and reassess| D
+    G -->|Research again| F["Recheck the saved commitment and follow leads to new documents"]
+    F -->|Merge verified excerpts and reassess| D
 ```
 
 1. **Retrieve and identify.** TraceGraph computes a local 384-dimensional feature-hash vector for the query. PostgreSQL with pgvector ranks stored commitment embeddings by cosine distance. BM25 in Python ranks the same catalog by keyword relevance. Reciprocal Rank Fusion combines the rankings by commitment ID. The LLM sees the query and compact fields for up to five candidates and compares the organization, obligation, scope, beneficiary, and timing. Python checks that a returned match ID belongs to those candidates.
@@ -38,7 +38,8 @@ PostgreSQL is the source of truth for commitment identity, embeddings, findings,
 - **Click** an organization, commitment, finding, or edge to inspect it. A finding is a source-backed claim. Its source links and excerpts appear in the side panel. The commitment shows the current verdict, verification date, and assessment summary.
 - **Double-click** a node to focus its branch. For a finding, the view keeps that finding and its downstream progress. Use **Back** to restore the previous view, or **Fit view** to fit the visible graph. The list below the graph also lets you select findings and relations.
 - **Expand the organization** to load its other commitments by organization ID. Progress arrows connect documented steps or revisions. Dashed conflict edges connect incompatible findings and let you inspect both sides.
-- **Research again** rechecks the same commitment ID. The system merges duplicate findings, preserves distinct excerpts and their sources, and can run one targeted follow-up for an eligible unresolved conflict. It updates the current assessment from the cumulative evidence. A failed refresh leaves the existing assessment available.
+- **Research again** rechecks the same commitment ID. With live web and document access enabled, refresh also follows leads from known sources to agreements, amendments, or implementation reports. This additional step requests up to two search actions, reads up to three new documents, and contributes up to four observations. Each observation carries a verbatim excerpt, its position in the normalized source text, and the retrieval time. Initial lookup and discovery use their existing search budgets.
+- Refresh merges verified passages with the saved findings, checks eligible conflicts, and computes the displayed verdict from that combined evidence. Finding the same passage again keeps a single copy. If supplementary research fails, the ordinary refresh can still complete. If the refresh itself fails, the previous graph stays available.
 
 ## Run locally
 
@@ -92,7 +93,7 @@ python -m tracegraph.runtime evaluate --commitment-id TG-GOLD-H008 --commitment-
 
 The report separates confirmed one-to-one matches, evidence that needs review, unmatched evidence, and failed research jobs. Confirmed recall is matched reference evidence divided by all reference evidence in scored cases. With no IDs supplied, the evaluator selects the first two completed detail tabs by ID. See `evaluate --help` for options, including a custom workbook path and reviewed matches.
 
-The [delivery assessment study](evaluation/verdict-grounding/report.md) replays fixed source passages against the production assessor and grades the displayed verdict and explanation with a tool-free GPT-5.4 judge. The [Golden fact coverage review](evaluation/verdict-grounding/coverage-review.md) measures how many reference facts users can recover from the evidence TraceGraph found across 22 commitments.
+The [delivery assessment study](evaluation/verdict-grounding/report.md) replays fixed source passages against the production assessor and grades the displayed verdict and explanation with a tool-free GPT-5.4 judge. The [coverage experiment](evaluation/coverage-loss/README.md) compares three ways to recover missing reference facts across 22 commitments. The [integration review](evaluation/verdict-grounding/coverage-review.md) examines how additional evidence changes a displayed assessment.
 
 ## Repository layout
 

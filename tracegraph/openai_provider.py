@@ -250,6 +250,10 @@ class OpenAIWebResearcher(ClaudeWebResearcher):
         self._search_client = search_client or client
         self._load_source = source_loader or load_public_text
 
+    def locate_documents(self, request, *, system, max_uses):
+        proposals, _, sources = self._search_client.search(request, system=system, max_uses=max_uses)
+        return proposals, sources
+
     def _search(self, request, *, system=_SEARCH_SYSTEM, max_uses=6):
         max_uses = self._claim_search_uses(max_uses)
         if not max_uses:

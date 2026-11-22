@@ -4,6 +4,8 @@ from datetime import date, datetime
 from logging import getLogger
 from urllib.parse import urlsplit
 
+from tracegraph.public_excerpt import normalize_excerpt
+
 
 _DISCOVERED_FIELDS = (
     "description",
@@ -34,11 +36,12 @@ class ResearchUnavailable(RuntimeError):
 class Agent:
     """Use injected retrieval, persistence, and evidence provider adapters."""
 
-    def __init__(self, retrieval, research_store, researcher, reconciler=None):
+    def __init__(self, retrieval, research_store, researcher, reconciler=None, *, companion_research=None):
         self._retrieval = retrieval
         self._store = research_store
         self._researcher = researcher
         self._reconciler = reconciler
+        self._companion_research = companion_research
 
     def lookup(self, query):
         """Decide lookup routing. The API owns idempotency and task admission."""
@@ -124,7 +127,7 @@ class Agent:
             self._store.finish_without_run(claim, result)
             return
         missing_scope = _scope_parts(response, "missing_scope")
-        if missing_scope or draft is None or not _has_original_promise(draft.get("original_promise")):
+        if missing_scope or draft is None or not _has_cited_passage(draft.get("original_promise")):
             gaps = _scope_parts(response, "gaps") or missing_scope or [
                 "A source documenting the complete requested original obligation is still needed."]
             located = _web_leads(response.get("related_evidence", []), limit=32)
@@ -230,11 +233,31 @@ class Agent:
             return
 
         followup_cache = {}
-        for _ in range(_MAX_RESEARCH_WRITE_ATTEMPTS):
+        companions = []
+        for attempt in range(_MAX_RESEARCH_WRITE_ATTEMPTS):
             snapshot = self._store.research_snapshot(commitment_id)
             if snapshot is None:
                 raise ValueError("The refresh target no longer exists")
-            enriched = self._reconcile(context, snapshot, result, followup_cache)
+            if attempt == 0 and self._companion_research is not None:
+                try:
+                    candidates = self._companion_research(context, snapshot, result)
+                    if not isinstance(candidates, list):
+                        raise ResearchUnavailable("Companion research returned an invalid evidence list")
+                    companions = [item for item in candidates if _valid_evidence(item) and _has_cited_passage(item)]
+                except Exception:
+                    LOG.warning("Companion document research failed; continuing the ordinary refresh.", exc_info=True)
+            combined = _with_companions(snapshot, result, companions)
+            try:
+                enriched = self._reconcile(context, snapshot, combined, followup_cache)
+            except ResearchUnavailable:
+                if combined is result:
+                    raise
+                LOG.warning("Companion evidence could not be reconciled; retrying the ordinary refresh.", exc_info=True)
+                companions = []
+                # A failed plan may already have spent this job's conflict search.
+                # Discard its supports and decisions, retaining only that budget marker.
+                followup_cache = {"reviewed_pairs": []} if "reviewed_pairs" in followup_cache else {}
+                enriched = self._reconcile(context, snapshot, result, followup_cache)
             saved = self._store.finish_refresh(claim, enriched)
             if saved["outcome"] == "COMMITTED":
                 return
@@ -254,6 +277,30 @@ class Agent:
 
 def _error(code, message, *, retryable=True):
     return {"code": code, "message": message, "retryable": retryable}
+
+
+def _with_companions(snapshot, result, companions):
+    if not companions:
+        return result
+
+    def passage_key(item):
+        source = item["source"]
+        url = source.get("url")
+        reference = url.partition("#")[0] if _has_text(url) else source.get("citation")
+        excerpt = item.get("excerpt")
+        return reference, normalize_excerpt(excerpt) if isinstance(excerpt, str) else ""
+
+    # A companion may locate an already captured passage at a different character offset.
+    # Recheck against the current revision if a concurrent refresh saved it first.
+    seen = {passage_key(item) for finding in snapshot["findings"] for item in finding["supports"]}
+    seen.update(passage_key(item) for item in result["evidence"])
+    new = []
+    for item in companions:
+        key = passage_key(item)
+        if key not in seen:
+            new.append(item)
+            seen.add(key)
+    return {**result, "evidence": [*result["evidence"], *new]} if new else result
 
 
 def _has_text(value):
@@ -312,12 +359,12 @@ def _has_source_reference(source):
         return False
 
 
-def _has_original_promise(promise):
+def _has_cited_passage(passage):
     return (
-        isinstance(promise, dict)
-        and _has_source_reference(promise.get("source"))
-        and _has_text(promise.get("locator"))
-        and _has_text(promise.get("excerpt"))
+        isinstance(passage, dict)
+        and _has_source_reference(passage.get("source"))
+        and _has_text(passage.get("locator"))
+        and _has_text(passage.get("excerpt"))
     )
 
 
@@ -336,6 +383,17 @@ def _is_timestamp(value):
         return False
 
 
+def _valid_evidence(item):
+    return (
+        isinstance(item, dict)
+        and _has_source_reference(item.get("source"))
+        and _has_text(item.get("status"))
+        and _has_text(item.get("explanation"))
+        and (_has_text(item.get("excerpt")) or _has_text(item.get("summary")))
+        and _is_timestamp(item.get("retrieved_at"))
+    )
+
+
 def _validate_result(result):
     if (
         not isinstance(result, dict)
@@ -345,14 +403,6 @@ def _validate_result(result):
         or not isinstance(result.get("evidence"), list)
     ):
         raise ResearchUnavailable("The evidence provider returned an invalid research result")
-    for evidence in result["evidence"]:
-        if (
-            not isinstance(evidence, dict)
-            or not _has_source_reference(evidence.get("source"))
-            or not _has_text(evidence.get("status"))
-            or not _has_text(evidence.get("explanation"))
-            or not (_has_text(evidence.get("excerpt")) or _has_text(evidence.get("summary")))
-            or not _is_timestamp(evidence.get("retrieved_at"))
-        ):
-            raise ResearchUnavailable("The research result has incomplete source evidence")
+    if not all(_valid_evidence(evidence) for evidence in result["evidence"]):
+        raise ResearchUnavailable("The research result has incomplete source evidence")
     return result

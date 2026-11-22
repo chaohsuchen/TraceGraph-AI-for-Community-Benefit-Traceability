@@ -273,6 +273,12 @@ class AnthropicClient:
         self._deadline = deadline
         self._allow_web_search = allow_web_search
 
+    def _timeout_for(self, limit):
+        timeout = limit if self._deadline is None else min(limit, self._deadline - monotonic())
+        if timeout <= 0:
+            raise ProviderError("The research job reached its deadline")
+        return timeout
+
     def create(self, *, system, messages, max_tokens, **options):
         if not self._allow_web_search and options.get("tools"):
             raise ProviderError("Provider tools are disabled during fixed-evidence replay")
@@ -294,9 +300,7 @@ class AnthropicClient:
             method="POST",
         )
         started = monotonic()
-        timeout = self._timeout if self._deadline is None else min(self._timeout, self._deadline - started)
-        if timeout <= 0:
-            raise ProviderError("The research job reached its deadline")
+        timeout = self._timeout_for(self._timeout)
         document = None
         request_id = None
         status = "invalid_response"
@@ -771,6 +775,15 @@ Otherwise return supported=false and an empty quoted_support. Explain briefly.
         allocation = self._claim_search_uses(max_uses)
         if not allocation:
             return "STOP_REASON=BUDGET", {}
+        return self._web_capture(request, system, allocation, self._located_sources)
+
+    def locate_documents(self, request, *, system, max_uses):
+        sources = {}
+        _, citations = self._web_capture(request, system, max_uses, sources)
+        proposals = [{"url": item["url"], "quote": item["excerpt"]} for item in citations.values()]
+        return proposals, sources
+
+    def _web_capture(self, request, system, allocation, located_sources):
         messages = [_json_user(request)]
         blocks = []
         used = 0
@@ -785,11 +798,11 @@ Otherwise return supported=false and an empty quoted_support. Explain briefly.
             used += len(searches) or sum(row.get("type") == "web_search_tool_result" for row in content)
             reason = response.get("stop_reason")
             if reason == "end_turn":
-                return _research_citations(blocks, located_sources=self._located_sources)
+                return _research_citations(blocks, located_sources=located_sources)
             if reason != "pause_turn":
                 raise ProviderError("Claude did not finish web research")
             if used >= allocation:
-                brief, citations = _research_citations(blocks, located_sources=self._located_sources)
+                brief, citations = _research_citations(blocks, located_sources=located_sources)
                 return brief + "\nSTOP_REASON=BUDGET", citations
             # The API needs the exact encrypted search blocks on continuation.
             messages.append({"role": "assistant", "content": content})
