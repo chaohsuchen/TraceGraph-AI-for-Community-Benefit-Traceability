@@ -1610,7 +1610,7 @@ def _classify_delivery_quotes(client, citations):
     return observed, planned, timing
 
 
-def _checked_delivery(review, citations, observed, observed_timing, expected):
+def _checked_delivery(review, citations, observed, observed_timing, expected, *, retain_timing=False):
     checks = review["checks"]
     scope_gap = review["scope_gap"]
     if not isinstance(checks, dict) or set(checks) != set(expected) or not isinstance(scope_gap, str):
@@ -1658,7 +1658,9 @@ def _checked_delivery(review, citations, observed, observed_timing, expected):
         missing = [text for eid, text in elements.items() if not element_support[eid]]
         if type(row.get("timing_applies")) is not bool:
             raise ProviderError("Specify whether a timing requirement applies to the checked condition.")
-        timing = (condition["timing_requirement"] or row["timing_requirement"].strip()) if row["timing_applies"] else ""
+        timing = condition["timing_requirement"] if retain_timing else ""
+        if row["timing_applies"]:
+            timing = condition["timing_requirement"] or row["timing_requirement"].strip()
         checked_spans = [(p["citation_id"], normalize_excerpt(p["quote"])) for p in proof]
         timing_support = [span for tid in dict.fromkeys(row["timing_support_ids"])
                           if (span := observed_timing.get(tid)) and
@@ -2027,9 +2029,9 @@ class ClaudeReconciliationJudge:
         plan["relations"] = relations
         return plan
 
-    def assess(self, context, snapshot):
+    @staticmethod
+    def _assessment_input(context, snapshot, as_of):
         citations = _assessment_citations(snapshot)
-        as_of = datetime.now(timezone.utc).date()
         target = _assessment_target(context, include_scope_hint=not context.get("requested_query"))
         data = {"target": target, "citations": citations, "as_of": as_of.isoformat()}
         if citations and context.get("requested_query"):
@@ -2039,14 +2041,8 @@ class ClaudeReconciliationJudge:
         data.update(_public_text_fields(context, ("requested_query",)))
         anchors = context.get("requested_criteria") or ([target["original_text"]] if target.get("original_text") else [])
         requested = {f"s{number}": text for number, text in enumerate(anchors, 1)}
-        schema = _FINAL_ASSESSMENT_SCHEMA
         if requested:
             data["generated_scope_hints"] = requested
-            criterion = _object({
-                **_DELIVERY_CRITERION_SCHEMA["properties"],
-                "scope_criteria": {"type": "array", "items": {"type": "string", "enum": list(requested)}},
-            })
-            schema = _object({**schema["properties"], "criteria": {"type": "array", "items": criterion}})
         conflicts = [
             {field: relation[field] for field in ("from_id", "to_id", "status", "preferred_id")}
             for relation in snapshot["relations"] if relation["kind"] == "CONFLICT"
@@ -2056,6 +2052,19 @@ class ClaudeReconciliationJudge:
             for side in ("from_id", "to_id") if edge[side] != edge["preferred_id"]
         }
         assessment_input = {**data, "conflicts": conflicts} if conflicts else data
+        return assessment_input, requested, losing_findings
+
+    def assess(self, context, snapshot):
+        as_of = datetime.now(timezone.utc).date()
+        assessment_input, requested, losing_findings = self._assessment_input(context, snapshot, as_of)
+        citations = assessment_input["citations"]
+        schema = _FINAL_ASSESSMENT_SCHEMA
+        if requested:
+            criterion = _object({
+                **_DELIVERY_CRITERION_SCHEMA["properties"],
+                "scope_criteria": {"type": "array", "items": {"type": "string", "enum": list(requested)}},
+            })
+            schema = _object({**schema["properties"], "criteria": {"type": "array", "items": criterion}})
         try:
             result = _structured(self._client, _ASSESS_SYSTEM, assessment_input, schema, 4096)
             _validate_assessment_criteria(result, citations, requested)
@@ -2070,60 +2079,7 @@ class ClaudeReconciliationJudge:
                  "scope_criteria": row["scope_criteria"] if requested else []}
                 for row, scope_locks in zip(result["criteria"], locks)]
         positive_rows = [row for row in rows if row["delivery_status"] in _POSITIVE_DELIVERY]
-        check_conditions = {
-            f"v{index}": {
-                "criterion": row["criterion"], "timing_requirement": row["timing_requirement"].strip(),
-                "promise_scope": row["promise_scope"], "promise_citation_ids": row["promise_citation_ids"],
-                "locked_scopes": row["locked_scopes"],
-                "required_elements": {f"e{i}": text for i, text in enumerate(row["required_elements"], 1)},
-            } for index, row in enumerate(positive_rows, 1)
-        }
-        verified, scope_gap = {}, ""
-        if check_conditions:
-            observed, planned_quotes, observed_timing = _classify_delivery_quotes(self._client, citations)
-            # Exclude planned spans even if the classifier also lists them as
-            # outcomes. A source can document both a plan and a distinct result.
-            observed = {(id_, quote) for id_, quote in observed
-                        if citations[id_]["finding_id"] not in losing_findings and not any(
-                id_ == planned_id and (quote in term or term in quote) for planned_id, term in planned_quotes
-            )}
-            if observed:
-                eligible_outcomes = [{"citation_id": id_, "quote": quote} for id_, quote in sorted(observed)]
-                eligible_timing = [quote for quote in sorted(observed_timing) if _within_observed_quotes(quote, observed)]
-                timing_by_id = {f"t{index}": {"citation_id": id_, "quote": quote}
-                                for index, (id_, quote) in enumerate(eligible_timing, 1)}
-                timing_id = {"type": "string", "enum": list(timing_by_id)} if timing_by_id else _TEXT
-                citation_ids = {"type": "array", "items": {"type": "string",
-                                "enum": sorted({citation_id for citation_id, _ in observed})}}
-                checks = {key: _object({
-                    **_DELIVERY_CHECK_FIELDS,
-                    "timing_support_ids": {"type": "array", "items": timing_id},
-                    "element_support": _object(dict.fromkeys(condition["required_elements"], citation_ids)),
-                }) for key, condition in check_conditions.items()}
-                schema = _object({"scope_gap": _TEXT, "checks": _object(checks)})
-                review = _structured(self._client, _VERIFY_DELIVERY_SYSTEM, {
-                    **assessment_input, "conditions": [row["criterion"] for row in rows],
-                    "check_conditions": check_conditions,
-                    "observed_outcomes": eligible_outcomes,
-                    "observed_timing": timing_by_id,
-                }, schema, 4096)
-                verified, scope_gap = _checked_delivery(review, citations, observed, timing_by_id, check_conditions)
-            else:
-                verified = {condition["criterion"]: _unverified_delivery("The cited excerpts describe no observed delivery.")
-                            for condition in check_conditions.values()}
-        rows = [
-            {**row, "delivery_citation_ids": [], "delivery_support": [],
-             "delivery_status": "UNVERIFIED" if row["delivery_status"] == "NOT_YET_DUE" else row["delivery_status"],
-             "gap": row["gap"].strip() or (
-                 "The cited excerpts leave delivery unresolved."
-                 if row["delivery_status"] in ("UNVERIFIED", "NOT_YET_DUE") else ""
-             ),
-             **verified.get(row["criterion"], {})}
-            for row in rows
-        ]
-        positive = [row for row in rows if row["delivery_status"] in _POSITIVE_DELIVERY]
-        if positive:
-            _challenge_delivery(self._client, assessment_input, positive)
+        rows, scope_gap = self._verify_performance(assessment_input, rows, positive_rows, losing_findings)
         for row in rows:
             if row["delivery_status"] == "UNVERIFIED" and row["promise_citation_ids"]:
                 # The original terms and an unproven real-world result are two
@@ -2165,7 +2121,7 @@ class ClaudeReconciliationJudge:
                     for year in re.findall(r"\b[12]\d{3}\b", citations[id_]["excerpt"])
                 ):
                     timing = _structured(self._client, _FUTURE_DEADLINE_SYSTEM, {
-                        **data, "conditions": deadline_sources,
+                        **{k: v for k, v in assessment_input.items() if k != "conflicts"}, "conditions": deadline_sources,
                     }, _FUTURE_DEADLINE_SCHEMA, 1024)
                     deadlines = _future_deadlines(timing["not_yet_due"], deadline_sources, citations, as_of, losing_findings)
                     if deadlines:
@@ -2182,6 +2138,93 @@ class ClaudeReconciliationJudge:
             if citations:
                 report["reasoning"] += "\n\nCited source excerpts (promise, delivery, or context as assessed above):\n" + _assessment_sources(citations)
         return result
+
+    def recover_delivery(self, context, snapshot, assessment):
+        """Recheck the actual outcome once, using only the original conditions and cited passages."""
+        as_of = datetime.now(timezone.utc).date()
+        data, _, losing_findings = self._assessment_input(context, snapshot, as_of)
+        rows, candidates = [], []
+        for original in assessment["criteria"]:
+            # Do not feed the rejected interpretations or their verdict back to a reader.
+            row = {key: original[key] for key in ("criterion", "required_elements", "scope_criteria", "promise_scope",
+                   "promise_citation_ids", "timing_requirement", "locked_scopes")}
+            row.update(_unverified_delivery("Delivery has not been independently established."),
+                       observed_scope="In-scope performance remains unverified.")
+            rows.append(row)
+            if original["delivery_status"] == "REFUTED":
+                candidates.append(row)
+        data["review_focus"] = (
+            "Check actual performance of the requested action separately from whether it met each original qualifier. "
+            "An observed action can support the action even when its date or another required detail remains unknown. "
+            "Name the specific part performed and the remaining gap. Require a source-owned in-scope occurrence."
+        )
+        try:
+            rows, gap = self._verify_performance(data, rows, candidates, losing_findings, retain_timing=True)
+        except ProviderError:
+            return {"status": "UNAVAILABLE"}
+        verdict = _delivery_verdict(rows, gap)
+        if data["citations"]:
+            verdict["reasoning"] += "\n\nCited source excerpts:\n" + _assessment_sources(data["citations"])
+        return {"status": "COMPLETED", **verdict, "criteria": rows, "scope_gap": gap}
+
+    def _verify_performance(self, assessment_input, rows, candidates, losing_findings, *, retain_timing=False):
+        citations = assessment_input["citations"]
+        check_conditions = {
+            f"v{index}": {
+                "criterion": row["criterion"], "timing_requirement": row["timing_requirement"].strip(),
+                "promise_scope": row["promise_scope"], "promise_citation_ids": row["promise_citation_ids"],
+                "locked_scopes": row["locked_scopes"],
+                "required_elements": {f"e{i}": text for i, text in enumerate(row["required_elements"], 1)},
+            } for index, row in enumerate(candidates, 1)
+        }
+        verified, scope_gap = {}, ""
+        if check_conditions:
+            observed, planned_quotes, observed_timing = _classify_delivery_quotes(self._client, citations)
+            # Exclude planned spans even if the classifier also lists them as
+            # outcomes. A source can document both a plan and a distinct result.
+            observed = {(id_, quote) for id_, quote in observed
+                        if citations[id_]["finding_id"] not in losing_findings and not any(
+                id_ == planned_id and (quote in term or term in quote) for planned_id, term in planned_quotes
+            )}
+            if observed:
+                eligible_outcomes = [{"citation_id": id_, "quote": quote} for id_, quote in sorted(observed)]
+                eligible_timing = [quote for quote in sorted(observed_timing) if _within_observed_quotes(quote, observed)]
+                timing_by_id = {f"t{index}": {"citation_id": id_, "quote": quote}
+                                for index, (id_, quote) in enumerate(eligible_timing, 1)}
+                timing_id = {"type": "string", "enum": list(timing_by_id)} if timing_by_id else _TEXT
+                citation_ids = {"type": "array", "items": {"type": "string",
+                                "enum": sorted({citation_id for citation_id, _ in observed})}}
+                checks = {key: _object({
+                    **_DELIVERY_CHECK_FIELDS,
+                    "timing_support_ids": {"type": "array", "items": timing_id},
+                    "element_support": _object(dict.fromkeys(condition["required_elements"], citation_ids)),
+                }) for key, condition in check_conditions.items()}
+                schema = _object({"scope_gap": _TEXT, "checks": _object(checks)})
+                review = _structured(self._client, _VERIFY_DELIVERY_SYSTEM, {
+                    **assessment_input, "conditions": [row["criterion"] for row in rows],
+                    "check_conditions": check_conditions,
+                    "observed_outcomes": eligible_outcomes,
+                    "observed_timing": timing_by_id,
+                }, schema, 4096)
+                verified, scope_gap = _checked_delivery(review, citations, observed, timing_by_id, check_conditions,
+                                                        retain_timing=retain_timing)
+            else:
+                verified = {condition["criterion"]: _unverified_delivery("The cited excerpts describe no observed delivery.")
+                            for condition in check_conditions.values()}
+        rows = [
+            {**row, "delivery_citation_ids": [], "delivery_support": [],
+             "delivery_status": "UNVERIFIED" if row["delivery_status"] == "NOT_YET_DUE" else row["delivery_status"],
+             "gap": row["gap"].strip() or (
+                 "The cited excerpts leave delivery unresolved."
+                 if row["delivery_status"] in ("UNVERIFIED", "NOT_YET_DUE") else ""
+             ),
+             **verified.get(row["criterion"], {})}
+            for row in rows
+        ]
+        positive = [row for row in rows if row["delivery_status"] in _POSITIVE_DELIVERY]
+        if positive:
+            _challenge_delivery(self._client, assessment_input, positive)
+        return rows, scope_gap
 
     def verify_conflicts(self, context, pairs):
         data = {

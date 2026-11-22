@@ -108,12 +108,13 @@ class EvidenceReconciler:
     """Run one review at most for each cache shared across a job's retries."""
 
     def __init__(self, judge, *, followup=None, assessor=None, verify_conflicts=None, verify_refutation=None,
-                 on_assessment=None):
+                 recover_delivery=None, on_assessment=None):
         self._judge = judge
         self._followup = followup
         self._assessor = assessor
         self._verify_conflicts = verify_conflicts
         self._verify_refutation = verify_refutation
+        self._recover_delivery = recover_delivery
         self._on_assessment = on_assessment
 
     def reconcile(self, context, snapshot, result, *, followup_cache=None):
@@ -145,9 +146,11 @@ class EvidenceReconciler:
                 self._check_conflicts(context, state, cache)
 
         assessment = self._assessor(context, deepcopy(state)) if self._assessor else state["assessment"]
-        if self._on_assessment is not None:
-            self._on_assessment(deepcopy(assessment))
-        assessment = self._check_assessment(context, state, assessment)
+        try:
+            displayed = self._check_assessment(context, state, assessment)
+        finally:
+            if self._on_assessment is not None:
+                self._on_assessment(deepcopy(assessment))
         remaining = {_relation_key(edge["kind"], edge["from_id"], edge["to_id"]) for edge in state["relations"]}
         dismissed = [
             (edge["from_id"], edge["to_id"]) for edge in snapshot["relations"]
@@ -156,7 +159,7 @@ class EvidenceReconciler:
         return {
             "expected_revision": revision,
             "verification_date": result["verification_date"],
-            **assessment,
+            **displayed,
             "findings": state["findings"],
             "relations": state["relations"],
             "dismissed_conflicts": dismissed,
@@ -205,6 +208,7 @@ class EvidenceReconciler:
         if assessment["label"] != "REFUTED":
             return assessment
         proofs = value.get("refutation")
+        rejected = False
         if isinstance(proofs, dict):
             proofs = [proofs]
         if isinstance(proofs, list) and self._verify_refutation is not None:
@@ -215,7 +219,11 @@ class EvidenceReconciler:
                 quote = proof.get("quote")
                 finding = findings.get(proof.get("finding_id"))
                 support = _cited_support(finding, quote) if finding else None
-                if support is None or self._verify_refutation(context, support, proof["basis"], quote) is not True:
+                if support is None:
+                    continue
+                verified = self._verify_refutation(context, support, proof["basis"], quote)
+                if verified is not True:
+                    rejected |= verified is False
                     continue
                 source = support["source"]
                 reference = source.get("url") or source["citation"]
@@ -224,7 +232,24 @@ class EvidenceReconciler:
         fallback = value.get("delivery_fallback")
         if isinstance(fallback, dict) and fallback.get("label") == "PARTIALLY_CORROBORATED":
             return _assessment(fallback, state["relations"], checked_conflicts=self._verify_conflicts is not None)
-        return _unverified("The available evidence does not directly establish withdrawal or disproof of this commitment.")
+        if (rejected and self._recover_delivery is not None
+                and any(row["delivery_status"] == "REFUTED" for row in value.get("criteria", []))):
+            if "rejected_refutation_review" not in value:
+                value["rejected_refutation_review"] = self._recover_delivery(context, state, value)
+            recovery = value["rejected_refutation_review"]
+            if recovery.get("status") == "COMPLETED" and recovery.get("label") in ("PARTIALLY_CORROBORATED", "CORROBORATED"):
+                return _assessment(recovery, state["relations"], checked_conflicts=self._verify_conflicts is not None)
+        reason = "The available evidence does not directly establish withdrawal or disproof of this commitment."
+        excerpts = []
+        for finding in state["findings"]:
+            for support in finding["supports"]:
+                quote, source = support.get("excerpt"), support["source"]
+                reference = source.get("url") or source.get("citation")
+                if isinstance(quote, str) and quote.strip() and reference:
+                    excerpts.append(f'c{len(excerpts) + 1}: “{quote}”\n{reference}')
+        if excerpts:
+            reason += "\n\nSource excerpts for context:\n" + "\n\n".join(excerpts)
+        return _unverified(reason)
 
     @staticmethod
     def _pairs(state, pending, snapshot):

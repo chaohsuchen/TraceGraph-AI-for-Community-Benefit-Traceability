@@ -189,9 +189,9 @@ def create_application(
                                      **research_options)
         reconciliation_judge = ClaudeReconciliationJudge(client)
         assessment_client = client_type(model=model, reasoning_effort="low", **options) if provider == "openai" else client
-        assessor = ClaudeReconciliationJudge(assessment_client).assess
+        assessor = ClaudeReconciliationJudge(assessment_client)
         reconciler = EvidenceReconciler(
-            reconciliation_judge, assessor=assessor,
+            reconciliation_judge, assessor=assessor.assess, recover_delivery=assessor.recover_delivery,
             followup=researcher.review_conflicts if enable_conflict_review else None,
             verify_conflicts=reconciliation_judge.verify_conflicts,
             verify_refutation=reconciliation_judge.verify_refutation,

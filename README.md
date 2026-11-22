@@ -29,6 +29,8 @@ flowchart LR
 
 When an identity is ambiguous or research leaves the original promise unverified, the same search panel offers relevant saved commitments and cited web leads when available. Select a saved commitment to open its graph, choose a web lead to research it, or add a detail to narrow the next search. The panel keeps the conversation open until you choose **Quit**.
 
+A proposed refutation also needs a supporting passage. If that passage fails the independent check, the assessor can examine the existing excerpts for an outcome that did occur, such as an opening whose original deadline remains uncertain. Opening a saved graph shows its stored assessment. A successful **Research again** re-evaluates the combined evidence, even when all the sources found on refresh were already present.
+
 PostgreSQL is the source of truth for commitment identity, embeddings, findings, source citations, and the current assessment. The API generates JSON for the browser. The LLM handles semantic judgments, and Python handles routing, validation, and persistence.
 
 ## Explore and refresh a graph
