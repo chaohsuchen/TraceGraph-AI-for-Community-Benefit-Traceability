@@ -1,0 +1,95 @@
+[
+  {
+    "type": "search_budget",
+    "allocated": 4,
+    "remaining": 2,
+    "limit": 6
+  },
+  {
+    "type": "provider_call",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 11.297000000020489,
+    "usage": {
+      "input_tokens": 21828,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 4608
+      },
+      "output_tokens": 662,
+      "output_tokens_details": {
+        "reasoning_tokens": 250
+      },
+      "total_tokens": 22490
+    },
+    "stop_reason": "completed",
+    "search_enabled": true
+  },
+  {
+    "type": "web_shape",
+    "requested": 4,
+    "tools": [
+      [
+        "completed",
+        "search"
+      ],
+      [
+        "completed",
+        "open_page"
+      ],
+      [
+        "completed",
+        "open_page"
+      ],
+      [
+        "completed",
+        "open_page"
+      ],
+      [
+        "searching",
+        "search"
+      ]
+    ],
+    "message_count": 1
+  },
+  {
+    "type": "failure",
+    "class": "ProviderError",
+    "frames": [
+      [
+        "diagnose.py",
+        56,
+        "main"
+      ],
+      [
+        "providers.py",
+        581,
+        "__call__"
+      ],
+      [
+        "experimental_prompt.py",
+        103,
+        "search"
+      ],
+      [
+        "openai_provider.py",
+        240,
+        "_search"
+      ],
+      [
+        "openai_provider.py",
+        168,
+        "search"
+      ],
+      [
+        "openai_provider.py",
+        198,
+        "_search_sources"
+      ]
+    ]
+  }
+]

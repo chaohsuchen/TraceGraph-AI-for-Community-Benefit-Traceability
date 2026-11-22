@@ -65,6 +65,10 @@ def _output_parts(document):
     return parts
 
 
+class IncompleteWebSearch(ProviderError):
+    """No usable source could be attributed to a completed search action."""
+
+
 class OpenAIClient:
     """Injectable OpenAI Responses API client."""
 
@@ -140,6 +144,9 @@ class OpenAIClient:
                         if item.get("type") == "web_search_call" and isinstance(item.get("id"), str)
                     ],
                     "stop_reason": document.get("status"),
+                    **({"web_search_statuses": [item.get("status") for item in document.get("output", [])
+                                                if item.get("type") == "web_search_call"]}
+                       if options.get("tools") else {}),
                 })
         return document
 
@@ -194,14 +201,18 @@ def _source_url(value):
 
 def _search_sources(output, parts):
     calls = [item for item in output if item.get("type") == "web_search_call"]
-    if not calls or any(call.get("status") != "completed" for call in calls):
-        raise ProviderError("OpenAI web search did not complete")
+    completed = [call for call in calls if call.get("status") == "completed"]
+    if not completed:
+        raise IncompleteWebSearch("OpenAI web search did not complete")
+    mixed = len(completed) != len(calls)
     sources = {}
     reported_results = None
-    for call in calls:
+    for call in completed:
         action = call.get("action")
         if not isinstance(action, dict):
             raise ProviderError("OpenAI returned a malformed web search action")
+        if action.get("type") in {"open_page", "find_in_page"} and (url := _source_url(action.get("url"))):
+            sources.setdefault(url, url)
         listed = action.get("sources")
         if not isinstance(listed, list):
             continue
@@ -218,8 +229,12 @@ def _search_sources(output, parts):
                 continue
             url = _source_url(citation.get("url"))
             title = citation.get("title")
-            if url:
+            # Message annotations carry no tool-call ID. In a mixed response
+            # only an independently listed, completed action can authorize a URL.
+            if url and (not mixed or url in sources):
                 sources[url] = title.strip() if isinstance(title, str) and title.strip() else url
+    if mixed and not sources:
+        raise IncompleteWebSearch("OpenAI web search did not complete with attributable sources")
     return sources, reported_results
 
 
@@ -237,7 +252,16 @@ class OpenAIWebResearcher(ClaudeWebResearcher):
         max_uses = self._claim_search_uses(max_uses)
         if not max_uses:
             return "STOP_REASON=BUDGET", {}
-        rows, stop, sources = self._search_client.search(request, system=system, max_uses=max_uses)
+        try:
+            rows, stop, sources = self._search_client.search(request, system=system, max_uses=max_uses)
+        except IncompleteWebSearch:
+            # A DISCOVER retry consumes its existing reserve. The second call
+            # is deliberately outside this handler and can never re-enter it.
+            if not self._budget_discovery or not self._allow_source_recovery or not self._remaining_search_uses:
+                raise
+            remaining = self._claim_search_uses(min(max_uses, self._remaining_search_uses))
+            self._emit({"type": "search_retry", "reason": "incomplete_web_search", "allocated": remaining})
+            rows, stop, sources = self._search_client.search(request, system=system, max_uses=remaining)
         self._located_sources.update(sources)
         pages = {}
         citations = {}

@@ -1,0 +1,213 @@
+[
+  {
+    "type": "search_budget",
+    "allocated": 4,
+    "remaining": 2,
+    "limit": 6
+  },
+  {
+    "type": "provider_call",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 9.953000000095926,
+    "usage": {
+      "input_tokens": 16539,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 4608
+      },
+      "output_tokens": 727,
+      "output_tokens_details": {
+        "reasoning_tokens": 194
+      },
+      "total_tokens": 17266
+    },
+    "stop_reason": "completed",
+    "search_enabled": true
+  },
+  {
+    "type": "web_shape",
+    "requested": 4,
+    "tools": [
+      [
+        "completed",
+        "search"
+      ],
+      [
+        "completed",
+        "search"
+      ],
+      [
+        "completed",
+        "open_page"
+      ]
+    ],
+    "message_count": 1
+  },
+  {
+    "type": "research_capture",
+    "citations": 7,
+    "draft": false
+  },
+  {
+    "type": "provider_call",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 8.21799999999348,
+    "usage": {
+      "input_tokens": 2482,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 668,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3150
+    },
+    "stop_reason": "completed",
+    "search_enabled": false
+  },
+  {
+    "type": "provider_call",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 2.48499999998603,
+    "usage": {
+      "input_tokens": 2011,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 182,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2193
+    },
+    "stop_reason": "completed",
+    "search_enabled": false
+  },
+  {
+    "type": "provider_call",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 0.9220000000204891,
+    "usage": {
+      "input_tokens": 1064,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 25,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1089
+    },
+    "stop_reason": "completed",
+    "search_enabled": false
+  },
+  {
+    "type": "provider_call",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 1.484000000054948,
+    "usage": {
+      "input_tokens": 353,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 69,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 422
+    },
+    "stop_reason": "completed",
+    "search_enabled": false
+  },
+  {
+    "type": "provider_call",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 1.797000000020489,
+    "usage": {
+      "input_tokens": 408,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 76,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 484
+    },
+    "stop_reason": "completed",
+    "search_enabled": false
+  },
+  {
+    "type": "provider_call",
+    "model": "gpt-5.4",
+    "status": "ok",
+    "seconds": 1.515999999945052,
+    "usage": {
+      "input_tokens": 392,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 78,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 470
+    },
+    "stop_reason": "completed",
+    "search_enabled": false
+  },
+  {
+    "type": "research_extracted",
+    "citations": 0,
+    "draft": true
+  },
+  {
+    "type": "result",
+    "status": "returned",
+    "draft": true,
+    "related": 0,
+    "unmatched": 3,
+    "leads": 0
+  }
+]

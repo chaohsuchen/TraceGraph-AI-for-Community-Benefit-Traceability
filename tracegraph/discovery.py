@@ -281,8 +281,14 @@ def _discover(researcher, request, citations, retrieved_at, matched):
             try:
                 _, found = researcher._search({**request, "target": request["target"],
                                                "evidence_gap": followup, "missing_evidence": gaps}, max_uses=2)
-            except ProviderError:
-                found = {}
+            except Exception as exc:
+                # This search is optional enrichment. Keep previously verified
+                # records and their last known relevance even if its adapter fails.
+                partial = _interrupted(researcher, citations, retrieved_at, "followup_search", matched,
+                                       type(exc).__name__)
+                partial["target_status"] = target_status
+                partial["gaps"] = list(dict.fromkeys(gaps + partial["gaps"]))
+                return partial
             if _merge(citations, found.values()):
                 researcher._emit({"type": "research_recovery_capture", "citations": citations})
                 continue

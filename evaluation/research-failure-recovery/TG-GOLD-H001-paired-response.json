@@ -1,0 +1,133 @@
+{
+ "status": "completed",
+ "usage": {
+  "input_tokens": 21780,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cache_write_tokens_details": {
+    "ttl_12h_tokens": 0,
+    "ttl_30m_tokens": 0
+   },
+   "cached_tokens": 4608
+  },
+  "output_tokens": 1052,
+  "output_tokens_details": {
+   "reasoning_tokens": 325
+  },
+  "total_tokens": 22832
+ },
+ "object": "response",
+ "output": [
+  {
+   "type": "web_search_call",
+   "status": "completed",
+   "action": {
+    "type": "search",
+    "sources": [
+     {
+      "url": "https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026"
+     },
+     {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf"
+     },
+     {
+      "url": "https://nycasinos.ny.gov/system/files/documents/2025/09/ballys-amendment-to-rfa-response-form_september-28-2025.pdf"
+     },
+     {
+      "url": "https://nycasinos.ny.gov/ballys-new-york-casino-workforce-enhancement-organized-labor-employees"
+     },
+     {
+      "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials"
+     },
+     {
+      "url": "https://apps.cio.ny.gov/apps/mediacontact/public/view.cfm?backButton=&parm=8CF994EA-BE93-69D0-2215473F6E0C6BC5"
+     },
+     {
+      "url": "https://ballysbronx.com/"
+     },
+     {
+      "url": "https://ballysbronx.com/faq/"
+     },
+     {
+      "url": "https://www.yogonet.com/international/news/2025/09/23/115469-ballys-responds-to-cac-amendments-on-4-billion-bronx-casino-plan"
+     },
+     {
+      "url": "https://bronx.news12.com/ballys-bronx-community-advisory-committee-votes-in-favor-of-ferry-point-casino-plan"
+     },
+     {
+      "url": "https://bronx.news12.com/2025/03/20/exclusive-ballys-unveils-latest-renderings-of-proposed-casino-at-ferry-point-park/36aDhcR168NRWPIfbLvLtl"
+     },
+     {
+      "url": "https://www.ballys.com/esg/"
+     },
+     {
+      "url": "https://a002-ceqraccess.nyc.gov/ceqr/Details?data=MjRETUUwMTFY0&signature=1c7557f385641122298923258ffa78cd2f1ddc67"
+     },
+     {
+      "url": "https://www.youtube.com/watch?v=sPuqjvUDL3w"
+     },
+     {
+      "url": "https://www.youtube.com/watch?v=uZa6zpO0ll4"
+     },
+     {
+      "url": "https://apnews.com/article/a804d9bf7a83c90cbbd2226d38ab102d"
+     },
+     {
+      "url": "https://apnews.com/article/2177cf00aaca76de9fa821157a3185f8"
+     },
+     {
+      "url": "https://apnews.com/article/af489ecc87ccaade7e0f01e7ef6c198d"
+     },
+     {
+      "url": "https://apnews.com/article/4ad140651214d5a412c8bf04a7dbbd40"
+     },
+     {
+      "url": "https://apnews.com/article/1f8f5a3039b573d7f7acacc9fa8d1ac9"
+     }
+    ]
+   }
+  },
+  {
+   "type": "web_search_call",
+   "status": "completed",
+   "action": {
+    "type": "open_page",
+    "url": "https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf"
+   }
+  },
+  {
+   "type": "web_search_call",
+   "status": "completed",
+   "action": {
+    "type": "open_page",
+    "url": "https://nycasinos.ny.gov/ballys-bronx-application-materials"
+   }
+  },
+  {
+   "type": "web_search_call",
+   "status": "completed",
+   "action": {
+    "type": "find_in_page",
+    "url": "https://nycasinos.ny.gov/ballys-new-york-casino-diversity-framework-workforce-demographics"
+   }
+  },
+  {
+   "type": "web_search_call",
+   "status": "searching",
+   "action": {
+    "type": "search"
+   }
+  },
+  {
+   "type": "message",
+   "content": [
+    {
+     "type": "output_text",
+     "annotations": [],
+     "logprobs": [],
+     "text": "{\"passages\":[{\"url\":\"https://nycasinos.ny.gov/system/files/documents/2026/03/12.01.25.gflbselectiondocument1.pdf\",\"quote\":\"For its permanent operations, Bally’s commits to building a diverse workforce of 3,503 full-time equivalent employees, with 70 percent of those workers coming from the Bronx, and reflecting the demographics of the Bronx. It cites its performance at Bally’s Chicago, where over 80 percent of the employees at its temporary facility identify as minority, and 45 percent are women.\"},{\"url\":\"https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026\",\"quote\":\"Bally’s projects that Bally’s Bronx will create 3,741 new permanent positions and employ 2,876 full-time and 865 part-time workers, or approximately 3,503 full-time equivalents (FTE). Median compensation is estimated to be near $80,000, including benefits; the compensation package seems low compared to the other Applicants. The Applicant states that 70 percent of employees will be Bronx residents, 47 percent will be women, and 75 percent will be minorities.\"},{\"url\":\"https://nycasinos.ny.gov/gaming-facility-location-board-final-report-and-findings-march-2026\",\"quote\":\"Based on Bally’s performance in Chicago, the Board expects these goals to be met or exceeded in the Bronx. These job creation, local hiring, and diversity commitments were among the key factors driving the Board’s selection of Bally’s, and the Board emphasizes that the goals Bally’s expressed to the community must be honored.\"},{\"url\":\"https://nycasinos.ny.gov/ballys-bronx-application-materials\",\"quote\":\"### Bally's New York Casino - Workforce Enhancement - Development of a Skilled and Diverse Workforce\"},{\"url\":\"https://nycasinos.ny.gov/ballys-bronx-application-materials\",\"quote\":\"### Bally's New York Casino - Diversity Framework - Workforce Demographics\"},{\"url\":\"https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork7.ballys.workforce-development_redacted.pdf\",\"quote\":\"This commitment will be fully realized at our proposed Bally’s Bronx Gaming Facility through comprehensive systems designed to promote skill development, diversity and upward mobility.\"},{\"url\":\"https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork7.ballys.workforce-development_redacted.pdf\",\"quote\":\"This training center would provide pre-employment preparation programs for all employees including local Bronx residents while also serving as an ongoing resource for employee development and advancement training.\"},{\"url\":\"https://nycasinos.ny.gov/system/files/documents/2025/07/evalwork7.ballys.workforce-development_redacted.pdf\",\"quote\":\"our comprehensive workforce development framework is specifically designed to address these disparities by creating accessible career pathways for residents who have historically faced barriers to stable, well-paying employment opportunities.\"},{\"url\":\"https://nycasinos.ny.gov/system/files/documents/2025/07/evaldiv1.ballys.demographics_redacted.pdf\",\"quote\":\"WORKFORCE DEMOGRAPHICS:\\nThe gender, racial, ethnic and service-disabled-veteran composition of the workforce at the Applicant’s, and, as applicable, the Operator’s, existing gaming facilities in North America, broken down by part-time and permanent positions at each gaming facility.\"}],\"stop_reason\":\"BUDGET\"}"
+    }
+   ]
+  }
+ ]
+}
