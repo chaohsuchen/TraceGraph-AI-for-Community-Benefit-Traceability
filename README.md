@@ -95,10 +95,21 @@ The report separates confirmed one-to-one matches, evidence that needs review, u
 B0 is the deterministic extraction floor from the Kickoff Pack (§04): regex, lexical patterns, and layout parsing with no generative model. It reads the Tier 1 PDFs in [`docs/tier1/`](docs/tier1/), segments them into page-addressed sentence passages, keeps passages with commitment language, classifies obligation strength with ordered taxonomy rules, and fills each attribute with regex and gazetteer patterns. Every output carries `document_id`, page, a character span in the canonical text, and a `passage_id`.
 
 ```powershell
-python -m tracegraph.b0
+python -m tracegraph.b0                          # current rules, b0-rules-v1.2
+python -m tracegraph.b0 --rules b0-rules-v1.0    # an earlier frozen version
 ```
 
-Results go to `evaluation/results/b0/`: `predictions.jsonl`, `manifest.json` (file and gold hashes, extractor version), `metrics.json`, `matches.csv` (gold vs. predicted fields for error analysis), and `report.md`. The evaluator locates each gold quote in the canonical text by its alphanumeric characters, because the workbook offsets come from a different PDF extraction. It matches predictions one-to-one by span overlap and reports commitment P/R/F1, per-field P/R/F1, and obligation-class macro-F1 by split. Rules were written from the taxonomy and the `anchor_dev` split only, so report `anchor_test` and held-out results. The gold set samples commitments rather than labelling all of them, so commitment precision is a lower bound.
+There are three frozen rule versions:
+
+| Version | Tuned on | Change |
+| --- | --- | --- |
+| `b0-rules-v1.0` | workbook `anchor_dev`, every row a positive | Recall-oriented baseline |
+| `b0-rules-v1.1` | workbook `anchor_dev`, rows marked 0 or blank as negatives (5 positives) | Drops passages with a generic obligor, regulator voice, or reported speech. These filters proved too blunt |
+| `b0-rules-v1.2` | `dev` half of `resplit_v2` (17 positives, 34 negatives) | Drops generic administrative duties ("an Applicant must provide…"), evaluative Board reactions without a dollar commitment, reported speech, and legal recitals |
+
+The 5 validated `anchor_dev` rows were too few to tune on, so the evaluator uses [`evaluation/splits/resplit_v2.json`](evaluation/splits/resplit_v2.json) by default. It is a seeded 50/50 dev/test split, stratified by validated status and applicant family, and built by [`make_resplit_v2.py`](evaluation/splits/make_resplit_v2.py). Rows inspected during earlier tuning or error analysis are forced into dev, so the test half was unseen when v1.2 was frozen. Pass `--split workbook` to use the workbook's `evaluation_split` column. Report each version's `test` row.
+
+Results for the current rules (v1.2) go to `evaluation/results/b0/`, and results for an earlier version go to `evaluation/results/b0/<rule version>/`: `predictions.jsonl`, `manifest.json` (file and gold hashes, extractor version), `metrics.json`, `matches.csv` (gold vs. predicted fields for error analysis), and `report.md`. The evaluator locates each gold quote in the canonical text by its alphanumeric characters, because the workbook offsets come from a different PDF extraction. It matches predictions one-to-one by span overlap and reports commitment P/R/F1, per-field P/R/F1, and obligation-class macro-F1 by split. By default only gold rows marked `manually annotated valid?` = 1 are scored as gold. An extraction that lands on a row marked 0 or left blank counts as a false positive, and the report says how many false positives that explains. Pass `--include-unvalidated` to score against every row. The gold set samples commitments rather than labelling all of them, so commitment precision is a lower bound.
 
 | Module | Role |
 | --- | --- |

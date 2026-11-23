@@ -8,13 +8,32 @@ The pipeline is: layout-aware sentence passages (``corpus``) -> commitment
 trigger filter -> ordered obligation-class rules -> regex/gazetteer field
 extractors. Every output carries passage-level provenance. Rules were written
 from the Kickoff Pack taxonomy and the ``anchor_dev`` split only.
+
+Rule versions (both stay reproducible; pass ``version`` to ``extract_document``):
+
+* ``b0-rules-v1.0`` was tuned for recall on every anchor_dev row.
+* ``b0-rules-v1.1`` targets the validated gold definition: only rows with
+  ``manually annotated valid?`` = 1 (verifiable commitments) are positives,
+  and anchor_dev rows marked 0 or blank are negatives. It keeps v1.0 and adds
+  three general verifiability filters (see ``unverifiable_reason``). It was
+  tuned on anchor_dev only (5 positives, 15 negatives).
+* ``b0-rules-v1.2`` was retuned on the ``dev`` half of
+  ``evaluation/splits/resplit_v2.json`` (17 positives, 34 negatives). It
+  narrows v1.1's filters (see ``unverifiable_reason_v1_2``): a generic obligor
+  is dropped only for administrative duties, only evaluative Board reactions
+  are dropped (normative Board statements are kept), and legal recitals are
+  dropped.
 """
 
 from dataclasses import asdict, dataclass
 import re
 
 
-B0_VERSION = "b0-rules-v1.0"
+B0_V1_0 = "b0-rules-v1.0"
+B0_V1_1 = "b0-rules-v1.1"
+B0_V1_2 = "b0-rules-v1.2"
+B0_VERSIONS = (B0_V1_0, B0_V1_1, B0_V1_2)
+B0_VERSION = B0_V1_2  # default
 UNSPECIFIED = "unspecified"
 NONE_STATED = "none stated"
 NONE_NAMED = "none named"
@@ -347,6 +366,83 @@ class Extraction:
         return asdict(self)
 
 
+# --- v1.1 verifiability filters --------------------------------------------
+# A verifiable commitment needs a specific obligor that undertakes something.
+# These filters drop commitment-like passages that fail that test.
+
+GENERIC_ENTITIES = frozenset({"Applicant", "Gaming Facility licensee", UNSPECIFIED})
+# The evaluator states its own view or expectation of an applicant.
+REGULATOR_VOICE = _rx(
+    r"\b(?:the\s+)?(?:board|commission|committee|siting\s+board)\s+(?:also\s+|further\s+|strongly\s+)?"
+    r"(?:expects|believes|supports|encourages|recommends|urges|notes|finds|requests|would\s+(?:like|prefer)"
+    r"|is\s+concerned|has\s+concerns|considers|views)\b"
+)
+# Second-hand reports of what a party said, not an undertaking by it.
+REPORTED_SPEECH = _rx(r"\b(?:indicated|stated|noted|said|reported|claimed|suggested)\s+that\b")
+
+
+def _clause_context(document, passage):
+    """Text of the sentence that a mid-sentence clause passage was split from."""
+    if not passage.text[:1].islower():
+        return ""
+    start = document.text.rfind("\n", 0, passage.char_start) + 1
+    before = document.text[start:passage.char_start]
+    cut = max(before.rfind(". "), before.rfind("? "), before.rfind("! "))
+    return before[cut + 2:] if cut >= 0 else before
+
+
+def unverifiable_reason(text, entity, context=""):
+    """v1.1: why a candidate is not a verifiable commitment, or "" to keep it."""
+    if entity in GENERIC_ENTITIES:
+        return "generic obligor"
+    if REGULATOR_VOICE.search(text) or REGULATOR_VOICE.search(context):
+        return "regulator voice"
+    if REPORTED_SPEECH.search(text):
+        return "reported speech"
+    return ""
+
+
+# --- v1.2 refinements ---------------------------------------------------------
+
+# Application-process duties of a generic applicant: paperwork, not benefits.
+ADMINISTRATIVE_DUTY = _rx(
+    r"\b(?:provide|produce|submit|furnish|file|complete|identify|describe|disclose|certify)\b"
+    r"|\bmaintain\s+(?:a\s+)?records?\b|\bdocumentation\b|\baffidavit\b|\binstrument\b"
+    r"|\bform\s+(?:determined|prescribed|approved)\b"
+)
+# The evaluator's reaction to an application, as opposed to a normative
+# statement ("the Board recommends ... require ...") which can become binding.
+REGULATOR_EVALUATION = _rx(
+    r"\b(?:the\s+)?(?:board|commission|committee|siting\s+board)\s+(?:also\s+|further\s+|strongly\s+)?"
+    r"(?:expects|expected|viewed|views|notes|noted|found|finds|considers|considered"
+    r"|(?:was|is)\s+(?:satisfied|disappointed|concerned|pleased|encouraged|impressed|troubled)"
+    r"|has\s+concerns)\b"
+)
+# A clause split off a Board sentence ("The Board supports X, but expects Y")
+# keeps the Board as its subject.
+_EVALUATION_VERB_START = _rx(r"^(?:also\s+)?(?:expects|expected|views|viewed|notes|noted|finds|found|considers|considered)\b")
+
+# Recitals and findings in a legal instrument: background, not operative duties.
+RECITAL = _rx(r"\bhaving\s+(?:agreed|determined|been|found)\b|\bdetermined\s+that\b|\bwhereas\b")
+
+
+def unverifiable_reason_v1_2(text, entity, context=""):
+    """v1.2: why a candidate is not a verifiable commitment, or "" to keep it."""
+    if entity in GENERIC_ENTITIES and ADMINISTRATIVE_DUTY.search(text):
+        return "generic administrative duty"
+    board_clause = bool(context) and REGULATOR_SUBJECT.search(context) and _EVALUATION_VERB_START.search(text)
+    evaluation = REGULATOR_EVALUATION.search(text) or REGULATOR_EVALUATION.search(context) or board_clause
+    # A Board reaction that restates a named party's dollar commitment still
+    # carries that commitment, which is verifiable on its own.
+    if evaluation and not (MONEY.search(text) and entity not in GENERIC_ENTITIES):
+        return "regulator evaluation"
+    if REPORTED_SPEECH.search(text):
+        return "reported speech"
+    if RECITAL.search(text):
+        return "recital"
+    return ""
+
+
 def is_commitment_candidate(text):
     words = text.split()
     if len(words) < 6 or len(words) > 120:
@@ -375,7 +471,10 @@ def _section_applicants(document):
     return marks
 
 
-def extract_document(document, as_of_year=2026):
+def extract_document(document, as_of_year=2026, version=B0_VERSION):
+    if version not in B0_VERSIONS:
+        raise ValueError(f"unknown B0 rule version {version!r}; choose from {B0_VERSIONS}")
+    default_entity = DOCUMENT_DEFAULT_ENTITY.get(document.document_id, UNSPECIFIED)
     marks = _section_applicants(document)
     results = []
     for passage in document.passages:
@@ -390,6 +489,13 @@ def extract_document(document, as_of_year=2026):
                 break
         obligation, cue = classify_obligation(text, document.document_id)
         entity = responsible_entity(text, applicant, document.document_id)
+        if version in (B0_V1_1, B0_V1_2):
+            # In an instrument issued to one party, "the licensee" is that party.
+            if entity in GENERIC_ENTITIES and default_entity not in GENERIC_ENTITIES:
+                entity = default_entity
+            reason = unverifiable_reason if version == B0_V1_1 else unverifiable_reason_v1_2
+            if reason(text, entity, _clause_context(document, passage)):
+                continue
         milestone = extract_milestone(text)
         results.append(Extraction(
             pred_id=f"B0-{document.document_id}-{len(results) + 1:04d}",
@@ -414,5 +520,6 @@ def extract_document(document, as_of_year=2026):
             evidence_status=evidence_status(obligation, text, milestone, as_of_year),
             confidence=confidence(obligation, cue, entity),
             review_state="unreviewed",
+            extractor=version,
         ))
     return results

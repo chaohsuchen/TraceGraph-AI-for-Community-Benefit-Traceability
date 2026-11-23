@@ -7,6 +7,11 @@ reused. A prediction matches a gold commitment when it covers at least half of
 the gold span (``lenient``) or when span IoU is at least 0.5 (``strict``).
 Matching is one-to-one and greedy by overlap.
 
+Gold policy. By default only rows whose "manually annotated valid?" cell is 1
+are gold (``load_gold(..., validated_only=True)``). Rows marked 0 or left blank
+are dropped, so a prediction that lands on one of them has nothing to match
+and counts as a false positive like any other unmatched prediction.
+
 Caveat. The gold set samples commitments; it does not exhaustively label every
 commitment in a document. Unmatched predictions are therefore counted as false
 positives, which makes precision a lower bound. ``annotated_pages`` precision
@@ -14,6 +19,7 @@ restricts predictions to pages that carry at least one gold commitment.
 """
 
 from collections import Counter, defaultdict
+from pathlib import Path
 import re
 
 from .b0_rules import OBLIGATION_CLASSES
@@ -51,8 +57,12 @@ STOPWORDS = frozenset(
 
 # --- Gold loading ----------------------------------------------------------
 
-def load_gold(workbook_path):
-    """Return gold commitments grouped by gold_id (duplicate rows merged)."""
+def load_gold(workbook_path, validated_only=False):
+    """Return gold commitments grouped by gold_id (duplicate rows merged).
+
+    With ``validated_only``, keep only items with at least one row whose
+    "manually annotated valid?" cell is 1; rows marked 0 or blank are dropped.
+    """
     from openpyxl import load_workbook
 
     sheet = load_workbook(workbook_path, read_only=True, data_only=True)[GOLD_SHEET]
@@ -72,6 +82,9 @@ def load_gold(workbook_path):
                 "page_section": record["page_section"],
                 "commitment_text": record["commitment_text"],
                 "evaluation_split": record["evaluation_split"],
+                "original_split": record["evaluation_split"],
+                # Applicant family from the workbook split: Resorts World vs. other applicants.
+                "family": "heldout" if str(record["evaluation_split"]).startswith("heldout") else "anchor",
                 "duplicate_of": record.get("duplicate_of"),
                 "human_validated": validated,
                 "labels": {name: [] for name in ATTRIBUTE_FIELDS + CLASS_FIELDS},
@@ -82,7 +95,27 @@ def load_gold(workbook_path):
             value = "" if record.get(name) is None else str(record[name]).strip()
             if value not in item["labels"][name]:
                 item["labels"][name].append(value)
-    return list(grouped.values())
+    items = list(grouped.values())
+    if validated_only:
+        items = [item for item in items if item["human_validated"]]
+    return items
+
+
+def apply_split(gold, split_path):
+    """Replace ``evaluation_split`` with assignments from a split file (see evaluation/splits/).
+
+    ``original_split`` and ``family`` keep the workbook's values, so anchor vs.
+    held-out applicant scope is unchanged.
+    """
+    from json import loads
+
+    assignments = loads(Path(split_path).read_text(encoding="utf-8"))["assignments"]
+    missing = [g["gold_id"] for g in gold if g["gold_id"] not in assignments]
+    if missing:
+        raise ValueError(f"split file has no assignment for {missing}")
+    for g in gold:
+        g["evaluation_split"] = assignments[g["gold_id"]]
+    return gold
 
 
 def _alnum_index(text):
@@ -120,7 +153,32 @@ def _overlap(a, b):
 
 
 def match(predictions, gold, mode="lenient"):
-    """One-to-one greedy matching. Returns {gold_id: prediction}."""
+    """Pair each gold commitment with at most one prediction, and vice versa.
+
+    Returns {gold_id: prediction}; gold items left out of the result are misses
+    (false negatives), and predictions left out are false positives.
+
+    Both sides are character spans in the same canonical document text: gold
+    spans come from ``align_gold`` and prediction spans from the passage that
+    produced them. Spans can only match within the same document.
+
+    1. Score every overlapping (gold, prediction) pair:
+         coverage = overlap / gold length        share of the gold quote covered
+         iou      = overlap / union of the spans  penalises extra text on either side
+    2. Keep pairs that pass the mode's threshold:
+         "lenient": coverage >= 0.5. A whole sentence containing a shorter gold
+                    clause still matches, so this measures *finding* the commitment.
+         "strict":  iou >= 0.5. The prediction must also be close in length, so
+                    this measures *isolating* the commitment.
+    3. Sort the kept pairs best first (coverage, then IoU; IDs break ties so
+       results are deterministic) and accept them greedily, skipping any pair
+       whose gold item or prediction is already taken.
+
+    Because matching is one-to-one, one predicted sentence that contains two
+    gold commitments can match only one of them; the other counts as missed.
+    Greedy assignment is not guaranteed optimal, but with sentence-level
+    predictions conflicts are rare and the result is easy to audit.
+    """
     candidates = []
     for g in gold:
         if not g.get("span"):
@@ -223,7 +281,7 @@ def prediction_scope(prediction):
 
 
 def gold_scope(item):
-    return "heldout" if item["evaluation_split"].startswith("heldout") else "anchor"
+    return item.get("family") or ("heldout" if item["evaluation_split"].startswith("heldout") else "anchor")
 
 
 def commitment_metrics(predictions, gold, pairs):
@@ -243,6 +301,10 @@ def commitment_metrics(predictions, gold, pairs):
         g_split = [g for g in gold if g["evaluation_split"] == split]
         tp = sum(1 for g in g_split if g["gold_id"] in pairs)
         out[f"recall_{split}"] = {"recall": round(tp / len(g_split), 4), "tp": tp, "gold": len(g_split)}
+        # Precision for one split: predictions on pages that hold this split's gold.
+        split_pages = {(g["document_id"], g.get("page")) for g in g_split if g.get("span")}
+        p_split = [p for p in predictions if (p["document_id"], p["page"]) in split_pages]
+        out[f"split_{split}"] = prf(tp, sum(1 for p in p_split if p["pred_id"] not in matched_preds), len(g_split) - tp)
     validated = [g for g in gold if g["human_validated"]]
     tp = sum(1 for g in validated if g["gold_id"] in pairs)
     out["recall_human_validated"] = {"recall": round(tp / len(validated), 4) if validated else 0.0,
@@ -314,23 +376,39 @@ def class_metrics(gold, pairs, name, labels):
     }
 
 
-def evaluate(predictions, gold, splits=None):
-    """Full report; ``splits`` restricts field/class scoring to those gold splits."""
+def evaluate(predictions, gold, splits=None, excluded=None):
+    """Full report; ``splits`` restricts field/class scoring to those gold splits.
+
+    ``excluded`` takes aligned gold items that were left out of ``gold`` (e.g.
+    rows not marked valid). They are never matched, so predictions on them stay
+    false positives; the report only counts how many false positives they explain.
+    """
     report = {"gold_items": len(gold), "gold_unaligned": [g["gold_id"] for g in gold if not g.get("span")],
-              "predictions": len(predictions)}
+              "predictions": len(predictions), "excluded_gold_items": len(excluded or [])}
     for mode in ("lenient", "strict"):
         pairs = match(predictions, gold, mode)
         section = {"commitment": commitment_metrics(predictions, gold, pairs)}
+        if excluded:
+            matched = {p["pred_id"] for p in pairs.values()}
+            unmatched = [p for p in predictions if p["pred_id"] not in matched]
+            section["commitment"]["fp_on_excluded_gold"] = len(match(unmatched, excluded, mode))
         groups = {
             "all": gold,
             "anchor": [g for g in gold if gold_scope(g) == "anchor"],
-            "anchor_test": [g for g in gold if g["evaluation_split"] == "anchor_test"],
             "heldout": [g for g in gold if gold_scope(g) == "heldout"],
             "human_validated": [g for g in gold if g["human_validated"]],
         }
+        # One group per evaluation split that is not a tuning split.
+        for split in sorted({g["evaluation_split"] for g in gold}):
+            items = [g for g in gold if g["evaluation_split"] == split]
+            same = any({g["gold_id"] for g in items} == {g["gold_id"] for g in v} for v in groups.values())
+            if split not in ("anchor_dev", "dev") and split not in groups and not same:
+                groups[split] = items
         for group, items in groups.items():
             if splits and group not in splits:
                 continue
+            if group == "human_validated" and len(items) == len(gold):
+                continue  # identical to "all" when only validated rows are gold
             section[group] = {
                 "matched": sum(1 for g in items if g["gold_id"] in pairs),
                 "attributes": field_metrics(items, pairs),

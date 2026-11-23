@@ -11,6 +11,8 @@ from tracegraph.b0_rules import (
     extract_periodicity,
     is_commitment_candidate,
     responsible_entity,
+    unverifiable_reason,
+    unverifiable_reason_v1_2,
 )
 from tracegraph.corpus import split_sentences
 from tracegraph.extraction_eval import agree, is_empty, match
@@ -77,6 +79,34 @@ class FieldPatternTests(TestCase):
         self.assertFalse(is_commitment_candidate("Shall pay."))
 
 
+class VerifiabilityFilterTests(TestCase):
+    def test_v1_1_drops_generic_regulator_and_reported_passages(self):
+        self.assertEqual(unverifiable_reason("An Applicant must deposit funds.", "Applicant"), "generic obligor")
+        self.assertEqual(unverifiable_reason("the Board expects stronger commitments.", RESORTS_WORLD),
+                         "regulator voice")
+        self.assertEqual(unverifiable_reason("expects the target to be 6 percent", RESORTS_WORLD,
+                                             "The Board supports the 47 percent target, but "), "regulator voice")
+        self.assertEqual(unverifiable_reason("The Applicant indicated that it assumed a 30-year term.", RESORTS_WORLD),
+                         "reported speech")
+        self.assertEqual(unverifiable_reason("Resorts World commits to $5 million per year.", RESORTS_WORLD), "")
+
+
+    def test_v1_2_keeps_substantive_and_normative_passages(self):
+        self.assertEqual(unverifiable_reason_v1_2("An Applicant must provide an instrument stating it will comply.",
+                                                  "Applicant"), "generic administrative duty")
+        self.assertEqual(unverifiable_reason_v1_2("The tax rate from slot machines shall be no less than 25 percent.",
+                                                  "Applicant"), "")
+        self.assertEqual(unverifiable_reason_v1_2("The Board was satisfied that it has agreements in place.",
+                                                  RESORTS_WORLD), "regulator evaluation")
+        self.assertEqual(unverifiable_reason_v1_2("expects the target to be 6 percent", RESORTS_WORLD,
+                                                  "The Board supports the 47 percent target, but "), "regulator evaluation")
+        self.assertEqual(unverifiable_reason_v1_2("The Board views the $25 million commitment favorably.", RESORTS_WORLD), "")
+        self.assertEqual(unverifiable_reason_v1_2("the Board recommends that the license require the projects.",
+                                                  RESORTS_WORLD), "")
+        self.assertEqual(unverifiable_reason_v1_2("Resorts World having agreed to execute a monitoring agreement.",
+                                                  RESORTS_WORLD), "recital")
+
+
 class SegmentationTests(TestCase):
     def test_sentences_respect_abbreviations_and_clauses(self):
         text = ("Genting New York LLC d/b/a Resorts World will pay $5 million to the U.S. fund. "
@@ -133,6 +163,44 @@ class CorpusIntegrationTests(TestCase):
             self.assertEqual(texts[p["document_id"]][p["char_start"]:p["char_end"]], p["commitment_text"])
             self.assertTrue(p["passage_id"].startswith(f"{p['document_id']}:p{p['page']}:"))
             self.assertTrue(p["evidence_status"])
+
+    def test_validated_only_gold_turns_unvalidated_hits_into_false_positives(self):
+        from tracegraph.extraction_eval import evaluate, load_gold
+
+        validated = load_gold(GOLD, validated_only=True)
+        self.assertTrue(validated)
+        self.assertTrue(all(g["human_validated"] for g in validated))
+        self.assertLess(len(validated), len(self.gold))
+
+        scored_docs = {g["document_id"] for g in self.gold}
+        preds = [p for p in self.predictions if p["document_id"] in scored_docs]
+        gold = [g for g in self.gold if g["human_validated"]]
+        excluded = [g for g in self.gold if not g["human_validated"]]
+        full = evaluate(preds, self.gold)["lenient"]["commitment"]["all"]
+        report = evaluate(preds, gold, excluded=excluded)
+        only = report["lenient"]["commitment"]["all"]
+        moved = report["lenient"]["commitment"]["fp_on_excluded_gold"]
+        self.assertGreater(moved, 0)
+        # Every prediction is either a TP on validated gold or a FP; none is dropped.
+        self.assertEqual(only["tp"] + only["fp"], len(preds))
+        self.assertEqual(only["tp"] + only["fn"], len(gold))
+        self.assertGreater(only["fp"], full["fp"])
+        self.assertLessEqual(moved, only["fp"])
+
+    def test_rule_versions_nest(self):
+        from tracegraph.b0_rules import B0_V1_0, B0_V1_1, B0_V1_2, extract_document
+        old = {e.passage_id for d in self.documents for e in extract_document(d, version=B0_V1_0)}
+        for version in (B0_V1_1, B0_V1_2):
+            new = [e.to_dict() for d in self.documents for e in extract_document(d, version=version)]
+            self.assertTrue(new)
+            self.assertTrue({p["passage_id"] for p in new} < old)
+            self.assertTrue(all(p["extractor"] == version for p in new))
+
+    def test_resplit_covers_every_gold_item(self):
+        from tracegraph.extraction_eval import apply_split
+        split = ROOT / "evaluation" / "splits" / "resplit_v2.json"
+        gold = apply_split([dict(g) for g in self.gold], split)
+        self.assertEqual({g["evaluation_split"] for g in gold}, {"dev", "test"})
 
     def test_extraction_is_deterministic(self):
         from tracegraph.b0_rules import extract_document

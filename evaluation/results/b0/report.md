@@ -1,78 +1,34 @@
 # B0 rules/patterns baseline: evaluation
 
-Extractor `b0-rules-v1.0`, text extraction `pypdf.extract_text+layout_blocks_v1`, gold workbook sha256 `eb146d6733e4`, generated 2026-11-18T07:07:10+00:00.
+Extractor `b0-rules-v1.2`, text extraction `pypdf.extract_text+layout_blocks_v1`, gold workbook sha256 `eb146d6733e4`, generated 2026-11-22T03:13:05+00:00.
 
-Gold commitments: 100 (unaligned: 0). Scored predictions (gold-covered documents only): 583.
+Gold commitments: 32 (unaligned: 0). Scored predictions (gold-covered documents only): 446.
+
+Split: `evaluation/splits/resplit_v2.json`. Gold policy: `validated_only: rows with 'manually annotated valid?' = 1 are gold; extractions of rows marked 0 or blank count as false positives`. 68 gold rows were excluded; predictions that land on them account for 34 of the lenient false positives.
 
 The gold set samples commitments rather than labelling every commitment, so unmatched predictions count as false positives and **precision is a lower bound**. `annotated pages` restricts predictions to pages that hold at least one gold commitment. *Lenient* matching needs the prediction to cover at least 50% of the gold span; *strict* needs span IoU of at least 0.5.
 
 ## Commitment-level precision / recall / F1
 
-| Matching | Scope | P | R | F1 | P (annotated pages) | F1 (annotated pages) | TP | FP | FN |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| lenient | all | 0.134 | 0.780 | 0.228 | 0.299 | 0.432 | 78 | 505 | 22 |
-| lenient | anchor | 0.113 | 0.794 | 0.199 | 0.316 | 0.452 | 54 | 422 | 14 |
-| lenient | heldout | 0.224 | 0.750 | 0.345 | 0.267 | 0.393 | 24 | 83 | 8 |
-| strict | all | 0.118 | 0.690 | 0.202 | 0.264 | 0.382 | 69 | 514 | 31 |
-| strict | anchor | 0.107 | 0.750 | 0.188 | 0.298 | 0.427 | 51 | 425 | 17 |
-| strict | heldout | 0.168 | 0.562 | 0.259 | 0.200 | 0.295 | 18 | 89 | 14 |
+| Matching | Scope | P | R | F1 | P (annotated pages) | F1 (annotated pages) | TP | FP | FP (annotated pages) | FN |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| lenient | all | 0.058 | 0.812 | 0.109 | 0.206 | 0.329 | 26 | 420 | 100 | 6 |
+| lenient | anchor | 0.031 | 0.786 | 0.060 | 0.211 | 0.333 | 11 | 344 | 41 | 3 |
+| lenient | heldout | 0.165 | 0.833 | 0.275 | 0.203 | 0.326 | 15 | 76 | 59 | 3 |
+| strict | all | 0.049 | 0.688 | 0.092 | 0.175 | 0.279 | 22 | 424 | 104 | 10 |
+| strict | anchor | 0.028 | 0.714 | 0.054 | 0.192 | 0.303 | 10 | 345 | 42 | 4 |
+| strict | heldout | 0.132 | 0.667 | 0.220 | 0.162 | 0.261 | 12 | 79 | 62 | 6 |
 
-Recall by gold split (lenient):
+By gold split (lenient). Precision counts predictions on pages that hold that split's gold; a page with gold from two splits counts for both.
 
-- anchor_dev: 1.000 (20/20)
-- anchor_test: 0.708 (34/48)
-- heldout_provisional: 0.750 (24/32)
-- human_validated: 0.812 (26/32)
+| Split | P (split pages) | R | F1 (split pages) | TP | FP (split pages) | FN |
+| --- | --- | --- | --- | --- | --- | --- |
+| dev | 0.205 | 1.000 | 0.340 | 17 | 66 | 0 |
+| test | 0.123 | 0.600 | 0.204 | 9 | 64 | 6 |
 
-## Field-level results: all (lenient matches, n = 78)
+The rules were tuned on `dev`, so `dev` results and any scope that includes them (such as `all`) are optimistic. Report the `test` row and the `test` field-level section.
 
-| Field | P | R | F1 | Presence F1 | Mean token F1 (both present) |
-| --- | --- | --- | --- | --- | --- |
-| responsible_entity | 0.974 | 0.974 | 0.974 | 0.987 | 0.824 |
-| amount_value | 0.973 | 0.783 | 0.868 | 0.892 | 0.684 |
-| term_periodicity | 0.625 | 0.156 | 0.250 | 0.400 | 0.501 |
-| geographic_scope | 0.905 | 0.452 | 0.603 | 0.667 | 0.788 |
-| beneficiary_category | 0.696 | 0.500 | 0.582 | 0.836 | 0.588 |
-| beneficiary_named | 0.800 | 0.250 | 0.381 | 0.381 | 0.765 |
-| condition_contingency | 0.778 | 0.875 | 0.824 | 0.824 | 0.702 |
-| milestone | 0.800 | 0.333 | 0.471 | 0.588 | 0.769 |
-| **attribute macro-F1** | | | **0.619** | | |
-| obligation_type (classification) | | accuracy 0.756 | macro-F1 0.749 | | |
-| evidence_status (classification) | | accuracy 0.385 | macro-F1 0.081 | | |
-
-## Field-level results: anchor_test (lenient matches, n = 34)
-
-| Field | P | R | F1 | Presence F1 | Mean token F1 (both present) |
-| --- | --- | --- | --- | --- | --- |
-| responsible_entity | 0.939 | 0.939 | 0.939 | 0.970 | 0.752 |
-| amount_value | 0.929 | 0.722 | 0.812 | 0.875 | 0.566 |
-| term_periodicity | 0.333 | 0.071 | 0.118 | 0.353 | 0.375 |
-| geographic_scope | 1.000 | 0.389 | 0.560 | 0.560 | 0.873 |
-| beneficiary_category | 0.591 | 0.382 | 0.464 | 0.786 | 0.537 |
-| beneficiary_named | 1.000 | 0.500 | 0.667 | 0.667 | 0.800 |
-| condition_contingency | 0.750 | 1.000 | 0.857 | 0.857 | 0.733 |
-| milestone | 1.000 | 0.333 | 0.500 | 0.500 | 0.962 |
-| **attribute macro-F1** | | | **0.615** | | |
-| obligation_type (classification) | | accuracy 0.765 | macro-F1 0.675 | | |
-| evidence_status (classification) | | accuracy 0.647 | macro-F1 0.131 | | |
-
-## Field-level results: heldout (lenient matches, n = 24)
-
-| Field | P | R | F1 | Presence F1 | Mean token F1 (both present) |
-| --- | --- | --- | --- | --- | --- |
-| responsible_entity | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
-| amount_value | 1.000 | 0.750 | 0.857 | 0.857 | 0.722 |
-| term_periodicity | 0.800 | 0.222 | 0.348 | 0.435 | 0.457 |
-| geographic_scope | 0.818 | 0.500 | 0.621 | 0.759 | 0.727 |
-| beneficiary_category | 0.667 | 0.500 | 0.571 | 0.857 | 0.586 |
-| beneficiary_named | 0.500 | 0.091 | 0.154 | 0.154 | 0.545 |
-| condition_contingency | 0.000 | 0.000 | 0.000 | 0.000 | - |
-| milestone | 0.000 | 0.000 | 0.000 | 1.000 | 0.222 |
-| **attribute macro-F1** | | | **0.444** | | |
-| obligation_type (classification) | | accuracy 0.625 | macro-F1 0.502 | | |
-| evidence_status (classification) | | accuracy 0.042 | macro-F1 0.020 | | |
-
-## Field-level results: human_validated (lenient matches, n = 26)
+## Field-level results: all (lenient matches, n = 26)
 
 | Field | P | R | F1 | Presence F1 | Mean token F1 (both present) |
 | --- | --- | --- | --- | --- | --- |
@@ -88,27 +44,76 @@ Recall by gold split (lenient):
 | obligation_type (classification) | | accuracy 0.692 | macro-F1 0.692 | | |
 | evidence_status (classification) | | accuracy 0.269 | macro-F1 0.077 | | |
 
+## Field-level results: heldout (lenient matches, n = 15)
+
+| Field | P | R | F1 | Presence F1 | Mean token F1 (both present) |
+| --- | --- | --- | --- | --- | --- |
+| responsible_entity | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
+| amount_value | 1.000 | 0.769 | 0.870 | 0.870 | 0.741 |
+| term_periodicity | 0.800 | 0.400 | 0.533 | 0.667 | 0.457 |
+| geographic_scope | 0.750 | 0.500 | 0.600 | 0.800 | 0.625 |
+| beneficiary_category | 0.500 | 0.400 | 0.444 | 0.889 | 0.539 |
+| beneficiary_named | 0.000 | 0.000 | 0.000 | 0.000 | - |
+| condition_contingency | 0.000 | 0.000 | 0.000 | 0.000 | - |
+| milestone | 0.000 | 0.000 | 0.000 | 1.000 | 0.222 |
+| **attribute macro-F1** | | | **0.431** | | |
+| obligation_type (classification) | | accuracy 0.600 | macro-F1 0.559 | | |
+| evidence_status (classification) | | accuracy 0.067 | macro-F1 0.038 | | |
+
+## Field-level results: test (lenient matches, n = 9)
+
+| Field | P | R | F1 | Presence F1 | Mean token F1 (both present) |
+| --- | --- | --- | --- | --- | --- |
+| responsible_entity | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
+| amount_value | 0.833 | 0.625 | 0.714 | 0.857 | 0.507 |
+| term_periodicity | 0.667 | 0.286 | 0.400 | 0.600 | 0.540 |
+| geographic_scope | 0.800 | 0.571 | 0.667 | 0.833 | 0.693 |
+| beneficiary_category | 0.250 | 0.222 | 0.235 | 0.941 | 0.337 |
+| beneficiary_named | 0.000 | 0.000 | 0.000 | 0.000 | - |
+| condition_contingency | 0.000 | 0.000 | 0.000 | 0.000 | - |
+| milestone | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
+| **attribute macro-F1** | | | **0.502** | | |
+| obligation_type (classification) | | accuracy 0.667 | macro-F1 0.583 | | |
+| evidence_status (classification) | | accuracy 0.222 | macro-F1 0.091 | | |
+
 ## Obligation class, per class (all matched gold, lenient)
 
-| Class | P | R | F1 | Gold support |
-| --- | --- | --- | --- | --- |
-| Binding / license condition | 0.826 | 0.905 | 0.864 | 21 |
-| Contractual commitment | 0.600 | 0.857 | 0.706 | 14 |
-| Target / goal | 1.000 | 0.625 | 0.769 | 8 |
-| Best effort | 1.000 | 1.000 | 1.000 | 1 |
-| Forecast / projection | 0.800 | 0.923 | 0.857 | 13 |
-| Contingent commitment | 0.500 | 0.667 | 0.571 | 3 |
-| Reported accomplishment | 1.000 | 0.500 | 0.667 | 2 |
-| Unresolved / ambiguous | 0.778 | 0.438 | 0.560 | 16 |
+Macro-F1 0.692 averages the 6 of 8 classes that have gold support among matched commitments; classes with no gold support are listed but not averaged.
+
+| Class | P | R | F1 | Gold support | Predicted | In macro |
+| --- | --- | --- | --- | --- | --- | --- |
+| Binding / license condition | 0.833 | 1.000 | 0.909 | 5 | 6 | yes |
+| Contractual commitment | 0.583 | 0.875 | 0.700 | 8 | 12 | yes |
+| Target / goal | 1.000 | 0.333 | 0.500 | 3 | 1 | yes |
+| Best effort | 0.000 | 0.000 | 0.000 | 0 | 0 | no |
+| Forecast / projection | 0.333 | 1.000 | 0.500 | 1 | 3 | yes |
+| Contingent commitment | 1.000 | 1.000 | 1.000 | 1 | 1 | yes |
+| Reported accomplishment | 0.000 | 0.000 | 0.000 | 0 | 0 | no |
+| Unresolved / ambiguous | 1.000 | 0.375 | 0.545 | 8 | 3 | yes |
+
+## Evidence status, per class (all matched gold, lenient)
+
+Macro-F1 0.077 averages the 7 of 8 classes that have gold support among matched commitments; classes with no gold support are listed but not averaged.
+
+| Class | P | R | F1 | Gold support | Predicted | In macro |
+| --- | --- | --- | --- | --- | --- | --- |
+| corroborated | 0.000 | 0.000 | 0.000 | 1 | 0 | yes |
+| partially corroborated | 0.000 | 0.000 | 0.000 | 3 | 0 | yes |
+| self-reported only | 0.000 | 0.000 | 0.000 | 0 | 0 | no |
+| conflicting | 0.000 | 0.000 | 0.000 | 1 | 0 | yes |
+| no public evidence located | 0.240 | 1.000 | 0.387 | 6 | 25 | yes |
+| source unavailable | 0.000 | 0.000 | 0.000 | 1 | 0 | yes |
+| not yet due | 1.000 | 0.083 | 0.154 | 12 | 1 | yes |
+| not applicable | 0.000 | 0.000 | 0.000 | 2 | 0 | yes |
 
 ## Corpus
 
 | Document | Pages | Passages | Predictions | Scored |
 | --- | --- | --- | --- | --- |
-| RFA-2023-01-03 | 70 | 1095 | 358 | yes |
-| GFLB-SEL-2025-12-01 | 30 | 439 | 206 | yes |
+| RFA-2023-01-03 | 70 | 1095 | 257 | yes |
+| GFLB-SEL-2025-12-01 | 30 | 439 | 172 | yes |
 | BY-LAWS-COMMUNITY-BOARD-10-AS-OF-10-03-2019 | 6 | 0 | 0 | no |
 | CONTACT-QUEENS-CB10 | 1 | 5 | 0 | no |
 | GENTINGNEWYORKLLC-PRIVATECOMPANY | 2 | 27 | 0 | no |
 | RESORTSWORLD116 | 4 | 5 | 0 | no |
-| NYSGC-RWNYC-LIC-2025-12-19 | 5 | 56 | 19 | yes |
+| NYSGC-RWNYC-LIC-2025-12-19 | 5 | 56 | 17 | yes |
