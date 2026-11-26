@@ -1,0 +1,248 @@
+[
+  {
+    "record": {
+      "citations": [
+        {
+          "char_end": 13843,
+          "char_start": 13733,
+          "excerpt": "The Board recommends the following Applicants for commercial casino licensure consideration by the Commission:",
+          "page": 8
+        },
+        {
+          "char_end": 13865,
+          "char_start": 13844,
+          "excerpt": "• Bally’s Corporation",
+          "page": 8
+        }
+      ],
+      "description": "The Board recommends Bally’s Corporation for commercial casino licensure consideration by the Commission.",
+      "document_id": "GFLB-SEL-2025-12-01",
+      "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+      "filename": "12.01.25.gflbselectiondocument1.pdf",
+      "organization": "The Board"
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "This is an administrative selection decision, not a project undertaking: “The Board recommends the following Applicants for commercial casino licensure consideration by the Commission.”"
+    }
+  },
+  {
+    "record": {
+      "citations": [
+        {
+          "char_end": 13843,
+          "char_start": 13733,
+          "excerpt": "The Board recommends the following Applicants for commercial casino licensure consideration by the Commission:",
+          "page": 8
+        },
+        {
+          "char_end": 13977,
+          "char_start": 13921,
+          "excerpt": "• Genting New York LLC d/b/a Resorts World New York City",
+          "page": 8
+        }
+      ],
+      "description": "The Board recommends Genting New York LLC d/b/a Resorts World New York City for commercial casino licensure consideration by the Commission.",
+      "document_id": "GFLB-SEL-2025-12-01",
+      "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+      "filename": "12.01.25.gflbselectiondocument1.pdf",
+      "organization": "The Board"
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "Administrative selection only: \"The Board recommends the following Applicants for commercial casino licensure consideration by the Commission\" is not a project undertaking."
+    }
+  },
+  {
+    "record": {
+      "citations": [
+        {
+          "char_end": 13843,
+          "char_start": 13733,
+          "excerpt": "The Board recommends the following Applicants for commercial casino licensure consideration by the Commission:",
+          "page": 8
+        },
+        {
+          "char_end": 13920,
+          "char_start": 13866,
+          "excerpt": "• Queens Future, LLC d/b/a Hard Rock Metropolitan Park",
+          "page": 8
+        }
+      ],
+      "description": "The Board recommends Queens Future, LLC d/b/a Hard Rock Metropolitan Park for commercial casino licensure consideration by the Commission.",
+      "document_id": "GFLB-SEL-2025-12-01",
+      "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+      "filename": "12.01.25.gflbselectiondocument1.pdf",
+      "organization": "The Board"
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "Administrative selection only: \"The Board recommends the following Applicants for commercial casino licensure consideration by the Commission\" is not a project-specific commitment."
+    }
+  },
+  {
+    "record": {
+      "citations": [
+        {
+          "char_end": 28902,
+          "char_start": 28830,
+          "excerpt": "Median compensation is estimated to be near $80,000, including benefits;",
+          "page": 13
+        }
+      ],
+      "description": "The Board states that median compensation is estimated to be near $80,000, including benefits, for Bally’s Bronx jobs.",
+      "document_id": "GFLB-SEL-2025-12-01",
+      "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+      "filename": "12.01.25.gflbselectiondocument1.pdf",
+      "kind": "project_target",
+      "organization": "Bally’s"
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "This is only an estimate, not a commitment or requirement: \"Median compensation is estimated to be near $80,000, including benefits.\""
+    }
+  },
+  {
+    "record": {
+      "citations": [
+        {
+          "char_end": 47625,
+          "char_start": 47508,
+          "excerpt": "The Board recommends continued monitoring and adjustment of traffic plans during construction and facility operation.",
+          "page": 21
+        }
+      ],
+      "description": "The Board recommends continued monitoring and adjustment of traffic plans during construction and facility operation.",
+      "document_id": "GFLB-SEL-2025-12-01",
+      "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+      "filename": "12.01.25.gflbselectiondocument1.pdf",
+      "organization": "The Board"
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "Board recommendation, not an applicant or binding project undertaking: \"The Board recommends continued monitoring and adjustment\"."
+    }
+  },
+  {
+    "record": {
+      "citations": [
+        {
+          "char_end": 68403,
+          "char_start": 68034,
+          "excerpt": "The integrity of the bidding process requires that the bidder must be committed to its bid, and the Board urges the Commission and elected officials at the state and local level to resist any back-tracking on the tax rate contained in the bid, relied upon by the Board, and undoubtedly a factor in the Community Advisory Committee’s decision to approve the application.",
+          "page": 28
+        }
+      ],
+      "description": "The Board urges the Commission and elected officials at the state and local level to resist any back-tracking on the tax rate contained in Resorts World’s bid.",
+      "document_id": "GFLB-SEL-2025-12-01",
+      "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+      "filename": "12.01.25.gflbselectiondocument1.pdf",
+      "organization": "the Commission and elected officials at the state and local level"
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "This is the Board urging others to act: it \"urges the Commission and elected officials... to resist any back-tracking,\" not a project undertaking by the named actor."
+    }
+  },
+  {
+    "record": {
+      "citations": [
+        {
+          "char_end": 69087,
+          "char_start": 68807,
+          "excerpt": "While its speed-tomarket is a significant advantage, the Board is concerned that opening the casino while major construction is underway could compromise the quality of the experience for visitors and urges the Commission to use the license agreement to ensure acceptable quality.",
+          "page": 28
+        }
+      ],
+      "description": "The Gaming Facility Location Board recommends that the Commission use the license agreement to ensure acceptable quality if the casino opens while major construction is still underway.",
+      "document_id": "GFLB-SEL-2025-12-01",
+      "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+      "filename": "12.01.25.gflbselectiondocument1.pdf",
+      "organization": "the Commission"
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "This is the Board’s recommendation that it “urges the Commission to use the license agreement,” not a commitment by the project party itself."
+    }
+  },
+  {
+    "record": {
+      "citations": [
+        {
+          "char_end": 3687,
+          "char_start": 3458,
+          "excerpt": "License Duration: 15 years from the Commission's issuance of an operation certificate to Resorts World New York City pursuant to Racing, Pari-Mutuel Wagering and Breeding Law § 1331, renewable thereafter for a period of 10 years.",
+          "page": 3
+        }
+      ],
+      "description": "Resorts World New York City's gaming facility license lasts 15 years from the Commission's issuance of an operation certificate and is thereafter renewable for 10 years.",
+      "document_id": "NYSGC-RWNYC-LIC-2025-12-19",
+      "document_sha256": "e33b1a690d0653f88386d257a1b4d68c452c71ba59fca06faa75f9d37a202c02",
+      "filename": "rwnyc-license-document.pdf",
+      "kind": "regulatory_condition",
+      "organization": "Resorts World New York City"
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "“License Duration: 15 years… renewable thereafter for a period of 10 years” describes the term of the license, not a project undertaking or performance commitment by the licensee."
+    }
+  },
+  {
+    "record": {
+      "citations": [
+        {
+          "char_end": 7619,
+          "char_start": 7471,
+          "excerpt": "All of the terms and conditions of the License shall be binding upon Resorts World New York City and its Commission-approved successors and assigns.",
+          "page": 5
+        }
+      ],
+      "description": "All terms and conditions of the License are binding on Resorts World New York City and its Commission-approved successors and assigns.",
+      "document_id": "NYSGC-RWNYC-LIC-2025-12-19",
+      "document_sha256": "e33b1a690d0653f88386d257a1b4d68c452c71ba59fca06faa75f9d37a202c02",
+      "filename": "rwnyc-license-document.pdf",
+      "organization": "Resorts World New York City and its Commission-approved successors and assigns"
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "Boilerplate applicability clause only: \"terms and conditions of the License shall be binding upon... successors and assigns,\" not a specific project undertaking."
+    }
+  },
+  {
+    "record": {
+      "document_id": "GFLB-SEL-2025-12-01",
+      "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+      "filename": "12.01.25.gflbselectiondocument1.pdf",
+      "organization": "Board consultants",
+      "description": "If the Board selected two applicants for a commercial casino license instead of three, the Board consultants project the State would receive $1.1 billion to $3.7 billion less incremental gaming tax revenue from 2027 to 2036.",
+      "citations": [
+        {
+          "page": 8,
+          "char_start": 16190,
+          "char_end": 16364,
+          "excerpt": "If the Board selected two applicants for a commercial casino license instead of three, the Board consultants project the State would receive $1.1 billion to $3.7 billion less"
+        },
+        {
+          "page": 9,
+          "char_start": 16824,
+          "char_end": 16873,
+          "excerpt": "incremental gaming tax revenue from 2027 to 2036."
+        }
+      ]
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "Hypothetical forecast, not a commitment: \"If the Board selected two applicants... the Board consultants project\" describes a scenario and projected revenue impact."
+    }
+  }
+]

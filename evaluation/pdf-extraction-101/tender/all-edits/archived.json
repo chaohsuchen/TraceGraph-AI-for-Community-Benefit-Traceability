@@ -1,0 +1,439 @@
+[
+  {
+    "record": {
+      "citations": [
+        {
+          "char_end": 19642,
+          "char_start": 19424,
+          "excerpt": "The Commission reserves the right, in its sole discretion, to terminate a License if the Commission determines that the Lobbying certification filed by the Applicant was intentionally false or intentionally incomplete.",
+          "page": 10
+        }
+      ],
+      "description": "The Commission reserves the right, in its sole discretion, to terminate a license if it determines that the applicant’s lobbying certification was intentionally false or intentionally incomplete.",
+      "document_id": "RFA-2023-01-03",
+      "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+      "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+      "kind": "regulatory_condition",
+      "organization": "The Commission"
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "This is mainly a discretionary enforcement power of the Commission tied to procurement integrity, not a distinct substantive project undertaking owed to the public or workforce. It governs license administration rather than requiring a project benefit, payment, service, or performance record."
+    }
+  },
+  {
+    "record": {
+      "citations": [
+        {
+          "char_end": 38682,
+          "char_start": 38324,
+          "excerpt": "WAIVER, RELEASE, COVENANT NOT TO SUE AND INDEMNIFICATION: As a condition to submitting an Application, each Applicant, Operator, and direct or indirect owner of an Applicant or Operator shall, by an authorized signatory, execute and submit as a PDF a Waiver, Release, Covenant Not to Sue and Indemnification Agreement, referred to herein as the State Waiver.",
+          "page": 17
+        },
+        {
+          "char_end": 39262,
+          "char_start": 38747,
+          "excerpt": "Pursuant to the State Waiver, each Applicant, Operator, and direct or indirect owners of an Applicant or Operator, on his, her, their, or its own behalf and on behalf of its agents, servants, representatives, affiliates, parents, subsidiaries, directors, officers and employees, assigns predecessors and successors, (and their heirs, estates, executors, spouses), shall covenant and agree to release, waive, covenant not to sue or make any claim for damages, costs, fees, expenses or any relief whatsoever including",
+          "page": 17
+        },
+        {
+          "char_end": 39604,
+          "char_start": 39268,
+          "excerpt": "not limited to, equitable relief, not to seek any appeal, review or reconsideration of any decision of the State, the Commission and the Board, and indemnify, defend and hold harmless the State, the Commission and the Board and their officials, agents, consultants and representatives as more specifically described in the State Waiver.",
+          "page": 17
+        }
+      ],
+      "description": "As a condition of submitting an application, each applicant, operator, and direct or indirect owner of an applicant or operator must execute and submit a State Waiver under which it releases, waives, covenants not to sue or make claims for damages or other relief, agrees not to seek appeal, review, or reconsideration of decisions of the State, the Commission, and the Board, and agrees to indemnify, defend, and hold them harmless, as more specifically described in the State Waiver.",
+      "document_id": "RFA-2023-01-03",
+      "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+      "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+      "organization": "Each Applicant, Operator, and direct or indirect owner of an Applicant or Operator"
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q1",
+      "reason": "Although binding, this waiver is a condition of applying and litigation-risk allocation in the procurement process, not a substantive project commitment delivering a project outcome, payment, service, or public/workforce protection tied to facility development or operation."
+    }
+  },
+  {
+    "record": {
+      "citations": [
+        {
+          "char_end": 67249,
+          "char_start": 67145,
+          "excerpt": "The Board has determined that the “Minimum Capital Investment” shall not include those costs related to:",
+          "page": 28
+        },
+        {
+          "char_end": 67515,
+          "char_start": 67453,
+          "excerpt": "• Carried interest costs and other associated financing costs;",
+          "page": 28
+        }
+      ],
+      "description": "The Board determined that 'Minimum Capital Investment' does not include carried interest costs and other associated financing costs.",
+      "document_id": "RFA-2023-01-03",
+      "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+      "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+      "kind": "regulatory_condition",
+      "organization": "Applicant"
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q1",
+      "reason": "This passage defines which financing-related costs cannot be counted toward the Minimum Capital Investment calculation. It governs accounting/eligibility methodology for the application, not a distinct substantive project payment, service, protection, or deliverable owed to the public."
+    }
+  },
+  {
+    "record": {
+      "citations": [
+        {
+          "char_end": 67249,
+          "char_start": 67145,
+          "excerpt": "The Board has determined that the “Minimum Capital Investment” shall not include those costs related to:",
+          "page": 28
+        },
+        {
+          "char_end": 68066,
+          "char_start": 67630,
+          "excerpt": "• Designing, improving or constructing the infrastructure outside the property boundaries of the site of the Gaming Facility including those related to drainage, utility support, roadways, interchanges, fill and soil or groundwater or surface water contamination issues, sewer, storm water, landscaping, and public transportation whether or not such costs are the result of any agreement with a Host Municipality or nearby municipality;",
+          "page": 28
+        }
+      ],
+      "description": "The Board determined that Minimum Capital Investment excludes costs of designing, improving, or constructing infrastructure outside the Gaming Facility site boundaries, including drainage, utilities, roads, interchanges, fill, contamination issues, sewer, stormwater, landscaping, and public transportation, whether or not those costs arise from an agreement with a host or nearby municipality.",
+      "document_id": "RFA-2023-01-03",
+      "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+      "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+      "kind": "regulatory_condition",
+      "organization": "Applicant"
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q1",
+      "reason": "This is another exclusion from the Minimum Capital Investment definition, specifying off-site infrastructure costs that may not be counted. It is a cost-definition rule for proposal evaluation rather than a separate obligation to build, pay for, or provide something."
+    }
+  },
+  {
+    "record": {
+      "citations": [
+        {
+          "char_end": 67249,
+          "char_start": 67145,
+          "excerpt": "The Board has determined that the “Minimum Capital Investment” shall not include those costs related to:",
+          "page": 28
+        },
+        {
+          "char_end": 67452,
+          "char_start": 67250,
+          "excerpt": "• The purchase or lease or optioning of land where the Gaming Facility will be located including costs relative to registering, appraising, transferring title, or obtaining title insurance for the land;",
+          "page": 28
+        }
+      ],
+      "description": "The Board determined that 'Minimum Capital Investment' does not include costs related to purchasing, leasing, or optioning the land for the gaming facility, including costs of registering, appraising, transferring title, or obtaining title insurance for the land.",
+      "document_id": "RFA-2023-01-03",
+      "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+      "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+      "kind": "regulatory_condition",
+      "organization": "Applicant"
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q1",
+      "reason": "The clause excludes land acquisition and related title/appraisal costs from the Minimum Capital Investment calculation. That is definitional procurement/accounting guidance, not a standalone substantive commitment owed by the project winner."
+    }
+  },
+  {
+    "record": {
+      "citations": [
+        {
+          "char_end": 67249,
+          "char_start": 67145,
+          "excerpt": "The Board has determined that the “Minimum Capital Investment” shall not include those costs related to:",
+          "page": 28
+        },
+        {
+          "char_end": 67629,
+          "char_start": 67516,
+          "excerpt": "• Mitigating impacts on host and nearby municipalities whether directly attributable to a specific impact or not;",
+          "page": 28
+        }
+      ],
+      "description": "The Board determined that 'Minimum Capital Investment' does not include costs of mitigating impacts on host and nearby municipalities, whether directly attributable to a specific impact or not.",
+      "document_id": "RFA-2023-01-03",
+      "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+      "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+      "kind": "regulatory_condition",
+      "organization": "Applicant"
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q1",
+      "reason": "This language only states that mitigation costs for host/nearby municipalities do not count toward the Minimum Capital Investment. It does not itself require mitigation or create a distinct public-facing obligation; it is a calculation rule."
+    }
+  },
+  {
+    "record": {
+      "citations": [
+        {
+          "char_end": 154734,
+          "char_start": 154667,
+          "excerpt": "The Board has determined that the license fee will be $500 million.",
+          "page": 62
+        }
+      ],
+      "description": "The Board has determined that the license fee will be $500 million.",
+      "document_id": "RFA-2023-01-03",
+      "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+      "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+      "organization": "Board"
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "This sentence states the Board's administrative determination of the fee amount, but by itself it does not impose a new substantive duty beyond the separate payment obligation on the licensee. It is background to the licensing fee requirement rather than a distinct project commitment."
+    }
+  },
+  {
+    "record": {
+      "citations": [
+        {
+          "char_end": 154927,
+          "char_start": 154835,
+          "excerpt": "Licensees must provide and satisfy all requests for information pertaining to qualification;",
+          "page": 62
+        }
+      ],
+      "description": "Licensees must provide and satisfy all requests for information pertaining to qualification.",
+      "document_id": "RFA-2023-01-03",
+      "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+      "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+      "organization": "Licensees"
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "q0 imposes a qualification-information duty on licensees, but it is a generic regulatory/eligibility compliance step tied to licensing administration, not a distinct project undertaking, payment, service, protection, or project-specific accountability record owed to the public."
+    }
+  },
+  {
+    "record": {
+      "citations": [
+        {
+          "char_end": 155089,
+          "char_start": 154928,
+          "excerpt": "waive liability as to the Commission, the Board and the State and its instrumentalities and agents, for any damages resulting from any disclosure or publication;",
+          "page": 62
+        }
+      ],
+      "description": "Licensees must waive liability as to the Commission, the Board, and the State and its instrumentalities and agents for any damages resulting from any disclosure or publication.",
+      "document_id": "RFA-2023-01-03",
+      "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+      "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+      "organization": "Licensees"
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "q0 requires licensees to waive liability for disclosures by regulators, which governs legal/administrative risk allocation with the Commission/Board/State rather than a substantive public project obligation or deliverable."
+    }
+  },
+  {
+    "record": {
+      "citations": [
+        {
+          "char_end": 155163,
+          "char_start": 155090,
+          "excerpt": "consent to inspections, searches and seizures while at a Gaming Facility;",
+          "page": 62
+        }
+      ],
+      "description": "Licensees must consent to inspections, searches, and seizures while at a Gaming Facility.",
+      "document_id": "RFA-2023-01-03",
+      "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+      "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+      "organization": "Licensees"
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "q0 requires consent to inspections, searches, and seizures at a gaming facility, but this is standard regulatory oversight/housekeeping for licensure and enforcement, not a project-specific public benefit or performance commitment."
+    }
+  },
+  {
+    "record": {
+      "citations": [
+        {
+          "char_end": 155283,
+          "char_start": 155164,
+          "excerpt": "supply handwriting exemplars; provide, on a continuing basis, any assistance or information required by the Commission;",
+          "page": 62
+        }
+      ],
+      "description": "Licensees must supply handwriting exemplars and, on a continuing basis, provide any assistance or information required by the Commission.",
+      "document_id": "RFA-2023-01-03",
+      "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+      "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+      "organization": "Licensees"
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "q0 requires handwriting exemplars and continuing assistance/information to the Commission; these are investigative and compliance-support duties for regulators, not a substantive project outcome, payment, service, or public/workforce protection commitment."
+    }
+  },
+  {
+    "record": {
+      "citations": [
+        {
+          "char_end": 155766,
+          "char_start": 155571,
+          "excerpt": "A Gaming Facility licensee, or a holding or intermediary company of a gaming facility licensee, may only employ as a “Casino Key Employee” individuals who hold valid Casino Key Employee licenses.",
+          "page": 62
+        }
+      ],
+      "description": "A Gaming Facility licensee, or a holding or intermediary company of a gaming facility licensee, may only employ as a Casino Key Employee individuals who hold valid Casino Key Employee licenses.",
+      "document_id": "RFA-2023-01-03",
+      "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+      "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+      "organization": "Gaming Facility licensee, or a holding or intermediary company of a gaming facility licensee"
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "q0 limits employment of Casino Key Employees to individuals holding valid licenses, which is a generic licensing compliance rule for workforce eligibility rather than a distinct project commitment or public-facing deliverable."
+    }
+  },
+  {
+    "record": {
+      "citations": [
+        {
+          "char_end": 156169,
+          "char_start": 156044,
+          "excerpt": "Each gaming and non-gaming employee of a gaming Facility licensee must have a valid registration on file with the Commission.",
+          "page": 63
+        }
+      ],
+      "description": "Each gaming and non-gaming employee of a Gaming Facility licensee must have a valid registration on file with the Commission.",
+      "document_id": "RFA-2023-01-03",
+      "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+      "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+      "organization": "Each gaming and non-gaming employee of a Gaming Facility licensee"
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "q0 requires gaming and non-gaming employees to have valid registrations on file with the Commission, but this is routine personnel registration/licensing administration, not a substantive project obligation owed to the public or workforce beyond baseline regulatory compliance."
+    }
+  },
+  {
+    "record": {
+      "citations": [
+        {
+          "char_end": 156656,
+          "char_start": 156198,
+          "excerpt": "Any business to be conducted with an Applicant or Gaming facility licensee by a vendor offering goods or services that directly relate to gaming activity, including gaming equipment manufacturers, suppliers, repairers and independent testing labs, shall be licensed as a casino vendor enterprise prior to conducting any business with an Applicant or Gaming Facility licensee, its employees or agents (subject to other timing as determined by the Commission).",
+          "page": 63
+        }
+      ],
+      "description": "A vendor offering goods or services that directly relate to gaming activity, including gaming equipment manufacturers, suppliers, repairers, and independent testing labs, must be licensed as a casino vendor enterprise before conducting business with an Applicant or Gaming Facility licensee, its employees, or agents, subject to other timing as determined by the Commission.",
+      "document_id": "RFA-2023-01-03",
+      "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+      "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+      "organization": "Vendor offering goods or services that directly relate to gaming activity"
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "This passage imposes a vendor-licensing prerequisite before doing business, owed to the Commission/regulator, but it is generic licensing housekeeping rather than a distinct project payment, service, protection, or project-specific accountability commitment."
+    }
+  },
+  {
+    "record": {
+      "citations": [
+        {
+          "char_end": 156875,
+          "char_start": 156811,
+          "excerpt": "Junket representatives must be licensed as Casino Key Employees.",
+          "page": 63
+        }
+      ],
+      "description": "Junket representatives must be licensed as Casino Key Employees.",
+      "document_id": "RFA-2023-01-03",
+      "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+      "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+      "organization": "Junket representatives"
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "This is an individual licensing requirement for junket representatives, owed to the regulator, and functions as credentialing/administrative compliance rather than a substantive public project undertaking."
+    }
+  },
+  {
+    "record": {
+      "citations": [
+        {
+          "char_end": 157016,
+          "char_start": 156906,
+          "excerpt": "A Gaming Facility licensee must obtain an operation certificate in order to open or remain open to the public.",
+          "page": 63
+        }
+      ],
+      "description": "A Gaming Facility licensee must obtain an operation certificate in order to open or remain open to the public.",
+      "document_id": "RFA-2023-01-03",
+      "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+      "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+      "organization": "Gaming Facility licensee"
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "Obtaining an operation certificate is a generic regulatory permission to open or remain open, not a distinct project-specific benefit, payment, service, protection, or accountability record beyond basic licensure administration."
+    }
+  },
+  {
+    "record": {
+      "document_id": "RFA-2023-01-03",
+      "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+      "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+      "organization": "Applicant",
+      "description": "The Applicant must include an independent analysis of annual projections of gaming patronage, such as gaming visitor count, and gaming revenues, including itemized slot, table, and gross revenues, for at least the first 10 years after opening for gaming on average high-, average-, and low-case bases.",
+      "citations": [
+        {
+          "page": 60,
+          "char_start": 150704,
+          "char_end": 151021,
+          "excerpt": "• Include an independent analysis of the annual projections of gaming patronage (e.g., by gaming visitor count) and gaming revenues (including itemization of slot, table and gross revenues) annually for a period of at least the first 10 years after opening for gaming on an average high-, average- and low-case basis."
+        }
+      ]
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "This passage only requires the application to include an independent patronage and revenue analysis. It governs proposal contents and supporting documentation, not a distinct project payment, service, protection, or post-award deliverable owed to the public."
+    }
+  },
+  {
+    "record": {
+      "document_id": "RFA-2023-01-03",
+      "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+      "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+      "organization": "Community Advisory Committee / Board",
+      "description": "A two-thirds vote indicating community support of a project is required for the application to be considered by the Board.",
+      "citations": [
+        {
+          "page": 66,
+          "char_start": 163675,
+          "char_end": 163802,
+          "excerpt": "A two-thirds vote indicating community support of a project is a requirement for the Application to be considered by the Board."
+        }
+      ]
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "This passage sets an application-consideration threshold: the CAC must produce a two-thirds vote showing community support before the Board will consider the application. That governs the approval process and records CAC support or opposition, but it does not itself require the project developer or awardee to deliver a project benefit, payment, service, protection, or other substantive project outcome."
+    }
+  }
+]

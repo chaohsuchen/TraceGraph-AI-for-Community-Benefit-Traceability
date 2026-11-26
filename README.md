@@ -89,12 +89,14 @@ the supplied documents in order, with neighboring sentences and section headings
 returns claims with exact page and character references. A first review checks attribution
 and scope. A separate pass rereads the window for omitted commitments and classifies
 the existing candidates. The model adjudicates new candidates and disagreements using
-the cited text. These steps run without web tools. The frozen three-PDF release includes
-the predictions and an offline score replay. [PDF catalog freeze](evaluation/pdf-extraction-101/freeze/README.md)
+the cited text. The release then applies verified catalog edits and a final delete-only
+review across all PDF types before import. These steps use only the supplied documents.
+The three-PDF release includes 151 catalog entries and an offline replay of both the original
+and expanded reference sets. [Frozen PDF catalog and scores](evaluation/pdf-extraction-101/all_documents/README.md)
 
 ```powershell
 $pdfs = (Get-ChildItem .\inputs\*.pdf).FullName
-python -m tracegraph.pdf_extract --openai-key-file ./openai-api-key.txt --output ./pdf-run @pdfs
+python -m evaluation.pdf-extraction-101.all_documents.extract --openai-key-file ./openai-api-key.txt --output ./pdf-run @pdfs
 python -m tracegraph.pdf_import ./pdf-run/reviewed.json --openai-key-file ./openai-api-key.txt --report ./pdf-run/import.json @pdfs
 ```
 

@@ -1,0 +1,86 @@
+[
+  {
+    "record": {
+      "citations": [
+        {
+          "char_end": 13843,
+          "char_start": 13733,
+          "excerpt": "The Board recommends the following Applicants for commercial casino licensure consideration by the Commission:",
+          "page": 8
+        },
+        {
+          "char_end": 13865,
+          "char_start": 13844,
+          "excerpt": "• Bally’s Corporation",
+          "page": 8
+        }
+      ],
+      "description": "The Board recommends Bally’s Corporation for commercial casino licensure consideration by the Commission.",
+      "document_id": "GFLB-SEL-2025-12-01",
+      "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+      "filename": "12.01.25.gflbselectiondocument1.pdf",
+      "organization": "The Board"
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "This is an administrative selection decision, not a project undertaking: “The Board recommends the following Applicants for commercial casino licensure consideration by the Commission.”"
+    }
+  },
+  {
+    "record": {
+      "citations": [
+        {
+          "char_end": 13843,
+          "char_start": 13733,
+          "excerpt": "The Board recommends the following Applicants for commercial casino licensure consideration by the Commission:",
+          "page": 8
+        },
+        {
+          "char_end": 13977,
+          "char_start": 13921,
+          "excerpt": "• Genting New York LLC d/b/a Resorts World New York City",
+          "page": 8
+        }
+      ],
+      "description": "The Board recommends Genting New York LLC d/b/a Resorts World New York City for commercial casino licensure consideration by the Commission.",
+      "document_id": "GFLB-SEL-2025-12-01",
+      "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+      "filename": "12.01.25.gflbselectiondocument1.pdf",
+      "organization": "The Board"
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "Administrative selection only: \"The Board recommends the following Applicants for commercial casino licensure consideration by the Commission\" is not a project undertaking."
+    }
+  },
+  {
+    "record": {
+      "citations": [
+        {
+          "char_end": 13843,
+          "char_start": 13733,
+          "excerpt": "The Board recommends the following Applicants for commercial casino licensure consideration by the Commission:",
+          "page": 8
+        },
+        {
+          "char_end": 13920,
+          "char_start": 13866,
+          "excerpt": "• Queens Future, LLC d/b/a Hard Rock Metropolitan Park",
+          "page": 8
+        }
+      ],
+      "description": "The Board recommends Queens Future, LLC d/b/a Hard Rock Metropolitan Park for commercial casino licensure consideration by the Commission.",
+      "document_id": "GFLB-SEL-2025-12-01",
+      "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+      "filename": "12.01.25.gflbselectiondocument1.pdf",
+      "organization": "The Board"
+    },
+    "review": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "Administrative selection only: \"The Board recommends the following Applicants for commercial casino licensure consideration by the Commission\" is not a project-specific commitment."
+    }
+  }
+]

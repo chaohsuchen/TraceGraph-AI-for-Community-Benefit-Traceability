@@ -1,0 +1,975 @@
+{
+  "model": "gpt-5.4",
+  "scope": "all",
+  "document_roles": {
+    "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e": {
+      "document": "RFA-2023-01-03",
+      "role": "SOLICITATION",
+      "reason": "This is a Request for Applications that explicitly solicits proposals for gaming facility licenses and lays out applicant instructions, eligibility requirements, evaluation criteria, fees, schedule, and post-licensure terms."
+    },
+    "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc": {
+      "document": "GFLB-SEL-2025-12-01",
+      "role": "OTHER",
+      "reason": "This is a post-application selection/evaluation document summarizing the RFA process, applicants received, evaluation criteria, and selection decisions, rather than inviting applications or setting applicant requirements."
+    },
+    "e33b1a690d0653f88386d257a1b4d68c452c71ba59fca06faa75f9d37a202c02": {
+      "document": "NYSGC-RWNYC-LIC-2025-12-19",
+      "role": "OTHER",
+      "reason": "This is a post-selection license award/acceptance document issuing a gaming facility license and setting license conditions, not an invitation for bids or applications."
+    }
+  },
+  "decisions": {
+    "15c91462c28db2741246759629881e08c3b65c962dc8a36bb87c10f566dbbc2e": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This creates a substantive payment-accountability framework: the Commission must determine obligations for the entity or entities required to maintain specified racing support payments at the 2019 level, adjusted annually by CPI. Compliance is evidenced by the Commission’s determination and the maintained support payment levels."
+    },
+    "647c4d7b618f181be77a333909bc1a787aa9e7631a7571025eb28eff4c68c200": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This is a concrete post-award obligation tied to the project site. The successful applicant/license holder must own or acquire the land for the gaming facility within 60 days after award, with the quoted lease term defining acceptable compliance. Deeds, leasehold documentation, or other land-control records would establish compliance."
+    },
+    "7867341becf474f0ecb3e682e178c5873e68bd46948a9a0af95a69c4ec755e48": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Concrete project-site obligation: the winning applicant must own or acquire the project land within 60 days after award, with the quoted lease-term condition defining acceptable control. Compliance is observable through title or a qualifying long-term lease."
+    },
+    "ba5ba358e446f45657c2ce20962f5e76c0d6d96487be644dc9bab79fe14783a5": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Specific payment commitment to the commission/state: the applicant must be able to pay and commit to paying the gaming licensing fee. Compliance would be shown by payment of the required fee if licensed."
+    },
+    "2677943761715c55a7900ec1daef3f651f4c8e19b238f49e98bcd57cde14ccb6": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This clause expressly binds the RFA terms, amendments, the application, and the Board’s decision statement as enforceable obligations of the licensee. It is not mere procedure; it makes awarded project commitments owed by the licensee to the Commission part of the license requirements."
+    },
+    "f8ef047c4869c27e1c202e612ac9469bfc73696a5f424f721d3afe5dbe92e823": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This is a concrete post-award obligation: a winning applicant must place 5-10% of the proposed total investment into a Commission-approved interest-bearing escrow account. Compliance is observable through the escrow deposit at the required amount."
+    },
+    "a9c418227d8dc776f417378e68d22250a4151f8f05bb9cddbdce9d6bfa56a32e": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Concrete duty binding the applicant: formulate, obtain board approval for, and abide by a diversity/equal-opportunity construction program with specific utilization goals for minorities, women, and veterans. Compliance is observable through the approved program and documented adherence to those goals."
+    },
+    "58d97d02a1d12d16391360ca36a7f02892ab2c15722541430e33f842242f284b": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Substantive transparency obligation: the Board will treat application materials as public records and post them online, subject to FOIL redactions. Compliance is observable through the public posting itself, creating a project-specific accountability record for public review."
+    },
+    "08119b92cd6646d90cb1a50e1a96e8f87159c917d7718362c412d95f37ff7ec2": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This allows an alternative form of performance security in place of cash: the applicant may provide a Board-acceptable deposit bond that ensures forfeiture to the State if the facility is not completed. That is a concrete public protection tied to the project."
+    },
+    "dfe92faaacf448f950ac114998f29147a189a5daed9481fd2b2efd46103b38d7": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This clause preserves substantive project commitments across tax-rate scenarios. The applicant is not to reduce core proposal parameters such as jobs, capital investment, or facility caliber based on the tax rate selected. Compliance would be demonstrated by consistent scenario submissions and, if awarded, an application record showing those project commitments were not scaled back for tax selection reasons."
+    },
+    "0a9e70eaef0895eff69f1e6bba8c40730a230978663bbf6b9683dda147b7aa44": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Material monetary obligation tied to the project: the licensee must reimburse Commission-established investigation fees and charges, including staff time and investigation expenses. Compliance is shown by payment of the assessed investigatory costs."
+    },
+    "b2047f2f70182389b01c2492ae08bed6cf7d8afc03c69ece50534504849d8a35": {
+      "decision": "KEEP",
+      "passage_id": "q2",
+      "reason": "This clause imposes a concrete funding duty on gaming facility licensees to cover remaining Commission regulatory costs in proportion to gaming positions. Compliance is observable through the Commission’s annual assessment records and corresponding payment liabilities."
+    },
+    "d1dda2362a7bb5784fbb159c5301cd7f58bb6aadb55cbc1dbb8656f1a9ec5d78": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This clause imposes a substantive design-quality restriction on the eventual licensee: it may not make design changes that reduce the facility’s size, quality, or fit and finish from the approved initial design. Compliance would be shown by construction updates and final built features consistent with or better than the approved design."
+    },
+    "874f022afbb2e68d74066279e42f049ecb5cebcb8d1b5aeb7086f6397f607a0b": {
+      "decision": "REVIEW",
+      "passage_id": "q0",
+      "reason": "The passage clearly requires submission of a description of plans, but the candidate overstates it as a direct duty to procure or generate at least 10% renewable electricity. The source may imply a promised project feature if incorporated into the application, but the quoted text here is framed as a proposal-description requirement rather than an express binding performance term."
+    },
+    "0275d895ed582e61d0e33faff33467da03f407aa7a007a8f27eafef0e836c86d": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Substantive operational duty: the licensee must ensure covered contractor/subcontractor/tenant operations involving gaming or hospitality employees are conducted under labor peace agreements. Compliance is evidenced by those third-party operations being covered by such agreements."
+    },
+    "ee3fe345576ebe805eb64fa8c2fb3bacfe6b17ebea0f2904679e4856458c6279": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This creates a concrete reporting duty: the Gaming Facility licensee owes the Commission a report describing all junket operations on the premises, and compliance is observable through filing that project/operations-specific accountability record."
+    },
+    "9b6f332205f206d73a70d836cee08964dafe3300e4740be99643480a7e4ae002": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This is a concrete recordkeeping obligation tied to the project: the Gaming Facility licensee must maintain records of all project agreements, creating an identifiable accountability record whose existence can be checked for compliance."
+    },
+    "5955362bbba2ceb79b8a6eb244dc5cc55f9ebbc6c0094e9e8afb2314f638e7be": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Concrete licensure obligation: the licensee must document to the Commission/state that it has labor peace agreements with each qualifying labor organization. Compliance is observable through the agreements/documentation, and the clause says it is an ongoing material condition of licensure."
+    },
+    "e38c01aaf16cde6b8c878559b3d22c1cc0fe2acd1ba9a23803e7e692a8332057": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Sets a concrete project threshold: the applicant/licensee must demonstrate its Gaming Facility meets or exceeds the $500 million minimum capital investment. Compliance would be shown to the Board/Commission through the required summary and cost calculation evidencing qualifying project spend."
+    },
+    "e589cb730f244c8469301d42fade34c2c4f712c5dc87d6ca3eb7e8a960702520": {
+      "decision": "REVIEW",
+      "passage_id": "q1",
+      "reason": "This passage clearly requires the application to explain how the applicant proposes to address problem gambling, workforce, community, and municipal impacts, but it is less explicit that those proposed measures become binding delivery obligations. The clause contains substantive subject matter yet may govern proposal content only."
+    },
+    "49a0e8240ead5d162086dd1013c3f7cd6a4a2e0ce4b6358d3a79b43529d2c69e": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This is a specific payment obligation on the licensee: the licensing fee must be paid within 30 days after license award. Compliance is observable through timely payment of the fee to the State."
+    },
+    "cfda921ccd2e83c845ef5d945c5f95ca58d90ef4eccded7a0b9aa3dab73023ae": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Contains a distinct substantive commitment beyond description: the applicant must identify host-municipality infrastructure costs and commit to a community mitigation plan for the Host Municipality. Compliance would be shown by an attributable mitigation plan addressing those identified costs."
+    },
+    "56148cfb61b2f75f9344dc8eacc28bdf7e5b5499c395db2c71942c8e3fe2f15c": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Specific payment obligation: a Zone 2 gaming facility licensee owes the annual per-machine/per-table license fee to the Commission/state. Compliance is established by payment at the stated $500 rate for approved slot machines and table games."
+    },
+    "d27deccf44fbfa5e39578559fe9cc01ae958ae1517361fe32c3625d29a051fc5": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This is a specific labor-related commitment. An applicant lacking existing labor peace agreements must provide an instrument stating it will enter into those agreements and keep them in place during the license term. Compliance would be shown by the executed instrument initially and then by maintaining the labor peace agreements for the covered term."
+    },
+    "559e8582377e9e67ea9ef1cb0aa146b2113b339d3ba96ddb14a57228e453e09b": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This creates a substantive conditional accountability/payment term tied to project completion: if the applicant cannot complete the gaming facility, the deposit is forfeited to the State. Compliance is established by either completion triggering return of funds or forfeiture to the State upon failure."
+    },
+    "a2a1b1077d628d3fc33859a268792500eaefdaddb039bdf025c05eacccfa94c5": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Explicit payment deadline: each gaming facility licensee must pay its assessed amount to the Commission within 30 days of notice. Compliance is established by the notice of assessment and timely payment record."
+    },
+    "3fa9bfae8933e9294c97b89ac9c026f27ea4e945607e57f2404287ffb8465508": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Substantive fiscal term for any awarded additional casino license: the Commission must set the gross gaming revenue tax rate through this RFA process, subject to minimum rates of 25% on slot machines and 10% on other sources. Compliance is shown by the awarded tax-rate determination and ensuing tax obligations."
+    },
+    "160787c6210b04b48fd29ac87c95b9cd4e0c5bf659f1b166fb43ab1203751a16": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "In context, 'This is an ongoing material condition of licensure' refers to the preceding labor-peace-agreement duty, so the licensee owes continuing labor peace agreement coverage/documentation to labor organizations and the regulator, with compliance shown by executed agreements and maintained licensure condition."
+    },
+    "baaf088674f59397cbe9ebe3e41a2776ddb48f7158bc36a4b1287d6adcbc8091": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Read with the surrounding workforce-development clause, the application must propose a workforce training program that includes establishing an on-site child day care program. This is a substantive promised workforce benefit for employees at the facility, not mere procurement administration. Compliance would be evidenced by establishment and maintenance of the on-site child care program if awarded."
+    },
+    "d2b0005043a947ede8331c6feadf5eb77aa8239b6004e3f16aaa18c73f7855ff": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Substantive applicant obligation: identify emergency-service costs owed to the Host Municipality and commit to a mitigation plan benefiting that municipality. Compliance would be evidenced by an application/award commitment specifying those costs and the mitigation plan."
+    },
+    "46b16db70bc8b493dbf5c57657947c537d5532fe9fb710369be55ed5724be1d9": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Specific payment obligation: a Zone 1 gaming facility licensee owes the annual per-machine/per-table license fee to the Commission/state. Compliance is established by payment at the stated $750 rate for approved slot machines and table games."
+    },
+    "9e3fb896418f94881342318f39a7b31f46e58c7a70c9eb65347a784137a2e9e0": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Concrete custodial and remittance duty: the gaming facility licensee must hold unclaimed winnings for the entitled person for one year, then deposit unclaimed amounts or cash value into the commercial gaming revenue fund. Compliance is shown by retention records and deposit into the fund after the one-year period."
+    },
+    "0712041bd65b3eae8551efcb4aa817ad0a28a473994dc384b57356e677dd96db": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This imposes a concrete post-award duty on the successful applicant to complete and submit a Confirmatory Affidavit to the Commission confirming prior RFA statements, affirmations, and agreements remain true and correct. Compliance is observable through the executed affidavit itself, which is a specific accountability record tied to licensure."
+    },
+    "d482d5b4b5be4bdab137a5ac76c8b5d5e20f5f7fdd934f99ddf129efd795bdd1": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "This is a substantive conditional payment obligation: if the required education amount is not met, the licensed entity must remit the shortfall payment to the Commission for deposit into the commercial gaming revenue fund by the next May 1. Compliance is established by the payment amount and timing, with the surrounding clause supplying the baseline calculation and proration rule."
+    },
+    "33f160cd1a046fca5c4198c1799c30674600858c7d7571083e416ba321c15730": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Imposes a clear post-award duty on a licensee: during construction it must provide regular updates to the Commission documenting facility-design improvements. Compliance is observable through the submission of those updates as a project-specific accountability record."
+    },
+    "dd1af442b25a63462bfff7de7c14cf2d64cad8456912dda19fa79f8e10435e0f": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Clear capital-investment undertaking tied to the submitted design plans: the applicant shall invest at least the required capital into the gaming facility. Compliance would be evidenced by committed/project-recorded capital investment at or above the statutory threshold."
+    },
+    "609a55fb5ac16ebb86205c3643a2fba5ba4a41e7aa5a5034524e2d576ba8dcb6": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Substantive conditional financial obligation: the applicant/licensee must meet the licensee deposit requirement as a condition of licensure, not merely mention it. Compliance would be shown by satisfying the required deposit to the responsible authority."
+    },
+    "d13a16704d02fab29899af02b543f4466d96fe369acfa6510422829d943389f3": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Board action documented a specific binding requirement: it was amended rules “establishing a minimum license fee of $500 million and a minimum capital investment of $500 million.”"
+    },
+    "edaba4d04da56b95c27d3ae01c2cdf9dda4f7f9b3d83935c409c9c97c87d995d": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This states a specific requirement governing project commitments: community promises “were required to be recorded as amendments to the respective submitted application in order to be considered by the Board.”"
+    },
+    "6cba058a759d92c9a57da26cb3c2377cc1d58e3f88e5bb0ca7e3eea8afa51a81": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "The passage attributes a project-specific proposed term to the applicant: “Hard Rock Metropolitan Park proposed a 25 percent tax on slot machine games and 10 percent on tables and other gaming sources.”"
+    },
+    "7adc1a646692c724ccb0ad25ba599b527031f913f21ce42c35262cf2ecfb3ee3": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "The passage attributes a project-specific proposed term to the applicant: “Bally’s Bronx proposed a 30 percent tax on slot machine games and 10 percent on table games and other gaming sources.”"
+    },
+    "edff858a39661fc41bd254c7b85defd6c63f10e07867b7eb9325f3df8681f98f": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "The passage attributes a project-specific proposed term to the applicant: “Resorts World New York City proposed a 56 percent tax on slot machine games and 30 percent on tables games and other gaming sources.”"
+    },
+    "3c1d4bb837c26c4a2ed9b72bd017126a18f34ef129e525c5738018f8f00990b3": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "This is an administrative selection decision, not a project undertaking: “The Board recommends the following Applicants for commercial casino licensure consideration by the Commission.”"
+    },
+    "4e2f81c3de332161a7346ec1e12dccde01a85467b681b7f6f820d90e92a4094e": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "Administrative selection only: \"The Board recommends the following Applicants for commercial casino licensure consideration by the Commission\" is not a project undertaking."
+    },
+    "5cbd05ac558a0bcccff7bdd99c3e9489e576d030c0b923a412583f95f5c576c7": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "Administrative selection only: \"The Board recommends the following Applicants for commercial casino licensure consideration by the Commission\" is not a project-specific commitment."
+    },
+    "aed01ded620f4b65087f5b6bfc5522c8bef466f53f2943b8941b40900f9f1d85": {
+      "decision": "REVIEW",
+      "passage_id": "q0",
+      "reason": "The passage contains a substantive quantitative projection tied to the licensing scenario: if two applicants were selected instead of three, consultants project the State would receive \"$1.1 billion to $3.7 billion less\" tax revenue. Even though framed as a counterfactual and attributed to consultants, it is a material fiscal estimate relevant to planned implementation."
+    },
+    "702251f7576340720843652fe2f4706cf01b9740711d0a23e92756315f7bc2e7": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Supported proposed requirement/expectation: \"All Applicants are expected to track and report service-disabled veteran employment to meet New York’s 6 percent requirement.\""
+    },
+    "6db4a378314f13c001c65b778b7f17f35bf9910065e02c7826add16558e269a1": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Documented project proposal with material specs and timing: \"proposed single-phase\" resort with \"$2.3 billion\" investment and \"projected to open by mid-2030.\""
+    },
+    "d1ec0dfff47af1dc57ad8bf1477901e357cfc95b59d808d55748a08aa92bc423": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Supported project-specific deliverables/specifications under \"Key components include,\" listing casino, hotel, parking, event center, golf course, and retail/food amenities."
+    },
+    "f809d328ca993b4a03b43259f1d53391e74230125e1e3b298118ce241c69ff80": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Documented project-specific workforce goal: Bally’s \"seeks to achieve\" a construction workforce primarily from the Bronx with stated percentages; nearby text adds union labor and outreach measures."
+    },
+    "db8e7ef24c94bc3aaa4a7c98ba2d2c46d9c1b8319a3c1af5d31eee26f4f2125c": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Clear commitment for permanent operations: Bally’s \"commits to building\" a 3,503 FTE workforce with 70 percent from the Bronx and reflecting Bronx demographics."
+    },
+    "d9690a7812076eb98d4008a1bcf01069a265c7942299134122fe9ad6ad44762a": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Specific ongoing payment obligation tied to project operations: Bally’s \"will make an annual contribution of 1 percent of gross gaming revenue, with a minimum of $15 million\" to the Community Benefits Fund."
+    },
+    "d1337243cf483e207a8ef5cd06d94a72e4d28439a9c3eca85590a37fcf231347": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Direct project undertaking: Bally’s \"is committed to bearing the cost\" of identified transportation and access improvements."
+    },
+    "259a8d4bca96c40bdf91b6698f18e85592fa2f45f68ade3388d02ef3e9f8c42f": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Project-specific design and compliance commitment: Bally’s \"plans to build\" to LEED Gold standards and meet or exceed named sustainability and efficiency laws and policies."
+    },
+    "550b4607029983d329f8e5a235df46f311a6ab12effa571b2d513fac79b399ae": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Board summary attributes a concrete sponsor plan for the project: Bally’s \"proposes a $2.3 billion investment\" in Bally’s Bronx."
+    },
+    "9015cc22ea7632eb22f6d6e1ee32b1204f457bf6becb4cb64b2b779a14986f0f": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Project-specific forecast attributed to Bally’s: it \"anticipates that approximately 75 percent of the capital expenditures will benefit Bronxbased firms.\""
+    },
+    "eea5c909d13d801257780f67bcbcf54191477300d137c035136d41b564825496": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Documents an agreed guarantee: Bally’s Corporation \"has agreed to guarantee all completion and financing obligations\" of the project entity."
+    },
+    "1897a5ac1d68fb800842ab181d305aa65bf4fa01bbfbd85f8ac657a2c2301267": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "States a specific payment tied to the project: \"Bally’s will pay $500 million in license fee revenue that will be directed to the MTA.\""
+    },
+    "a349a2088585064952b2266e2b3b4ae061592c11cacf3a9a91b3a155d3332ba2": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Retain as Bally’s stated employment projection: \"Bally’s projects\" specified full-time, part-time, and FTE job numbers for the project."
+    },
+    "cde058a8bb6af348eff26b46ecb1d20f7a35351e9c31b440b3dfb25d840943b0": {
+      "decision": "REVIEW",
+      "passage_id": "q0",
+      "reason": "The text gives a substantive quantitative characteristic of the Bally’s project workforce: \"Median compensation is estimated to be near $80,000, including benefits.\" In context it describes planned job compensation for Bally’s Bronx and is not generic boilerplate or a mere procedural step."
+    },
+    "4c2d25acd019ec47aadf35ddda89aff08d52ed242402a72cff7de1c0d1fc8850": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "The hiring and diversity percentages are treated as commitments; the Board says these \"commitments\" were key and that the goals \"must be honored.\""
+    },
+    "36127829e0ac1c23963435d4c817d0543757a1c6e52c3e4930130a8c6af14192": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Supported as Bally’s own commitment: the Board says Bally’s \"committed to mitigate these impacts\" with up to $10 million for a police substation and $5 million annual public safety support, and q1 adds the increase from $3 million to $5 million."
+    },
+    "4198304a556a7718c31b0b5fbd8fd5e809aac4e0f1ff339bf7eaec0adbc55a3e": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Directly supported as Bally’s commitment: it \"has committed to ensuring that 70 percent of construction and facility jobs go to Bronx residents.\""
+    },
+    "ec0e4696ec9321bec40a1bb72896b680f4e8cea129fd91e322bb9d3b31366008": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Keep as a sponsor plan reported by the Board’s consultants: Bally’s was \"proposing a credible plan to surpass the 10 percent renewable energy requirement\" via specified measures."
+    },
+    "f5ff34f9b81f7afb269b8cd28fcaed8b49358285d84845eab399623792950b21": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Directly supported: the Board \"relied upon Bally’s promises to deliver direct pedestrian and bicycle connections\" between the named locations."
+    },
+    "8de9d93e96db5749ad1f0232a82ce26206527a12f6ebd8ed82cceddae04b10d0": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Supported by the cited bundle of Bally’s promises; the passage explicitly includes \"expand the existing ferry shuttle service.\""
+    },
+    "5a7924ac598d63ab9392dfa3b52092e83549ae1bf80b502f03f0f538282cddd8": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Directly supported as part of Bally’s promises: the passage says Bally’s would \"fund at least one additional bus stop in Ferry Point Park and two at the facility.\""
+    },
+    "88649bc45f2f1e367d68ac0d0b446d5bdcdab4c3ebe1912ce9feb561e9c9a64d": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Directly attributes to Bally’s a specific employee-benefit undertaking: it \"committed to pay for employees’ membership in Upwards,\" preserving the stated commitment despite noted limitations."
+    },
+    "1d2f2cf5b86ccc180ce9a2cb8904091f6903dbb4bd8c34fafab429f9cf8a472d": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This is a proposed requirement by the Board for the project: it \"recommends the Commission require Bally’s to provide annual updates\" and address daycare-access challenges."
+    },
+    "01a1be0733b14733918a97f96d4eed80927606b9dc2945f93cc826218e60eb87": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "The passage states Bally’s \"has executed a labor peace agreement\" with a named union, which is an already signed agreement documenting a concrete project-related commitment."
+    },
+    "c0bf83bbe34f9f2bf1fca4e2d90b02d960742ca52294de11f7d2d82c7923ed51": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Supported as Bally’s plan: it \"plans to implement a comprehensive PLA for the construction phase,\" and the surrounding text preserves the uncertainty that agreements are not yet finalized."
+    },
+    "621d2ed1890c7840ff2487f1f10ec001826042bad9dca5c18ae6f4dffd5d2083": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "The passage attributes project-specific workforce targets to Bally’s goal, including \"employment targets of 47 percent women and 75 percent minorities.\""
+    },
+    "24a8753361df708b9d752e37dcf54b7493a2473741e4507873cffc4927093639": {
+      "decision": "REVIEW",
+      "passage_id": "q0",
+      "reason": "The cited text is framed as the Board’s expectation—\"The Board expects that Bally’s will... reach... 6 percent\"—not clearly as Bally’s own commitment, so attribution is ambiguous."
+    },
+    "beb29f93bb086957b80d4fd0c926736b057163eb82a1290b1a13efb55c2d9fbc": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Board reports Bally’s proposed construction MWBE targets with specific percentages, a project-specific proposed target."
+    },
+    "db9a9b15a8cdf92957ad502267a26b57ee09c30516fd4c1eacc89c7a56303a12": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Board attributes to Queens Future a proposed single-phase resort with $5.3 billion investment and projected June 2030 opening, a concrete project plan and timeline."
+    },
+    "dc60927ba3849c8d4fe9a1c1009e59e91f3e5178b5a7e228e6bdbde814226b22": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Listed as a key component of the proposed gaming facility: casino with 5,000 slot machines, 375 table games, and 30 poker tables."
+    },
+    "a7629cd8cf0f2c31158c09bf04d23b8fa6a5ed994381b16c16bc7636d6854b41": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Listed proposed project specification: two hotel towers with 1,000 rooms, about 39 percent suites."
+    },
+    "b3b8f54f31a0b15d41dd4220c0914a1b9ce2ed463b62c5811f1d8ea9e67571a2": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Listed proposed project specification: several parking garages providing 13,112 spaces."
+    },
+    "be5a886ff6b79a731ffab79ea4acd3902d425158cb35474e0ced423b978e7fe4": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Listed proposed project specification: a 5,650-seat capacity Hard Rock LIVE entertainment venue."
+    },
+    "59d3cd5bc12805468dcde6f2a64c1db6b88846535fbdf5f532643241726198a4": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Project component list states “More than 15 restaurant and bar outlets,” supporting this proposed facility feature; q0 also situates it with adjacent “Retail offerings.”"
+    },
+    "97ac1719ad0fa70311c4cda5377b13fda81e8bae3414ac07eb47578f6f999a5e": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "The source expressly lists “25 acres of new public open space” as a key project component, a specific proposed deliverable."
+    },
+    "aee920d7d1d37176c0115ac08f54a8253ff541c440b6c2fbfd1a5870eed1955b": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "The passage directly says Hard Rock “will operate and manage HRMP under a long-term management agreement,” which is an attributable operational commitment/agreement."
+    },
+    "f8aaaac9270847f245ccf27a504eeeb7a878b93bbbfd071cd57428ff0f18475c": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "The board reports that “Community benefits valued at $761 million include” the listed improvements and funding, documenting a project-specific benefits package."
+    },
+    "d480c9e00034d8ceb5d96a2f458e0fab64cdde1f22cd5dad47a7c339f06df7aa": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "The passage states “HRMP proposes a $5.3 billion capital investment,” with a quantified expected local-benefit share, which is a material proposed project investment."
+    },
+    "efc3d0490441075cbfed06604b417cdba50d1bea4767b14aaa07af6bc11b51b2": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "The text says “HRMP will contribute $500 million in license fees,” a specific payment obligation tied to the project."
+    },
+    "4eb720e9bb3dcdca01e64f60680302360c526c958fc9142edfda707a1379cc02": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Project-specific staffing forecast attributed to HRMP: it \"projects 3,905 full-time and 2,023 part-time operational employees, with approximately 55 percent drawn from Queens.\""
+    },
+    "8ae646ff0773e4698679399dc192fa99b322f49214c5f0abbea8f99b0b2bc9cf": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Quantified compensation projection for project operations; the passage states average full-time compensation \"is projected at $140,000 annually, including benefits.\""
+    },
+    "06c7ab2b3e6ca477d3c8a16325407b4448afac0dfe8ecb96eaa9ab52884cb421": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Express commitment on hiring priorities: HRMP \"committed to prioritizing opportunities for unemployed or underemployed individuals.\""
+    },
+    "f87fe5a7383b1244712695f214bbde64cdbe04cd377e3435bd260add3a8cc25d": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Supported as workforce targets later described by the Board as nonbinding: \"51 percent women and 83 percent minorities\" and \"none of the Applicants ... made binding commitments beyond bestefforts pledges.\""
+    },
+    "906ae793c8ae7ea4c8e83d4f63010876ea8d9e60d3c6dfc7aa714c48bcff91f5": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Documented proposed project improvements with conditions preserved: HRMP \"proposes extensive traffic and roadway improvements\" including ADA and transit-access upgrades."
+    },
+    "1254268da416dff49f39d4517ab022f31af06f2f0a89bc68e4406e53df60541b": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Clear funding commitment tied to the project: \"The Applicant committed to this $150 million over a 30-year license term.\""
+    },
+    "b641a1960e21570053aeb4474bbd0930f1364db7375966bd62f2b92c1bdddd2d": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Directly supported as an attributable project plan: HRMP \"plans to construct an overbuild\" costing about $60 million for the Taste of Queens food hall."
+    },
+    "89d4aeb205e778bc0b2f00711ce26f1b626e0bf84bcf244dda9b4d129e52f04a": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Supported as a Board recommendation for a license condition: the Board recommends the Applicant’s license require those projects, including the 450 affordable units, to be completed."
+    },
+    "3166f295c812332479648ef0d9cbeb9df05dec9118eca5a9042bf46600ab7305": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Supported as a Board recommendation for a license condition: the Board recommends the Applicant’s license require those projects, including Flushing SkyPark, to be completed."
+    },
+    "3a3fc83e178b48e1bbb265832c3c0dd372476b1111c1266bea90e357b0f14250": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Supported as HRMP estimates and projected hiring targets, and the cited text preserves that these are projections rather than binding commitments."
+    },
+    "41d5475f5006ad533ded42519024aa64bc93f0127be9f54252abffe4e09dfb95": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Direct commitment: the Applicant \"will meet the 10 percent renewable energy requirement through onsite photovoltaics and a power purchase agreement.\""
+    },
+    "42eb82f838586956ea312d73da26e98f51da526ff201f519ce9ac13c31f432f4": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Direct commitment: the Applicant \"committed to Energy Star-rated equipment and high-efficiency Heating, Ventilation, and Air Conditioning systems.\""
+    },
+    "1ad8ca32ef74adafeec998190fc40020c372b9a16f7efca217d7807d763e0d25": {
+      "decision": "REVIEW",
+      "passage_id": "q0",
+      "reason": "The statement is a specific Board-recommended ongoing obligation: \"continued monitoring and adjustment of traffic plans during construction and facility operation.\" This is a substantive operational condition/mitigation measure, not merely commentary or boilerplate."
+    },
+    "ab201daf3c65eb0835c498bc815b1bdcf5aab3e33941d058f53a354b1955d70e": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Board attributes a concrete project proposal to HRMP: \"the only Applicant proposing onsite daycare and tuition reimbursement.\""
+    },
+    "66d711cb56f7c3a3ba308732c5cd38c6306aa5b7f1de4bd1e8f4f4ea62f510b6": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Attributed sponsor commitment tied to project conduct: \"HRMP’s commitment to help prevent human trafficking.\""
+    },
+    "ee4147ac25d5e4f6d16b658532e1c72a96a87ca4f775caafe52f9569d443ff9d": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Existing agreements are documented commitments: HRMP \"has a Memorandum of Understanding... [and] a labor peace agreement\" with named unions."
+    },
+    "6d4b3e22bc57c42951a7c86b4c3fb855ebc49bbda133d21acf8f44160fab05aa": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Project workforce target with stated uncertainty: \"aims for 6 percent service-disabled veterans but considers 2 percent more realistic.\""
+    },
+    "803280edad77748016077678e16f6ad27f397b5bc2262d6da2ba8a6342057861": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Specific construction participation goals and target are stated for the project: \"established goals of 8 percent women and 30 - 63 percent minorities\" and \"aims for 6 percent SDV participation.\""
+    },
+    "05938482e319b24f96f91a6ec943a7fb7c6d078884d225e1687fcdb3959fb54a": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Board attributes to HRMP a specific \"$25 million commitment\" to a small-business lender program supporting MWBE firms, which is a documented project-related undertaking."
+    },
+    "82dcc1e337c1bc747c1f9f80e8f14934a0242b803c7abec5b12ea640c3414d70": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This states the Board’s expectation that applicants’ represented hiring goals and requirements \"be met,\" preserving the Board’s own conditional oversight position tied to project commitments."
+    },
+    "58561f2f2c4e17c041db3c084479b705bd565c9b0acb9f5865a6a3c43099f2e1": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "The passage expressly says HRMP \"has committed\" to work with the Queens community to recruit and train local residents to fill the majority of project jobs."
+    },
+    "c54fae26c0242b31055f8e541c00b748e11f8c9d2b1e4754d3399fbfbc160886": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "The quoted text attributes to HRMP planned project efforts on local hiring, local procurement, and workforce diversity, which are substantive project-specific undertakings."
+    },
+    "b9941f299d27bc2e468bbdee468ae69ae9e783de4ed66dbcd1b49c2c00469445": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "The passage identifies concrete project investments and a \"commitment to make the facility sustainable, resilient, and energy- and water-efficient,\" which are specific project features and outcomes."
+    },
+    "93a61e2f1f0e58391030c41b7b3ecf26e1d1dac42157476ab7ea80bd8f842120": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "The source states Resorts World \"proposes to convert and expand\" the existing facility into a full commercial casino, a clear proposed project undertaking."
+    },
+    "e69770691efc998dc0dbc731404720f2ea517e286ba9878ae16819af89c62dc0": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Project-specific quantified investment: “The total capital investment is estimated at $3.3 billion.”"
+    },
+    "3ccdeeb278285cdba9f35d52530568d24e4148b74ac9e0d3b0d62058491fe34d": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Project schedule forecast attributed to the applicant: “currently expects… open in March 2026… completion… in 2029… full project completion in 2031.”"
+    },
+    "1d2c6fd8c929216b18346e0ff7a61a57086ca7d2fae8d3485f6492305830eea7": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Named project deliverable in the proposed facility: “A 7,000-seat event center.”"
+    },
+    "3ed8470c3fb3f431c8bb6e815d75bbfea1e0a336f51973f4f6703b09d1394501": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Specific proposed hotel/room program: “One new hotel and modifying an existing hotel for a total of 1,963 rooms…”"
+    },
+    "6e9d168a6d49bb0174451e2ceb2d64c3e17f9f392def77d900efda28a4d3734d": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Specific proposed project feature with quantity: “More than 20 food and beverage outlets, including existing venues.”"
+    },
+    "b0ce4280a224911321d358b58c1b5aa28e919cc55ec99519c6ef69deaaadae24": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Named proposed project feature: “A branded dayclub.”"
+    },
+    "e22db636bc6024e57f66986cef6397505f09265b6e74cf4ee8140f0430be4be1": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Project-specific proposed specification: the application states “A casino featuring at least 4,635 slot machines and 534 gaming tables.”"
+    },
+    "f5d434efdac1e6078709e114fdaedeb3ba33177c1c49a267186ecdb2878ac88d": {
+      "decision": "KEEP",
+      "passage_id": "q2",
+      "reason": "Board recommendation to the licensing authority sets a concrete project condition: licensed for the lower number of gaming positions."
+    },
+    "8c6a34d4c9981666c7541af8396fa8dc9fe9fbc433812ed73b1123c516f1fe18": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Documented project deliverables: renovation of the Hyatt Regency and reduction to 363 rooms, plus a new 1,600-room Crockfords Hotel."
+    },
+    "50a282780723336fe43bdb9442146d3e53d2e9d30fc06c317b3526fa4eaa5a12": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Board summary of the applicant’s project describes identifiable added features: new Crockford’s hotel, additional parking facilities, and a multi-purpose arena."
+    },
+    "7c5f69274cdbb518449e7a1566752c0128f874526fa8a0ad30131bb046b0f90d": {
+      "decision": "REVIEW",
+      "passage_id": "q0",
+      "reason": "Supported text describes existing committed financing contingent on licensing, but this is financing status rather than a clear project undertaking by the actor as phrased."
+    },
+    "bc681237b14727074eada452d741d1bd73ed58cdf4e39175047c36718283b687": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Express commitment by the applicant and parent to “guarantee access to the capital necessary to complete the project.”"
+    },
+    "7475999dc7364dd9a08320ad7e237dfd10c39967ca2a19ee84f29bb2eaa4999e": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Explicit applicant financial undertaking: \"will contribute $500 million in license fees.\""
+    },
+    "b6a82c99109ef871fb243f7395f7894d55ac666e1ce0321ce4558f15e5c28034": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Board says Resorts World \"must meet these targets,\" referring to the cited employment and local-hire projections."
+    },
+    "85bb33db4f84e49cae4d9f1c34fdd28577512c6df026848701a721ef4416386a": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Project-specific compensation figure preserved at source certainty: \"estimated near $150,000 annually, including benefits.\""
+    },
+    "88e89f932b280b30f46e061990e6f2d58f75884ab9f8fffe013c2547844666ab": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Board explicitly states Resorts World \"must meet these targets,\" covering the cited workforce diversity percentages."
+    },
+    "e064cd64c2a36298f1b132901f466ec29429c97506ea2dd7c81e8705bea8efe7": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Clear annual commitment for the license term to fund workforce housing, with a defined formula and cap."
+    },
+    "1a04b22078dfead134abc05136e533f4cb6ec2383033d3615521fe81286f95f1": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Explicit pledge of an initial $50 million investment for Innovation Campus design and preconstruction programming."
+    },
+    "a6531f95bb11ef24ae2261f006c8fa206fa5df9aec3e3cd17ae57874e42b78ce": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Board attributes a concrete pledged annual commitment for the license term with a defined formula: “the lesser of 2 percent... or $25 million per year.”"
+    },
+    "c57ac5c982be20e065945eb198ff4767e174e0e5fb426bbb9568def1ad0e7fa6": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Directly states Resorts World “commits to up to $5 million per year” and “$25 million upfront,” a specific funding commitment."
+    },
+    "395a886108caaf53c582c0248ba508e62697784483345164880e1500b329ca4f": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "The passage expressly says Resorts World “commits to... traffic infrastructure improvements,” which is a project-specific undertaking."
+    },
+    "3f45ad528c536f9c10f874377dae61afcf90523fdbe22b037cc11cb9f72ec21e": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "The source expressly attributes to Resorts World a commitment to “various mass transit improvements.”"
+    },
+    "9e4b03f3760a6fc1f400c01bfefa27fb47486c2735cd3d3bb768561dc0ecd916": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This is a specific committed project feature: “an open greenway and parks system” providing “ten acres of new open space.”"
+    },
+    "3fccc59a25f823417046b521b8e2b88a1f591f7a6c83234ca24e62db4c70617d": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This is an attributed sponsor forecast: Resorts World “estimates” specific construction FTE levels over five years; keep with the source’s uncertainty preserved."
+    },
+    "48181b57f443709bc48f5d4b51cfb5caecf547ed3bdb2a40d6f4df9b737f7efe": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Project-specific quantified labor projection: “Construction wages are projected at $38.55 per hour, or $72.11 per hour including benefits.”"
+    },
+    "fb052876c2d131e4779302144e0da98afaae3e138792d12cb01208e10fbb2472": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Project-specific workforce residency estimate with percentages: “19 percent from Queens, 40 percent… 38 percent… and 3 percent.”"
+    },
+    "66b0af53d397e4f0f152f85b007f6cc1bf792fabc00b1078971ec58bce7fbc9b": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Documented future action by the applicant: “it will conduct a Childcare Needs Assessment.”"
+    },
+    "1422b9d3251336f5acfde184e660bd0ae034ba003f1d28fd2355edeae04de00f": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Board-stated required target, a proposed requirement for the project: “expects the service-disabled veterans’ employment target to be the required 6 percent.”"
+    },
+    "e1dea9ce0af28c6b2ebd30789c8a8ca956ea45158195d8e0284ef65cb1b6a844": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Specific construction workforce diversity goals are stated: “targeted for 5 percent women, 40 percent minorities, and approximately 5 percent service-disabled veterans.”"
+    },
+    "b2934c77db86f1a5c641d7231943df897cfe5abfdf97ad2fa361f97d95dc969f": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Specific quantified forecast for local construction hiring: “projected that 19 percent of its construction FTEs will be Queens residents.”"
+    },
+    "8a41b0cbefffcf4718893df650ee5c13ba7f3eced30c7cbaf388329e99a3410f": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Board cites applicants’ \"representations about hiring local, diverse and unionized workers\" and expects their \"stated goals and requirements\" to be met, documenting project-related commitments."
+    },
+    "131d5aef2d0d14c460d7ed0a470488a01be88ce509e6a79db51fdb9bb38545cd": {
+      "decision": "REVIEW",
+      "passage_id": "q0",
+      "reason": "Passage says the Board believes Resorts World \"can convert its facility... quickly\" and provide revenue \"as early as 2026,\" but this reads as the Board’s reported forecast/selection rationale rather than a clearly attributed applicant commitment."
+    },
+    "21ceb68b59d6175241397b3de206c32cbb77ae83e5520cfbe50f0f260f155a81": {
+      "decision": "REVIEW",
+      "passage_id": "q0",
+      "reason": "The speaker is the Gaming Facility Location Board, not the Commission or elected officials. In context, the Board is urging others to preserve the bid tax rate and notes the applicant indicated it may seek a lower rate. Because this is a specific recommended obligation tied to a material quantitative project term, it is not safely excludable as mere commentary or boilerplate."
+    },
+    "05841cb3473ea6270f8fb7eaafb7c3ca2b346fb98d4f183c02ba6eac4d88209a": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "The Board expressly refers to the applicant’s commitment to \"recruiting, training, and developing a diverse workforce.\""
+    },
+    "968e915ed4913c46f44225a4f146b651625437afa7e5b00e0ac502641caf8bb3": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "The passage explicitly lists the applicant’s commitment to \"improving the transit and traffic infrastructure on the casino’s campus.\""
+    },
+    "980ebb2287dffbf85481b93106135b9c6b174d75e6a6e0184cda240da2137462": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "The passage explicitly lists the applicant’s commitment to \"building more open and park space into its campus.\""
+    },
+    "dfcb6c0e4b90336cd7852aa380a8dd7598cd32b1050a554ba0ce259ad53878ec": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Board reports the applicant’s own commitments, including “commitments to creating quality jobs,” which is a project-specific undertaking."
+    },
+    "e948d47ddd4f0ea36c5adee73120caf7c10fd229ce089da1b88b7316bbb7ffe5": {
+      "decision": "REVIEW",
+      "passage_id": "q0",
+      "reason": "The speaker is the Board, which urges the Commission to use the license agreement to ensure acceptable quality if opening occurs during major construction. This is a concrete recommended license condition about project implementation, so it is not safely removable as generic commentary alone."
+    },
+    "632297028bf5ff6aa17dff9174d319a8634e727bae1f85f2e4aadcec14c0abcc": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "The license award expressly states Resorts World New York City “having agreed to execute a monitoring agreement,” documenting an agreed obligation tied to licensure."
+    },
+    "aa4c7bff8c913b3940f070036937880af2ebf71639adafaf575574360acbea22": {
+      "decision": "REVIEW",
+      "passage_id": "q0",
+      "reason": "This passage is from the issued license award itself and states a concrete license term: duration is 15 years from issuance of the operation certificate, renewable for 10 years. That is a substantive project/license term, not a recommendation or boilerplate."
+    },
+    "c4362acbec36ecb21b93afd29e9f1da2c149fd24661a4bc05bbc7ae505de21f3": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "In the license conditions, Resorts World New York City “shall materially perform consistent with the content of its Application and commitments,” which is a binding project-performance obligation."
+    },
+    "7d5d02ff5d37fceb07d34612a1db4255e7e00c817230a1bc65f754a08ed8dcfb": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "The license condition says Resorts World New York City “shall pay… a $500,000,000 gaming facility license fee” by a stated deadline, a clear binding payment duty."
+    },
+    "1808f5435d56271f51f67bafe37dba75ddf202bfdfb6c79e3f82214deb8a1aa3": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "License condition imposing a specific payment-security duty: deposit 5% of total proposed investment by December 31, 2025."
+    },
+    "5cf26cf538746c2dd48003cbfabd832566d48e00891761d893dd2edb0d0daaae": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Documented license condition requiring project-specific milestones and budgets for proposed community benefits and CAC commitments."
+    },
+    "503fceb41a89c48b36868e09292985f3e0502ea0dded8d2977c01cbccd60b051": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Binding reporting obligation in the license: post and submit community benefits progress reports with specified content."
+    },
+    "270564c206099d1ac671ccc1b8bc21b2d5fa5343728d223ccb212310b7b17524": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This specifies required contents of the mandated community benefits progress report, including disclosure of delays in delivering proposed benefits."
+    },
+    "263a73bfddccaea5e4a681d472f4714835c4afa05f127802cea3676063a7cfa4": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "License condition requiring commencement of gaming operations once the Commission determines the permanent casino area is completed per the application and law."
+    },
+    "f85102ede0e3884f5c71fa66817e6022837242315427e2e511027702979585e6": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Binding compliance condition requiring Resorts World New York City to comply in all material respects with third-party agreements in or proposed within the application."
+    },
+    "ede11bbcb7d0a058ce2f62b9cd188aa9f23d4abc1e476b24f8771720f2353cab": {
+      "decision": "REVIEW",
+      "passage_id": "q0",
+      "reason": "This passage states an operative license condition that all terms and conditions bind Resorts World New York City and Commission-approved successors and assigns. It is an accountability/binding condition in the license, so it should be retained."
+    },
+    "40ce4021c6315c44cc6afbf2330276b795a455a23b9726200b31399ae63ea4da": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Documented license condition preserves the stated certainty: the parties \"have a mutual intent\" to establish an independent CMT in connection with the license."
+    },
+    "24f14bd03d56a9c853c97b46c3667fa077209192079dcfd3c724e6c2f27de216": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Specifies a required reporting topic under the CMT arrangement: \"Community benefits proposed in the Application... including completion or delivery milestones.\""
+    },
+    "2f5376d7a63d7f25ac531c35d9cba0d3842a808bc4c0692aaae6d33bd0290b7f": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Binding duty in the license: Resorts World New York City \"shall contract promptly with and compensate appropriately\" an independent third-party CMT firm."
+    },
+    "4c08abd79e47d157aa823e023b07d35e05bb0436158b7a2dda8225435857ce6a": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Required compliance-reporting scope is expressly listed: \"Anti-money laundering compliance, including... Know Your Customer, Suspicious Activity Report, and Currency Transition Report compliance.\""
+    },
+    "af283ec1035653f7953bec7b5677785ae5417c0e65ae845d4e241d5721276517": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Required CMT reporting topic is expressly stated: \"Compliance monitoring with any restrictions or requirements the Commission has set forth.\""
+    },
+    "d9ef44df957b9406573fe0d3af0cd1d44eb30a53fd4bcba08ad4ca93d8934d81": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "License condition requires the CMT to monitor and report on Resorts World New York City's ongoing compliance with its regulatory obligations, expressly including 'Commission regulatory requirements.'"
+    },
+    "f8bf547b121e6bbae3afa3f0d3f4bdb1d7590a6b85e12ca844f22ca47ea97ca4": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This is a specific license requirement for the project: the CMT 'shall be independent' of RWNYC's auditors, counsel, and consultants for at least five years before engagement."
+    },
+    "8e829eef3fc01193a3464a243ef9dc1b5674a40b0764e5963784b91e582f1c57": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "The license imposes binding contract controls: Commission prior approval is required, RWNYC cannot terminate unilaterally without written approval, and it must terminate the CMT contract at the Commission's direction."
+    }
+  },
+  "archive_checks": {
+    "3c1d4bb837c26c4a2ed9b72bd017126a18f34ef129e525c5738018f8f00990b3": {
+      "first": {
+        "decision": "ARCHIVE",
+        "passage_id": "q0",
+        "reason": "This is an administrative selection decision, not a project undertaking: “The Board recommends the following Applicants for commercial casino licensure consideration by the Commission.”"
+      },
+      "check": {
+        "decision": "ARCHIVE",
+        "passage_id": "q0",
+        "reason": "The passage is explicitly a Board recommendation list: \"The Board recommends the following Applicants for commercial casino licensure consideration by the Commission.\" This is an administrative/recommendation step about who should be considered, not a substantive project promise, estimate, term, or condition."
+      }
+    },
+    "4e2f81c3de332161a7346ec1e12dccde01a85467b681b7f6f820d90e92a4094e": {
+      "first": {
+        "decision": "ARCHIVE",
+        "passage_id": "q0",
+        "reason": "Administrative selection only: \"The Board recommends the following Applicants for commercial casino licensure consideration by the Commission\" is not a project undertaking."
+      },
+      "check": {
+        "decision": "ARCHIVE",
+        "passage_id": "q0",
+        "reason": "The cited text affirmatively shows only a recommendation for licensure consideration by another body: \"The Board recommends the following Applicants for commercial casino licensure consideration by the Commission.\" That is an award/review recommendation rather than a material project commitment or quantified plan."
+      }
+    },
+    "5cbd05ac558a0bcccff7bdd99c3e9489e576d030c0b923a412583f95f5c576c7": {
+      "first": {
+        "decision": "ARCHIVE",
+        "passage_id": "q0",
+        "reason": "Administrative selection only: \"The Board recommends the following Applicants for commercial casino licensure consideration by the Commission\" is not a project-specific commitment."
+      },
+      "check": {
+        "decision": "ARCHIVE",
+        "passage_id": "q0",
+        "reason": "This is part of the Board’s list of applicants it recommends \"for commercial casino licensure consideration by the Commission.\" The statement is merely a selection/recommendation step and does not itself add a project promise, implementation detail, estimate, or accountability condition."
+      }
+    },
+    "aed01ded620f4b65087f5b6bfc5522c8bef466f53f2943b8941b40900f9f1d85": {
+      "first": {
+        "decision": "ARCHIVE",
+        "passage_id": "q0",
+        "reason": "Hypothetical forecast, not a commitment: \"If the Board selected two applicants... the Board consultants project\" describes a scenario and projected revenue impact."
+      },
+      "check": {
+        "decision": "KEEP",
+        "passage_id": "q0",
+        "reason": "The passage contains a substantive quantitative projection tied to the licensing scenario: if two applicants were selected instead of three, consultants project the State would receive \"$1.1 billion to $3.7 billion less\" tax revenue. Even though framed as a counterfactual and attributed to consultants, it is a material fiscal estimate relevant to planned implementation."
+      }
+    },
+    "cde058a8bb6af348eff26b46ecb1d20f7a35351e9c31b440b3dfb25d840943b0": {
+      "first": {
+        "decision": "ARCHIVE",
+        "passage_id": "q0",
+        "reason": "This is only an estimate, not a commitment or requirement: \"Median compensation is estimated to be near $80,000, including benefits.\""
+      },
+      "check": {
+        "decision": "KEEP",
+        "passage_id": "q0",
+        "reason": "The text gives a substantive quantitative characteristic of the Bally’s project workforce: \"Median compensation is estimated to be near $80,000, including benefits.\" In context it describes planned job compensation for Bally’s Bronx and is not generic boilerplate or a mere procedural step."
+      }
+    },
+    "1ad8ca32ef74adafeec998190fc40020c372b9a16f7efca217d7807d763e0d25": {
+      "first": {
+        "decision": "ARCHIVE",
+        "passage_id": "q0",
+        "reason": "Board recommendation, not an applicant or binding project undertaking: \"The Board recommends continued monitoring and adjustment\"."
+      },
+      "check": {
+        "decision": "KEEP",
+        "passage_id": "q0",
+        "reason": "The statement is a specific Board-recommended ongoing obligation: \"continued monitoring and adjustment of traffic plans during construction and facility operation.\" This is a substantive operational condition/mitigation measure, not merely commentary or boilerplate."
+      }
+    },
+    "21ceb68b59d6175241397b3de206c32cbb77ae83e5520cfbe50f0f260f155a81": {
+      "first": {
+        "decision": "ARCHIVE",
+        "passage_id": "q0",
+        "reason": "This is the Board urging others to act: it \"urges the Commission and elected officials... to resist any back-tracking,\" not a project undertaking by the named actor."
+      },
+      "check": {
+        "decision": "REVIEW",
+        "passage_id": "q0",
+        "reason": "The speaker is the Gaming Facility Location Board, not the Commission or elected officials. In context, the Board is urging others to preserve the bid tax rate and notes the applicant indicated it may seek a lower rate. Because this is a specific recommended obligation tied to a material quantitative project term, it is not safely excludable as mere commentary or boilerplate."
+      }
+    },
+    "e948d47ddd4f0ea36c5adee73120caf7c10fd229ce089da1b88b7316bbb7ffe5": {
+      "first": {
+        "decision": "ARCHIVE",
+        "passage_id": "q0",
+        "reason": "This is the Board’s recommendation that it “urges the Commission to use the license agreement,” not a commitment by the project party itself."
+      },
+      "check": {
+        "decision": "REVIEW",
+        "passage_id": "q0",
+        "reason": "The speaker is the Board, which urges the Commission to use the license agreement to ensure acceptable quality if opening occurs during major construction. This is a concrete recommended license condition about project implementation, so it is not safely removable as generic commentary alone."
+      }
+    },
+    "aa4c7bff8c913b3940f070036937880af2ebf71639adafaf575574360acbea22": {
+      "first": {
+        "decision": "ARCHIVE",
+        "passage_id": "q0",
+        "reason": "“License Duration: 15 years… renewable thereafter for a period of 10 years” describes the term of the license, not a project undertaking or performance commitment by the licensee."
+      },
+      "check": {
+        "decision": "KEEP",
+        "passage_id": "q0",
+        "reason": "This passage is from the issued license award itself and states a concrete license term: duration is 15 years from issuance of the operation certificate, renewable for 10 years. That is a substantive project/license term, not a recommendation or boilerplate."
+      }
+    },
+    "ede11bbcb7d0a058ce2f62b9cd188aa9f23d4abc1e476b24f8771720f2353cab": {
+      "first": {
+        "decision": "ARCHIVE",
+        "passage_id": "q0",
+        "reason": "Boilerplate applicability clause only: \"terms and conditions of the License shall be binding upon... successors and assigns,\" not a specific project undertaking."
+      },
+      "check": {
+        "decision": "KEEP",
+        "passage_id": "q0",
+        "reason": "This passage states an operative license condition that all terms and conditions bind Resorts World New York City and Commission-approved successors and assigns. It is an accountability/binding condition in the license, so it should be retained."
+      }
+    }
+  }
+}

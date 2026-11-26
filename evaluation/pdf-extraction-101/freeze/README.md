@@ -1,6 +1,8 @@
 # PDF catalog freeze 1
 
-The release retains **81 of 101 Golden rows across 184 catalog records**. Precision is **44.02%**, recall **80.20%**, and F1 **56.84%**. The release freezes PDF commitment extraction on the three original public documents. Delivery evidence retrieval and verdict prediction have separate evaluations.
+On the three public PDFs and 101 Golden annotation rows, the **all-edits experimental configuration** produced 179 catalog records and matched **82 rows**, with **45.81% precision, 81.19% recall and 58.57% F1**. Among the seven configurations in the final round, it had the highest precision while maintaining or improving the frozen release’s aggregate recall. The frozen release matched 81 rows in 184 records, with 44.02% precision, 80.20% recall and 56.84% F1. The experiment therefore gained one net match and produced six fewer unmatched records.
+
+The aggregate comparison allows one newly found row to offset a lost row. The earlier release decision required every previously found row to remain matched. Both results measure commitment extraction by source-span matching on documents used during development. Delivery evidence retrieval and verdict prediction have separate evaluations.
 
 The default PDF extractor now runs first-pass extraction and review, checks every window for omitted commitments, and adjudicates newly proposed items and disagreements using the source text. Generated claims retain their cited locations. A PDF can establish an attributable promise, plan or condition before delivery research begins.
 

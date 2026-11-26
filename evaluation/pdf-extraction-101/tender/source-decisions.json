@@ -1,0 +1,362 @@
+{
+  "model": "gpt-5.4",
+  "document_roles": {
+    "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e": {
+      "document": "RFA-2023-01-03",
+      "role": "SOLICITATION",
+      "reason": "This is a Request for Applications that explicitly solicits proposals for gaming facility licenses and lays out applicant instructions, eligibility requirements, evaluation criteria, fees, schedule, and post-licensure terms."
+    },
+    "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc": {
+      "document": "GFLB-SEL-2025-12-01",
+      "role": "OTHER",
+      "reason": "This is a post-application selection/evaluation document summarizing the RFA process, applicants received, evaluation criteria, and selection decisions, rather than inviting applications or setting applicant requirements."
+    },
+    "e33b1a690d0653f88386d257a1b4d68c452c71ba59fca06faa75f9d37a202c02": {
+      "document": "NYSGC-RWNYC-LIC-2025-12-19",
+      "role": "OTHER",
+      "reason": "This is a post-selection license award/acceptance document issuing a gaming facility license and setting license conditions, not an invitation for bids or applications."
+    }
+  },
+  "decisions": {
+    "609a55fb5ac16ebb86205c3643a2fba5ba4a41e7aa5a5034524e2d576ba8dcb6": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Substantive conditional financial obligation: the applicant/licensee must meet the licensee deposit requirement as a condition of licensure, not merely mention it. Compliance would be shown by satisfying the required deposit to the responsible authority."
+    },
+    "7867341becf474f0ecb3e682e178c5873e68bd46948a9a0af95a69c4ec755e48": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Concrete project-site obligation: the winning applicant must own or acquire the project land within 60 days after award, with the quoted lease-term condition defining acceptable control. Compliance is observable through title or a qualifying long-term lease."
+    },
+    "ba5ba358e446f45657c2ce20962f5e76c0d6d96487be644dc9bab79fe14783a5": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Specific payment commitment to the commission/state: the applicant must be able to pay and commit to paying the gaming licensing fee. Compliance would be shown by payment of the required fee if licensed."
+    },
+    "dd1af442b25a63462bfff7de7c14cf2d64cad8456912dda19fa79f8e10435e0f": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Clear capital-investment undertaking tied to the submitted design plans: the applicant shall invest at least the required capital into the gaming facility. Compliance would be evidenced by committed/project-recorded capital investment at or above the statutory threshold."
+    },
+    "e589cb730f244c8469301d42fade34c2c4f712c5dc87d6ca3eb7e8a960702520": {
+      "decision": "REVIEW",
+      "passage_id": "q1",
+      "reason": "This passage clearly requires the application to explain how the applicant proposes to address problem gambling, workforce, community, and municipal impacts, but it is less explicit that those proposed measures become binding delivery obligations. The clause contains substantive subject matter yet may govern proposal content only."
+    },
+    "cfda921ccd2e83c845ef5d945c5f95ca58d90ef4eccded7a0b9aa3dab73023ae": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Contains a distinct substantive commitment beyond description: the applicant must identify host-municipality infrastructure costs and commit to a community mitigation plan for the Host Municipality. Compliance would be shown by an attributable mitigation plan addressing those identified costs."
+    },
+    "d2b0005043a947ede8331c6feadf5eb77aa8239b6004e3f16aaa18c73f7855ff": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Substantive applicant obligation: identify emergency-service costs owed to the Host Municipality and commit to a mitigation plan benefiting that municipality. Compliance would be evidenced by an application/award commitment specifying those costs and the mitigation plan."
+    },
+    "a9c418227d8dc776f417378e68d22250a4151f8f05bb9cddbdce9d6bfa56a32e": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Concrete duty binding the applicant: formulate, obtain board approval for, and abide by a diversity/equal-opportunity construction program with specific utilization goals for minorities, women, and veterans. Compliance is observable through the approved program and documented adherence to those goals."
+    },
+    "8c60729644c4963a6a16684a00450cb1ad8720bec233a27d463eecfda8a09d71": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "This is mainly a discretionary enforcement power of the Commission tied to procurement integrity, not a distinct substantive project undertaking owed to the public or workforce. It governs license administration rather than requiring a project benefit, payment, service, or performance record."
+    },
+    "58d97d02a1d12d16391360ca36a7f02892ab2c15722541430e33f842242f284b": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Substantive transparency obligation: the Board will treat application materials as public records and post them online, subject to FOIL redactions. Compliance is observable through the public posting itself, creating a project-specific accountability record for public review."
+    },
+    "e79d35ccfe916fcedd46237bff04a1a6ec050ac934b3269436b4ee087dc20853": {
+      "decision": "ARCHIVE",
+      "passage_id": "q1",
+      "reason": "Although binding, this waiver is a condition of applying and litigation-risk allocation in the procurement process, not a substantive project commitment delivering a project outcome, payment, service, or public/workforce protection tied to facility development or operation."
+    },
+    "0165bf0a96ff096c6505d1337ea4c10849eb085613174acbbcd8ad48e4e90913": {
+      "decision": "ARCHIVE",
+      "passage_id": "q1",
+      "reason": "Like the State Waiver, this is an application-condition waiver and indemnity regarding Section 1311 claims. It is chiefly procurement/legal housekeeping rather than a substantive public project obligation or project-specific benefit."
+    },
+    "3df137e83628b7b79b8088b1cd322668adfc7e975dcb4ebc40ebf5b0f8ba6120": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "This governs licensing administration: applicants and related parties must undergo a background investigation by the Commission or its agents. It does not create a distinct project delivery, payment, service, public protection measure beyond the suitability review process itself."
+    },
+    "382aed1574be34185d6ea52102de9dbe95c12a301d20f6815ee7641b9b34c43c": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "This is a licensing qualification burden on applicants and related parties to prove suitability by clear and convincing evidence. The owed performance is evidentiary support to the regulator, not a substantive project undertaking or public-facing project obligation."
+    },
+    "52dd70898b9e43d77467d79cfa678d0cfd6470fe44a9944e37b2d8a9db8cda91": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "This passage limits how the Commission evaluates rehabilitation and disqualification. It is a decision standard for the regulator, not a concrete duty to provide a project outcome, payment, service, workforce protection, or project-specific accountability record."
+    },
+    "9e0374be1c7a56caad06022675a22e0ba6f4a6cc4b2cec9063d120c6fd50b09e": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "The quoted clause warns that false or misleading information may lead to rejection, cancellation, revocation, or suspension. That is an enforcement consequence within the investigation process, not a separate substantive project commitment."
+    },
+    "ac69ab5b12d1f9c12eb4d224186f4a9acf4736d67a08ca7560b2a8f20de1b59b": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "Like r1, this requires applicants to establish their and related parties' suitability by clear and convincing evidence. It is part of licensing/procurement screening rather than a binding project performance obligation owed to the public or workforce."
+    },
+    "5c19469c221ec4794fd456997b71f5d45c22a947fc707e2184e6f95804f66695": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "Although this is a payment obligation, the surrounding text shows it is an application-processing and investigation cost true-up owed to the Commission. That is an incidental procurement/licensing charge, not a material project payment or substantive public project commitment."
+    },
+    "e38c01aaf16cde6b8c878559b3d22c1cc0fe2acd1ba9a23803e7e692a8332057": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Sets a concrete project threshold: the applicant/licensee must demonstrate its Gaming Facility meets or exceeds the $500 million minimum capital investment. Compliance would be shown to the Board/Commission through the required summary and cost calculation evidencing qualifying project spend."
+    },
+    "21934fe74d76a0d86aab09c122fa5e196058eab192034609c16c2565a74349f3": {
+      "decision": "ARCHIVE",
+      "passage_id": "q1",
+      "reason": "This passage defines which financing-related costs cannot be counted toward the Minimum Capital Investment calculation. It governs accounting/eligibility methodology for the application, not a distinct substantive project payment, service, protection, or deliverable owed to the public."
+    },
+    "405861bf298e68fd0468384d572abb9cf6aec63ba3258fdd400ada9480cbd4c3": {
+      "decision": "ARCHIVE",
+      "passage_id": "q1",
+      "reason": "This is another exclusion from the Minimum Capital Investment definition, specifying off-site infrastructure costs that may not be counted. It is a cost-definition rule for proposal evaluation rather than a separate obligation to build, pay for, or provide something."
+    },
+    "fc190628cffc657996ad0737cb8f4f44b9e214dfa8b6dd2f30e4e59a9a6237aa": {
+      "decision": "ARCHIVE",
+      "passage_id": "q1",
+      "reason": "The clause excludes land acquisition and related title/appraisal costs from the Minimum Capital Investment calculation. That is definitional procurement/accounting guidance, not a standalone substantive commitment owed by the project winner."
+    },
+    "fd2253e3110764f7e855713435881ac291b38ef6255ef7e3d96787a7618260de": {
+      "decision": "ARCHIVE",
+      "passage_id": "q1",
+      "reason": "This language only states that mitigation costs for host/nearby municipalities do not count toward the Minimum Capital Investment. It does not itself require mitigation or create a distinct public-facing obligation; it is a calculation rule."
+    },
+    "33f160cd1a046fca5c4198c1799c30674600858c7d7571083e416ba321c15730": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Imposes a clear post-award duty on a licensee: during construction it must provide regular updates to the Commission documenting facility-design improvements. Compliance is observable through the submission of those updates as a project-specific accountability record."
+    },
+    "d1dda2362a7bb5784fbb159c5301cd7f58bb6aadb55cbc1dbb8656f1a9ec5d78": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This clause imposes a substantive design-quality restriction on the eventual licensee: it may not make design changes that reduce the facility’s size, quality, or fit and finish from the approved initial design. Compliance would be shown by construction updates and final built features consistent with or better than the approved design."
+    },
+    "647c4d7b618f181be77a333909bc1a787aa9e7631a7571025eb28eff4c68c200": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This is a concrete post-award obligation tied to the project site. The successful applicant/license holder must own or acquire the land for the gaming facility within 60 days after award, with the quoted lease term defining acceptable compliance. Deeds, leasehold documentation, or other land-control records would establish compliance."
+    },
+    "874f022afbb2e68d74066279e42f049ecb5cebcb8d1b5aeb7086f6397f607a0b": {
+      "decision": "REVIEW",
+      "passage_id": "q0",
+      "reason": "The passage clearly requires submission of a description of plans, but the candidate overstates it as a direct duty to procure or generate at least 10% renewable electricity. The source may imply a promised project feature if incorporated into the application, but the quoted text here is framed as a proposal-description requirement rather than an express binding performance term."
+    },
+    "baaf088674f59397cbe9ebe3e41a2776ddb48f7158bc36a4b1287d6adcbc8091": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Read with the surrounding workforce-development clause, the application must propose a workforce training program that includes establishing an on-site child day care program. This is a substantive promised workforce benefit for employees at the facility, not mere procurement administration. Compliance would be evidenced by establishment and maintenance of the on-site child care program if awarded."
+    },
+    "d27deccf44fbfa5e39578559fe9cc01ae958ae1517361fe32c3625d29a051fc5": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This is a specific labor-related commitment. An applicant lacking existing labor peace agreements must provide an instrument stating it will enter into those agreements and keep them in place during the license term. Compliance would be shown by the executed instrument initially and then by maintaining the labor peace agreements for the covered term."
+    },
+    "dfe92faaacf448f950ac114998f29147a189a5daed9481fd2b2efd46103b38d7": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This clause preserves substantive project commitments across tax-rate scenarios. The applicant is not to reduce core proposal parameters such as jobs, capital investment, or facility caliber based on the tax rate selected. Compliance would be demonstrated by consistent scenario submissions and, if awarded, an application record showing those project commitments were not scaled back for tax selection reasons."
+    },
+    "0cd3c8d41de08e8d59933b42c3080c9b73d23fd2476d705eeb06dbb5caf632ba": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "This passage only requires the application to include an independent patronage and revenue analysis. It governs proposal contents and supporting documentation, not a distinct project payment, service, protection, or post-award deliverable owed to the public."
+    },
+    "f8ef047c4869c27e1c202e612ac9469bfc73696a5f424f721d3afe5dbe92e823": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This is a concrete post-award obligation: a winning applicant must place 5-10% of the proposed total investment into a Commission-approved interest-bearing escrow account. Compliance is observable through the escrow deposit at the required amount."
+    },
+    "559e8582377e9e67ea9ef1cb0aa146b2113b339d3ba96ddb14a57228e453e09b": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This creates a substantive conditional accountability/payment term tied to project completion: if the applicant cannot complete the gaming facility, the deposit is forfeited to the State. Compliance is established by either completion triggering return of funds or forfeiture to the State upon failure."
+    },
+    "08119b92cd6646d90cb1a50e1a96e8f87159c917d7718362c412d95f37ff7ec2": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This allows an alternative form of performance security in place of cash: the applicant may provide a Board-acceptable deposit bond that ensures forfeiture to the State if the facility is not completed. That is a concrete public protection tied to the project."
+    },
+    "49a0e8240ead5d162086dd1013c3f7cd6a4a2e0ce4b6358d3a79b43529d2c69e": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This is a specific payment obligation on the licensee: the licensing fee must be paid within 30 days after license award. Compliance is observable through timely payment of the fee to the State."
+    },
+    "7b0816d1d3bcb81f6387b8b832b1544c15326f90b24ae697de1a9ebd94c021af": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "This sentence states the Board's administrative determination of the fee amount, but by itself it does not impose a new substantive duty beyond the separate payment obligation on the licensee. It is background to the licensing fee requirement rather than a distinct project commitment."
+    },
+    "aab6d8bcb7a684972b082c437f0d765fb717c923ed5619440d2a542a0684e236": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "q0 imposes a qualification-information duty on licensees, but it is a generic regulatory/eligibility compliance step tied to licensing administration, not a distinct project undertaking, payment, service, protection, or project-specific accountability record owed to the public."
+    },
+    "dcaf05b6b60cd0ac49fb35a0c737bca78867ca3877c195be3c829b9948eda224": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "q0 requires licensees to waive liability for disclosures by regulators, which governs legal/administrative risk allocation with the Commission/Board/State rather than a substantive public project obligation or deliverable."
+    },
+    "dc4ef322ad9e7f4449742bdb65faa63bc925b79310dc3a48062070335476c917": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "q0 requires consent to inspections, searches, and seizures at a gaming facility, but this is standard regulatory oversight/housekeeping for licensure and enforcement, not a project-specific public benefit or performance commitment."
+    },
+    "d0f42d379ae4bb8f470c92376a66fa96533ca6ba9d6208d815d8fd76efd84796": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "q0 requires handwriting exemplars and continuing assistance/information to the Commission; these are investigative and compliance-support duties for regulators, not a substantive project outcome, payment, service, or public/workforce protection commitment."
+    },
+    "fa803f82789898bb7bf0ed5515c5d84cb7a22659a8bc138388c25cdc764ec86d": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "q0 limits employment of Casino Key Employees to individuals holding valid licenses, which is a generic licensing compliance rule for workforce eligibility rather than a distinct project commitment or public-facing deliverable."
+    },
+    "281d5dd305a2a289171aabe0f15555ffa657669f444fe36ad8405d90d5201b40": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "q0 requires gaming and non-gaming employees to have valid registrations on file with the Commission, but this is routine personnel registration/licensing administration, not a substantive project obligation owed to the public or workforce beyond baseline regulatory compliance."
+    },
+    "9571d0932697f1f6a18ee0519f6fde83d5ddbf3509e5423094f8eeb034a4b3ea": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "This passage imposes a vendor-licensing prerequisite before doing business, owed to the Commission/regulator, but it is generic licensing housekeeping rather than a distinct project payment, service, protection, or project-specific accountability commitment."
+    },
+    "ee3fe345576ebe805eb64fa8c2fb3bacfe6b17ebea0f2904679e4856458c6279": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This creates a concrete reporting duty: the Gaming Facility licensee owes the Commission a report describing all junket operations on the premises, and compliance is observable through filing that project/operations-specific accountability record."
+    },
+    "c07708a05a2025e6f0971c3f84686b61569cb20eefbd2065a0605a427174bdf4": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "This is an individual licensing requirement for junket representatives, owed to the regulator, and functions as credentialing/administrative compliance rather than a substantive public project undertaking."
+    },
+    "b625092878107c793557f24b24fcd0522ca0f9ba385cd5951e96ad575c994f3a": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "Obtaining an operation certificate is a generic regulatory permission to open or remain open, not a distinct project-specific benefit, payment, service, protection, or accountability record beyond basic licensure administration."
+    },
+    "9b6f332205f206d73a70d836cee08964dafe3300e4740be99643480a7e4ae002": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This is a concrete recordkeeping obligation tied to the project: the Gaming Facility licensee must maintain records of all project agreements, creating an identifiable accountability record whose existence can be checked for compliance."
+    },
+    "160787c6210b04b48fd29ac87c95b9cd4e0c5bf659f1b166fb43ab1203751a16": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "In context, 'This is an ongoing material condition of licensure' refers to the preceding labor-peace-agreement duty, so the licensee owes continuing labor peace agreement coverage/documentation to labor organizations and the regulator, with compliance shown by executed agreements and maintained licensure condition."
+    },
+    "5955362bbba2ceb79b8a6eb244dc5cc55f9ebbc6c0094e9e8afb2314f638e7be": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Concrete licensure obligation: the licensee must document to the Commission/state that it has labor peace agreements with each qualifying labor organization. Compliance is observable through the agreements/documentation, and the clause says it is an ongoing material condition of licensure."
+    },
+    "0275d895ed582e61d0e33faff33467da03f407aa7a007a8f27eafef0e836c86d": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Substantive operational duty: the licensee must ensure covered contractor/subcontractor/tenant operations involving gaming or hospitality employees are conducted under labor peace agreements. Compliance is evidenced by those third-party operations being covered by such agreements."
+    },
+    "46b16db70bc8b493dbf5c57657947c537d5532fe9fb710369be55ed5724be1d9": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Specific payment obligation: a Zone 1 gaming facility licensee owes the annual per-machine/per-table license fee to the Commission/state. Compliance is established by payment at the stated $750 rate for approved slot machines and table games."
+    },
+    "56148cfb61b2f75f9344dc8eacc28bdf7e5b5499c395db2c71942c8e3fe2f15c": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Specific payment obligation: a Zone 2 gaming facility licensee owes the annual per-machine/per-table license fee to the Commission/state. Compliance is established by payment at the stated $500 rate for approved slot machines and table games."
+    },
+    "0a9e70eaef0895eff69f1e6bba8c40730a230978663bbf6b9683dda147b7aa44": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Material monetary obligation tied to the project: the licensee must reimburse Commission-established investigation fees and charges, including staff time and investigation expenses. Compliance is shown by payment of the assessed investigatory costs."
+    },
+    "7fa11448fbf0c57349e304e7988c14685616548752d3aa694b4228fe4beda866": {
+      "decision": "KEEP",
+      "passage_id": "q2",
+      "reason": "Substantive cost-allocation/payment duty: remaining regulatory-control costs are annually assessed to gaming facility licensees in proportion to gaming positions, and each licensee must pay its assessed amount after notice. Compliance is observable through the assessment record and timely payment."
+    },
+    "93a80b64e7c7abab791ed16b79f97fcff4a544e683930f951aeb25c0d64989d5": {
+      "decision": "KEEP",
+      "passage_id": "q2",
+      "reason": "Substantive payment obligation: gaming facility licensees owe annually assessed regulatory-control costs to the Commission, allocated by gaming positions. Compliance would be shown by the annual assessment and the licensee’s assessed payment obligation."
+    },
+    "b2047f2f70182389b01c2492ae08bed6cf7d8afc03c69ece50534504849d8a35": {
+      "decision": "KEEP",
+      "passage_id": "q2",
+      "reason": "This clause imposes a concrete funding duty on gaming facility licensees to cover remaining Commission regulatory costs in proportion to gaming positions. Compliance is observable through the Commission’s annual assessment records and corresponding payment liabilities."
+    },
+    "a2a1b1077d628d3fc33859a268792500eaefdaddb039bdf025c05eacccfa94c5": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Explicit payment deadline: each gaming facility licensee must pay its assessed amount to the Commission within 30 days of notice. Compliance is established by the notice of assessment and timely payment record."
+    },
+    "3fa9bfae8933e9294c97b89ac9c026f27ea4e945607e57f2404287ffb8465508": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Substantive fiscal term for any awarded additional casino license: the Commission must set the gross gaming revenue tax rate through this RFA process, subject to minimum rates of 25% on slot machines and 10% on other sources. Compliance is shown by the awarded tax-rate determination and ensuing tax obligations."
+    },
+    "9e3fb896418f94881342318f39a7b31f46e58c7a70c9eb65347a784137a2e9e0": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "Concrete custodial and remittance duty: the gaming facility licensee must hold unclaimed winnings for the entitled person for one year, then deposit unclaimed amounts or cash value into the commercial gaming revenue fund. Compliance is shown by retention records and deposit into the fund after the one-year period."
+    },
+    "15c91462c28db2741246759629881e08c3b65c962dc8a36bb87c10f566dbbc2e": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This creates a substantive payment-accountability framework: the Commission must determine obligations for the entity or entities required to maintain specified racing support payments at the 2019 level, adjusted annually by CPI. Compliance is evidenced by the Commission’s determination and the maintained support payment levels."
+    },
+    "0712041bd65b3eae8551efcb4aa817ad0a28a473994dc384b57356e677dd96db": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This imposes a concrete post-award duty on the successful applicant to complete and submit a Confirmatory Affidavit to the Commission confirming prior RFA statements, affirmations, and agreements remain true and correct. Compliance is observable through the executed affidavit itself, which is a specific accountability record tied to licensure."
+    },
+    "2677943761715c55a7900ec1daef3f651f4c8e19b238f49e98bcd57cde14ccb6": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This clause expressly binds the RFA terms, amendments, the application, and the Board’s decision statement as enforceable obligations of the licensee. It is not mere procedure; it makes awarded project commitments owed by the licensee to the Commission part of the license requirements."
+    },
+    "d482d5b4b5be4bdab137a5ac76c8b5d5e20f5f7fdd934f99ddf129efd795bdd1": {
+      "decision": "KEEP",
+      "passage_id": "q1",
+      "reason": "This is a substantive conditional payment obligation: if the required education amount is not met, the licensed entity must remit the shortfall payment to the Commission for deposit into the commercial gaming revenue fund by the next May 1. Compliance is established by the payment amount and timing, with the surrounding clause supplying the baseline calculation and proration rule."
+    },
+    "436d226dc906f1d828ba3adbd994dff3a42a9975128be0e3ce3659916a795f0b": {
+      "decision": "REVIEW",
+      "passage_id": "q0",
+      "reason": "The passage mixes administrative committee setup ('elect a Chair') with more substantive public-participation functions ('solicit and review public comments' and 'hold public meetings and hearings'). It may reflect meaningful transparency obligations, but as framed it also reads as procurement-process administration rather than a distinct project commitment."
+    },
+    "04ecb2f9158d3e0b33e26858c6c66675285075f9a1d7f5f18718345eb9a523ff": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "Subjecting all CAC meetings and hearings to the New York State Open Meetings Law creates a concrete transparency and public-access obligation. The accountable party is the CAC, the protection is owed to the public, and compliance is observable through legally compliant open meetings and hearing practices."
+    },
+    "5251c3ef7fac5b376672ccb6ffd55ca5c322f7f5fc6c75c686f3f1a385449c1f": {
+      "decision": "KEEP",
+      "passage_id": "q0",
+      "reason": "This requires each CAC to submit evidence of its majority finding, under a two-thirds threshold, to the Board, Commission, and Applicant. That is a specific accountability record owed to identifiable recipients, and compliance is established by the documented submission of the committee’s approval/disapproval finding."
+    },
+    "24e92d04074df938bb33fa8fa34bee158091142abe9ba8faa7a2d1107c1a42d1": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "This passage sets an application-consideration threshold: the CAC must produce a two-thirds vote showing community support before the Board will consider the application. That governs the approval process and records CAC support or opposition, but it does not itself require the project developer or awardee to deliver a project benefit, payment, service, protection, or other substantive project outcome."
+    },
+    "32799141bf57cefb25eced8dff2b705017396fa8a205a677b58cdafe1d02b502": {
+      "decision": "ARCHIVE",
+      "passage_id": "q0",
+      "reason": "This is a procedural notice duty. If the CAC supports an application, the CAC and/or its consultant must notify the applicant, Board, and Commission. The observable compliance is sending notice, but the clause only administers the application review process and does not impose a distinct substantive project undertaking for the project or awardee."
+    }
+  }
+}

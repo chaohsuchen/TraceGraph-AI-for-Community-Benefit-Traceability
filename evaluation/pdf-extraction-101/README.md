@@ -1,6 +1,10 @@
 # Trusted-PDF commitment extraction
 
-The [frozen release](freeze/README.md) matches **81 of 101** annotated rows across 184 catalog records. The table below records the earlier import used as the starting point.
+The frozen release applies a delete-only review across all document types. Its 151 catalog records match 82 of the original 101 Golden entries (54.30% precision, 81.19% recall, 65.08% F1). Including all ten source-checked candidates identified in the earlier audit gives 91 matches out of 111 references (60.26% precision, 81.98% recall, 69.47% F1). [Release, audited additions and offline replay](all_documents/README.md)
+
+An [optional tender verification pass](tender/README.md) reduced the all-edits output from 179 to 161 catalog records while preserving the same 82 matched Golden rows. Precision reached 50.93% on the original 101-row benchmark.
+
+The final all-edits experiment matched **82 of 101** annotated rows across **179** catalog records, with **45.81% precision, 81.19% recall and 58.57% F1**. The frozen release matched 81 rows across 184 records. The table below records the earlier import used as the starting point. [Final experimental comparison and release results](freeze/README.md)
 
 The [follow-up diagnostic](diagnostic/README.md) traces the 101 reference rows through extraction, review, and catalog matching, then compares six offline policies on the frozen sources.
 

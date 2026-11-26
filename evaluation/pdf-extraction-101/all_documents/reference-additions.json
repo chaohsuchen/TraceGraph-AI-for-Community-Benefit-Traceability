@@ -1,0 +1,132 @@
+[
+  {
+    "gold_id": "REVIEW-02",
+    "audit_row": 2,
+    "document_id": "GFLB-SEL-2025-12-01",
+    "page": 5,
+    "span": [
+      6943,
+      7059
+    ],
+    "quote": "Bally’s Bronx proposed a 30 percent tax on slot machine games and 10 percent on table games and other gaming sources",
+    "claim": "As part of the Supplement Return Date Materials, Bally’s Bronx proposed a 30 percent tax on slot machine games and 10 percent on table games and other gaming sources.",
+    "audited_catalog_id": "commitment-c30e6336-0d0e-48a9-91b6-64c15ea0f6c1"
+  },
+  {
+    "gold_id": "REVIEW-03",
+    "audit_row": 3,
+    "document_id": "GFLB-SEL-2025-12-01",
+    "page": 5,
+    "span": [
+      7061,
+      7186
+    ],
+    "quote": "Hard Rock Metropolitan Park proposed a 25 percent tax on slot machine games and 10 percent on tables and other gaming sources",
+    "claim": "As part of the Supplement Return Date Materials, Hard Rock Metropolitan Park proposed a 25 percent tax on slot machine games and 10 percent on tables and other gaming sources.",
+    "audited_catalog_id": "commitment-e543d177-1ad9-44b0-9005-87297683b1cd"
+  },
+  {
+    "gold_id": "REVIEW-10",
+    "audit_row": 10,
+    "document_id": "GFLB-SEL-2025-12-01",
+    "page": 12,
+    "span": [
+      25919,
+      26093
+    ],
+    "quote": "Bally’s proposes a $2.3 billion investment in the Bally’s Bronx project, with significant backing from a large real estate investment trust and other identified debt options.",
+    "claim": "Bally’s proposes a $2.3 billion investment in the Bally’s Bronx project.",
+    "audited_catalog_id": "commitment-d45315be-16cc-4267-99ce-67a250ffb92e"
+  },
+  {
+    "gold_id": "REVIEW-13",
+    "audit_row": 13,
+    "document_id": "GFLB-SEL-2025-12-01",
+    "page": 13,
+    "span": [
+      28830,
+      28902
+    ],
+    "quote": "Median compensation is estimated to be near $80,000, including benefits;",
+    "claim": "The Board states that median compensation is estimated to be near $80,000, including benefits, for Bally’s Bronx jobs.",
+    "audited_catalog_id": "s-0bddeaa1c35f0fe131d70886b1de6afa14a0ba74adcfba92ea3857b1f9e9c364"
+  },
+  {
+    "gold_id": "REVIEW-27",
+    "audit_row": 27,
+    "document_id": "GFLB-SEL-2025-12-01",
+    "page": 19,
+    "span": [
+      42022,
+      42143
+    ],
+    "quote": "HRMP projects 3,905 full-time and 2,023 part-time operational employees, with approximately 55 percent drawn from Queens.",
+    "claim": "HRMP projects 3,905 full-time and 2,023 part-time operational employees, with about 55 percent drawn from Queens.",
+    "audited_catalog_id": "commitment-ec6c0e1b-74ba-4ac9-a533-32804241586d"
+  },
+  {
+    "gold_id": "REVIEW-28",
+    "audit_row": 28,
+    "document_id": "GFLB-SEL-2025-12-01",
+    "page": 19,
+    "span": [
+      42144,
+      42229
+    ],
+    "quote": "Average full-time compensation is projected at $140,000 annually, including benefits.",
+    "claim": "HRMP projects average full-time compensation of $140,000 annually, including benefits, for its operational employees.",
+    "audited_catalog_id": "s-08a016901ca19f430b6b211e7b37551fa7cdb9796c4db6169902a81cbc31cc79"
+  },
+  {
+    "gold_id": "REVIEW-29",
+    "audit_row": 29,
+    "document_id": "GFLB-SEL-2025-12-01",
+    "page": 19,
+    "span": [
+      44232,
+      44470
+    ],
+    "quote": "Further, HRMP plans to construct an overbuild with a construction cost of approximately $60 million as part of one of the casino’s garages, to serve as the platform for a Taste of Queens food hall that is being built by the New York Mets.",
+    "claim": "HRMP plans to construct an overbuild costing approximately $60 million as part of one of the casino’s garages to serve as the platform for a Taste of Queens food hall being built by the New York Mets.",
+    "audited_catalog_id": "commitment-86b4cc44-887b-458e-bc55-5c26a1d160f9"
+  },
+  {
+    "gold_id": "REVIEW-31",
+    "audit_row": 31,
+    "document_id": "GFLB-SEL-2025-12-01",
+    "page": 20,
+    "span": [
+      46482,
+      46593
+    ],
+    "quote": "committed to Energy Star-rated equipment and high-efficiency Heating, Ventilation, and Air Conditioning systems",
+    "claim": "HRMP committed to Energy Star-rated equipment and high-efficiency heating, ventilation, and air conditioning systems for the project.",
+    "audited_catalog_id": "commitment-9798f2a1-5215-407f-ad3f-836bd221b7cc"
+  },
+  {
+    "gold_id": "REVIEW-34",
+    "audit_row": 34,
+    "document_id": "GFLB-SEL-2025-12-01",
+    "page": 22,
+    "span": [
+      50984,
+      51110
+    ],
+    "quote": "It has committed to working with the Queens community to recruit and train local residents to fill the majority of those jobs.",
+    "claim": "HRMP has committed to working with the Queens community to recruit and train local residents to fill the majority of the many thousands of construction and permanent jobs the project promises to bring to Queens.",
+    "audited_catalog_id": "commitment-d066cae9-16b7-48e2-908f-d73b0a9c4db3"
+  },
+  {
+    "gold_id": "REVIEW-56",
+    "audit_row": 56,
+    "document_id": "NYSGC-RWNYC-LIC-2025-12-19",
+    "page": 5,
+    "span": [
+      9520,
+      9901
+    ],
+    "quote": "The contract between the CMT and Resorts World New York City shall be subject to the prior approval of the Commission, Resorts World New York City shall not be permitted to terminate such contract unilaterally or otherwise without the prior written approval of the Commission, and Resorts World New York City shall terminate the contract with the CMT at the Commission's direction.",
+    "claim": "The contract between Resorts World New York City and the Compliance Monitoring Team shall be subject to the Commission’s prior approval, Resorts World New York City may not terminate that contract unilaterally or otherwise without the Commission’s prior written approval, and Resorts World New York City shall terminate the contract if directed by the Commission.",
+    "audited_catalog_id": "commitment-57a57dd8-16c9-4062-a44f-e55bcfb04522"
+  }
+]
