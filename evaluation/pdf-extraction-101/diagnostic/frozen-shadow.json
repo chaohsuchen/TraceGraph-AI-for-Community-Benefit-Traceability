@@ -1,0 +1,2210 @@
+[
+  {
+    "document_id": "RFA-2023-01-03",
+    "range": [
+      0,
+      146
+    ],
+    "decisions": [
+      {
+        "id": "p00000",
+        "kind": "regulatory_condition",
+        "why": "Statutory minimum license threshold: the applicant must state it will invest at least the required capital in the facility, a concrete duty tied to project delivery."
+      },
+      {
+        "id": "p00001",
+        "kind": "regulatory_condition",
+        "why": "Statutory minimum license threshold: the applicant must obtain qualifying land control within 60 days of award, with a lease allowed only if it runs 60 years beyond the license term."
+      }
+    ],
+    "omissions": [
+      {
+        "document_id": "RFA-2023-01-03",
+        "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+        "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+        "organization": "Applicant",
+        "description": "An application cannot be evaluated by the Board unless it has obtained approval from the separate Community Advisory Committee.",
+        "citations": [
+          {
+            "page": 4,
+            "char_start": 3795,
+            "char_end": 4026,
+            "excerpt": "However, there are significant differences from the previous process – namely the requirement of a Community Advisory Committee’s approval and full completion of all zoning requirements before the Board may evaluate an application."
+          }
+        ],
+        "kind": "regulatory_condition"
+      },
+      {
+        "document_id": "RFA-2023-01-03",
+        "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+        "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+        "organization": "Applicant",
+        "description": "An application cannot be evaluated by the Board unless all zoning requirements have been fully completed.",
+        "citations": [
+          {
+            "page": 4,
+            "char_start": 3795,
+            "char_end": 4026,
+            "excerpt": "However, there are significant differences from the previous process – namely the requirement of a Community Advisory Committee’s approval and full completion of all zoning requirements before the Board may evaluate an application."
+          }
+        ],
+        "kind": "regulatory_condition"
+      }
+    ]
+  },
+  {
+    "document_id": "RFA-2023-01-03",
+    "range": [
+      146,
+      211
+    ],
+    "decisions": [
+      {
+        "id": "p00002",
+        "kind": "unclear",
+        "why": "Sentence 167 is an omnibus incorporation clause: it says the RFA, later modifications, and the application become obligations if licensed, but it does not itself identify a distinct concrete duty or outcome the public could separately track."
+      },
+      {
+        "id": "p00003",
+        "kind": "application_process",
+        "why": "This is a Board review activity in the award process: the Board must conduct a revenue-impact analysis of each proposal before selection."
+      },
+      {
+        "id": "p00004",
+        "kind": "application_process",
+        "why": "Posting presentation rules and procedures is a solicitation/public-presentation mechanic, not a project delivery commitment."
+      }
+    ],
+    "omissions": [
+      {
+        "document_id": "RFA-2023-01-03",
+        "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+        "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+        "organization": "Applicant",
+        "description": "Meet the licensee deposit requirement.",
+        "citations": [
+          {
+            "page": 6,
+            "char_start": 8478,
+            "char_end": 8519,
+            "excerpt": "3. meet the licensee deposit requirement;"
+          }
+        ],
+        "kind": "regulatory_condition"
+      },
+      {
+        "document_id": "RFA-2023-01-03",
+        "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+        "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+        "organization": "Applicant",
+        "description": "Be able to pay and commit to paying the gaming licensing fee.",
+        "citations": [
+          {
+            "page": 6,
+            "char_start": 8520,
+            "char_end": 8610,
+            "excerpt": "4. demonstrate that it is able to pay and shall commit to paying the gaming licensing fee;"
+          }
+        ],
+        "kind": "regulatory_condition"
+      },
+      {
+        "document_id": "RFA-2023-01-03",
+        "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+        "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+        "organization": "Applicant",
+        "description": "Identify host-municipality infrastructure costs caused by construction and operation of the facility and commit to a community mitigation plan for the host municipality.",
+        "citations": [
+          {
+            "page": 6,
+            "char_start": 8820,
+            "char_end": 9033,
+            "excerpt": "6. identify the infrastructure costs of the Host Municipality incurred in direct relation to the construction and operation of a gaming facility and commit to a community mitigation plan for the Host Municipality;"
+          }
+        ],
+        "kind": "regulatory_condition"
+      },
+      {
+        "document_id": "RFA-2023-01-03",
+        "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+        "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+        "organization": "Applicant",
+        "description": "Identify host-municipality emergency-service costs caused by operation of the facility and commit to a community mitigation plan for the host municipality.",
+        "citations": [
+          {
+            "page": 6,
+            "char_start": 9034,
+            "char_end": 9246,
+            "excerpt": "7. identify the service costs of the Host Municipality incurred for emergency services in direct relation to the operation of a gaming facility and commit to a community mitigation plan for the Host Municipality;"
+          }
+        ],
+        "kind": "regulatory_condition"
+      },
+      {
+        "document_id": "RFA-2023-01-03",
+        "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+        "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+        "organization": "Applicant",
+        "description": "Formulate for Board approval, and abide by, a casino-construction diversity program with specific utilization goals for minorities, women, and veterans.",
+        "citations": [
+          {
+            "page": 6,
+            "char_start": 9884,
+            "char_end": 10189,
+            "excerpt": "10. formulate for board approval and abide by a program to achieve diversity in the construction industry and to provide equal opportunity to jobs the casino construction generates whereby the applicant establishes specific goals for the utilization of minorities, women and veterans on construction jobs."
+          }
+        ],
+        "kind": "regulatory_condition"
+      }
+    ]
+  },
+  {
+    "document_id": "RFA-2023-01-03",
+    "range": [
+      211,
+      273
+    ],
+    "decisions": [
+      {
+        "id": "p00005",
+        "kind": "application_process",
+        "why": "It states a Stage 2 hearing attendance requirement tied to the RFA review process, not a project delivery commitment."
+      },
+      {
+        "id": "p00006",
+        "kind": "application_process",
+        "why": "This is an application-stage requirement to have a knowledgeable representative available to answer hearing questions."
+      },
+      {
+        "id": "p00007",
+        "kind": "application_process",
+        "why": "It describes how the Board will run the public-hearing comment process on the website."
+      },
+      {
+        "id": "p00008",
+        "kind": "application_process",
+        "why": "This is a communication restriction during the Restricted Period in the application process."
+      },
+      {
+        "id": "p00009",
+        "kind": "generic_compliance",
+        "why": "It is a general legal registration requirement for lobbyists before the Commission, not a project-specific deliverable or benefit."
+      },
+      {
+        "id": "p00010",
+        "kind": "generic_compliance",
+        "why": "This is an administrative website-posting duty for lobbyist registrations, not a project outcome or project-accountability term."
+      },
+      {
+        "id": "p00011",
+        "kind": "application_process",
+        "why": "It requires applicants to update application materials during the RFA process."
+      },
+      {
+        "id": "p00012",
+        "kind": "application_process",
+        "why": "This is a bid-submission certification against collusion, part of the solicitation mechanics."
+      },
+      {
+        "id": "p00013",
+        "kind": "unsupported_claim",
+        "why": "Sentence 265 does not say Applicants are the ones barred from releasing results; the claim adds that actor."
+      }
+    ],
+    "omissions": [
+      {
+        "document_id": "RFA-2023-01-03",
+        "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+        "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+        "organization": "The Commission",
+        "description": "The Commission may terminate a license if it determines the applicant’s lobbying certification was intentionally false or intentionally incomplete.",
+        "citations": [
+          {
+            "page": 10,
+            "char_start": 19424,
+            "char_end": 19642,
+            "excerpt": "The Commission reserves the right, in its sole discretion, to terminate a License if the Commission determines that the Lobbying certification filed by the Applicant was intentionally false or intentionally incomplete."
+          }
+        ],
+        "kind": "regulatory_condition"
+      }
+    ]
+  },
+  {
+    "document_id": "RFA-2023-01-03",
+    "range": [
+      273,
+      342
+    ],
+    "decisions": [
+      {
+        "id": "p00014",
+        "kind": "application_process",
+        "why": "A reserved solicitation power to waive certain RFA requirements or application defects; it governs how the award process may be run, not a deliverable to the public."
+      },
+      {
+        "id": "p00015",
+        "kind": "application_process",
+        "why": "This is the Board’s discretion to remove non-mandatory specifications in the RFA process, not a project outcome or public-facing obligation."
+      },
+      {
+        "id": "p00016",
+        "kind": "application_process",
+        "why": "Amending the RFA and requiring application modifications is a procurement/process step for applicants."
+      },
+      {
+        "id": "p00017",
+        "kind": "application_process",
+        "why": "Changing scheduled RFA dates is purely about the application timetable."
+      },
+      {
+        "id": "p00018",
+        "kind": "application_process",
+        "why": "Rejecting applications and reissuing a modified RFA is a solicitation decision about how the competition proceeds."
+      },
+      {
+        "id": "p00019",
+        "kind": "application_process",
+        "why": "Withdrawing the RFA is a process-level discretion over the solicitation, not a promised project action."
+      },
+      {
+        "id": "p00020",
+        "kind": "application_process",
+        "why": "Seeking clarifications and revisions concerns evaluation of applications during the award process."
+      },
+      {
+        "id": "p00021",
+        "kind": "application_process",
+        "why": "Using information from interviews, investigations, site visits, and clarification materials describes evaluation inputs for selecting applicants."
+      },
+      {
+        "id": "p00022",
+        "kind": "application_process",
+        "why": "Disqualifying nonconforming applicants is an enforcement step within the RFA process."
+      },
+      {
+        "id": "p00023",
+        "kind": "application_process",
+        "why": "It gives the Board discretion to consider information anywhere in an application for any PML purpose; this is an application-review rule."
+      },
+      {
+        "id": "p00024",
+        "kind": "application_process",
+        "why": "The Board will announce which entities submitted applications/supplements after the return dates; this is a concrete public step in the licensing process."
+      },
+      {
+        "id": "p00025",
+        "kind": "regulatory_condition",
+        "why": "It imposes a concrete public-disclosure duty: application materials will be treated as public records and posted online, subject to FOIL redactions."
+      }
+    ],
+    "omissions": []
+  },
+  {
+    "document_id": "RFA-2023-01-03",
+    "range": [
+      342,
+      396
+    ],
+    "decisions": [
+      {
+        "id": "p00026",
+        "kind": "application_process",
+        "why": "Sets submission/disclosure handling for application materials: unredacted portions stay confidential for review by the Board, Commission staff, and CAC."
+      },
+      {
+        "id": "p00027",
+        "kind": "application_process",
+        "why": "A required waiver and indemnification is an application prerequisite, not a project delivery commitment."
+      },
+      {
+        "id": "p00028",
+        "kind": "application_process",
+        "why": "This Section 1311 waiver is another mandatory application-submission condition about legal rights, not a public-facing project outcome."
+      },
+      {
+        "id": "p00029",
+        "kind": "application_process",
+        "why": "Describes the Commission’s required suitability background investigation of applicants and related parties as part of license review."
+      },
+      {
+        "id": "p00030",
+        "kind": "application_process",
+        "why": "Sets the evidentiary standard applicants and related parties must meet to qualify for a license in the application process."
+      },
+      {
+        "id": "p00031",
+        "kind": "application_process",
+        "why": "Lists factors the Commission must consider in suitability review; these are licensing evaluation criteria, not promised project outcomes or adopted community-benefit conditions."
+      }
+    ],
+    "omissions": []
+  },
+  {
+    "document_id": "RFA-2023-01-03",
+    "range": [
+      396,
+      432
+    ],
+    "decisions": [
+      {
+        "id": "p00032",
+        "kind": "regulatory_condition",
+        "why": "Binds the Commission not to automatically disqualify a rehabilitated applicant if the applicant proves the listed fitness factors by clear and convincing evidence."
+      },
+      {
+        "id": "p00033",
+        "kind": "application_process",
+        "why": "Describes who performs background investigations as part of the license review process, not a project deliverable."
+      },
+      {
+        "id": "p00034",
+        "kind": "application_process",
+        "why": "Requires the applicant to determine which related parties must file background forms; this is an application filing step."
+      },
+      {
+        "id": "p00035",
+        "kind": "application_process",
+        "why": "Commits the Board to give an applicant a chance to cure missing background-form submissions during review."
+      },
+      {
+        "id": "p00036",
+        "kind": "application_process",
+        "why": "Sets a filing requirement on the return date for applicants and related parties to submit background-investigation materials."
+      },
+      {
+        "id": "p00037",
+        "kind": "application_process",
+        "why": "Gives the Commission or Board discretion to decide who counts as the applicant or related parties and whether exemptions apply in the licensing process."
+      }
+    ],
+    "omissions": []
+  },
+  {
+    "document_id": "RFA-2023-01-03",
+    "range": [
+      432,
+      488
+    ],
+    "decisions": [
+      {
+        "id": "p00038",
+        "kind": "application_process",
+        "why": "This gives the Commission discretion during application review to require missing background forms from related parties; it is a licensing-process mechanic, not a tracked project or public-benefit commitment."
+      },
+      {
+        "id": "p00039",
+        "kind": "application_process",
+        "why": "This is the applicant’s evidentiary burden to prove suitability for a license, which is part of the award process rather than a concrete deliverable or project duty."
+      },
+      {
+        "id": "p00040",
+        "kind": "application_process",
+        "why": "This is a filing requirement in the application process: applicants must submit background forms for 5% owners and similar parties."
+      },
+      {
+        "id": "p00041",
+        "kind": "application_process",
+        "why": "This reserves agency discretion to demand more background forms and suitability review beyond the 5% threshold, which is a process/eligibility provision."
+      },
+      {
+        "id": "p00042",
+        "kind": "regulatory_condition",
+        "why": "This specifically governs how the $1 million application fee must be used to cover application-processing and investigation costs, a concrete public-money condition."
+      },
+      {
+        "id": "p00043",
+        "kind": "regulatory_condition",
+        "why": "This imposes a concrete duty on the applicant to pay additional investigation/application costs within 30 days if the initial fee is insufficient."
+      },
+      {
+        "id": "p00044",
+        "kind": "regulatory_condition",
+        "why": "This creates a concrete refund obligation: if extra funds were paid and not fully used, the unexpended portion must be returned to the applicant."
+      }
+    ],
+    "omissions": [
+      {
+        "document_id": "RFA-2023-01-03",
+        "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+        "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+        "organization": "The Board or the Commission",
+        "description": "May disqualify the applicant and/or related persons or entities if required additional Background Investigation Forms are not timely filed.",
+        "citations": [
+          {
+            "page": 22,
+            "char_start": 50936,
+            "char_end": 51109,
+            "excerpt": "If the additional Background Investigation Forms are not timely filed, the Board or the Commission may determine to disqualify the Applicant and/or such persons or entities."
+          }
+        ],
+        "kind": "regulatory_condition"
+      },
+      {
+        "document_id": "RFA-2023-01-03",
+        "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+        "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+        "organization": "The Commission",
+        "description": "May reject an application based on the results of background checks and suitability investigations.",
+        "citations": [
+          {
+            "page": 22,
+            "char_start": 51816,
+            "char_end": 51938,
+            "excerpt": "The Commission may reject an Application based upon the results of these background checks and suitability investigations."
+          }
+        ],
+        "kind": "regulatory_condition"
+      },
+      {
+        "document_id": "RFA-2023-01-03",
+        "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+        "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+        "organization": "The Commission",
+        "description": "May reject an application, or cancel, revoke, or suspend a license, if an applicant or related party knowingly provides false or intentionally misleading information in an investigation.",
+        "citations": [
+          {
+            "page": 22,
+            "char_start": 51939,
+            "char_end": 52277,
+            "excerpt": "Each Applicant is advised that any Applicant or Related Party who knowingly provides false or intentionally misleading information in connection with any investigation by the Commission may cause the Application to be rejected, or a License to be canceled, revoked or suspended by the Commission, in the sole discretion of the Commission."
+          }
+        ],
+        "kind": "regulatory_condition"
+      }
+    ]
+  },
+  {
+    "document_id": "RFA-2023-01-03",
+    "range": [
+      488,
+      545
+    ],
+    "decisions": [
+      {
+        "id": "p00045",
+        "kind": "regulatory_condition",
+        "why": "The RFA sets a binding minimum: the Applicant must demonstrate its Gaming Facility meets or exceeds a $500 million minimum capital investment."
+      }
+    ],
+    "omissions": [
+      {
+        "document_id": "RFA-2023-01-03",
+        "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+        "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+        "organization": "Applicant",
+        "description": "Costs of purchasing, leasing, or optioning the land for the Gaming Facility, including title-related costs, must not be included in the Minimum Capital Investment calculation.",
+        "citations": [
+          {
+            "page": 28,
+            "char_start": 67145,
+            "char_end": 67249,
+            "excerpt": "The Board has determined that the “Minimum Capital Investment” shall not include those costs related to:"
+          },
+          {
+            "page": 28,
+            "char_start": 67250,
+            "char_end": 67452,
+            "excerpt": "• The purchase or lease or optioning of land where the Gaming Facility will be located including costs relative to registering, appraising, transferring title, or obtaining title insurance for the land;"
+          }
+        ],
+        "kind": "regulatory_condition"
+      },
+      {
+        "document_id": "RFA-2023-01-03",
+        "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+        "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+        "organization": "Applicant",
+        "description": "Carried interest and other financing costs must not be included in the Minimum Capital Investment calculation.",
+        "citations": [
+          {
+            "page": 28,
+            "char_start": 67145,
+            "char_end": 67249,
+            "excerpt": "The Board has determined that the “Minimum Capital Investment” shall not include those costs related to:"
+          },
+          {
+            "page": 28,
+            "char_start": 67453,
+            "char_end": 67515,
+            "excerpt": "• Carried interest costs and other associated financing costs;"
+          }
+        ],
+        "kind": "regulatory_condition"
+      },
+      {
+        "document_id": "RFA-2023-01-03",
+        "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+        "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+        "organization": "Applicant",
+        "description": "Costs to mitigate impacts on host and nearby municipalities must not be included in the Minimum Capital Investment calculation.",
+        "citations": [
+          {
+            "page": 28,
+            "char_start": 67145,
+            "char_end": 67249,
+            "excerpt": "The Board has determined that the “Minimum Capital Investment” shall not include those costs related to:"
+          },
+          {
+            "page": 28,
+            "char_start": 67516,
+            "char_end": 67629,
+            "excerpt": "• Mitigating impacts on host and nearby municipalities whether directly attributable to a specific impact or not;"
+          }
+        ],
+        "kind": "regulatory_condition"
+      },
+      {
+        "document_id": "RFA-2023-01-03",
+        "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+        "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+        "organization": "Applicant",
+        "description": "Infrastructure costs outside the Gaming Facility site boundaries must not be included in the Minimum Capital Investment calculation, even if required by agreement with a host or nearby municipality.",
+        "citations": [
+          {
+            "page": 28,
+            "char_start": 67145,
+            "char_end": 67249,
+            "excerpt": "The Board has determined that the “Minimum Capital Investment” shall not include those costs related to:"
+          },
+          {
+            "page": 28,
+            "char_start": 67630,
+            "char_end": 68066,
+            "excerpt": "• Designing, improving or constructing the infrastructure outside the property boundaries of the site of the Gaming Facility including those related to drainage, utility support, roadways, interchanges, fill and soil or groundwater or surface water contamination issues, sewer, storm water, landscaping, and public transportation whether or not such costs are the result of any agreement with a Host Municipality or nearby municipality;"
+          }
+        ],
+        "kind": "regulatory_condition"
+      }
+    ]
+  },
+  {
+    "document_id": "RFA-2023-01-03",
+    "range": [
+      545,
+      613
+    ],
+    "decisions": [
+      {
+        "id": "p00046",
+        "kind": "application_process",
+        "why": "A pre-review application prerequisite: an applicant must obtain CAC public-support approval before the Board will officially review the application."
+      },
+      {
+        "id": "p00047",
+        "kind": "application_process",
+        "why": "This is a procedural rule for the CAC’s meetings during the license review process, not a project delivery commitment."
+      },
+      {
+        "id": "p00048",
+        "kind": "application_process",
+        "why": "These are CAC hearing and comment-process duties for reviewing an application, fitting review mechanics rather than a project outcome."
+      },
+      {
+        "id": "p00049",
+        "kind": "application_process",
+        "why": "This is a CAC decision step in the approval process: after a two-thirds vote it must issue a support or disapproval finding."
+      },
+      {
+        "id": "p00050",
+        "kind": "application_process",
+        "why": "Proving zoning compliance is a prerequisite for official Board review, so it is an application-review requirement."
+      },
+      {
+        "id": "p00051",
+        "kind": "application_process",
+        "why": "Waiving rights under PML 1311 is a filing/eligibility condition attached to the application process."
+      },
+      {
+        "id": "p00052",
+        "kind": "application_process",
+        "why": "The $1 million payment is an application fee due with submission; it governs how an application is processed, not project delivery."
+      },
+      {
+        "id": "p00053",
+        "kind": "application_process",
+        "why": "This is a fee-processing rule: if review costs exceed the initial fee, the applicant must pay the balance within 30 days or face rejection."
+      },
+      {
+        "id": "p00054",
+        "kind": "application_process",
+        "why": "Returning any unused application-fee balance is part of fee administration for the licensing process."
+      },
+      {
+        "id": "p00055",
+        "kind": "application_process",
+        "why": "It describes how the Board will evaluate eligible proposals under statutory criteria, which is review procedure."
+      },
+      {
+        "id": "p00056",
+        "kind": "application_process",
+        "why": "This states the Board’s evaluative task in recommending licensees; it is a decision standard, not a project promise."
+      },
+      {
+        "id": "p00057",
+        "kind": "application_process",
+        "why": "The Board’s revenue-impact analysis is a review activity performed during the selection process."
+      },
+      {
+        "id": "p00058",
+        "kind": "application_process",
+        "why": "The text requires applicants to submit a capital-investment summary that includes remediation; it does not obligate them to perform remediation."
+      }
+    ],
+    "omissions": []
+  },
+  {
+    "document_id": "RFA-2023-01-03",
+    "range": [
+      613,
+      663
+    ],
+    "decisions": [
+      {
+        "id": "p00059",
+        "kind": "application_process",
+        "why": "Sentence 636 requires the applicant to submit a description of its commitment to hire a minimum number of employees; it is an application submission requirement, not itself an executed or regulator-imposed hiring obligation."
+      },
+      {
+        "id": "p00060",
+        "kind": "application_process",
+        "why": "Sentence 641 requires the applicant to describe plans and minimum commitments for New York-based suppliers/materials in the application; the text is about what must be submitted, not a standalone adopted project commitment."
+      }
+    ],
+    "omissions": []
+  },
+  {
+    "document_id": "RFA-2023-01-03",
+    "range": [
+      663,
+      716
+    ],
+    "decisions": [],
+    "omissions": []
+  },
+  {
+    "document_id": "RFA-2023-01-03",
+    "range": [
+      716,
+      772
+    ],
+    "decisions": [
+      {
+        "id": "p00061",
+        "kind": "regulatory_condition",
+        "why": "Sentence 731 imposes an ongoing duty on any licensee during construction to provide regular design-update reports to the Commission."
+      },
+      {
+        "id": "p00062",
+        "kind": "regulatory_condition",
+        "why": "Sentence 732 sets a concrete restriction on the approved project: post-approval design changes that reduce size, quality, or fit and finish are not allowed."
+      }
+    ],
+    "omissions": []
+  },
+  {
+    "document_id": "RFA-2023-01-03",
+    "range": [
+      772,
+      817
+    ],
+    "decisions": [
+      {
+        "id": "p00063",
+        "kind": "application_process",
+        "why": "This sets solicitation/project-site rules for what an application may cover—one gaming facility, and gaming on only one of two non-contiguous parcels—not a promised public delivery."
+      },
+      {
+        "id": "p00064",
+        "kind": "regulatory_condition",
+        "why": "This is a concrete post-award duty: the applicant must own or acquire the project land within 60 days after license award, with a specific lease-based ownership standard."
+      }
+    ],
+    "omissions": []
+  },
+  {
+    "document_id": "RFA-2023-01-03",
+    "range": [
+      817,
+      864
+    ],
+    "decisions": [],
+    "omissions": []
+  },
+  {
+    "document_id": "RFA-2023-01-03",
+    "range": [
+      864,
+      902
+    ],
+    "decisions": [
+      {
+        "id": "p00065",
+        "kind": "application_process",
+        "why": "These sentences require the applicant to submit a description and examples of guarantees it is prepared to offer; they do not themselves impose or confirm a specific guarantee that must later be delivered."
+      }
+    ],
+    "omissions": []
+  },
+  {
+    "document_id": "RFA-2023-01-03",
+    "range": [
+      902,
+      958
+    ],
+    "decisions": [
+      {
+        "id": "p00066",
+        "kind": "application_process",
+        "why": "RFA submission requirement to describe mitigation commitments and submit supporting agreements; it does not itself obligate the applicant to carry out specific mitigation."
+      },
+      {
+        "id": "p00067",
+        "kind": "application_process",
+        "why": "This is an application instruction to describe construction-impact mitigation measures, closures, traffic redirection, and related plans, not an adopted duty to implement them."
+      },
+      {
+        "id": "p00068",
+        "kind": "application_process",
+        "why": "The text requires the applicant to present housing-mitigation plans and commitments and provide supporting documents, but it does not impose a concrete mitigation obligation in this passage."
+      },
+      {
+        "id": "p00069",
+        "kind": "application_process",
+        "why": "This is a requirement to describe school-impact mitigation plans and submit any supporting agreements, not a binding project condition to deliver those measures."
+      },
+      {
+        "id": "p00070",
+        "kind": "application_process",
+        "why": "The applicant is asked to describe measures to mitigate impacts on underserved communities; that is a submission requirement, not a promised outcome."
+      },
+      {
+        "id": "p00071",
+        "kind": "application_process",
+        "why": "The RFA requires the applicant to identify metrics and remediation steps in its application, but does not itself commit the applicant to those steps."
+      },
+      {
+        "id": "p00072",
+        "kind": "application_process",
+        "why": "This calls for a description of plans to promote local businesses and coordinate with tourism entities; it is solicitation content, not a concrete public commitment to execute."
+      },
+      {
+        "id": "p00073",
+        "kind": "application_process",
+        "why": "The applicant must describe plans for contracting with local businesses and helping state businesses identify needs; this is an application-content requirement, not an executed commitment."
+      },
+      {
+        "id": "p00074",
+        "kind": "application_process",
+        "why": "The passage requires submission of local agreements designed to expand patron draw as part of the application; it does not report a specific agreement or impose a standalone delivery obligation."
+      },
+      {
+        "id": "p00075",
+        "kind": "application_process",
+        "why": "This is a requirement to describe cross-marketing plans and provide any supporting agreements, not a specific executed partnership or binding duty to carry out cross-marketing."
+      }
+    ],
+    "omissions": []
+  },
+  {
+    "document_id": "RFA-2023-01-03",
+    "range": [
+      958,
+      1007
+    ],
+    "decisions": [
+      {
+        "id": "p00076",
+        "kind": "application_process",
+        "why": "Sentence 990 requires the applicant to submit a description of proposed LEED design elements; it is an application submission, not a binding commitment to achieve certification."
+      },
+      {
+        "id": "p00077",
+        "kind": "application_process",
+        "why": "Sentences 991-992 ask for a description of traffic-mitigation and transportation plans to include in the application, not a duty to carry them out."
+      },
+      {
+        "id": "p00078",
+        "kind": "application_process",
+        "why": "Sentences 993-995 require a description of planned water and storm-water measures; they are application materials, not promised implementation."
+      },
+      {
+        "id": "p00079",
+        "kind": "application_process",
+        "why": "Sentence 996 asks for a description of plans to ensure Energy Star and high-efficiency equipment use; this is a proposal requirement, not an executed obligation."
+      },
+      {
+        "id": "p00080",
+        "kind": "application_process",
+        "why": "Sentence 997 requires a description of plans for at least 10% renewable electricity; the 10% figure is part of the plan to be submitted, not a standalone commitment in the text."
+      },
+      {
+        "id": "p00081",
+        "kind": "application_process",
+        "why": "Sentence 998 asks for a description of plans for submeters, monitoring, and ongoing efficiency efforts; it is an application requirement rather than a promised outcome."
+      },
+      {
+        "id": "p00082",
+        "kind": "unsupported_claim",
+        "why": "Sentence 999 only says to describe how the facility will comply with applicable energy-efficiency laws; the candidate turns that into an actual compliance commitment by the facility."
+      },
+      {
+        "id": "p00083",
+        "kind": "application_process",
+        "why": "Sentences 1001-1002 ask the applicant to explain how it proposes to establish workforce practices and career paths; this is proposal content, not a binding undertaking."
+      },
+      {
+        "id": "p00084",
+        "kind": "application_process",
+        "why": "Sentences 1001 and 1003 require the applicant to describe a proposed training program with resources like tuition reimbursement or stipends; it is not an executed promise to provide them."
+      },
+      {
+        "id": "p00085",
+        "kind": "application_process",
+        "why": "Sentences 1001 and 1004 ask how the applicant proposes a workforce program that includes an on-site child day care program; this remains a proposal requirement."
+      },
+      {
+        "id": "p00086",
+        "kind": "application_process",
+        "why": "Sentence 1005 requires identifying whether the applicant/operator plans to establish employee assistance programs; it is an application disclosure step, not a commitment to establish them."
+      }
+    ],
+    "omissions": []
+  },
+  {
+    "document_id": "RFA-2023-01-03",
+    "range": [
+      1007,
+      1064
+    ],
+    "decisions": [
+      {
+        "id": "p00087",
+        "kind": "regulatory_condition",
+        "why": "Sentence 1017 imposes a concrete if-applicable duty: an applicant without labor peace agreements must provide an instrument stating it will enter into them and keep them in force for the license term."
+      },
+      {
+        "id": "p00088",
+        "kind": "unsupported_claim",
+        "why": "Sentence 1030 requires a submission describing how equal opportunity will be incorporated; the candidate turns that application-description requirement into a direct execution mandate."
+      },
+      {
+        "id": "p00089",
+        "kind": "regulatory_condition",
+        "why": "Sentence 1063 sets a specific proposal constraint: first-submission parameters such as jobs and capital investment are not to be changed based on the applicant’s selected tax rate."
+      }
+    ],
+    "omissions": []
+  },
+  {
+    "document_id": "RFA-2023-01-03",
+    "range": [
+      1064,
+      1126
+    ],
+    "decisions": [
+      {
+        "id": "p00090",
+        "kind": "regulatory_condition",
+        "why": "Concrete post-award duty: a license awardee must place 5-10% of proposed investment into Commission-approved escrow."
+      },
+      {
+        "id": "p00091",
+        "kind": "application_process",
+        "why": "This assigns the Commission discretion to set the escrow percentage by regulation, rather than promising a project outcome."
+      },
+      {
+        "id": "p00092",
+        "kind": "regulatory_condition",
+        "why": "Concrete enforcement term: if the facility is not completed, the deposit is forfeited to the State."
+      },
+      {
+        "id": "p00093",
+        "kind": "regulatory_condition",
+        "why": "Concrete alternative compliance path: the applicant may use an approved bond securing forfeiture if it cannot complete the facility."
+      },
+      {
+        "id": "p00094",
+        "kind": "regulatory_condition",
+        "why": "Sets a specific $500 million license fee, a concrete public-money term tied to licensure."
+      },
+      {
+        "id": "p00095",
+        "kind": "generic_compliance",
+        "why": "Routine licensing qualification paperwork, not a project delivery or public-benefit commitment."
+      },
+      {
+        "id": "p00096",
+        "kind": "generic_compliance",
+        "why": "Standard liability waiver tied to licensing administration, not a concrete deliverable or public-facing benefit."
+      },
+      {
+        "id": "p00097",
+        "kind": "generic_compliance",
+        "why": "Ordinary regulatory inspection/search consent requirement for licensure."
+      },
+      {
+        "id": "p00098",
+        "kind": "generic_compliance",
+        "why": "Routine investigatory/cooperation requirement, not a trackable project outcome."
+      },
+      {
+        "id": "p00099",
+        "kind": "generic_compliance",
+        "why": "Standard duty to cooperate with investigations and hearings."
+      },
+      {
+        "id": "p00100",
+        "kind": "generic_compliance",
+        "why": "Ordinary identification and investigation requirement for licensing."
+      },
+      {
+        "id": "p00101",
+        "kind": "generic_compliance",
+        "why": "General compliance/reporting duty about suspected violations, without a specific project benefit or deliverable."
+      },
+      {
+        "id": "p00102",
+        "kind": "generic_compliance",
+        "why": "Routine staffing licensure rule for casino key employees."
+      },
+      {
+        "id": "p00103",
+        "kind": "generic_compliance",
+        "why": "Ordinary employee registration requirement, not a concrete project-facing commitment."
+      },
+      {
+        "id": "p00104",
+        "kind": "generic_compliance",
+        "why": "Standard vendor licensing prerequisite for gaming-related business."
+      },
+      {
+        "id": "p00105",
+        "kind": "generic_compliance",
+        "why": "Ongoing operational reporting on junkets, a routine gaming-regulation requirement."
+      },
+      {
+        "id": "p00106",
+        "kind": "generic_compliance",
+        "why": "Standard licensing requirement for junket representatives."
+      },
+      {
+        "id": "p00107",
+        "kind": "generic_compliance",
+        "why": "Ordinary requirement to hold an operation certificate before opening or remaining open."
+      },
+      {
+        "id": "p00108",
+        "kind": "generic_compliance",
+        "why": "General recordkeeping duty about agreements, without a specific public accountability mechanism beyond ordinary operations."
+      },
+      {
+        "id": "p00109",
+        "kind": "regulatory_condition",
+        "why": "Concrete licensure duty to have labor peace agreements with relevant labor organizations."
+      },
+      {
+        "id": "p00110",
+        "kind": "regulatory_condition",
+        "why": "Makes the labor-peace-agreement requirement an ongoing material condition of licensure."
+      },
+      {
+        "id": "p00111",
+        "kind": "regulatory_condition",
+        "why": "Concrete duty extending labor peace agreement coverage to certain contractor and tenant operations involving gaming or hospitality workers."
+      },
+      {
+        "id": "p00112",
+        "kind": "regulatory_condition",
+        "why": "Specific annual fee obligation of $750 per slot machine and table game for Zone 1 licensees."
+      },
+      {
+        "id": "p00113",
+        "kind": "regulatory_condition",
+        "why": "Specific annual fee obligation of $500 per slot machine and table game for Zone 2 licensees."
+      },
+      {
+        "id": "p00114",
+        "kind": "application_process",
+        "why": "It only preserves Commission discretion to adjust the fee for inflation; it is not itself a fixed obligation or deliverable."
+      },
+      {
+        "id": "p00115",
+        "kind": "regulatory_condition",
+        "why": "Concrete duty for the licensee to pay investigation-related fees and costs charged by the Commission."
+      },
+      {
+        "id": "p00116",
+        "kind": "regulatory_condition",
+        "why": "Concrete obligation that licensees bear remaining Commission regulatory-control costs not otherwise funded."
+      },
+      {
+        "id": "p00117",
+        "kind": "regulatory_condition",
+        "why": "Concrete annual assessment formula: uncovered regulatory-control costs are allocated among licensees by number of gaming positions."
+      }
+    ],
+    "omissions": [
+      {
+        "document_id": "RFA-2023-01-03",
+        "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+        "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+        "organization": "Licensee",
+        "description": "Must pay the licensing fee within 30 days after the award of the license.",
+        "citations": [
+          {
+            "page": 62,
+            "char_start": 154519,
+            "char_end": 154666,
+            "excerpt": "PML Section 1321-e(3) states that the Board shall determine a licensing fee to be paid by a licensee within 30 days after the award of the license."
+          }
+        ],
+        "kind": "regulatory_condition"
+      }
+    ]
+  },
+  {
+    "document_id": "RFA-2023-01-03",
+    "range": [
+      1126,
+      1199
+    ],
+    "decisions": [
+      {
+        "id": "p00118",
+        "kind": "regulatory_condition",
+        "why": "Adopted payment duty: each licensee must pay its assessed regulatory costs within 30 days of the Commission’s notice."
+      },
+      {
+        "id": "p00119",
+        "kind": "regulatory_condition",
+        "why": "Adopted handling duty for unclaimed property: retain it for one year, then deposit unclaimed amounts into the commercial gaming revenue fund."
+      },
+      {
+        "id": "p00120",
+        "kind": "regulatory_condition",
+        "why": "Substantive regulator duty affecting racing-support payments: the Commission must determine payment obligations tied to the 2019 level with CPI adjustment."
+      },
+      {
+        "id": "p00121",
+        "kind": "application_process",
+        "why": "Post-award licensing step: the successful applicant must complete a confirmatory affidavit in the Commission’s form."
+      },
+      {
+        "id": "p00122",
+        "kind": "regulatory_condition",
+        "why": "Adopted accountability term of licensure: the RFA, amendments, application, and Board decision statement become binding obligations of the licensee."
+      },
+      {
+        "id": "p00123",
+        "kind": "regulatory_condition",
+        "why": "Concrete hold-harmless payment duty: if education revenue falls below the stated floor, the entity must remit the shortfall by the next May 1, with first-year proration."
+      },
+      {
+        "id": "p00124",
+        "kind": "application_process",
+        "why": "This describes review mechanics for each application: a CAC is created to review it, gauge local support, and vote on support."
+      },
+      {
+        "id": "p00125",
+        "kind": "application_process",
+        "why": "These are CAC procedural duties in the application-review process: elect a chair, solicit comments, and hold meetings/hearings."
+      },
+      {
+        "id": "p00126",
+        "kind": "application_process",
+        "why": "This is a required step in the CAC review process: submit its support finding to the Board, Commission, and applicant under the stated voting threshold."
+      },
+      {
+        "id": "p00127",
+        "kind": "application_process",
+        "why": "This sets a procedural gate for award consideration: the Board can consider an application only if the CAC gives a two-thirds support vote."
+      },
+      {
+        "id": "p00128",
+        "kind": "application_process",
+        "why": "Procedural notification requirement within the CAC process: if the CAC supports an application, the CAC and/or consultant must notify the applicant, Board, and Commission."
+      },
+      {
+        "id": "p00129",
+        "kind": "application_process",
+        "why": "Reported procurement step for administering the CAC review process: the Commission has begun hiring a consultant to run CAC creation and operations."
+      }
+    ],
+    "omissions": [
+      {
+        "document_id": "RFA-2023-01-03",
+        "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+        "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+        "organization": "The Commission / additional casino licensees",
+        "description": "For additional casino licenses, the Commission will set the gross-gaming-revenue tax rate through the competitive bidding process, subject to minimum rates of 25% on slot machines and 10% on all other sources.",
+        "citations": [
+          {
+            "page": 64,
+            "char_start": 159257,
+            "char_end": 159493,
+            "excerpt": "For a Gaming Facility licensed for one of the additional casino licenses (Title 2-A), the tax rate imposed on gross gaming revenues shall be determined by the Commission pursuant to the competitive bidding process specified in this RFA."
+          },
+          {
+            "page": 64,
+            "char_start": 159494,
+            "char_end": 159639,
+            "excerpt": "However, the tax rate from slot machines shall be no less than 25 percent and the tax rate on all other sources shall be no less than 10 percent."
+          }
+        ],
+        "kind": "regulatory_condition"
+      },
+      {
+        "document_id": "RFA-2023-01-03",
+        "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+        "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+        "organization": "All Community Advisory Committees",
+        "description": "All CAC meetings and public hearings will be subject to the New York State Open Meetings Law.",
+        "citations": [
+          {
+            "page": 66,
+            "char_start": 163337,
+            "char_end": 163437,
+            "excerpt": "All meetings and public hearings of the CAC will be subject to the New York State Open Meetings Law."
+          }
+        ],
+        "kind": "regulatory_condition"
+      }
+    ]
+  },
+  {
+    "document_id": "RFA-2023-01-03",
+    "range": [
+      1199,
+      1229
+    ],
+    "decisions": [],
+    "omissions": []
+  },
+  {
+    "document_id": "GFLB-SEL-2025-12-01",
+    "range": [
+      0,
+      56
+    ],
+    "decisions": [
+      {
+        "id": "p00130",
+        "kind": "application_process",
+        "why": "Sentence 14 states an eligibility/evaluation prerequisite for applicants before Board review, not a standalone project delivery commitment."
+      },
+      {
+        "id": "p00131",
+        "kind": "regulatory_condition",
+        "why": "Sentence 27 establishes binding minimums of $500 million license fee and $500 million capital investment, concrete rules affecting delivery and public money."
+      },
+      {
+        "id": "p00132",
+        "kind": "application_process",
+        "why": "Sentence 36 sets the Community Advisory Committee voting threshold and deadline for an application to advance, which is a siting-process requirement."
+      },
+      {
+        "id": "p00133",
+        "kind": "application_process",
+        "why": "Sentence 39 requires community promises to be recorded as application amendments to be considered by the Board, a rule of the review process."
+      },
+      {
+        "id": "p00134",
+        "kind": "project_target",
+        "why": "Sentence 47 attributes to Bally’s Bronx specific proposed tax rates for its project, a concrete project-specific financial figure."
+      },
+      {
+        "id": "p00135",
+        "kind": "project_target",
+        "why": "Sentence 47 attributes to Hard Rock Metropolitan Park specific proposed tax rates for its project, a concrete project-specific financial figure."
+      },
+      {
+        "id": "p00136",
+        "kind": "project_target",
+        "why": "Sentence 47 attributes to Resorts World New York City specific proposed tax rates for its project, a concrete project-specific financial figure."
+      }
+    ],
+    "omissions": []
+  },
+  {
+    "document_id": "GFLB-SEL-2025-12-01",
+    "range": [
+      56,
+      125
+    ],
+    "decisions": [
+      {
+        "id": "p00137",
+        "kind": "application_process",
+        "why": "This is the Board’s selection rationale about how many licenses to recommend, not a concrete deliverable or enforceable project duty."
+      },
+      {
+        "id": "p00138",
+        "kind": "application_process",
+        "why": "This is a recommendation in the licensing process for Bally’s to be considered by the Commission, not a promised project outcome."
+      },
+      {
+        "id": "p00139",
+        "kind": "application_process",
+        "why": "This is a recommendation in the licensing process for Queens Future/Hard Rock to be considered by the Commission, not a promised project outcome."
+      },
+      {
+        "id": "p00140",
+        "kind": "application_process",
+        "why": "This is a recommendation in the licensing process for Genting/Resorts World to be considered by the Commission, not a promised project outcome."
+      }
+    ],
+    "omissions": []
+  },
+  {
+    "document_id": "GFLB-SEL-2025-12-01",
+    "range": [
+      125,
+      198
+    ],
+    "decisions": [
+      {
+        "id": "p00141",
+        "kind": "regulatory_condition",
+        "why": "Sentence 162 states Applicants are expected to track and report service-disabled veteran employment to meet New York’s 6% requirement, a concrete accountability duty."
+      },
+      {
+        "id": "p00142",
+        "kind": "project_target",
+        "why": "Sentences 178-179 give attributable project specifications: single-phase resort, $2.3 billion capital investment, and projected mid-2030 opening."
+      },
+      {
+        "id": "p00143",
+        "kind": "project_target",
+        "why": "Sentences 180-186 list concrete project components and capacities for Bally’s Bronx, which are trackable facility specifications."
+      },
+      {
+        "id": "p00144",
+        "kind": "project_target",
+        "why": "Sentences 191-192 describe Bally’s construction-workforce goals and local/union approach as proposed targets rather than binding delivery obligations."
+      },
+      {
+        "id": "p00145",
+        "kind": "project_target",
+        "why": "Sentence 193 gives a specific operational workforce target: 3,503 FTEs, 70% from the Bronx, with demographic representation goals."
+      },
+      {
+        "id": "p00146",
+        "kind": "unclear",
+        "why": "Sentence 195 mentions partnerships with local vendors but gives no concrete target, amount, timing, or defined obligation to track."
+      },
+      {
+        "id": "p00147",
+        "kind": "undertaking",
+        "why": "Sentence 196 promises an annual contribution of 1% of gross gaming revenue, at least $15 million, to a Community Benefits Fund once the facility opens."
+      }
+    ],
+    "omissions": [
+      {
+        "document_id": "GFLB-SEL-2025-12-01",
+        "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+        "filename": "12.01.25.gflbselectiondocument1.pdf",
+        "organization": "All Applicants",
+        "description": "If the Commission’s proposed regulation is adopted, Applicants would be limited to an initial license term of less than 30 years.",
+        "citations": [
+          {
+            "page": 10,
+            "char_start": 21857,
+            "char_end": 22009,
+            "excerpt": "5 Should the Commission’s proposed regulation regarding license length be adopted, Applicants would be limited to an initial term of less than 30 years."
+          }
+        ],
+        "kind": "proposed_condition"
+      }
+    ]
+  },
+  {
+    "document_id": "GFLB-SEL-2025-12-01",
+    "range": [
+      198,
+      265
+    ],
+    "decisions": [
+      {
+        "id": "p00148",
+        "kind": "undertaking",
+        "why": "Sentence 198 states Bally’s is \"committed\" to paying for specific access and safety improvements, which are concrete, trackable project deliveries."
+      },
+      {
+        "id": "p00149",
+        "kind": "project_target",
+        "why": "The LEED Gold build standard is a specific project specification Bally’s says it plans to meet; the added reference to obeying laws does not change that core project standard."
+      },
+      {
+        "id": "p00150",
+        "kind": "project_target",
+        "why": "The $2.3 billion investment is a specific attributable project amount for Bally’s Bronx."
+      },
+      {
+        "id": "p00151",
+        "kind": "regulatory_condition",
+        "why": "The parent-company guarantee is a concrete duty tied to project completion and financing accountability."
+      },
+      {
+        "id": "p00152",
+        "kind": "regulatory_condition",
+        "why": "The $500 million license fee is a specific public-money payment obligation tied to the license and directed to the MTA."
+      },
+      {
+        "id": "p00153",
+        "kind": "project_target",
+        "why": "These are specific workforce composition and local-hiring targets attributed to Bally’s."
+      },
+      {
+        "id": "p00154",
+        "kind": "undertaking",
+        "why": "This is a concrete commitment to fund a new police substation and annual public-safety support at stated amounts."
+      },
+      {
+        "id": "p00155",
+        "kind": "project_target",
+        "why": "The 70 percent Bronx-resident share for construction and facility jobs is a measurable local-hiring target."
+      },
+      {
+        "id": "p00156",
+        "kind": "background",
+        "why": "The text describes a proposed energy plan, not a clear obligation to actually achieve more than the 10 percent renewable-energy requirement."
+      },
+      {
+        "id": "p00157",
+        "kind": "undertaking",
+        "why": "Sentence 243 expressly refers to Bally’s promises to deliver these pedestrian and bicycle connections."
+      },
+      {
+        "id": "p00158",
+        "kind": "undertaking",
+        "why": "Sentence 244 is framed as one of Bally’s promised transportation improvements."
+      },
+      {
+        "id": "p00159",
+        "kind": "undertaking",
+        "why": "Funding at least three specified bus stops is a concrete, independently trackable promised delivery."
+      },
+      {
+        "id": "p00160",
+        "kind": "undertaking",
+        "why": "Sentence 260 says Bally’s committed to pay for employees’ Upwards memberships, a specific benefit Bally’s would provide."
+      },
+      {
+        "id": "p00161",
+        "kind": "proposed_condition",
+        "why": "This is the Board recommending that the Commission impose a reporting and problem-addressing requirement; it is a proposed term, not an adopted one here."
+      },
+      {
+        "id": "p00162",
+        "kind": "background",
+        "why": "The text says Bally’s only intends to enter a PLA and notes no agreements are finalized, so this is not yet an executed agreement or firm deliverable."
+      },
+      {
+        "id": "p00163",
+        "kind": "documented_agreement",
+        "why": "Sentence 264 specifically says Bally’s has executed a labor peace agreement with a named union organization."
+      }
+    ],
+    "omissions": [
+      {
+        "document_id": "GFLB-SEL-2025-12-01",
+        "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+        "filename": "12.01.25.gflbselectiondocument1.pdf",
+        "organization": "Bally’s",
+        "description": "Approximately 75 percent of the project’s capital expenditures are anticipated to benefit Bronx-based firms.",
+        "citations": [
+          {
+            "page": 12,
+            "char_start": 26094,
+            "char_end": 26197,
+            "excerpt": "It anticipates that approximately 75 percent of the capital expenditures will benefit Bronxbased firms."
+          }
+        ],
+        "kind": "project_target"
+      },
+      {
+        "document_id": "GFLB-SEL-2025-12-01",
+        "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+        "filename": "12.01.25.gflbselectiondocument1.pdf",
+        "organization": "Bally’s",
+        "description": "Bally’s projects 2,876 full-time and 865 part-time workers, for 3,741 new permanent positions equivalent to 3,503 FTE.",
+        "citations": [
+          {
+            "page": 13,
+            "char_start": 28651,
+            "char_end": 28829,
+            "excerpt": "Bally’s projects that Bally’s Bronx will employ 2,876 full-time and 865 part-time workers, creating 3,741 new permanent positions, equivalent to 3,503 full-time equivalent (FTE)."
+          }
+        ],
+        "kind": "project_target"
+      },
+      {
+        "document_id": "GFLB-SEL-2025-12-01",
+        "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+        "filename": "12.01.25.gflbselectiondocument1.pdf",
+        "organization": "Bally’s",
+        "description": "Median compensation is estimated to be near $80,000 including benefits.",
+        "citations": [
+          {
+            "page": 13,
+            "char_start": 28830,
+            "char_end": 28902,
+            "excerpt": "Median compensation is estimated to be near $80,000, including benefits;"
+          }
+        ],
+        "kind": "project_target"
+      }
+    ]
+  },
+  {
+    "document_id": "GFLB-SEL-2025-12-01",
+    "range": [
+      265,
+      327
+    ],
+    "decisions": [
+      {
+        "id": "p00164",
+        "kind": "undertaking",
+        "why": "Sentence 265 attributes a concrete future action to Bally’s: it plans to implement a comprehensive PLA for construction."
+      },
+      {
+        "id": "p00165",
+        "kind": "project_target",
+        "why": "Sentence 268 states Bally’s Bronx workforce targets of 47% women and 75% minorities."
+      },
+      {
+        "id": "p00166",
+        "kind": "proposed_condition",
+        "why": "Sentence 269 is the Board’s stated minimum expectation of a 6% service-disabled veteran goal, not Bally’s own binding commitment."
+      },
+      {
+        "id": "p00167",
+        "kind": "project_target",
+        "why": "Sentence 278 gives Bally’s proposed construction MWBE targets: 10% women, 40% minorities, 10% service-disabled veterans."
+      },
+      {
+        "id": "p00168",
+        "kind": "project_target",
+        "why": "Sentence 291 provides core project specifications: single-phase development, $5.3 billion investment, and projected June 2030 opening."
+      },
+      {
+        "id": "p00169",
+        "kind": "project_target",
+        "why": "Sentence 293 specifies the planned casino program: 5,000 slots, 375 table games, and 30 poker tables."
+      },
+      {
+        "id": "p00170",
+        "kind": "project_target",
+        "why": "Sentence 294 specifies two hotel towers with 1,000 rooms, about 39% suites."
+      },
+      {
+        "id": "p00171",
+        "kind": "project_target",
+        "why": "Sentence 295 specifies several parking garages totaling 13,112 spaces."
+      },
+      {
+        "id": "p00172",
+        "kind": "project_target",
+        "why": "Sentence 296 specifies a 5,650-seat Hard Rock LIVE venue."
+      },
+      {
+        "id": "p00173",
+        "kind": "project_target",
+        "why": "Sentences 297-298 specify more than 15 restaurant/bar outlets plus retail offerings as project components."
+      },
+      {
+        "id": "p00174",
+        "kind": "project_target",
+        "why": "Sentence 299 specifies 25 acres of new public open space."
+      },
+      {
+        "id": "p00175",
+        "kind": "project_target",
+        "why": "Sentence 301 identifies the planned operating structure: Hard Rock, through HR NYC Manager, LLC, will operate and manage HRMP."
+      },
+      {
+        "id": "p00176",
+        "kind": "project_target",
+        "why": "Sentence 309 states a quantified community benefits package valued at $761 million and identifies its main components."
+      },
+      {
+        "id": "p00177",
+        "kind": "project_target",
+        "why": "Sentence 311 gives a project-specific local economic target: 24% of the $5.3 billion investment is expected to benefit Queens-based firms."
+      },
+      {
+        "id": "p00178",
+        "kind": "regulatory_condition",
+        "why": "Sentence 324 states a concrete public-money obligation tied to licensure: a $500 million license fee contribution."
+      },
+      {
+        "id": "p00179",
+        "kind": "project_target",
+        "why": "Sentence 325 gives projected operational staffing levels and a local hiring share of about 55% from Queens."
+      }
+    ],
+    "omissions": [
+      {
+        "document_id": "GFLB-SEL-2025-12-01",
+        "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+        "filename": "12.01.25.gflbselectiondocument1.pdf",
+        "organization": "Queens Future, LLC d/b/a Hard Rock Metropolitan Park",
+        "description": "Average full-time compensation is projected at $140,000 annually, including benefits.",
+        "citations": [
+          {
+            "page": 19,
+            "char_start": 42144,
+            "char_end": 42229,
+            "excerpt": "Average full-time compensation is projected at $140,000 annually, including benefits."
+          }
+        ],
+        "kind": "project_target"
+      }
+    ]
+  },
+  {
+    "document_id": "GFLB-SEL-2025-12-01",
+    "range": [
+      327,
+      387
+    ],
+    "decisions": [
+      {
+        "id": "p00180",
+        "kind": "project_target",
+        "why": "HRMP states specific operational workforce composition goals—51% women and 83% minorities—and the text later says such targets are nonbinding best-efforts goals."
+      },
+      {
+        "id": "p00181",
+        "kind": "undertaking",
+        "why": "HRMP is described as having committed to prioritize hiring opportunities for unemployed or underemployed individuals."
+      },
+      {
+        "id": "p00182",
+        "kind": "project_target",
+        "why": "This is a concrete project design/package of transportation improvements HRMP proposes, even though agency review is still required."
+      },
+      {
+        "id": "p00183",
+        "kind": "undertaking",
+        "why": "The applicant committed to fund $150 million in community impact payments over the 30-year license term."
+      },
+      {
+        "id": "p00184",
+        "kind": "project_target",
+        "why": "HRMP plans a specific $60 million overbuild as part of the project to support the Taste of Queens food hall."
+      },
+      {
+        "id": "p00185",
+        "kind": "unclear",
+        "why": "Sentence 342 gives the Board’s view that HRMP has an obligation, but it does not itself establish an adopted requirement or an HRMP commitment."
+      },
+      {
+        "id": "p00186",
+        "kind": "proposed_condition",
+        "why": "The Board recommends a license condition requiring completion of the 450 affordable housing units."
+      },
+      {
+        "id": "p00187",
+        "kind": "proposed_condition",
+        "why": "The Board recommends a license condition requiring completion of the Flushing SkyPark."
+      },
+      {
+        "id": "p00188",
+        "kind": "undertaking",
+        "why": "HRMP is said to have committed to Energy Star-rated equipment and high-efficiency HVAC systems."
+      },
+      {
+        "id": "p00189",
+        "kind": "regulatory_condition",
+        "why": "The text ties this to meeting a specific 10% renewable-energy requirement through onsite photovoltaics and a power purchase agreement."
+      },
+      {
+        "id": "p00190",
+        "kind": "proposed_condition",
+        "why": "This is the Board’s recommendation for continued monitoring and adjustment of traffic plans during construction and operation."
+      },
+      {
+        "id": "p00191",
+        "kind": "project_target",
+        "why": "Onsite daycare and tuition reimbursement are described as specific project features HRMP is proposing."
+      },
+      {
+        "id": "p00192",
+        "kind": "undertaking",
+        "why": "The text explicitly refers to HRMP’s commitment to help prevent human trafficking."
+      },
+      {
+        "id": "p00193",
+        "kind": "project_target",
+        "why": "HRMP states a specific workforce goal for service-disabled veterans, while also noting 2% is more realistic."
+      },
+      {
+        "id": "p00194",
+        "kind": "project_target",
+        "why": "These are specific stated construction participation goals for women-, minority-, and SDV-involved firms/workers, not binding commitments."
+      },
+      {
+        "id": "p00195",
+        "kind": "undertaking",
+        "why": "The text states HRMP made a $25 million commitment to a small-business lender program supporting MWBE firms."
+      }
+    ],
+    "omissions": [
+      {
+        "document_id": "GFLB-SEL-2025-12-01",
+        "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+        "filename": "12.01.25.gflbselectiondocument1.pdf",
+        "organization": "HRMP",
+        "description": "Projected construction workforce outcomes: 3,420 average annual FTE and 17,100 total FTEs during construction, with projected average wages of $60.11 per hour or $110.84 with benefits; projected construction hiring mix includes 58% Queens residents, 17% other NYC boroughs, 15% elsewhere in New York, and 10% out of state.",
+        "citations": [
+          {
+            "page": 20,
+            "char_start": 45754,
+            "char_end": 45912,
+            "excerpt": "HRMP estimates 3,420 average annual FTE and 17,100 total FTEs during construction, with projected average wages of $60.11 per hour - or $110.84 with benefits."
+          },
+          {
+            "page": 20,
+            "char_start": 45913,
+            "char_end": 46120,
+            "excerpt": "Construction hiring is projected to be 58 percent Queens residents, 17 percent residents of the City’s other boroughs, 15 percent residents of other parts of the State, and 10 percent from outside the state."
+          },
+          {
+            "page": 20,
+            "char_start": 46121,
+            "char_end": 46198,
+            "excerpt": "The Board notes that these targets are goals rather than binding commitments."
+          }
+        ],
+        "kind": "project_target"
+      },
+      {
+        "document_id": "GFLB-SEL-2025-12-01",
+        "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+        "filename": "12.01.25.gflbselectiondocument1.pdf",
+        "organization": "HRMP",
+        "description": "Executed labor-related agreements, including a labor peace agreement with the New York Hotel & Gaming Trades Council and MOUs with the Trades Council and several major unions.",
+        "citations": [
+          {
+            "page": 21,
+            "char_start": 47829,
+            "char_end": 48288,
+            "excerpt": "The Board was satisfied that HRMP has a Memorandum of Understanding with the Trades Council, a labor peace agreement with the New York Hotel & Gaming Trades Council, AFL-CIO, and Memorandum of Understandings with several major unions, including the Building and Construction Trades Council of Greater New York and Vicinity, International Brotherhood of Electrical Workers Local 3, New York City District Council of Carpenters, and Painters District Council 9."
+          }
+        ],
+        "kind": "documented_agreement"
+      }
+    ]
+  },
+  {
+    "document_id": "GFLB-SEL-2025-12-01",
+    "range": [
+      387,
+      445
+    ],
+    "decisions": [
+      {
+        "id": "p00196",
+        "kind": "proposed_condition",
+        "why": "Sentence 387 is the Board urging outside parties to monitor hiring/procurement and help ensure goals are met; it is a recommendation, not an adopted duty of the applicant."
+      },
+      {
+        "id": "p00197",
+        "kind": "project_target",
+        "why": "HRMP is described as committed to recruit and train local residents so they fill the majority of project jobs, which is an attributable workforce target for this project."
+      },
+      {
+        "id": "p00198",
+        "kind": "background",
+        "why": "Sentence 393 describes HRMP’s planned efforts and priorities, but gives no concrete threshold, date, or independently trackable deliverable."
+      },
+      {
+        "id": "p00199",
+        "kind": "undertaking",
+        "why": "Sentence 394 attributes concrete project actions and contributions to HRMP—transport/transit improvements, safer pedestrian/bike access, outdoor space, social-service/community-fund support, and sustainability features."
+      },
+      {
+        "id": "p00200",
+        "kind": "project_target",
+        "why": "Sentence 401 states the core project specification: converting and expanding the existing facility into a full commercial casino."
+      },
+      {
+        "id": "p00201",
+        "kind": "project_target",
+        "why": "Sentence 402 gives a project-specific capital investment amount of $3.3 billion."
+      },
+      {
+        "id": "p00202",
+        "kind": "project_target",
+        "why": "Sentence 403 provides attributable project timing: March 2026 opening, 2029 expansion completion, and 2031 full completion."
+      },
+      {
+        "id": "p00203",
+        "kind": "project_target",
+        "why": "Sentence 405 sets specific gaming-capacity levels for the project: at least 4,635 slots and 534 tables."
+      },
+      {
+        "id": "p00204",
+        "kind": "project_target",
+        "why": "Sentence 406 gives a concrete hotel program: 1,963 total rooms with about 6% suites."
+      },
+      {
+        "id": "p00205",
+        "kind": "project_target",
+        "why": "Sentence 407 identifies a specific facility component with a measurable size: a 7,000-seat event center."
+      },
+      {
+        "id": "p00206",
+        "kind": "project_target",
+        "why": "Sentence 408 identifies a specific planned project component: a branded dayclub."
+      },
+      {
+        "id": "p00207",
+        "kind": "project_target",
+        "why": "Sentence 409 gives a concrete amenity count for the project: more than 20 food and beverage outlets."
+      },
+      {
+        "id": "p00208",
+        "kind": "proposed_condition",
+        "why": "Sentence 416 is the Board recommending a lower licensed gaming-position cap than the application showed; it is a recommended licensing term, not an adopted one here."
+      },
+      {
+        "id": "p00209",
+        "kind": "project_target",
+        "why": "Sentences 418-419 specify hotel reconfiguration and new construction: renovation/reduction of the existing Hyatt and a new 1,600-room Crockfords Hotel."
+      },
+      {
+        "id": "p00210",
+        "kind": "background",
+        "why": "Sentence 427 reports current contingent financing status, not a public-facing project deliverable, target, or duty owed to the public."
+      },
+      {
+        "id": "p00211",
+        "kind": "undertaking",
+        "why": "Sentence 431 says Resorts World and GAI committed to guarantee access to the capital needed to complete the project, a concrete completion-support commitment."
+      },
+      {
+        "id": "p00212",
+        "kind": "project_target",
+        "why": "Sentence 439 gives a specific project-related public payment amount: $500 million in license fees."
+      },
+      {
+        "id": "p00213",
+        "kind": "project_target",
+        "why": "Sentences 443 and 446 provide specific employment and local-hiring targets and say Resorts World must meet them."
+      }
+    ],
+    "omissions": [
+      {
+        "document_id": "GFLB-SEL-2025-12-01",
+        "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+        "filename": "12.01.25.gflbselectiondocument1.pdf",
+        "organization": "Resorts World New York City",
+        "description": "Additional parking facilities as part of the project expansion.",
+        "citations": [
+          {
+            "page": 24,
+            "char_start": 55045,
+            "char_end": 55283,
+            "excerpt": "Resorts World’s $3.3 billion investment would transition the current video lottery terminal facility into a full-service casino, and expand the project with a new Crockford’s hotel, additional parking facilities and a multi-purpose arena."
+          }
+        ],
+        "kind": "project_target"
+      }
+    ]
+  },
+  {
+    "document_id": "GFLB-SEL-2025-12-01",
+    "range": [
+      445,
+      496
+    ],
+    "decisions": [
+      {
+        "id": "p00214",
+        "kind": "regulatory_condition",
+        "why": "Sentences 445-446 pair specific permanent-employment diversity targets with the Board’s statement that Resorts World “must meet these targets,” making this a concrete accountability duty."
+      },
+      {
+        "id": "p00215",
+        "kind": "undertaking",
+        "why": "Sentence 452 states an annual commitment by Resorts World, for the license term, to fund workforce housing at a defined formula and cap."
+      },
+      {
+        "id": "p00216",
+        "kind": "background",
+        "why": "Sentence 455 is the Board urging public officials to monitor implementation; it is not a project delivery commitment or adopted condition imposed on Resorts World."
+      },
+      {
+        "id": "p00217",
+        "kind": "undertaking",
+        "why": "Sentence 456 reports a specific pledged investment: an initial $50 million for design and preconstruction programming of the Innovation Campus."
+      },
+      {
+        "id": "p00218",
+        "kind": "undertaking",
+        "why": "Sentences 457 and 459 describe a separate annual funding commitment, with a defined formula and duration, for a community fund tied to the Innovation Campus."
+      },
+      {
+        "id": "p00219",
+        "kind": "background",
+        "why": "Sentence 461 is only an exhortation that elected representatives monitor implementation, not a concrete project obligation or condition."
+      },
+      {
+        "id": "p00220",
+        "kind": "undertaking",
+        "why": "Sentence 462 states a concrete Resorts World commitment of up to $5 million per year plus $25 million upfront for the program."
+      },
+      {
+        "id": "p00221",
+        "kind": "undertaking",
+        "why": "Sentence 463 says Resorts World commits to mass transit improvements; although not detailed, it is still presented as a project commitment."
+      },
+      {
+        "id": "p00222",
+        "kind": "undertaking",
+        "why": "Sentence 463 commits to an open greenway and parks system with a measurable outcome: ten acres of new open space on campus."
+      },
+      {
+        "id": "p00223",
+        "kind": "undertaking",
+        "why": "Sentence 463 expressly says Resorts World commits to traffic infrastructure improvements."
+      },
+      {
+        "id": "p00224",
+        "kind": "undertaking",
+        "why": "Sentence 478 attributes to Resorts World a statement that it will conduct a Childcare Needs Assessment, which is a specific future action."
+      },
+      {
+        "id": "p00225",
+        "kind": "project_target",
+        "why": "Sentence 487 gives specific construction-workforce diversity goals attributable to Resorts World rather than an adopted mandate."
+      },
+      {
+        "id": "p00226",
+        "kind": "proposed_condition",
+        "why": "Sentence 483 states the Board expects a 6 percent service-disabled-veterans target instead of 5 percent, which is a recommended stronger condition rather than an adopted term."
+      },
+      {
+        "id": "p00227",
+        "kind": "proposed_condition",
+        "why": "Sentence 490 says the Board expects applicants’ stated hiring goals and requirements to be met; this is a board expectation tied to delivery, not an executed obligation in the text."
+      },
+      {
+        "id": "p00228",
+        "kind": "background",
+        "why": "Sentence 491 urges outside groups to monitor and work with applicants, but does not create a concrete project commitment or condition."
+      }
+    ],
+    "omissions": [
+      {
+        "document_id": "GFLB-SEL-2025-12-01",
+        "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+        "filename": "12.01.25.gflbselectiondocument1.pdf",
+        "organization": "Resorts World and Cirrus Workforce Housing Advisors",
+        "description": "Resorts World has partnered with Cirrus Workforce Housing Advisors on the workforce-housing initiative.",
+        "citations": [
+          {
+            "page": 25,
+            "char_start": 60342,
+            "char_end": 60426,
+            "excerpt": "Resorts World has partnered with Cirrus Workforce Housing Advisors on the initiative"
+          }
+        ],
+        "kind": "documented_agreement"
+      },
+      {
+        "document_id": "GFLB-SEL-2025-12-01",
+        "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+        "filename": "12.01.25.gflbselectiondocument1.pdf",
+        "organization": "Resorts World",
+        "description": "Resorts World estimates an average of 4,331 construction FTE jobs annually, totaling 21,653 construction FTEs over five years.",
+        "citations": [
+          {
+            "page": 26,
+            "char_start": 63198,
+            "char_end": 63328,
+            "excerpt": "Resorts World estimates an average of 4,331 FTE construction jobs annually, totaling 21,653 construction FTEs over the five years."
+          }
+        ],
+        "kind": "project_target"
+      },
+      {
+        "document_id": "GFLB-SEL-2025-12-01",
+        "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+        "filename": "12.01.25.gflbselectiondocument1.pdf",
+        "organization": "Resorts World",
+        "description": "Construction wages are projected at $38.55 per hour, or $72.11 per hour including benefits.",
+        "citations": [
+          {
+            "page": 26,
+            "char_start": 63473,
+            "char_end": 63564,
+            "excerpt": "Construction wages are projected at $38.55 per hour, or $72.11 per hour including benefits."
+          }
+        ],
+        "kind": "project_target"
+      },
+      {
+        "document_id": "GFLB-SEL-2025-12-01",
+        "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+        "filename": "12.01.25.gflbselectiondocument1.pdf",
+        "organization": "Resorts World",
+        "description": "Construction workforce residency is projected at 19 percent from Queens, 40 percent from elsewhere in the City, 38 percent from elsewhere in the State, and 3 percent from out of state.",
+        "citations": [
+          {
+            "page": 26,
+            "char_start": 63565,
+            "char_end": 63747,
+            "excerpt": "Construction workforce residency estimates are 19 percent from Queens, 40 percent from elsewhere in the City, 38 percent from elsewhere in the State, and 3 percent from out-of-state."
+          }
+        ],
+        "kind": "project_target"
+      },
+      {
+        "document_id": "GFLB-SEL-2025-12-01",
+        "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+        "filename": "12.01.25.gflbselectiondocument1.pdf",
+        "organization": "Resorts World",
+        "description": "Resorts World has a Project Labor Agreement and collective bargaining agreements with four unions covering 84 percent of the workforce.",
+        "citations": [
+          {
+            "page": 27,
+            "char_start": 64896,
+            "char_end": 65208,
+            "excerpt": "The Board was satisfied that Resorts World has a Project Labor Agreement and collective bargaining agreements in place with four unions covering 84 percent of the workforce, including with the Hotel and Gaming Trades Council and with the Building and Construction Trades Council of Greater New York and Vicinity."
+          }
+        ],
+        "kind": "documented_agreement"
+      },
+      {
+        "document_id": "GFLB-SEL-2025-12-01",
+        "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+        "filename": "12.01.25.gflbselectiondocument1.pdf",
+        "organization": "Resorts World",
+        "description": "Resorts World projects that 19 percent of construction FTEs will be Queens residents.",
+        "citations": [
+          {
+            "page": 27,
+            "char_start": 66240,
+            "char_end": 66366,
+            "excerpt": "Resorts World also projected that 19 percent of its construction FTEs will be Queens residents, which the Board considers low."
+          }
+        ],
+        "kind": "project_target"
+      }
+    ]
+  },
+  {
+    "document_id": "GFLB-SEL-2025-12-01",
+    "range": [
+      496,
+      524
+    ],
+    "decisions": [
+      {
+        "id": "p00229",
+        "kind": "unsupported_claim",
+        "why": "Combines a factual bid term with the Board’s urging, but changes the modality to a term that “must remain unchanged”; the text only says the Board urges officials to resist lowering it."
+      },
+      {
+        "id": "p00230",
+        "kind": "proposed_condition",
+        "why": "Sentence 499 is a specific Board recommendation that officials resist any reduction in the tax rate in Resorts World’s bid."
+      },
+      {
+        "id": "p00231",
+        "kind": "undertaking",
+        "why": "The text explicitly refers to the applicant’s commitments to creating quality jobs."
+      },
+      {
+        "id": "p00232",
+        "kind": "undertaking",
+        "why": "The text explicitly lists commitments to recruiting, training, and developing a diverse workforce."
+      },
+      {
+        "id": "p00233",
+        "kind": "undertaking",
+        "why": "The text explicitly lists commitments to improving transit and traffic infrastructure on the casino campus."
+      },
+      {
+        "id": "p00234",
+        "kind": "undertaking",
+        "why": "The text explicitly lists commitments to building more open and park space into the campus."
+      },
+      {
+        "id": "p00235",
+        "kind": "unclear",
+        "why": "It is a vague exhortation to be “more aggressive and concrete,” not a specific, trackable condition or commitment."
+      },
+      {
+        "id": "p00236",
+        "kind": "proposed_condition",
+        "why": "Sentence 505 specifically urges the Commission to use the license agreement to ensure acceptable quality if opening occurs during major construction."
+      },
+      {
+        "id": "p00237",
+        "kind": "generic_compliance",
+        "why": "This is a broad expectation about integrity and accountability, not a concrete deliverable, target, or specific project duty."
+      },
+      {
+        "id": "p00238",
+        "kind": "application_process",
+        "why": "It describes the Commission’s intended pace for the licensing review and issuance process, not a project deliverable."
+      }
+    ],
+    "omissions": [
+      {
+        "document_id": "GFLB-SEL-2025-12-01",
+        "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+        "filename": "12.01.25.gflbselectiondocument1.pdf",
+        "organization": "Resorts World",
+        "description": "Resorts World can convert its facility to a casino quickly and provide tax revenue to the state and local governments as early as 2026, at least three years before other applicants begin operations.",
+        "citations": [
+          {
+            "page": 28,
+            "char_start": 67442,
+            "char_end": 67654,
+            "excerpt": "It can convert its facility to a casino quickly and thus provide tax revenue to the state and local governments as early as 2026, at least three years before the other Applicants will be able to begin operations."
+          }
+        ],
+        "kind": "project_target"
+      }
+    ]
+  },
+  {
+    "document_id": "NYSGC-RWNYC-LIC-2025-12-19",
+    "range": [
+      0,
+      88
+    ],
+    "decisions": [
+      {
+        "id": "p00239",
+        "kind": "regulatory_condition",
+        "why": "Sentence 15 makes RWNYC’s agreement to execute the monitoring agreement a concrete license-related obligation tied to issuance of the award."
+      },
+      {
+        "id": "p00240",
+        "kind": "regulatory_condition",
+        "why": "Sentence 56 imposes a binding condition to materially perform consistent with the Application and CAC commitments, subject to Commission approval/determination."
+      },
+      {
+        "id": "p00241",
+        "kind": "regulatory_condition",
+        "why": "Sentence 60 sets a specific, enforceable payment duty: $500,000,000 by December 31, 2025."
+      },
+      {
+        "id": "p00242",
+        "kind": "regulatory_condition",
+        "why": "Sentence 63 sets a specific, enforceable duty to deposit cash or bond equal to 5% of proposed total investment by December 31, 2025."
+      },
+      {
+        "id": "p00243",
+        "kind": "regulatory_condition",
+        "why": "Sentence 66 requires RWNYC to establish milestones and budgets for community benefits; that is a concrete accountability condition."
+      },
+      {
+        "id": "p00244",
+        "kind": "regulatory_condition",
+        "why": "Sentence 67 requires public posting and Commission submission of community benefits progress reports, including workforce diversity and demographic data."
+      },
+      {
+        "id": "p00245",
+        "kind": "regulatory_condition",
+        "why": "Sentence 68 prescribes required contents of each community benefits progress report, creating a concrete reporting obligation."
+      },
+      {
+        "id": "p00246",
+        "kind": "regulatory_condition",
+        "why": "Sentence 71 requires RWNYC to commence gaming operations promptly once the Commission determines the permanent casino area is completed as required."
+      },
+      {
+        "id": "p00247",
+        "kind": "regulatory_condition",
+        "why": "Sentence 73 binds RWNYC to comply in all material respects with third-party agreements included or proposed in the Application."
+      },
+      {
+        "id": "p00248",
+        "kind": "generic_compliance",
+        "why": "Sentence 76 is a general obligation to obey applicable federal and state law, without a distinct project deliverable or special public-benefit term."
+      },
+      {
+        "id": "p00249",
+        "kind": "regulatory_condition",
+        "why": "Sentence 84 makes all license terms binding on RWNYC and Commission-approved successors and assigns, a concrete accountability condition."
+      },
+      {
+        "id": "p00250",
+        "kind": "unclear",
+        "why": "Sentence 87 states only a 'mutual intent' to establish a Compliance Monitoring Team; within the target window it does not itself clearly impose the operative obligation."
+      }
+    ],
+    "omissions": [
+      {
+        "document_id": "NYSGC-RWNYC-LIC-2025-12-19",
+        "document_sha256": "e33b1a690d0653f88386d257a1b4d68c452c71ba59fca06faa75f9d37a202c02",
+        "filename": "rwnyc-license-document.pdf",
+        "organization": "Resorts World New York City",
+        "description": "The gaming facility license runs for 15 years from the Commission’s issuance of an operation certificate and is renewable thereafter for 10 years.",
+        "citations": [
+          {
+            "page": 3,
+            "char_start": 3458,
+            "char_end": 3687,
+            "excerpt": "License Duration: 15 years from the Commission's issuance of an operation certificate to Resorts World New York City pursuant to Racing, Pari-Mutuel Wagering and Breeding Law § 1331, renewable thereafter for a period of 10 years."
+          }
+        ],
+        "kind": "regulatory_condition"
+      }
+    ]
+  },
+  {
+    "document_id": "NYSGC-RWNYC-LIC-2025-12-19",
+    "range": [
+      88,
+      102
+    ],
+    "decisions": [
+      {
+        "id": "p00251",
+        "kind": "regulatory_condition",
+        "why": "Sentence 88 imposes an adopted license duty on Resorts World New York City to promptly hire and pay an approved independent CMT firm and have it monitor/report compliance to the Commission."
+      },
+      {
+        "id": "p00252",
+        "kind": "regulatory_condition",
+        "why": "Sentences 88 and 90 make AML/KYC/SAR/CTR coverage a required topic within the mandated CMT monitoring and reporting."
+      },
+      {
+        "id": "p00253",
+        "kind": "regulatory_condition",
+        "why": "Sentences 88 and 92 require the CMT reporting to cover Commission regulatory requirements."
+      },
+      {
+        "id": "p00254",
+        "kind": "regulatory_condition",
+        "why": "Sentences 88 and 94 require the CMT reporting to cover application community benefits and CAC commitments, including delivery milestones."
+      },
+      {
+        "id": "p00255",
+        "kind": "regulatory_condition",
+        "why": "Sentences 88 and 96 require the CMT reporting to cover compliance with Commission-set restrictions or requirements."
+      },
+      {
+        "id": "p00256",
+        "kind": "regulatory_condition",
+        "why": "Sentence 97 sets a concrete eligibility restriction for the engaged CMT firm: independence from RWNYC's auditors, counsel, and consultants for at least five years before engagement."
+      },
+      {
+        "id": "p00257",
+        "kind": "regulatory_condition",
+        "why": "Sentence 98 imposes concrete Commission-control terms on the CMT contract: prior approval, no termination without prior written approval, and termination if the Commission directs it."
+      }
+    ],
+    "omissions": []
+  }
+]

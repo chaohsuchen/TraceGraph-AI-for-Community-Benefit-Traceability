@@ -54,7 +54,7 @@ class EvidenceStoreTests(TestCase):
         self.addCleanup(scope.__exit__, None, None, None)
         self.store = EvidenceStore(dsn)
         with psycopg.connect(dsn, autocommit=True) as connection:
-            for name in ("001_initial.sql", "002_research_job_leases.sql", "003_evidence_graph.sql"):
+            for name in ("001_initial.sql", "002_research_job_leases.sql", "003_evidence_graph.sql", "004_pdf_catalog.sql"):
                 connection.execute((ROOT / "db" / name).read_text(encoding="utf-8"), prepare=False)
             connection.execute("""
                 UPDATE tracegraph_catalog SET embedding_model = 'test', embedding_dimensions = 2;

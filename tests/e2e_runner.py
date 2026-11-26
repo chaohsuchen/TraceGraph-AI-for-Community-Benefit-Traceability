@@ -58,18 +58,24 @@ def local_server(command, env, readiness):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--public-live", action="store_true", help="Use a public-only query and an empty catalog for live E2E.")
+    parser.add_argument("--pdf-catalog", action="store_true", help="Test an imported PDF and first research in the browser.")
     parser.add_argument("--anthropic-key-file", type=Path)
     parser.add_argument("--anthropic-model")
     parser.add_argument("--openai-key-file", type=Path)
     parser.add_argument("--openai-model")
     parser.add_argument("--database-url", default=os.getenv("TEST_DATABASE_URL", LOCAL_DSN))
     args = parser.parse_args()
+    if args.pdf_catalog and args.public_live:
+        parser.error("--pdf-catalog uses the offline research fixture")
     mode = "public-live" if args.public_live else "fixture"
     backend_mode = "fixture" if mode == "fixture" else "live"
     url = re.compile(r"http://127\.0\.0\.1:[1-9]\d*")
     command = [sys.executable, "-B", "-m", "tracegraph.runtime"]
     with isolated_database(args.database_url) as dsn:
         prepare_catalog(dsn)
+        if args.pdf_catalog:
+            from tests.test_pdf_catalog import seed_pdf
+            seed_pdf(dsn)
         env = {
             **os.environ, "TRACEGRAPH_DATABASE_URL": dsn, "TRACEGRAPH_SCHEMA": "", "TRACEGRAPH_E2E_MODE": mode,
         }
@@ -87,7 +93,7 @@ def main():
         with local_server(backend, env, url) as api:
             with local_server(["node", "frontend/dev.mjs"], {**front_env, "TRACEGRAPH_BACKEND": api, "PORT": "0"}, url) as front:
                 subprocess.run(
-                    ["node", "tests/browser_e2e.mjs"], cwd=ROOT,
+                    ["node", "tests/browser_pdf_e2e.mjs" if args.pdf_catalog else "tests/browser_e2e.mjs"], cwd=ROOT,
                     env={**front_env, "TRACEGRAPH_E2E_URL": front}, check=True,
                 )
 

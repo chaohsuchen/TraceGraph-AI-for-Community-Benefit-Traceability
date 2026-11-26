@@ -19,6 +19,10 @@ export function partialGraph(jobId, question, result) {
 }
 
 export function evidenceBranch(graph, root) {
+  if (root?.kind === 'pdf') return {
+    ...graph, findings: [], relations: [],
+    document_citations: (graph.document_citations ?? []).filter(c => c.document_hash === root.key),
+  };
   if (root?.kind !== 'finding') return graph;
 
   const children = new Map(graph.findings.map(finding => [finding.id, []]));

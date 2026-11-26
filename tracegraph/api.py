@@ -52,6 +52,11 @@ class Application:
             return self._missing()
         path = [unquote(segment) for segment in url.path[len(PREFIX) + 1:].split("/")]
         match method, path:
+            case "GET", ["documents", digest, "pdf"] if hasattr(self.store, "pdf_content"):
+                content = self.store.pdf_content(digest)
+                if content is None:
+                    return self._missing()
+                return 200, {"Content-Type": "application/pdf"}, content
             case "POST", ["lookup"]:
                 return self._lookup(headers, body)
             case "POST", ["commitments", commitment_id, "research-runs"]:
@@ -77,6 +82,11 @@ class Application:
             request = loads(body)
         except (JSONDecodeError, UnicodeDecodeError):
             return self._invalid("Submit a JSON object with a query.")
+        if isinstance(request, dict) and set(request) == {"commitment_id"}:
+            cid = request["commitment_id"]
+            if not isinstance(cid, str) or not cid or self.store.load_commitment(cid) is None:
+                return self._missing()
+            return self.store.submit("lookup", key, request, lambda: self._matched(cid))
         if (not isinstance(request, dict) or set(request) != {"query"}
                 or not isinstance(request["query"], str) or not request["query"].strip()
                 or len(request["query"]) > 4000):
@@ -91,9 +101,15 @@ class Application:
             return response_error(503, "RESOLUTION_UNAVAILABLE", "The identity check could not be completed.", True)
         if outcome["outcome"] == "START_DISCOVERY":
             return accepted(self.store.enqueue("DISCOVER", query=outcome["query"]), outcome.get("suggestions"))
-        if outcome["outcome"] in ("MATCH", "AMBIGUOUS"):
+        if outcome["outcome"] == "MATCH":
+            return self._matched(outcome["commitment_id"])
+        if outcome["outcome"] == "AMBIGUOUS":
             return 200, {}, outcome
         raise ValueError("Agent returned an unsupported lookup outcome.")
+
+    def _matched(self, cid):
+        job = self.store.request_research(cid, refresh=False)
+        return 200, {}, {"outcome": "MATCH", "commitment_id": cid, **({"job_id": job} if job else {})}
 
     def _refresh(self, cid, headers, body):
         key = self._key(headers)
@@ -104,7 +120,7 @@ class Application:
         if self.store.load_commitment(cid) is None:
             return self._missing()
         return self.store.submit(
-            ("refresh", cid), key, {}, lambda: accepted(self.store.enqueue("REFRESH", commitment_id=cid)),
+            ("refresh", cid), key, {}, lambda: accepted(self.store.request_research(cid, refresh=True)),
         )
 
     @staticmethod
@@ -225,12 +241,13 @@ def make_handler(app, allowed_origin):
             else:
                 result = app.respond(self.command, self.path, self.headers, self.rfile.read(size))
             status, headers, body = result
-            payload = dumps(body, ensure_ascii=False).encode("utf-8")
+            payload = body if isinstance(body, bytes) else dumps(body, ensure_ascii=False).encode("utf-8")
             self.send_response(status)
             self._cors()
             for name, value in headers.items():
                 self.send_header(name, value)
-            self.send_header("Content-Type", "application/json; charset=utf-8")
+            if "Content-Type" not in headers:
+                self.send_header("Content-Type", "application/json; charset=utf-8")
             self.send_header("Content-Length", str(len(payload)))
             self.end_headers()
             self.wfile.write(payload)

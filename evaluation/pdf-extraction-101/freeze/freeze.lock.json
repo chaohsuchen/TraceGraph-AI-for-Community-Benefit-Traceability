@@ -1,0 +1,32 @@
+{
+  "inputs_sha256": {
+    "evaluation/pdf-extraction-101/diagnostic/analyze.py": "ca6a119c56bc1fcaec857901c8d9adb20bfbda30121b295fe14689bb94bf3b34",
+    "evaluation/pdf-extraction-101/diagnostic/frozen-adjudication.json": "5c2510db4e360ee168e6e4c131b7cb1e83c4cab3ceca46b5adacd308f77e037e",
+    "evaluation/pdf-extraction-101/diagnostic/frozen-shadow.json": "21d4f55229160974eb6258f22b8927348b0ec02b27bad339d8a94449768b2e82",
+    "evaluation/pdf-extraction-101/diagnostic/metrics.json": "079377fd91ad9c087634ffb164ed0a80b5a480a28cd489fbad6b0f86883dcc70",
+    "evaluation/pdf-extraction-101/freeze/ROUND.md": "740b5536552a490b5f99534627fa2153a52f59c92aa06b4d680cd4587e91048d",
+    "evaluation/pdf-extraction-101/freeze/edits.py": "60089162c296644fde33b617dbcb99cb6dfb24ce8be3b6123a9fcae714d7316f",
+    "evaluation/pdf-extraction-101/freeze/experiment.py": "eb15cae2b193522944f840e0177f0637c2863ee77bad0e2efe91fa99827f1d1a",
+    "evaluation/pdf-extraction-101/freeze/score.py": "be4735ec0911eba05d11ebcf364e7f2160ee4af358e71221289ea060f3949fba",
+    "evaluation/pdf-extraction-101/freeze/source-decisions.json": "314f58a1763c739f44bd25a4552fdbdb08e1b45e223d1467541516c783e801ec",
+    "evaluation/pdf-extraction-101/freeze/verify_pipeline.py": "019ffb9407f66b532f943b22545288e39fa91bf4599ed6729b612f8edeaa0181",
+    "evaluation/pdf-extraction-101/import.json": "ec240678809956044735563cb19eab107ec31b2856b2d0dc1ee8ca9d5bea5f52",
+    "evaluation/pdf-extraction-101/manifest.json": "47aee69df4f0902a94e6e413a056655696979664b860dedcd087f261cea899c4",
+    "evaluation/pdf-extraction-101/reference.json": "6e1e4387844447ca70c97c552d4ae140e9fc7ed1171e2e4462ee82170d3b4f13",
+    "evaluation/pdf-extraction-101/reviewed.json": "5769820504c2c2e2376c8bddd69605de7c55208bc2d85ecab3918d9f9389f75e",
+    "evaluation/pdf-extraction-101/single_pass.json": "6a98812f8d189a30844a4bd5ee7b8aaaca2beb1bcfda817b67a1043d91c8aa14",
+    "evaluation/score_pdf_extraction.py": "a51bb73b9f6175aecb3c3a63a2a8232ed1e45300c6d1f13cb9db5c33a90ecbc9",
+    "tracegraph/corpus.py": "c764aa44f892773a4f39b269399c647aca4b8b6cbab6f21548ea2a74b25ad7f9",
+    "tracegraph/pdf_extract.py": "3f7dd39ceb0a68c3637fcb1129605461e9c9e67da6605e983a53f47a28e15752",
+    "tracegraph/pdf_import.py": "991750ed4258190a7276bc998d780a44a2767f324161e6f5e4b66c98f34c4cc4",
+    "tracegraph/pdf_review.py": "7d11e813e1ab91191c1c74fb22fb7e391d10baff15f326d856da64e3c31b615d"
+  },
+  "model": "gpt-5.4",
+  "output_sha256": {
+    "catalog-groups.json": "895b72830a0031b7c10a27889c7883699b06e87455e8b820ce7a67703fa3829f",
+    "comparison.json": "ab37d1928fa8311c8c1864a900527464c8661ca7df60886e9f23d341549c1b3c",
+    "reviewed.json": "302f373a518b22891c05f3854bce9e99072f2d56c9a9b37c1fc8076ce69102b2"
+  },
+  "reasoning_effort": "low",
+  "version": "pdf-catalog-freeze-1"
+}

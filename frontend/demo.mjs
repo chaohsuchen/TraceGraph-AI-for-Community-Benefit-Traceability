@@ -200,6 +200,10 @@ export function createDemoApi({ failRefresh = false } = {}) {
     lookup(query, key) {
       return remember('lookup', key, query, () => routeLookup(query) ?? startJob(null));
     },
+    select(id) {
+      graph(id);
+      return { outcome: 'MATCH', commitment_id: id };
+    },
     graph,
     organization(id) {
       if (id !== ORGANIZATION.id) {

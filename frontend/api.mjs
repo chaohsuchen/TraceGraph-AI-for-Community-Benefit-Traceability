@@ -38,6 +38,7 @@ export function createHttpApi(base = '/api/v1', fetcher = fetch) {
 
   return {
     lookup: (query, key, signal) => request('/lookup', { key, body: { query }, signal }),
+    select: (id, key, signal) => request('/lookup', { key, body: { commitment_id: id }, signal }),
     graph: (id, runId, signal) => request(
       '/commitments/' + encodeURIComponent(id) + (runId ? '?run_id=' + encodeURIComponent(runId) : ''),
       { signal },

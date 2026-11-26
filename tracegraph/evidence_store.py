@@ -62,6 +62,18 @@ class EvidenceStore(PostgresStore):
                 return None
             return self._research_snapshot(connection, commitment_id)
 
+    def load_commitment(self, commitment_id):
+        with self._read_snapshot() as connection:
+            context = self._load_commitment(connection, commitment_id)
+            if context:
+                quotes = connection.execute("""SELECT q.excerpt FROM commitment c
+                    JOIN catalog_pdf p ON p.source_id=c.original_source_id
+                    JOIN catalog_pdf_citation q ON q.commitment_id=c.id AND q.pdf_hash=p.sha256
+                    WHERE c.id=%s ORDER BY q.char_start,q.char_end""", (commitment_id,)).fetchall()
+                if quotes:
+                    context["pdf_promise_passages"] = [q["excerpt"] for q in quotes]
+            return context
+
     def graph(self, commitment_id, run_id=None):
         if run_id is not None:
             return None
@@ -71,7 +83,34 @@ class EvidenceStore(PostgresStore):
                 return None
             snapshot = self._research_snapshot(connection, commitment_id)
             snapshot.pop("revision")
+            citations = connection.execute("""
+                SELECT p.sha256 AS document_hash, s.title, c.page, c.char_start, c.char_end, c.excerpt
+                FROM catalog_pdf_citation c JOIN catalog_pdf p ON p.sha256=c.pdf_hash
+                JOIN source s ON s.id=p.source_id WHERE c.commitment_id=%s
+                ORDER BY s.title, c.char_start, c.char_end
+            """, (commitment_id,)).fetchall()
+            if citations:
+                graph["document_citations"] = citations
+                latest_job = connection.execute("""SELECT status FROM research_job WHERE commitment_id=%s
+                    ORDER BY created_at DESC,id DESC LIMIT 1""", (commitment_id,)).fetchone()
+                graph["research_state"] = ("ASSESSED" if snapshot["assessment"] else
+                    latest_job["status"] if latest_job else "NOT_STARTED")
             return {**graph, **snapshot}
+
+    def pdf_content(self, digest):
+        with self._read_snapshot() as connection:
+            row = connection.execute("SELECT content FROM catalog_pdf WHERE sha256=%s", (digest,)).fetchone()
+            return bytes(row["content"]) if row else None
+
+    def request_research(self, cid, *, refresh):
+        # submit() owns the transaction. All users that match the same record share its active job.
+        connection = self._submission_connection.get()
+        connection.execute("SELECT id FROM commitment WHERE id=%s FOR NO KEY UPDATE", (cid,))
+        if not refresh and self._assessment(connection, cid)[1]:
+            return None
+        active = connection.execute("""SELECT id FROM research_job WHERE commitment_id=%s
+            AND status IN ('QUEUED','RUNNING') ORDER BY created_at LIMIT 1""", (cid,)).fetchone()
+        return active["id"] if active else self.enqueue("REFRESH", commitment_id=cid)
 
     def finish_refresh(self, claim, result):
         with self._connect() as connection:

@@ -203,9 +203,10 @@ function chooseSuggestion(suggestion) {
   if (suggestion.kind === 'SAVED_COMMITMENT') {
     addConversationMessage('user', `Use ${suggestion.title}.`);
     const select = () => action(async signal => {
-      await loadGraph(suggestion.commitment_id, signal);
+      const result = await api.select(suggestion.commitment_id, crypto.randomUUID(), signal);
+      await showMatch(result, signal, select);
       conversation.query = state.graph.commitment.description || suggestion.title;
-      announceGraph(conversation);
+      if (!result.job_id) announceGraph(conversation);
     }, 'Loading the selected commitment…', select, conversation);
     select();
   } else {
@@ -231,7 +232,7 @@ function submitSearch(query) {
   lookup(query);
 }
 
-async function followJob(id, signal, { query, suggestions = [], retry, isRefresh = false }) {
+async function followJob(id, signal, { query, suggestions = [], retry, isRefresh = false, commitmentId }) {
   const job = await waitForJob(api, id, {
     signal,
     interval: demo.has('demo') ? 450 : 1000,
@@ -239,6 +240,7 @@ async function followJob(id, signal, { query, suggestions = [], retry, isRefresh
   });
   signal.throwIfAborted();
   if (job.status === 'FAILED') {
+    if (commitmentId) await loadGraph(commitmentId, signal);
     notice(job.error.message, 'error', job.error.retryable ? retry : undefined);
     return;
   }
@@ -255,14 +257,23 @@ async function followJob(id, signal, { query, suggestions = [], retry, isRefresh
   }
 }
 
+async function showMatch(result, signal, retry) {
+  await loadGraph(result.commitment_id, signal);
+  if (result.job_id) {
+    await followJob(result.job_id, signal, {
+      query: state.graph.commitment.description, retry, commitmentId: result.commitment_id,
+    });
+  }
+}
+
 function lookup(query, key = crypto.randomUUID()) {
   const conversation = state.conversation;
   return action(async signal => {
     const result = await api.lookup(query, key, signal);
     signal.throwIfAborted();
     if (result.outcome === 'MATCH') {
-      await loadGraph(result.commitment_id, signal);
-      announceGraph(conversation);
+      await showMatch(result, signal, () => lookup(query));
+      if (!result.job_id) announceGraph(conversation);
     } else if (result.outcome === 'AMBIGUOUS') {
       continueConversation(query, result.question, result.suggestions);
     } else if (result.job_id) {
@@ -277,7 +288,7 @@ function refresh(id, key = crypto.randomUUID()) {
   return action(async signal => {
     const accepted = await api.refresh(id, key, signal);
     signal.throwIfAborted();
-    await followJob(accepted.job_id, signal, { isRefresh: true, retry: () => refresh(id) });
+    await followJob(accepted.job_id, signal, { isRefresh: true, commitmentId: id, retry: () => refresh(id) });
   }, 'Checking for new evidence…', () => refresh(id, key));
 }
 
@@ -316,6 +327,7 @@ function organizationItem(graph) {
 }
 
 function canRootBranch(graph, item) {
+  if (item.kind === 'pdf') return graph.document_citations?.some(c => c.document_hash === item.key);
   if (item.kind === 'finding') return graph.findings.some(finding => finding.id === item.key);
   if (item.kind === 'commitment' || item.kind === 'question') return item.id === commitmentItem(graph).id;
   return item.kind === 'organization' && item.id === organizationItem(graph).id;
@@ -409,8 +421,9 @@ function renderGraph(graph) {
   evidenceView.count.textContent = findings + (findings === 1 ? ' finding' : ' findings') +
     (conflicts.length ? ' · ' + conflicts.length + (conflicts.length === 1 ? ' conflict' : ' conflicts') : '');
   const options = [
-    ...(root?.kind !== 'finding' ? [commitmentItem(graph)] : []),
+    ...(!['finding', 'pdf'].includes(root?.kind) ? [commitmentItem(graph)] : []),
     ...(!graph.question && (!root || root.kind === 'organization') ? [organizationItem(graph)] : []),
+    ...(root?.kind === 'finding' ? [] : documentNodes(branch)),
     ...branch.findings.map(finding => ({
       id: findingNodeId(finding.id), kind: 'finding', key: finding.id, label: finding.claim,
     })),
@@ -511,9 +524,32 @@ function assessmentReasoning(text, graph) {
   return paragraph;
 }
 
+function documentNodes(graph) {
+  return [...new Map((graph.document_citations ?? []).map(c => [c.document_hash, {
+    id: 'pdf:' + c.document_hash, kind: 'pdf', key: c.document_hash, label: c.title,
+  }])).values()];
+}
+
+function appendPdfCitations(container, citations) {
+  for (const c of citations) {
+    const link = element('a', c.title + ' · page ' + c.page);
+    link.href = '/api/v1/documents/' + encodeURIComponent(c.document_hash) + '/pdf#page=' + c.page;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    container.append(link, element('blockquote', c.excerpt));
+  }
+}
+
 function renderInspector(graph) {
   const aside = $('inspector');
   const selected = state.selected;
+  if (selected?.kind === 'pdf') {
+    const citations = graph.document_citations.filter(c => c.document_hash === selected.key);
+    aside.replaceChildren(element('h3', 'Documented promise'));
+    appendFocusButton(aside, selected);
+    appendPdfCitations(aside, citations);
+    return;
+  }
   if (selected?.kind === 'organization') {
     const organization = organizationItem(graph);
     aside.replaceChildren(element('p', 'Organization', 'eyebrow'), element('h3', organization.label));
@@ -592,7 +628,14 @@ function renderInspector(graph) {
   }
   if (facts.children.length) aside.append(facts);
   const original = commitment.original_promise;
-  if (original) {
+  if (graph.document_citations?.length) {
+    const details = element('details', '', 'inspector-disclosure');
+    details.open = !assessment;
+    details.append(element('summary', 'PDF passages (' + graph.document_citations.length + ')'));
+    appendPdfCitations(details, graph.document_citations);
+    aside.append(details);
+  }
+  if (original && (!graph.document_citations?.length || original.source?.source_type !== 'PDF')) {
     aside.append(element('h4', 'Original promise'));
     if (commitment.original_text) aside.append(element('p', commitment.original_text));
     if (original.locator) aside.append(element('p', original.locator, 'muted'));
@@ -653,9 +696,14 @@ function render() {
   const latest = graph.assessment;
   const label = latest?.label?.toLowerCase().replaceAll('_', ' ');
   const status = label ? label[0].toUpperCase() + label.slice(1) :
-    latest ? 'Assessment available' : 'No completed assessment';
+    latest ? 'Assessment available' : ({
+      NOT_STARTED: 'Cataloged · Research not started', QUEUED: 'Research queued',
+      RUNNING: 'Research in progress', FAILED: 'Research failed',
+    }[graph.research_state] ?? 'No completed assessment');
   const date = element('span', latest?.verification_date ? 'Verified ' + latest.verification_date : 'Verification date unavailable', 'muted');
-  $('verdict').replaceChildren(element('span', status, 'assessment-label'), date);
+  $('verdict').replaceChildren(element('span', status, 'assessment-label'));
+  if (latest) $('verdict').append(date);
+  $('refresh').textContent = !latest && graph.document_citations?.length ? 'Research commitment' : 'Research again';
   renderGraph(graph);
   renderInspector(graph);
 }

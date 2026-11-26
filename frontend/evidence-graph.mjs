@@ -58,6 +58,10 @@ function shortLabel(text) {
 }
 
 function model(graph, root) {
+  if (root?.kind === 'pdf') {
+    return {nodes: [{data: {id: root.id, key: root.key, kind: 'pdf', label: shortLabel(graph.document_citations[0].title)},
+      classes: 'pdf branch-root', position: {x: 0, y: 0}}], edges: []};
+  }
   const center = graphRoot(graph);
   const commitmentId = center.id;
   const organizationId = 'organization:' + (graph.organization?.id ?? 'unresolved');
@@ -102,6 +106,14 @@ function model(graph, root) {
     edges.push({ data: { id: 'belongs:' + commitmentId, source: organizationId, target: commitmentId } });
   }
   if (showCommitment) {
+    const documents = new Map((graph.document_citations ?? []).map(c => [c.document_hash, c.title]));
+    let docIndex = 0;
+    for (const [hash, label] of documents) {
+      const id = 'pdf:' + hash;
+      nodes.push({ data: { id, key: hash, kind: 'pdf', label: shortLabel(label) },
+        classes: 'pdf', position: { x: 185 + 165 * docIndex++, y: commitmentY } });
+      edges.push({ data: { id: 'documented:' + hash, source: commitmentId, target: id } });
+    }
     nodes.push({
       data: { id: commitmentId, label: shortLabel(title), kind: center.kind },
       classes: 'commitment', position: { x: 0, y: commitmentY },

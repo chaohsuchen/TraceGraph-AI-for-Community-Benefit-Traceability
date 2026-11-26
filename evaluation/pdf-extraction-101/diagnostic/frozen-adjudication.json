@@ -1,0 +1,622 @@
+{
+  "p00003": {
+    "action": "archive",
+    "claim": "",
+    "reason": "This is a statutory evaluation task for the Board during the licensing process, not a project commitment, deliverable, public benefit, or accountable term of a selected project."
+  },
+  "p00004": {
+    "action": "archive",
+    "claim": "",
+    "reason": "Posting presentation rules is procedural bid administration for applicant presentations, not a substantive project obligation or public-facing project commitment."
+  },
+  "p00005": {
+    "action": "archive",
+    "claim": "",
+    "reason": "Required attendance at a Stage 2 public hearing is an application-process requirement for bidders, not a project commitment or operational/public-benefit obligation."
+  },
+  "p00006": {
+    "action": "archive",
+    "claim": "",
+    "reason": "This is a hearing-preparedness requirement for applicants during review of applications, which is procurement housekeeping rather than a project commitment."
+  },
+  "p00007": {
+    "action": "archive",
+    "claim": "",
+    "reason": "The Board’s method for receiving public comments is an administrative hearing procedure, not a substantive commitment tied to project delivery or accountability terms."
+  },
+  "p00008": {
+    "action": "archive",
+    "claim": "",
+    "reason": "Lobbying restrictions are generic procurement/compliance rules governing applicant communications, not a specific project obligation or benefit."
+  },
+  "p00009": {
+    "action": "archive",
+    "claim": "",
+    "reason": "Lobbyist registration requirements are general legal compliance provisions, not commitments of the project or its sponsor."
+  },
+  "p00010": {
+    "action": "archive",
+    "claim": "",
+    "reason": "Making registrations available on the Commission website is an administrative transparency duty about lobbying registration, not a project commitment or term of project delivery."
+  },
+  "p00011": {
+    "action": "archive",
+    "claim": "",
+    "reason": "This is a bidder application-update requirement in the procurement process, not a project commitment, deliverable, public benefit, or post-award accountability term."
+  },
+  "p00012": {
+    "action": "archive",
+    "claim": "",
+    "reason": "This is a non-collusion bidding requirement tied to submitting an application, i.e. procurement compliance rather than a substantive project commitment."
+  },
+  "p00014": {
+    "action": "archive",
+    "claim": "",
+    "reason": "This passage states the Board’s discretionary authority to waive RFA requirements; it is agency process authority, not an attributable project obligation or target."
+  },
+  "p00015": {
+    "action": "archive",
+    "claim": "",
+    "reason": "This is the Board’s reserved discretion to eliminate non-mandatory specifications in the RFA, which is procurement administration rather than a project commitment."
+  },
+  "p00016": {
+    "action": "archive",
+    "claim": "",
+    "reason": "Amending the RFA and directing application modifications is bidder-process administration, not a substantive project duty or deliverable."
+  },
+  "p00017": {
+    "action": "archive",
+    "claim": "",
+    "reason": "Changing scheduled RFA dates is ordinary procurement housekeeping and not a project-specific obligation or public-facing commitment."
+  },
+  "p00018": {
+    "action": "archive",
+    "claim": "",
+    "reason": "Rejecting applications and reissuing a modified RFA is agency discretion over the solicitation process, not a project commitment."
+  },
+  "p00019": {
+    "action": "archive",
+    "claim": "",
+    "reason": "Withdrawing the RFA is a solicitation-management power of the Board, not an attributable obligation, target, or deliverable of a project."
+  },
+  "p00020": {
+    "action": "archive",
+    "claim": "",
+    "reason": "This is a procurement-side reserved power to seek clarifications/revisions to applications, not a project commitment, deliverable, target, or binding public-benefit obligation."
+  },
+  "p00021": {
+    "action": "archive",
+    "claim": "",
+    "reason": "This describes the Board’s evaluative discretion in reviewing applications. It is administrative bid authority, not a substantive project obligation or auditable project term."
+  },
+  "p00022": {
+    "action": "archive",
+    "claim": "",
+    "reason": "This is a discretionary enforcement power over applicants under the RFA, not a project commitment or operational/public-benefit obligation."
+  },
+  "p00023": {
+    "action": "archive",
+    "claim": "",
+    "reason": "The passage gives the Board discretion to use information across the application for PML purposes. That is application-processing authority, not a project commitment."
+  },
+  "p00024": {
+    "action": "archive",
+    "claim": "",
+    "reason": "Although specific, this is merely an RFA process announcement about public disclosure timing, not a project commitment or substantive obligation tied to project delivery/accountability."
+  },
+  "p00027": {
+    "action": "keep",
+    "claim": "As a condition of submitting an application, each applicant, operator, and direct or indirect owner of an applicant or operator must execute and submit a State Waiver under which it releases, waives, covenants not to sue or make claims for damages or other relief, agrees not to seek appeal, review, or reconsideration of decisions of the State, the Commission, and the Board, and agrees to indemnify, defend, and hold them harmless, as more specifically described in the State Waiver.",
+    "reason": "The cited text states a specific mandatory submission condition and summarizes the required waiver terms; this is an attributable, auditable application requirement."
+  },
+  "p00028": {
+    "action": "keep",
+    "claim": "As a condition of submitting an application, each applicant, operator, and direct or indirect owner of an applicant or operator must execute and deliver a Section 1311 Waiver under which it releases, waives, covenants not to sue or make claims for damages or other relief regarding any right to bring an action to recover a fee under PML Section 1311, and agrees to indemnify, defend, and hold harmless the State, the Commission, the Board, their officials, agents, consultants, and representatives, and any gaming facility licensee, as more specifically described in the Section 1311 Waiver.",
+    "reason": "The passage contains a concrete required waiver tied to application submission and specifies its subject matter and indemnification beneficiaries."
+  },
+  "p00029": {
+    "action": "keep",
+    "claim": "All applicants for a license, and each related party, shall be subject to a thorough background investigation into suitability by the Commission or the Commission’s designated agents.",
+    "reason": "This is a clear mandatory post-submission requirement directly stated in the passage."
+  },
+  "p00030": {
+    "action": "keep",
+    "claim": "Each Applicant and Related Party must prove by clear and convincing evidence its suitability and qualifications to hold a License or otherwise be qualified within the meaning of PML Article 13.",
+    "reason": "The cited sentence expressly imposes this requirement on each Applicant and Related Party."
+  },
+  "p00031": {
+    "action": "archive",
+    "claim": "",
+    "reason": "This passage describes the Commission’s evaluation criteria in conducting suitability investigations, which is administrative review process rather than a project commitment or applicant deliverable."
+  },
+  "p00033": {
+    "action": "archive",
+    "claim": "",
+    "reason": "This is an agency process statement about who conducts background investigations, not a commitment, target, or applicant obligation for the project."
+  },
+  "p00038": {
+    "action": "archive",
+    "claim": "",
+    "reason": "The passage gives the Commission discretionary authority to require additional forms; it is administrative discretion, not a concrete project commitment or deliverable."
+  },
+  "p00039": {
+    "action": "keep",
+    "claim": "Applicants are obligated to establish their suitability for a License and the suitability of all Related Parties by clear and convincing evidence.",
+    "reason": "The cited sentence directly states this obligation and the candidate accurately reflects it."
+  },
+  "p00040": {
+    "action": "archive",
+    "claim": "",
+    "reason": "Although the sentence imposes an application filing requirement, it is ordinary bid/application process housekeeping rather than a substantive project commitment."
+  },
+  "p00041": {
+    "action": "archive",
+    "claim": "",
+    "reason": "This is a reservation of agency discretion to require more forms and investigations, not a specific attributable project obligation or target."
+  },
+  "p00042": {
+    "action": "archive",
+    "claim": "",
+    "reason": "This sentence explains administrative use of the application fee, not a project commitment, public benefit, or substantive obligation of the project."
+  },
+  "p00044": {
+    "action": "archive",
+    "claim": "",
+    "reason": "This passage describes the Commission’s handling of excess application-cost payments, an administrative fee term rather than a project commitment, deliverable, target, or public benefit."
+  },
+  "p00046": {
+    "action": "archive",
+    "claim": "",
+    "reason": "Although explicit, this is a pre-review application prerequisite in the licensing process, not a project commitment or attributable operational/public-facing obligation of the project itself."
+  },
+  "p00047": {
+    "action": "archive",
+    "claim": "",
+    "reason": "The cited text lists CAC procedural duties under statute, but these are governance/process requirements for the committee, not project commitments for the catalog."
+  },
+  "p00048": {
+    "action": "archive",
+    "claim": "",
+    "reason": "This is another CAC procedural obligation in the application review process, not a project obligation, deliverable, or target."
+  },
+  "p00049": {
+    "action": "archive",
+    "claim": "",
+    "reason": "The passage states a CAC voting/process duty, not a commitment by the applicant or project to deliver a public outcome."
+  },
+  "p00050": {
+    "action": "archive",
+    "claim": "",
+    "reason": "This is a threshold licensing requirement to prove zoning compliance before Board review, which is ordinary application-process compliance rather than a project commitment."
+  },
+  "p00051": {
+    "action": "archive",
+    "claim": "",
+    "reason": "The waiver of rights under PML Section 1311 is a bid/legal condition of applying, not a project deliverable, target, service, or public-facing commitment."
+  },
+  "p00052": {
+    "action": "archive",
+    "claim": "",
+    "reason": "Paying the application fee concurrently with submission is routine application housekeeping and does not constitute a project commitment for the catalog."
+  },
+  "p00053": {
+    "action": "archive",
+    "claim": "",
+    "reason": "This is application-fee processing for bidders, not a project-specific commitment, deliverable, target, or post-award operating/accountability term."
+  },
+  "p00062": {
+    "action": "keep",
+    "claim": "Because the application will be evaluated and approved based on the initial design, a licensee may not make changes that reduce the size, quality, or fit and finish of the facility.",
+    "reason": "The cited passage explicitly states this prohibition as a binding condition tied to the approved design."
+  },
+  "p00091": {
+    "action": "archive",
+    "claim": "",
+    "reason": "This is the Commission's regulatory discretion to set the deposit amount, not a project commitment or obligation by the applicant/licensee."
+  },
+  "p00092": {
+    "action": "keep",
+    "claim": "If an applicant is unable to complete the Gaming Facility, the required deposit will be forfeited to the State.",
+    "reason": "The passage expressly states this as a specific post-award financial condition tied to project completion."
+  },
+  "p00095": {
+    "action": "keep",
+    "claim": "Licensees must provide and satisfy all requests for information pertaining to qualification.",
+    "reason": "This is stated directly as a binding duty of licensees under post-licensure responsibilities."
+  },
+  "p00096": {
+    "action": "keep",
+    "claim": "Licensees must waive liability as to the Commission, the Board, and the State and its instrumentalities and agents for any damages resulting from any disclosure or publication.",
+    "reason": "The cited line explicitly lists this as a required licensee obligation."
+  },
+  "p00097": {
+    "action": "keep",
+    "claim": "Licensees must consent to inspections, searches, and seizures while at a Gaming Facility.",
+    "reason": "This is a direct, specific condition imposed on licensees in the cited text."
+  },
+  "p00098": {
+    "action": "keep",
+    "claim": "Licensees must supply handwriting exemplars and, on a continuing basis, provide any assistance or information required by the Commission.",
+    "reason": "The passage expressly imposes these ongoing obligations on licensees."
+  },
+  "p00099": {
+    "action": "archive",
+    "claim": "",
+    "reason": "The cited sentence states a duty to cooperate, but the actor is not identified in the cited passage itself. The candidate assigns it to \"Licensees,\" which is not supported by the quoted text."
+  },
+  "p00100": {
+    "action": "archive",
+    "claim": "",
+    "reason": "The passage requires someone to be photographed and fingerprinted, but the cited text does not identify that actor. The candidate's attribution to \"Licensees\" is not grounded in the citation."
+  },
+  "p00101": {
+    "action": "archive",
+    "claim": "",
+    "reason": "The cited fragment includes a reporting duty, but no actor is named in the quoted passage. The claim's attribution to \"Licensees\" is therefore unsupported."
+  },
+  "p00102": {
+    "action": "keep",
+    "claim": "A Gaming Facility licensee, or a holding or intermediary company of a gaming facility licensee, may only employ as a Casino Key Employee individuals who hold valid Casino Key Employee licenses.",
+    "reason": "The claim faithfully tracks the cited sentence, including actor, restriction, and scope."
+  },
+  "p00103": {
+    "action": "keep",
+    "claim": "Each gaming and non-gaming employee of a Gaming Facility licensee must have a valid registration on file with the Commission.",
+    "reason": "This is a direct restatement of the cited requirement."
+  },
+  "p00104": {
+    "action": "qualify",
+    "claim": "A vendor offering goods or services that directly relate to gaming activity, including gaming equipment manufacturers, suppliers, repairers, and independent testing labs, must be licensed as a casino vendor enterprise before conducting business with an Applicant or Gaming Facility licensee, its employees, or agents, subject to other timing as determined by the Commission.",
+    "reason": "The passage supports this licensing requirement, but the claim should be framed as applying to vendors conducting such business, not as a standalone requirement for all vendors in the abstract."
+  },
+  "p00105": {
+    "action": "keep",
+    "claim": "A Gaming Facility licensee must file a report describing the operation of all junkets engaged in on the premises.",
+    "reason": "The cited sentence expressly imposes this reporting duty on the licensee."
+  },
+  "p00106": {
+    "action": "keep",
+    "claim": "Junket representatives must be licensed as Casino Key Employees.",
+    "reason": "The claim matches the cited requirement exactly."
+  },
+  "p00107": {
+    "action": "keep",
+    "claim": "A Gaming Facility licensee must obtain an operation certificate in order to open or remain open to the public.",
+    "reason": "The cited sentence expressly states this post-licensure requirement for the licensee."
+  },
+  "p00108": {
+    "action": "keep",
+    "claim": "A Gaming Facility licensee must maintain a record of all agreements in regard to the project.",
+    "reason": "The passage directly imposes this recordkeeping obligation on the licensee."
+  },
+  "p00114": {
+    "action": "archive",
+    "claim": "",
+    "reason": "This sentence describes the Commission's discretionary authority to adjust a fee, not a specific project obligation, target, or commitment by the applicant or licensee."
+  },
+  "p00116": {
+    "action": "qualify",
+    "claim": "Any Commission costs necessary to maintain regulatory control over gaming facilities that are not covered by fees under PML Section 1349, other fees assessed under that section, or other designated funding sources shall be assessed annually on Gaming Facility licensees in proportion to the number of gaming positions at each facility.",
+    "reason": "The passage does create a payment obligation, but the candidate wording omits that these costs are assessed annually and apportioned across licensees by gaming positions."
+  },
+  "p00121": {
+    "action": "keep",
+    "claim": "If a license is awarded as a result of this RFA, the successful Applicant will be required to complete a Confirmatory Affidavit, in a form determined by the Commission, confirming that the statements, affirmations and agreements made in the Applicant’s RFA remain true and correct.",
+    "reason": "The cited sentence clearly states a specific post-award requirement for the successful applicant."
+  },
+  "p00122": {
+    "action": "keep",
+    "claim": "All terms and conditions contained in the RFA, any amendments to the RFA, the Application, and the Board’s decision statement shall be obligations and requirements of a Licensee.",
+    "reason": "This is an explicit statement of binding licensee obligations tied to the project and license terms."
+  },
+  "p00125": {
+    "action": "keep",
+    "claim": "Each Community Advisory Committee will elect a Chair at its first meeting, solicit and review public comments, and hold public meetings and hearings as it may deem advisable.",
+    "reason": "The cited bullets directly list these duties for each CAC."
+  },
+  "p00126": {
+    "action": "keep",
+    "claim": "Ultimately, each Community Advisory Committee must submit to the Board, the Commission and the Applicant evidence of a finding reached by majority vote—with a two-thirds threshold—that establishes public support either approving or disapproving the application.",
+    "reason": "The cited sentence expressly requires this submission from each CAC."
+  },
+  "p00128": {
+    "action": "keep",
+    "claim": "If the CAC votes in support of an application, the CAC and/or CAC consultant shall notify the applicant, Board, and Commission.",
+    "reason": "The cited sentence expressly states this post-vote notification duty and identifies the responsible actor and recipients."
+  },
+  "p00137": {
+    "action": "qualify",
+    "claim": "After a comprehensive review, the Board determined that awarding three licenses would best serve the State’s long-term economic, fiscal, and community objectives.",
+    "reason": "The passage supports the determination, but not 'three downstate commercial casino licenses'; the cited text says only 'three licenses.'"
+  },
+  "p00138": {
+    "action": "keep",
+    "claim": "The Board recommends Bally’s Corporation for commercial casino licensure consideration by the Commission.",
+    "reason": "Sentence 106 introduces the recommendation list, and sentence 107 names Bally’s Corporation."
+  },
+  "p00139": {
+    "action": "keep",
+    "claim": "The Board recommends Queens Future, LLC d/b/a Hard Rock Metropolitan Park for commercial casino licensure consideration by the Commission.",
+    "reason": "Sentence 106 introduces the recommendation list, and sentence 108 names Queens Future, LLC d/b/a Hard Rock Metropolitan Park."
+  },
+  "p00140": {
+    "action": "keep",
+    "claim": "The Board recommends Genting New York LLC d/b/a Resorts World New York City for commercial casino licensure consideration by the Commission.",
+    "reason": "Sentence 106 introduces the recommendation list, and sentence 109 names Genting New York LLC d/b/a Resorts World New York City."
+  },
+  "p00141": {
+    "action": "keep",
+    "claim": "All applicants are expected to track and report service-disabled veteran employment to meet New York’s 6 percent requirement.",
+    "reason": "The cited sentence directly states this expectation for all applicants."
+  },
+  "p00156": {
+    "action": "keep",
+    "claim": "Bally’s proposed a credible plan to surpass the 10 percent renewable energy requirement through on-site solar photovoltaics and off-site procurement of NYSERDA-qualified renewable energy.",
+    "reason": "The passage explicitly says Bally’s was 'proposing a credible plan' with those components; this is a supported proposal, not a completed action."
+  },
+  "p00158": {
+    "action": "qualify",
+    "claim": "The Board relied upon Bally’s promises to expand the existing ferry shuttle service.",
+    "reason": "The cited text attributes the promise and the Board’s reliance on it, but does not by itself state a direct binding promise from Bally’s outside that framing."
+  },
+  "p00159": {
+    "action": "keep",
+    "claim": "Bally’s promised to fund at least one additional bus stop in Ferry Point Park and two at the facility.",
+    "reason": "The cited sentence explicitly attributes this promise to Bally’s as part of the Board’s relied-upon commitments."
+  },
+  "p00161": {
+    "action": "keep",
+    "claim": "The Board recommends that the Commission require Bally’s to provide annual updates on employee participation in the Upwards childcare membership program and address any challenges employees face in accessing convenient daycare options.",
+    "reason": "The passage expressly states this recommendation by the Board to the Commission regarding Bally’s."
+  },
+  "p00162": {
+    "action": "keep",
+    "claim": "Bally’s intends to enter into a Project Labor Agreement, and the Board notes that no agreements have yet been finalized.",
+    "reason": "The cited text says the Board is satisfied Bally’s intends to enter into a PLA, while also stating the Board remains concerned that no agreements have yet been finalized."
+  },
+  "p00166": {
+    "action": "qualify",
+    "claim": "The Board expects Bally’s to reach at minimum a 6 percent service-disabled veteran employment goal.",
+    "reason": "The cited sentence is framed as the Board’s expectation, not as a direct Bally’s commitment."
+  },
+  "p00186": {
+    "action": "keep",
+    "claim": "The Board recommends to the Commission that the Applicant’s license require completion of the 450 fully affordable housing units in Corona that HRMP discussed with the community.",
+    "reason": "The passage specifically says the Board recommends the Commission require, through the license, completion of projects including the 450 affordable units."
+  },
+  "p00187": {
+    "action": "keep",
+    "claim": "The Board recommends to the Commission that the Applicant’s license require completion of the Flushing SkyPark that HRMP discussed with the community.",
+    "reason": "The cited text expressly includes the Flushing SkyPark among the projects the Board recommends the license require to be completed."
+  },
+  "p00190": {
+    "action": "keep",
+    "claim": "The Board recommends continued monitoring and adjustment of traffic plans during construction and facility operation.",
+    "reason": "This recommendation is stated directly in the cited sentence."
+  },
+  "p00196": {
+    "action": "keep",
+    "claim": "The Board urges local elected officials, City and State agencies, community organizations, and unions to monitor applicants’ hiring and procurement practices and work with the applicants to ensure the goals are met.",
+    "reason": "The cited sentence explicitly makes this exhortation, and the actor is the Board speaking in the first person plural."
+  },
+  "p00198": {
+    "action": "keep",
+    "claim": "HRMP has planned efforts to hire local residents, procure products and services from local Queens merchants, and develop a diverse workforce while prioritizing hiring unemployed or underemployed people.",
+    "reason": "The cited sentence explicitly attributes these planned hiring, procurement, and workforce-development efforts to HRMP."
+  },
+  "p00208": {
+    "action": "qualify",
+    "claim": "The Board recommends that Resorts World be licensed for 4,635 slot machines and 534 gaming tables, rather than the higher numbers referenced elsewhere in its application, to ensure the quality of visitors’ experience.",
+    "reason": "The recommendation is made by the Board, not by the Commission as licensing authority; the cited text expressly states the Board recommends the lower numbers."
+  },
+  "p00210": {
+    "action": "keep",
+    "claim": "Resorts World currently has $925 million in committed debt financing, contingent on issuance of a casino license, to fund the license fee and initial capital expenditures.",
+    "reason": "This is stated directly in the cited sentence, including the contingency and intended use of funds."
+  },
+  "p00221": {
+    "action": "keep",
+    "claim": "Resorts World commits to various mass transit improvements.",
+    "reason": "The cited sentence explicitly says Resorts World commits to various mass transit improvements."
+  },
+  "p00223": {
+    "action": "keep",
+    "claim": "Resorts World commits to traffic infrastructure improvements.",
+    "reason": "The cited sentence explicitly includes traffic infrastructure improvements among Resorts World’s commitments."
+  },
+  "p00226": {
+    "action": "keep",
+    "claim": "The Board expects Resorts World's service-disabled veterans employment target to be the required 6 percent, rather than the 5 percent it offered.",
+    "reason": "The cited text directly states the Board’s expectation regarding the target and contrasts it with Resorts World’s offered 5 percent."
+  },
+  "p00227": {
+    "action": "qualify",
+    "claim": "The Board believes the Community Advisory Committee approvals were based on applicants’ representations about hiring local, diverse, and unionized workers, and it expects the applicants’ stated goals and requirements to be met.",
+    "reason": "The cited text reflects the Board’s expectation, but it is tied specifically to applicants’ stated goals and requirements regarding those hiring representations, not a broader standalone obligation phrased generically."
+  },
+  "p00230": {
+    "action": "keep",
+    "claim": "The Board urges the Commission and elected officials at the state and local level to resist any back-tracking on the tax rate contained in Resorts World’s bid.",
+    "reason": "The cited sentence explicitly records this urging by the Board regarding the bid tax rate."
+  },
+  "p00236": {
+    "action": "qualify",
+    "claim": "The Gaming Facility Location Board recommends that the Commission use the license agreement to ensure acceptable quality if the casino opens while major construction is still underway.",
+    "reason": "The passage is a Board recommendation to the Commission, not a commitment by the Commission itself. The candidate’s wording is close but the actor/speaker should be attributed to the Board."
+  },
+  "p00249": {
+    "action": "keep",
+    "claim": "All terms and conditions of the License are binding on Resorts World New York City and its Commission-approved successors and assigns.",
+    "reason": "The passage explicitly states this binding license condition and correctly identifies the obligated parties."
+  },
+  "s-b96f3399be344ecd0e874176f180e4747c1e9abff73126c50296bcc72c591b5c": {
+    "action": "archive",
+    "claim": "",
+    "reason": "This is application-process gating for Board evaluation, not a project commitment, deliverable, target, or public-benefit obligation."
+  },
+  "s-fa77f78561412fe13fa01a22b131fce5f298d7861d49f4d049dfa3f161d26da6": {
+    "action": "archive",
+    "claim": "",
+    "reason": "This is another pre-evaluation application-process requirement, which is bid-process housekeeping rather than a project commitment."
+  },
+  "s-e52a2d82a233f29ce5e4b48f1c19bcb77bfd735567b1f0184c757e016d5caf3e": {
+    "action": "archive",
+    "claim": "",
+    "reason": "The cited text is a licensing/application requirement stated in a list of applicant qualifications, not a substantive project commitment or public-facing obligation to retain."
+  },
+  "s-b28abda0870bc6ba862a9324712baa6cebb106e932bee06df1ad326251a5370a": {
+    "action": "archive",
+    "claim": "",
+    "reason": "This is a pre-award licensing qualification requirement about ability to pay the fee, which is administrative bid/process content rather than a project commitment."
+  },
+  "s-94b21b492e725cf5dc31fcec295113ec5df33b48103111b82c45aae2c1fc75de": {
+    "action": "keep",
+    "claim": "The applicant must identify the Host Municipality’s infrastructure costs incurred directly from construction and operation of the gaming facility and commit to a community mitigation plan for the Host Municipality.",
+    "reason": "The passage expressly imposes this substantive obligation on the applicant, including both cost identification and a mitigation-plan commitment."
+  },
+  "s-1642562ad0db3d7e3df25d4db7b1d8135459d8ee753db345dbf1b0db61bd0c21": {
+    "action": "keep",
+    "claim": "The applicant must identify the Host Municipality’s emergency-service costs incurred directly from operation of the gaming facility and commit to a community mitigation plan for the Host Municipality.",
+    "reason": "The cited sentence explicitly requires identifying these service costs and committing to a mitigation plan."
+  },
+  "s-d9d0a57654ac58619b4c2d9e0252464a55a390626d951c56980b10b9270831eb": {
+    "action": "keep",
+    "claim": "Applicants must formulate, obtain Board approval for, and abide by a program to achieve diversity in casino construction and equal job opportunity, including specific utilization goals for minorities, women, and veterans on construction jobs.",
+    "reason": "The cited passage expressly imposes this requirement on the applicant and specifies Board approval, compliance, and the required goals."
+  },
+  "s-1cdff85cb138582d9aaa3bbaec708f3294c58081c16aa20c157cb3f6b7ea8ee5": {
+    "action": "keep",
+    "claim": "The Commission reserves the right, in its sole discretion, to terminate a license if it determines that the applicant’s lobbying certification was intentionally false or intentionally incomplete.",
+    "reason": "The citation states this license-termination condition explicitly; it is a specific post-award enforcement term tied to the project/license."
+  },
+  "s-68f8506de157c9f99e27422fc7ddd7d22452d1e8553764bfa6c8d2f4d1cf5cc6": {
+    "action": "archive",
+    "claim": "",
+    "reason": "This is a discretionary bid-processing enforcement mechanism about filing background forms, not a substantive project commitment, deliverable, or public-benefit obligation."
+  },
+  "s-230a539893e4d773196320dc245501b3ed44b281c378f865f678ebc457ba8361": {
+    "action": "archive",
+    "claim": "",
+    "reason": "The passage describes the Commission’s discretionary authority to reject an application after background checks; it is agency process discretion rather than a project commitment or term to catalog."
+  },
+  "s-4cbcfa7a63171949ab79eacad592f9ff8fa10152d9d589909f9777e8c58d1605": {
+    "action": "keep",
+    "claim": "The Commission may reject an application, or cancel, revoke, or suspend a license, if an applicant or related party knowingly provides false or intentionally misleading information in connection with a Commission investigation.",
+    "reason": "The citation expressly states this consequence and ties it to applicant/licensee conduct in the investigation process."
+  },
+  "s-e6159a3c8740576e5e3eb0d3f4e0022629fda8297c3f50b096ba3e06333d97fc": {
+    "action": "qualify",
+    "claim": "The Board determined that 'Minimum Capital Investment' does not include costs related to purchasing, leasing, or optioning the land for the gaming facility, including costs of registering, appraising, transferring title, or obtaining title insurance for the land.",
+    "reason": "The exclusion is stated in the source, but it is framed as the Board’s determination about what counts as Minimum Capital Investment, not as an applicant-worded duty."
+  },
+  "s-ebd6d7e4948dfe899e4ca279a30cc5645e74c1192f20153995d28261b9a3d853": {
+    "action": "qualify",
+    "claim": "The Board determined that 'Minimum Capital Investment' does not include carried interest costs and other associated financing costs.",
+    "reason": "The source clearly states the exclusion, but it is the Board’s determination about the calculation, not an applicant commitment in those words."
+  },
+  "s-e2d4a7cca76d0146cea588cd6dcea0b86e5d9a4847550580e9b5b990d9636b16": {
+    "action": "qualify",
+    "claim": "The Board determined that 'Minimum Capital Investment' does not include costs of mitigating impacts on host and nearby municipalities, whether directly attributable to a specific impact or not.",
+    "reason": "The cited text expressly excludes these costs from the Minimum Capital Investment calculation, but the proper actor is the Board, not the applicant."
+  },
+  "s-c137eb710975aa89326e547b922c7bfa235fdec4a417b8a7e6e5992fce36c7b9": {
+    "action": "keep",
+    "claim": "The Board determined that Minimum Capital Investment excludes costs of designing, improving, or constructing infrastructure outside the Gaming Facility site boundaries, including drainage, utilities, roads, interchanges, fill, contamination issues, sewer, stormwater, landscaping, and public transportation, whether or not those costs arise from an agreement with a host or nearby municipality.",
+    "reason": "The cited passage expressly states these outside-boundary infrastructure costs shall not be included, including when required by agreement with a host or nearby municipality."
+  },
+  "s-2279e5b791c35bc1fa4ee88fef3cea03de3668c2d1a51e8861d06ad9d65af7c7": {
+    "action": "keep",
+    "claim": "A licensee must pay the licensing fee within 30 days after the award of the license.",
+    "reason": "The cited sentence states that the licensing fee is to be paid by a licensee within 30 days after the award of the license."
+  },
+  "s-947c9b7b57042583a1aebd9174c50036f97f6b649055db0b12650e232ecc64fb": {
+    "action": "keep",
+    "claim": "For additional casino licenses, the Commission will determine the gross gaming revenue tax rate through the competitive bidding process, with a minimum tax rate of 25% on slot machines and 10% on all other sources.",
+    "reason": "The passage explicitly assigns rate-setting to the Commission through the competitive bidding process and sets the minimum rates."
+  },
+  "s-3f358b5edcdd1bbd7444d50bc91725819eb748791a33866407b0177098ffb8d2": {
+    "action": "keep",
+    "claim": "All meetings and public hearings of the CAC will be subject to the New York State Open Meetings Law.",
+    "reason": "The cited sentence directly states this requirement for CAC meetings and public hearings."
+  },
+  "s-ee55c7e9ec8d08677e577256f0b23f6bcf90577b6289bbe5bc80fedeb0a1b831": {
+    "action": "keep",
+    "claim": "If the Commission’s proposed regulation regarding license length is adopted, applicants would be limited to an initial license term of less than 30 years.",
+    "reason": "This is an explicit conditional statement in the source about the effect of adopting the proposed regulation."
+  },
+  "s-5b4e1ea27d46cc8d4167e4409b2091a61232e0f98d4ed0b6697560acf4f68b92": {
+    "action": "keep",
+    "claim": "Bally’s anticipates that approximately 75% of the project’s capital expenditures will benefit Bronx-based firms.",
+    "reason": "The cited sentence attributes this anticipated benefit directly to Bally’s."
+  },
+  "s-443087472c2c91780a6042ec260db5c58749f9e2a45cc603dc137f210eb725cc": {
+    "action": "keep",
+    "claim": "Bally’s projects that Bally’s Bronx will employ 2,876 full-time and 865 part-time workers, creating 3,741 new permanent positions, equivalent to 3,503 full-time equivalent jobs.",
+    "reason": "The source explicitly presents these figures as Bally’s projection."
+  },
+  "s-0bddeaa1c35f0fe131d70886b1de6afa14a0ba74adcfba92ea3857b1f9e9c364": {
+    "action": "qualify",
+    "claim": "The Board states that median compensation is estimated to be near $80,000, including benefits, for Bally’s Bronx jobs.",
+    "reason": "The sentence gives an estimate but does not attribute it to Bally’s specifically; the claim should reflect that it is an estimate stated in the Board document."
+  },
+  "s-08a016901ca19f430b6b211e7b37551fa7cdb9796c4db6169902a81cbc31cc79": {
+    "action": "keep",
+    "claim": "HRMP projects average full-time compensation of $140,000 annually, including benefits, for its operational employees.",
+    "reason": "The cited sentence explicitly states this as a projection by HRMP, and the candidate preserves the forecast modality and scope."
+  },
+  "s-725c39baaefce4d79bee2541e9dc16e35008b7607cbab56f4cf0077c3f6a1506": {
+    "action": "qualify",
+    "claim": "HRMP estimates 3,420 average annual FTE and 17,100 total FTEs during construction, with projected average wages of $60.11 per hour or $110.84 with benefits; construction hiring is projected at 58% Queens residents, 17% other New York City boroughs, 15% elsewhere in New York State, and 10% out of state, and the Board notes these are goals rather than binding commitments.",
+    "reason": "The passage supports these workforce projections, but the citation also expressly qualifies the hiring targets as goals rather than binding commitments."
+  },
+  "s-e93b902c77016c5a2284f7db3ab2393a28b320885c61a6c7b8e47fdca049a5a9": {
+    "action": "keep",
+    "claim": "HRMP has a Memorandum of Understanding with the Trades Council, a labor peace agreement with the New York Hotel & Gaming Trades Council, AFL-CIO, and Memoranda of Understanding with several major unions including the Building and Construction Trades Council of Greater New York and Vicinity, IBEW Local 3, the New York City District Council of Carpenters, and Painters District Council 9.",
+    "reason": "The cited sentence directly states that these labor-related agreements are in place; this is a specific attributable project-related arrangement."
+  },
+  "s-ef8868abd47e3cf003f167f1050f5805b38f90723c457cd9f3ce33ce5d060d8b": {
+    "action": "keep",
+    "claim": "Resorts World's proposed $3.3 billion expansion would add a new Crockford's hotel, additional parking facilities, and a multi-purpose arena to the project.",
+    "reason": "The cited sentence expressly describes additional parking facilities as part of the proposed project expansion."
+  },
+  "s-077ef8d3d21c10354d7ebf08d4af64394112c5106611264188f0ea8f8111951c": {
+    "action": "archive",
+    "claim": "",
+    "reason": "The cited sentence only says Resorts World has partnered with Cirrus Workforce Housing Advisors on the initiative. By itself, this is background about a partner relationship, not a specific obligation, deliverable, or target."
+  },
+  "s-3fccc59a25f823417046b521b8e2b88a1f591f7a6c83234ca24e62db4c70617d": {
+    "action": "keep",
+    "claim": "Resorts World estimates an average of 4,331 construction FTE jobs annually, totaling 21,653 construction FTEs over five years.",
+    "reason": "The cited sentence explicitly presents this as Resorts World's estimate, and the candidate accurately preserves that forecast status."
+  },
+  "s-95f4e1965fb02945d089ef106125cc55a488d72c8dbe1d4c899c0e722b2754c9": {
+    "action": "keep",
+    "claim": "Resorts World projects construction wages of $38.55 per hour, or $72.11 per hour including benefits.",
+    "reason": "The cited sentence explicitly states projected construction wages; this is a specific attributable forecast."
+  },
+  "s-7a689689069ebd4274a76e8321594c3d4d699a98cb3ce81ac1c977bf6b9430ca": {
+    "action": "keep",
+    "claim": "Resorts World estimates its construction workforce residency mix at 19% from Queens, 40% from elsewhere in New York City, 38% from elsewhere in New York State, and 3% from out of state.",
+    "reason": "The cited sentence expressly gives these residency estimates, and the candidate keeps the forecast modality."
+  },
+  "s-9917c94d6c72fcd5f6015ed92e8c4461b778217effc475cfbec57db4b3b78b7a": {
+    "action": "keep",
+    "claim": "The Board stated that Resorts World has a Project Labor Agreement and collective bargaining agreements in place with four unions covering 84 percent of its workforce, including the Hotel and Gaming Trades Council and the Building and Construction Trades Council of Greater New York and Vicinity.",
+    "reason": "The passage explicitly says these agreements are in place and attributes the statement to the Board’s assessment of Resorts World."
+  },
+  "s-a839e068f93089c869233737ebdf762de6770426eba2aa9e9c216006ba21763a": {
+    "action": "keep",
+    "claim": "Resorts World projected that 19 percent of its construction FTEs will be Queens residents.",
+    "reason": "The cited sentence directly states this projection and clearly attributes it to Resorts World."
+  },
+  "s-c8c2dd5490ea9e4939ca44b289755f0a69f28737a3a404629cfabc4a073b2c17": {
+    "action": "keep",
+    "claim": "The Board said Resorts World can convert its existing facility to a casino quickly and provide tax revenue to state and local governments as early as 2026, at least three years before other applicants begin operations.",
+    "reason": "The passage explicitly presents this as a capability/timing forecast tied to Resorts World, not as completed delivery."
+  },
+  "s-90dbf56ef986708ab3820df83b1500b2726d34652ae4140c0c63996def125f9e": {
+    "action": "keep",
+    "claim": "Resorts World New York City's gaming facility license lasts 15 years from the Commission's issuance of an operation certificate and is thereafter renewable for 10 years.",
+    "reason": "The license document expressly states the duration and renewal term as binding license terms."
+  }
+}

@@ -84,6 +84,16 @@ class Retrieval:
             raise EmbeddingError("Embedding provider failed") from error
 
     def resolve(self, input_dict: dict) -> dict:
+        judge_input, revision, candidates = self.candidates(input_dict)
+        try:
+            answer = self._judge(judge_input, candidates)
+        except JudgeError:
+            raise
+        except Exception as error:
+            raise JudgeError("Identity judge failed") from error
+        return _validate_answer(answer, candidates, revision)
+
+    def candidates(self, input_dict):
         judge_input, vector_text, lexical_text = _prepare_input(input_dict)
         embedding = self.embed_commitment(vector_text)
         try:
@@ -95,13 +105,7 @@ class Retrieval:
         except Exception as error:
             raise CatalogError("Catalog snapshot read failed") from error
 
-        try:
-            answer = self._judge(judge_input, candidates)
-        except JudgeError:
-            raise
-        except Exception as error:
-            raise JudgeError("Identity judge failed") from error
-        return _validate_answer(answer, candidates, revision)
+        return judge_input, revision, candidates
 
     def _read_candidates(self, snapshot, embedding, lexical_text):
         revision = snapshot.catalog_revision

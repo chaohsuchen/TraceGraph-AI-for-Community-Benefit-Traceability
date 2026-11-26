@@ -206,6 +206,9 @@ class PostgresStore:
                 connection.rollback()
             return status, headers, body
 
+    def request_research(self, cid, *, refresh):
+        return self.enqueue("REFRESH", commitment_id=cid) if refresh else None
+
     def enqueue(self, kind, *, query=None, commitment_id=None):
         job_id = _new_id("job")
 
@@ -394,6 +397,35 @@ class PostgresStore:
         self._set_terminal(connection, job, "COMPLETED", result={"outcome": "RESOLVED", **ids})
         return {"outcome": "COMMITTED", **ids}
 
+    def _insert_commitment(self, connection, draft):
+        promise = draft.get("original_promise")
+        if not promise or not (promise.get("locator") and promise.get("excerpt")):
+            raise ValueError("A new commitment requires a source, locator, and original excerpt.")
+        embedding = _vector(draft["embedding"])
+        source_id = self._source_id(connection, promise["source"])
+        organization_id = self._organization_id(connection, draft)
+        beneficiary = draft.get("beneficiary") or {}
+        commitment_id = _new_id("commitment")
+        connection.execute("""
+            INSERT INTO commitment (
+                id, organization_id, title, description, original_text, responsible_entity_raw,
+                beneficiary_category, beneficiary_named, obligation_type, amount_value,
+                term_periodicity, geographic_scope, condition_contingency, milestone, notes,
+                original_source_id, original_locator, original_document_id, original_char_start, original_char_end, embedding
+            ) VALUES (
+                %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s::vector
+            )
+        """, (
+            commitment_id, organization_id, draft.get("title"), draft["description"],
+            draft.get("original_text") or promise["excerpt"], draft.get("responsible_entity_raw"),
+            beneficiary.get("category"), beneficiary.get("name"), draft.get("obligation_type"),
+            draft.get("amount_value"), draft.get("term_periodicity"), draft.get("geographic_scope"),
+            draft.get("condition_contingency"), draft.get("milestone"), draft.get("notes"),
+            source_id, promise["locator"], promise.get("document_id"), promise.get("char_start"),
+            promise.get("char_end"), embedding,
+        ))
+        return commitment_id
+
     def finish_discovery(self, claim, expected_catalog_revision, draft, result):
         with self._connect() as connection:
             job = self._running_job(connection, claim)
@@ -404,31 +436,7 @@ class PostgresStore:
             """).fetchone()
             if str(catalog["revision"]) != expected_catalog_revision:
                 return {"outcome": "RECHECK_REQUIRED"}
-            promise = draft.get("original_promise")
-            if not promise or not (promise.get("locator") and promise.get("excerpt")):
-                raise ValueError("A new commitment requires a source, locator, and original excerpt.")
-            embedding = _vector(draft["embedding"])
-            source_id = self._source_id(connection, promise["source"])
-            organization_id = self._organization_id(connection, draft)
-            beneficiary = draft.get("beneficiary") or {}
-            commitment_id = _new_id("commitment")
-            connection.execute("""
-                INSERT INTO commitment (
-                    id, organization_id, title, description, original_text, responsible_entity_raw,
-                    beneficiary_category, beneficiary_named, obligation_type, amount_value,
-                    term_periodicity, geographic_scope, condition_contingency, milestone, notes,
-                    original_source_id, original_locator, embedding
-                ) VALUES (
-                    %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s::vector
-                )
-            """, (
-                commitment_id, organization_id, draft.get("title"), draft["description"],
-                draft.get("original_text") or promise["excerpt"], draft.get("responsible_entity_raw"),
-                beneficiary.get("category"), beneficiary.get("name"), draft.get("obligation_type"),
-                draft.get("amount_value"), draft.get("term_periodicity"), draft.get("geographic_scope"),
-                draft.get("condition_contingency"), draft.get("milestone"), draft.get("notes"),
-                source_id, promise["locator"], embedding,
-            ))
+            commitment_id = self._insert_commitment(connection, draft)
             return self._save_run(connection, job, commitment_id, result)
 
     def finish_refresh(self, claim, result):

@@ -82,9 +82,39 @@ Open [TraceGraph](http://127.0.0.1:4173/). For a first search, try â€œDid NASAâ€
 
 The default schema is `tracegraph_live` in the local Compose database. `prepare` creates the schema, applies migrations, and configures embeddings. Use `TRACEGRAPH_DATABASE_URL` and `TRACEGRAPH_SCHEMA` to override the defaults.
 
+## Import trusted PDFs
+
+TraceGraph can catalog commitments before anyone asks about delivery. The extractor reads
+the supplied documents in order, with neighboring sentences and section headings, and
+returns claims with exact page and character references. A first review checks attribution
+and scope. A separate pass rereads the window for omitted commitments and classifies
+the existing candidates. The model adjudicates new candidates and disagreements using
+the cited text. These steps run without web tools. The frozen three-PDF release includes
+the predictions and an offline score replay. [PDF catalog freeze](evaluation/pdf-extraction-101/freeze/README.md)
+
+```powershell
+$pdfs = (Get-ChildItem .\inputs\*.pdf).FullName
+python -m tracegraph.pdf_extract --openai-key-file ./openai-api-key.txt --output ./pdf-run @pdfs
+python -m tracegraph.pdf_import ./pdf-run/reviewed.json --openai-key-file ./openai-api-key.txt --report ./pdf-run/import.json @pdfs
+```
+
+The importer checks frozen quotations against the PDF bytes. Hybrid retrieval and model
+identity checks link equivalent obligations to the same catalog ID. Ambiguous items
+appear in the import report for review. PostgreSQL stores each document once, with all
+supporting passages linked to the commitment. Replaying an accepted item reuses its
+record. The graph opens the archived PDF at the cited page.
+
+A new record has a null assessment and no research job. Its first lookup returns the
+record and queues research on that ID. Simultaneous lookups share one job. Selecting
+a saved clarification option has the same behavior. Reading the graph directly leaves
+the research state alone. Later lookups return the completed assessment, and
+**Research again** requests an update.
+
 ## Golden Dataset evaluation
 
-The [Golden Workbook](evaluation/Golden%20Dataset%20%285%29.xlsx) is an evaluation reference. The live catalog starts empty and grows through its own research. For each selected case, the evaluator submits only the commitment question to a fresh catalog. The reference evidence, sources, and human labels stay in the local scoring process.
+The [three-PDF extraction benchmark](evaluation/pdf-extraction-101/README.md) compares the catalog importer with B0 on all 101 annotated rows. Its predictions and offline replay are separate from the delivery evidence evaluation.
+
+The [Golden Workbook](evaluation/Golden%20Dataset%20%285%29.xlsx) is an evaluation reference. The live catalog grows through PDF imports and user-triggered research. For each selected evidence-evaluation case, the evaluator submits only the commitment question to a fresh catalog. The reference evidence, sources, and human labels stay in the local scoring process.
 
 ```powershell
 $report = Join-Path $env:TEMP 'tracegraph-evaluation.json'

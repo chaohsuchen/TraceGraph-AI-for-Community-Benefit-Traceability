@@ -7,6 +7,13 @@
   },
   "servers": [{"url":"/api/v1"}],
   "paths": {
+    "/documents/{digest}/pdf": {
+      "get": {
+        "operationId": "getCatalogPdf",
+        "parameters": [{"name":"digest","in":"path","required":true,"schema":{"type":"string","pattern":"^[a-f0-9]{64}$"}}],
+        "responses": {"200":{"description":"Original catalog PDF","content":{"application/pdf":{"schema":{"type":"string","format":"binary"}}}},"404":{"$ref":"#/components/responses/Error"}}
+      }
+    },
     "/lookup": {
       "post": {
         "operationId": "lookupCommitment",
@@ -116,15 +123,15 @@
       "LookupRequest": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["query"],
-        "properties": {"query":{"type":"string","minLength":1,"maxLength":4000,"pattern":"\\S"}}
+        "oneOf": [{"required":["query"]},{"required":["commitment_id"]}],
+        "properties": {"query":{"type":"string","minLength":1,"maxLength":4000,"pattern":"\\S"},"commitment_id":{"$ref":"#/components/schemas/Id"}}
       },
       "LookupResult": {"oneOf":[{"$ref":"#/components/schemas/Match"},{"$ref":"#/components/schemas/Ambiguous"}]},
       "Match": {
         "type": "object",
         "additionalProperties": false,
         "required": ["outcome","commitment_id"],
-        "properties": {"outcome":{"const":"MATCH"},"commitment_id":{"$ref":"#/components/schemas/Id"}}
+        "properties": {"outcome":{"const":"MATCH"},"commitment_id":{"$ref":"#/components/schemas/Id"},"job_id":{"$ref":"#/components/schemas/Id"}}
       },
       "Ambiguous": {
         "type": "object",
@@ -249,6 +256,8 @@
         "properties": {
           "organization": {"anyOf":[{"$ref":"#/components/schemas/Organization"},{"type":"null"}]},
           "commitment": {"$ref":"#/components/schemas/Commitment"},
+          "research_state":{"enum":["NOT_STARTED","QUEUED","RUNNING","FAILED","ASSESSED"]},
+          "document_citations":{"type":"array","items":{"type":"object","required":["document_hash","title","page","char_start","char_end","excerpt"],"properties":{"document_hash":{"type":"string"},"title":{"type":"string"},"page":{"type":"integer"},"char_start":{"type":"integer"},"char_end":{"type":"integer"},"excerpt":{"type":"string"}}}},
           "assessment": {"anyOf":[{"$ref":"#/components/schemas/Assessment"},{"type":"null"}]},
           "findings": {"type":"array","items":{"$ref":"#/components/schemas/Finding"}},
           "relations": {"type":"array","items":{"$ref":"#/components/schemas/EvidenceRelation"}}

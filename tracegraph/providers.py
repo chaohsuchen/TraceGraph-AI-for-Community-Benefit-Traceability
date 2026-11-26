@@ -528,6 +528,8 @@ def _refresh_target(context):
     source = _public_source(promise.get("source") or {})
     if source.get("url"):
         target.update(_public_text_fields(commitment, ("original_text",)))
+    if context.get("pdf_promise_passages"):
+        target["original_text"] = "\n[…]\n".join(context["pdf_promise_passages"])
     if source:
         provenance["source"] = source
     if provenance:

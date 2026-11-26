@@ -1,0 +1,636 @@
+[
+  {
+    "action": "add",
+    "row": {
+      "document_id": "RFA-2023-01-03",
+      "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+      "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+      "organization": "Applicant",
+      "description": "An applicant must clearly state in its application that it shall meet the licensee deposit requirement.",
+      "citations": [
+        {
+          "page": 5,
+          "char_start": 7659,
+          "char_end": 7950,
+          "excerpt": "PML Section 1316 (as incorporated by PML Section 1321-f) provides for the following minimum license thresholds: No applicant shall be eligible to receive a gaming license unless the applicant meets the following criteria and clearly states as part of an application that the applicant shall:"
+        },
+        {
+          "page": 6,
+          "char_start": 8478,
+          "char_end": 8519,
+          "excerpt": "3. meet the licensee deposit requirement;"
+        }
+      ]
+    },
+    "nearby": [
+      "r00000",
+      "r00001"
+    ],
+    "accept": true,
+    "reason": "The cited text expressly states that no applicant is eligible unless it clearly states in the application that it shall 'meet the licensee deposit requirement.' This supports both the actor and the obligation."
+  },
+  {
+    "action": "add",
+    "row": {
+      "document_id": "RFA-2023-01-03",
+      "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+      "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+      "organization": "Applicant",
+      "description": "An applicant must clearly state in its application that it is able to pay and commits to paying the gaming licensing fee.",
+      "citations": [
+        {
+          "page": 5,
+          "char_start": 7659,
+          "char_end": 7950,
+          "excerpt": "PML Section 1316 (as incorporated by PML Section 1321-f) provides for the following minimum license thresholds: No applicant shall be eligible to receive a gaming license unless the applicant meets the following criteria and clearly states as part of an application that the applicant shall:"
+        },
+        {
+          "page": 6,
+          "char_start": 8520,
+          "char_end": 8610,
+          "excerpt": "4. demonstrate that it is able to pay and shall commit to paying the gaming licensing fee;"
+        }
+      ]
+    },
+    "nearby": [
+      "r00000",
+      "r00001"
+    ],
+    "accept": true,
+    "reason": "The passage directly provides that the applicant must clearly state in its application that it will 'demonstrate that it is able to pay and shall commit to paying the gaming licensing fee.' The candidate accurately captures that requirement."
+  },
+  {
+    "action": "add",
+    "row": {
+      "document_id": "RFA-2023-01-03",
+      "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+      "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+      "organization": "Applicant",
+      "description": "An applicant must clearly state in its application how it proposes to address problem gambling concerns, workforce development, community development, and host and nearby municipality impact and mitigation issues.",
+      "citations": [
+        {
+          "page": 5,
+          "char_start": 7659,
+          "char_end": 7950,
+          "excerpt": "PML Section 1316 (as incorporated by PML Section 1321-f) provides for the following minimum license thresholds: No applicant shall be eligible to receive a gaming license unless the applicant meets the following criteria and clearly states as part of an application that the applicant shall:"
+        },
+        {
+          "page": 6,
+          "char_start": 8611,
+          "char_end": 8819,
+          "excerpt": "5. demonstrate to the commission how the applicant proposes to address problem gambling concerns, workforce development and community development and host and nearby municipality impact and mitigation issues;"
+        }
+      ]
+    },
+    "nearby": [
+      "r00000",
+      "r00001"
+    ],
+    "accept": true,
+    "reason": "The cited text expressly requires the applicant to clearly state in the application that it will demonstrate how it proposes to address problem gambling, workforce development, community development, and host/nearby municipality impacts and mitigation. The candidate is supported."
+  },
+  {
+    "action": "add",
+    "row": {
+      "document_id": "RFA-2023-01-03",
+      "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+      "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+      "organization": "Applicant",
+      "description": "Each applicant must meet the licensee deposit requirement as a minimum threshold for eligibility to receive a gaming license.",
+      "citations": [
+        {
+          "page": 6,
+          "char_start": 8478,
+          "char_end": 8519,
+          "excerpt": "3. meet the licensee deposit requirement;"
+        }
+      ]
+    },
+    "nearby": [
+      "r00002",
+      "r00003",
+      "r00004"
+    ],
+    "accept": false,
+    "reason": "The only cited passage is the fragment '3. meet the licensee deposit requirement;' which, by itself, does not supply the full subject, application context, or eligibility-threshold framing stated in the candidate. The citation is too incomplete to support the claim at that level."
+  },
+  {
+    "action": "add",
+    "row": {
+      "document_id": "RFA-2023-01-03",
+      "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+      "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+      "organization": "Applicant",
+      "description": "If the Board convenes a Stage 2 public hearing on a proposal, applicants and their agents/representatives must attend, and each applicant must have at least one individual with actual knowledge available to respond on the applicant’s behalf to reasonably anticipated questions or public comments about the application or supplement, including the proposed facility, community integration, and mitigation plans.",
+      "citations": [
+        {
+          "page": 9,
+          "char_start": 17335,
+          "char_end": 17559,
+          "excerpt": "Applicants and their agents and representatives are required to attend the public hearing(s), may make a presentation and respond to questions of the Board or public comments as directed by the Board or the Board’s designee."
+        },
+        {
+          "page": 9,
+          "char_start": 17560,
+          "char_end": 18049,
+          "excerpt": "Each Applicant must have at least one individual available who, based on actual knowledge, is prepared to respond on behalf of the Applicant to such questions or public comments that can reasonably be anticipated in regard to the contents of its Application and/or Supplement, including the scope and quality of the proposed gaming area and amenities, the integration of the proposed Gaming Facility into the community and nearby municipalities and the extent of required mitigation plans."
+        }
+      ]
+    },
+    "nearby": [
+      "r00005"
+    ],
+    "accept": false,
+    "reason": "The cited passages support attendance at required public hearings and having a knowledgeable representative available to respond, but they do not establish the candidate's added limitation 'If the Board convenes a Stage 2 public hearing on a proposal.' Because the Stage 2 qualifier is not supported by the cited text, the addition should be declined as stated."
+  },
+  {
+    "action": "archive",
+    "members": [
+      "r00007"
+    ],
+    "reason": "This record is not merely filing housekeeping or internal background. The cited text imposes a substantive application condition requiring execution of a waiver, release, covenant not to sue, agreement not to seek review, and indemnification obligations. Those are concrete legal/accountability commitments, so archiving is not justified.",
+    "accept": false
+  },
+  {
+    "action": "archive",
+    "members": [
+      "r00008"
+    ],
+    "reason": "The cited text is a pre-application legal waiver and indemnity condition for applicants and owners. It is procedural and internal to the licensing process, with no project deliverable, performance target, or public-facing accountability obligation to carry out a substantive development outcome.",
+    "accept": true
+  },
+  {
+    "action": "archive",
+    "members": [
+      "r00009"
+    ],
+    "reason": "The passage describes the Commission’s background-investigation process for applicants and related parties. This is a licensing review procedure, not an attributable project commitment or concrete post-award obligation.",
+    "accept": true
+  },
+  {
+    "action": "archive",
+    "members": [
+      "r00010"
+    ],
+    "reason": "The cited language sets the evidentiary burden applicants and related parties must meet to prove suitability for licensure. That is a qualification standard within application review, not a substantive project obligation or deliverable.",
+    "accept": true
+  },
+  {
+    "action": "archive",
+    "members": [
+      "r00011"
+    ],
+    "reason": "This passage states a licensing consideration standard about rehabilitation and when the Commission should not automatically disqualify an applicant. It is a review criterion, not a commitment to deliver a project outcome or satisfy a public accountability condition.",
+    "accept": true
+  },
+  {
+    "action": "archive",
+    "members": [
+      "r00012"
+    ],
+    "reason": "The text concerns possible licensing sanctions for false or misleading information during Commission investigation. That is enforcement of application integrity, not a project-specific obligation or public-facing deliverable.",
+    "accept": true
+  },
+  {
+    "action": "archive",
+    "members": [
+      "r00013"
+    ],
+    "reason": "The passage repeats the suitability-proof requirement for applicants and related parties by clear and convincing evidence. This is licensing qualification language only, not a substantive project commitment.",
+    "accept": true
+  },
+  {
+    "action": "archive",
+    "members": [
+      "r00014"
+    ],
+    "reason": "Archive approved. The cited text is a payment true-up for application processing costs owed to the Commission. It is purely administrative/financial filing logistics and does not describe a public-facing project deliverable, target, or material project accountability condition.",
+    "accept": true
+  },
+  {
+    "action": "archive",
+    "members": [
+      "r00020"
+    ],
+    "reason": "Archive declined. The passage imposes a concrete post-award obligation: during construction, the licensee must provide regular updates to the Commission documenting design improvements. That is a specific accountability/reporting requirement tied to project execution, not merely internal housekeeping.",
+    "accept": false
+  },
+  {
+    "action": "archive",
+    "members": [
+      "r00021"
+    ],
+    "reason": "Archive declined. The cited text sets a substantive constraint on the built facility: changes reducing size, quality, or fit and finish are not permitted. This is a material condition on the project deliverable and is specific enough to justify retaining the entry.",
+    "accept": false
+  },
+  {
+    "action": "archive",
+    "members": [
+      "r00022"
+    ],
+    "reason": "Archive declined. The passage creates a clear post-award obligation with a deadline: the Applicant must own or acquire the land within 60 days after license award, with a defined lease alternative. That is a concrete, attributable condition, not just background application content.",
+    "accept": false
+  },
+  {
+    "action": "add",
+    "row": {
+      "document_id": "RFA-2023-01-03",
+      "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+      "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+      "organization": "Applicant",
+      "description": "The Applicant must submit plans for procuring or generating on-site at least 10 percent of the gaming facility's annual electricity consumption from renewable energy sources qualified by NYSERDA.",
+      "citations": [
+        {
+          "page": 56,
+          "char_start": 140433,
+          "char_end": 140698,
+          "excerpt": "Submit (.Electricity): A description of plans for procuring or generating on-site at least 10 percent of the facility's annual electricity consumption from renewable energy sources qualified by the New York State Energy Research and Development Authority (NYSERDA)."
+        }
+      ]
+    },
+    "nearby": [],
+    "accept": true,
+    "reason": "Addition approved. The source expressly requires the Applicant to submit a description of plans for procuring or generating on-site at least 10 percent of annual electricity consumption from qualified renewable sources. The candidate correctly attributes the requirement to the Applicant and frames it as a submission/planning obligation rather than completed performance."
+  },
+  {
+    "action": "add",
+    "row": {
+      "document_id": "RFA-2023-01-03",
+      "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+      "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+      "organization": "Applicant",
+      "description": "The Applicant must propose a workforce training program for the gaming facility that establishes an on-site child day care program.",
+      "citations": [
+        {
+          "page": 56,
+          "char_start": 141291,
+          "char_end": 141603,
+          "excerpt": "Submit (.WorkforceDevelopment): How the Applicant proposes to establish, fund and maintain human resource hiring and training practices at the proposed Gaming Facility that promote the development of a skilled and diverse workforce and access to promotion opportunities through a workforce training program that:"
+        },
+        {
+          "page": 56,
+          "char_start": 142080,
+          "char_end": 142128,
+          "excerpt": "• establishes an on‐site child day care program."
+        }
+      ]
+    },
+    "nearby": [],
+    "accept": true,
+    "reason": "Addition approved. The cited text requires the Applicant to submit how it proposes a workforce training program that, among other things, establishes an on-site child day care program. The candidate accurately captures the actor and the proposal-level requirement."
+  },
+  {
+    "action": "repeat",
+    "members": [
+      "r00047",
+      "r00048"
+    ],
+    "description": "Any remaining Commission costs necessary to maintain regulatory control over gaming facilities that are not covered by PML Section 1349 fees, other fees assessed under that section, or other designated funding sources shall be assessed annually on Gaming Facility licensees in proportion to the number of gaming positions at each Gaming Facility.",
+    "accept": true,
+    "reason": "The two records rest on the same cited text and describe the same annual cost-assessment obligation on gaming facility licensees. The proposed unified wording preserves the material conditions: remaining Commission/regulatory-control costs, exclusion of costs covered by Section 1349 fees/other fees/other designated funding, annual assessment, and proportional allocation by gaming positions at each facility."
+  },
+  {
+    "action": "add",
+    "row": {
+      "document_id": "RFA-2023-01-03",
+      "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+      "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+      "organization": "Applicant",
+      "description": "The Applicant must include an independent analysis of annual projections of gaming patronage, such as gaming visitor count, and gaming revenues, including itemized slot, table, and gross revenues, for at least the first 10 years after opening for gaming on average high-, average-, and low-case bases.",
+      "citations": [
+        {
+          "page": 60,
+          "char_start": 150704,
+          "char_end": 151021,
+          "excerpt": "• Include an independent analysis of the annual projections of gaming patronage (e.g., by gaming visitor count) and gaming revenues (including itemization of slot, table and gross revenues) annually for a period of at least the first 10 years after opening for gaming on an average high-, average- and low-case basis."
+        }
+      ]
+    },
+    "nearby": [
+      "r00025",
+      "r00026",
+      "r00027",
+      "r00028",
+      "r00029",
+      "r00030",
+      "r00031",
+      "r00032",
+      "r00033",
+      "r00034",
+      "r00035",
+      "r00036",
+      "r00037",
+      "r00038",
+      "r00039",
+      "r00040",
+      "r00041",
+      "r00042",
+      "r00043",
+      "r00044",
+      "r00045",
+      "r00046",
+      "r00047",
+      "r00048"
+    ],
+    "accept": true,
+    "reason": "The cited passage directly supports both the actor and the requirement at the stated level of certainty: the Applicant must include an independent analysis of projected gaming patronage and gaming revenues, with slot/table/gross revenue itemization, covering at least the first 10 years on high/average/low cases. The nearby records do not already express this same forecasting requirement, so the addition is not repetitive."
+  },
+  {
+    "action": "archive",
+    "members": [
+      "r00056"
+    ],
+    "reason": "The cited text concerns CAC internal review procedures—electing a chair, soliciting comments, and holding meetings/hearings. These are procedural and internal to the application-review process, with no attributable project deliverable, target, or post-award accountability condition. Archiving is appropriate.",
+    "accept": true
+  },
+  {
+    "action": "archive",
+    "members": [
+      "r00057"
+    ],
+    "reason": "This entry states only that CAC meetings and hearings are subject to the Open Meetings Law. That is a general procedural/legal rule governing the review body's conduct, not a project-specific deliverable or material obligation of the applicant/licensee. Archiving is appropriate.",
+    "accept": true
+  },
+  {
+    "action": "archive",
+    "members": [
+      "r00058"
+    ],
+    "reason": "The cited passage describes a CAC review-process obligation to submit its support finding to the Board, Commission, and Applicant. Although specific, it is still part of the application-selection procedure rather than a public project deliverable or a post-award accountability condition tied to project execution. Archiving is appropriate.",
+    "accept": true
+  },
+  {
+    "action": "archive",
+    "members": [
+      "r00059"
+    ],
+    "reason": "The notification requirement after a CAC support vote is a procedural step in the application review workflow. It does not impose a project outcome, target, or ongoing material accountability condition on the project itself. Archiving is appropriate.",
+    "accept": true
+  },
+  {
+    "action": "add",
+    "row": {
+      "document_id": "RFA-2023-01-03",
+      "document_sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
+      "filename": "01.03.23.rfa_updatednysupplement_0.pdf",
+      "organization": "Community Advisory Committee / Board",
+      "description": "A two-thirds vote indicating community support of a project is required for the application to be considered by the Board.",
+      "citations": [
+        {
+          "page": 66,
+          "char_start": 163675,
+          "char_end": 163802,
+          "excerpt": "A two-thirds vote indicating community support of a project is a requirement for the Application to be considered by the Board."
+        }
+      ]
+    },
+    "nearby": [
+      "r00049",
+      "r00050",
+      "r00051",
+      "r00052",
+      "r00053",
+      "r00054",
+      "r00055",
+      "r00056",
+      "r00057",
+      "r00058",
+      "r00059"
+    ],
+    "accept": true,
+    "reason": "The passage directly supports the candidate at the stated certainty: a two-thirds vote showing community support is required for an application to be considered by the Board. The nearby items do not already state this exact procedural requirement as a Board-consideration condition; the closest nearby record says the CAC must submit evidence of a finding reached by majority vote with a two-thirds threshold, but it does not itself fully express the consequence that Board consideration requires a support vote."
+  },
+  {
+    "action": "add",
+    "row": {
+      "document_id": "GFLB-SEL-2025-12-01",
+      "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+      "filename": "12.01.25.gflbselectiondocument1.pdf",
+      "organization": "Applicants",
+      "description": "Any promises to the community made during the Community Advisory Committee process had to be recorded as amendments to the submitted application in order to be considered by the Board.",
+      "citations": [
+        {
+          "page": 4,
+          "char_start": 5422,
+          "char_end": 5642,
+          "excerpt": "Further, any promises to the community made as part of the Community Advisory Committee processes were required to be recorded as amendments to the respective submitted application in order to be considered by the Board."
+        }
+      ]
+    },
+    "nearby": [
+      "r00060",
+      "r00061",
+      "r00062",
+      "r00063"
+    ],
+    "accept": true,
+    "reason": "The cited sentence expressly states both actor and requirement: promises made to the community during the CAC process were required to be recorded as amendments to the submitted application in order to be considered by the Board. Nothing nearby duplicates this specific obligation."
+  },
+  {
+    "action": "archive",
+    "members": [
+      "r00064"
+    ],
+    "reason": "Archive is appropriate. The record is a high-level Board determination about the preferred number of licenses after review. It is not a project-specific deliverable, applicant obligation, target, or material accountability condition.",
+    "accept": true
+  },
+  {
+    "action": "add",
+    "row": {
+      "document_id": "GFLB-SEL-2025-12-01",
+      "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+      "filename": "12.01.25.gflbselectiondocument1.pdf",
+      "organization": "Board consultants",
+      "description": "If the Board selected two applicants for a commercial casino license instead of three, the Board consultants project the State would receive $1.1 billion to $3.7 billion less incremental gaming tax revenue from 2027 to 2036.",
+      "citations": [
+        {
+          "page": 8,
+          "char_start": 16190,
+          "char_end": 16364,
+          "excerpt": "If the Board selected two applicants for a commercial casino license instead of three, the Board consultants project the State would receive $1.1 billion to $3.7 billion less"
+        },
+        {
+          "page": 9,
+          "char_start": 16824,
+          "char_end": 16873,
+          "excerpt": "incremental gaming tax revenue from 2027 to 2036."
+        }
+      ]
+    },
+    "nearby": [
+      "r00064",
+      "r00065",
+      "r00066",
+      "r00067"
+    ],
+    "accept": true,
+    "reason": "The cited passages support an attributed projection by Board consultants, including the condition (selecting two instead of three applicants), the projected consequence, and the time period. This is not duplicated by the nearby recommendation records."
+  },
+  {
+    "action": "archive",
+    "members": [
+      "r00069"
+    ],
+    "reason": "Archive is appropriate. The record is expressly conditional on adoption of a proposed regulation and serves as legal/regulatory background about possible license length limits, not as a concrete project commitment or enforceable post-award obligation by an applicant.",
+    "accept": true
+  },
+  {
+    "action": "facet",
+    "members": [
+      "r00093",
+      "r00094"
+    ],
+    "description": "Bally’s plans to enter a comprehensive project labor agreement for the construction phase; the Board notes the agreements are not yet finalized.",
+    "accept": true,
+    "reason": "The proposed facet preserves the material facts from both records without loss: Bally’s plans/intends to enter a comprehensive PLA for the construction phase, and the Board separately notes that no agreements have yet been finalized. These are complementary terms about the same prospective labor-agreement obligation/status, not separate promises by different actors."
+  },
+  {
+    "action": "add",
+    "row": {
+      "document_id": "GFLB-SEL-2025-12-01",
+      "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+      "filename": "12.01.25.gflbselectiondocument1.pdf",
+      "organization": "The Board",
+      "description": "The Board stated that Community Advisory Committee approval was based on applicants’ representations about hiring local, diverse, and unionized workers, and it expects those stated goals and requirements to be met.",
+      "citations": [
+        {
+          "page": 22,
+          "char_start": 50302,
+          "char_end": 50589,
+          "excerpt": "As noted in the overview, the Board believes that each of the Community Advisory Committee approvals of the Applicants was based upon the Applicants’ representations about hiring local, diverse and unionized workers, and expects these Applicants’ stated goals and requirements to be met."
+        }
+      ]
+    },
+    "nearby": [
+      "r00111",
+      "r00112",
+      "r00113",
+      "r00114",
+      "r00115",
+      "r00116",
+      "r00117",
+      "r00118",
+      "r00119",
+      "r00120",
+      "r00121",
+      "r00122",
+      "r00123",
+      "r00124",
+      "r00125",
+      "r00126",
+      "r00127"
+    ],
+    "accept": true,
+    "reason": "The cited passage directly supports the candidate at the stated level of certainty: the actor is the Board, and it said CAC approval was based on applicants’ representations about hiring local, diverse, and unionized workers and that it expects those stated goals and requirements to be met. The nearby records cover specific workforce goals and related commitments, but do not already express this broader Board statement of expectation."
+  },
+  {
+    "action": "archive",
+    "members": [
+      "r00128"
+    ],
+    "reason": "Archive is appropriate. The passage is a generic exhortation by the Board to third parties to monitor applicants’ practices and help ensure goals are met. It is not an attributable applicant commitment, a concrete project deliverable, a project target of its own, or a material post-award accountability condition.",
+    "accept": true
+  },
+  {
+    "action": "add",
+    "row": {
+      "document_id": "GFLB-SEL-2025-12-01",
+      "document_sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
+      "filename": "12.01.25.gflbselectiondocument1.pdf",
+      "organization": "Resorts World New York City",
+      "description": "Resorts World estimates median compensation for full-time employees at about $150,000 per year including benefits.",
+      "citations": [
+        {
+          "page": 25,
+          "char_start": 58877,
+          "char_end": 58977,
+          "excerpt": "Median compensation for full-time employees is estimated near $150,000 annually, including benefits."
+        }
+      ]
+    },
+    "nearby": [
+      "r00128",
+      "r00129",
+      "r00130",
+      "r00131",
+      "r00132",
+      "r00133",
+      "r00134",
+      "r00135",
+      "r00136",
+      "r00137",
+      "r00138",
+      "r00139",
+      "r00140",
+      "r00141",
+      "r00142",
+      "r00143",
+      "r00144",
+      "r00145",
+      "r00146"
+    ],
+    "accept": true,
+    "reason": "The cited passage supports the addition as written: Resorts World is the actor, and the claim is framed as an estimate of median compensation for full-time employees of about $150,000 annually including benefits. The nearby records do not already state this compensation estimate."
+  },
+  {
+    "action": "archive",
+    "members": [
+      "r00159"
+    ],
+    "reason": "Archive is appropriate. The passage describes the Board’s satisfaction with existing labor agreements and current workforce coverage. That is specific background status, but it is not itself a promised deliverable, future project target, or material accountability condition imposed on the project.",
+    "accept": true
+  },
+  {
+    "action": "facet",
+    "members": [
+      "r00157",
+      "r00162"
+    ],
+    "description": "Resorts World projected its construction workforce residency mix at 19 percent from Queens, 40 percent from elsewhere in New York City, 38 percent from elsewhere in New York State, and 3 percent from out of state.",
+    "accept": false,
+    "reason": "Decline the facet. The two records are not cleanly duplicate complementary terms; one is the full construction workforce residency mix, while the other is a narrower child statement about the 19% Queens share plus the Board’s evaluative comment that it is low. Merging them into only the full mix would collapse a parent and child and lose the Board’s separate assessment."
+  },
+  {
+    "action": "facet",
+    "members": [
+      "r00154",
+      "r00168"
+    ],
+    "description": "Resorts World committed to build more open and park space into its campus, including an open greenway and parks system providing 10 acres of new open space.",
+    "accept": false,
+    "reason": "Decline the facet. The records stand in a parent-child relationship: one is a general commitment to build more open and park space into the campus, and the other gives the more specific form and scale—an open greenway and parks system with 10 acres of new open space. Combining them risks collapsing distinct levels of specificity rather than merging two equivalent obligations."
+  },
+  {
+    "action": "add",
+    "row": {
+      "document_id": "NYSGC-RWNYC-LIC-2025-12-19",
+      "document_sha256": "e33b1a690d0653f88386d257a1b4d68c452c71ba59fca06faa75f9d37a202c02",
+      "filename": "rwnyc-license-document.pdf",
+      "organization": "Resorts World New York City and the New York State Gaming Commission",
+      "description": "The Commission and Resorts World New York City stated a mutual intent to establish a third-party independent Compliance Monitoring Team in connection with the license to maintain financial integrity, enhance compliance and ethics programs, establish policies and procedures, prevent money laundering, and ensure delivery of promised public benefits.",
+      "citations": [
+        {
+          "page": 5,
+          "char_start": 7651,
+          "char_end": 8016,
+          "excerpt": "The Commission and Resorts World New York City have a mutual intent to maintain financial integrity, enhance compliance and ethics programs, establish policies and procedures, prevent money laundering, and ensure the delivery of promised public benefits by establishing a third-party independent Compliance Monitoring T earn (\"CMT\") in connection with this License."
+        }
+      ]
+    },
+    "nearby": [
+      "r00171",
+      "r00172",
+      "r00173",
+      "r00174",
+      "r00175",
+      "r00176",
+      "r00177",
+      "r00178",
+      "r00179",
+      "r00180",
+      "r00181"
+    ],
+    "accept": true,
+    "reason": "The cited passage directly supports the stated claim at the same level of certainty: it says the Commission and Resorts World New York City have a 'mutual intent' to establish a third-party independent Compliance Monitoring Team in connection with the license, for the listed integrity, compliance, anti-money-laundering, and public-benefit purposes. This is not fully duplicated by the nearby entry about Resorts World New York City agreeing to execute a monitoring agreement, because the proposed addition adds the joint actor, the establishment of the CMT itself, and its stated purposes."
+  }
+]

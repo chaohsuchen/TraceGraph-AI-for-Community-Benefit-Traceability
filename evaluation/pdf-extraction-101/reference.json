@@ -1,0 +1,1236 @@
+{
+  "revision": "035c759fd95eb6c599bb8a4ba2d0f0ea009ad8c9",
+  "gold_rows": 101,
+  "unique_ids": 100,
+  "workbook_sha256": "eb146d6733e4b774ea3efc69ea01c461a0211699f13eecd56b3ddff6c6a83326",
+  "policy": "All 101 nonempty annotation rows are positives, regardless of manual validity. Preserve the frozen split by source gold ID. Distinguish duplicate IDs by worksheet row for one-to-one matching; no prediction earns two true positives.",
+  "matching": "character span intersection >= 50% of gold, one-to-one, scores on annotated documents. Split precision uses the original B0 split-page method.",
+  "gold_rows_index": [
+    {
+      "gold_id": "TG-GOLD-A023",
+      "workbook_id": "TG-GOLD-A023",
+      "row": 2,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        20594,
+        20718
+      ],
+      "page": 10
+    },
+    {
+      "gold_id": "TG-GOLD-A002",
+      "workbook_id": "TG-GOLD-A002",
+      "row": 3,
+      "document_id": "RFA-2023-01-03",
+      "evaluation_split": "test",
+      "span": [
+        7954,
+        8131
+      ],
+      "page": 5
+    },
+    {
+      "gold_id": "TG-GOLD-A003",
+      "workbook_id": "TG-GOLD-A003",
+      "row": 4,
+      "document_id": "RFA-2023-01-03",
+      "evaluation_split": "test",
+      "span": [
+        8823,
+        9032
+      ],
+      "page": 6
+    },
+    {
+      "gold_id": "TG-GOLD-A004",
+      "workbook_id": "TG-GOLD-A004",
+      "row": 5,
+      "document_id": "RFA-2023-01-03",
+      "evaluation_split": "dev",
+      "span": [
+        9037,
+        9245
+      ],
+      "page": 6
+    },
+    {
+      "gold_id": "TG-GOLD-A006",
+      "workbook_id": "TG-GOLD-A006",
+      "row": 6,
+      "document_id": "RFA-2023-01-03",
+      "evaluation_split": "dev",
+      "span": [
+        136415,
+        136563
+      ],
+      "page": 54
+    },
+    {
+      "gold_id": "TG-GOLD-A008",
+      "workbook_id": "TG-GOLD-A008",
+      "row": 7,
+      "document_id": "RFA-2023-01-03",
+      "evaluation_split": "test",
+      "span": [
+        145847,
+        146151
+      ],
+      "page": 58
+    },
+    {
+      "gold_id": "TG-GOLD-A007",
+      "workbook_id": "TG-GOLD-A007",
+      "row": 8,
+      "document_id": "RFA-2023-01-03",
+      "evaluation_split": "dev",
+      "span": [
+        144078,
+        144293
+      ],
+      "page": 57
+    },
+    {
+      "gold_id": "TG-GOLD-A009",
+      "workbook_id": "TG-GOLD-A009",
+      "row": 9,
+      "document_id": "RFA-2023-01-03",
+      "evaluation_split": "test",
+      "span": [
+        146200,
+        146405
+      ],
+      "page": 58
+    },
+    {
+      "gold_id": "TG-GOLD-A010",
+      "workbook_id": "TG-GOLD-A010",
+      "row": 10,
+      "document_id": "RFA-2023-01-03",
+      "evaluation_split": "dev",
+      "span": [
+        153352,
+        153598
+      ],
+      "page": 62
+    },
+    {
+      "gold_id": "TG-GOLD-A017",
+      "workbook_id": "TG-GOLD-A017",
+      "row": 11,
+      "document_id": "RFA-2023-01-03",
+      "evaluation_split": "dev",
+      "span": [
+        160565,
+        160797
+      ],
+      "page": 64
+    },
+    {
+      "gold_id": "TG-GOLD-A024",
+      "workbook_id": "TG-GOLD-A024",
+      "row": 12,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        22010,
+        22331
+      ],
+      "page": 10
+    },
+    {
+      "gold_id": "TG-GOLD-A020",
+      "workbook_id": "TG-GOLD-A020",
+      "row": 13,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        5431,
+        5641
+      ],
+      "page": 4
+    },
+    {
+      "gold_id": "TG-GOLD-H013",
+      "workbook_id": "TG-GOLD-H013",
+      "row": 14,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        33343,
+        33579
+      ],
+      "page": 15
+    },
+    {
+      "gold_id": "TG-GOLD-H014",
+      "workbook_id": "TG-GOLD-H014",
+      "row": 15,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        33609,
+        33669
+      ],
+      "page": 15
+    },
+    {
+      "gold_id": "TG-GOLD-H001",
+      "workbook_id": "TG-GOLD-H001",
+      "row": 16,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        24150,
+        24369
+      ],
+      "page": 12
+    },
+    {
+      "gold_id": "TG-GOLD-H002",
+      "workbook_id": "TG-GOLD-H002",
+      "row": 17,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        24697,
+        24982
+      ],
+      "page": 12
+    },
+    {
+      "gold_id": "TG-GOLD-H003",
+      "workbook_id": "TG-GOLD-H003",
+      "row": 18,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        25306,
+        25486
+      ],
+      "page": 12
+    },
+    {
+      "gold_id": "TG-GOLD-H004",
+      "workbook_id": "TG-GOLD-H004",
+      "row": 19,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        25565,
+        25759
+      ],
+      "page": 12
+    },
+    {
+      "gold_id": "TG-GOLD-H005",
+      "workbook_id": "TG-GOLD-H005",
+      "row": 20,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        26094,
+        26196
+      ],
+      "page": 12
+    },
+    {
+      "gold_id": "TG-GOLD-H007",
+      "workbook_id": "TG-GOLD-H007",
+      "row": 21,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        28972,
+        29106
+      ],
+      "page": 13
+    },
+    {
+      "gold_id": "TG-GOLD-H008",
+      "workbook_id": "TG-GOLD-H008",
+      "row": 22,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        29647,
+        29815
+      ],
+      "page": 13
+    },
+    {
+      "gold_id": "TG-GOLD-H009",
+      "workbook_id": "TG-GOLD-H009",
+      "row": 23,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        30307,
+        30412
+      ],
+      "page": 14
+    },
+    {
+      "gold_id": "TG-GOLD-H010",
+      "workbook_id": "TG-GOLD-H010",
+      "row": 24,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        31045,
+        31273
+      ],
+      "page": 14
+    },
+    {
+      "gold_id": "TG-GOLD-H011",
+      "workbook_id": "TG-GOLD-H011",
+      "row": 25,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        31708,
+        32005
+      ],
+      "page": 14
+    },
+    {
+      "gold_id": "TG-GOLD-H012",
+      "workbook_id": "TG-GOLD-H012",
+      "row": 26,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        32990,
+        33141
+      ],
+      "page": 15
+    },
+    {
+      "gold_id": "TG-GOLD-H016",
+      "workbook_id": "TG-GOLD-H016",
+      "row": 27,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        35786,
+        35895
+      ],
+      "page": 16
+    },
+    {
+      "gold_id": "TG-GOLD-H015",
+      "workbook_id": "TG-GOLD-H015",
+      "row": 28,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        33675,
+        33768
+      ],
+      "page": 15
+    },
+    {
+      "gold_id": "TG-GOLD-H006",
+      "workbook_id": "TG-GOLD-H006",
+      "row": 29,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        27662,
+        27782
+      ],
+      "page": 13
+    },
+    {
+      "gold_id": "TG-GOLD-A011",
+      "workbook_id": "TG-GOLD-A011",
+      "row": 30,
+      "document_id": "RFA-2023-01-03",
+      "evaluation_split": "test",
+      "span": [
+        154519,
+        154733
+      ],
+      "page": 62
+    },
+    {
+      "gold_id": "TG-GOLD-A005",
+      "workbook_id": "TG-GOLD-A005",
+      "row": 31,
+      "document_id": "RFA-2023-01-03",
+      "evaluation_split": "test",
+      "span": [
+        94758,
+        94884
+      ],
+      "page": 38
+    },
+    {
+      "gold_id": "TG-GOLD-A012",
+      "workbook_id": "TG-GOLD-A012",
+      "row": 32,
+      "document_id": "RFA-2023-01-03",
+      "evaluation_split": "dev",
+      "span": [
+        157048,
+        157140
+      ],
+      "page": 63
+    },
+    {
+      "gold_id": "TG-GOLD-A014",
+      "workbook_id": "TG-GOLD-A014",
+      "row": 33,
+      "document_id": "RFA-2023-01-03",
+      "evaluation_split": "dev",
+      "span": [
+        157478,
+        157724
+      ],
+      "page": 63
+    },
+    {
+      "gold_id": "TG-GOLD-A016",
+      "workbook_id": "TG-GOLD-A016",
+      "row": 34,
+      "document_id": "RFA-2023-01-03",
+      "evaluation_split": "dev",
+      "span": [
+        159494,
+        159638
+      ],
+      "page": 64
+    },
+    {
+      "gold_id": "TG-GOLD-A018",
+      "workbook_id": "TG-GOLD-A018",
+      "row": 35,
+      "document_id": "RFA-2023-01-03",
+      "evaluation_split": "test",
+      "span": [
+        161132,
+        161309
+      ],
+      "page": 65
+    },
+    {
+      "gold_id": "TG-GOLD-A013",
+      "workbook_id": "TG-GOLD-A013",
+      "row": 36,
+      "document_id": "RFA-2023-01-03",
+      "evaluation_split": "dev",
+      "span": [
+        157171,
+        157476
+      ],
+      "page": 63
+    },
+    {
+      "gold_id": "TG-GOLD-A021",
+      "workbook_id": "TG-GOLD-A021",
+      "row": 37,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        7192,
+        7323
+      ],
+      "page": 5
+    },
+    {
+      "gold_id": "TG-GOLD-A022",
+      "workbook_id": "TG-GOLD-A022",
+      "row": 38,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        16499,
+        16613
+      ],
+      "page": 8
+    },
+    {
+      "gold_id": "TG-GOLD-A027",
+      "workbook_id": "TG-GOLD-A027",
+      "row": 39,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        53320,
+        53389
+      ],
+      "page": 23
+    },
+    {
+      "gold_id": "TG-GOLD-A033",
+      "workbook_id": "TG-GOLD-A033",
+      "row": 40,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        58978,
+        59102
+      ],
+      "page": 25
+    },
+    {
+      "gold_id": "TG-GOLD-A045",
+      "workbook_id": "TG-GOLD-A045",
+      "row": 41,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        62972,
+        63057
+      ],
+      "page": 26
+    },
+    {
+      "gold_id": "TG-GOLD-A052",
+      "workbook_id": "TG-GOLD-A052",
+      "row": 42,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        65353,
+        65465
+      ],
+      "page": 27
+    },
+    {
+      "gold_id": "TG-GOLD-A054",
+      "workbook_id": "TG-GOLD-A054",
+      "row": 43,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        66041,
+        66238
+      ],
+      "page": 27
+    },
+    {
+      "gold_id": "TG-GOLD-A035",
+      "workbook_id": "TG-GOLD-A035",
+      "row": 44,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        60342,
+        60426
+      ],
+      "page": 25
+    },
+    {
+      "gold_id": "TG-GOLD-A060",
+      "workbook_id": "TG-GOLD-A060",
+      "row": 45,
+      "document_id": "NYSGC-RWNYC-LIC-2025-12-19",
+      "evaluation_split": "test",
+      "span": [
+        4913,
+        5055
+      ],
+      "page": 4
+    },
+    {
+      "gold_id": "TG-GOLD-A065",
+      "workbook_id": "TG-GOLD-A065",
+      "row": 46,
+      "document_id": "NYSGC-RWNYC-LIC-2025-12-19",
+      "evaluation_split": "test",
+      "span": [
+        6261,
+        6474
+      ],
+      "page": 4
+    },
+    {
+      "gold_id": "TG-GOLD-A028",
+      "workbook_id": "TG-GOLD-A028",
+      "row": 47,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        55284,
+        55433
+      ],
+      "page": 24
+    },
+    {
+      "gold_id": "TG-GOLD-A032",
+      "workbook_id": "TG-GOLD-A032",
+      "row": 48,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        58877,
+        58976
+      ],
+      "page": 25
+    },
+    {
+      "gold_id": "TG-GOLD-A037",
+      "workbook_id": "TG-GOLD-A037",
+      "row": 49,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        60721,
+        60929
+      ],
+      "page": 25
+    },
+    {
+      "gold_id": "TG-GOLD-A038",
+      "workbook_id": "TG-GOLD-A038",
+      "row": 50,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        60931,
+        61544
+      ],
+      "page": 25
+    },
+    {
+      "gold_id": "TG-GOLD-A039",
+      "workbook_id": "TG-GOLD-A039",
+      "row": 51,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        61127,
+        61372
+      ],
+      "page": 25
+    },
+    {
+      "gold_id": "TG-GOLD-A040",
+      "workbook_id": "TG-GOLD-A040",
+      "row": 52,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        61857,
+        61994
+      ],
+      "page": 26
+    },
+    {
+      "gold_id": "TG-GOLD-A041",
+      "workbook_id": "TG-GOLD-A041",
+      "row": 53,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        62011,
+        62069
+      ],
+      "page": 26
+    },
+    {
+      "gold_id": "TG-GOLD-A042",
+      "workbook_id": "TG-GOLD-A042",
+      "row": 54,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        62083,
+        62178
+      ],
+      "page": 26
+    },
+    {
+      "gold_id": "TG-GOLD-A043",
+      "workbook_id": "TG-GOLD-A043",
+      "row": 55,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        62184,
+        62219
+      ],
+      "page": 26
+    },
+    {
+      "gold_id": "TG-GOLD-A046",
+      "workbook_id": "TG-GOLD-A046",
+      "row": 56,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        63198,
+        63327
+      ],
+      "page": 26
+    },
+    {
+      "gold_id": "TG-GOLD-A047",
+      "workbook_id": "TG-GOLD-A047",
+      "row": 57,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        63473,
+        63563
+      ],
+      "page": 26
+    },
+    {
+      "gold_id": "TG-GOLD-A048",
+      "workbook_id": "TG-GOLD-A048",
+      "row": 58,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        63565,
+        63746
+      ],
+      "page": 26
+    },
+    {
+      "gold_id": "TG-GOLD-A049",
+      "workbook_id": "TG-GOLD-A049",
+      "row": 59,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        64642,
+        64717
+      ],
+      "page": 27
+    },
+    {
+      "gold_id": "TG-GOLD-A051",
+      "workbook_id": "TG-GOLD-A051",
+      "row": 60,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        65229,
+        65347
+      ],
+      "page": 27
+    },
+    {
+      "gold_id": "TG-GOLD-A055",
+      "workbook_id": "TG-GOLD-A055",
+      "row": 61,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        66240,
+        66365
+      ],
+      "page": 27
+    },
+    {
+      "gold_id": "TG-GOLD-A056",
+      "workbook_id": "TG-GOLD-A056",
+      "row": 62,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        67179,
+        67313
+      ],
+      "page": 28
+    },
+    {
+      "gold_id": "TG-GOLD-A059",
+      "workbook_id": "TG-GOLD-A059",
+      "row": 63,
+      "document_id": "NYSGC-RWNYC-LIC-2025-12-19",
+      "evaluation_split": "dev",
+      "span": [
+        4638,
+        4877
+      ],
+      "page": 4
+    },
+    {
+      "gold_id": "TG-GOLD-A062",
+      "workbook_id": "TG-GOLD-A062",
+      "row": 64,
+      "document_id": "NYSGC-RWNYC-LIC-2025-12-19",
+      "evaluation_split": "test",
+      "span": [
+        5449,
+        5662
+      ],
+      "page": 4
+    },
+    {
+      "gold_id": "TG-GOLD-A063",
+      "workbook_id": "TG-GOLD-A063",
+      "row": 65,
+      "document_id": "NYSGC-RWNYC-LIC-2025-12-19",
+      "evaluation_split": "test",
+      "span": [
+        5664,
+        5982
+      ],
+      "page": 4
+    },
+    {
+      "gold_id": "TG-GOLD-A064",
+      "workbook_id": "TG-GOLD-A064",
+      "row": 66,
+      "document_id": "NYSGC-RWNYC-LIC-2025-12-19",
+      "evaluation_split": "dev",
+      "span": [
+        5984,
+        6210
+      ],
+      "page": 4
+    },
+    {
+      "gold_id": "TG-GOLD-A066",
+      "workbook_id": "TG-GOLD-A066",
+      "row": 67,
+      "document_id": "NYSGC-RWNYC-LIC-2025-12-19",
+      "evaluation_split": "test",
+      "span": [
+        6594,
+        6735
+      ],
+      "page": 4
+    },
+    {
+      "gold_id": "TG-GOLD-A068",
+      "workbook_id": "TG-GOLD-A068",
+      "row": 68,
+      "document_id": "NYSGC-RWNYC-LIC-2025-12-19",
+      "evaluation_split": "test",
+      "span": [
+        9083,
+        9268
+      ],
+      "page": 5
+    },
+    {
+      "gold_id": "TG-GOLD-A069",
+      "workbook_id": "TG-GOLD-A069",
+      "row": 69,
+      "document_id": "NYSGC-RWNYC-LIC-2025-12-19",
+      "evaluation_split": "dev",
+      "span": [
+        9362,
+        9518
+      ],
+      "page": 5
+    },
+    {
+      "gold_id": "TG-GOLD-A044",
+      "workbook_id": "TG-GOLD-A044",
+      "row": 70,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        62242,
+        62432
+      ],
+      "page": 26
+    },
+    {
+      "gold_id": "TG-GOLD-A057",
+      "workbook_id": "TG-GOLD-A057",
+      "row": 71,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        68404,
+        68686
+      ],
+      "page": 28
+    },
+    {
+      "gold_id": "TG-GOLD-A030",
+      "workbook_id": "TG-GOLD-A030",
+      "row": 72,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        58709,
+        58823
+      ],
+      "page": 25
+    },
+    {
+      "gold_id": "TG-GOLD-A031",
+      "workbook_id": "TG-GOLD-A031",
+      "row": 73,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        58825,
+        58875
+      ],
+      "page": 25
+    },
+    {
+      "gold_id": "TG-GOLD-A025",
+      "workbook_id": "TG-GOLD-A025",
+      "row": 74,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        53079,
+        53136
+      ],
+      "page": 23
+    },
+    {
+      "gold_id": "TG-GOLD-A026",
+      "workbook_id": "TG-GOLD-A026",
+      "row": 75,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        53138,
+        53292
+      ],
+      "page": 23
+    },
+    {
+      "gold_id": "TG-GOLD-A034",
+      "workbook_id": "TG-GOLD-A034",
+      "row": 76,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        60077,
+        60340
+      ],
+      "page": 25
+    },
+    {
+      "gold_id": "TG-GOLD-A036",
+      "workbook_id": "TG-GOLD-A036",
+      "row": 77,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        60476,
+        60553
+      ],
+      "page": 25
+    },
+    {
+      "gold_id": "TG-GOLD-A050",
+      "workbook_id": "TG-GOLD-A050",
+      "row": 78,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        64925,
+        65207
+      ],
+      "page": 27
+    },
+    {
+      "gold_id": "TG-GOLD-A058",
+      "workbook_id": "TG-GOLD-A058",
+      "row": 79,
+      "document_id": "NYSGC-RWNYC-LIC-2025-12-19",
+      "evaluation_split": "dev",
+      "span": [
+        734,
+        870
+      ],
+      "page": 1
+    },
+    {
+      "gold_id": "TG-GOLD-A061",
+      "workbook_id": "TG-GOLD-A061",
+      "row": 80,
+      "document_id": "NYSGC-RWNYC-LIC-2025-12-19",
+      "evaluation_split": "dev",
+      "span": [
+        5167,
+        5344
+      ],
+      "page": 4
+    },
+    {
+      "gold_id": "TG-GOLD-A067",
+      "workbook_id": "TG-GOLD-A067",
+      "row": 81,
+      "document_id": "NYSGC-RWNYC-LIC-2025-12-19",
+      "evaluation_split": "test",
+      "span": [
+        8098,
+        8332
+      ],
+      "page": 5
+    },
+    {
+      "gold_id": "TG-GOLD-A053",
+      "workbook_id": "TG-GOLD-A053",
+      "row": 82,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        65467,
+        65600
+      ],
+      "page": 27
+    },
+    {
+      "gold_id": "TG-GOLD-A029",
+      "workbook_id": "TG-GOLD-A029",
+      "row": 83,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        56353,
+        56545
+      ],
+      "page": 24
+    },
+    {
+      "gold_id": "TG-GOLD-H022",
+      "workbook_id": "TG-GOLD-H022",
+      "row": 84,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        44041,
+        44113
+      ],
+      "page": 19
+    },
+    {
+      "gold_id": "TG-GOLD-H030",
+      "workbook_id": "TG-GOLD-H030",
+      "row": 85,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        48466,
+        48554
+      ],
+      "page": 21
+    },
+    {
+      "gold_id": "TG-GOLD-H023",
+      "workbook_id": "TG-GOLD-H023",
+      "row": 86,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        44765,
+        44846
+      ],
+      "page": 20
+    },
+    {
+      "gold_id": "TG-GOLD-H017",
+      "workbook_id": "TG-GOLD-H017",
+      "row": 87,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        39672,
+        39967
+      ],
+      "page": 18
+    },
+    {
+      "gold_id": "TG-GOLD-H018",
+      "workbook_id": "TG-GOLD-H018",
+      "row": 88,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        40062,
+        40144
+      ],
+      "page": 18
+    },
+    {
+      "gold_id": "TG-GOLD-H019",
+      "workbook_id": "TG-GOLD-H019",
+      "row": 89,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        42230,
+        42342
+      ],
+      "page": 19
+    },
+    {
+      "gold_id": "TG-GOLD-H020",
+      "workbook_id": "TG-GOLD-H020",
+      "row": 90,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        42348,
+        42431
+      ],
+      "page": 19
+    },
+    {
+      "gold_id": "TG-GOLD-H021",
+      "workbook_id": "TG-GOLD-H021",
+      "row": 91,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        43682,
+        43801
+      ],
+      "page": 19
+    },
+    {
+      "gold_id": "TG-GOLD-H025",
+      "workbook_id": "TG-GOLD-H025",
+      "row": 92,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        45913,
+        46119
+      ],
+      "page": 20
+    },
+    {
+      "gold_id": "TG-GOLD-H026",
+      "workbook_id": "TG-GOLD-H026",
+      "row": 93,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        46598,
+        46711
+      ],
+      "page": 20
+    },
+    {
+      "gold_id": "TG-GOLD-H027",
+      "workbook_id": "TG-GOLD-H027",
+      "row": 94,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        47663,
+        47740
+      ],
+      "page": 21
+    },
+    {
+      "gold_id": "TG-GOLD-H028",
+      "workbook_id": "TG-GOLD-H028",
+      "row": 95,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "test",
+      "span": [
+        47776,
+        47827
+      ],
+      "page": 21
+    },
+    {
+      "gold_id": "TG-GOLD-H031",
+      "workbook_id": "TG-GOLD-H031",
+      "row": 96,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        49390,
+        49462
+      ],
+      "page": 21
+    },
+    {
+      "gold_id": "TG-GOLD-H032",
+      "workbook_id": "TG-GOLD-H032",
+      "row": 97,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        49571,
+        49659
+      ],
+      "page": 21
+    },
+    {
+      "gold_id": "TG-GOLD-H029",
+      "workbook_id": "TG-GOLD-H029",
+      "row": 98,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        47858,
+        48002
+      ],
+      "page": 21
+    },
+    {
+      "gold_id": "TG-GOLD-H024",
+      "workbook_id": "TG-GOLD-H024",
+      "row": 99,
+      "document_id": "GFLB-SEL-2025-12-01",
+      "evaluation_split": "dev",
+      "span": [
+        45351,
+        45457
+      ],
+      "page": 20
+    },
+    {
+      "gold_id": "TG-GOLD-A001",
+      "workbook_id": "TG-GOLD-A001",
+      "row": 100,
+      "document_id": "RFA-2023-01-03",
+      "evaluation_split": "dev",
+      "span": [
+        4203,
+        4316
+      ],
+      "page": 4
+    },
+    {
+      "gold_id": "TG-GOLD-A019@row101",
+      "workbook_id": "TG-GOLD-A019",
+      "row": 101,
+      "document_id": "RFA-2023-01-03",
+      "evaluation_split": "dev",
+      "span": [
+        161334,
+        161959
+      ],
+      "page": 65
+    },
+    {
+      "gold_id": "TG-GOLD-A019@row102",
+      "workbook_id": "TG-GOLD-A019",
+      "row": 102,
+      "document_id": "RFA-2023-01-03",
+      "evaluation_split": "dev",
+      "span": [
+        161334,
+        161959
+      ],
+      "page": 65
+    }
+  ],
+  "systems": {
+    "B0": {
+      "all": {
+        "predictions": 446,
+        "gold": 101,
+        "tp": 60,
+        "fp": 386,
+        "fn": 41,
+        "precision": 0.13452914798206278,
+        "recall": 0.594059405940594,
+        "f1": 0.21937842778793418
+      }
+    }
+  }
+}

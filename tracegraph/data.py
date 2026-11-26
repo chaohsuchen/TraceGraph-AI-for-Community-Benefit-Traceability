@@ -165,6 +165,9 @@ class MemoryStore:
                 self._responses[scope, key] = (deepcopy(request), deepcopy(response))
             return response
 
+    def request_research(self, cid, *, refresh):
+        return self.enqueue("REFRESH", commitment_id=cid) if refresh else None
+
     def enqueue(self, kind, **payload):
         with self._lock:
             job_id = f"job-{uuid4()}"
