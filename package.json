@@ -5,6 +5,7 @@
     "playwright": "1.62.1"
   },
   "scripts": {
+    "start": "node frontend/dev.mjs",
     "test": "node --test frontend/api.test.mjs"
   },
   "dependencies": {

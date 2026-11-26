@@ -1,147 +1,110 @@
 # TraceGraph
 
-TraceGraph turns a natural-language question about a public commitment into a graph of the organization, the commitment, and its source-backed findings. The MVP uses **hybrid catalog search**, **prompt-based LLM research and verification**, and an **interactive evidence graph**.
+TraceGraph is an MScAC course project for tracing public commitments. Give it a natural-language question and it identifies the promise, researches what happened, and shows the verdict alongside the source passages that support it. You can also build a searchable catalog from trusted PDFs before researching delivery.
 
-## How the MVP works
+## Try the graph
 
-```mermaid
-flowchart LR
-    Q["User question"] --> S["BM25 and pgvector search"]
-    S --> R["Fuse rankings and keep up to 5 candidates"]
-    R --> L["LLM identity check"]
-    L -->|MATCH| G["Interactive evidence graph"]
-    L -->|AMBIGUOUS| C["Continue search conversation"]
-    L -->|NO_MATCH| W["Prompt-based web research"]
-    W --> V["Verify citations and assess delivery"]
-    V -->|Documented promise| D["Save in PostgreSQL"]
-    V -->|Original promise unverified| C
-    C -->|Add details or research a lead| Q
-    C -->|Choose a saved commitment| G
-    D --> G
-    G -->|Research again| F["Recheck the saved commitment and follow leads to new documents"]
-    F -->|Merge verified excerpts and reassess| D
-```
-
-1. **Retrieve and identify.** TraceGraph computes a local 384-dimensional feature-hash vector for the query. PostgreSQL with pgvector ranks stored commitment embeddings by cosine distance. BM25 in Python ranks the same catalog by keyword relevance. Reciprocal Rank Fusion combines the rankings by commitment ID. The LLM sees the query and compact fields for up to five candidates and compares the organization, obligation, scope, beneficiary, and timing. Python checks that a returned match ID belongs to those candidates.
-2. **Route the request.** A match opens the saved graph. An ambiguous query returns a focused clarification. A miss queues research. The browser checks the job status and opens the graph when it is ready.
-3. **Research the public record.** The discovery prompt asks the selected LLM to find the original promise, prioritize primary sources, and search for actual outcomes within a six-search budget. It asks the model to stop when the evidence is sufficient, actionable leads run out, or the budget is exhausted. The OpenAI adapter checks quoted passages against the public documents. TraceGraph requires a cited original promise and checks again for a duplicate before creating a new commitment.
-4. **Assess delivery.** The LLM identifies the required conditions and anchors any project or population restrictions in the original sources. For a proposed positive finding, a separate tool-free read checks what action took place, for whom, and which conditions remain open. Python validates the quoted spans, their sources, and any reference connecting the same event across documents. Full corroboration requires support for every required condition. A dated report can establish that a payment occurred while leaving its original deadline unverified. The assessment displays documented terms, observed performance, and remaining gaps separately.
-
-When an identity is ambiguous or research leaves the original promise unverified, the same search panel offers relevant saved commitments and cited web leads when available. Select a saved commitment to open its graph, choose a web lead to research it, or add a detail to narrow the next search. The panel keeps the conversation open until you choose **Quit**.
-
-A proposed refutation also needs a supporting passage. If that passage fails the independent check, the assessor can examine the existing excerpts for an outcome that did occur, such as an opening whose original deadline remains uncertain. Opening a saved graph shows its stored assessment. A successful **Research again** re-evaluates the combined evidence, even when all the sources found on refresh were already present.
-
-PostgreSQL is the source of truth for commitment identity, embeddings, findings, source citations, and the current assessment. The API generates JSON for the browser. The LLM handles semantic judgments, and Python handles routing, validation, and persistence.
-
-## Explore and refresh a graph
-
-- **Click** an organization, commitment, finding, or edge to inspect it. A finding is a source-backed claim. Its source links and excerpts appear in the side panel. The commitment shows the current verdict, verification date, and assessment summary.
-- **Double-click** a node to focus its branch. For a finding, the view keeps that finding and its downstream progress. Use **Back** to restore the previous view, or **Fit view** to fit the visible graph. The list below the graph also lets you select findings and relations.
-- **Expand the organization** to load its other commitments by organization ID. Progress arrows connect documented steps or revisions. Dashed conflict edges connect incompatible findings and let you inspect both sides.
-- **Research again** rechecks the same commitment ID. With live web and document access enabled, refresh also follows leads from known sources to agreements, amendments, or implementation reports. This additional step requests up to two search actions, reads up to three new documents, and contributes up to four observations. Each observation carries a verbatim excerpt, its position in the normalized source text, and the retrieval time. Initial lookup and discovery use their existing search budgets.
-- Refresh merges verified passages with the saved findings, checks eligible conflicts, and computes the displayed verdict from that combined evidence. Finding the same passage again keeps a single copy. If supplementary research fails, the ordinary refresh can still complete. If the refresh itself fails, the previous graph stays available.
-
-## Run locally
-
-Use Python 3.12 or newer and Node.js 20 or newer. Run the commands from the repository root. The live app also needs Docker Compose and a configured model provider.
-
-### Try the graph without a key
+From the repository root, install the frontend dependencies with Node.js 20 or newer, then start the demo.
 
 ```powershell
 npm ci
-node frontend/dev.mjs
+npm start
 ```
 
-Open the [synthetic demo](http://127.0.0.1:4173/?demo=1) to explore the graph, inspect sources, and try a simulated refresh.
+Open the [interactive demo](http://127.0.0.1:4173/?demo=1). It uses synthetic data and runs without a model key or database. Click a finding to inspect its source and excerpt. Double-click a node to make it the root and show its downstream branch. **Back** restores the previous view. Select an organization to load its other commitments. Progress arrows link documented steps or revisions, and dashed conflict edges let you inspect both accounts.
 
-### Run live research
+## Run the live application
 
-Install dependencies, start PostgreSQL, and prepare the application schema.
+Use Python 3.12 or newer, Node.js 20 or newer, and Docker Compose. Run these commands in PowerShell from the repository root. Start the database and API in the first terminal.
 
 ```powershell
 python -m pip install -r requirements.txt
 npm ci
 docker compose up -d --wait postgres
 python -m tracegraph.runtime prepare
-```
-
-Start the backend with one provider. Supply the path to your local key file, or use `--provider openai` or `--provider anthropic` if the corresponding environment variable is already configured. Keep keys out of Git.
-
-```powershell
 python -m tracegraph.runtime serve --openai-key-file ./openai-api-key.txt
 ```
 
-For Anthropic, use `python -m tracegraph.runtime serve --anthropic-key-file ./claude_api.txt`. Then start the frontend in a separate terminal.
+In a second terminal, point the frontend at the API and start it.
 
 ```powershell
 $env:TRACEGRAPH_BACKEND = 'http://127.0.0.1:8000'
-node frontend/dev.mjs
+npm start
 ```
 
-Open [TraceGraph](http://127.0.0.1:4173/). For a first search, try “Did NASA’s OSIRIS-REx mission return at least 60 grams of material from Bennu to Earth on September 24, 2023?”
+Open the [live application](http://127.0.0.1:4173/). For example, search for *Did NASA’s OSIRIS-REx mission return at least 60 grams of material from Bennu on September 24, 2023?* A new catalog can research its first commitment from a question alone.
 
-The default schema is `tracegraph_live` in the local Compose database. `prepare` creates the schema, applies migrations, and configures embeddings. Use `TRACEGRAPH_DATABASE_URL` and `TRACEGRAPH_SCHEMA` to override the defaults.
+OpenAI is the default live provider. You can use `--provider openai` with `OPENAI_API_KEY`, or use `--anthropic-key-file ./claude_api.txt` for Anthropic. Keep key files local. The default PostgreSQL schema is `tracegraph_live`, and Compose exposes the database on localhost port 55432. Set `TRACEGRAPH_DATABASE_URL` and `TRACEGRAPH_SCHEMA` to select another catalog.
 
-## Import trusted PDFs
+## How a question becomes an evidence graph
 
-TraceGraph can catalog commitments before anyone asks about delivery. The extractor reads
-the supplied documents in order, with neighboring sentences and section headings, and
-returns claims with exact page and character references. A first review checks attribution
-and scope. A separate pass rereads the window for omitted commitments and classifies
-the existing candidates. The model adjudicates new candidates and disagreements using
-the cited text. The release then applies verified catalog edits and a final delete-only
-review across all PDF types before import. These steps use only the supplied documents.
-The three-PDF release includes 151 catalog entries and an offline replay of both the original
-and expanded reference sets. [Frozen PDF catalog and scores](evaluation/pdf-extraction-101/all_documents/README.md)
+```mermaid
+flowchart LR
+    PDF[Trusted PDF] --> Extract[Extract and review] --> Import[Import and deduplicate] --> DB[(PostgreSQL)]
+    Q[User question] --> Search[BM25 + pgvector] --> Identity[LLM identity check]
+    DB --> Search
+    Identity -->|Researched match| Graph[Interactive graph]
+    Identity -->|Ambiguous| Clarify[Clarify or select] --> Q
+    Identity -->|New or unresearched| Research[Research and verify]
+    Research -->|Verified findings| DB
+    DB --> Graph
+    Graph -->|Research again| Research
+```
+
+| Stage | What TraceGraph does |
+| --- | --- |
+| Retrieve | BM25 ranks stored descriptions and fields by keyword relevance. PostgreSQL with pgvector ranks local 384-dimensional feature-hash embeddings by cosine distance. Reciprocal Rank Fusion combines both rankings by commitment ID. |
+| Identify | The LLM compares the question with up to five candidates using the promising organization, obligation, scope, beneficiary and timing. Python validates the returned ID. A researched match opens its saved graph. A match to an unresearched PDF record starts its first research job. |
+| Clarify or research | Ambiguous identity opens a conversation where the user can choose a saved record, investigate a cited lead, add detail or quit. A catalog miss starts prompt-based web research. The discovery prompt looks for the original promise and delivery evidence with a six-search budget. Creating a web-discovered record requires a cited original promise and a duplicate check. |
+| Assess | The LLM breaks the obligation into verifiable conditions and evaluates what the passages establish. Python checks citation ownership, quoted text and structural consistency. Full corroboration requires verified delivery support for every required condition. The graph exposes the verdict, verification date, sources and remaining gaps. |
+| Refresh | **Research again** keeps the commitment ID. It can follow references to new documents, deduplicates verified observations, checks conflicts and reassesses the accumulated evidence. If a refresh fails, the previous assessment remains available. |
+
+PostgreSQL stores commitments, embeddings, findings, citations, research history and assessments. The API builds graph JSON from these relationships. The OpenAPI contract describes the lookup, conversation, graph, refresh and job endpoints. [API contract](contracts/openapi.json)
+
+## Catalog commitments from trusted PDFs
+
+PDF ingestion has two commands. **Extract** writes reviewed, source-anchored candidates to disk. **Import** writes commitments and citations to PostgreSQL. Use the same source PDFs in both steps so the importer can verify their hashes, pages, offsets and quoted text. Both steps use OpenAI for model judgments with web tools disabled.
+
+**1. Extract.** Place your PDFs in a local `inputs` directory. The model reads each document with neighboring text, checks for omissions and duplicates, then makes a final delete-only pass over the candidates. The output is `pdf-run/reviewed.json`.
 
 ```powershell
-$pdfs = (Get-ChildItem .\inputs\*.pdf).FullName
-python -m evaluation.pdf-extraction-101.all_documents.extract --openai-key-file ./openai-api-key.txt --output ./pdf-run @pdfs
-python -m tracegraph.pdf_import ./pdf-run/reviewed.json --openai-key-file ./openai-api-key.txt --report ./pdf-run/import.json @pdfs
+$pdfs = (Get-ChildItem -File .\inputs\*.pdf).FullName
+python -m tracegraph.pdf_catalog extract @pdfs --output ./pdf-run --openai-key-file ./openai-api-key.txt
 ```
 
-The importer checks frozen quotations against the PDF bytes. Hybrid retrieval and model
-identity checks link equivalent obligations to the same catalog ID. Ambiguous items
-appear in the import report for review. PostgreSQL stores each document once, with all
-supporting passages linked to the commitment. Replaying an accepted item reuses its
-record. The graph opens the archived PDF at the cited page.
+**2. Import.** With PostgreSQL running, import the reviewed file. The report identifies new records, links to existing commitments, previously imported rows, and cases that still need disambiguation.
 
-A new record has a null assessment and no research job. Its first lookup returns the
-record and queues research on that ID. Simultaneous lookups share one job. Selecting
-a saved clarification option has the same behavior. Reading the graph directly leaves
-the research state alone. Later lookups return the completed assessment, and
-**Research again** requests an update.
+```powershell
+python -m tracegraph.pdf_catalog import ./pdf-run/reviewed.json @pdfs --report ./pdf-run/import.json --openai-key-file ./openai-api-key.txt
+```
 
-## Golden Dataset evaluation
+New commitments start with research status `NOT_STARTED`. The first lookup queues delivery research and concurrent lookups share the same job. Importing an accepted row again reuses its record. Each PDF is stored once and the graph links back to its cited pages.
 
-The [three-PDF extraction benchmark](evaluation/pdf-extraction-101/README.md) compares the catalog importer with B0 on all 101 annotated rows. Its predictions and offline replay are separate from the delivery evidence evaluation.
+To use the course release for these same three PDFs, skip extraction and pass the frozen `reviewed.json` to the import command. Run it with the three original PDFs and an existing directory for the report. The export contains **156 source rows grouped into 151 commitments** in the frozen benchmark. The live importer resolves identity against the catalog it receives. [Frozen import file](evaluation/pdf-extraction-101/all_documents/single-pass/reviewed.json) · [PDF names and SHA-256 hashes](evaluation/pdf-extraction-101/manifest.json)
 
-The [Golden Workbook](evaluation/Golden%20Dataset%20%285%29.xlsx) is an evaluation reference. The live catalog grows through PDF imports and user-triggered research. For each selected evidence-evaluation case, the evaluator submits only the commitment question to a fresh catalog. The reference evidence, sources, and human labels stay in the local scoring process.
+## Evaluation
+
+**Commitment extraction.** The frozen release was evaluated on three development PDFs using one-to-one citation-span matching. To replay both scores locally, run `python -m evaluation.pdf-extraction-101.all_documents.release` after installing the Python dependencies. The replay needs no model key or database.
+
+| Reference set | Matched / references | Outputs | Precision | Recall | F1 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Original Golden | 82 / 101 | 151 | 54.30% | 81.19% | 65.08% |
+| Golden plus 10 source-checked additions | 91 / 111 | 151 | 60.26% | 81.98% | 69.47% |
+
+The ten additions came from auditing unmatched TraceGraph predictions. All ten enter the expanded reference, including one that the final extractor dropped. Use the same reference set when comparing systems. [Extraction report and audited additions](evaluation/pdf-extraction-101/all_documents/README.md)
+
+**Delivery evidence and verdicts.** The Golden workbook supplies evaluation references. Live records come from trusted PDF imports or system research. The workbook evaluator researches selected commitments in isolated catalogs and measures recovery of reference evidence. This example evaluates two cases.
 
 ```powershell
 $report = Join-Path $env:TEMP 'tracegraph-evaluation.json'
 python -m tracegraph.runtime evaluate --commitment-id TG-GOLD-H008 --commitment-id TG-GOLD-H010 --openai-key-file ./openai-api-key.txt --output $report
 ```
 
-The report separates confirmed one-to-one matches, evidence that needs review, unmatched evidence, and failed research jobs. Confirmed recall is matched reference evidence divided by all reference evidence in scored cases. With no IDs supplied, the evaluator selects the first two completed detail tabs by ID. See `evaluate --help` for options, including a custom workbook path and reviewed matches.
-
-The [delivery assessment study](evaluation/verdict-grounding/report.md) replays fixed source passages against the production assessor and grades the displayed verdict and explanation with a tool-free GPT-5.4 judge. The [coverage experiment](evaluation/coverage-loss/README.md) compares three ways to recover missing reference facts across 22 commitments. The [integration review](evaluation/verdict-grounding/coverage-review.md) examines how additional evidence changes a displayed assessment.
-
-## Repository layout
-
-| Directory | Contents |
-| --- | --- |
-| [`tracegraph/`](tracegraph/) | Python API, retrieval and identity checks, LLM prompts, research, reconciliation, and evaluation code |
-| [`frontend/`](frontend/) | Browser app, Cytoscape graph, development server, and synthetic demo |
-| [`db/`](db/) | PostgreSQL migrations and pgvector schema |
-| [`contracts/`](contracts/) | [Current OpenAPI contract](contracts/openapi.json) and [API notes](contracts/README.md) |
-| [`evaluation/`](evaluation/) | Golden reference workbook, frozen assessment cases, and evaluation reports |
-| [`tests/`](tests/) | Unit, PostgreSQL integration, and browser end-to-end tests |
-| [`docs/`](docs/) | [Original Nov. 7 design notes](docs/nov-07-mvp-notes.txt) and [legacy snapshot API guide](docs/legacy-data-api.md) |
+For a frozen research output, the tool-free LLM judge checks whether cited passages entail, contradict or leave each claim unresolved. It also grades whether the displayed verdict follows from the evidence. Python validates the judge’s IDs and quotes before scoring. [Judge implementation](tracegraph/nli_judge.py) · [Verdict evaluation](evaluation/verdict-grounding/report.md) · [Evidence coverage study](evaluation/coverage-loss/README.md)
 
 ## Tests
 
-With the local PostgreSQL container running, use the following commands. The integration and browser tests use disposable database schemas. The standard browser run uses fixture responses, so it needs no API key.
+With the local Compose database running, use the commands below. Database tests create disposable schemas. Browser tests use a real backend and PostgreSQL with fixed research responses.
 
 ```powershell
 $env:TEST_DATABASE_URL = 'postgresql://tracegraph:tracegraph@127.0.0.1:55432/tracegraph'
@@ -149,6 +112,18 @@ python -B -m unittest discover -s tests -v
 npm test
 npx playwright install chromium
 python -B -m tests.e2e_runner
+python -B -m tests.e2e_runner --pdf-catalog
 ```
 
-You can set `TRACEGRAPH_CHROME` to an installed Chrome executable instead of downloading Playwright’s browser.
+Set `TRACEGRAPH_CHROME` to the path of an installed Chrome executable to use that browser.
+
+## Code map
+
+| Area | Start here |
+| --- | --- |
+| API, worker and database setup | [Runtime](tracegraph/runtime.py) · [Request handlers](tracegraph/api.py) · [Schema migrations](db/) |
+| Catalog lookup and research | [Hybrid retrieval](tracegraph/retrieval.py) · [Agent routing](tracegraph/agent.py) · [Discovery prompt](tracegraph/experimental_prompt.py) |
+| Evidence and verdicts | [Reconciliation](tracegraph/reconcile.py) · [Evidence storage](tracegraph/evidence_store.py) |
+| PDF ingestion | [PDF commands](tracegraph/pdf_catalog.py) · [Frozen extraction workflow](evaluation/pdf-extraction-101/all_documents/extract.py) · [Database importer](tracegraph/pdf_import.py) |
+| Interactive graph | [Frontend](frontend/) · [Graph interactions](frontend/graph-view.mjs) |
+| Evaluation and design | [Evaluation artifacts](evaluation/) · [Tests](tests/) · [Nov. 7 MVP design notes](docs/nov-07-mvp-notes.txt) |

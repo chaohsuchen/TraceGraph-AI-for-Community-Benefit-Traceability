@@ -43,8 +43,8 @@ For the selected policy, run the full sequence of source extraction, verified ed
 
 ```powershell
 $pdfs = (Get-ChildItem ./inputs/*.pdf).FullName
-python -m evaluation.pdf-extraction-101.all_documents.extract @pdfs --output ./pdf-release-run --openai-key-file ./openai-api-key.txt
-python -m tracegraph.pdf_import ./pdf-release-run/reviewed.json @pdfs --report ./pdf-release-run/import.json --openai-key-file ./openai-api-key.txt
+python -m tracegraph.pdf_catalog extract @pdfs --output ./pdf-run --openai-key-file ./openai-api-key.txt
+python -m tracegraph.pdf_catalog import ./pdf-run/reviewed.json @pdfs --report ./pdf-run/import.json --openai-key-file ./openai-api-key.txt
 ```
 
 ## Compare review policies on existing candidates

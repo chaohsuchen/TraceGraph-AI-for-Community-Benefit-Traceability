@@ -79,5 +79,7 @@ const server = createServer(async (request, response) => {
   }
 });
 server.listen(port, '127.0.0.1', () => {
-  console.log('TraceGraph fixture demo at http://127.0.0.1:' + server.address().port + '/?demo=1');
+  const url = new URL(`http://127.0.0.1:${server.address().port}/`);
+  if (!backend) url.searchParams.set('demo', '1');
+  console.log(`TraceGraph at ${url.href}`);
 });
