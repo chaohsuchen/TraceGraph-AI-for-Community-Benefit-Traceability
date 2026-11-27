@@ -1,11 +1,9 @@
 """Run and evaluate the B0 rules/patterns baseline.
 
-    python -m tracegraph.b0                          # current rules (v1.1)
-    python -m tracegraph.b0 --rules b0-rules-v1.0    # earlier frozen rules
+    python -m tracegraph.b0                          # rules b0-rules
     python -m tracegraph.b0 --output-dir DIR         # choose where results go
 
-Outputs (default ``evaluation/results/b0/`` for the current rules,
-``evaluation/results/b0/<rule version>/`` for earlier ones):
+Outputs (default ``evaluation/results/b0/``):
   predictions.jsonl   one extracted commitment per line, with provenance
   manifest.json       corpus hashes, gold hash, extractor version, settings
   metrics.json        full metric report (lenient and strict matching)
@@ -20,7 +18,7 @@ from json import dumps
 from pathlib import Path
 import platform
 
-from .b0_rules import B0_VERSION, B0_VERSIONS, extract_document
+from .b0_rules import B0_VERSION, corpus_options, extract_document
 from .corpus import TEXT_EXTRACTION_METHOD, file_sha256, load_corpus
 from .extraction_eval import ATTRIBUTE_FIELDS, CLASS_FIELDS, align_gold, apply_split, evaluate, load_gold
 
@@ -28,14 +26,14 @@ from .extraction_eval import ATTRIBUTE_FIELDS, CLASS_FIELDS, align_gold, apply_s
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_CORPUS = ROOT / "docs" / "tier1"
 DEFAULT_GOLD = ROOT / "evaluation" / "Golden Dataset (5).xlsx"
-DEFAULT_SPLIT = ROOT / "evaluation" / "splits" / "resplit_v2.json"
+DEFAULT_SPLIT = ROOT / "evaluation" / "splits" / "dev_test_split.json"
 DEFAULT_OUTPUT = ROOT / "evaluation" / "results" / "b0"
 
 
 def run(corpus_dir=DEFAULT_CORPUS, gold_path=DEFAULT_GOLD, output_dir=None, as_of_year=2026,
-        validated_only=True, version=B0_VERSION, split_path=DEFAULT_SPLIT):
-    output_dir = output_dir or _default_output(version)
-    documents = load_corpus(corpus_dir)
+        validated_only=False, version=B0_VERSION, split_path=DEFAULT_SPLIT):
+    output_dir = Path(output_dir or DEFAULT_OUTPUT)
+    documents = load_corpus(corpus_dir, **corpus_options(version))
     predictions = [e.to_dict() for doc in documents for e in extract_document(doc, as_of_year, version)]
     all_gold = align_gold(load_gold(gold_path), documents)
     if split_path:
@@ -62,7 +60,8 @@ def run(corpus_dir=DEFAULT_CORPUS, gold_path=DEFAULT_GOLD, output_dir=None, as_o
         "python": platform.python_version(),
         "gold_workbook": {"path": _rel(gold_path), "sha256": file_sha256(gold_path)},
         "gold_policy": ("validated_only: rows with 'manually annotated valid?' = 1 are gold; extractions of "
-                        "rows marked 0 or blank count as false positives") if validated_only else "all_rows",
+                        "rows marked 0 or blank count as false positives") if validated_only
+                       else "all_rows: every workbook gold row is a positive",
         "split": _rel(split_path) if split_path else "workbook evaluation_split column",
         "gold_items": len(gold),
         "excluded_gold_items": len(excluded),
@@ -79,10 +78,6 @@ def run(corpus_dir=DEFAULT_CORPUS, gold_path=DEFAULT_GOLD, output_dir=None, as_o
     _write_matches(output_dir / "matches.csv", gold, scored, report)
     (output_dir / "report.md").write_text(render_report(report, manifest), encoding="utf-8")
     return report, manifest
-
-
-def _default_output(version):
-    return DEFAULT_OUTPUT if version == B0_VERSION else DEFAULT_OUTPUT / version
 
 
 def _rel(path):
@@ -162,6 +157,20 @@ def render_report(report, manifest):
     if "split_dev" in commitment and "split_test" in commitment:
         lines += ["", "The rules were tuned on `dev`, so `dev` results and any scope that includes them (such as "
                   "`all`) are optimistic. Report the `test` row and the `test` field-level section."]
+    split_groups = [g for g in ("dev", "test") if g in report["lenient"]]
+    if split_groups:
+        lines += ["", "## Classification and fields by split (lenient matches)", "",
+                  "Scored on the gold commitments each split's predictions matched, so `n` is small and one "
+                  "commitment moves accuracy by 1/n.", "",
+                  "| Split | n matched | Obligation accuracy | Obligation macro-F1 | Evidence accuracy | "
+                  "Evidence macro-F1 | Attribute macro-F1 | Attribute macro accuracy |",
+                  "| --- | --- | --- | --- | --- | --- | --- | --- |"]
+        for group in split_groups:
+            s = report["lenient"][group]
+            ob, ev = s["obligation_type"], s["evidence_status"]
+            lines.append(f"| {group} | {s['matched']} | {_pct(ob['accuracy'])} | {_pct(ob['macro_f1'])} | "
+                         f"{_pct(ev['accuracy'])} | {_pct(ev['macro_f1'])} | {_pct(s['attributes']['macro_f1'])} | "
+                         f"{_pct(s['attributes']['macro_accuracy'])} |")
 
     for group, section in report["lenient"].items():
         if group in ("commitment", "_pairs", "anchor"):
@@ -170,19 +179,21 @@ def render_report(report, manifest):
             "",
             f"## Field-level results: {group} (lenient matches, n = {section['matched']})",
             "",
-            "| Field | P | R | F1 | Presence F1 | Mean token F1 (both present) |",
-            "| --- | --- | --- | --- | --- | --- |",
+            "| Field | P | R | F1 | Accuracy | Presence F1 | Mean token F1 (both present) |",
+            "| --- | --- | --- | --- | --- | --- | --- |",
         ]
         for name in ATTRIBUTE_FIELDS:
             m = section["attributes"][name]
             soft = m["mean_token_f1_when_both_present"]
             lines.append(f"| {name} | {_pct(m['precision'])} | {_pct(m['recall'])} | {_pct(m['f1'])} | "
-                         f"{_pct(m['presence']['f1'])} | {'-' if soft is None else _pct(soft)} |")
-        lines.append(f"| **attribute macro-F1** | | | **{_pct(section['attributes']['macro_f1'])}** | | |")
+                         f"{_pct(m['accuracy'])} | {_pct(m['presence']['f1'])} | "
+                         f"{'-' if soft is None else _pct(soft)} |")
+        lines.append(f"| **attribute macro** | | | **{_pct(section['attributes']['macro_f1'])}** | "
+                     f"**{_pct(section['attributes']['macro_accuracy'])}** | | |")
         for name in CLASS_FIELDS:
             m = section[name]
-            lines.append(f"| {name} (classification) | | accuracy {_pct(m['accuracy'])} | macro-F1 "
-                         f"{_pct(m['macro_f1'])} | | |")
+            lines.append(f"| {name} (classification) | | | macro-F1 {_pct(m['macro_f1'])} | "
+                         f"{_pct(m['accuracy'])} | | |")
 
     titles = {"obligation_type": "Obligation class", "evidence_status": "Evidence status"}
     for name in CLASS_FIELDS:
@@ -196,12 +207,18 @@ def render_report(report, manifest):
             "that have gold support among matched commitments; classes with no gold support are listed "
             "but not averaged.",
             "",
-            "| Class | P | R | F1 | Gold support | Predicted | In macro |",
-            "| --- | --- | --- | --- | --- | --- | --- |",
+            "| Class | P | R | F1 | Gold support | Predicted | In macro |"
+            + "".join(f" F1 {g} | Support {g} |" for g in split_groups),
+            "| --- | --- | --- | --- | --- | --- | --- |" + " --- | --- |" * len(split_groups),
         ]
         for label, m in cm["per_class"].items():
-            lines.append(f"| {label} | {_pct(m['precision'])} | {_pct(m['recall'])} | {_pct(m['f1'])} | "
-                         f"{m['tp'] + m['fn']} | {m['tp'] + m['fp']} | {'yes' if label in averaged else 'no'} |")
+            row = (f"| {label} | {_pct(m['precision'])} | {_pct(m['recall'])} | {_pct(m['f1'])} | "
+                   f"{m['tp'] + m['fn']} | {m['tp'] + m['fp']} | {'yes' if label in averaged else 'no'} |")
+            for g in split_groups:
+                s = report["lenient"][g][name]["per_class"][label]
+                support = s["tp"] + s["fn"]
+                row += f" {_pct(s['f1']) if support else '-'} | {support} |"
+            lines.append(row)
     lines += ["", "## Corpus", "", "| Document | Pages | Passages | Predictions | Scored |", "| --- | --- | --- | --- | --- |"]
     for d in manifest["documents"]:
         lines.append(f"| {d['document_id']} | {d['page_count']} | {d['passages']} | {d['predictions']} | "
@@ -215,24 +232,23 @@ def main(argv=None):
     parser.add_argument("--gold", default=str(DEFAULT_GOLD))
     parser.add_argument("--split", default=str(DEFAULT_SPLIT),
                         help="Split file with dev/test assignments; pass 'workbook' to use the workbook column.")
-    parser.add_argument("--rules", choices=B0_VERSIONS, default=B0_VERSION, help="B0 rule version to run.")
-    parser.add_argument("--output-dir", help="Default: evaluation/results/b0/ (current rules) or evaluation/results/b0/<rule version>/.")
+    parser.add_argument("--output-dir", help="Default: evaluation/results/b0/.")
     parser.add_argument("--as-of-year", type=int, default=2026,
                         help="Year used to mark dated milestones as 'not yet due'.")
-    parser.add_argument("--include-unvalidated", action="store_true",
-                        help="Use every gold row, not only rows marked 'manually annotated valid?' = 1.")
+    parser.add_argument("--validated-only", action="store_true",
+                        help="Score only rows marked 'manually annotated valid?' = 1 as gold (default: every row).")
     args = parser.parse_args(argv)
     report, _ = run(args.corpus_dir, args.gold, args.output_dir, args.as_of_year,
-                    validated_only=not args.include_unvalidated, version=args.rules,
+                    validated_only=args.validated_only,
                     split_path=None if args.split == "workbook" else args.split)
     lenient = report["lenient"]
-    print(f"B0 {args.rules}: {report['predictions']} scored predictions, {report['gold_items']} gold")
+    print(f"B0 {B0_VERSION}: {report['predictions']} scored predictions, {report['gold_items']} gold")
     for scope in ("all", "anchor", "heldout"):
         m = lenient["commitment"][scope]
         print(f"  commitment[{scope}] P={m['precision']:.3f} R={m['recall']:.3f} F1={m['f1']:.3f}")
     print(f"  attribute macro-F1={lenient['all']['attributes']['macro_f1']:.3f}  "
           f"obligation macro-F1={lenient['all']['obligation_type']['macro_f1']:.3f}")
-    print(f"Results written to {args.output_dir or _default_output(args.rules)}")
+    print(f"Results written to {args.output_dir or DEFAULT_OUTPUT}")
 
 
 if __name__ == "__main__":

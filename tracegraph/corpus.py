@@ -148,13 +148,16 @@ def _join_lines(lines):
 
 
 _CLAUSE_BREAK = re.compile(r";\s+|,\s+but\s+(?=[a-z])")
+# "fine" mode also splits before ", as well as" and "and has <verb>ed" (one
+# sentence that holds two separate commitments).
+_FINE_CLAUSE_BREAK = re.compile(r";\s+|,\s+but\s+(?=[a-z])|,\s+(?=as\s+well\s+as\s)|\s+(?=and\s+(?:has|have)\s+\w+ed\b)")
 MIN_CLAUSE_WORDS = 6
 
 
-def _split_clauses(text, start, end):
+def _split_clauses(text, start, end, pattern=_CLAUSE_BREAK):
     """Split one sentence at '; ' and ', but ' when both sides are substantial."""
     spans, cursor = [], start
-    for match in _CLAUSE_BREAK.finditer(text, start, end):
+    for match in pattern.finditer(text, start, end):
         left, right = text[cursor:match.start() + 1], text[match.end():end]
         if len(left.split()) >= MIN_CLAUSE_WORDS and len(right.split()) >= MIN_CLAUSE_WORDS:
             spans.append((cursor, match.start() + (1 if text[match.start()] == ";" else 0)))
@@ -179,11 +182,12 @@ def split_sentences(text, clauses=True):
         spans.append((start, len(text.rstrip())))
     if not clauses:
         return spans
-    return [part for s, e in spans for part in _split_clauses(text, s, e)]
+    pattern = _FINE_CLAUSE_BREAK if clauses == "fine" else _CLAUSE_BREAK
+    return [part for s, e in spans for part in _split_clauses(text, s, e, pattern)]
 
 
-def _page_blocks(reader):
-    """All (page, kind, text) blocks, with sentences rejoined across page breaks."""
+def _page_blocks(reader, merge_pages=True):
+    """All (page, kind, text) blocks; with ``merge_pages``, sentences are rejoined across page breaks."""
     blocks = []
     for page_number, page in enumerate(reader.pages, start=1):
         first_text = True
@@ -191,7 +195,7 @@ def _page_blocks(reader):
             text = _join_lines(lines)
             if not text:
                 continue
-            if kind == "text" and first_text and blocks:
+            if merge_pages and kind == "text" and first_text and blocks:
                 previous = next((b for b in reversed(blocks) if b[1] == "text"), None)
                 if (previous and previous[0] == page_number - 1 and text[:1].islower()
                         and not previous[2].endswith((".", ":", "?", "!"))):
@@ -205,15 +209,19 @@ def _page_blocks(reader):
     return blocks
 
 
-def load_document(path):
-    """Read one PDF into canonical text with page offsets and sentence passages."""
+def load_document(path, merge_pages=True, clauses=True):
+    """Read one PDF into canonical text with page offsets and sentence passages.
+
+    ``merge_pages`` rejoins sentences split by a page break; ``clauses`` splits
+    long sentences at "; " and ", but ". Both are B0 rule switches.
+    """
     path = Path(path)
     document_id = document_id_for(path)
     reader = PdfReader(str(path))
     pieces, page_starts, passages, headings = [], [], [], []
     offset, block_id = 0, 0
     current_heading = ""
-    for page_number, kind, block, end_page in _page_blocks(reader):
+    for page_number, kind, block, end_page in _page_blocks(reader, merge_pages):
         while len(page_starts) < page_number:
             page_starts.append(offset)
         block_start = offset
@@ -224,7 +232,7 @@ def load_document(path):
             current_heading = block
             headings.append((block_start, block))
             continue
-        for s_start, s_end in split_sentences(block):
+        for s_start, s_end in split_sentences(block, clauses):
             sentence = block[s_start:s_end]
             passages.append(Passage(
                 passage_id=f"{document_id}:p{page_number}:c{block_start + s_start}",
@@ -251,6 +259,6 @@ def load_document(path):
     )
 
 
-def load_corpus(directory):
+def load_corpus(directory, merge_pages=True, clauses=True):
     """Load every PDF in ``directory`` in a stable (sorted) order."""
-    return [load_document(path) for path in sorted(Path(directory).glob("*.pdf"))]
+    return [load_document(path, merge_pages, clauses) for path in sorted(Path(directory).glob("*.pdf"))]

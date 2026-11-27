@@ -1,26 +1,26 @@
 {
   "system": "B0 rules/patterns (no generative model)",
-  "extractor_version": "b0-rules-v1.2",
+  "extractor_version": "b0-rules",
   "text_extraction_method": "pypdf.extract_text+layout_blocks_v1",
   "evidence_status_as_of_year": 2026,
-  "generated_at": "2026-11-22T03:13:05+00:00",
+  "generated_at": "2026-11-27T03:20:22+00:00",
   "python": "3.14.6",
   "gold_workbook": {
     "path": "evaluation/Golden Dataset (5).xlsx",
     "sha256": "eb146d6733e4b774ea3efc69ea01c461a0211699f13eecd56b3ddff6c6a83326"
   },
-  "gold_policy": "validated_only: rows with 'manually annotated valid?' = 1 are gold; extractions of rows marked 0 or blank count as false positives",
-  "split": "evaluation/splits/resplit_v2.json",
-  "gold_items": 32,
-  "excluded_gold_items": 68,
+  "gold_policy": "all_rows: every workbook gold row is a positive",
+  "split": "evaluation/splits/dev_test_split.json",
+  "gold_items": 100,
+  "excluded_gold_items": 0,
   "documents": [
     {
       "document_id": "RFA-2023-01-03",
       "path": "docs/tier1/01.03.23.rfa_updatednysupplement_0.pdf",
       "sha256": "21b464f283eeb067ad5b2b6e2a867781db54bbea78292ed6f1a6816c525bb71e",
       "page_count": 70,
-      "passages": 1095,
-      "predictions": 257,
+      "passages": 1097,
+      "predictions": 6,
       "scored": true
     },
     {
@@ -28,8 +28,8 @@
       "path": "docs/tier1/12.01.25.gflbselectiondocument1.pdf",
       "sha256": "982ea493658b8db11cd54b198b0d8fecca96578eddd991cc8ddaff93fb57e9cc",
       "page_count": 30,
-      "passages": 439,
-      "predictions": 172,
+      "passages": 446,
+      "predictions": 71,
       "scored": true
     },
     {
@@ -74,7 +74,7 @@
       "sha256": "e33b1a690d0653f88386d257a1b4d68c452c71ba59fca06faa75f9d37a202c02",
       "page_count": 5,
       "passages": 56,
-      "predictions": 17,
+      "predictions": 13,
       "scored": true
     }
   ]

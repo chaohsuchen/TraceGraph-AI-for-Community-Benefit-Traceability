@@ -317,11 +317,13 @@ def field_metrics(gold, pairs):
 
     Precision = correct / predictions with a value; recall = correct / gold
     items with a value. ``presence`` scores only whether a value was stated.
+    ``accuracy`` = (values agree, or both empty) / matched pairs, so a missed,
+    invented or wrong value all count as wrong.
     """
     out = {}
     matched = [g for g in gold if g["gold_id"] in pairs]
     for name in ATTRIBUTE_FIELDS:
-        tp = fp = fn = 0
+        tp = fp = fn = both_empty = 0
         p_tp = p_fp = p_fn = 0
         soft = []
         for g in matched:
@@ -341,10 +343,14 @@ def field_metrics(gold, pairs):
             elif gold_values:
                 fn += 1
                 p_fn += 1
+            else:
+                both_empty += 1
         out[name] = prf(tp, fp, fn)
+        out[name]["accuracy"] = round((tp + both_empty) / len(matched), 4) if matched else 0.0
         out[name]["presence"] = prf(p_tp, p_fp, p_fn)
         out[name]["mean_token_f1_when_both_present"] = round(sum(soft) / len(soft), 4) if soft else None
     out["macro_f1"] = round(sum(out[n]["f1"] for n in ATTRIBUTE_FIELDS) / len(ATTRIBUTE_FIELDS), 4)
+    out["macro_accuracy"] = round(sum(out[n]["accuracy"] for n in ATTRIBUTE_FIELDS) / len(ATTRIBUTE_FIELDS), 4)
     return out
 
 
@@ -398,11 +404,12 @@ def evaluate(predictions, gold, splits=None, excluded=None):
             "heldout": [g for g in gold if gold_scope(g) == "heldout"],
             "human_validated": [g for g in gold if g["human_validated"]],
         }
-        # One group per evaluation split that is not a tuning split.
+        # One group per evaluation split, tuning splits included so dev and test
+        # can be compared (dev numbers are optimistic; the report says so).
         for split in sorted({g["evaluation_split"] for g in gold}):
             items = [g for g in gold if g["evaluation_split"] == split]
             same = any({g["gold_id"] for g in items} == {g["gold_id"] for g in v} for v in groups.values())
-            if split not in ("anchor_dev", "dev") and split not in groups and not same:
+            if split not in groups and not same:
                 groups[split] = items
         for group, items in groups.items():
             if splits and group not in splits:
